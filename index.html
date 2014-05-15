@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Music Brainz Picard Website</title>
+
+    <!-- Generated from static/less/styles.less via Gulp  -->
+    <link href="static/css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">MusicBrainz Picard</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#contact">Guide</a></li>
+            <li><a href="#about">Docs</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+    <div class="jumbotron">
+    <!-- <div class="jumbotron" style="background-image: url('assets/img/bg.jpg')"> -->
+      <div class="container-fluid">
+        <img src="static/img/picard_demo_500.png" alt="Picard Screenshot" class="pull-right img-responsive img-thumbnail">
+        <h1>MusicBrainz Picard</h1>
+        <p>
+          Picard is a cross-platform application written in Python and is the official MusicBrainz
+          tagger.
+        </p>
+        <p><a href="" class="btn btn-lg btn-default">Learn More &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="platform-win" class="col-md-4">
+          <h3>Picard for Windows</h3>
+          <p>Get a Windows based installer that can be used to install picard on Windows XP, 7 or 8</p>
+          <p>Size: 8.7 MB</p>
+          <button type="button" class="btn btn-success">Download</button>
+        </div>
+        <div id="platform-linux" class="col-md-4">
+          <h3>Picard for Linux</h3>
+          <p>Picard is available in many distributions' software repositories.</p>
+          <button type="button" class="btn btn-primary">Learn More &raquo;</button>
+        </div>
+        <div id="platform-mac" class="col-md-4">
+          <h3>Picard for Mac</h3>
+          <p>Picard is available for Mac OS X for two separate versions</p>
+          <button type="button" class="btn btn-danger">OS X 10.7+ (x86_64)</button>
+          <button type="button" class="btn btn-danger">OS X 10.4 - 10.6 (i386)</button>
+        </div>
+      </div>
+</div>
+
+      <hr>
+
+      <footer>
+        <p class="text-muted">Dev Note: Only one of the download buttons will be visible. Try disabling Javascript and reloading the page to have a
+        look at the fallback.</p>
+      </footer>
+<!--
+      <ul class="list-inline">
+        <li><a href="/about/">About</a></li>
+        <li><a href="http://blog.musicbrainz.org/">Blog</a></li>
+        <li><a href="https://github.com/metabrainz/critiquebrainz/wiki/Developer-documentation">Developers</a></li>
+      </ul>
+ -->
+     </div>
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/os.js"></script>
+
+    <script>
+      var OS = getOSName()
+      var pWin = document.getElementById("platform-win");
+      var pMac = document.getElementById("platform-mac");
+      var pLinux = document.getElementById("platform-linux");
+
+      if (OS == "Windows")
+      {
+        pLinux.style.display = 'none';
+        pMac.style.display = 'none';
+      }
+      else if (OS == "Linux")
+      {
+        pWin.style.display = 'none';
+        pMac.style.display = 'none';
+      }
+      else if (OS == "Mac OS X")
+      {
+        pWin.style.display = 'none';
+        pLinux.style.display = 'none';
+      }
+    </script>
+  </body>
+</html>
