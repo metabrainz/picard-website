@@ -16,11 +16,11 @@
 @import "bootstrap/buttons.less";
 
 // Components
-@import "bootstrap/component-animations.less";
+// @import "bootstrap/component-animations.less";
 // @import "bootstrap/glyphicons.less";
-@import "bootstrap/dropdowns.less";
-@import "bootstrap/button-groups.less";
-@import "bootstrap/input-groups.less";
+// @import "bootstrap/dropdowns.less";
+// @import "bootstrap/button-groups.less";
+// @import "bootstrap/input-groups.less";
 @import "bootstrap/navs.less";
 @import "bootstrap/navbar.less";
 // @import "bootstrap/breadcrumbs.less";
@@ -35,8 +35,8 @@
 // @import "bootstrap/media.less";
 // @import "bootstrap/list-group.less";
 // @import "bootstrap/panels.less";
-@import "bootstrap/wells.less";
-@import "bootstrap/close.less";
+// @import "bootstrap/wells.less";
+// @import "bootstrap/close.less";
 
 // Components w/ JavaScript
 // @import "bootstrap/modals.less";
@@ -48,15 +48,28 @@
 @import "bootstrap/utilities.less";
 @import "bootstrap/responsive-utilities.less";
 
-@icon-font-path:"/static/fonts/";
+//Font Awesome
+@import "fontawesome/variables.less";
+@import "fontawesome/mixins.less";
+@import "fontawesome/path.less";
+@import "fontawesome/core.less";
+@import "fontawesome/larger.less";
+// @import "fontawesome/fixed-width.less";
+// @import "fontawesome/list.less";
+// @import "fontawesome/bordered-pulled.less";
+// @import "fontawesome/spinning.less";
+// @import "fontawesome/rotated-flipped.less";
+// @import "fontawesome/stacked.less";
+@import "fontawesome/icons.less";
+
+@icon-font-path: "/static/fonts";
+@fa-font-path: "/static/fonts";
 
 // Customizations
-// Blatantly copied from CritiqueBrainz
 
+// Navbar design blatantly copied from CritiqueBrainz
 @mb-orange: #ffba58;
 @mb-purple: #736dab;
-
-@brand-primary: @mb-purple;
 
 @link-color: #6600ff;
 @link-hover-color: #fc6714;
@@ -75,11 +88,106 @@
 
 @navbar-default-toggle-icon-bar-bg: #fff;
 
-.navbar {
-  border-width: 0 0 5px;
-  margin-bottom: 30px;
-  .navbar-brand {
-   font-size: 20px;
-   // font-weight: bold;
- }
+.navbar
+{
+   border-width: 0 0 5px;
+   margin-bottom: 30px;
+   .navbar-brand
+   {
+      font-size: 20px;
+   }
+}
+
+// Code copied from - http://getbootstrap.com/
+
+.jumbotron
+{
+   text-align: center;
+
+   // Todo: Try not to hardcode
+   margin-top: -30px;
+
+   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), 0px 0px 30px rgba(0, 0, 0, 0.075);
+   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25) inset, 0px -3px 7px rgba(0, 0, 0, 0.25) inset;
+   background: linear-gradient(45deg, #020031 0%, #6D3353 100%) repeat scroll 0% 0% transparent;
+}
+
+.masthead
+{
+   padding-top: 40px;
+   color: #FFF;
+   h1
+   {
+      font-size: 100px;
+   }
+   p
+   {
+      font-size: 40px;
+      line-height: 1.25;
+   }
+
+   .download-btn
+   {
+      margin-top: 20px;
+      padding: 20px 25px;
+      font-size: 25px;
+      border: 0px none;
+      border-radius: 6px;
+      box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1) inset, 0px 1px 5px rgba(0, 0, 0, 0.25);
+      background-image: linear-gradient(to bottom, #08C, #04C);
+      transition: none 0s ease 0s;
+
+      .download-title
+      {
+         font-size: 25px;
+      }
+      .download-info
+      {
+         display: block;
+         margin-top: 5px;
+         font-size: 12px;
+      }
+   }
+}
+
+.github-stats
+{
+   padding: 15px 0px 5px 0px;
+   text-align: center;
+   background-color: #F5F5F5;
+   border-top: 1px solid #FFF;
+   border-bottom: 1px solid #DDD;
+
+   .github-stats-buttons
+   {
+      list-style: none outside none;
+      li
+      {
+          display: inline-block;
+          padding: 5px 8px;
+          line-height: 1;
+      }
+   }
+}
+
+.features
+{
+   text-align: center;
+
+   .row
+   {
+      div
+      {
+         padding-top: 50px;
+      }
+   }
+}
+
+.footer
+{
+   text-align: center;
+   padding: 30px 0px;
+   margin-top: 70px;
+   border-top: 1px solid #E5E5E5;
+   background-color: #F5F5F5;
 }

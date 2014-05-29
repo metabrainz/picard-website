@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MusicBrainz Picard's Website">
+    <meta name="author" content="dufferZafar">
 
-    <title>Music Brainz Picard Website</title>
+    <title>MusicBrainz Picard Website</title>
 
     <!-- Generated from static/less/styles.less via Gulp  -->
     <link href="static/css/styles.css" rel="stylesheet">
@@ -18,7 +20,6 @@
     <![endif]-->
   </head>
   <body>
-
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
@@ -53,57 +54,112 @@
       </div>
     </div>
 
-<div class="container">
-    <div class="jumbotron">
-    <!-- <div class="jumbotron" style="background-image: url('assets/img/bg.jpg')"> -->
-      <div class="container-fluid">
-        <img src="static/img/picard_demo_500.png" alt="Picard Screenshot" class="pull-right img-responsive img-thumbnail">
+    <div class="jumbotron masthead">
+      <div class="container">
+        <!-- <img src="static/img/picard_demo_500.png" alt="Picard Screenshot" class="pull-right img-responsive img-thumbnail"> -->
         <h1>MusicBrainz Picard</h1>
         <p>
-          Picard is a cross-platform application written in Python and is the official MusicBrainz
-          tagger.
+          Picard is a cross-platform music tagger written in Python.
         </p>
-        <p><a href="" class="btn btn-lg btn-default">Learn More &raquo;</a></p>
+        <p>
+            <a id="platform-win" href="" class="btn download-btn btn-primary btn-large">
+              <i class="fa fa-windows"></i>
+              <span class="download-title">
+                Download Picard
+              </span>
+              <span class="download-info">
+                v1.2 for Windows
+              </span>
+            </a>
+
+            <a id="platform-mac" href="" class="btn download-btn btn-primary btn-large">
+              <i class="fa fa-apple"></i>
+              <span class="download-title">
+                Download Picard
+              </span>
+              <span class="download-info">
+                v1.2 for OS X 10.7+
+              </span>
+            </a>
+
+            <a id="platform-linux" href="" class="btn download-btn btn-primary btn-large">
+              <i class="fa fa-linux"></i>
+              <span class="download-title">
+                Download Picard
+              </span>
+              <span class="download-info">
+                v1.2 for Linux Distributions
+              </span>
+            </a>
+        </p>
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div id="platform-win" class="col-md-4">
-          <h3>Picard for Windows</h3>
-          <p>Get a Windows based installer that can be used to install picard on Windows XP, 7 or 8</p>
-          <p>Size: 8.7 MB</p>
-          <button type="button" class="btn btn-success">Download</button>
-        </div>
-        <div id="platform-linux" class="col-md-4">
-          <h3>Picard for Linux</h3>
-          <p>Picard is available in many distributions' software repositories.</p>
-          <button type="button" class="btn btn-primary">Learn More &raquo;</button>
-        </div>
-        <div id="platform-mac" class="col-md-4">
-          <h3>Picard for Mac</h3>
-          <p>Picard is available for Mac OS X for two separate versions</p>
-          <button type="button" class="btn btn-danger">OS X 10.7+ (x86_64)</button>
-          <button type="button" class="btn btn-danger">OS X 10.4 - 10.6 (i386)</button>
-        </div>
+<!--     <div class="github-stats">
+      <div class="container">
+        <ul class="github-stats-buttons">
+          <li>
+        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      </li>
+          <li>
+        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+      </li>
+        </ul>
       </div>
-</div>
-
-      <hr>
-
-      <footer>
-        <p class="text-muted">Dev Note: Only one of the download buttons will be visible. Try disabling Javascript and reloading the page to have a
-        look at the fallback.</p>
-      </footer>
-<!--
-      <ul class="list-inline">
-        <li><a href="/about/">About</a></li>
-        <li><a href="http://blog.musicbrainz.org/">Blog</a></li>
-        <li><a href="https://github.com/metabrainz/critiquebrainz/wiki/Developer-documentation">Developers</a></li>
-      </ul>
+    </div>
  -->
-     </div>
+    <div class="container">
+      <div class="features">
 
+        <div class="row">
+          <div class="col-md-3 col-md-offset-1">
+            <i class="features-img fa fa-file-audio-o fa-5x"></i>
+            <h2>Multiple formats</h2>
+            <p>Picard supports all popular music formats like mp3, flac, ogg, m4a, wma, wav and a lot of others.</p>
+          </div>
+
+          <div class="col-md-3 col-md-offset-1">
+            <i class="features-img fa fa-music fa-5x"></i>
+            <h2>AcoustID</h2>
+            <p>It is capable of using Audio fingerprints to identify your songs.</p>
+          </div>
+
+          <div class="col-md-3 col-md-offset-1">
+            <i class="fa fa-circle-o fa-5x"></i>
+            <h2>CD Lookups</h2>
+            <p>Picard can lookup entire music CDs with a click.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2">
+            <i class="fa fa-github fa-5x"></i>
+            <h2>Opensource</h2>
+            <p>Picard is licensed under <a href="http://www.gnu.org/copyleft/gpl.html">GPL 2.0 or later</a> and is hosted on <a href="https://github.com/musicbrainz/picard">Github</a> where it is actively developed by some awesome developers.</p>
+          </div>
+
+          <div class="col-md-4 col-md-offset-1">
+            <i class="fa fa-gear fa-5x"></i>
+            <h2>Plugin Support</h2>
+            <p>If you need a particular feature, you can choose from hundreds of available plugins or can write your own ones in Python.</p>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- Container ends -->
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Dev Note: Only one of the download buttons will be visible. Try disabling Javascript and reloading the page to have a look at the fallback.</p>
+        <ul class="list-inline">
+          <li><a href="/about/">About</a></li>
+          <li><a href="http://blog.musicbrainz.org/">Blog</a></li>
+          <li><a href="https://github.com/metabrainz/critiquebrainz/wiki/Developer-documentation">Developers</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts go at the end to reduce loading time -->
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/os.js"></script>
