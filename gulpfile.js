@@ -1,9 +1,14 @@
+// Gulp plugins
 var gulp = require('gulp'),
-  connect = require('gulp-connect'),
-  watch = require('gulp-watch'),
-  less = require('gulp-less'),
-  coffee = require('gulp-coffee');
+    watch = require('gulp-watch'),
+    connect = require('gulp-connect'),
+    open = require('gulp-open'),
+    clean = require('gulp-clean'),
+    replace = require('gulp-replace'),
+    minifycss = require('gulp-minify-css'),
+    less = require('gulp-less');
 
+// Create a webserver
 gulp.task('webserver', function() {
   connect.server({
     livereload: true,
@@ -11,28 +16,61 @@ gulp.task('webserver', function() {
   });
 });
 
+// Compile less files to css
+gulp.task('less', function() {
+  gulp.src('static/less/styles.less')
+    .pipe(less())
+    .pipe(gulp.dest('static/css'));
+});
+
+// Watch files for changes and reload our server
 gulp.task('livereload', function() {
   gulp.src(['index.html', 'static/css/*.css', 'static/js/*.js'])
     .pipe(watch())
     .pipe(connect.reload());
 });
 
-gulp.task('less', function() {
-  gulp.src('static/less/*.less')
-    .pipe(less())
-    .pipe(gulp.dest('static/css'));
-});
-
+// Run the 'less' task when files change
 gulp.task('watch', function() {
-  gulp.watch('static/less/*.less', ['less']);
-  // gulp.watch('scripts/*.coffee', ['coffee']);
+  gulp.watch('static/less/styles.less', ['less']);
 })
 
-/*gulp.task('coffee', function() {
-  gulp.src('scripts/*.coffee')
-    .pipe(coffee())
-    .pipe(gulp.dest('.tmp/scripts'));
-});
-*/
+// Task for development
+gulp.task('dev', ['less', 'livereload', 'watch', 'webserver'], function() {
+  var options = {
+    url: "http://localhost:8080",
+    app: "firefox"
+  };
 
-gulp.task('default', ['less', 'livereload', 'watch', 'webserver']);
+  gulp.src("./index.html") //A file should exist
+      .pipe(open("", options));
+});
+
+gulp.task('default', ['dev']);
+
+// Build related tasks
+// The goal is to be able to build and push to Github Pages (or our server.)
+var buildDir = './_gh-pages';
+
+// Copy files to push to server
+gulp.task('copy', function() {
+  gulp.src(['index.html', './static/**'], {base: './'})
+      .pipe(gulp.dest(buildDir));
+});
+
+// Compile less for server
+gulp.task('less-server', ['copy'], function() {
+  gulp.src('static/less/styles.less')
+    .pipe(replace('/static/', '/picard-website/static/')) // Fixes FontAwesome font path issues
+    .pipe(less())
+    .pipe(minifycss())
+    .pipe(gulp.dest(buildDir + '/static/css'));
+});
+
+gulp.task('remove-less', ['less-server'], function() {
+  gulp.src(buildDir + '/static/less', {read: false})
+      .pipe(clean());
+});
+
+// BUILD!
+gulp.task('build', ['remove-less']);
