@@ -1,6 +1,11 @@
+/*
+  Code copied from Ian Ippolito's answer on StackOverflow:
+  http://stackoverflow.com/a/21342122/2043048
+*/
+
 function getOSName()
 {
-  var unknown = "Coudn't Identify"
+  var unknown = "Couldn't Identify"
   var os = unknown;
   var nAgt = navigator.userAgent;
   var clientStrings = [

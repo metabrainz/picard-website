@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="MusicBrainz Picard's Website">
     <meta name="author" content="dufferZafar">
 
@@ -35,79 +35,64 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#contact">Guide</a></li>
-            <li><a href="#about">Docs</a></li>
-            <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li> -->
+            <li><a href="#guide">Guide</a></li>
+            <li><a href="#docs">Docs</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="jumbotron masthead">
-      <div class="container">
+      <div class="container-fluid">
         <!-- <img src="static/img/picard_demo_500.png" alt="Picard Screenshot" class="pull-right img-responsive img-thumbnail"> -->
         <h1>MusicBrainz Picard</h1>
         <p>
           Picard is a cross-platform music tagger written in Python.
         </p>
-        <p>
-            <a id="platform-win" href="" class="btn download-btn btn-primary btn-large">
-              <i class="fa fa-windows"></i>
-              <span class="download-title">
-                Download Picard
-              </span>
-              <span class="download-info">
-                v1.2 for Windows
-              </span>
-            </a>
 
-            <a id="platform-mac" href="" class="btn download-btn btn-primary btn-large">
-              <i class="fa fa-apple"></i>
-              <span class="download-title">
-                Download Picard
-              </span>
-              <span class="download-info">
-                v1.2 for OS X 10.7+
-              </span>
-            </a>
+        <a id="platform-win" href="" class="btn download-btn btn-primary btn-large">
+          <i class="fa fa-windows"></i>
+          <span class="download-title">
+            Download Picard
+          </span>
+          <span class="download-info">
+            v1.2 for Windows
+          </span>
+        </a>
 
-            <a id="platform-linux" href="" class="btn download-btn btn-primary btn-large">
-              <i class="fa fa-linux"></i>
-              <span class="download-title">
-                Download Picard
-              </span>
-              <span class="download-info">
-                v1.2 for Linux Distributions
-              </span>
-            </a>
-        </p>
-      </div>
-    </div>
+        <a id="platform-mac" href="" class="btn download-btn btn-primary btn-large">
+          <i class="fa fa-apple"></i>
+          <span class="download-title">
+            Download Picard
+          </span>
+          <span class="download-info">
+            v1.2 for OS X 10.7+
+          </span>
+        </a>
 
-<!--     <div class="github-stats">
-      <div class="container">
-        <ul class="github-stats-buttons">
+        <a id="platform-linux" href="" class="btn download-btn btn-primary btn-large">
+          <i class="fa fa-linux"></i>
+          <span class="download-title">
+            Download Picard
+          </span>
+          <span class="download-info">
+            v1.2 for Linux Distributions
+          </span>
+        </a>
+
+        <ul class="masthead-links">
           <li>
-        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-      </li>
+            <a href="#changelog">What's New</a>
+          </li>
+          <li>.</li>
           <li>
-        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
-      </li>
+            <a href="#downloads">Other Downloads</a>
+          </li>
         </ul>
+
       </div>
     </div>
- -->
+
     <div class="container">
       <div class="features">
 
@@ -121,7 +106,7 @@
           <div class="col-md-3 col-md-offset-1">
             <i class="features-img fa fa-music fa-5x"></i>
             <h2>AcoustID</h2>
-            <p>It is capable of using Audio fingerprints to identify your songs.</p>
+            <p>It uses <a href="http://acoustid.org/">AcoustID</a> audio fingerprints, allowing a song to be identified by the actual music, so it can be matched even if you have no metadata.</p>
           </div>
 
           <div class="col-md-3 col-md-offset-1">
@@ -150,11 +135,21 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">Dev Note: Only one of the download buttons will be visible. Try disabling Javascript and reloading the page to have a look at the fallback.</p>
+        <ul class="github-stats-buttons">
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+          </li>
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+          </li>
+        </ul>
+
         <ul class="list-inline">
-          <li><a href="/about/">About</a></li>
-          <li><a href="http://blog.musicbrainz.org/">Blog</a></li>
-          <li><a href="https://github.com/metabrainz/critiquebrainz/wiki/Developer-documentation">Developers</a></li>
+          <li><a href="#about">About</a></li>
+          <li>.</li>
+          <li><a href="http://blog.musicbrainz.org/">MusicBrainz Blog</a></li>
+          <li>.</li>
+          <li><a href="http://forums.musicbrainz.org/viewforum.php?id=2">Picard Forum</a></li>
         </ul>
       </div>
     </footer>
