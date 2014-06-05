@@ -25,7 +25,7 @@ gulp.task('less', function() {
 
 // Watch files for changes and reload our server
 gulp.task('livereload', function() {
-  gulp.src(['index.html', 'static/css/*.css', 'static/js/*.js'])
+  gulp.src(['*.html', 'static/css/*.css', 'static/js/*.js'])
     .pipe(watch())
     .pipe(connect.reload());
 });
@@ -54,7 +54,7 @@ var buildDir = './_gh-pages';
 
 // Copy files to push to server
 gulp.task('copy', function() {
-  gulp.src(['index.html', './static/**'], {base: './'})
+  gulp.src(['*.html', './static/**'], {base: './'})
       .pipe(gulp.dest(buildDir));
 });
 

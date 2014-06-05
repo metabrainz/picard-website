@@ -1,0 +1,89 @@
+.masthead
+{
+   padding: 50px;
+   text-align: center;
+
+   h1
+   {
+      font-size: 90px;
+      width: 100%;
+   }
+   p
+   {
+      font-size: 25px;
+      line-height: 1.25;
+   }
+
+   .picard-icon
+   {
+      margin-left: -100px;
+   }
+
+   .download-btn
+   {
+      color: #fff;
+
+      margin-top: 20px;
+      padding: 20px 25px;
+      font-size: 25px;
+      border: 0px none;
+      border-radius: 6px;
+      box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1) inset, 0px 1px 5px rgba(0, 0, 0, 0.25);
+
+      background-repeat: repeat-x; /* Repeat the gradient */
+      background-color: #04C;
+      background-image: linear-gradient(to bottom, #08C, #04C);
+
+      .download-title
+      {
+         font-size: 25px;
+      }
+      .download-info
+      {
+         display: block;
+         margin-top: 5px;
+         font-size: 12px;
+      }
+
+      &:hover
+      {
+         background-position: 0 -25px;
+      }
+
+      &:active
+      {
+         background-image: none;
+         background-color: #04C;
+         box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
+      }
+   }
+
+   .masthead-links {
+      margin: 25px 0 0 -54px;
+      list-style: none;
+
+      a
+      {
+         color: darken(#fff, 35%);
+      }
+
+      li
+      {
+         display: inline;
+         padding-left: 15px;
+      }
+   }
+}
+
+.features
+{
+   text-align: center;
+
+   .row
+   {
+      .col-md-4
+      {
+         padding-top: 50px;
+      }
+   }
+}

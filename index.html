@@ -67,7 +67,7 @@
           </li>
           <li>.</li>
           <li>
-            <a href="#downloads">Other Downloads</a>
+            <a href="downloads.html">Other Downloads</a>
           </li>
         </ul>
       </div>
@@ -123,7 +123,7 @@
     </div> <!-- Container ends -->
 
     <footer class="footer">
-      <!-- <div class="container">
+      <div class="container">
         <ul class="github-stats-buttons">
           <li>
             <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
@@ -131,7 +131,7 @@
           <li>
             <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
           </li>
-        </ul> -->
+        </ul>
 
         <ul class="list-inline">
           <li><a href="#about">About</a></li>
@@ -152,7 +152,7 @@
 
       if (/^Win/.test(platform) || /Windows/.test(uAgent))
       {
-        // downBtn.href = 'http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe';
+        downBtn.href = 'http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe';
         downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-windows");
         downBtn.innerHTML += '<span class="download-info"> v1.2 for Windows </span>'
       }

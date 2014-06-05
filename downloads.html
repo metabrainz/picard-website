@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" type="image/png" href="static/img/picard-icon.png">
+
+    <title>MusicBrainz Picard Website</title>
+
+    <!-- Generated from static/less/styles.less via Gulp  -->
+    <link href="static/css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">MusicBrainz Picard</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#guide">Guide</a></li>
+            <li><a href="#docs">Docs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Downloads</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-md-8">
+        <p>
+          Picard is available for all major platforms. Just download and start the installer. It's that easy.
+        </p>
+        <ul id="downloads">
+          <a name="windows"></a>
+          <li class="download-item">
+            <h3>
+            <i class="fa fa-windows fa-2x"></i>
+            Picard for <strong>Windows</strong>
+            <span>1.2</span>
+            </h3>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Picard Version</th>
+                    <th>MD5 Hash</th>
+                    <th>Size</th>
+                    <th>Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.2</td>
+                    <td>87662658e404e666f8ee506e53771741</td>
+                    <td>8.4 MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> Download <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe">US Mirror</a></li>
+                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/picard-setup-1.2.exe">EU Mirror</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>If you get an error about being unable to run the program, install the <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=9b2da534-3e03-4391-8a4d-074b9f2bc1bf&displaylang=en">Microsoft Visual C++ 2008 Redistributable Package (x86)</a>.</p>
+          </li>
+
+          <a name="mac"></a>
+          <li class="download-item">
+            <h3>
+            <i class="fa fa-apple fa-2x"></i>
+            Picard for <strong>Mac OS X</strong>
+            <span>1.2</span>
+            </h3>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>OS X Version</th>
+                    <th>MD5 Hash</th>
+                    <th>Size</th>
+                    <th>Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10.7+ (x86_64)</td>
+                    <td>605a40e9c168a00c9cb000b913afade3</td>
+                    <td>14 MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> Download <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg">US Mirror</a></li>
+                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg">EU Mirror</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10.4-10.6 (i386)</td>
+                    <td>db8c5c9f1221b11904305d3e280421bb</td>
+                    <td>13 MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> Download <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2.dmg">US Mirror</a></li>
+                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/MusicBrainz-Picard-1.2.dmg">EU Mirror</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+
+          <a name="linux"></a>
+          <li class="download-item">
+            <h3>
+            <i class="fa fa-linux fa-2x"></i>
+            Picard for <strong>Linux</strong>
+            <span>1.2</span>
+            </h3>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Distrubution</th>
+                    <th>Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ubuntu</td>
+                    <td>
+                      <a href="https://launchpad.net/~musicbrainz-developers/+archive/stable">MusicBrainz Stable PPA</a>
+                      .
+                      <a href="https://launchpad.net/~musicbrainz-developers/+archive/daily">MusicBrainz Daily PPA</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Fedora</td>
+                    <td>
+                      <a href="https://musicbrainz.org/doc/Picard_FAQ#I_am_using_Fedora.2C_why_doesn.27t_acoustic_fingerprinting_work.3F">Read the FAQ</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Arch Linux</td>
+                    <td>
+                      <a href="https://www.archlinux.org/packages/community/x86_64/picard/">Community</a>
+                      .
+                      <a href="https://aur.archlinux.org/packages.php?ID=52460">AUR</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Gentoo</td>
+                    <td>
+                      <a href="http://packages.gentoo.org/package/media-sound/picard">media-sound/picard</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+
+          <a name="source"></a>
+          <li class="download-item">
+            <h3>
+            <i class="fa fa-code fa-2x"></i>
+            Picard <strong>Source Code</strong>
+            <span>1.2</span>
+            </h3>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Picard Version</th>
+                    <th>MD5 Hash</th>
+                    <th>Size</th>
+                    <th>Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.2</td>
+                    <td>d1086687b7f7b0d359a731b1a25e7b66</td>
+                    <td>1.7 MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> Download <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-1.2.tar.gz">US Mirror</a></li>
+                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/picard-1.2.tar.gz">EU Mirror</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+        </ul>
+        <p>
+          This page lists the most recent downloads. If you're looking for older versions of Picard, <a href="http://ftp.musicbrainz.org/pub/musicbrainz/picard/?C=M;O=D">browse our FTP server</a>.
+        </p>
+      </div>
+    </div><!-- /.container -->
+
+    <footer class="footer">
+      <!-- <div class="container">
+        <ul class="github-stats-buttons">
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+          </li>
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+          </li>
+        </ul> -->
+
+        <ul class="list-inline">
+          <li><a href="#about">About</a></li>
+          <li>.</li>
+          <li><a href="http://blog.musicbrainz.org/">MusicBrainz Blog</a></li>
+          <li>.</li>
+          <li><a href="http://forums.musicbrainz.org/viewforum.php?id=2">Picard Forum</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>
