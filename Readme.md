@@ -1,3 +1,3 @@
 # MusicBrainz Picard's Website
 
-*Todo: A proper Readme*
+A new website for MusicBrainz [Picard](https://musicbrainz.org/doc/MusicBrainz_Picard)
