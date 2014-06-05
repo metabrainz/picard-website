@@ -12,6 +12,8 @@
     <!-- Generated from static/less/styles.less via Gulp  -->
     <link href="static/css/styles.css" rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="static/img/picard-icon.png">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,9 +45,11 @@
     </div>
 
     <div class="jumbotron masthead">
-      <div class="container-fluid">
-        <!-- <img src="static/img/picard_demo_500.png" alt="Picard Screenshot" class="pull-right img-responsive img-thumbnail"> -->
-        <h1>MusicBrainz Picard</h1>
+      <div class="container">
+        <h1>
+        <img class="picard-icon" src="static/img/picard-icon.png" alt="Picard Screenshot">
+          MusicBrainz Picard
+        </h1>
         <p>
           Picard is a cross-platform music tagger written in Python.
         </p>
@@ -157,29 +161,33 @@
     <!-- Scripts go at the end to reduce loading time -->
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/os.js"></script>
 
     <script>
-      var OS = getOSName()
+    (function ()
+    {
       var pWin = document.getElementById("platform-win");
       var pMac = document.getElementById("platform-mac");
       var pLinux = document.getElementById("platform-linux");
 
-      if (OS == "Windows")
+      var uAgent = navigator.userAgent;
+      var platform = navigator.platform;
+
+      if (/^Win/.test(platform) || /Windows/.test(uAgent))
       {
         pLinux.style.display = 'none';
         pMac.style.display = 'none';
       }
-      else if (OS == "Linux")
+      else if (/Linux/.test(platform))
       {
         pWin.style.display = 'none';
         pMac.style.display = 'none';
       }
-      else if (OS == "Mac OS X")
+      else if (platform === "MacIntel" || platform === 'MacPPC')
       {
         pWin.style.display = 'none';
         pLinux.style.display = 'none';
       }
+    }) ();
     </script>
   </body>
 </html>
