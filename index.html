@@ -7,20 +7,20 @@
     <meta name="description" content="MusicBrainz Picard's Website">
     <meta name="author" content="dufferZafar">
 
+    <link rel="icon" type="image/png" href="static/img/picard-icon.png">
+
     <title>MusicBrainz Picard Website</title>
 
     <!-- Generated from static/less/styles.less via Gulp  -->
     <link href="static/css/styles.css" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="static/img/picard-icon.png">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
   <body>
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -54,33 +54,10 @@
           Picard is a cross-platform music tagger written in Python.
         </p>
 
-        <a id="platform-win" href="" class="btn download-btn btn-primary btn-large">
-          <i class="fa fa-windows"></i>
+        <a id="download-btn" href="downloads.html" class="btn download-btn btn-primary btn-large">
+          <i class="fa fa-download"></i>
           <span class="download-title">
             Download Picard
-          </span>
-          <span class="download-info">
-            v1.2 for Windows
-          </span>
-        </a>
-
-        <a id="platform-mac" href="" class="btn download-btn btn-primary btn-large">
-          <i class="fa fa-apple"></i>
-          <span class="download-title">
-            Download Picard
-          </span>
-          <span class="download-info">
-            v1.2 for OS X 10.7+
-          </span>
-        </a>
-
-        <a id="platform-linux" href="" class="btn download-btn btn-primary btn-large">
-          <i class="fa fa-linux"></i>
-          <span class="download-title">
-            Download Picard
-          </span>
-          <span class="download-info">
-            v1.2 for Linux Distributions
           </span>
         </a>
 
@@ -93,44 +70,52 @@
             <a href="#downloads">Other Downloads</a>
           </li>
         </ul>
-
       </div>
     </div>
 
     <div class="container">
       <div class="features">
-
         <div class="row">
-          <div class="col-md-3 col-md-offset-1">
-            <i class="features-img fa fa-file-audio-o fa-5x"></i>
-            <h2>Multiple formats</h2>
-            <p>Picard supports all popular music formats like mp3, flac, ogg, m4a, wma, wav and a lot of others.</p>
+          <div class="col-md-4">
+            <div class="col-md-10 col-md-offset-1">
+              <i class="features-img fa fa-file-audio-o fa-5x"></i>
+              <h2>Multiple formats</h2>
+              <p>Picard supports all popular music formats like mp3, flac, ogg, m4a, wma, wav and a lot of others.</p>
+            </div>
           </div>
 
-          <div class="col-md-3 col-md-offset-1">
-            <i class="features-img fa fa-music fa-5x"></i>
-            <h2>AcoustID</h2>
-            <p>It uses <a href="http://acoustid.org/">AcoustID</a> audio fingerprints, allowing a song to be identified by the actual music, so it can be matched even if you have no metadata.</p>
+          <div class="col-md-4">
+            <div class="col-md-10 col-md-offset-1">
+              <i class="features-img fa fa-music fa-5x"></i>
+              <h2>AcoustID</h2>
+              <p>It uses <a href="http://acoustid.org/">AcoustID</a> audio fingerprints, allowing a song to be identified by the actual music, so it can be matched even if you have no metadata.</p>
+            </div>
           </div>
 
-          <div class="col-md-3 col-md-offset-1">
-            <i class="fa fa-circle-o fa-5x"></i>
-            <h2>CD Lookups</h2>
-            <p>Picard can lookup entire music CDs with a click.</p>
+          <div class="col-md-4">
+            <div class="col-md-10 col-md-offset-1">
+              <i class="fa fa-circle-o fa-5x"></i>
+              <h2>CD Lookups</h2>
+              <p>Picard can lookup entire music CDs with a click.</p>
+            </div>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-4 col-md-offset-2">
+          <div class="col-md-4 col-md-offset-1">
+            <div class="col-md-10 col-md-offset-3">
             <i class="fa fa-github fa-5x"></i>
             <h2>Opensource</h2>
             <p>Picard is licensed under <a href="http://www.gnu.org/copyleft/gpl.html">GPL 2.0 or later</a> and is hosted on <a href="https://github.com/musicbrainz/picard">Github</a> where it is actively developed by some awesome developers.</p>
+            </div>
           </div>
 
           <div class="col-md-4 col-md-offset-1">
+            <div class="col-md-10 col-md-offset-1">
             <i class="fa fa-gear fa-5x"></i>
             <h2>Plugin Support</h2>
             <p>If you need a particular feature, you can choose from hundreds of available plugins or can write your own ones in Python.</p>
+            </div>
           </div>
         </div>
 
@@ -138,7 +123,7 @@
     </div> <!-- Container ends -->
 
     <footer class="footer">
-      <div class="container">
+      <!-- <div class="container">
         <ul class="github-stats-buttons">
           <li>
             <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
@@ -146,7 +131,7 @@
           <li>
             <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
           </li>
-        </ul>
+        </ul> -->
 
         <ul class="list-inline">
           <li><a href="#about">About</a></li>
@@ -158,36 +143,36 @@
       </div>
     </footer>
 
-    <!-- Scripts go at the end to reduce loading time -->
-    <script src="static/js/jquery.min.js"></script>
-    <script src="static/js/bootstrap.min.js"></script>
-
     <script>
     (function ()
     {
-      var pWin = document.getElementById("platform-win");
-      var pMac = document.getElementById("platform-mac");
-      var pLinux = document.getElementById("platform-linux");
-
+      var downBtn = document.getElementById("download-btn");
       var uAgent = navigator.userAgent;
       var platform = navigator.platform;
 
       if (/^Win/.test(platform) || /Windows/.test(uAgent))
       {
-        pLinux.style.display = 'none';
-        pMac.style.display = 'none';
+        // downBtn.href = 'http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe';
+        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-windows");
+        downBtn.innerHTML += '<span class="download-info"> v1.2 for Windows </span>'
       }
       else if (/Linux/.test(platform))
       {
-        pWin.style.display = 'none';
-        pMac.style.display = 'none';
+        downBtn.href = 'ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg';
+        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-apple");
+        downBtn.innerHTML += '<span class="download-info"> v1.2 for OS X 10.7+ </span>'
       }
       else if (platform === "MacIntel" || platform === 'MacPPC')
       {
-        pWin.style.display = 'none';
-        pLinux.style.display = 'none';
+        downBtn.href = '/download.html#linux';
+        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-linux");
+        downBtn.innerHTML += '<span class="download-info"> v1.2 for Linux Distributions </span>'
       }
     }) ();
     </script>
+
+    <!-- Scripts go at the end to reduce loading time -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
   </body>
 </html>
