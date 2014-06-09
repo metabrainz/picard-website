@@ -45,7 +45,7 @@ gulp.task('template', function() {
 
 // Run tasks when files in 'static' directory change
 gulp.task('watch', function() {
-  gulp.watch('static/less/*.less', ['less']);
+  gulp.watch('static/less/**', ['less']);
   gulp.watch('static/js/*.js', ['js']);
   gulp.watch('*.html', ['template']);
   gulp.watch('templates/*.html', ['template']);
