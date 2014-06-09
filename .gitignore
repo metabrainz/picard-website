@@ -1,3 +1,5 @@
-
 # Generated from static/less using Gulp
 static/css/
+
+# The build used during testing
+tmp/
