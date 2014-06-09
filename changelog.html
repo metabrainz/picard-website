@@ -18,6 +18,12 @@
     @@include('templates/footer.html')
 
     <script>
+    function htmlEntities(str)
+    {
+      // http://css-tricks.com/snippets/javascript/htmlentities-for-javascript/
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
     (function ()
     {
       // It took me 2 hours to find out that Github does not support
@@ -34,6 +40,8 @@
         log.css("text-align", "left");
 
         var dataLines = data.split(/\r\n|\n/);
+
+        var newLine = /\s+?\*\s+/;
         var reVersion = /^Version\s+(.*?)\s+-\s+(.*?)$/;
 
         var jiraIssue = /(PICARD\-\d+)/g;
@@ -41,7 +49,7 @@
 
         for (var i = 0; i < dataLines.length; i++)
         {
-          var line = dataLines[i];
+          var line = htmlEntities(dataLines[i]);
 
           if (ver = reVersion.exec(line))
           {
@@ -67,7 +75,7 @@
               var toAppend = line;
             }
 
-            log.append('<p>' + toAppend.replace(/\s+?\*\s+/, '') + '</p>');
+            log.append('<p' + (newLine.exec(line) ? ' class="newLine" ' : '') + '>' + toAppend.replace(newLine, '') + '</p>');
           }
         };
       });

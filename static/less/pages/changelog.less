@@ -27,12 +27,16 @@
       font-size: 15px;
       line-height: 20px;
       font-family: Tahoma, Geneva, sans-serif;
-      padding-left: 35px;
+      padding-left: 38px;
 
-      &:before
+      &.newLine
       {
-         content: "\2022";    // Who needs <li> ;)
-         padding-right: 10px;
+         padding-left: 20px;
+         &:before
+         {
+            content: "\2022";    // Who needs <li> ;)
+            padding-right: 10px;
+         }
       }
    }
 }
