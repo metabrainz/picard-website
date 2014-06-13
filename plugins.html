@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('templates/header.html', {"title": "Available Plugins — MusicBrainz Picard"})
+  <body>
+    @@include('templates/navbar.html')
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Available Plugins</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div id="spinner">
+        <i class="fa fa-spin fa-spinner fa-5x"></i>
+      </div>
+      <div id="plugin-table">
+        <p>This is a list of plugins that are currently available for use with Picard. The table is generated from the data of our plugin <a href="https://github.com/dufferzafar/picard-plugins">repository</a>.</p>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th class="text-center">#</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Version</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Author(s)</th>
+                <th class="text-center">Downloads</th>
+              </tr>
+            </thead>
+            <tbody id="plugins">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    @@include('templates/footer.html')
+
+    <script>
+    function htmlEntities(str)
+    {
+      // http://css-tricks.com/snippets/javascript/htmlentities-for-javascript/
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function beautify(str)
+    {
+      // These will be handled by the Gen JSON script. Until then...
+      return String(str).replace(/^u/, '').replace(/['"\\]/g, '');
+    }
+
+    (function ()
+    {
+      // "Since files are not refreshed after the first request,
+      // it's best to use a specific tag or commit URL, not a branch URL."
+      $.ajax({
+        url: "https://cdn.rawgit.com/dufferzafar/picard-plugins/5234e9098f7fa97e2f700f687593f588ccd76907/Plugins.json",
+      })
+      .done(function(data)
+      {
+        $('#spinner').remove();
+        $('#plugin-table').show();
+
+        var plugins = data.plugins;
+        var $plugins = $('#plugins');
+
+        for(var i = 0; i < plugins.length; i++)
+        {
+          var plugin = plugins[i];
+
+          $plugins.append(
+            "<tr>\
+              <td>"+ (i+1) +"</td>\
+              <td>"+ (beautify(plugin.title)) +"</td>\
+              <td>"+ (beautify(plugin.ver)) +"</td>\
+              <td>"+ (beautify(plugin.desc)) +"</td>\
+              <td>"+ (beautify(plugin.author)) +"</td>\
+              <td>"+ (beautify(plugin.downloads)) +"</td>\
+            </tr>"
+          );
+        };
+      });
+    }) ();
+    </script>
+  </body>
+</html>
