@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MusicBrainz Picard's Website">
+    <meta name="author" content="dufferZafar">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/picard-icon.png') }}">
+
+    <title>{% block title %}MusicBrainz Picard{% endblock %}</title>
+
+    <!-- Generated from static/less/styles.less via Gulp  -->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {% endblock %}
+    {% block scripts %}
+    <!-- Scripts should probably go at the end to reduce loading time -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block navbar %}
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">MusicBrainz Picard</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#guide">Guide</a></li>
+            <li><a href="#docs">Documentation</a></li>
+            <li><a href="/downloads/">Downloads</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+    {% block content %}
+    <!-- Page content -->
+    {% endblock %}
+    {% block footer %}
+    <footer class="footer">
+      <div class="container">
+        <ul class="github-stats-buttons">
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+          </li>
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=musicbrainz&repo=picard&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+          </li>
+        </ul>
+
+        <ul class="list-inline">
+          <li><a href="#about">About</a></li>
+          <li><a href="http://blog.musicbrainz.org/">MusicBrainz Blog</a></li>
+          <li><a href="http://forums.musicbrainz.org/viewforum.php?id=2">Picard Forum</a></li>
+        </ul>
+      </div>
+    </footer>
+    {% endblock %}
+  </body>
+</html>
