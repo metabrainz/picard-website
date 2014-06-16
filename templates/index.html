@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  @@include('templates/header.html', {"title": "MusicBrainz Picard"})
-  <body>
-    @@include('templates/navbar.html')
-
+{% extends 'base.html' %}
+{% block content %}
     <div class="jumbotron masthead">
       <div class="container">
         <h1>
-        <img class="picard-icon" src="static/img/picard-icon.png" alt="Picard Screenshot">
+        <img class="picard-icon" src="{{ url_for('static', filename='img/picard-icon.png') }}" alt="Picard Screenshot">
           MusicBrainz Picard
         </h1>
         <p>
           Picard is a cross-platform music tagger written in Python.
         </p>
 
-        <a id="download-btn" href="downloads.html" class="btn download-btn btn-primary btn-large">
+        <a id="download-btn" href="/downloads/" class="btn download-btn btn-primary btn-large">
           <i class="fa fa-download"></i>
           <span class="download-title">
             Download Picard
@@ -23,10 +19,10 @@
 
         <ul class="masthead-links">
           <li>
-            <a href="changelog.html">What's New</a>
+            <a href="/changelog/">What's New</a>
           </li>
           <li>
-            <a href="downloads.html">Other Downloads</a>
+            <a href="/downloads/">Other Downloads</a>
           </li>
         </ul>
       </div>
@@ -73,7 +69,7 @@
             <div class="col-md-10 col-md-offset-1">
             <i class="fa fa-gear fa-5x"></i>
             <h2>Plugin Support</h2>
-            <p>If you need a particular feature, you can choose from hundreds of available plugins or can write your own ones in Python. Here is a list of <a href="plugins.html">available plugins</a></p>
+            <p>If you need a particular feature, you can choose from hundreds of available plugins or can write your own ones in Python. Here is a list of <a href="/plugins/">available plugins</a></p>
             </div>
           </div>
         </div>
@@ -108,7 +104,4 @@
       }
     }) ();
     </script>
-
-    @@include('templates/footer.html')
-  </body>
-</html>
+{% endblock %}

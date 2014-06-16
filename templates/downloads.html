@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  @@include('templates/header.html', {"title": "Downloads — MusicBrainz Picard"})
-  <body>
-    @@include('templates/navbar.html')
-
+{% extends 'base.html' %}
+{% block title %}Downloads - MusicBrainz Picard{% endblock %}
+{% block content %}
     <div class="jumbotron">
       <div class="container">
         <h1>Downloads</h1>
@@ -204,7 +201,4 @@
         </p>
       </div>
     </div><!-- /.container -->
-
-    @@include('templates/footer.html')
-  </body>
-</html>
+{% endblock %}

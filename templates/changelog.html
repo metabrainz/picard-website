@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  @@include('templates/header.html', {"title": "What's New — MusicBrainz Picard"})
-  <body>
-    @@include('templates/navbar.html')
-
+{% extends 'base.html' %}
+{% block title %}Changelog - MusicBrainz Picard{% endblock %}
+{% block content %}
     <div class="jumbotron">
       <div class="container">
         <h1>What's New</h1>
@@ -14,9 +11,6 @@
         <i class="fa fa-spin fa-spinner fa-5x"></i>
       </div>
     </div><!-- /.container -->
-
-    @@include('templates/footer.html')
-
     <script>
     function htmlEntities(str)
     {
@@ -81,5 +75,4 @@
       });
     }) ();
     </script>
-  </body>
-</html>
+{% endblock %}
