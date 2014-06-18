@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Changelog - MusicBrainz Picard{% endblock %}
+{% block title %}What's New - MusicBrainz Picard{% endblock %}
 {% block content %}
     <div class="jumbotron">
       <div class="container">
@@ -8,71 +8,28 @@
     </div>
     <div class="container">
       <div id="log">
-        <i class="fa fa-spin fa-spinner fa-5x"></i>
+      {% for line in lines %}
+        {% if line is re_search("^Version\s+(.*?)\s+-\s+(.*?)") %}
+          <h3>Version
+            <strong>{{ line | version(1) }}</strong>
+            <span>{{ line | version(2) | re_sub("xxxx\-xx\-xx", "Yet to be released.")}}</span>
+          </h3>
+        {% else %}
+          {% if line is re_search("(PICARD\-\d+)") %}
+            {% set data = line | re_sub("(PICARD\-\d+)", '<a href="http://tickets.musicbrainz.org/browse/\g<1>">\g<1></a>') | safe %}
+          {% elif line is re_search("#(\d+)") %}
+            {% set data = line | re_sub("#(\d+)", '<a href="http://bugs.musicbrainz.org/ticket/\g<1>">#\g<1></a>') | safe %}
+          {% else %}
+            {% set data = line %}
+          {% endif %}
+
+          {% if line is re_search("\s+?\*\s+") %}
+            <p class="newLine">{{ data | re_sub("\s+?\*\s+", "")}}</p>
+          {% else %}
+            <p>{{ data }}</p>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
       </div>
     </div><!-- /.container -->
-    <script>
-    function htmlEntities(str)
-    {
-      // http://css-tricks.com/snippets/javascript/htmlentities-for-javascript/
-      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    }
-
-    (function ()
-    {
-      // It took me 2 hours to find out that Github does not support
-      // cross-origin requests. WTF! Github. Yay! Rawgit.
-      $.ajax({
-        url: "https://cdn.rawgit.com/musicbrainz/picard/master/NEWS.txt",
-      })
-      .done(function(data)
-      {
-        var log = $('#log');
-
-        // Remove the spinner and reset align
-        log.html('');
-        log.css("text-align", "left");
-
-        var dataLines = data.split(/\r\n|\n/);
-
-        var newLine = /\s+?\*\s+/;
-        var reVersion = /^Version\s+(.*?)\s+-\s+(.*?)$/;
-
-        var jiraIssue = /(PICARD\-\d+)/g;
-        var oldIssue = /#(\d+)/g;
-
-        for (var i = 0; i < dataLines.length; i++)
-        {
-          var line = htmlEntities(dataLines[i]);
-
-          if (ver = reVersion.exec(line))
-          {
-            log.append(
-              '<h3>Version ' +
-              '<strong>' + ver[1] + '</strong>' +
-              '<span>' + ver[2].replace(/xxxx\-xx\-xx/, "Yet to be released.") + '</span>' +
-              '</h3>'
-            );
-          }
-          else if (line != "")
-          {
-            if (jiraIssue.exec(line))
-            {
-              var toAppend = line.replace(jiraIssue, '<a href="http://tickets.musicbrainz.org/browse/$1">$1</a>');
-            }
-            else if (oldIssue.exec(line))
-            {
-              var toAppend = line.replace(oldIssue, '<a href="http://bugs.musicbrainz.org/ticket/$1">#$1</a>');
-            }
-            else
-            {
-              var toAppend = line;
-            }
-
-            log.append('<p' + (newLine.exec(line) ? ' class="newLine" ' : '') + '>' + toAppend.replace(newLine, '') + '</p>');
-          }
-        };
-      });
-    }) ();
-    </script>
 {% endblock %}

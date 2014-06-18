@@ -1,6 +1,8 @@
 from app import app
-
 from flask import render_template
+
+from .changelog import *
+
 
 @app.route('/')
 def show_index():
@@ -10,11 +12,6 @@ def show_index():
 @app.route('/downloads/')
 def show_downloads():
     return render_template('downloads.html')
-
-
-@app.route('/changelog/')
-def show_changelog():
-    return render_template('changelog.html')
 
 
 @app.route('/plugins/')
