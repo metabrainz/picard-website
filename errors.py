@@ -1,8 +1,10 @@
 from app import app
-from flask import make_response
+from flask import (
+    make_response,
+    render_template
+)
 
-# Todo: Add a 404 page
+
 @app.errorhandler(404)
 def not_found(error):
-    return make_response('404 Page not found.', 404)
-
+    return make_response(render_template('404.html'), 404)
