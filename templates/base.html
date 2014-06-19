@@ -42,10 +42,16 @@
           <a class="navbar-brand" href="/">MusicBrainz Picard</a>
         </div>
         <div class="navbar-collapse collapse">
+          {% set navigation_bar = [
+              ("/", "index", "Home"),
+              ("/downloads/", "downloads", "Downloads"),
+              ("/docs/", "docs", "Documentation"),
+          ] -%}
+          {% set active_page = active_page | default("index") -%}
           <ul class="nav navbar-nav">
-            <li><a href="#guide">Guide</a></li>
-            <li><a href="#docs">Documentation</a></li>
-            <li><a href="/downloads/">Downloads</a></li>
+            {% for href, id, caption in navigation_bar %}
+              <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+            {% endfor %}
           </ul>
         </div>
       </div>
