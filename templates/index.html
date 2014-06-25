@@ -92,15 +92,15 @@
       }
       else if (/Linux/.test(platform))
       {
-        downBtn.href = 'ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg';
-        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-apple");
-        downBtn.innerHTML += '<span class="download-info">v1.2 for OS X 10.7+</span>'
+        downBtn.href = '/downloads/#linux';
+        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-linux");
+        downBtn.innerHTML += '<span class="download-info">v1.2 for Linux Distributions</span>'
       }
       else if (platform === "MacIntel" || platform === 'MacPPC')
       {
-        downBtn.href = '/download.html#linux';
-        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-linux");
-        downBtn.innerHTML += '<span class="download-info">v1.2 for Linux Distributions</span>'
+        downBtn.href = 'ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg';
+        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-apple");
+        downBtn.innerHTML += '<span class="download-info">v1.2 for OS X 10.7+</span>'
       }
     }) ();
     </script>
