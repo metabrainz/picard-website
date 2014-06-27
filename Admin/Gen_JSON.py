@@ -1,5 +1,3 @@
-#!python3
-
 import os
 import re
 import json
@@ -11,28 +9,57 @@ def get_data(filePath):
     """
     Extract usable information from plugin files.
     """
-    plugData = {}
+    data = {}
+
+    # Todo: Improve these?
+    reName = re.compile(r'PLUGIN_NAME = u?((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
+    reAuthor = re.compile(r'PLUGIN_AUTHOR = u?((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
+    reVer = re.compile(r'PLUGIN_VERSION = u?((?:\"\"\"|\'\'\'|\"|\'))(.*?)\1')
+    reAPI = re.compile(r'PLUGIN_API_VERSIONS = \[((?:\"\"\"|\'\'\'|\"|\'))(.*?)\1\]')
+
+    # Descriptions are spread out in multiple lines
+    # so these will require some special attention
+    reDescStart = re.compile(r'PLUGIN_DESCRIPTION = u?(.*)')
+    reDescEnd =  re.compile(r'PLUGIN_(.*)')
+    reDesc = re.compile(r'PLUGIN_DESCRIPTION = u?((?:\"\"\"|\'\'\'|\"|\'))(.*?)\1', re.DOTALL)
+    descLines = []
+    descFlag = False
 
     with open(filePath) as f:
         for line in f:
-            name = re.match(r'PLUGIN_NAME = (.*)', line)
-            author = re.match(r'PLUGIN_AUTHOR = (.*)', line)
-            desc = re.match(r'PLUGIN_DESCRIPTION = (.*)', line)
-            ver = re.match(r'PLUGIN_VERSION = (.*)', line)
-            apiver = re.match(r'PLUGIN_API_VERSIONS = (.*)', line)
+            if 'name' not in data:
+                name = re.match(reName, line)
+                if name:
+                    data['name'] = name.group(2)
 
-            if name:
-                plugData['title'] = name.group(1)
-            if author:
-                plugData['author'] = author.group(1)
-            if desc:
-                plugData['desc'] = desc.group(1)
-            if ver:
-                plugData['ver'] = ver.group(1)
-            if apiver:
-                plugData['apiver'] = apiver.group(1)
+            if 'author' not in data:
+                author = re.match(reAuthor, line)
+                if author:
+                    data['author'] = author.group(2)
 
-    return plugData
+            if 'desc' not in data:
+                if re.match(reDescStart, line):
+                    descFlag = True
+                elif re.match(reDescEnd, line):
+                    descFlag = False
+                    desc = re.match(reDesc, re.sub(r'[\\\n]', '', "".join(descLines)))
+                    if desc:
+                        data['desc'] = desc.group(2)
+
+                if descFlag:
+                    descLines.append(line)
+
+            if 'ver' not in data:
+                ver = re.match(reVer, line)
+                if ver:
+                    data['ver'] = ver.group(2)
+
+            if 'apiver' not in data:
+                apiver = re.match(reAPI, line)
+                if apiver:
+                    data['apiver'] = apiver.group(2)
+
+    return data
 
 
 def build_json():
