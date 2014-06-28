@@ -7,6 +7,10 @@ tmp/
 # Python 3.3 Virtualenv
 env/
 
+# Plugin files and the json
+plugins/
+plugins.json
+
 ###Python###
 
 # Byte-compiled / optimized / DLL files
