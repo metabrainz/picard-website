@@ -23,13 +23,13 @@
               </tr>
             </thead>
             <tbody>
-            {% for plugin in plugins %}
+            {% for id, plugin in plugins.items() %}
             <tr>
               <td>{{ loop.index }}</td>
-              <td>{{ plugin["title"]     | beautify }}</td>
-              <td>{{ plugin["ver"]       | beautify }}</td>
-              <td>{{ plugin["desc"]      | beautify }}</td>
-              <td>{{ plugin["author"]    | beautify }}</td>
+              <td>{{ plugin["name"] }}</td>
+              <td>{{ plugin["version"] }}</td>
+              <td>{{ plugin["description"] | safe }}</td>
+              <td>{{ plugin["author"] }}</td>
               <td>{{ plugin["downloads"] }}</td>
             </tr>
             {% endfor %}
