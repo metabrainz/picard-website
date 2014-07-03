@@ -1,8 +1,9 @@
 import os
 import re
 import json
-from subprocess import call
 from hashlib import md5
+from subprocess import call
+from shutil import make_archive
 
 reName = re.compile(r'PLUGIN_NAME = u?((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
 reAuthor = re.compile(r'PLUGIN_AUTHOR = u?((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
@@ -64,6 +65,12 @@ def build_json():
     Traverse the plugins directory to generate json data.
     """
 
+    # Read the existing data
+    if os.path.isfile(plugFile):
+        plugins = json.load(open(plugFile, "r"))["plugins"]
+    else:
+        plugins = {}
+
     for dirName in os.listdir(plugDir):
 
         files = {}
@@ -92,6 +99,20 @@ def build_json():
             data['downloads'] = 0
             plugins[dirName] = data
 
+    json.dump({"plugins": plugins}, open("plugins.json", "w"), sort_keys=True, indent=2)
+
+
+def zip_files():
+    """
+    Zip up plugin folders
+    """
+
+    for dirName in os.walk(plugDir).next()[1]:
+        archivePath = os.path.join(plugDir, dirName)
+        make_archive(archivePath, "zip", archivePath)
+        print("Created archive: " + dirName)
+
+
 # The file that contains json data
 plugFile = "plugins.json"
 
@@ -101,13 +122,5 @@ plugDir = "plugins"
 # Pull contents from Github
 # call(["git", "pull", "-q"])
 
-# Read the existing data
-if os.path.isfile(plugFile):
-    plugins = json.load(open(plugFile, "r"))["plugins"]
-else:
-    plugins = {}
-
 build_json()
-
-# print(json.dumps({"plugins": plugins}, sort_keys=True, indent=2))
-json.dump({"plugins": plugins}, open("plugins.json", "w"), sort_keys=True, indent=2)
+zip_files()

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% set active_page = "changelog"%}
+{% block title %}What's New - MusicBrainz Picard{% endblock %}
+{% block content %}
+    <div class="jumbotron">
+      <div class="container">
+        <h1>What's New</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div id="log">
+      {% for line in lines %}
+        {% if line is re_search("^Version\s+(.*?)\s+-\s+(.*?)") %}
+          <h3>Version
+            <strong>{{ line | version(1) }}</strong>
+            <span>{{ line | version(2) | re_sub("xxxx\-xx\-xx", "Yet to be released.")}}</span>
+          </h3>
+        {% else %}
+          {% if line is re_search("(PICARD\-\d+)") %}
+            {% set data = line | re_sub("(PICARD\-\d+)", '<a href="http://tickets.musicbrainz.org/browse/\g<1>">\g<1></a>') | safe %}
+          {% elif line is re_search("#(\d+)") %}
+            {% set data = line | re_sub("#(\d+)", '<a href="http://bugs.musicbrainz.org/ticket/\g<1>">#\g<1></a>') | safe %}
+          {% else %}
+            {% set data = line %}
+          {% endif %}
+
+          {% if line is re_search("\s+?\*\s+") %}
+            <p class="newLine">{{ data | re_sub("\s+?\*\s+", "")}}</p>
+          {% else %}
+            <p>{{ data }}</p>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      </div>
+    </div><!-- /.container -->
+{% endblock %}
