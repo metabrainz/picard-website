@@ -1,6 +1,10 @@
+#!/home/dufferzafar/picard-website/env/bin/python
+
 import os
 import re
+import sys
 import json
+
 from hashlib import md5
 from subprocess import call
 from shutil import make_archive
@@ -71,21 +75,24 @@ def build_json():
     else:
         plugins = {}
 
-    for dirName in os.listdir(plugDir):
+    # All top level directories in plugDir are plugins
+    for dirName in os.walk(plugDir).next()[1]:
 
         files = {}
         data = {}
 
-        for fileName in os.listdir(os.path.join(plugDir, dirName)):
-            ext = os.path.splitext(fileName)[1]
+        dirPath = os.path.join(plugDir, dirName)
+        for root, dirs, fileNames in os.walk(dirPath):
+            for fileName in fileNames:
+                ext = os.path.splitext(fileName)[1]
 
-            if ext not in [".pyc"]:
-                filePath = os.path.join(plugDir, dirName, fileName)
-                md5Hash = md5(open(filePath, "rb").read()).hexdigest()
-                files[fileName] = md5Hash
+                if ext not in [".pyc"]:
+                    filePath = os.path.join(root, fileName)
+                    md5Hash = md5(open(filePath, "rb").read()).hexdigest()
+                    files[filePath.split(os.path.join(dirPath, ''))[1]] = md5Hash
 
-            if not data:
-                data = get_data(os.path.join(plugDir, dirName, fileName))
+                if not data:
+                    data = get_data(os.path.join(plugDir, dirName, fileName))
 
         if dirName in plugins:
             print("Updating " + dirName)
@@ -117,10 +124,16 @@ def zip_files():
 plugFile = "plugins.json"
 
 # The directory which contains plugin files
-plugDir = "plugins"
+plugDir = "..\\plugins"
 
-# Pull contents from Github
-# call(["git", "pull", "-q"])
-
-build_json()
-zip_files()
+if __name__ == '__main__':
+    if sys.argv[1] == "pull":
+        call(["git", "pull", "-q"])
+    elif sys.argv[1] == "json":
+        build_json()
+    elif sys.argv[1] == "zip":
+        zip_files()
+    else:
+        # call(["git", "pull", "-q"])
+        build_json()
+        zip_files()
