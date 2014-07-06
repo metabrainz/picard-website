@@ -5,9 +5,11 @@ import re
 import sys
 import json
 
+import zipfile
+import zlib
+
 from hashlib import md5
 from subprocess import call
-from shutil import make_archive
 
 reName = re.compile(r'PLUGIN_NAME = u?((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
 reAuthor = re.compile(r'PLUGIN_AUTHOR = u?((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
@@ -116,7 +118,14 @@ def zip_files():
 
     for dirName in os.walk(plugDir).next()[1]:
         archivePath = os.path.join(plugDir, dirName)
-        make_archive(archivePath, "zip", archivePath)
+        archive = zipfile.ZipFile(archivePath + ".zip", "w")
+
+        dirPath = os.path.join(plugDir, dirName)
+        for root, dirs, fileNames in os.walk(dirPath):
+            for fileName in fileNames:
+                filePath = os.path.join(root, fileName)
+                archive.write(filePath, filePath.split(os.path.join(dirPath, ''))[1], compress_type=zipfile.ZIP_DEFLATED)
+
         print("Created archive: " + dirName)
 
 
