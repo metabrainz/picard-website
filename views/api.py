@@ -64,7 +64,7 @@ def get_plugin():
             return not_found(404)
     else:
         # Show all the plugins if an id is not specified
-        plugin = plugins
+        plugin = {'plugins': plugins}
 
     return make_response(jsonify(plugin), 200)
 
