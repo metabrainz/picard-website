@@ -1,4 +1,4 @@
-#!python3
+#!/home/dufferzafar/picard-website/env/bin/python
 
 from app import app
 from views import *

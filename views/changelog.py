@@ -2,7 +2,7 @@ from app import app
 from flask import render_template
 
 import re
-from urllib.request import urlopen
+from urllib import urlopen
 
 
 def re_sub(string, find, replace):

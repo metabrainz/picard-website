@@ -1,9 +1,8 @@
 from app import app
 from flask import render_template
 
-import re
 import json
-from urllib.request import urlopen
+from urllib import urlopen
 
 
 @app.route('/plugins/')
