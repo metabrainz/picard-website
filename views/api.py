@@ -10,14 +10,14 @@ from flask import (
 import os
 
 # The file that contains json data
-plugFile = "plugins.json"
+plugin_file = "plugins.json"
 
 # The directory which contains plugin files
-plugDir = "plugins"
+plugin_dir = "picard-plugins/plugins"
 
 # Load JSON Data
-with open(plugFile) as plugJson:
-    plugins = json.load(plugJson)['plugins']
+with open(plugin_file) as plugin_json:
+    plugins = json.load(plugin_json)['plugins']
 
 dumpCtr = 0
 
@@ -35,8 +35,8 @@ def increase_count(plugin):
     plugin["downloads"] += 1
     dumpCtr += 1
     if dumpCtr >= 50:
-        with open(plugFile, "w") as plugJson:
-            json.dump({'plugins': plugins}, plugJson)
+        with open(plugin_file, "w") as plugin_json:
+            json.dump({'plugins': plugins}, plugin_json)
         dumpCtr = 0
 
 
@@ -81,7 +81,7 @@ def download_plugin():
     if pid:
         if pid in plugins:
             increase_count(plugins[pid])
-            return send_from_directory(plugDir, pid + ".zip", as_attachment=True)
+            return send_from_directory(plugin_dir, pid + ".zip", as_attachment=True)
         else:
             return not_found(404)
     else:

@@ -11,15 +11,16 @@ import zlib
 from hashlib import md5
 from subprocess import call
 
-reName = re.compile(r'PLUGIN_NAME = u?((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
-reAuthor = re.compile(r'PLUGIN_AUTHOR = u?((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
-reVer = re.compile(r'PLUGIN_VERSION = u?((?:\"\"\"|\'\'\'|\"|\'))(.*?)\1')
+reName = re.compile(r'PLUGIN_NAME = (?:_\(u|u)((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
+reAuthor = re.compile(r'PLUGIN_AUTHOR = (?:_\(u|u)((?:\"\"\"|\'\'\'|\"|\'))(.*)\1')
+reVer = re.compile(r'PLUGIN_VERSION = (?:_\(u|u)((?:\"\"\"|\'\'\'|\"|\'))(.*?)\1')
 reAPI = re.compile(r'PLUGIN_API_VERSIONS = \[((?:\"\"\"|\'\'\'|\"|\'))(.*?)\1\]')
 
 # Descriptions are spread out in multiple lines so these will be handled separately
-reDescStart = re.compile(r'PLUGIN_DESCRIPTION = u?(.*)')
-reDescEnd =  re.compile(r'PLUGIN_(.*)')
-reDesc = re.compile(r'PLUGIN_DESCRIPTION = u?((?:\"\"\"|\'\'\'|\"|\'))(.*?)\1', re.DOTALL)
+reDescStart = re.compile(r'PLUGIN_DESCRIPTION = (?:_\(u|u)(.*)')
+reDescEnd = re.compile(r'PLUGIN_(.*)')
+reDesc = re.compile(r'PLUGIN_DESCRIPTION = (?:_\(u|u)((?:\"\"\"|\'\'\'|\"|\'))(.*?)\1', re.DOTALL)
+
 
 def get_data(filePath):
     """
@@ -83,6 +84,9 @@ def build_json():
         files = {}
         data = {}
 
+        if dirName in [".git"]:
+            continue
+
         dirPath = os.path.join(plugDir, dirName)
         for root, dirs, fileNames in os.walk(dirPath):
             for fileName in fileNames:
@@ -108,7 +112,8 @@ def build_json():
             data['downloads'] = 0
             plugins[dirName] = data
 
-    json.dump({"plugins": plugins}, open("plugins.json", "w"), sort_keys=True, indent=2)
+    json.dump({"plugins": plugins}, open(plugFile, "w"),
+              sort_keys=True, indent=2)
 
 
 def zip_files():
@@ -124,25 +129,28 @@ def zip_files():
         for root, dirs, fileNames in os.walk(dirPath):
             for fileName in fileNames:
                 filePath = os.path.join(root, fileName)
-                archive.write(filePath, filePath.split(os.path.join(dirPath, ''))[1], compress_type=zipfile.ZIP_DEFLATED)
+                archive.write(filePath,
+                              filePath.split(os.path.join(dirPath, ''))[1],
+                              compress_type=zipfile.ZIP_DEFLATED)
 
         print("Created archive: " + dirName)
 
 
 # The file that contains json data
-plugFile = "plugins.json"
+plugFile = "../plugins.json"
 
 # The directory which contains plugin files
-plugDir = "..\\plugins"
+plugDir = "../picard-plugins/plugins"
 
 if __name__ == '__main__':
-    if sys.argv[1] == "pull":
-        call(["git", "pull", "-q"])
-    elif sys.argv[1] == "json":
-        build_json()
-    elif sys.argv[1] == "zip":
-        zip_files()
+    if 1 in sys.argv:
+        if sys.argv[1] == "pull":
+            call(["git", "pull", "-q"])
+        elif sys.argv[1] == "json":
+            build_json()
+        elif sys.argv[1] == "zip":
+            zip_files()
     else:
-        # call(["git", "pull", "-q"])
-        build_json()
-        zip_files()
+            # call(["git", "pull", "-q"])
+            build_json()
+            zip_files()
