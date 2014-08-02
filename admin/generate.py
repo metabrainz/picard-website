@@ -1,4 +1,4 @@
-#!/home/dufferzafar/picard-website/env/bin/python
+#!/usr/bin/env python
 
 import os
 import re
