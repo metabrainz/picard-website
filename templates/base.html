@@ -45,13 +45,18 @@
           {% set navigation_bar = [
               ("/", "index", "Home"),
               ("/downloads/", "downloads", "Downloads"),
-              ("/docs/", "docs", "Documentation"),
           ] -%}
           {% set active_page = active_page | default("index") -%}
           <ul class="nav navbar-nav">
             {% for href, id, caption in navigation_bar %}
-              <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+            <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
             {% endfor %}
+            <li class="dropdown {% if active_page == 'docs' %}active{% endif %}">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/docs/basics/">Basics</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
