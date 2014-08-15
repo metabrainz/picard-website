@@ -13,7 +13,7 @@
     <div class="col-md-8">
       <i>
         You will need to <a href="/downloads/" title="MusicBrainz Picard">download MusicBrainz Picard</a> first.
-        You can also check <a href="/docs/guide/" title="How To Tag Files With Picard"> a basic tutorial</a>
+        You can also check out a tutorial <a href="/docs/guide/" title="How To Tag Files With Picard"> on how to tag files.</a>
       </i>
 
       <h1 id="clustering">Clustering</h1>
@@ -44,9 +44,10 @@
 
         <h3 id="scanning-fingerprinting-files">Scanning (fingerprinting) files</h3>
         <p>
-          Instead of using release-oriented and metadata-dependent lookups, Picard can try and tag your files 1-by-1
-          based on their <a href="http://musicbrainz.org/doc/Audio_Fingerprint" title="Audio Fingerprint">
-        audio fingerprint</a>. If you select a set of files in the left-hand pane and click "Scan", Picard
+          Instead of using release-oriented and metadata-dependent lookups, Picard can try and tag your files as
+          single files (rather than a cluster) based on their
+          <a href="http://musicbrainz.org/doc/Audio_Fingerprint" title="Audio Fingerprint">
+          audio fingerprint</a>. If you select a set of files in the left-hand pane and click "Scan", Picard
           will find
           <a href="http://musicbrainz.org/doc/AcoustID" title="AcoustID">AcoustIDs</a> for your files
           and query MusicBrainz to find a track that matches them.
@@ -121,19 +122,38 @@
         <p>
           Picard is very flexible and can be customized using
           <a href="/docs/scripting/" title="Picard Scripting">scripts</a>
-          and <a href="/plugins/" title="Picard Plugins">plugins</a>
-          to do things such as:
+          and <a href="/plugins/" title="Picard Plugins">plugins</a> to do things such as:
         </p>
 
         <ul>
-          <li>rename and reorganise your collection using the
+          <li>
+            Rename and reorganise your collection using the
             <a href="/docs/scripting/#Functions" title="Picard Scripting">functions</a>
-            provided in the scripting language</li>
+            provided in the scripting language
+          </li>
 
-          <li>customize how Picard applies the MusicBrainz
-            <a href="/docs/mappings/" title="Picard Tag Mapping">metadata</a> to your files</li>
+          <li>
+            Customize how Picard applies the MusicBrainz
+            <a href="/docs/mappings/" title="Picard Tag Mapping">metadata</a> to your files
+          </li>
 
-          <li>encapsulate scripting, download cover art, and add other functionality to Picard</li>
+          <li>Encapsulate scripting, download cover art, and add other functionality to Picard</li>
+        </ul>
+
+        <p>
+          A lot of Picard's power is in its extensive drag and drop features. Try some of these operations:
+        </p>
+
+        <ul>
+          <li>Drag a file from the file browser to an album track.</li>
+          <li>Drag a file from the file browser to an album -- this attempts to match the file to the album
+            automatically.</li>
+          <li>Drag a directory from the file browser to an album -- this attempts to match all the files from
+            the dir to the album.</li>
+          <li>Drag an album cluster onto an album to match the cluster to the album.</li>
+          <li>Drag one album onto another to match all the files from one to the other.</li>
+          <li>Drag an album cluster into unmatched files to move the cluster back to unmatched.</li>
+          <li>Drag unmatched files from an album onto another album or back to unmatched files.</li>
         </ul>
       </span>
     </div>
