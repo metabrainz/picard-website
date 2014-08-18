@@ -2,6 +2,7 @@ from app import app
 from flask import render_template
 
 from .changelog import *
+from .humans import *
 from .plugins import *
 from .api import *
 

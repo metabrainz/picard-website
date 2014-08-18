@@ -1,0 +1,23 @@
+This website was created during Google Summer of Code 2014.
+
+The complete source code is available on Github:
+https://github.com/musicbrainz/picard-website/
+
+/* TEAM */
+
+Project Mentor: Michael Wiencek
+Freenode: @bitmap
+From: Canada
+
+Student: Shadab Zafar
+Freenode: @dufferzafar
+Twitter: @dufferzafar
+From: New Delhi, India
+
+/* SITE */
+
+Language: English
+
+Software: Microsoft Windows 7, Sublime Text 3
+
+Technologies: Python/Flask, Bootstrap, Font Awesome
