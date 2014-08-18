@@ -43,8 +43,8 @@
         </div>
         <div class="navbar-collapse collapse">
           {% set navigation_bar = [
-              ("/", "index", "Home"),
               ("/downloads/", "downloads", "Downloads"),
+              ("/plugins/", "plugins", "Plugins"),
               ("/docs/", "docs", "Documentation"),
           ] -%}
           {% set active_page = active_page | default("index") -%}
@@ -73,7 +73,6 @@
         </ul>
 
         <ul class="list-inline">
-          <li><a href="#about">About</a></li>
           <li><a href="http://blog.musicbrainz.org/">MusicBrainz Blog</a></li>
           <li><a href="http://forums.musicbrainz.org/viewforum.php?id=2">Picard Forum</a></li>
         </ul>
