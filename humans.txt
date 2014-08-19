@@ -7,7 +7,7 @@ https://github.com/musicbrainz/picard-website/
 
 Project Mentor: Michael Wiencek
 Freenode: @bitmap
-From: Canada
+From: United States
 
 Student: Shadab Zafar
 Freenode: @dufferzafar
