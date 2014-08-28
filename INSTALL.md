@@ -1,79 +1,57 @@
-# Installation Steps
+# Installation
 
-* Begin by cloning the repository
+First, checkout the picard-plugins repository somewhere and generate the plugins.json data:
 
-`git clone https://github.com/musicbrainz/picard-website/`
-
-* cd into the directory
-
-`cd picard-website`
-
-* Create a python virtualenv 
-
-*Tested on Python 2.6.5 and 2.7*
-
-`virtualenv env/`
-
-* Now install all the dependencies
-
-`env/bin/pip install -r requirements.txt`
-
-* Clone the plugins repository
-
-*Make sure the folder name is 'plugins'*
-
-`git clone https://github.com/musicbrainz/picard-plugins/`
-
-* Change to admin directory and run the generate script
-
-`cd admin`
-
-`generate.py`
-
-*This will generate the json data and zip files*
-
-Don't forget to come back up...
-
-`cd ..`
-
-* Generate CSS from our less file
-
-` lessc static/less/styles.less static/css/styles.css`
-
-*This requires the less to css compiler, so you might need to download that first.*
-
-* Create a file named 'picard.fcgi' 
-
-`vi picard.fcgi`
-
-...and copy the following contents
-
-```python
-#!/home/dufferzafar/picard-website/env/bin/python
-
-import sys
-sys.path.insert(0, '/home/dufferzafar/picard-website')
-
-from flup.server.fcgi import WSGIServer
-from werkzeug.debug import DebuggedApplication
-from app import app
-from views import *
-from errors import *
-
-app = DebuggedApplication(app, evalex=True)
-
-if __name__ == '__main__':
-    WSGIServer(app, bindAddress='/home/dufferzafar/picard-website/fcgi.sock', umask=0).run()
+```bash
+git clone https://github.com/musicbrainz/picard-plugins/
+cd picard-website
+python generate.py
+cd ..
 ```
 
-*Make sure you replace 'dufferzafar' with your username*
+Next, checkout picard-website and configure it:
 
-`:wq!`
+```bash
+git clone https://github.com/musicbrainz/picard-website/
+cd picard-website
+cp config.py.sample config.py
+```
 
-* Run, Forrest, Run!
+Edit config.py so that PLUGINS_REPOSITORY points to your local copy of the picard-plugins repository:
 
-`env/bin/python picard.fcgi`
+```bash
+vim config.py
+```
 
-* Bye!
+Make sure [virtualenv](http://virtualenv.readthedocs.org/en/latest/) is installed before proceeding.
 
-`exit`
+```bash
+virtualenv env
+source env/bin/activate
+```
+
+Install Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Install node dependencies (requires [Node.js](http://nodejs.org/download/)):
+
+```bash
+npm install
+```
+
+Compile CSS:
+
+```bash
+gulp
+```
+
+To run the development server, do:
+
+```bash
+./run.py
+```
+
+By default, it listens on port 6060. This can be changed in config.py.
