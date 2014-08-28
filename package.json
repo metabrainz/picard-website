@@ -1,0 +1,8 @@
+{
+    "name": "picard-website",
+    "version": "0.0.0",
+    "dependencies" : {
+        "less" : ">=1.5.0"
+    },
+    "private": true
+}

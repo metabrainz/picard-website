@@ -7,18 +7,14 @@ tmp/
 # Python 3.3 Virtualenv
 env/
 
-# Plugin files and the json
-picard-plugins/
-plugins.json
+config.py
+node_modules/
 
 ###Python###
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-
-# C extensions
-*.so
 
 # Distribution / packaging
 .Python
@@ -51,18 +47,3 @@ coverage.xml
 
 # Translations
 *.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
-
-# Rope
-.ropeproject
-
-# Django stuff:
-*.log
-*.pot
-
-# Sphinx documentation
-docs/_build/
