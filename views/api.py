@@ -1,4 +1,6 @@
+import os
 from app import app
+from config import PLUGINS_REPOSITORY
 from flask import (
     json,
     jsonify,
@@ -7,17 +9,15 @@ from flask import (
     send_from_directory
 )
 
-import os
-
 # The file that contains json data
-plugin_file = "plugins.json"
+PLUGINS_JSON_FILE = os.path.join(PLUGINS_REPOSITORY, "plugins.json")
 
 # The directory which contains plugin files
-plugin_dir = "picard-plugins/plugins"
+PLUGINS_DIR = os.path.join(PLUGINS_REPOSITORY, "plugins")
 
 # Load JSON Data
-with open(plugin_file) as plugin_json:
-    plugins = json.load(plugin_json)['plugins']
+with open(PLUGINS_JSON_FILE) as fp:
+    plugins = json.load(fp)['plugins']
 
 dumpCtr = 0
 
@@ -35,8 +35,8 @@ def increase_count(plugin):
     plugin["downloads"] += 1
     dumpCtr += 1
     if dumpCtr >= 50:
-        with open(plugin_file, "w") as plugin_json:
-            json.dump({'plugins': plugins}, plugin_json)
+        with open(PLUGINS_JSON_FILE, "w") as fp:
+            json.dump({'plugins': plugins}, fp)
         dumpCtr = 0
 
 
@@ -81,7 +81,7 @@ def download_plugin():
     if pid:
         if pid in plugins:
             increase_count(plugins[pid])
-            return send_from_directory(plugin_dir, pid + ".zip", as_attachment=True)
+            return send_from_directory(PLUGINS_DIR, pid + ".zip", as_attachment=True)
         else:
             return not_found(404)
     else:
