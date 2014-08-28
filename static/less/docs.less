@@ -1,0 +1,97 @@
+#docs
+{
+    h1
+    {
+        margin: 40px 0px 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #EEE;
+    }
+
+    h3
+    {
+        margin: 40px 0px 10px;
+    }
+
+    ul.options
+    {
+        margin-top: 15px;
+
+        & > li
+        {
+            margin-bottom: 10px;
+        }
+    }
+
+    ol.guide
+    {
+        margin-top: 15px;
+
+        & > li
+        {
+            margin-bottom: 15px;
+
+            img.img-thumbnail
+            {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+#sidebar
+{
+
+    list-style: none outside none;
+
+    a {
+        display: block;
+        padding: 4px 15px;
+        font-size: 14px;
+        color: #999;
+
+        &:hover, &:focus, &:active {
+            color: #563D7C;
+            text-decoration: none;
+            background-color: transparent;
+            padding-left: 14px;
+            border-left: 1px solid #563D7C;
+        }
+    }
+
+    .nav
+    {
+        ul
+        {
+            display: none;
+        }
+
+        .active
+        {
+            ul
+            {
+                display: block;
+                padding-left: 13px;
+                padding-bottom: 10px;
+            }
+        }
+
+        & > .active, & > .active:hover, & > .active:focus
+        {
+            & > a
+            {
+                color: #563D7C;
+                text-decoration: none;
+                background-color: transparent;
+                padding-left: 13px;
+                border-left: 2px solid #563D7C;
+            }
+        }
+    }
+
+    .affix
+    {
+        position: fixed;
+        top: 15px;
+    }
+}

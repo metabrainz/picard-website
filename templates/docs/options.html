@@ -1,0 +1,565 @@
+{% extends 'base.html' %}
+{% set active_page = "docs"%}
+{% set git_doc = "options.html"%}
+{% block title %}Documentation - MusicBrainz Picard{% endblock %}
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>Picard UI Options</h1>
+  </div>
+</div>
+<div id="docs" class="container">
+  <div class="row">
+    <div class="col-md-8">
+
+      <h1 id="general">General</h1>
+
+      <ul class="options">
+        <li>
+          <b>Server address:</b> The domain name for the MusicBrainz database server used by Picard to get
+          details of your music. Default value: musicbrainz.org (for the main MusicBrainz server).
+        </li>
+        <li>
+          <b>Port:</b> The port number for the server. Default value: 80 (for the main MusicBrainz server).
+        </li>
+        <li>
+          <b>Username</b>: Your MusicBrainz website username, used to submit
+          <a href="http://musicbrainz.org/doc/AcoustID" title="AcoustID">acoustic fingerprints</a>,
+          retrieve and save items to your collections and retrieve personal folksonomy tags.
+        </li>
+        <li><b>Password</b>: Your MusicBrainz website password.</li>
+        <li>
+          <b>Automatically scan all new files:</b> Check this box if you want Picard to scan each music
+          file you add and look for an <a href="http://musicbrainz.org/doc/AcoustID" title="AcoustID">AcoustID</a>
+          fingerprint. This takes time, but may be helpful for you and MusicBrainz. Leave it unchecked if you don't
+          want Picard to do this scan automatically. In any case, you can direct Picard to scan a particular
+          music file at any time using the <i>Scan</i> button in the toolbar.
+        </li>
+      </ul>
+
+      <h1 id="metadata">Metadata</h1>
+
+      <ul class="options">
+        <li>
+          <b>Translate artist names to this locale where possible:</b> When checked, Picard will see whether
+          an artist has an <a href="http://musicbrainz.org/doc/Aliases" title="Aliases">alias</a>
+          for the selected locale. If it does, Picard will use that alias instead of the
+          <a href="http://musicbrainz.org/doc/Artist_Name" title="Artist Name">artist name</a>
+          when tagging. When "English" is the selected locale, the
+          <a href="http://musicbrainz.org/doc/Artist_Sort_Name" title="Artist Sort Name">artist sort name</a>
+          (which is, by Style Guideline, stored in Latin script) is used as a fallback if there is no English alias.
+        </li>
+        <li>
+          <b>Use standardized artist names:</b> Check to only use standard
+          <a href="http://musicbrainz.org/doc/Artist" title="Artist">Artist</a> names, rather than
+          <a href="http://musicbrainz.org/doc/Artist_Credit" title="Artist Credit">Artist Credits</a>
+          which may differ slightly across tracks and releases.
+          Note: If the "translate artist names" option above is also checked, it will override this option
+          if a suitable alias is found.
+        </li>
+        <li>
+          <b>Convert Unicode punctuation characters to ASCII:</b> Converts Unicode punctuation characters
+          in MusicBrainz data to ASCII for consistent use of punctuation in tags. For example, right
+          single quotation marks (’) are converted to ASCII apostrophes ('), and horizontal ellipses
+          (…) are converted to three full stops (.).
+        </li>
+        <li>
+          <b>Use release relationships:</b> Check to retrieve and write release-level relationships to your
+          files, e.g. URLs, composer, lyricist, performer, conductor, DJ mixer, etc. (You must have this
+          enabled to use Picard to retrieve cover art)
+        </li>
+        <li>
+          <b>Use track relationships:</b> Check to write track-level relationships to your files, e.g. composer,
+          lyricist, performer, remixer, etc.
+        </li>
+        <li>
+          <b>Use folksonomy tags as genres:</b> Check to write MusicBrainz folksonomy tags as genres. (See
+          options under "Folksonomy Tags")
+        </li>
+        <li><b>Various artists:</b> Choose how you want the 'Various Artists' artist spelled.</li>
+        <li>
+          <b>Non-album tracks:</b> Choose how you want 'non-album tracks'
+          (<a href="http://musicbrainz.org/doc/Recording" title="Recording">Recordings</a> that do not
+          belong to any <a href="http://musicbrainz.org/doc/Release" title="Release">Release</a>) to be grouped.
+        </li>
+      </ul>
+
+      <h3 id="preferred_releases">Preferred Releases</h3>
+
+      <ul class="options">
+        <li> <b>Preferred release types</b>: Adjust the sliders for various release types to tweak how likely
+          Picard is to match a file or cluster to releases of various types. You can use this to decrease
+          the likelihood of Picard matching a file or album to a Compilation or Live version, for example.
+        </li>
+      </ul>
+      <ul class="options">
+        <li> <b>Preferred release countries</b>: Add one or more countries into the list to make Picard prefer
+          matching clusters/files to releases from the chosen countries. This list is also used to prioritise
+          files in the "Other Releases" context menu.
+        </li>
+        <li> <b>Preferred release formats</b>: Add one or more formats into the list to make Picard prefer
+          matching clusters/files to releases of the specified format. This list is also used to prioritise
+          files in the "Other Releases" context menu.
+        </li>
+      </ul>
+
+      <h3 id="folksonomy_tags">Folksonomy tags</h3>
+
+      <p>The following settings are only applicable if you enable the <i>use folksonomy tags as genres</i> option.
+      </p>
+      <ul class="options">
+        <li> <b>Ignore tags:</b> Comma-separated list of tags to ignore when writing genres.
+        </li>
+        <li> <b>Only use my tags:</b> Check to only write genres with tags that you personally have submitted
+          to MusicBrainz. You'll need to set your username and password to use this feature.
+        </li>
+        <li> <b>Minimal tag usage:</b> Choose how popular the tag must be before it is written by Picard. Default:
+          90%. Lowering the value here will lead to more tags in your files, but possibly less relevant
+          tags.
+        </li>
+        <li> <b>Maximum number of tags:</b> Choose how many tags to write as genres. Default: 5. If you only
+          want a single genre, set this to 1.
+        </li>
+        <li> <b>Join multiple tags with:</b> Select which character should be used to separate multiple tags.
+        </li>
+      </ul>
+
+      <h3 id="ratings">Ratings</h3>
+
+      <ul class="options">
+        <li> <b>Enable track ratings:</b> Check to write track ratings to your files.
+        </li>
+        <li> <b>Submit ratings to MusicBrainz:</b> Check to submit ratings to MusicBrainz. The tracks will
+          be rated with your account.
+        </li>
+      </ul>
+
+      <h1 id="tags">Tags</h1>
+
+      <ul class="options">
+        <li> <b>Write tags to files:</b> Uncheck to disable Picard from writing data. Picard may still move/rename
+          your files according to your settings.
+        </li>
+        <li> <b>Preserve timestamps of tagged files:</b> If checked, does not update the Last Modified date
+          and time of your music files when it writes new tags to them.
+        </li>
+      </ul>
+
+      <h3 id="before_tagging">Before Tagging</h3>
+
+      <ul class="options">
+        <li>
+          <b>Clear existing tags:</b> Checking this will remove <i>all</i> existing metadata and
+          leave your files with only MusicBrainz metadata. Information you may have added through
+          another media player such as
+          <code>genre</code>,
+          <code>comments</code>or
+          <code>ratings</code>will be removed.
+        </li>
+        <li>
+          <b>Remove ID3 tags from FLAC files:</b> Check to remove ID3 tags from FLAC files –
+          Vorbis Comments are recommended for FLAC files. Picard will write Vorbis Comments to FLACs
+          regardless of this setting.
+        </li>
+        <li>
+          <b>Remove APEv2 tags from MP3 files:</b> Check to remove APEv2 tags from MP3 files –
+          ID3 is recommended for MP3s. Picard will write ID3 tags to MP3s regardless of this setting.
+        </li>
+      </ul>
+      <ul class="options">
+        <li>
+          <b>Preserve these tags from being cleared or overwritten with MusicBrainz data:</b> This is an
+          advanced option: If you have tags which you need to preserve, enter their names here to stop
+          Picard from overwriting them.
+        </li>
+      </ul>
+
+      <h3 id="tag_compatibility">Tag Compatibility</h3>
+
+      <ul class="options">
+        <li>
+          <b>ID3v2 version:</b> Although id3v2.4 is the latest version, its support in music players
+          is <b>still</b> lacking. Whilst software such as
+          <a rel="nofollow" class="external text" href="http://www.foobar2000.org">foobar2000</a> and
+          <a rel="nofollow" class="external text" href="http://www.mediamonkey.com">MediaMonkey</a>have
+          no problem using version 2.4 tags, you will not be able to read the tags in Windows Explorer
+          or Windows Media Player (in any Windows or WMP version, including those in Windows 8.1).
+          Apple iTunes is also still based in id3v23, and support for id3v24 in other media players
+          (such as smartphones) is variable. Other than native support for multi-valued tags in v2.4, the
+          <a href="/docs/mappings" title="Picard Tag Mapping">Picard Tag Mapping</a>
+          will show you what you lose when choosing v2.3 instead of v2.4.
+        </li>
+        <li>
+          <b>ID3v2 text encoding:</b> The default for version 2.4 is UTF-8, the default for version 2.3
+          is UTF-16. Use ISO-8859-1 <b>only</b> if you face compatibility issues with your player.
+        </li>
+        <li>
+          <b>Join id3v23 tags with:</b> As mentioned above, id3v23 does not support multi-value tags, and
+          so Picard flattens these to strings before saving them to id3v23 tags. This setting defines
+          the string used to separate the values when flattened. Use '; ' for the greatest compatibility
+          (rather than '/' since tags more often contain a / than a&#160;;) and for the best visual compatibility
+          in Picard between id3v23 and other tagging formats.
+        </li>
+        <li>
+          <b>Also include ID3v1 tags in the files:</b> Not recommended at all. ID3v1.1 tags are obsolete
+          and may not work with non-latin scripts.
+        </li>
+      </ul>
+
+      <h1 id="cover_art">Cover art</h1>
+
+      <p>
+        <b>
+          You must enable "Option / Metadata / Use release relationships" for Picard to be abl
+           to download cover art.
+         </b>
+      </p>
+      <p>
+        <i>
+          In versions of Picard prior to 1.2, you will also require the Cover Art Downloader
+          plugin available on the <a href="/plugins/" title="Picard Plugins">Picard Plugins</a>page
+        </i>
+      </p>
+
+      <h3 id="location">Location</h3>
+
+      <ul class="options">
+        <li>
+          <b>Embed cover images into tags:</b> Enables images to be embedded directly into your music files.
+          Whilst this will use more storage space than storing it as a separate image file in the same
+          folder, some music players will only display embedded images and don't find the separate files.
+        </li>
+        <li>
+          <b>Only embed a front image:</b> Embeds only a front image into your music files. Many music players
+          will only display a single embedded image, so embedding additional images may not add any functionality.
+        </li>
+        <li>
+          <b>Save cover images as separate files:</b> In the file name mask you can use any variable or
+          function from <a href="/docs/tags/" title="Picard Tags">Picard Tags</a> and
+          <a href="/docs/scripting/" title="Picard Scripting">Picard Scripting</a>.
+          The mask should <b>not</b> contain a file extension; this is added automatically based on the
+          actual image type. The default value is
+          <code>cover</code>. If you change this to
+          <code>folder</code>, Windows will use it to preview the containing folder.
+        </li>
+        <li>
+          <b>Overwrite the file if it already exists:</b> Check this to replace existing files. This is
+          especially recommended if trying to write "folder" previews for Windows.
+        </li>
+      </ul>
+
+      <h3 id="cover_art_providers">Cover Art Providers</h3>
+
+      <p>
+        Picard can download Cover Art from a number of sources, and you can choose which sources you want
+        Picard to download cover art from:
+      </p>
+
+      <ul class="options">
+        <li>
+          <b>Cover Art Archive:</b> The Cover Art Archive (CAA) is MusicBrainz own archive of cover art
+          in cooperation with the Internet Archive (archive.org). If art is available there, the Cover
+          Art Archive is the most comprehensive database of cover art (front covers, back covers, booklets,
+          CDs etc.).
+        </li>
+        <li>
+          <b>Amazon:</b> Amazon often has cover art when other sites don't, however whilst this art is almost
+          always for the correct Artist/Album, it may not be the absolute correct cover art for the specific
+          Release that you have tagged your music with.
+        </li>
+        <li>
+          <b>Sites on the whitelist:</b>
+          See <a href="http://musicbrainz.org/doc/Style/Relationships/URLs/Cover_art_whitelist"
+          title="Style/Relationships/URLs/Cover art whitelist">Style/Relationships/URLs/Cover_art_whitelist</a>
+        </li>
+      </ul>
+
+      <p>
+        <i>Note: CD Baby and other whitelist sites are no longer being used by MusicBrainz for new Cover Art.</i>
+      </p>
+
+      <h3 id="cover_art_archive">Cover Art Archive</h3>
+
+      <p>In this section you can decide which types of cover art you would like to download from the Cover
+        Art Archive, and what quality (size) you want to download. Obviously, the better the quality,
+        the larger the size of the files.
+      </p>
+      <p>Most music players will display only one piece of cover art for the album, and most people select
+        Front (cover) for that.
+      </p>
+
+      <h1 id="file_naming">File Naming</h1>
+
+      <p>This page tells Picard whether it should move your audio files to a new directory when it saves
+        metadata in them. One use for this is to keep your work organised: all untagged files are under
+        directory A, and when Picard tags them it moves them to directory B. When directory A is empty,
+        your tagging work is done. Check this box, and select a destination directory, if you want Picard
+        to move files this way. Uncheck the box if you want Picard to leave the files under the same
+        directory.
+      </p>
+      <p>The <i>Rename Files</i> and <i>Move Files</i> options are independent. Rename Files refers to Picard
+        changing file names typically based on artist and track names. Move Files refers to Picard moving
+        files to new directories, based on a stated parent directory and sub-directories typically based
+        on album artist name and release title. However, they both use the same "file naming string".
+        Move files uses the portion up until the last '/'; rename files the part after that.
+      </p>
+
+      <ul class="options">
+        <li> <b>Rename files when saving:</b> Check to let Picard change file and directory names of your files
+          when it saves metadata in them, in order to make the file and directory names consistent with
+          the new metadata.
+        </li>
+        <li> <b>Replace non-ASCII characters:</b> Check to replace non-ASCII characters with their ASCII equivalent,
+          e.g. á,ä,ǎ, with a; é,ě,ë, with e; æ with ae, etc. For more information on ASCII characters
+          read the Wikipedia page on
+          <a href="http://en.wikipedia.org/wiki/ASCII" class="extiw" title="wikipedia:ASCII">ASCII</a>.
+        </li>
+        <li> <b>Replace Windows-incompatible characters:</b> Check to replace Windows-incompatible characters
+          with an underscore. Enabled by default on Windows with no option to disable.
+        </li>
+        <li> <b>Move files to this directory when saving:</b> Choose a destination parent directory to move
+          saved files to.
+          <ul class="options">
+            <li>If you use the directory "," they will be removed relative to their current location. If
+              they are already in some sort of folder structure, this will probably <i>not</i> do what
+              you want!
+            </li>
+          </ul>
+        </li>
+        <li> <b>Delete empty directories:</b> Check to have Picard remove directories that have become empty
+          once a move is completed. Leave unchecked if you want Picard to leave the source directory
+          structure unchanged. Checking this box may be convenient if you are using the move files option
+          to organise your work. An empty directory has no more work for you to do, and deleting the
+          directory makes that clear.
+        </li>
+        <li> <b>Move additional files:</b> Enter wildcard patterns that match any other files you want Picard
+          to move when saving files, e.g.
+          <code>Folder.jpg</code>,
+          <code>*.png</code>,
+          <code>*.cue</code>,
+          <code>*.log</code>. Using default settings, when these additional files are moved they will end up
+          in the release directory with your files. In a wildcard,
+          <code>*</code>matches zero or more characters. Other text, like
+          <code>.jpg</code>, matches those exact characters. Thus
+          <code>*.jpg</code>matches "cover.jpg", "liner.jpg", "a.jpg", and ".jpg", but not "nomatch.jpg2".
+          Put spaces between wildcard patterns.
+        </li>
+      </ul>
+
+      <ul class="options">
+        <li>
+          <b>Name files like this:</b> An edit box that contains a formatting string that tells Picard what
+          the new name of the file and its containing directories should be, in terms of various metadata
+          values. The formatting string is in Picard's
+          <a href="/docs/mappings/" title="Picard Scripting">scripting language</a>
+          where dark blue text starting with a "$" is a function name and names in light blue within "%" signs
+          are Picard's <a href="/docs/tags/" title="Picard Tags">tag names</a>.
+          Note that the use of a "/" in the formatting  string means that everything before the string is a
+          directory name, and everything after the last "/" becomes the file's name.
+          The formatting string is allowed to have zero, one, or multiple, "/".
+        </li>
+      </ul>
+
+      <h1 id="fingerprinting">Fingerprinting</h1>
+
+      <p>
+        If you select a file or cluster in the Left side of the Picard screen and click Scan, Picard will
+        invoke a program to scan the file and produce a fingerprint that can then be used to look up
+        the file on MusicBrainz.
+      </p>
+      <p>
+        MusicBrainz currently supports only <a href="http://musicbrainz.org/doc/AcoustID" title="AcoustID">AcoustID</a>
+        (an Open Source <a href="http://musicbrainz.org/doc/Fingerprinting" title="Fingerprinting">acoustic fingerprinting</a>
+        system created by <a href="http://musicbrainz.org/doc/User:LukasLalinsky" title="User:LukasLalinsky">Lukáš Lalinský</a>)
+        but has previously supported TRM and MusicID PUID.
+      </p>
+
+      <h1 id="cd_lookup">CD lookup</h1>
+
+      <p>
+        This is where you tell Picard which CD drive it should use for looking up CDs.
+      </p>
+
+      <h3 id="windows">Windows</h3>
+
+      <p>
+        On Windows, Picard has a pulldown menu listing the various CD drives it has found. Pull down the
+        menu and select the drive you want.
+      </p>
+
+      <h3 id="os_x">OS X</h3>
+
+      <p>
+        In OS X, this option is currently a text field. The device is usually /dev/rdisk1.
+      </p>
+      <p>
+        If that doesn't work, one way is to simply keep increasing the number (e.g. /dev/rdisk2) until
+        it does work. A less trial and error method is to open Terminal and type
+        <code>mount</code>. The output should include a line such as
+        <code>/dev/disk2 on /Volumes/Audio CD (local, nodev, nosuid, read-only)</code>. You need to replace
+        /dev/disk with /dev/rdisk, so if, for example, it says /dev/disk2, you should enter /dev/<b>r</b>disk2
+        in Picard's preferences.
+      </p>
+
+      <h3 id="linux">Linux</h3>
+
+      <p>In Linux, Picard has a pulldown menu like in Windows. If you're using an older version with a text
+        field, you should enter the device name (typically /dev/cdrom) here.
+      </p>
+
+      <h3 id="other_platforms">Other platforms</h3>
+
+      <p>
+        On other platforms, the CD Lookup option is a text field and you should enter the path to the CD
+        drive here.
+      </p>
+
+      <h1 id="plugins">Plugins</h1>
+
+      <p>
+        Here you may enable/disable any of the plugins you have installed in Picard. Note that some plugins
+        have their own option page which will appear under here.
+      </p>
+      <p>
+        For a list of plugins see <a href="/plugins/" title="Picard Plugins">Picard Plugins</a>.
+      </p>
+
+      <h1 id="advanced">Advanced</h1>
+
+      <h3 id="web_proxy">Web proxy</h3>
+
+      <p>
+        If you need a proxy to make an outside connection you may specify one here.
+      </p>
+
+      <h3 id="matching">Matching</h3>
+
+      <p>
+        It is recommended for most users to not change these settings. However for advanced users, it allows
+        you to tune the way Picard matches your files and clusters to to MusicBrainz releases and tracks.
+      </p>
+
+      <ul class="options">
+        <li> <b>Minimal similarity for file lookups:</b> The higher then&#160;%, the more similar an individual
+          file's metadata must be to MusicBrainz's metadata for it to be moved/matched to a release on
+          the right-hand side.
+        </li>
+        <li> <b>Minimal similarity for cluster lookups:</b> The higher then&#160;%, the more similar a cluster
+          of files from the left-hand pane must be to a MusicBrainz release for the entire cluster to
+          be moved/matched to a release on the right-hand side.
+        </li>
+        <li> <b>Minimal similarity for matching files to tracks:</b> The higher then&#160;%, the more similar
+          an individual file's metadata must be to MusicBrainz's metadata for it to be moved/matched
+          to a release on the right-hand side.
+        </li>
+      </ul>
+      <p>
+        If you have absolutely no metadata in your current files, and you are using <b>Scan</b> to match
+        tracks, you may find you need to lower <i>Minimal similarity for matching files to tracks</i> in
+        order to get Picard to match the files within a release. Otherwise you may find that Picard matches
+        the track to a release but then is not sure which track is correct; and leaves it in an "unmatched
+        files" group within that release.
+      </p>
+      <p>
+        As a general rule, lowering the percentages may increase the chance of finding a match at the risk
+        of false positives and incorrect matches.
+      </p>
+
+      <h3 id="scripting">Scripting</h3>
+
+      <p>
+        For scripting help see
+        <a href="/docs/scripting/" title="Picard Scripting">Picard Scripting</a>
+        and <a href="/docs/tags/" title="Picard Tags">Picard Tags</a> for variables available to script with.
+      </p>
+
+      <h3 id="user_interface">User interface</h3>
+
+      <ul class="options">
+        <li>
+          <b>Show text labels under icon:</b> Uncheck to make the toolbar a little smaller.
+        </li>
+        <li>
+          <b>Allow selection of multiple directories:</b> Check to bypass the native directory selector
+          and use QT's file dialog since the native directory selector usually doesn't allow you to select
+          more than one directory. This applies for the 'Add folder' dialog, the file browser always
+          allows multiple directory selection.
+        </li>
+        <li>
+          <b>Use advanced query syntax:</b> Check to enable
+          <a href="http://musicbrainz.org/doc/Text_Search_Syntax" title="Text Search Syntax">advanced query syntax</a>
+          parsing on your searches.
+          This only applies for the search box at the top right of Picard, not the lookup buttons.
+        </li>
+        <li>
+          <b>Show a quit confirmation dialog for unsaved changes:</b> Check to show a dialog when you try
+          to quit Picard with unsaved files loaded. This may help prevent accidentally losing tag changes
+          you've made, but not yet saved.
+        </li>
+        <li>
+          <b>Begin browsing in the following directory:</b> By default, Picard remembers the last directory
+          you loaded files from. If you check this box and provide a directory, Picard will start in
+          the directory provided instead.
+        </li>
+        <li>
+          <b>User interface language:</b> By default, Picard will display in the language displayed by your
+          operating system, however you can override this here if needed.
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <div id="sidebar" class="hidden-xs">
+        <ul class="nav" data-spy="affix" data-offset-top="200">
+          <li class="active"><a href="#general">General</a></li>
+          <li>
+            <a href="#metadata">Metadata</a>
+            <ul class="nav">
+              <li><a href="#preferred_releases">Preferred Releases</a></li>
+              <li><a href="#folksonomy_tags">Folksonomy tags</a></li>
+              <li><a href="#ratings">Ratings</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#tags">Tags</a>
+            <ul class="nav">
+              <li><a href="#before_tagging">Before Tagging</a></li>
+              <li><a href="#tag_compatibility">Tag Compatibility</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#cover_art">Cover art</a>
+            <ul class="nav">
+              <li><a href="#location">Location</a></li>
+              <li><a href="#cover_art_providers">Cover Art Providers</a></li>
+              <li><a href="#cover_art_archive">Cover Art Archive</a></li>
+            </ul>
+          </li>
+          <li><a href="#file_naming">File Naming</a></li>
+          <li><a href="#fingerprinting">Fingerprinting</a></li>
+          <li>
+            <a href="#cd_lookup">CD lookup</a>
+            <ul class="nav">
+              <li><a href="#windows">Windows</a></li>
+              <li><a href="#os_x">OS X</a></li>
+              <li><a href="#linux">Linux</a></li>
+              <li><a href="#other_platforms">Other platforms</a></li>
+            </ul>
+          </li>
+          <li><a href="#plugins">Plugins</a></li>
+          <li>
+            <a href="#advanced">Advanced</a>
+            <ul class="nav">
+              <li><a href="#web_proxy">Web proxy</a></li>
+              <li><a href="#matching">Matching</a></li>
+              <li><a href="#scripting">Scripting</a></li>
+              <li><a href="#user_interface">User interface</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <a class="back-to-top" href="#top"> Back to top </a> -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

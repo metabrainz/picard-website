@@ -28,7 +28,7 @@
     {% endblock %}
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#sidebar">
     {% block navbar %}
     <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
@@ -50,8 +50,27 @@
           {% set active_page = active_page | default("index") -%}
           <ul class="nav navbar-nav">
             {% for href, id, caption in navigation_bar %}
-              <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+            <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
             {% endfor %}
+            <li class="dropdown {% if active_page == 'docs' %}active{% endif %}">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/docs/basics/">Basics</a></li>
+                <li><a href="/docs/guide/">How to tag files</a></li>
+                <li><a href="/docs/options/">Options</a></li>
+                <li><a href="/docs/faq/">FAQ</a></li>
+                <li><a href="/docs/troubleshooting/">Troubleshooting</a></li>
+                <li class="divider"></li>
+                <li><a href="/docs/scripting/">Scripting</a></li>
+                <li><a href="/docs/tags/">Tags</a></li>
+                <li><a href="/docs/mappings/">Tag Mappings</a></li>
+                <li class="divider"></li>
+                <li><a href="/docs/development/">Development</a></li>
+                <li><a href="/docs/plugin-api/">Plugins API</a></li>
+                <li class="divider"></li>
+                <li><a href="/docs/linux/">Installation on Linux</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -76,6 +95,11 @@
           <li><a href="http://blog.musicbrainz.org/">MusicBrainz Blog</a></li>
           <li><a href="http://forums.musicbrainz.org/viewforum.php?id=2">Picard Forum</a></li>
         </ul>
+
+        {% if git_doc %}
+            <p>This page can be improved on <a href="https://github.com/musicbrainz/picard-website/blob/master/templates/docs/{{ git_doc }}">Github</a>.</p>
+        {% endif %}
+
       </div>
     </footer>
     {% endblock %}
