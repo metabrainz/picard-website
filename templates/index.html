@@ -3,7 +3,7 @@
     <div class="jumbotron masthead">
       <div class="container">
         <h1>
-        <img class="picard-icon" src="{{ url_for('static', filename='img/picard-icon.png') }}" alt="Picard Screenshot">
+        <img class="picard-icon" src="{{ url_for('static', filename='img/picard-icon.png') }}" alt="Picard icon">
           MusicBrainz Picard
         </h1>
         <p>
@@ -75,33 +75,28 @@
         </div>
 
       </div>
-    </div> <!-- Container ends -->
+    </div>
 
     <script>
-    (function ()
-    {
+    (function () {
       var downBtn = document.getElementById("download-btn");
-      var uAgent = navigator.userAgent;
       var platform = navigator.platform;
 
-      if (/^Win/.test(platform) || /Windows/.test(uAgent))
-      {
+      if (/^Win/.test(platform) || /Windows/.test(navigator.userAgent)) {
         downBtn.href = 'http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe';
         downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-windows");
         downBtn.innerHTML += '<span class="download-info">v1.2 for Windows</span>'
-      }
-      else if (/Linux/.test(platform))
-      {
+
+      } else if (/Linux/.test(platform)) {
         downBtn.href = '/downloads/#linux';
         downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-linux");
         downBtn.innerHTML += '<span class="download-info">v1.2 for Linux Distributions</span>'
-      }
-      else if (platform === "MacIntel" || platform === 'MacPPC')
-      {
+
+      } else if (platform === "MacIntel" || platform === "MacPPC") {
         downBtn.href = 'ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg';
         downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-apple");
-        downBtn.innerHTML += '<span class="download-info">v1.2 for OS X 10.7+</span>'
+        downBtn.innerHTML += '<span class="download-info">v1.2 for OS X 10.7+</span>';
       }
-    }) ();
+    }());
     </script>
 {% endblock %}
