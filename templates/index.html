@@ -11,10 +11,11 @@
         </p>
 
         <a id="download-btn" href="/downloads/" class="btn download-btn btn-primary btn-large">
-          <i class="fa fa-download"></i>
+          <i class="fa"></i>
           <span class="download-title">
             Download Picard
           </span>
+          <span id="download-info"></span>
         </a>
 
         <ul class="masthead-links">
@@ -79,24 +80,28 @@
 
     <script>
     (function () {
-      var downBtn = document.getElementById("download-btn");
-      var platform = navigator.platform;
+        var platform = navigator.platform, downloadURL, iconClass, infoText;
 
-      if (/^Win/.test(platform) || /Windows/.test(navigator.userAgent)) {
-        downBtn.href = 'http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe';
-        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-windows");
-        downBtn.innerHTML += '<span class="download-info">v1.2 for Windows</span>'
+        if (/^Win/.test(platform) || /Windows/.test(navigator.userAgent)) {
+            downloadURL = "http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe";
+            iconClass = "fa-windows";
+            infoText = "v1.2 for Windows";
 
-      } else if (/Linux/.test(platform)) {
-        downBtn.href = '/downloads/#linux';
-        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-linux");
-        downBtn.innerHTML += '<span class="download-info">v1.2 for Linux Distributions</span>'
+        } else if (/Linux/.test(platform)) {
+            downloadURL = "/downloads/#linux";
+            iconClass = "fa-linux";
+            infoText = "v1.2 for Linux Distributions";
 
-      } else if (platform === "MacIntel" || platform === "MacPPC") {
-        downBtn.href = 'ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg';
-        downBtn.innerHTML = downBtn.innerHTML.replace(/fa-download/, "fa-apple");
-        downBtn.innerHTML += '<span class="download-info">v1.2 for OS X 10.7+</span>';
-      }
+        } else if (platform === "MacIntel" || platform === "MacPPC") {
+            downloadURL = "ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg";
+            iconClass = "fa-apple";
+            infoText = "v1.2 for OS X 10.7+";
+        }
+
+        if (downloadURL) {
+            $("#download-btn").attr("href", downloadURL).find("i").addClass(iconClass);
+            $("#download-info").text(infoText);
+        }
     }());
     </script>
 {% endblock %}
