@@ -42,10 +42,12 @@ Install node dependencies (requires [Node.js](http://nodejs.org/download/)):
 npm install
 ```
 
+Node dependencies (including gulp and less, which are required to compile/minify CSS) are installed to `./node_modules`, and binaries are symlinked into `./node_modules/.bin`. You may want to add the latter into your `$PATH`.
+
 Compile CSS:
 
 ```bash
-gulp
+./node_modules/.bin/gulp
 ```
 
 To run the development server, do:
