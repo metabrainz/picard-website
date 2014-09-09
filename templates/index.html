@@ -1,31 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="jumbotron masthead">
-      <div class="container">
-        <h1>
-        <img class="picard-icon" src="{{ url_for('static', filename='img/picard-icon.png') }}" alt="Picard icon">
-          MusicBrainz Picard
-        </h1>
-        <p>
-          Picard is a cross-platform music tagger written in Python.
-        </p>
-
-        <a id="download-btn" href="/downloads/" class="btn download-btn btn-primary btn-large">
-          <i class="fa"></i>
-          <span class="download-title">
-            Download Picard
-          </span>
-          <span id="download-info"></span>
-        </a>
-
-        <ul class="masthead-links">
-          <li>
-            <a href="/changelog/">What’s New</a>
-          </li>
-          <li>
-            <a href="/downloads/">Other Downloads</a>
-          </li>
-        </ul>
+      <div class="row">
+        <div class="col-md-7">
+          <h1>
+            <img class="picard-icon" src="{{ url_for('static', filename='img/picard-icon.png') }}" alt="Picard icon">
+            MusicBrainz Picard
+          </h1>
+          <p>
+            Picard is a cross-platform music tagger written in Python.
+          </p>
+          <a id="download-btn" href="/downloads/" class="btn download-btn btn-primary btn-large">
+            <i class="fa"></i>
+            <span class="download-title">
+              Download Picard
+            </span>
+            <span id="download-info"></span>
+          </a>
+          <ul class="masthead-links">
+            <li>
+              <a href="/changelog/">What’s New</a>
+            </li>
+            <li>
+              <a href="/downloads/">Other Downloads</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <img id="screenshot" class="img-responsive img-rounded" src="{{ url_for('static', filename='img/picard_demo_500.png') }}" alt="Screenshot">
+        </div>
       </div>
     </div>
 
