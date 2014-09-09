@@ -1,6 +1,6 @@
 This website was created during Google Summer of Code 2014.
 
-The complete source code is available on Github:
+The complete source code is available on GitHub:
 https://github.com/musicbrainz/picard-website/
 
 /* TEAM */
