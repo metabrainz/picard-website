@@ -72,14 +72,6 @@
     <![endif]-->
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-    <script>
-      // Used to number each line of the pre tags
-      $(function (){
-        $("pre").html(function (index, html) {
-          return html.replace(/^(.*)$/mg, "<span class=\"line\">$1</span>")
-        });
-      });
-    </script>
     {% endblock -%}
   </body>
 </html>

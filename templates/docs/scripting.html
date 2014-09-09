@@ -398,10 +398,9 @@
 
       <h3 id="artist_names">Artist names</h3>
 
-      <pre> $if($search(%album%,(feat. conductor)),
-      $set(artist,%orchestra%))</pre>
+      <pre>$if($search(%album%,(feat. conductor)), $set(artist,%orchestra%))</pre>
       <ul>
-        <li> <i>Stupid assumption that all classical albums have "feat. conductor" in the title, but it shows the idea.&#160;:)</i></li>
+        <li><i>Stupid assumption that all classical albums have "feat. conductor" in the title, but it shows the idea.&#160;:)</i></li>
       </ul>
 
       <h3 id="live_tracks_on_live_albums">Live tracks on live albums</h3>
@@ -533,7 +532,6 @@ $left(%album%,30) \(%releasestatus%-%releasetype%\)-$if($gt(%totaldiscs%,1),$if2
               <li><a href="#merge_writers_into_both_composer_and_lyricist_tags">Merge writers into both composer and lyricist tags</a></li>
             </ul>
           </li>
-
           <li>
             <a href="#file_naming_examples">File Naming Examples</a>
             <ul class="nav">
@@ -543,7 +541,6 @@ $left(%album%,30) \(%releasestatus%-%releasetype%\)-$if($gt(%totaldiscs%,1),$if2
             </ul>
           </li>
         </ul>
-        <!-- <a class="back-to-top" href="#top"> Back to top </a> -->
       </div>
     </div>
   </div>

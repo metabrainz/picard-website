@@ -51,14 +51,4 @@ pre {
    padding-left: 5px;
    border-radius: 3px;
    word-break: break-word;
-
-   .line {
-      // The line class is added via javascript
-      // see /docs/plugin-api/ for example
-      &::before {
-         content: counter(line-numbering);
-         counter-increment: line-numbering;
-         opacity: 0.5;
-      }
-   }
 }
