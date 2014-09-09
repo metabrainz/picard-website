@@ -77,7 +77,8 @@
 
       </div>
     </div>
-
+    {%- block scripts %}
+    {{ super() }}
     <script>
     (function () {
         var platform = navigator.platform, downloadURL, iconClass, infoText;
@@ -104,4 +105,5 @@
         }
     }());
     </script>
+    {% endblock -%}
 {% endblock %}

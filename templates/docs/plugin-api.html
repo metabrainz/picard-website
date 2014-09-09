@@ -151,13 +151,4 @@
     </div>
   </div>
 </div>
-
-<script type='text/javascript'>
-  // Used to number each line of the pre tags
-  $(function(){
-    $("pre").html(function (index, html) {
-      return html.replace(/^(.*)$/mg, "<span class=\"line\">$1</span>")
-    });
-  });
-</script>
 {% endblock %}

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% block head %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,22 +9,8 @@
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/picard-icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>{% block title %}MusicBrainz Picard{% endblock %}</title>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    {% endblock %}
-    {% block scripts %}
-    <!-- Scripts should probably go at the end to reduce loading time -->
-    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-    {% endblock %}
   </head>
-
   <body data-spy="scroll" data-target="#sidebar">
-    {% block navbar %}
     <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -65,21 +50,36 @@
         </div>
       </div>
     </div>
-    {% endblock %}
-    {% block content %}
-    {% endblock %}
-    {% block footer %}
+    {%- block content %}
+    {% endblock -%}
+    {%- block footer %}
     <footer class="footer">
       <div class="container">
         <ul class="list-inline">
           <li><a href="http://blog.musicbrainz.org/">MusicBrainz Blog</a></li>
           <li><a href="http://forums.musicbrainz.org/viewforum.php?id=2">Picard Forum</a></li>
         </ul>
-        {% if git_doc %}
+        {%- if git_doc %}
           <p>This page can be improved on <a href="https://github.com/musicbrainz/picard-website/blob/master/templates/docs/{{ git_doc }}">GitHub</a>.</p>
         {% endif %}
       </div>
     </footer>
-    {% endblock %}
+    {% endblock -%}
+    {%- block scripts %}
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script>
+      // Used to number each line of the pre tags
+      $(function (){
+        $("pre").html(function (index, html) {
+          return html.replace(/^(.*)$/mg, "<span class=\"line\">$1</span>")
+        });
+      });
+    </script>
+    {% endblock -%}
   </body>
 </html>
