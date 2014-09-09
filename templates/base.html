@@ -7,13 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="MusicBrainz Picard's Website">
     <meta name="author" href="humans.txt">
-
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/picard-icon.png') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>{% block title %}MusicBrainz Picard{% endblock %}</title>
-
-    <!-- Generated from static/less/styles.less via Gulp  -->
-    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -71,7 +67,6 @@
     </div>
     {% endblock %}
     {% block content %}
-    <!-- Page content -->
     {% endblock %}
     {% block footer %}
     <footer class="footer">
@@ -93,7 +88,6 @@
         {% if git_doc %}
             <p>This page can be improved on <a href="https://github.com/musicbrainz/picard-website/blob/master/templates/docs/{{ git_doc }}">Github</a>.</p>
         {% endif %}
-
       </div>
     </footer>
     {% endblock %}
