@@ -77,33 +77,34 @@
 
       </div>
     </div>
-    {%- block scripts %}
-    {{ super() }}
-    <script>
-    (function () {
-        var platform = navigator.platform, downloadURL, iconClass, infoText;
-
-        if (/^Win/.test(platform) || /Windows/.test(navigator.userAgent)) {
-            downloadURL = "http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe";
-            iconClass = "fa-windows";
-            infoText = "v1.2 for Windows";
-
-        } else if (/Linux/.test(platform)) {
-            downloadURL = "/downloads/#linux";
-            iconClass = "fa-linux";
-            infoText = "v1.2 for Linux Distributions";
-
-        } else if (platform === "MacIntel" || platform === "MacPPC") {
-            downloadURL = "ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg";
-            iconClass = "fa-apple";
-            infoText = "v1.2 for OS X 10.7+";
-        }
-
-        if (downloadURL) {
-            $("#download-btn").attr("href", downloadURL).find("i").addClass(iconClass);
-            $("#download-info").text(infoText);
-        }
-    }());
-    </script>
-    {% endblock -%}
 {% endblock %}
+
+{%- block scripts %}
+{{ super() }}
+  <script>
+    (function () {
+      var platform = navigator.platform, downloadURL, iconClass, infoText;
+
+      if (/^Win/.test(platform) || /Windows/.test(navigator.userAgent)) {
+        downloadURL = "http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe";
+        iconClass = "fa-windows";
+        infoText = "v1.2 for Windows";
+
+      } else if (/Linux/.test(platform)) {
+        downloadURL = "/downloads/#linux";
+        iconClass = "fa-linux";
+        infoText = "v1.2 for Linux Distributions";
+
+      } else if (platform === "MacIntel" || platform === "MacPPC") {
+        downloadURL = "ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg";
+        iconClass = "fa-apple";
+        infoText = "v1.2 for OS X 10.7+";
+      }
+
+      if (downloadURL) {
+        $("#download-btn").attr("href", downloadURL).find("i").addClass(iconClass);
+        $("#download-info").text(infoText);
+      }
+    }());
+  </script>
+{% endblock -%}
