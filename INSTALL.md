@@ -4,7 +4,7 @@ First, checkout the picard-plugins repository somewhere and generate the plugins
 
 ```bash
 git clone https://github.com/musicbrainz/picard-plugins/
-cd picard-website
+cd picard-plugins
 python generate.py
 cd ..
 ```
