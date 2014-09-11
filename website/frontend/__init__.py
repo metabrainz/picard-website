@@ -24,23 +24,6 @@ def create_app():
     from werkzeug.contrib.cache import SimpleCache
     app.cache = SimpleCache()
 
-    # Template utilities
-    import re
-
-    def re_sub(string, find, replace):
-        return re.sub(find, replace, string)
-
-    def re_search(string, pattern):
-        return re.search(pattern, string)
-
-    def version(string, group):
-        return re.match(r"^Version\s+(.*?)\s+-\s+(.*?)$", string).group(group)
-
-    app.jinja_env.add_extension('jinja2.ext.do')
-    app.jinja_env.tests['re_search'] = re_search
-    app.jinja_env.filters['re_sub'] = re_sub
-    app.jinja_env.filters['version'] = version
-
     # Blueprints
     from views import frontend_bp
     from views.changelog import changelog_bp
