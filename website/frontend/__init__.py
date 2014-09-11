@@ -11,6 +11,11 @@ def create_app():
                 template_folder=template_folder)
     app.debug = True
 
+    # Configuration files
+    import website.default_config
+    app.config.from_object(website.default_config)
+    app.config.from_object('website.config')
+
     # Error handling
     import errors
     errors.init_error_handlers(app)

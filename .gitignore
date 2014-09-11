@@ -1,5 +1,5 @@
 # Generated from static/less using Gulp
-static/css/
+website/frontend/static/css/
 
 # The build used during testing
 tmp/
@@ -7,7 +7,7 @@ tmp/
 # Python 3.3 Virtualenv
 env/
 
-config.py
+website/config.py
 node_modules/
 
 ###Python###

@@ -2,7 +2,7 @@
 
 from werkzeug.serving import run_simple
 from website.frontend import create_app
-from config import SERVER_HOSTNAME, SERVER_PORT
 
 if __name__ == '__main__':
-    run_simple(SERVER_HOSTNAME, SERVER_PORT, create_app())
+    app = create_app()
+    run_simple(app.config['SERVER_HOSTNAME'], app.config['SERVER_PORT'], app)

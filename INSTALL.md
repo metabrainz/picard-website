@@ -14,13 +14,13 @@ Next, checkout picard-website and configure it:
 ```bash
 git clone https://github.com/musicbrainz/picard-website/
 cd picard-website
-cp config.py.sample config.py
+cp website/config.py.example website/config.py
 ```
 
-Edit config.py so that PLUGINS_REPOSITORY points to your local copy of the picard-plugins repository:
+Edit website/config.py so that PLUGINS_REPOSITORY points to your local copy of the picard-plugins repository:
 
 ```bash
-vim config.py
+vim website/config.py
 ```
 
 Make sure [virtualenv](http://virtualenv.readthedocs.org/en/latest/) is installed before proceeding.
