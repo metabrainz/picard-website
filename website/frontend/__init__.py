@@ -20,6 +20,10 @@ def create_app():
     import errors
     errors.init_error_handlers(app)
 
+    # Caching
+    from werkzeug.contrib.cache import SimpleCache
+    app.cache = SimpleCache()
+
     # Template utilities
     import re
 
