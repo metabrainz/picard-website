@@ -1,13 +1,15 @@
 import os
-from app import app
 from config import PLUGINS_REPOSITORY
 from flask import (
+    Blueprint,
     json,
     jsonify,
     make_response,
     request,
     send_from_directory
 )
+
+api_bp = Blueprint('api', __name__)
 
 # The file that contains json data
 PLUGINS_JSON_FILE = os.path.join(PLUGINS_REPOSITORY, "plugins.json")
@@ -40,7 +42,7 @@ def increase_count(plugin):
         dumpCtr = 0
 
 
-@app.route('/api/v1/', methods=['GET'])
+@api_bp.route('/v1/', methods=['GET'])
 def api_root():
     """
     Shows info about our API
@@ -50,7 +52,7 @@ def api_root():
                  ' are /api/v1/plugins and /api/v1/download'}), 200)
 
 
-@app.route('/api/v1/plugins/', methods=['GET'])
+@api_bp.route('/v1/plugins/', methods=['GET'])
 def get_plugin():
     """
     Lists data of a plugin
@@ -69,7 +71,7 @@ def get_plugin():
     return make_response(jsonify(plugin), 200)
 
 
-@app.route('/api/v1/download/', methods=['GET'])
+@api_bp.route('/v1/download/', methods=['GET'])
 def download_plugin():
     """
     Serves files as a download attachment.

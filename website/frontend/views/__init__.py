@@ -1,5 +1,4 @@
-from app import app
-from flask import render_template
+from flask import Blueprint, render_template
 
 from .changelog import *
 from .humans import *
@@ -7,12 +6,14 @@ from .plugins import *
 from .docs import *
 from .api import *
 
+frontend_bp = Blueprint('frontend', __name__)
 
-@app.route('/')
+
+@frontend_bp.route('/')
 def show_index():
     return render_template('index.html')
 
 
-@app.route('/downloads/')
+@frontend_bp.route('/downloads/')
 def show_downloads():
     return render_template('downloads.html')

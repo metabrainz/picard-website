@@ -5,9 +5,9 @@ var gulp = require('gulp'),
 
 // Compile less files to css
 gulp.task('less', function() {
-    return gulp.src('static/less/styles.less')
+    return gulp.src('website/frontend/static/less/styles.less')
         .pipe(less())
-        .pipe(gulp.dest('static/css'))
+        .pipe(gulp.dest('website/frontend/static/css'))
 });
 
 gulp.task('default', ['less']);
