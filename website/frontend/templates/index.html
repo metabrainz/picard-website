@@ -13,21 +13,21 @@
           <a id="download-btn" href="/downloads/" class="btn download-btn btn-primary btn-large">
             <i class="fa"></i>
             <span class="download-title">
-              Download Picard
+              {{ _("Download Picard") }}
             </span>
             <span id="download-info"></span>
           </a>
           <ul class="masthead-links">
             <li>
-              <a href="/changelog/">What’s New</a>
+            <a href="/changelog/">{{ _("What’s New") }}</a>
             </li>
             <li>
-              <a href="/downloads/">Other Downloads</a>
+            <a href="/downloads/">{{ _("Other Downloads") }}</a>
             </li>
           </ul>
         </div>
         <div class="col-md-5">
-          <img id="screenshot" class="img-responsive img-rounded" src="{{ url_for('static', filename='img/picard_demo_500.png') }}" alt="Screenshot">
+          <img id="screenshot" class="img-responsive img-rounded" src="{{ url_for('static', filename='img/picard_demo_500.png') }}" alt="{{ _("Screenshot") }}">
         </div>
       </div>
     </div>
@@ -38,8 +38,8 @@
           <div class="col-md-4">
             <div class="col-md-10 col-md-offset-1">
               <i class="features-img fa fa-file-audio-o fa-5x"></i>
-              <h2>Multiple Formats</h2>
-              <p>Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, WMA, WAV, and more.</p>
+              <h2>{{ _("Multiple Formats") }}</h2>
+              <p>{{ _("Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, WMA, WAV, and more.") }}</p>
             </div>
           </div>
 
