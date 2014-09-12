@@ -20,9 +20,19 @@ def create_app():
     import errors
     errors.init_error_handlers(app)
 
+    #I18n
+    import babel
+    babel.init_app(app)
+
     # Caching
     from werkzeug.contrib.cache import SimpleCache
     app.cache = SimpleCache()
+
+    # Template utilities
+    app.jinja_env.add_extension('jinja2.ext.do')
+    from website.utils import reformat_date, reformat_datetime
+    app.jinja_env.filters['date'] = reformat_date
+    app.jinja_env.filters['datetime'] = reformat_datetime
 
     # Blueprints
     from views import frontend_bp

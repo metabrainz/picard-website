@@ -3802,8 +3802,8 @@ a.thumbnail.active {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/static/fonts/fontawesome-webfont.eot?v=4.1.0');
-  src: url('/static/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('/static/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('/static/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('/static/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  src: url('/static/fonts//fontawesome-webfont.eot?v=4.1.0');
+  src: url('/static/fonts//fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('/static/fonts//fontawesome-webfont.woff?v=4.1.0') format('woff'), url('/static/fonts//fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('/static/fonts//fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -5284,8 +5284,8 @@ a :focus {
   background: linear-gradient(0deg, #000000 0%, #736dab 100%) repeat scroll 0% 0% transparent;
 }
 .footer {
-  text-align: center;
-  padding: 30px 0px;
+  padding-left: 30%;
+  padding-right: 30%;
   margin-top: 70px;
   border-top: 1px solid #E5E5E5;
   background-color: #F5F5F5;

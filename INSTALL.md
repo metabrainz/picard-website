@@ -44,10 +44,10 @@ npm install
 
 Node dependencies (including gulp and less, which are required to compile/minify CSS) are installed to `./node_modules`, and binaries are symlinked into `./node_modules/.bin`. You may want to add the latter into your `$PATH`.
 
-Compile CSS:
+Compile CSS and translations:
 
 ```bash
-./node_modules/.bin/gulp
+fab deploy
 ```
 
 To run the development server, do:

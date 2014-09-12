@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[picard-website.website]
+file_filter = website/frontend/translations/<lang>/LC_MESSAGES/messages.po
+source_file = website/frontend/messages.pot
+source_lang = en
+type = PO

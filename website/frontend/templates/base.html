@@ -52,19 +52,28 @@
     </div>
     {%- block content %}
     {% endblock -%}
-    {%- block footer %}
-    <footer class="footer">
-      <div class="container">
-        <ul class="list-inline">
-          <li><a href="http://blog.musicbrainz.org/">MusicBrainz Blog</a></li>
-          <li><a href="http://forums.musicbrainz.org/viewforum.php?id=2">Picard Forum</a></li>
+    <div class="clearfix"></div>
+
+    {% block footer %}
+    <hr />
+    <div class="footer clearfix">
+      <ul class="list-inline pull-left">
+        <li><a href="http://blog.musicbrainz.org/">MusicBrainz Blog</a></li>
+        <li><a href="http://forums.musicbrainz.org/viewforum.php?id=2">Picard Forum</a></li>
+      </ul>
+      <div id="language-selector" class="btn-group dropup pull-right">
+        <button type="button" class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
+          <span class="fa fa-language"></span> {{ _('Language') }} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          {% for language in config.LANGUAGES|dictsort(false, 'value') %}
+            <li><a href="?l={{ language[0] }}">{{ language[1]|capitalize }}</a></li>
+          {% endfor %}
         </ul>
-        {%- if git_doc %}
-          <p>This page can be improved on <a href="https://github.com/musicbrainz/picard-website/blob/master/templates/docs/{{ git_doc }}">GitHub</a>.</p>
-        {% endif %}
       </div>
-    </footer>
-    {% endblock -%}
+    </div>
+    {% endblock %}
+
     {%- block scripts %}
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
