@@ -154,7 +154,7 @@
                   <tr>
                     <td>Fedora</td>
                     <td>
-                      <a href="/docs/faq/#fedora-acoustid">{{ _("Read the FAQ") }}</a>
+                      <a href="{{ url_for('docs.show_pages', page='faq', _anchor='fedora-acoustid') }}">{{ _("Read the FAQ") }}</a>
                     </td>
                   </tr>
                   <tr>
@@ -174,7 +174,7 @@
                   <tr>
                     <td>{{ _("Others") }}</td>
                     <td>
-                      <a href="https://musicbrainz.org/doc/Picard_Linux_Install">{{ _("Read the documentation") }}</a>
+                      <a href="{{ url_for('docs.show_pages', page='linux') }}">{{ _("Read the documentation") }}</a>
                     </td>
                   </tr>
                 </tbody>
