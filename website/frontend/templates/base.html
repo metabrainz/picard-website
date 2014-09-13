@@ -4,46 +4,46 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="MusicBrainz Picard's Website">
-    <meta name="author" href="humans.txt">
+    <meta name="description" content="{{ _('MusicBrainz Picard\'s Website') }}">
+    <meta name="author" href="{{ url_for('humans.show_humans') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/picard-icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>{% block title %}MusicBrainz Picard{% endblock %}</title>
+    <title>{% block title %}{{ _('MusicBrainz Picard') }}{% endblock %}</title>
   </head>
   <body data-spy="scroll" data-target="#sidebar">
     <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">{{ _("Toggle navigation") }}</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">MusicBrainz Picard</a>
+          <a class="navbar-brand" href="{{ url_for('frontend.show_index') }}">{{ _('MusicBrainz Picard') }}</a>
         </div>
         <div class="navbar-collapse collapse">
           {% set active_page = active_page | default("index") -%}
           <ul class="nav navbar-nav">
-            <li{% if active_page == 'downloads' %} class="active"{% endif %}><a href="/downloads/">Downloads</a></li>
-            <li{% if active_page == 'plugins' %} class="active"{% endif %}><a href="/plugins/">Plugins</a></li>
+            <li{% if active_page == 'downloads' %} class="active"{% endif %}><a href="{{ url_for('frontend.show_downloads') }}">{{ _("Downloads") }}</a></li>
+            <li{% if active_page == 'plugins' %} class="active"{% endif %}><a href="{{ url_for('plugins.show_plugins') }}">{{ _("Plugins") }}</a></li>
             <li class="dropdown {% if active_page == 'docs' %}active{% endif %}">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ _("Documentation") }}<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/docs/basics/">Basics</a></li>
-                <li><a href="/docs/guide/">How to Tag Files</a></li>
-                <li><a href="/docs/options/">Options</a></li>
-                <li><a href="/docs/faq/">FAQ</a></li>
-                <li><a href="/docs/troubleshooting/">Troubleshooting</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='basics') }}">{{ _("Basics") }}</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='guide') }}">{{ _("How to Tag Files") }}</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='options') }}">{{ _("Options") }}</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='faq') }}">{{ _("FAQ") }}</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='troubleshooting') }}">{{ _("Troubleshooting") }}</a></li>
                 <li class="divider"></li>
-                <li><a href="/docs/scripting/">Scripting</a></li>
-                <li><a href="/docs/tags/">Tags</a></li>
-                <li><a href="/docs/mappings/">Tag Mappings</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='scripting') }}">{{ _("Scripting") }}</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='tags') }}">{{ _("Tags") }}</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='mappings') }}">{{ _("Tag Mappings") }}</a></li>
                 <li class="divider"></li>
-                <li><a href="/docs/development/">Development</a></li>
-                <li><a href="/docs/plugin-api/">Plugins API</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='development') }}">{{ _("Development") }}</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='plugin-api') }}">{{ _("Plugins API") }}</a></li>
                 <li class="divider"></li>
-                <li><a href="/docs/linux/">Installation on Linux</a></li>
+                <li><a href="{{ url_for('docs.show_pages', page='linux') }}">{{ _("Installation on Linux") }}</a></li>
               </ul>
             </li>
           </ul>
