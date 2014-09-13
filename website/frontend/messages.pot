@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-09-12 23:03+0200\n"
+"POT-Creation-Date: 2014-09-13 11:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,41 +59,38 @@ msgstr ""
 msgid "AcoustID"
 msgstr ""
 
-#: website/frontend/templates/index.html:51
-#, python-format
+#: website/frontend/templates/index.html:58
 msgid ""
-"Picard uses <a %(a1)s>AcoustID</a> audio fingerprints, allowing files to "
-"be identified by the actual music, even if they have no metadata."
+"Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
+"identified by the actual music, even if they have no metadata."
 msgstr ""
 
-#: website/frontend/templates/index.html:59
+#: website/frontend/templates/index.html:66
 msgid "CD Lookups"
 msgstr ""
 
-#: website/frontend/templates/index.html:60
+#: website/frontend/templates/index.html:67
 msgid "Picard can lookup entire music CDs with a click."
 msgstr ""
 
-#: website/frontend/templates/index.html:69
+#: website/frontend/templates/index.html:76
 msgid "Open Source"
 msgstr ""
 
-#: website/frontend/templates/index.html:71
-#, python-format
+#: website/frontend/templates/index.html:83
 msgid ""
-"Picard is licensed under <a %(a1)s>GPL 2.0 or later</a>, and is hosted on"
-" <a %(a2)s>GitHub</a> where it’s actively developed by some awesome "
+"Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
+"{urlgithub|GitHub} where it’s actively developed by some awesome "
 "developers."
 msgstr ""
 
-#: website/frontend/templates/index.html:79
+#: website/frontend/templates/index.html:91
 msgid "Plugin Support"
 msgstr ""
 
-#: website/frontend/templates/index.html:81
-#, python-format
+#: website/frontend/templates/index.html:93
 msgid ""
-"If you need a particular feature, you can choose from a selection of <a "
-"%(a1)s>available plugins</a> or write your own."
+"If you need a particular feature, you can choose from a selection of "
+"{url|available plugins} or write your own."
 msgstr ""
 

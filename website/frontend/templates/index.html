@@ -48,7 +48,14 @@
               <i class="features-img fa fa-music fa-5x"></i>
               <h2>{{ _("AcoustID") }}</h2>
               {% autoescape false %}
-              <p>{{ _("Picard uses <a %(a1)s>AcoustID</a> audio fingerprints, allowing files to be identified by the actual music, even if they have no metadata.", a1='href="http://acoustid.org/"') }}</p>
+              {% set links={
+                'url': {
+                  'href': 'http://acoustid.org/',
+                  'class': 'external_link'
+                  }
+                }
+              %}
+              <p>{{ _("Picard uses {url|AcoustID} audio fingerprints, allowing files to be identified by the actual music, even if they have no metadata.")|expand(links) }}</p>
               {% endautoescape %}
             </div>
           </div>
@@ -68,7 +75,12 @@
             <i class="fa fa-github fa-5x"></i>
             <h2>{{ _("Open Source") }}</h2>
             {% autoescape false %}
-            <p>{{ _("Picard is licensed under <a %(a1)s>GPL 2.0 or later</a>, and is hosted on <a %(a2)s>GitHub</a> where it’s actively developed by some awesome developers.", a1='href="http://www.gnu.org/copyleft/gpl.html"', a2='href="https://github.com/musicbrainz/picard"') }}</p>
+            {% set links={
+              'urlgpl': 'http://www.gnu.org/copyleft/gpl.html',
+              'urlgithub': 'https://github.com/musicbrainz/picard'
+              }
+            %}
+            <p>{{ _("Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on {urlgithub|GitHub} where it’s actively developed by some awesome developers.")|expand(links) }}</p>
             {% endautoescape %}
             </div>
           </div>
@@ -78,7 +90,7 @@
             <i class="fa fa-gear fa-5x"></i>
             <h2>{{ _("Plugin Support") }}</h2>
             {% autoescape false %}
-            <p>{{ _("If you need a particular feature, you can choose from a selection of <a %(a1)s>available plugins</a> or write your own.", a1='href="%s"' % url_for('plugins.show_plugins')) }}</p>
+            <p>{{ _("If you need a particular feature, you can choose from a selection of {url|available plugins} or write your own.")|expand({'url': url_for('plugins.show_plugins')}) }}</p>
             {% endautoescape %}
             </div>
           </div>

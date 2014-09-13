@@ -34,6 +34,10 @@ def create_app():
     app.jinja_env.filters['date'] = reformat_date
     app.jinja_env.filters['datetime'] = reformat_datetime
 
+    from website.expand import expand
+    app.jinja_env.filters['expand'] = expand
+
+
     # Blueprints
     from views import frontend_bp
     from views.changelog import changelog_bp

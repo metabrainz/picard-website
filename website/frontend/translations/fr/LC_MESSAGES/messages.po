@@ -1,14 +1,15 @@
-# French translations for PROJECT.
+# French translations for MusicBrainz Picard.
 # Copyright (C) 2014 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
+# This file is distributed under the same license as the MusicBrainz Picard
+# project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-09-12 23:03+0200\n"
-"PO-Revision-Date: 2014-09-12 23:18+0100\n"
+"POT-Creation-Date: 2014-09-13 11:10+0200\n"
+"PO-Revision-Date: 2014-09-13 11:14+0100\n"
 "Last-Translator: Laurent Monin <i18n@norz.org>\n"
 "Language-Team: fr <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -18,7 +19,6 @@ msgstr ""
 "Generated-By: Babel 1.3\n"
 "X-Generator: Poedit 1.5.4\n"
 "Language: fr\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 
 #: website/frontend/templates/base.html:66
 msgid "Language"
@@ -65,47 +65,47 @@ msgstr ""
 msgid "AcoustID"
 msgstr "AcoustID"
 
-#: website/frontend/templates/index.html:51
+#: website/frontend/templates/index.html:58
 #, python-format
 msgid ""
-"Picard uses <a %(a1)s>AcoustID</a> audio fingerprints, allowing files to be "
+"Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
 msgstr ""
-"Picard utilise les empreintes audio-acoustiques <a %(a1)s>AcoustID</a>, "
-"permettant l'identification des fichiers par la musique, même s'ils ne "
-"possèdent aucune métadonnée."
+"Picard utilise les empreintes audio-acoustiques {url|AcoustID}, permettant "
+"l'identification des fichiers par la musique, même s'ils ne possèdent aucune "
+"métadonnée."
 
-#: website/frontend/templates/index.html:59
+#: website/frontend/templates/index.html:66
 msgid "CD Lookups"
 msgstr "Recherche de CD"
 
-#: website/frontend/templates/index.html:60
+#: website/frontend/templates/index.html:67
 msgid "Picard can lookup entire music CDs with a click."
 msgstr "Picard peut rechercher des CD complets d'un clic de souris."
 
-#: website/frontend/templates/index.html:69
+#: website/frontend/templates/index.html:76
 msgid "Open Source"
 msgstr "Open Source"
 
-#: website/frontend/templates/index.html:71
+#: website/frontend/templates/index.html:83
 #, python-format
 msgid ""
-"Picard is licensed under <a %(a1)s>GPL 2.0 or later</a>, and is hosted on <a "
-"%(a2)s>GitHub</a> where it’s actively developed by some awesome developers."
+"Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
+"{urlgithub|GitHub} where it’s actively developed by some awesome developers."
 msgstr ""
-"Picard est diffusé sous licence <a %(a1)s>GPL 2.0 ou suivante</a>, et est "
-"hébergé sur <a %(a2)s>GitHub</a> où il est activement amélioré par quelques "
+"Picard est diffusé sous licence {urlgpl|GPL 2.0 ou suivantes}, et est "
+"hébergé sur {urlgithub|GitHub} où il est activement amélioré par quelques "
 "fantastiques développeurs."
 
-#: website/frontend/templates/index.html:79
+#: website/frontend/templates/index.html:91
 msgid "Plugin Support"
 msgstr "Support de greffons"
 
-#: website/frontend/templates/index.html:81
+#: website/frontend/templates/index.html:93
 #, python-format
 msgid ""
-"If you need a particular feature, you can choose from a selection of <a "
-"%(a1)s>available plugins</a> or write your own."
+"If you need a particular feature, you can choose from a selection of {url|"
+"available plugins} or write your own."
 msgstr ""
 "Si vous avez besoin d'une fonctionnalité particulière, vous pouvez choisir "
-"parmi les <a %(a1)s>greffons  disponibles</a> ou écrire le vôtre. "
+"parmi les {url|greffons disponibles} ou écrire le vôtre. "
