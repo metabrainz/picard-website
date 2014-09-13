@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% set active_page = "downloads"%}
-{% block title %}Downloads - MusicBrainz Picard{% endblock %}
+{% block title %}{{ _("Downloads - MusicBrainz Picard") }}{% endblock %}
 {% block content %}
     <div class="jumbotron">
       <div class="container">
@@ -10,24 +10,24 @@
     <div class="container">
       <div class="col-md-8">
         <p>
-          Picard is available for all major platforms. Just download and start the installer. It's that easy.
+          {{ _("Picard is available for all major platforms. Just download and start the installer. It's that easy.") }}
         </p>
         <ul id="downloads">
           <a name="windows"></a>
           <li class="download-item">
             <h3>
             <i class="fa fa-windows fa-2x"></i>
-            Picard for <strong>Windows</strong>
+            {{ _("Picard for <strong>Windows</strong>") }}
             </h3>
 
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Picard Version</th>
-                    <th>MD5 Hash</th>
-                    <th>Size</th>
-                    <th>Link</th>
+                    <th>{{ _("Picard Version") }}</th>
+                    <th>{{ _("MD5 Hash") }}</th>
+                    <th>{{ _("Size") }}</th>
+                    <th>{{ _("Link") }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -37,47 +37,48 @@
                     <td>8.4 MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> Download <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe">US Mirror</a></li>
-                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/picard-setup-1.2.exe">EU Mirror</a></li>
+                          <li><a href="http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.2.exe">{{ _('US Mirror') }}</a></li>
+                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/picard-setup-1.2.exe">{{ _('EU Mirror') }}</a></li>
                         </ul>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>1.3 (occasionally unstable)</td>
+                    <td>1.3 ({{ _("occasionally unstable") }})</td>
                     <td>-</td>
                     <td>~9 MB</td>
                     <td>
                       <div class="btn-group">
-                        <a href="http://build.oxygene.sk/job/package-picard-win-daily/">Daily Builds for Windows</a>
+                        <a href="http://build.oxygene.sk/job/package-picard-win-daily/">{{ _('Daily Builds for Windows') }}</a>
                       </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-
-            <p>If you get an error about being unable to run the program, install the <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=9b2da534-3e03-4391-8a4d-074b9f2bc1bf&displaylang=en">Microsoft Visual C++ 2008 Redistributable Package (x86)</a>.</p>
+            {% autoescape false %}
+            <p>{{ _("If you get an error about being unable to run the program, install the {url|Microsoft Visual C++ 2008 Redistributable Package (x86)}.")|expand({'url': 'http://www.microsoft.com/downloads/details.aspx?FamilyID=9b2da534-3e03-4391-8a4d-074b9f2bc1bf&displaylang=en'}) }}</p>
+            {% endautoescape %}
           </li>
 
           <a name="mac"></a>
           <li class="download-item">
             <h3>
             <i class="fa fa-apple fa-2x"></i>
-            Picard for <strong>Mac OS X</strong>
+            {{ _('Picard for <strong>Mac OS X</strong>') }}
             </h3>
 
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>OS X Version</th>
-                    <th>MD5 Hash</th>
-                    <th>Size</th>
-                    <th>Link</th>
+                    <th>{{ _("OS X Version") }}</th>
+                    <th>{{ _("MD5 Hash") }}</th>
+                    <th>{{ _("Size") }}</th>
+                    <th>{{ _("Link") }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -87,11 +88,11 @@
                     <td>14 MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> Download <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg">US Mirror</a></li>
-                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg">EU Mirror</a></li>
+                          <li><a href="ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg">{{ _('US Mirror') }}</a></li>
+                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/MusicBrainz-Picard-1.2-x86_64.dmg">{{ _('EU Mirror') }}</a></li>
                         </ul>
                       </div>
                     </td>
@@ -102,22 +103,22 @@
                     <td>13 MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> Download <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2.dmg">US Mirror</a></li>
-                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/MusicBrainz-Picard-1.2.dmg">EU Mirror</a></li>
+                          <li><a href="ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2.dmg">{{ _('US Mirror') }}</a></li>
+                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/MusicBrainz-Picard-1.2.dmg">{{ _('EU Mirror') }}</a></li>
                         </ul>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>Picard 1.3 (occasionally unstable)</td>
+                    <td>Picard 1.3 ({{ _("occasionally unstable") }})</td>
                     <td>-</td>
                     <td>~17 MB</td>
                     <td>
                       <div class="btn-group">
-                        <a href="http://build.oxygene.sk/job/package-picard-osx-daily/">Daily Builds for OSX</a>
+                        <a href="http://build.oxygene.sk/job/package-picard-osx-daily/">{{ _('Daily Builds for OSX') }}</a>
                       </div>
                     </td>
                   </tr>
@@ -130,15 +131,15 @@
           <li class="download-item">
             <h3>
             <i class="fa fa-linux fa-2x"></i>
-            Picard for <strong>Linux</strong>
+            {{ _("Picard for <strong>Linux</strong>") }}
             </h3>
 
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Distrubution</th>
-                    <th>Link</th>
+                    <th>{{ _("Distribution") }}</th>
+                    <th>{{ _("Link") }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -153,7 +154,7 @@
                   <tr>
                     <td>Fedora</td>
                     <td>
-                      <a href="/docs/faq/#fedora-acoustid">Read the FAQ</a>
+                      <a href="/docs/faq/#fedora-acoustid">{{ _("Read the FAQ") }}</a>
                     </td>
                   </tr>
                   <tr>
@@ -171,9 +172,9 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Others</td>
+                    <td>{{ _("Others") }}</td>
                     <td>
-                      <a href="https://musicbrainz.org/doc/Picard_Linux_Install">Read the documentation</a>
+                      <a href="https://musicbrainz.org/doc/Picard_Linux_Install">{{ _("Read the documentation") }}</a>
                     </td>
                   </tr>
                 </tbody>
@@ -185,17 +186,17 @@
           <li class="download-item">
             <h3>
             <i class="fa fa-code fa-2x"></i>
-            Picard <strong>Source Code</strong>
+            {{ _("Picard <strong>Source Code</strong>") }}
             </h3>
 
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Picard Version</th>
-                    <th>MD5 Hash</th>
-                    <th>Size</th>
-                    <th>Link</th>
+                    <th>{{ _("Picard Version") }}</th>
+                    <th>{{ _("MD5 Hash") }}</th>
+                    <th>{{ _("Size") }}</th>
+                    <th>{{ _("Link") }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -205,11 +206,11 @@
                     <td>1.7 MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> Download <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-1.2.tar.gz">US Mirror</a></li>
-                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/picard-1.2.tar.gz">EU Mirror</a></li>
+                          <li><a href="http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-1.2.tar.gz">{{ _('US Mirror') }}</a></li>
+                          <li><a href="http://mirrors.dotsrc.org/MusicBrainz/picard/picard-1.2.tar.gz">{{ _('EU Mirror') }}</a></li>
                         </ul>
                       </div>
                     </td>
@@ -219,9 +220,9 @@
             </div>
           </li>
         </ul>
-        <p>
-          This page lists the most recent downloads. If you're looking for older versions of Picard, <a href="http://ftp.musicbrainz.org/pub/musicbrainz/picard/?C=M;O=D">browse our FTP server</a>.
-        </p>
+        {% autoescape false %}
+        <p>{{ _("This page lists the most recent downloads. If you're looking for older versions of Picard, {url|browse our FTP server}.")|expand({'url': 'http://ftp.musicbrainz.org/pub/musicbrainz/picard/?C=M;O=D'}) }}</p>
+        {% endautoescape %}
       </div>
     </div><!-- /.container -->
 {% endblock %}

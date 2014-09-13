@@ -14,6 +14,12 @@ def extract_strings():
     print(green("Strings have been successfully extracted into messages.pot file.", bold=True))
 
 
+def resync_po_files_from_pot():
+    """[dev only]Resync .po files according to .pot file, not using Transifex"""
+    local("pybabel update -i website/frontend/messages.pot -d website/frontend/translations/")
+    print(green("Translations have been updated successfully.", bold=True))
+
+
 def pull_translations():
     """Pull translations for languages defined in config from Transifex and compile them.
 

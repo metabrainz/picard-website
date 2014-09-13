@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-09-13 11:10+0200\n"
+"POT-Creation-Date: 2014-09-13 14:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,202 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
 
+#: website/frontend/templates/base.html:7
+msgid "MusicBrainz Picard's Website"
+msgstr ""
+
+#: website/frontend/templates/base.html:11
+#: website/frontend/templates/base.html:23
+#: website/frontend/templates/index.html:8
+msgid "MusicBrainz Picard"
+msgstr ""
+
+#: website/frontend/templates/base.html:18
+msgid "Toggle navigation"
+msgstr ""
+
+#: website/frontend/templates/base.html:28
+msgid "Downloads"
+msgstr ""
+
+#: website/frontend/templates/base.html:29
+msgid "Plugins"
+msgstr ""
+
+#: website/frontend/templates/base.html:31
+msgid "Documentation"
+msgstr ""
+
+#: website/frontend/templates/base.html:33
+msgid "Basics"
+msgstr ""
+
+#: website/frontend/templates/base.html:34
+msgid "How to Tag Files"
+msgstr ""
+
+#: website/frontend/templates/base.html:35
+msgid "Options"
+msgstr ""
+
+#: website/frontend/templates/base.html:36
+msgid "FAQ"
+msgstr ""
+
+#: website/frontend/templates/base.html:37
+msgid "Troubleshooting"
+msgstr ""
+
+#: website/frontend/templates/base.html:39
+msgid "Scripting"
+msgstr ""
+
+#: website/frontend/templates/base.html:40
+msgid "Tags"
+msgstr ""
+
+#: website/frontend/templates/base.html:41
+msgid "Tag Mappings"
+msgstr ""
+
+#: website/frontend/templates/base.html:43
+msgid "Development"
+msgstr ""
+
+#: website/frontend/templates/base.html:44
+msgid "Plugins API"
+msgstr ""
+
+#: website/frontend/templates/base.html:46
+msgid "Installation on Linux"
+msgstr ""
+
+#: website/frontend/templates/base.html:61
+msgid "MusicBrainz Blog"
+msgstr ""
+
+#: website/frontend/templates/base.html:62
+msgid "Picard Forum"
+msgstr ""
+
 #: website/frontend/templates/base.html:66
 msgid "Language"
 msgstr ""
 
-#: website/frontend/templates/index.html:8
-msgid "MusicBrainz Picard"
+#: website/frontend/templates/downloads.html:3
+msgid "Downloads - MusicBrainz Picard"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:13
+msgid ""
+"Picard is available for all major platforms. Just download and start the "
+"installer. It's that easy."
+msgstr ""
+
+#: website/frontend/templates/downloads.html:20
+msgid "Picard for <strong>Windows</strong>"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:27
+#: website/frontend/templates/downloads.html:196
+msgid "Picard Version"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:28
+#: website/frontend/templates/downloads.html:79
+#: website/frontend/templates/downloads.html:197
+msgid "MD5 Hash"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:29
+#: website/frontend/templates/downloads.html:80
+#: website/frontend/templates/downloads.html:198
+msgid "Size"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:30
+#: website/frontend/templates/downloads.html:81
+#: website/frontend/templates/downloads.html:142
+#: website/frontend/templates/downloads.html:199
+msgid "Link"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:40
+#: website/frontend/templates/downloads.html:91
+#: website/frontend/templates/downloads.html:106
+#: website/frontend/templates/downloads.html:209
+msgid "Download"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:43
+#: website/frontend/templates/downloads.html:94
+#: website/frontend/templates/downloads.html:109
+#: website/frontend/templates/downloads.html:212
+msgid "US Mirror"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:44
+#: website/frontend/templates/downloads.html:95
+#: website/frontend/templates/downloads.html:110
+#: website/frontend/templates/downloads.html:213
+msgid "EU Mirror"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:50
+#: website/frontend/templates/downloads.html:116
+msgid "occasionally unstable"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:55
+msgid "Daily Builds for Windows"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:63
+msgid ""
+"If you get an error about being unable to run the program, install the "
+"{url|Microsoft Visual C++ 2008 Redistributable Package (x86)}."
+msgstr ""
+
+#: website/frontend/templates/downloads.html:71
+msgid "Picard for <strong>Mac OS X</strong>"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:78
+msgid "OS X Version"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:121
+msgid "Daily Builds for OSX"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:134
+msgid "Picard for <strong>Linux</strong>"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:141
+msgid "Distribution"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:157
+msgid "Read the FAQ"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:175
+msgid "Others"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:177
+msgid "Read the documentation"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:189
+msgid "Picard <strong>Source Code</strong>"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:224
+msgid ""
+"This page lists the most recent downloads. If you're looking for older "
+"versions of Picard, {url|browse our FTP server}."
 msgstr ""
 
 #: website/frontend/templates/index.html:11
@@ -92,5 +282,36 @@ msgstr ""
 msgid ""
 "If you need a particular feature, you can choose from a selection of "
 "{url|available plugins} or write your own."
+msgstr ""
+
+#: website/frontend/templates/plugins.html:3
+msgid "Plugins - MusicBrainz Picard"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:7
+msgid "Available Plugins"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:13
+msgid ""
+"This is a list of plugins that are currently available for use with "
+"Picard. The table is generated from the data of our plugin "
+"{urlrepo|repository}."
+msgstr ""
+
+#: website/frontend/templates/plugins.html:23
+msgid "Name"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:24
+msgid "Version"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:25
+msgid "Description"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:26
+msgid "Author(s)"
 msgstr ""
 
