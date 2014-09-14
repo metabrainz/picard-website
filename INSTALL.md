@@ -72,4 +72,5 @@ To run the development server, do:
 ./run.py
 ```
 
-By default, it listens on port 6060. This can be changed in config.py.
+By default, it listens on 127.0.0.1 port 6060.
+This can be changed in `config.py` by modifying `SERVER_HOSTNAME` and `SERVER_PORT`.
