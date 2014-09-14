@@ -1,7 +1,11 @@
 from __future__ import with_statement
 from fabric.api import local
 from fabric.colors import green, yellow
-from website.frontend import create_app
+from fabric.context_managers import lcd
+from fabric.contrib.console import confirm
+from fabric.utils import abort
+import website.frontend
+import os.path
 
 
 def extract_strings():
@@ -26,7 +30,7 @@ def pull_translations():
     Before using this command make sure that you properly configured Transifex client.
     More info about that is available at http://docs.transifex.com/developer/client/setup#configuration.
     """
-    languages = ','.join(create_app().config['SUPPORTED_LANGUAGES'])
+    languages = ','.join(website.frontend.create_app().config['SUPPORTED_LANGUAGES'])
     local("tx pull -f -r picard-website.website -l %s" % languages)
     print(green("Translations have been updated successfully.", bold=True))
 
@@ -51,6 +55,25 @@ def compile_styling():
     """
     local("./node_modules/.bin/gulp")
     print(green("Style sheets have been compiled successfully.", bold=True))
+
+
+def plugins_generate():
+    """Generate plugins.json and zipped plugin archive files
+
+    Clone or pull repository from GitHub and run generate.py script
+    """
+    repo = website.frontend.create_app().config['PLUGINS_REPOSITORY']
+    if not os.path.isdir(repo):
+        print(yellow("'%s' directory defined by PLUGINS_REPOSITORY doesn't exist" % repo))
+        if confirm("Do you want to clone picard-plugins from GitHub?"):
+            local('git clone https://github.com/musicbrainz/picard-plugins/ %s' %
+              repo)
+        else:
+            abort('Aborting...')
+    with lcd(repo):
+        local("git pull")
+        local("python generate.py")
+        print(green("Plugins files have been generated successfully.", bold=True))
 
 
 def deploy():
