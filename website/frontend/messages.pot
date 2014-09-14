@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-09-14 12:04+0200\n"
+"POT-Creation-Date: 2014-09-15 00:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,9 @@ msgstr ""
 "Generated-By: Babel 1.3\n"
 
 #: website/frontend/templates/base.html:7
-msgid "MusicBrainz Picard's Website"
+msgid ""
+"Official website for MusicBrainz Picard, a cross-platform music tagger "
+"written in Python."
 msgstr ""
 
 #: website/frontend/templates/base.html:11
@@ -32,7 +34,7 @@ msgid "Toggle navigation"
 msgstr ""
 
 #: website/frontend/templates/base.html:28
-#: website/frontend/templates/downloads.html:7
+#: website/frontend/templates/downloads.html:3
 msgid "Downloads"
 msgstr ""
 
@@ -41,38 +43,47 @@ msgid "Plugins"
 msgstr ""
 
 #: website/frontend/templates/base.html:31
+#: website/frontend/templates/docs/base.html:3
 msgid "Documentation"
 msgstr ""
 
 #: website/frontend/templates/base.html:33
+#: website/frontend/templates/docs/basics.html:3
 msgid "Basics"
 msgstr ""
 
 #: website/frontend/templates/base.html:34
+#: website/frontend/templates/docs/guide.html:3
 msgid "How to Tag Files"
 msgstr ""
 
 #: website/frontend/templates/base.html:35
+#: website/frontend/templates/docs/options.html:3
 msgid "Options"
 msgstr ""
 
 #: website/frontend/templates/base.html:36
+#: website/frontend/templates/docs/faq.html:3
 msgid "FAQ"
 msgstr ""
 
 #: website/frontend/templates/base.html:37
+#: website/frontend/templates/docs/troubleshooting.html:3
 msgid "Troubleshooting"
 msgstr ""
 
 #: website/frontend/templates/base.html:39
+#: website/frontend/templates/docs/scripting.html:3
 msgid "Scripting"
 msgstr ""
 
 #: website/frontend/templates/base.html:40
+#: website/frontend/templates/docs/tags.html:3
 msgid "Tags"
 msgstr ""
 
 #: website/frontend/templates/base.html:41
+#: website/frontend/templates/docs/mappings.html:3
 msgid "Tag Mappings"
 msgstr ""
 
@@ -81,144 +92,138 @@ msgid "Development"
 msgstr ""
 
 #: website/frontend/templates/base.html:44
+#: website/frontend/templates/docs/plugin-api.html:3
 msgid "Plugins API"
 msgstr ""
 
 #: website/frontend/templates/base.html:46
+#: website/frontend/templates/docs/linux.html:3
 msgid "Installation on Linux"
 msgstr ""
 
-#: website/frontend/templates/base.html:61
+#: website/frontend/templates/base.html:70
 msgid "MusicBrainz Blog"
 msgstr ""
 
-#: website/frontend/templates/base.html:62
+#: website/frontend/templates/base.html:71
 msgid "Picard Forum"
 msgstr ""
 
-#: website/frontend/templates/base.html:66
+#: website/frontend/templates/base.html:75
 msgid "Language"
 msgstr ""
 
 #: website/frontend/templates/changelog.html:3
-msgid "What's New - MusicBrainz Picard"
-msgstr ""
-
-#: website/frontend/templates/changelog.html:7
 msgid "What's New"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:3
-msgid "Downloads - MusicBrainz Picard"
-msgstr ""
-
-#: website/frontend/templates/downloads.html:13
+#: website/frontend/templates/downloads.html:8
 msgid ""
 "Picard is available for all major platforms. Just download and start the "
 "installer. It's that easy."
 msgstr ""
 
-#: website/frontend/templates/downloads.html:20
+#: website/frontend/templates/downloads.html:15
 msgid "Picard for <strong>Windows</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:27
-#: website/frontend/templates/downloads.html:196
+#: website/frontend/templates/downloads.html:22
+#: website/frontend/templates/downloads.html:191
 msgid "Picard Version"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:28
-#: website/frontend/templates/downloads.html:79
-#: website/frontend/templates/downloads.html:197
+#: website/frontend/templates/downloads.html:23
+#: website/frontend/templates/downloads.html:74
+#: website/frontend/templates/downloads.html:192
 msgid "MD5 Hash"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:29
-#: website/frontend/templates/downloads.html:80
-#: website/frontend/templates/downloads.html:198
+#: website/frontend/templates/downloads.html:24
+#: website/frontend/templates/downloads.html:75
+#: website/frontend/templates/downloads.html:193
 msgid "Size"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:30
-#: website/frontend/templates/downloads.html:81
-#: website/frontend/templates/downloads.html:142
-#: website/frontend/templates/downloads.html:199
+#: website/frontend/templates/downloads.html:25
+#: website/frontend/templates/downloads.html:76
+#: website/frontend/templates/downloads.html:137
+#: website/frontend/templates/downloads.html:194
 msgid "Link"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:40
-#: website/frontend/templates/downloads.html:91
-#: website/frontend/templates/downloads.html:106
-#: website/frontend/templates/downloads.html:209
+#: website/frontend/templates/downloads.html:35
+#: website/frontend/templates/downloads.html:86
+#: website/frontend/templates/downloads.html:101
+#: website/frontend/templates/downloads.html:204
 msgid "Download"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:43
-#: website/frontend/templates/downloads.html:94
-#: website/frontend/templates/downloads.html:109
-#: website/frontend/templates/downloads.html:212
+#: website/frontend/templates/downloads.html:38
+#: website/frontend/templates/downloads.html:89
+#: website/frontend/templates/downloads.html:104
+#: website/frontend/templates/downloads.html:207
 msgid "US Mirror"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:44
-#: website/frontend/templates/downloads.html:95
-#: website/frontend/templates/downloads.html:110
-#: website/frontend/templates/downloads.html:213
+#: website/frontend/templates/downloads.html:39
+#: website/frontend/templates/downloads.html:90
+#: website/frontend/templates/downloads.html:105
+#: website/frontend/templates/downloads.html:208
 msgid "EU Mirror"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:50
-#: website/frontend/templates/downloads.html:116
+#: website/frontend/templates/downloads.html:45
+#: website/frontend/templates/downloads.html:111
 msgid "occasionally unstable"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:55
+#: website/frontend/templates/downloads.html:50
 msgid "Daily Builds for Windows"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:63
+#: website/frontend/templates/downloads.html:58
 msgid ""
 "If you get an error about being unable to run the program, install the "
 "{url|Microsoft Visual C++ 2008 Redistributable Package (x86)}."
 msgstr ""
 
-#: website/frontend/templates/downloads.html:71
+#: website/frontend/templates/downloads.html:66
 msgid "Picard for <strong>Mac OS X</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:78
+#: website/frontend/templates/downloads.html:73
 msgid "OS X Version"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:121
+#: website/frontend/templates/downloads.html:116
 msgid "Daily Builds for OSX"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:134
+#: website/frontend/templates/downloads.html:129
 msgid "Picard for <strong>Linux</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:141
+#: website/frontend/templates/downloads.html:136
 msgid "Distribution"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:157
+#: website/frontend/templates/downloads.html:152
 msgid "Read the FAQ"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:175
+#: website/frontend/templates/downloads.html:170
 msgid "Others"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:177
+#: website/frontend/templates/downloads.html:172
 msgid "Read the documentation"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:189
+#: website/frontend/templates/downloads.html:184
 msgid "Picard <strong>Source Code</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:224
+#: website/frontend/templates/downloads.html:219
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
@@ -294,51 +299,51 @@ msgid ""
 msgstr ""
 
 #: website/frontend/templates/plugins.html:3
-msgid "Plugins - MusicBrainz Picard"
-msgstr ""
-
-#: website/frontend/templates/plugins.html:7
 msgid "Available Plugins"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:13
+#: website/frontend/templates/plugins.html:8
 msgid ""
 "This is a list of plugins that are currently available for use with "
 "Picard. The table is generated from the data of our plugin "
 "{urlrepo|repository}."
 msgstr ""
 
-#: website/frontend/templates/plugins.html:23
+#: website/frontend/templates/plugins.html:18
 msgid "Name"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:24
+#: website/frontend/templates/plugins.html:19
 msgid "Version"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:25
+#: website/frontend/templates/plugins.html:20
 msgid "Description"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:26
+#: website/frontend/templates/plugins.html:21
 msgid "Author(s)"
 msgstr ""
 
+#: website/frontend/templates/docs/build-osx.html:3
+msgid "Build on OSX"
+msgstr ""
+
+#: website/frontend/templates/docs/build-windows.html:3
+msgid "Build on Windows"
+msgstr ""
+
+#: website/frontend/templates/docs/development.html:3
+msgid "Developing"
+msgstr ""
+
 #: website/frontend/templates/errors/404.html:3
-msgid "404 Not Found - MusicBrainz Picard"
+msgid "404 Not Found"
 msgstr ""
 
-#: website/frontend/templates/errors/404.html:7
-msgid "404 - Not Found"
-msgstr ""
-
-#: website/frontend/templates/errors/404.html:11
-msgid "This website is a work in progress, so a lot of stuff does not exist yet."
-msgstr ""
-
-#: website/frontend/templates/errors/404.html:12
+#: website/frontend/templates/errors/404.html:6
 msgid ""
-"You don't have to worry though, someone is working on fixing things as "
-"you're reading this."
+"You don't have to worry, someone is working on fixing things as you're "
+"reading this."
 msgstr ""
 
