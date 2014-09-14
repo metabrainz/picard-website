@@ -1,13 +1,7 @@
-{% extends 'base.html' %}
-{% set active_page = "docs"%}
+{% extends 'docs/base.html' %}
 {% set git_doc = "mappings.html"%}
-{% block title %}Documentation - MusicBrainz Picard{% endblock %}
+{% set doc_title = _("Tag Mappings") %}
 {% block content %}
-<div class="jumbotron">
-  <div class="container">
-    <h1>Tag Mappings</h1>
-  </div>
-</div>
 <div id="docs" class="container">
   <div class="row">
     <p>Table of mapping between <a href="/" title="MusicBrainz Picard">Picard</a> internal

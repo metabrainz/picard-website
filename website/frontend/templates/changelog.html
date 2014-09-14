@@ -1,12 +1,7 @@
 {% extends 'base.html' %}
-{% set active_page = "changelog"%}
-{% block title %}{{ _("What's New - MusicBrainz Picard") }}{% endblock %}
+{% set active_page = "changelog" %}
+{% set page_title = _("What's New") %}
 {% block content %}
-    <div class="jumbotron">
-      <div class="container">
-        <h1>{{ _("What's New") }}</h1>
-      </div>
-    </div>
     <div class="container">
       <div id="log">
       {% for line in lines %}

@@ -1,12 +1,7 @@
 {% extends 'base.html' %}
-{% set active_page = "plugins"%}
-{% block title %}{{ _("Plugins - MusicBrainz Picard") }}{% endblock %}
+{% set active_page = "plugins" %}
+{% set page_title =  _("Available Plugins") %}
 {% block content %}
-    <div class="jumbotron">
-      <div class="container">
-        <h1>{{ _("Available Plugins") }}</h1>
-      </div>
-    </div>
     <div class="container">
       <div id="plugin-table">
         {% autoescape false %}

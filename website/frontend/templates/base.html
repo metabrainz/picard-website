@@ -8,7 +8,7 @@
     <meta name="author" href="{{ url_for('humans.show_humans') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/picard-icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>{% block title %}{{ _('MusicBrainz Picard') }}{% endblock %}</title>
+    <title>{% block title %}{% if page_title is defined %}{{page_title}} - {%endif%}{{ _('MusicBrainz Picard') }}{% endblock %}</title>
   </head>
   <body data-spy="scroll" data-target="#sidebar">
     <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -50,6 +50,15 @@
         </div>
       </div>
     </div>
+    {%- block content_header %}
+    {% if page_title is defined %}
+    <div class="jumbotron">
+      <div class="container">
+        <h1>{{ page_title }}</h1>
+      </div>
+    </div>
+    {%endif%}
+    {% endblock -%}
     {%- block content %}
     {% endblock -%}
     <div class="clearfix"></div>

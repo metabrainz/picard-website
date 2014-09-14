@@ -1,13 +1,7 @@
-{% extends 'base.html' %}
-{% set active_page = "docs"%}
-{% set git_doc = "faq.html"%}
-{% block title %}Documentation - MusicBrainz Picard{% endblock %}
+{% extends 'docs/base.html' %}
+{% set git_doc = "faq.html" %}
+{% set doc_title = _("FAQ") %}
 {% block content %}
-<div class="jumbotron">
-  <div class="container">
-    <h1>FAQ</h1>
-  </div>
-</div>
 <div id="docs" class="container">
   <div class="row">
     <div class="col-md-8">
