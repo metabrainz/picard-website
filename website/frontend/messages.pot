@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-09-13 14:10+0200\n"
+"POT-Creation-Date: 2014-09-14 12:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,6 +98,14 @@ msgstr ""
 
 #: website/frontend/templates/base.html:66
 msgid "Language"
+msgstr ""
+
+#: website/frontend/templates/changelog.html:3
+msgid "What's New - MusicBrainz Picard"
+msgstr ""
+
+#: website/frontend/templates/changelog.html:7
+msgid "What's New"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:3
@@ -314,5 +322,23 @@ msgstr ""
 
 #: website/frontend/templates/plugins.html:26
 msgid "Author(s)"
+msgstr ""
+
+#: website/frontend/templates/errors/404.html:3
+msgid "404 Not Found - MusicBrainz Picard"
+msgstr ""
+
+#: website/frontend/templates/errors/404.html:7
+msgid "404 - Not Found"
+msgstr ""
+
+#: website/frontend/templates/errors/404.html:11
+msgid "This website is a work in progress, so a lot of stuff does not exist yet."
+msgstr ""
+
+#: website/frontend/templates/errors/404.html:12
+msgid ""
+"You don't have to worry though, someone is working on fixing things as "
+"you're reading this."
 msgstr ""
 
