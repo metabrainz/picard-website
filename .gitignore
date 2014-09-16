@@ -1,6 +1,9 @@
 # Generated from static/less using Gulp
 website/frontend/static/css/
 
+# coverage output
+cover/
+
 # The build used during testing
 tmp/
 

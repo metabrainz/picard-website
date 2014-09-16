@@ -82,7 +82,15 @@ def deploy():
     compile_styling()
 
 
-def test():
+def test(coverage=True):
     """Run all tests.
+
+    Code coverage report will be located in cover/index.html file.
     """
-    pass
+
+    if coverage:
+        local("nosetests --exe --with-coverage --cover-package=website --cover-erase --cover-html")
+        print(yellow("Coverage report can be found in cover/index.html file.", bold=True))
+    else:
+        local("nosetests --exe")
+
