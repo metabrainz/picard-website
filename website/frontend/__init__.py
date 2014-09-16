@@ -6,6 +6,7 @@ frontend_folder = os.path.dirname(os.path.abspath(__file__))
 template_folder = os.path.join(frontend_folder, 'templates')
 static_folder = os.path.join(frontend_folder, 'static')
 
+
 def create_app():
     app = Flask(__name__, static_folder=static_folder,
                 template_folder=template_folder)
@@ -20,7 +21,7 @@ def create_app():
     import errors
     errors.init_error_handlers(app)
 
-    #I18n
+    # I18n
     import babel
     babel.init_app(app)
 
@@ -34,7 +35,6 @@ def create_app():
     from website.expand import expand
     app.jinja_env.filters['expand'] = expand
 
-
     # Blueprints
     from views import frontend_bp
     from views.changelog import changelog_bp
@@ -42,7 +42,6 @@ def create_app():
     from views.plugins import plugins_bp
     from views.docs import docs_bp
     from views.api import api_bp
-
 
     app.register_blueprint(frontend_bp)
     app.register_blueprint(changelog_bp, url_prefix='/changelog')

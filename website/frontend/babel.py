@@ -7,7 +7,8 @@ def init_app(app):
 
     app.config['LANGUAGES'] = {}
     for language in app.config['SUPPORTED_LANGUAGES']:
-        app.config['LANGUAGES'][language] = Locale.parse(language).language_name
+        app.config['LANGUAGES'][
+            language] = Locale.parse(language).language_name
 
     @app.after_request
     def call_after_request_callbacks(response):

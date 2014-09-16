@@ -1,5 +1,6 @@
 from website.frontend.testing import FrontendTestCase
 
+
 class ViewsTestCase(FrontendTestCase):
 
     def test_humans_txt(self):

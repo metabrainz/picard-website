@@ -63,7 +63,6 @@ def not_found(error):
     return make_response(jsonify({'error': 'Plugin not found.'}), 404)
 
 
-
 @api_bp.route('/v1/', methods=['GET'])
 def api_root():
     """

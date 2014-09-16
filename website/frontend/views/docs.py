@@ -9,9 +9,11 @@ import os
 
 docs_bp = Blueprint('docs', __name__)
 
+
 @docs_bp.route('/')
 def show_basics():
     return render_template('docs/basics.html')
+
 
 @docs_bp.route('/<string:page>/')
 def show_pages(page):
