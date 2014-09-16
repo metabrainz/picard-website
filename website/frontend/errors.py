@@ -4,12 +4,10 @@ from flask import (
     render_template,
     request
 )
-from exceptions import *
 
 
 def init_error_handlers(app):
 
-    @app.errorhandler(NotFound)
     @app.errorhandler(404)
     def not_found_handler(error):
         if request.path.startswith("/api"):
