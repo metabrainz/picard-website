@@ -30,9 +30,6 @@ def create_app():
 
     # Template utilities
     app.jinja_env.add_extension('jinja2.ext.do')
-    from website.utils import reformat_date, reformat_datetime
-    app.jinja_env.filters['date'] = reformat_date
-    app.jinja_env.filters['datetime'] = reformat_datetime
 
     from website.expand import expand
     app.jinja_env.filters['expand'] = expand
