@@ -16,18 +16,19 @@ def expand(string, args, tag='a', default_attribute='href'):
             final_text = args[text]
         else:
             final_text = text
-        if var in args:
-            if isinstance(args[var], dict):
-                d = args[var]
-            else:
-                d = {default_attribute: args[var]}
-            attribs = ' '.join(["%s=\"%s\"" % (k, encode_entities(d[k])) for k
-                                in sorted(d.keys())])
-            if attribs:
-                attribs = ' ' + attribs
-            return '<%s%s>%s</%s>' % (tag, attribs, final_text, tag)
+
+        if isinstance(args[var], dict):
+            d = args[var]
         else:
-            return '{%s|%s}' % (var, text)
+            if default_attribute:
+                d = {default_attribute: args[var]}
+            else:
+                d = {}
+        attribs = ' '.join(["%s=\"%s\"" % (k, encode_entities(d[k])) for k
+                            in sorted(d.keys())])
+        if attribs:
+            attribs = ' ' + attribs
+        return '<%s%s>%s</%s>' % (tag, attribs, final_text, tag)
 
     def simple_expr(match):
         var = match.group(1)
