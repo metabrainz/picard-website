@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-09-15 00:56+0200\n"
+"POT-Creation-Date: 2014-10-20 22:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,52 +128,57 @@ msgid "Picard for <strong>Windows</strong>"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:22
-#: website/frontend/templates/downloads.html:191
+#: website/frontend/templates/downloads.html:73
+#: website/frontend/templates/downloads.html:121
+#: website/frontend/templates/downloads.html:214
 msgid "Picard Version"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:23
 #: website/frontend/templates/downloads.html:74
-#: website/frontend/templates/downloads.html:192
+#: website/frontend/templates/downloads.html:122
+#: website/frontend/templates/downloads.html:215
 msgid "MD5 Hash"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:24
 #: website/frontend/templates/downloads.html:75
-#: website/frontend/templates/downloads.html:193
+#: website/frontend/templates/downloads.html:123
+#: website/frontend/templates/downloads.html:216
 msgid "Size"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:25
 #: website/frontend/templates/downloads.html:76
-#: website/frontend/templates/downloads.html:137
-#: website/frontend/templates/downloads.html:194
+#: website/frontend/templates/downloads.html:124
+#: website/frontend/templates/downloads.html:160
+#: website/frontend/templates/downloads.html:217
 msgid "Link"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:35
 #: website/frontend/templates/downloads.html:86
-#: website/frontend/templates/downloads.html:101
-#: website/frontend/templates/downloads.html:204
+#: website/frontend/templates/downloads.html:134
+#: website/frontend/templates/downloads.html:227
 msgid "Download"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:38
 #: website/frontend/templates/downloads.html:89
-#: website/frontend/templates/downloads.html:104
-#: website/frontend/templates/downloads.html:207
+#: website/frontend/templates/downloads.html:137
+#: website/frontend/templates/downloads.html:230
 msgid "US Mirror"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:39
 #: website/frontend/templates/downloads.html:90
-#: website/frontend/templates/downloads.html:105
-#: website/frontend/templates/downloads.html:208
+#: website/frontend/templates/downloads.html:138
+#: website/frontend/templates/downloads.html:231
 msgid "EU Mirror"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:45
-#: website/frontend/templates/downloads.html:111
+#: website/frontend/templates/downloads.html:96
 msgid "occasionally unstable"
 msgstr ""
 
@@ -188,42 +193,42 @@ msgid ""
 msgstr ""
 
 #: website/frontend/templates/downloads.html:66
-msgid "Picard for <strong>Mac OS X</strong>"
+msgid "Picard for <strong>Mac OS X 10.7+ (x86_64)</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:73
-msgid "OS X Version"
-msgstr ""
-
-#: website/frontend/templates/downloads.html:116
+#: website/frontend/templates/downloads.html:101
 msgid "Daily Builds for OSX"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:129
-msgid "Picard for <strong>Linux</strong>"
-msgstr ""
-
-#: website/frontend/templates/downloads.html:136
-msgid "Distribution"
+#: website/frontend/templates/downloads.html:114
+msgid "Picard for <strong>Mac OS X 10.4-10.6 (i386)</strong>"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:152
+msgid "Picard for <strong>Linux</strong>"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:159
+msgid "Distribution"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:175
 msgid "Read the FAQ"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:170
+#: website/frontend/templates/downloads.html:193
 msgid "Others"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:172
+#: website/frontend/templates/downloads.html:195
 msgid "Read the documentation"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:184
+#: website/frontend/templates/downloads.html:207
 msgid "Picard <strong>Source Code</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:219
+#: website/frontend/templates/downloads.html:242
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
