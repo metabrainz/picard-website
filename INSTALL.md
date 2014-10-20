@@ -1,26 +1,36 @@
 # Installation
 
-First, checkout the picard-plugins repository somewhere and generate the plugins.json data:
+Pre-requisites:
+- python >= 2.7
+- python-dev (required to build some dependencies)
+- git
+- nodejs
+- npm
 
+To install those on Ubuntu:
 ```bash
-git clone https://github.com/musicbrainz/picard-plugins/
-cd picard-plugins
-python generate.py
-cd ..
+sudo apt-get install python python-dev git nodejs npm
 ```
 
-Next, checkout picard-website and configure it:
+Be sure `gulp` is working, check its version using:
+```bash
+gulp -v
+```
+If it complains about `node` being not found on Ubuntu/Debian you may have to install `nodejs-legacy` package
+or create a symlink between `nodejs` and `node`.
+
+Checkout picard-website and configure it:
 
 ```bash
 git clone https://github.com/musicbrainz/picard-website/
 cd picard-website
-cp config.py.sample config.py
+cp website/config.py.example website/config.py
 ```
 
-Edit config.py so that PLUGINS_REPOSITORY points to your local copy of the picard-plugins repository:
+Edit website/config.py so that PLUGINS_REPOSITORY points to your local copy of the picard-plugins repository:
 
 ```bash
-vim config.py
+vim website/config.py
 ```
 
 Make sure [virtualenv](http://virtualenv.readthedocs.org/en/latest/) is installed before proceeding.
@@ -44,10 +54,16 @@ npm install
 
 Node dependencies (including gulp and less, which are required to compile/minify CSS) are installed to `./node_modules`, and binaries are symlinked into `./node_modules/.bin`. You may want to add the latter into your `$PATH`.
 
-Compile CSS:
+To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repository and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
 
 ```bash
-./node_modules/.bin/gulp
+fab plugins_generate
+```
+
+Compile CSS and translations:
+
+```bash
+fab deploy
 ```
 
 To run the development server, do:
@@ -56,4 +72,5 @@ To run the development server, do:
 ./run.py
 ```
 
-By default, it listens on port 6060. This can be changed in config.py.
+By default, it listens on 127.0.0.1 port 6060.
+This can be changed in `config.py` by modifying `SERVER_HOSTNAME` and `SERVER_PORT`.

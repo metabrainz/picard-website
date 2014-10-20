@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% set active_page = "docs" %}
+{% set page_title = [doc_title, _("Documentation")]|join(' - ') %}
+{%- block content_header %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{ doc_title }}</h1>
+  </div>
+</div>
+{% endblock -%}

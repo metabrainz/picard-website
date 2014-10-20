@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 from werkzeug.serving import run_simple
-from app import app
-from config import SERVER_HOSTNAME, SERVER_PORT
+from website.frontend import create_app
 
 if __name__ == '__main__':
-    run_simple(SERVER_HOSTNAME, SERVER_PORT, app)
+    app = create_app()
+    run_simple(app.config['SERVER_HOSTNAME'], app.config['SERVER_PORT'], app)

@@ -1,0 +1,349 @@
+# Translations template for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-09-15 00:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: website/frontend/templates/base.html:7
+msgid ""
+"Official website for MusicBrainz Picard, a cross-platform music tagger "
+"written in Python."
+msgstr ""
+
+#: website/frontend/templates/base.html:11
+#: website/frontend/templates/base.html:23
+#: website/frontend/templates/index.html:8
+msgid "MusicBrainz Picard"
+msgstr ""
+
+#: website/frontend/templates/base.html:18
+msgid "Toggle navigation"
+msgstr ""
+
+#: website/frontend/templates/base.html:28
+#: website/frontend/templates/downloads.html:3
+msgid "Downloads"
+msgstr ""
+
+#: website/frontend/templates/base.html:29
+msgid "Plugins"
+msgstr ""
+
+#: website/frontend/templates/base.html:31
+#: website/frontend/templates/docs/base.html:3
+msgid "Documentation"
+msgstr ""
+
+#: website/frontend/templates/base.html:33
+#: website/frontend/templates/docs/basics.html:3
+msgid "Basics"
+msgstr ""
+
+#: website/frontend/templates/base.html:34
+#: website/frontend/templates/docs/guide.html:3
+msgid "How to Tag Files"
+msgstr ""
+
+#: website/frontend/templates/base.html:35
+#: website/frontend/templates/docs/options.html:3
+msgid "Options"
+msgstr ""
+
+#: website/frontend/templates/base.html:36
+#: website/frontend/templates/docs/faq.html:3
+msgid "FAQ"
+msgstr ""
+
+#: website/frontend/templates/base.html:37
+#: website/frontend/templates/docs/troubleshooting.html:3
+msgid "Troubleshooting"
+msgstr ""
+
+#: website/frontend/templates/base.html:39
+#: website/frontend/templates/docs/scripting.html:3
+msgid "Scripting"
+msgstr ""
+
+#: website/frontend/templates/base.html:40
+#: website/frontend/templates/docs/tags.html:3
+msgid "Tags"
+msgstr ""
+
+#: website/frontend/templates/base.html:41
+#: website/frontend/templates/docs/mappings.html:3
+msgid "Tag Mappings"
+msgstr ""
+
+#: website/frontend/templates/base.html:43
+msgid "Development"
+msgstr ""
+
+#: website/frontend/templates/base.html:44
+#: website/frontend/templates/docs/plugin-api.html:3
+msgid "Plugins API"
+msgstr ""
+
+#: website/frontend/templates/base.html:46
+#: website/frontend/templates/docs/linux.html:3
+msgid "Installation on Linux"
+msgstr ""
+
+#: website/frontend/templates/base.html:70
+msgid "MusicBrainz Blog"
+msgstr ""
+
+#: website/frontend/templates/base.html:71
+msgid "Picard Forum"
+msgstr ""
+
+#: website/frontend/templates/base.html:75
+msgid "Language"
+msgstr ""
+
+#: website/frontend/templates/changelog.html:3
+msgid "What's New"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:8
+msgid ""
+"Picard is available for all major platforms. Just download and start the "
+"installer. It's that easy."
+msgstr ""
+
+#: website/frontend/templates/downloads.html:15
+msgid "Picard for <strong>Windows</strong>"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:22
+#: website/frontend/templates/downloads.html:191
+msgid "Picard Version"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:23
+#: website/frontend/templates/downloads.html:74
+#: website/frontend/templates/downloads.html:192
+msgid "MD5 Hash"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:24
+#: website/frontend/templates/downloads.html:75
+#: website/frontend/templates/downloads.html:193
+msgid "Size"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:25
+#: website/frontend/templates/downloads.html:76
+#: website/frontend/templates/downloads.html:137
+#: website/frontend/templates/downloads.html:194
+msgid "Link"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:35
+#: website/frontend/templates/downloads.html:86
+#: website/frontend/templates/downloads.html:101
+#: website/frontend/templates/downloads.html:204
+msgid "Download"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:38
+#: website/frontend/templates/downloads.html:89
+#: website/frontend/templates/downloads.html:104
+#: website/frontend/templates/downloads.html:207
+msgid "US Mirror"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:39
+#: website/frontend/templates/downloads.html:90
+#: website/frontend/templates/downloads.html:105
+#: website/frontend/templates/downloads.html:208
+msgid "EU Mirror"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:45
+#: website/frontend/templates/downloads.html:111
+msgid "occasionally unstable"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:50
+msgid "Daily Builds for Windows"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:58
+msgid ""
+"If you get an error about being unable to run the program, install the "
+"{url|Microsoft Visual C++ 2008 Redistributable Package (x86)}."
+msgstr ""
+
+#: website/frontend/templates/downloads.html:66
+msgid "Picard for <strong>Mac OS X</strong>"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:73
+msgid "OS X Version"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:116
+msgid "Daily Builds for OSX"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:129
+msgid "Picard for <strong>Linux</strong>"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:136
+msgid "Distribution"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:152
+msgid "Read the FAQ"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:170
+msgid "Others"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:172
+msgid "Read the documentation"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:184
+msgid "Picard <strong>Source Code</strong>"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:219
+msgid ""
+"This page lists the most recent downloads. If you're looking for older "
+"versions of Picard, {url|browse our FTP server}."
+msgstr ""
+
+#: website/frontend/templates/index.html:11
+msgid "Picard is a cross-platform music tagger written in Python."
+msgstr ""
+
+#: website/frontend/templates/index.html:16
+msgid "Download Picard"
+msgstr ""
+
+#: website/frontend/templates/index.html:22
+msgid "What’s New"
+msgstr ""
+
+#: website/frontend/templates/index.html:25
+msgid "Other Downloads"
+msgstr ""
+
+#: website/frontend/templates/index.html:30
+msgid "Screenshot"
+msgstr ""
+
+#: website/frontend/templates/index.html:41
+msgid "Multiple Formats"
+msgstr ""
+
+#: website/frontend/templates/index.html:42
+msgid ""
+"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
+" WMA, WAV, and more."
+msgstr ""
+
+#: website/frontend/templates/index.html:49
+msgid "AcoustID"
+msgstr ""
+
+#: website/frontend/templates/index.html:58
+msgid ""
+"Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
+"identified by the actual music, even if they have no metadata."
+msgstr ""
+
+#: website/frontend/templates/index.html:66
+msgid "CD Lookups"
+msgstr ""
+
+#: website/frontend/templates/index.html:67
+msgid "Picard can lookup entire music CDs with a click."
+msgstr ""
+
+#: website/frontend/templates/index.html:76
+msgid "Open Source"
+msgstr ""
+
+#: website/frontend/templates/index.html:83
+msgid ""
+"Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
+"{urlgithub|GitHub} where it’s actively developed by some awesome "
+"developers."
+msgstr ""
+
+#: website/frontend/templates/index.html:91
+msgid "Plugin Support"
+msgstr ""
+
+#: website/frontend/templates/index.html:93
+msgid ""
+"If you need a particular feature, you can choose from a selection of "
+"{url|available plugins} or write your own."
+msgstr ""
+
+#: website/frontend/templates/plugins.html:3
+msgid "Available Plugins"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:8
+msgid ""
+"This is a list of plugins that are currently available for use with "
+"Picard. The table is generated from the data of our plugin "
+"{urlrepo|repository}."
+msgstr ""
+
+#: website/frontend/templates/plugins.html:18
+msgid "Name"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:19
+msgid "Version"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:20
+msgid "Description"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:21
+msgid "Author(s)"
+msgstr ""
+
+#: website/frontend/templates/docs/build-osx.html:3
+msgid "Build on OSX"
+msgstr ""
+
+#: website/frontend/templates/docs/build-windows.html:3
+msgid "Build on Windows"
+msgstr ""
+
+#: website/frontend/templates/docs/development.html:3
+msgid "Developing"
+msgstr ""
+
+#: website/frontend/templates/errors/404.html:3
+msgid "404 Not Found"
+msgstr ""
+
+#: website/frontend/templates/errors/404.html:6
+msgid ""
+"You don't have to worry, someone is working on fixing things as you're "
+"reading this."
+msgstr ""
+

@@ -1,0 +1,184 @@
+{% extends 'docs/base.html' %}
+{% set git_doc = "build-windows.html" %}
+{% set doc_title = _("Build on Windows") %}
+{% block content %}
+<div id="docs" class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <p>
+        This page explains the process of building <a href="/" title="MusicBrainz Picard">MusicBrainz Picard</a> and
+        the installer for Windows. It only works for Picard 1.2 and newer, which no longer supports AmpliFIND.
+      </p>
+      <h1 id="requirements">Requirements</h1>
+
+      <h3 id="python">Python 2.7.x</h3>
+
+      <ul>
+        <li><a rel="nofollow" href="http://python.org/download/">http://python.org/download/</a>
+        </li>
+        <li>Download and install "Python 2.7.x Windows Installer"</li>
+        <li>Add C:\Python27 to&#160;%PATH%</li>
+      </ul>
+
+      <h3 id="pyqt">PyQt 4.10.x</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="http://www.riverbankcomputing.co.uk/software/pyqt/download">http://www.riverbankcomputing.co.uk/software/pyqt/download</a>
+        </li>
+        <li>Download and install "PyQt4-4.10.x-gpl-Py2.7-Qt4.8.x-x32.exe"</li>
+      </ul>
+
+      <h3 id="libdiscid">libdiscid</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="http://musicbrainz.org/doc/libdiscid">http://musicbrainz.org/doc/libdiscid</a>
+        </li>
+        <li>Download "libdiscid-0.6.1-win32.zip" and put "discid.dll" in your Windows\System32 folder</li>
+      </ul>
+
+      <h3 id="pip">Pip for Windows</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="https://sites.google.com/site/pydatalog/python/pip-for-windows">https://sites.google.com/site/pydatalog/python/pip-for-windows</a>
+        </li>
+        <li>Download to a location you find again (no installation)
+        </li>
+        <li>in Pip_Win:
+          <ul>
+            <li>
+              <code>pip install mutagen</code>for Mutagen (1.22 tested)
+            </li>
+            <li>
+              <code>pip install discid</code>for python-discid (1.1.x tested)
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3 id="gettext">gettext</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="http://gnuwin32.sourceforge.net/packages/gettext.htm">http://gnuwin32.sourceforge.net/packages/gettext.htm</a>
+        </li>
+        <li>Add the gettext folder to&#160;%PATH% (normally <i>C:\Programs\GnuWin32\bin</i>)
+        </li>
+      </ul>
+
+      <h3 id="visual-cpp">Visual C++ 2008 Express</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="http://go.microsoft.com/?linkid=7729279">http://go.microsoft.com/?linkid=7729279</a>
+        </li>
+        <li>Download and install "vcsetup.exe"
+        </li>
+      </ul>
+
+      <h3 id="chromaprint">Chromaprint</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="http://acoustid.org/chromaprint">http://acoustid.org/chromaprint</a>
+        </li>
+        <li>Download "chromaprint-fpcalc-1.1-win-i86.zip" and put "fpcalc.exe" to the Picard source code
+          directory
+        </li>
+      </ul>
+
+      <h1 id="running_picard_from_sources">Running Picard From Sources</h1>
+
+      <p>
+        Before you can run Picard from sources, you need to build the C extension. Start the VS console using
+        "Visual Studio 2008 Command Prompt", go to the source directory and run these commands:
+      </p>
+
+      <pre>
+        python setup.py build_ext -i
+        python setup.py build_locales -i</pre>
+
+      <p>
+        After you have done this, you can run Picard directly from the sources using:
+      </p>
+
+      <pre>
+        python tagger.py</pre>
+
+      <h1 id="building_the_installer">Building the Installer</h1>
+
+      <p>
+        To build the installer executable you need additional Tools:
+      </p>
+
+      <h3 id="py2exe">py2exe 0.6.9</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/">http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/</a>
+        </li>
+        <li>Download and install "py2exe-0.6.9.win32-py2.7.exe"
+        </li>
+      </ul>
+
+      <h3 id="nsis">NSIS 2.46</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="http://nsis.sourceforge.net/Download">http://nsis.sourceforge.net/Download</a>
+        </li>
+        <li>Download and install "nsis-2.46-setup.exe"
+        </li>
+      </ul>
+
+      <p>
+        Then you need to copy msvcr90.dll and msvcp90.dll from "C:\Program Files\Microsoft Visual Studio 9.0\VC\redist\x86\Microsoft.VC90.CRT"
+        to the source code directory, so that py2exe can find them. You also need copy discid.dll (libdiscid)
+        to the picard source.
+      </p>
+      <p>
+        Then you can build the installer using this command:
+      </p>
+      <pre>
+        python setup.py bdist_nsis</pre>
+
+      <p>
+        The setup is installer\picard-setup-1.x.exe and an executable for your system is dist\picard.exe, which
+        you can use to create a desktop shortcut.
+      </p>
+
+      <h1 id="known_issues">Known Issues</h1>
+      <p>
+        It is possible that the resulting picard.exe does not show the proper file icon. This is probably a bug
+        of py2exe on Vista. You can fix the icon with the tool
+        <a rel="nofollow" href="http://angusj.com/resourcehacker/">Resource Hacker</a> or any other tool, that
+        can edit the resources in executables.
+      </p>
+
+    </div>
+
+    <div class="col-md-4">
+      <div id="sidebar" class="hidden-xs">
+        <ul class="nav" data-spy="affix" data-offset-top="200">
+          <li class="active">
+            <a href="#requirements">Requirements</a>
+            <ul class="nav">
+              <li><a href="#python">Python 2.7.x</a></li>
+              <li><a href="#pyqt">PyQt 4.10.x</a></li>
+              <li><a href="#libdiscid">libdiscid</a></li>
+              <li><a href="#pip">Pip for Windows</a></li>
+              <li><a href="#gettext">gettext</a></li>
+              <li><a href="#visual-cpp">Visual C++ 2008 Express</a></li>
+              <li><a href="#chromaprint">Chromaprint</a></li>
+            </ul>
+          </li>
+          <li><a href="#running_picard_from_sources">Running Picard From Sources</a></li>
+          <li>
+            <a href="#building_the_installer">Building the Installer</a>
+            <ul class="nav">
+              <li><a href="#py2exe">py2exe 0.6.9</a></li>
+              <li><a href="#nsis">NSIS 2.46</a></li>
+            </ul>
+          </li>
+          <li><a href="#known_issues">Known Issues</a></li>
+        </ul>
+        <!-- <a class="back-to-top" href="#top"> Back to top </a> -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
