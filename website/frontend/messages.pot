@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-10-20 22:32+0200\n"
+"POT-Creation-Date: 2014-12-04 15:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -160,6 +160,8 @@ msgstr ""
 #: website/frontend/templates/downloads.html:86
 #: website/frontend/templates/downloads.html:134
 #: website/frontend/templates/downloads.html:227
+#: website/frontend/templates/downloads.html:242
+#: website/frontend/templates/plugins.html:34
 msgid "Download"
 msgstr ""
 
@@ -179,6 +181,7 @@ msgstr ""
 
 #: website/frontend/templates/downloads.html:45
 #: website/frontend/templates/downloads.html:96
+#: website/frontend/templates/downloads.html:237
 msgid "occasionally unstable"
 msgstr ""
 
@@ -228,7 +231,7 @@ msgstr ""
 msgid "Picard <strong>Source Code</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:242
+#: website/frontend/templates/downloads.html:257
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
@@ -314,19 +317,19 @@ msgid ""
 "{urlrepo|repository}."
 msgstr ""
 
-#: website/frontend/templates/plugins.html:18
+#: website/frontend/templates/plugins.html:19
 msgid "Name"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:19
+#: website/frontend/templates/plugins.html:20
 msgid "Version"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:20
+#: website/frontend/templates/plugins.html:21
 msgid "Description"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:21
+#: website/frontend/templates/plugins.html:22
 msgid "Author(s)"
 msgstr ""
 

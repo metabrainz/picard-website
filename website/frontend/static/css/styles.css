@@ -5266,6 +5266,9 @@ a :focus {
   outline: none !important;
   text-decoration: underline;
 }
+a.btn-primary:visited {
+  color: #ffffff;
+}
 .navbar {
   margin: 0px;
   border-width: 0 0 5px;
