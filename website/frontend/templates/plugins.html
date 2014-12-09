@@ -13,12 +13,14 @@
             <col width="100px" name="Version"/>
             <col width="500px" name="Description"/>
             <col width="150px" name="Author"/>
+            <col width="100px" name="Download"/>
             <thead>
               <tr>
                 <th class="text-center">{{ _("Name") }}</th>
                 <th class="text-center">{{ _("Version") }}</th>
                 <th class="text-center">{{ _("Description") }}</th>
                 <th class="text-center">{{ _("Author(s)") }}</th>
+                <th class="text-center"></th>
               </tr>
             </thead>
             <tbody>
@@ -28,6 +30,9 @@
               <td>{{ plugin["version"] }}</td>
               <td>{{ plugin["description"] | safe }}</td>
               <td>{{ plugin["author"] }}</td>
+              <td class="text-center">
+                <a class="btn btn-primary btn-sm" href="/api/v1/download?id={{ id }}">{{ _("Download") }}</a>
+              </td>
             </tr>
             {% endfor %}
             </tbody>
