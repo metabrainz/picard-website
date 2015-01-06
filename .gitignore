@@ -50,3 +50,6 @@ coverage.xml
 
 # Translations
 *.mo
+
+# OS X crap
+.DS_Store
