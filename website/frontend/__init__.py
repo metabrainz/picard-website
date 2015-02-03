@@ -35,6 +35,9 @@ def create_app():
     from website.expand import expand
     app.jinja_env.filters['expand'] = expand
 
+    from website.nbsp_list import nbsp_list
+    app.jinja_env.filters['nbsp_list'] = nbsp_list
+
     # Blueprints
     from views import frontend_bp
     from views.changelog import changelog_bp
