@@ -72,7 +72,7 @@
       </ul>
       <div id="language-selector" class="btn-group dropup pull-right">
         <button type="button" class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
-          <span class="fa fa-language"></span> {{ _('Language') }} <span class="caret"></span>
+          {{ _('Language') }} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
           {% for language in config.LANGUAGES|dictsort(false, 'value') %}
