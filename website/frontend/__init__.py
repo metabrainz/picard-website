@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, url_for
 
 import os
 
@@ -49,5 +49,17 @@ def create_app():
     app.register_blueprint(plugins_bp, url_prefix='/plugins')
     app.register_blueprint(docs_bp, url_prefix='/docs')
     app.register_blueprint(api_bp, url_prefix='/api')
+
+    @app.context_processor
+    def override_url_for():
+        return dict(url_for=dated_url_for)
+
+    def dated_url_for(endpoint, **values):
+        if endpoint == 'static':
+            filename = values.get('filename', None)
+            if filename:
+                file_path = os.path.join(app.static_folder, filename)
+                values['v'] = int(os.stat(file_path).st_mtime)
+        return url_for(endpoint, **values)
 
     return app
