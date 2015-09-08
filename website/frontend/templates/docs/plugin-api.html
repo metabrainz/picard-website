@@ -7,7 +7,17 @@
     <div class="col-md-8">
       <h1 id="metadata_processors">Metadata Processors</h1>
 
-      <p>MusicBrainz metadata can be post-processed at two levels, album and track.</p>
+      <p>
+        MusicBrainz metadata can be post-processed at two levels,
+        album and track. The types of the arguments passed to the processor
+        functions in the following examples are as follows:
+        <ul>
+          <li>tagger: <code>picard.tagger.Tagger</code></li>
+          <li>metadata: <code>picard.metadata.Metadata</code></li>
+          <li>release: <code>picard.webservice.XmlNode</code></li>
+          <li>track: <code>picard.webservice.XmlNode</code></li>
+        </ul>
+      </p>
 
       <h3 id="album">Album metadata example:</h3>
       <pre>
@@ -67,6 +77,8 @@
         To define new
         <a href="/docs/scripting/" title="Picard Qt/Scripting">tagger script</a> function use
         <code>register_script_function(function, name=None)</code>from module <code>picard.script</code>.
+        <code>parser</code> is an instance of <code>picard.script.ScriptParser</code>, the rest of the
+        arguments passed to it are the arguments from the function call in the tagger script.
       </p>
       <p>Example:</p>
       <pre>
