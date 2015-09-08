@@ -18,7 +18,7 @@
       from picard.metadata import register_album_metadata_processor
       import re
 
-      def remove_discnumbers(metadata, release):
+      def remove_discnumbers(tagger, metadata, release):
           matches = re.search(r&quot;\(disc (\d+)\)&quot;, metadata[&quot;album&quot;])
           if matches:
               metadata[&quot;discnumber&quot;] = matches.group(1)
@@ -35,7 +35,7 @@
       from picard.metadata import register_track_metadata_processor
       import re
 
-      def remove_featartists(metadata, release, track):
+      def remove_featartists(tagger, metadata, release, track):
           metadata[&quot;title&quot;] = re.sub(r&quot;\(feat. [^)]*\)&quot;, &quot;&quot;, metadata[&quot;title&quot;])
 
       register_track_metadata_processor(remove_featartists)</pre>
