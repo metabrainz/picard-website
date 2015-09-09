@@ -7,7 +7,17 @@
     <div class="col-md-8">
       <h1 id="metadata_processors">Metadata Processors</h1>
 
-      <p>MusicBrainz metadata can be post-processed at two levels, album and track.</p>
+      <p>
+        MusicBrainz metadata can be post-processed at two levels,
+        album and track. The types of the arguments passed to the processor
+        functions in the following examples are as follows:
+        <ul>
+          <li>tagger: <code>picard.tagger.Tagger</code></li>
+          <li>metadata: <code>picard.metadata.Metadata</code></li>
+          <li>release: <code>picard.webservice.XmlNode</code></li>
+          <li>track: <code>picard.webservice.XmlNode</code></li>
+        </ul>
+      </p>
 
       <h3 id="album">Album metadata example:</h3>
       <pre>
@@ -18,7 +28,7 @@
       from picard.metadata import register_album_metadata_processor
       import re
 
-      def remove_discnumbers(metadata, release):
+      def remove_discnumbers(tagger, metadata, release):
           matches = re.search(r&quot;\(disc (\d+)\)&quot;, metadata[&quot;album&quot;])
           if matches:
               metadata[&quot;discnumber&quot;] = matches.group(1)
@@ -35,7 +45,7 @@
       from picard.metadata import register_track_metadata_processor
       import re
 
-      def remove_featartists(metadata, release, track):
+      def remove_featartists(tagger, metadata, release, track):
           metadata[&quot;title&quot;] = re.sub(r&quot;\(feat. [^)]*\)&quot;, &quot;&quot;, metadata[&quot;title&quot;])
 
       register_track_metadata_processor(remove_featartists)</pre>
@@ -65,8 +75,11 @@
 
       <p>
         To define new
-        <a href="/docs/scripting/" title="Picard Qt/Scripting">tagger script</a> function use
-        <code>register_script_function(function, name=None)</code>from module <code>picard.script</code>.
+        <a href="/docs/scripting/" title="Picard Qt/Scripting">tagger script</a> functions use
+        <code>register_script_function(function, name=None)</code> from the <code>picard.script</code>
+        module.
+        <code>parser</code> is an instance of <code>picard.script.ScriptParser</code>, the rest of the
+        arguments passed to it are the arguments from the function call in the tagger script.
       </p>
       <p>Example:</p>
       <pre>
