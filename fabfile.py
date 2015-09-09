@@ -94,3 +94,24 @@ def test(coverage=True):
     else:
         local("nosetests --exe")
 
+
+def reload():
+    """Send HUP signal to uwsgi process to reload website (uwsgi server only)"""
+    pidfile = '/tmp/picard.uwsgi.pid'
+    try:
+        with open(pidfile, 'rb') as f:
+            pid = int(f.read().strip())
+    except IOError as err:
+        from errno import ENOENT
+        if err.errno != ENOENT:
+            abort(err)
+        else:
+            abort("Cannot find %s, is uwsgi running ?" % pidfile)
+    except ValueError as err:
+        abort("Cannot read a valid pid from %s (%s) !" % (pidfile, err))
+    except Exception as err:
+        abort(err)
+    else:
+        result = local("kill -HUP %d" % pid)
+        if result.succeeded:
+            print(green("HUP signal sent to uwsgi process", bold=True))
