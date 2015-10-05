@@ -475,6 +475,15 @@ $unset(writer)
         <b><i>Options</i> &#8594; <i>Options...</i> &#8594; <i>File naming</i></b>
       </p>
 
+      <h3 id="disc_number_if_more_than_one_disc">Disc number only on multi-disc releases</h3>
+
+      <p>
+        Use the following snippet to insert the disc number in the new
+        path if the release contains more than 1 medium.
+      </p>
+
+      <pre>$if($gt(%totaldiscs%,1),Disc $num(%discnumber%,2))</pre>
+
       <h3 id="lower_case_filenames_with_underscores">Lower case filenames with underscores</h3>
 
       <pre>$lower($replace(%albumartist%/%album%/$num(%tracknumber%,2)&#160;%title%, ,_))</pre>
@@ -552,6 +561,7 @@ $left(%album%,30) \(%releasestatus%-%releasetype%\)-$if($gt(%totaldiscs%,1),$if2
           <li>
             <a href="#file_naming_examples">File Naming Examples</a>
             <ul class="nav">
+              <li><a href="#disc_number_if_more_than_one_disc">Disc number only on multi-disc releases</a>
               <li><a href="#lower_case_filenames_with_underscores">Lower case filenames with underscores</a></li>
               <li><a href="#use_a_different_naming_pattern_for_nats">Use a different naming pattern for NATs</a></li>
               <li><a href="#organize_by_alphabetical_folders_excluding_leading_the">Organize by alphabetical folders</a></li>
