@@ -1,5 +1,6 @@
 a
 {
+   font-weight: 700;
    &:visited
    {
       color: darken(@link-color, 20%);
@@ -21,24 +22,22 @@ a
 .navbar
 {
    margin: 0px;
-   border-width: 0 0 5px;
+   border-color: #fff;
    .navbar-brand
    {
       font-size: 20px;
    }
+   .nav{
+      border-bottom: 2px solid @mb-purple;
+   }
 }
+
 
 .jumbotron {
    padding: 15px;
-   color: #FFF;
-   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), 0px 0px 30px rgba(0, 0, 0, 0.075);
-   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25) inset, 0px -3px 7px rgba(0, 0, 0, 0.25) inset;
-   background: linear-gradient(0deg, #3A3756 0%, #736DAB 100%) repeat scroll 0% 0% transparent;
+   color: #46433a;
 }
 
-.jumbotron.masthead {
-   background: linear-gradient(0deg, #000 0%, #736DAB 100%) repeat scroll 0% 0% transparent;
-}
 
 .footer
 {

@@ -72,23 +72,27 @@
 @fa-font-path: "/static/fonts/";
 
 // Navbar design blatantly copied from CritiqueBrainz
-@mb-orange: #ffba58;
-@mb-purple: #736dab;
+@mb-orange: #EB743B;
+@mb-purple: #771B85;
 
 @link-color: #6600ff;
 @link-hover-color: #fc6714;
 
 // Navbar
-@navbar-default-bg: @mb-purple;
-@navbar-default-border: @mb-orange;
+@navbar-default-bg: #fff;
+@navbar-default-border: @mb-purple;
 
-@navbar-default-link-color: darken(#fff, 10%);
+@navbar-default-link-color: @mb-purple;
+@navbar-default-link-hover-bg: @mb-purple;
 @navbar-default-link-hover-color: #fff;
-@navbar-default-link-active-color: darken(@mb-orange, 5%);
+@navbar-default-link-active-bg: @mb-purple;
+@navbar-default-link-active-color: #fff;
 // @navbar-default-link-active-bg: darken(#000, 10%);
+@dropdown-link-hover-color: #fff;
+@dropdown-link-hover-bg: @mb-purple;
 
-@navbar-default-brand-color: #fff;
-@navbar-default-brand-hover-color: @navbar-default-link-hover-color;
+@navbar-default-brand-color: @mb-purple;
+@navbar-default-brand-hover-bg: @navbar-default-link-hover-color;
 
 @navbar-default-toggle-icon-bar-bg: #fff;
 
