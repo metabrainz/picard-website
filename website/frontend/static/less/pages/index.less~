@@ -51,7 +51,7 @@
       list-style: none;
 
       a {
-         color: darken(#fff, 45%);
+         color: darken(#fff, 35%);
       }
 
       li {

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ _('Official website for MusicBrainz Picard, a cross-platform music tagger written in Python.') }}">
     <meta name="author" href="{{ url_for('humans.show_humans') }}">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/picard-icon.png') }}">
+    <link rel="icon" type="image/svg" href="{{ url_for('static', filename='img/picard-icon.svg') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>{% block title %}{% if page_title is defined %}{{page_title}} - {%endif%}{{ _('MusicBrainz Picard') }}{% endblock %}</title>
   </head>
@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ url_for('frontend.show_index') }}">{{ _('MusicBrainz Picard') }}</a>
+          <a class="navbar-brand" href="{{ url_for('frontend.show_index') }}"><img src="{{ url_for('static', filename='img/picard-navbar-icon.svg') }}" alt="{{ _('MusicBrainz Picard') }}"></a>
         </div>
         <div class="navbar-collapse collapse">
           {% set active_page = active_page | default("index") -%}
