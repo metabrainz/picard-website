@@ -3,7 +3,6 @@
 {% set page_title = _("Downloads") %}
 {% block content %}
     <div class="container">
-      <div class="col-md-8">
         <p>
           {{ _("Picard is available for all major platforms. Just download and start the installer. It's that easy.") }}
         </p>
@@ -269,6 +268,5 @@
         {% autoescape false %}
         <p>{{ _("This page lists the most recent downloads. If you're looking for older versions of Picard, {url|browse our FTP server}.")|expand({'url': 'http://ftp.musicbrainz.org/pub/musicbrainz/picard/?C=M;O=D'}) }}</p>
         {% endautoescape %}
-      </div>
 {% endblock %}
     </div><!-- /.container -->
