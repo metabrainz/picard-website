@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-7">
           <h1>
-            <img class="picard-icon" src="{{ url_for('static', filename='img/picard-icon.png') }}" alt="Picard icon">
+            <img class="picard-icon" src="{{ url_for('static', filename='img/picard-icon-large.svg') }}" alt="Picard icon">
             {{ _("MusicBrainz Picard") }}
           </h1>
           <p>
@@ -31,8 +31,8 @@
         </div>
       </div>
     </div>
-
     <div class="container">
+      <hr />
       <div class="features">
         <div class="row">
           <div class="col-md-4">
@@ -97,8 +97,8 @@
         </div>
 
       </div>
-    </div>
 {% endblock %}
+    </div>
 
 {%- block scripts %}
 {{ super() }}
