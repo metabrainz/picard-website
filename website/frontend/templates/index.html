@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="jumbotron masthead">
-      <div class="row">
-        <div class="col-md-7">
+<div class="container">
+    <div id="homepage">
+      <div id="header" class="row">
+        <div class="col-md-8 clearfix">
           <h1>
-            <img class="picard-icon" src="{{ url_for('static', filename='img/picard-icon.png') }}" alt="Picard icon">
+            <img src="{{ url_for('static', filename='img/picard-logo-big.png') }}" alt="Picard logo">
             {{ _("MusicBrainz Picard") }}
           </h1>
           <p>
           {{ _("Picard is a cross-platform music tagger written in Python.") }}
           </p>
+		</div>
           <a id="download-btn" href="{{ url_for('frontend.show_downloads') }}" class="btn download-btn btn-primary btn-large">
             <i class="fa"></i>
             <span class="download-title">
@@ -25,14 +27,11 @@
             <a href="{{ url_for('frontend.show_downloads') }}">{{ _("Other Downloads") }}</a>
             </li>
           </ul>
-        </div>
-        <div class="col-md-5">
-          <img id="screenshot" class="img-responsive img-rounded" src="{{ url_for('static', filename='img/picard_demo_500.png') }}" alt="{{ _("Screenshot") }}">
-        </div>
       </div>
     </div>
+	
+	<hr />
 
-    <div class="container">
       <div class="features">
         <div class="row">
           <div class="col-md-4">
@@ -97,8 +96,8 @@
         </div>
 
       </div>
-    </div>
 {% endblock %}
+</div>
 
 {%- block scripts %}
 {{ super() }}
