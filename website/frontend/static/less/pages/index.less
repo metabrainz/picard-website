@@ -9,6 +9,7 @@
    h1 {
       font-size: 4em;
       width: 100%;
+	  font-weight: 500;
    }
 
    p {
@@ -18,17 +19,12 @@
 
    .download-btn {
       color: #fff;
-
       margin-top: 20px;
       padding: 20px 25px;
       font-size: 25px;
       border: 0px none;
       border-radius: 6px;
-      box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1) inset, 0px 1px 5px rgba(0, 0, 0, 0.25);
-
-      background-repeat: repeat-x; /* Repeat the gradient */
-      background-color: #FF4C2A;
-      background-image: linear-gradient(to bottom, #FFBA58, #FF4C2A);
+      background-color: #EB743B;
 
       .download-title {
          font-size: 25px;
@@ -41,13 +37,12 @@
       }
 
       &:hover {
-         background-position: 0 -25px;
+         background-color: #EE8B5B;
       }
 
       &:active {
          background-image: none;
          background-color: #04C;
-         box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
       }
    }
 
@@ -57,7 +52,7 @@
       list-style: none;
 
       a {
-         color: darken(#fff, 35%);
+         color: darken(#fff, 45%);
       }
 
       li {
@@ -68,6 +63,10 @@
 
    #screenshot {
       display: inline;
+   }
+   .picard-icon{
+      height: 115px;
+      width: 115px;
    }
 }
 
