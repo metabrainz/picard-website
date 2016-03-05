@@ -415,25 +415,23 @@
 
       <h3 id="artist_names">Artist names</h3>
 
-      <pre>$if($search(%album%,(feat. conductor)), $set(artist,%orchestra%))</pre>
+      <pre><code class="taggerscript">$if($search(%album%,(feat. conductor)), $set(artist,%orchestra%))</code></pre>
       <ul>
         <li><i>Stupid assumption that all classical albums have "feat. conductor" in the title, but it shows the idea.&#160;:)</i></li>
       </ul>
 
       <h3 id="live_tracks_on_live_albums">Live tracks on live albums</h3>
 
-      <pre>$if($and($eq(%releasetype%,live),$not($in(%title%,\(live\)))),$set(title,%title% \(live\)))</pre>
+      <pre><code class="taggerscript">$if($and($eq(%releasetype%,live),$not($in(%title%,\(live\)))),$set(title,%title% \(live\)))</code></pre>
 
       <h3 id="remove_feat_from_track_titles">Remove "feat." from track titles</h3>
 
-      <pre>$set(title,$rreplace(%title%,\\s\\\(feat. [^\)]+\\\),))</pre>
+      <pre><code class="taggerscript">$set(title,$rreplace(%title%,\\s\\\(feat. [^\)]+\\\),))</code></pre>
 
       <h3 id="convert_triple-dot_to_ellipsis">Convert triple-dot to ellipsis</h3>
 
-      <pre>
-$set(title,$replace(%title%,...,…))
-$set(album,$replace(%album%,...,…))
-</pre>
+      <pre><code class="taggerscript">$set(title,$replace(%title%,...,…))
+$set(album,$replace(%album%,...,…))</code></pre>
 
       <p>
         This one is useful for people concerned about correct typography and also fixes one problem on
@@ -447,13 +445,13 @@ $set(album,$replace(%album%,...,…))
         By default, Picard marks various-artist compilations with an album artist called "Various Artists".
         Even if you don't have anything by <a href="http://musicbrainz.org/artist/4e46dd54-81a6-4a75-a666-d0e447861e3f"
         class="extiw" title="artist:4e46dd54-81a6-4a75-a666-d0e447861e3f">Torsten Pröfrock</a>, it still
-        means that you player will sort your comps between Vangelis and VCR instead of down at the end,
+        means that your player will sort your comps between Vangelis and VCR instead of down at the end,
         which you may not want.
       </p>
       <p>
         This is easy to fix:
       </p>
-      <pre>$if($and($eq(%compilation%,1), $eq(%albumartist%,Various Artists)), $unset(albumartist) $unset(albumartistsort))</pre>
+      <pre><code class="taggerscript">$if($and($eq(%compilation%,1), $eq(%albumartist%,Various Artists)), $unset(albumartist) $unset(albumartistsort))</code></pre>
 
       <h3 id="merge_writers_into_both_composer_and_lyricist_tags">Merge writers into both composer and lyricist tags</h3>
 
@@ -463,11 +461,9 @@ $set(album,$replace(%album%,...,…))
       <p>
         Suppose you want to add anyone involved in writing to both the composer and lyricist tags.
       </p>
-      <pre>
-$copymerge(composer,writer)
+      <pre><code class="taggerscript">$copymerge(composer,writer)
 $copymerge(lyricist,writer)
-$unset(writer)
-</pre>
+$unset(writer)</code></pre>
 
       <h1 id="file_naming_examples">File Naming Examples</h1>
 
@@ -482,19 +478,19 @@ $unset(writer)
         path if the release contains more than 1 medium.
       </p>
 
-      <pre>$if($gt(%totaldiscs%,1),Disc $num(%discnumber%,2))</pre>
+      <pre><code class="taggerscript">$if($gt(%totaldiscs%,1),Disc $num(%discnumber%,2))</code></pre>
 
       <h3 id="lower_case_filenames_with_underscores">Lower case filenames with underscores</h3>
 
-      <pre>$lower($replace(%albumartist%/%album%/$num(%tracknumber%,2)&#160;%title%, ,_))</pre>
+      <pre><code class="taggerscript">$lower($replace(%albumartist%/%album%/$num(%tracknumber%,2)&#160;%title%, ,_))</code></pre>
 
       <h3 id=".28year.29_only_if_available">(Year) only if available</h3>
 
-      <pre>$if(%date%,\($left(%date%,4)\))</pre>
+      <pre><code class="taggerscript">$if(%date%,\($left(%date%,4)\))</code></pre>
 
       <h3 id="use_a_different_naming_pattern_for_nats">Use a different naming pattern for NATs</h3>
 
-      <pre>$if($eq([non-album tracks],%album%),[non-album tracks]/%tracknumber%.&#160;%artist% - ,%artist% - $if(%date%, $left(%date%,4) )-&#160;%album%/%tracknumber%.)%title%</pre>
+      <pre><code class="taggerscript">$if($eq([non-album tracks],%album%),[non-album tracks]/%tracknumber%.&#160;%artist% - ,%artist% - $if(%date%, $left(%date%,4) )-&#160;%album%/%tracknumber%.)%title%</code></pre>
       <p>
         Result:
       </p>
@@ -523,8 +519,7 @@ $unset(writer)
       <ul>
         <li>Various Artist/Year - Album Name (type-status)/Album (type-status)-disc#-Track-Song Title</li>
       </ul>
-      <pre>
-$if($eq(%musicbrainz_albumartistid%,89ad4ac3-39f7-470e-963a-56509c546377),
+      <pre><code class="taggerscript">$if($eq(%musicbrainz_albumartistid%,89ad4ac3-39f7-470e-963a-56509c546377),
 
 $left($if2(%albumartistsort%,&#160;%artistsort%),30)/
 $if(%date%,$left(%date%,4)) - $left(%album%,40) \(%releasestatus%-%releasetype%\)/
@@ -536,8 +531,7 @@ $upper($firstalphachar($if2(%albumartistsort%,&#160;%artistsort%),#))
 $if(%date%,$left(%date%,4)) - $left(%album%,40) \(%releasestatus%-%releasetype%\)/
 $left(%album%,30) \(%releasestatus%-%releasetype%\)-$if($gt(%totaldiscs%,1),$if2(%media%,CD)%discnumber%-,)$num(%tracknumber%,2)-$left(%title%,30)
 
-)
-</pre>
+)</code></pre>
     </div>
 
     <div class="col-md-4">
@@ -571,5 +565,11 @@ $left(%album%,30) \(%releasestatus%-%releasetype%\)-$if($gt(%totaldiscs%,1),$if2
       </div>
     </div>
   </div>
-{% endblock %}
 </div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/highlight.pack.js') }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{% endblock %}
