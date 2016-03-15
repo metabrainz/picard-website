@@ -17,7 +17,7 @@
 
 
 @import "theme/theme.less";
-@import "highlightjs/default.less";
+@import "highlightjs/picard.less";
 
 @import "pages/index.less";
 @import "pages/downloads.less";
@@ -66,9 +66,5 @@ pre {
    counter-reset: line-numbering;
    padding-left: 5px;
    border-radius: 3px;
-   word-break: break-word;
-
-   > code.hljs {
-     background-color: transparent;
-   }
+   word-break: normal;
 }
