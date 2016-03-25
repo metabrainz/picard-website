@@ -484,7 +484,7 @@ $unset(writer)</code></pre>
 
       <pre><code class="taggerscript">$lower($replace(%albumartist%/%album%/$num(%tracknumber%,2)&#160;%title%, ,_))</code></pre>
 
-      <h3 id=".28year.29_only_if_available">(Year) only if available</h3>
+      <h3 id="year_only_if_available">(Year) only if available</h3>
 
       <pre><code class="taggerscript">$if(%date%,\($left(%date%,4)\))</code></pre>
 
@@ -557,6 +557,7 @@ $left(%album%,30) \(%releasestatus%-%releasetype%\)-$if($gt(%totaldiscs%,1),$if2
             <ul class="nav">
               <li><a href="#disc_number_if_more_than_one_disc">Disc number only on multi-disc releases</a>
               <li><a href="#lower_case_filenames_with_underscores">Lower case filenames with underscores</a></li>
+              <li><a href="#year_only_if_available">(Year) only if available</a></li>
               <li><a href="#use_a_different_naming_pattern_for_nats">Use a different naming pattern for NATs</a></li>
               <li><a href="#organize_by_alphabetical_folders_excluding_leading_the">Organize by alphabetical folders</a></li>
             </ul>
