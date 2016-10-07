@@ -1,0 +1,25 @@
+.git
+
+# Docker configuration
+/docker
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+env
+venv
+/build
+
+# Node
+node_modules
+
+# Logs
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test results
+htmlcov
+.coverage
