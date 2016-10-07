@@ -1,0 +1,9 @@
+# Docker Compose file for testing
+version: "2"
+services:
+
+  web_test:
+    build:
+      context: ..
+      dockerfile: ./Dockerfile
+    command: py.test --junitxml=/data/test_report.xml --cov-report xml:/data/coverage.xml
