@@ -13,9 +13,14 @@ def create_app():
     app.debug = True
 
     # Configuration files
-    import website.default_config
-    app.config.from_object(website.default_config)
-    app.config.from_object('website.config')
+    app.config.from_pyfile(os.path.join(
+        os.path.dirname(os.path.realpath(__file__)),
+        '..', 'default_config.py'
+    ))
+    app.config.from_pyfile(os.path.join(
+        os.path.dirname(os.path.realpath(__file__)),
+        '..', 'config.py'
+    ), silent=True)
 
     # Error handling
     import errors

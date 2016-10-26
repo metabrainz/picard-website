@@ -82,19 +82,6 @@ def deploy():
     compile_styling()
 
 
-def test(coverage=True):
-    """Run all tests.
-
-    Code coverage report will be located in cover/index.html file.
-    """
-
-    if coverage:
-        local("nosetests --exe --with-coverage --cover-package=website --cover-erase --cover-html")
-        print(yellow("Coverage report can be found in cover/index.html file.", bold=True))
-    else:
-        local("nosetests --exe")
-
-
 def reload():
     """Send HUP signal to uwsgi process to reload website (uwsgi server only)"""
     pidfile = '/tmp/picard.uwsgi.pid'
