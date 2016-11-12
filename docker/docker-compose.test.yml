@@ -6,4 +6,5 @@ services:
     build:
       context: ..
       dockerfile: ./Dockerfile
+    network_mode: bridge
     command: py.test --junitxml=/data/test_report.xml --cov-report xml:/data/coverage.xml
