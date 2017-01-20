@@ -18,6 +18,11 @@ class ViewsTestCase(FrontendTestCase):
         response = self.client.get("/downloads/")
         self.assert200(response)
 
+    def test_quick_start(self):
+        "Test /quick-start/"
+        response = self.client.get("/quick-start/")
+        self.assert200(response)
+
     def test_home_page_french_cookie(self):
         "Test / in french (cookie)"
         headers = {'Cookie': 'language=fr'}

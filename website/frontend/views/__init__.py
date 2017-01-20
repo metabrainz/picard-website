@@ -17,3 +17,7 @@ def show_index():
 @frontend_bp.route('/downloads/')
 def show_downloads():
     return render_template('downloads.html')
+
+@frontend_bp.route('/quick-start/')
+def show_quick_start():
+    return render_template('quick-start.html')
