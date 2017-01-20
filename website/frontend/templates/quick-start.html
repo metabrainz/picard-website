@@ -10,57 +10,63 @@
         <a href="/" title="MusicBrainz Picard">MusicBrainz Picard</a>.
       </p>
       <ol class="guide">
-        <li>Click <b>View</b>, and then click <b>File Browser</b>.</li>
+        <li>Add your files using the <b>Add Files</b> or <b>Add Folder</b> toolbar buttons. For ease of use it is recommended to use the <b>File Browser</b> to manage file system interactions. Click on the <b>View</b> menu and then select <b>File Browser</b>
+          <a href="{{ url_for('static', filename='img/quick_start-01.png') }}">
+            <img alt="quick_start-01.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-01.png') }}" />
+          </a>
+        </li>
 
         <li>
           Drag a folder to the <b>Unmatched Files</b> folder in the right-hand pane.
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_1.png">
-            <img alt="Picard2011 1.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/6/6c/Picard2011_1.png" />
+          <a href="{{ url_for('static', filename='img/quick_start-02.png') }}">
+            <img alt="quick_start-02.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-02.png') }}" />
           </a>
         </li>
 
         <li>
           Wait for Picard to process the files (the names will turn from grey to black) and then click the <b>Cluster</b> toolbar
           button to cluster files into album clusters.
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_2.png">
-            <img alt="Picard2011 2.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/f/f7/Picard2011_2.png" />
+          <a href="{{ url_for('static', filename='img/quick_start-03.png') }}">
+            <img alt="quick_start-03.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-03.png') }}" />
           </a>
         </li>
 
         <li>
           Select a clustered album and click the <b>Lookup</b> toolbar button to look the cluster up. Depending
           on your previous metadata, album will show up in the right-hand pane. If an album shows up,
-          go to step 7. Since you are a new Picard user, we recommend that you read the steps in between
+          go to step 8. Since you are a new Picard user, we recommend that you read the steps in between
           as well.
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_3.png">
-            <img alt="Picard2011 3.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/4/42/Picard2011_3.png" />
+          <a href="{{ url_for('static', filename='img/quick_start-04.png') }}">
+            <img alt="quick_start-04.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-04.png') }}" />
           </a>
         </li>
 
         <li>
-          If nothing happened when you clicked the <b>Lookup</b> toolbar button, click the <b>Lookup</b> button
-          in the bottom panel. Your default browser will open and allow you to find the right album manually.
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_4.png">
-            <img alt="Picard2011 4.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/f/fe/Picard2011_4.png" />
+          Alternatively, you can also try to use the <b>Scan</b> toolbar button to lookup files using their <b>AcoustID</b>, which is a unique finger-print associated with each recording.
+          <a href="{{ url_for('static', filename='img/quick_start-05.png') }}">
+            <img alt="quick_start-05.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-05.png') }}" />
           </a>
         </li>
 
         <li>
-          Pay attention to the amount of tracks in each album, and pick the one you have. Click the
-          <a href="http://wiki.musicbrainz.org/File:mblookup-tagger.png">
-            <img alt="mblookup-tagger.png" src="http://wiki.musicbrainz.org/-/images/3/39/mblookup-tagger.png" />
-          </a>icon.
-
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_5alt2.png">
-            <img alt="Picard2011 5alt2.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/4/45/Picard2011_5alt2.png"
-            />
+          If nothing happened when you clicked the <b>Lookup</b> or <b>Scan</b> toolbar button, click the <b>Lookup in Browser</b> button toolbar button. Your default browser will open and allow you to find the right album manually.
+          <a href="{{ url_for('static', filename='img/quick_start-06.png') }}">
+            <img alt="quick_start-06.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-06.png') }}" />
           </a>
+        </li>
+
+        <li>
+          Pay attention to the amount of tracks in each album, and pick the one you have. Click the green <b>TAGGER </b> button.
+          <a href="{{ url_for('static', filename='img/quick_start-07.png') }}">
+            <img alt="quick_start-07.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-07.png') }}" />
+          </a>
+
         </li>
 
         <li>
           Drag the clustered album onto the album that was just opened, if it didn't happen automatically.
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_6.png">
-            <img alt="Picard2011 6.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/8/8b/Picard2011_6.png" />
+          <a href="{{ url_for('static', filename='img/quick_start-08.png') }}">
+            <img alt="quick_start-08.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-08.png') }}" />
           </a>
         </li>
 
@@ -72,19 +78,15 @@
             a lot previous metadata to work with.
           </p>
 
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_7.png">
-            <img alt="Picard2011 7.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/4/41/Picard2011_7.png" />
+          <a href="{{ url_for('static', filename='img/quick_start-09.png') }}">
+            <img alt="Picard2011 7.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-09.png') }}" />
           </a>
 
           <p>
-            If this is the case, it's recommended to click a track and compare the metadata using the <b>Original Metadata</b> and <b>New Metadata</b>panels
-            at the bottom of picard window. If there is an incorrect match, simply drag &amp; drop the
+            If this is the case, it's recommended to click a track and compare the metadata using the <b>Original Values</b> and <b>New Values</b> at the bottom of picard window. If there is an incorrect match, simply drag &amp; drop the
             track to its correct spot.
           </p>
 
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_8alt.png">
-            <img alt="Picard2011 8alt.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/b/bc/Picard2011_8alt.png" />
-          </a>
         </li>
 
         <li>
@@ -92,14 +94,14 @@
             When you are satisfied with the matches, select the album you want to save and click on the <b>Save</b> toolbar
             button to save files.
           </p>
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_9.png">
-            <img alt="Picard2011 9.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/b/bc/Picard2011_9.png" />
+          <a href="{{ url_for('static', filename='img/quick_start-10.png') }}">
+            <img alt="quick_start-10.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-10.png') }}" />
           </a>
         </li>
         <li>
           A green check mark means the file is saved in its proper location.
-          <a href="http://wiki.musicbrainz.org/File:Picard2011_10.png">
-            <img alt="Picard2011 10.png" class="img-responsive img-thumbnail" src="http://wiki.musicbrainz.org/-/images/f/f3/Picard2011_10.png" />
+          <a href="{{ url_for('static', filename='img/quick_start-11.png') }}">
+            <img alt="quick_start-11.png" class="img-responsive img-thumbnail" src="{{ url_for('static', filename='img/quick_start-11.png') }}" />
           </a>
         </li>
       </ol>
