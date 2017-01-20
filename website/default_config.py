@@ -1,4 +1,4 @@
-PLUGINS_REPOSITORY = "./code/plugins"
+PLUGINS_REPOSITORY = "/code/plugins"
 PLUGINS_CACHE_TIMEOUT = 5 * 60
 
 CHANGELOG_URL = "https://raw.githubusercontent.com/musicbrainz/picard/master/NEWS.txt"
