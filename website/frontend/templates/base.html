@@ -27,11 +27,11 @@
           <ul class="nav navbar-nav">
             <li{% if active_page == 'downloads' %} class="active"{% endif %}><a href="{{ url_for('frontend.show_downloads') }}">{{ _("Downloads") }}</a></li>
             <li{% if active_page == 'plugins' %} class="active"{% endif %}><a href="{{ url_for('plugins.show_plugins') }}">{{ _("Plugins") }}</a></li>
+            <li{% if active_page == 'quick_start' %} class="active"{% endif %}><a href="{{ url_for('frontend.show_quick_start') }}">{{ _("Quick-Start") }}</a></li>
             <li class="dropdown {% if active_page == 'docs' %}active{% endif %}">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ _("Documentation") }}<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="{{ url_for('docs.show_pages', page='basics') }}">{{ _("Basics") }}</a></li>
-                <li><a href="{{ url_for('docs.show_pages', page='guide') }}">{{ _("How to Tag Files") }}</a></li>
                 <li><a href="{{ url_for('docs.show_pages', page='options') }}">{{ _("Options") }}</a></li>
                 <li><a href="{{ url_for('docs.show_pages', page='faq') }}">{{ _("FAQ") }}</a></li>
                 <li><a href="{{ url_for('docs.show_pages', page='troubleshooting') }}">{{ _("Troubleshooting") }}</a></li>
