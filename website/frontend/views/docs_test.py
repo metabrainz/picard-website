@@ -11,7 +11,7 @@ class ViewsTestCase(FrontendTestCase):
 
     def test_docs_subpage(self):
         "Test /docs/ valid sub-page"
-        response = self.client.get("/docs/guide/")
+        response = self.client.get("/docs/basics/")
         self.assert200(response)
 
     def test_docs_404(self):
