@@ -63,6 +63,7 @@ def plugins_generate():
     Clone or pull repository from GitHub and run generate.py script
     """
     repo = website.frontend.create_app().config['PLUGINS_REPOSITORY']
+    versions = website.frontend.create_app().config['PLUGIN_VERSIONS']
     if not os.path.isdir(repo):
         print(yellow("'%s' directory defined by PLUGINS_REPOSITORY doesn't exist" % repo))
         if confirm("Do you want to clone picard-plugins from GitHub?"):
@@ -72,8 +73,9 @@ def plugins_generate():
             abort('Aborting...')
     with lcd(repo):
         local("git pull")
-        local("python generate.py")
-        print(green("Plugins files have been generated successfully.", bold=True))
+        for version in versions:
+            local("python generate.py %s" % version)
+            print(green("Plugins files for version %s have been generated successfully." % version, bold=True))
 
 
 def deploy():

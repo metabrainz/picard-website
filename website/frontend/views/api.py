@@ -16,30 +16,30 @@ def plugins_repository(app):
     return app.config['PLUGINS_REPOSITORY']
 
 
-def plugins_json_file(app):
+def plugins_json_file(app, version):
     """Returns the file that contains json data"""
-    return os.path.join(plugins_repository(app), "plugins.json")
+    return os.path.join(plugins_repository(app), version, "plugins.json")
 
 
-def plugins_dir(app):
+def plugins_dir(app, version):
     """Returns the directory which contains plugin files"""
-    return os.path.join(plugins_repository(app), "plugins")
+    return os.path.join(plugins_repository(app), version)
 
 
-def load_json_data(app):
+def load_json_data(app, version):
     """Load JSON Data"""
-    key = 'plugins_json_data'
+    key = 'plugins_json_data_%s' % version
     data = app.cache.get(key)
     if data is None:
-        with open(plugins_json_file(app)) as fp:
+        with open(plugins_json_file(app, version)) as fp:
             data = json.load(fp)['plugins']
             app.cache.set(key, data,
                           timeout=app.config['PLUGINS_CACHE_TIMEOUT'])
     return data
 
 
-def _get_plugin(app, pid=None):
-    plugins = load_json_data(app)
+def _get_plugin(app, version, pid=None):
+    plugins = load_json_data(app, version)
     if pid:
         if pid in plugins:
             plugin = {'plugin': plugins[pid]}
@@ -51,50 +51,65 @@ def _get_plugin(app, pid=None):
     return make_response(jsonify(plugin), 200)
 
 
-def _download_plugin(app, pid):
-    plugins = load_json_data(current_app)
+def _download_plugin(app, version, pid):
+    plugins = load_json_data(current_app, version)
     if pid in plugins:
-        return send_from_directory(plugins_dir(current_app), pid + ".zip", as_attachment=True)
+        return send_from_directory(plugins_dir(current_app, version), pid + ".zip", as_attachment=True)
     else:
         return not_found(404)
+
+
+def valid_api_version(app, version):
+    return version in app.config['PLUGIN_VERSIONS']
 
 
 def not_found(error):
     return make_response(jsonify({'error': 'Plugin not found.'}), 404)
 
 
-@api_bp.route('/v1/', methods=['GET'])
-def api_root():
+def invalid_api_version(error):
+    return make_response(jsonify({'error': 'Invalid API version'}), 404)
+
+
+@api_bp.route('/<version>/', methods=['GET'])
+def api_root(version):
     """
     Shows info about our API
     """
-    return make_response(
-        jsonify({'message': 'The two endpoints currently available'
-                 ' are /api/v1/plugins and /api/v1/download'}), 200)
+    if valid_api_version(current_app, version):
+        return make_response(
+            jsonify({'message': 'The two endpoints currently available'
+                     ' are /api/%s/plugins and /api/%s/download' % (version, version)}), 200)
+    else:
+        return invalid_api_version(404)
 
 
-@api_bp.route('/v1/plugins/', methods=['GET'])
-def get_plugin():
+@api_bp.route('/<version>/plugins/', methods=['GET'])
+def get_plugin(version):
     """
     Lists data of a plugin
     """
+    if valid_api_version(current_app, version):
+        pid = request.args.get('id', None)
+        return _get_plugin(current_app, version, pid)
+    else:
+        return invalid_api_version(404)
 
-    pid = request.args.get('id', None)
-    return _get_plugin(current_app, pid)
 
-
-@api_bp.route('/v1/download/', methods=['GET'])
-def download_plugin():
+@api_bp.route('/<version>/download/', methods=['GET'])
+def download_plugin(version):
     """
     Serves files as a download attachment.
 
     Single files are served as is, multiple ones are zipped.
     """
-
-    pid = request.args.get('id', None)
-    if pid:
-        return _download_plugin(current_app, pid)
+    if valid_api_version(current_app, version):
+        pid = request.args.get('id', None)
+        if pid:
+            return _download_plugin(current_app, version, pid)
+        else:
+            return make_response(
+                jsonify({'error': 'Plugin id not specified.',
+                         'message': 'Correct usage: /api/v1/download?id=<id>'}), 400)
     else:
-        return make_response(
-            jsonify({'error': 'Plugin id not specified.',
-                     'message': 'Correct usage: /api/v1/download?id=<id>'}), 400)
+        return invalid_api_version(404)
