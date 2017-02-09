@@ -16,7 +16,7 @@ class ViewsTestCase(FrontendTestCase):
     # api
 
     def test_api_404(self):
-        response = self.client.get("/api/404")
+        response = self.client.get("/api/404/")
         self.assert404(response)
 
     def test_api_root(self):
@@ -30,7 +30,7 @@ class ViewsTestCase(FrontendTestCase):
     def test_api_v1_redirect(self):
         "Test /api/v1"
         response = self.client.get("/api/v1")
-        self.assertRedirects(response, url_for("api.api_root"))
+        self.assertRedirects(response, url_for("api.api_root", version='v1'))
 
     def test_api_v1(self):
         "Test /api/v1/"
@@ -44,7 +44,7 @@ class ViewsTestCase(FrontendTestCase):
     def test_api_v1_plugins(self):
         "Test plugins list redirection"
         response = self.client.get("/api/v1/plugins")
-        self.assertRedirects(response, url_for("api.get_plugin"))
+        self.assertRedirects(response, url_for("api.get_plugin", version='v1'))
 
     def test_api_v1_plugins(self):
         "Test plugins list"
@@ -70,7 +70,7 @@ class ViewsTestCase(FrontendTestCase):
     def test_api_v1_download_with_id_redirect(self):
         "Test download redirection"
         response = self.client.get("/api/v1/download")
-        self.assertRedirects(response, url_for("api.download_plugin"))
+        self.assertRedirects(response, url_for("api.download_plugin", version='v1'))
 
     def test_api_v1_download_with_id_not_found(self):
         "Test download with invalid plugin id"
