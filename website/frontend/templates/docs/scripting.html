@@ -21,7 +21,7 @@
         <code>$lower(...)</code>).
       </p>
       <p>
-        To use parenthesis or commas as-is inside a function call you must escape them with a backslash.
+        To use parentheses or commas as-is inside a function call, you must escape them with a backslash.
       </p>
 
       <h1 id="metadata_variables">Metadata Variables</h1>
@@ -52,9 +52,10 @@
 
         <ul>
           <li>If
-            <code>if</code>is not empty, it returns
+            <code>if</code> is not empty, it returns
             <code>then</code>, otherwise it returns
-            <code>else</code>.</li>
+            <code>else</code>.
+          </li>
         </ul>
 
         <h3 id="if2_a1_a2_a3_">$if2(a1,a2,a3,...)</h3>
@@ -67,22 +68,25 @@
 
         <ul>
           <li>Returns
-            <code>text</code>in lower case.</li>
+            <code>text</code> in lower case.
+          </li>
         </ul>
 
         <h3 id="upper_text">$upper(text)</h3>
 
         <ul>
           <li>Returns
-            <code>text</code>in upper case.</li>
+            <code>text</code> in upper case.
+          </li>
         </ul>
 
         <h3 id="left_text_num">$left(text,num)</h3>
 
         <ul>
           <li>Returns first
-            <code>num</code>characters from
-            <code>text</code>.</li>
+            <code>num</code> characters from
+            <code>text</code>.
+          </li>
         </ul>
 
         <h3 id="matchedtracks_">$matchedtracks()</h3>
@@ -95,18 +99,19 @@
         <h3 id="right_text_num">$right(text,num)</h3>
 
         <ul>
-          <li>Returns last
-            <code>num</code>characters from
-            <code>text</code>.</li>
+          <li>Returns the last
+            <code>num</code> characters from
+            <code>text</code>.
+          </li>
         </ul>
 
         <h3 id="num_num_len">$num(num,len)</h3>
 
         <ul>
           <li>Returns
-            <code>num</code>formatted to
-            <code>len</code>digits, where
-            <code>len</code> cannot be greater than 
+            <code>num</code> formatted to
+            <code>len</code> digits, where
+            <code>len</code> cannot be greater than
             <code>20</code>.
           </li>
         </ul>
@@ -115,38 +120,45 @@
 
         <ul>
           <li>Replaces occurrences of
-            <code>search</code>in
-            <code>text</code>with value of
-            <code>replace</code>and returns the resulting string.</li>
+            <code>search</code> in
+            <code>text</code> with value of
+            <code>replace</code> and returns the resulting string.
+          </li>
         </ul>
 
         <h3 id="rsearch_text_pattern">$rsearch(text,pattern)</h3>
 
         <ul>
-          <li> <a rel="nofollow" class="external text" href="https://docs.python.org/2/library/re.html#regular-expression-syntax">Regular expression</a> search.
-            This function will return the first matching group.</li>
+          <li>
+            <a rel="nofollow" class="external text" href="https://docs.python.org/2/library/re.html#regular-expression-syntax"> Regular expression</a> search.
+            This function will return the first matching group.
+          </li>
         </ul>
 
         <h3 id="rreplace_text_pattern_replace">$rreplace(text,pattern,replace)</h3>
 
         <ul>
-          <li> <a rel="nofollow" class="external text" href="https://docs.python.org/2/library/re.html#regular-expression-syntax">Regular expression</a> replace.</li>
+          <li>
+            <a rel="nofollow" class="external text" href="https://docs.python.org/2/library/re.html#regular-expression-syntax">Regular expression</a> replace.
+          </li>
         </ul>
 
         <h3 id="in_x_y">$in(x,y)</h3>
 
         <ul>
           <li>Returns true, if
-            <code>x</code>contains
-            <code>y</code>.</li>
+            <code>x</code> contains
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="inmulti_x_y">$inmulti(x,y)</h3>
 
         <ul>
-          <li>Returns true, if multi-value variable
-            <code>x</code>contains
-            <code>y</code>.</li>
+          <li>Returns true if multi-value variable
+            <code>x</code> contains
+            <code>y</code>.
+          </li>
           <li class="added">Since Picard 1.0</li>
         </ul>
 
@@ -154,14 +166,15 @@
 
         <ul>
           <li>Unsets the variable
-            <code>name</code>.</li>
+            <code>name</code>.
+          </li>
         </ul>
 
         <h3 id="set_name_value">$set(name, value)</h3>
 
         <ul>
           <li>Sets the variable
-            <code>name</code>to
+            <code>name</code> to
             <code>value</code>.
           </li>
           <li class="note">
@@ -175,7 +188,7 @@
 
         <ul>
           <li>Sets the variable
-            <code>name</code>to
+            <code>name</code> to
             <code>value</code>, using the separator (or "; " if not passed) to coerce the value back into a proper
             multi-valued tag. This can be used to operate on multi-valued tags as a string, and then set
             them back as proper multi-valued tags, e.g</li>
@@ -189,18 +202,20 @@
 
         <ul>
           <li>Returns the variable
-            <code>name</code>(equivalent to
-            <code>%name%</code>).</li>
+            <code>name</code> (equivalent to
+            <code>%name%</code>).
+          </li>
         </ul>
 
         <h3 id="copy_new_old">$copy(new,old)</h3>
 
         <ul>
           <li>Copies metadata from variable
-            <code>old</code>to
+            <code>old</code> to
             <code>new</code>. The difference between
-            <code>$set(new,%old%)</code>is that
-            <code>$copy(new,old)</code>copies multi-value variables without flattening them.</li>
+            <code>$set(new,%old%)</code> is that
+            <code>$copy(new,old)</code> copies multi-value variables without flattening them.
+          </li>
           <li class="added">Since Picard 0.9</li>
         </ul>
 
@@ -208,10 +223,11 @@
 
         <ul>
           <li>Merges metadata from variable
-            <code>old</code>into
+            <code>old</code> into
             <code>new</code>, removing duplicates and appending to the end, so retaining the original ordering.
             Like
-            <code>$copy</code>, this will also copy multi-valued variables without flattening them.</li>
+            <code>$copy</code>, this will also copy multi-valued variables without flattening them.
+          </li>
           <li class="added">Since Picard 1.0</li>
         </ul>
 
@@ -219,118 +235,133 @@
 
         <ul>
           <li>Trims all leading and trailing whitespaces from
-            <code>text</code>. The optional second parameter specifies the character to trim.</li>
+            <code>text</code>. The optional second parameter specifies the character to trim.
+          </li>
         </ul>
 
         <h3 id="add_x_y">$add(x,y)</h3>
 
         <ul>
           <li>Add
-            <code>y</code>to
-            <code>x</code>.</li>
+            <code>y</code> to
+            <code>x</code>.
+          </li>
         </ul>
 
         <h3 id="sub_x_y">$sub(x,y)</h3>
 
         <ul>
           <li>Subtracts
-            <code>y</code>from
-            <code>x</code>.</li>
+            <code>y</code> from
+            <code>x</code>.
+          </li>
         </ul>
 
         <h3 id="div_x_y">$div(x,y)</h3>
 
         <ul>
           <li>Divides
-            <code>x</code>by
-            <code>y</code>.</li>
+            <code>x</code> by
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="mod_x_y">$mod(x,y)</h3>
 
         <ul>
           <li>Returns the remainder of
-            <code>x</code>divided by
-            <code>y</code>.</li>
+            <code>x</code> divided by
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="mul_x_y">$mul(x,y)</h3>
 
         <ul>
           <li>Multiplies
-            <code>x</code>by
-            <code>y</code>.</li>
+            <code>x</code> by
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="or_x_y">$or(x,y)</h3>
 
         <ul>
-          <li>Returns true, if either
-            <code>x</code>or
-            <code>y</code>not empty.</li>
+          <li>Returns true if either
+            <code>x</code> or
+            <code>y</code> not empty.
+          </li>
         </ul>
 
         <h3 id="and_x_y">$and(x,y)</h3>
 
         <ul>
-          <li>Returns true, if both
-            <code>x</code>and
-            <code>y</code>are not empty.</li>
+          <li>Returns true if both
+            <code>x</code> and
+            <code>y</code> are not empty.
+          </li>
         </ul>
 
         <h3 id="not_x">$not(x)</h3>
 
         <ul>
-          <li>Returns true, if
-            <code>x</code>is empty.</li>
+          <li>Returns true if
+            <code>x</code> is empty.
+          </li>
         </ul>
 
         <h3 id="eq_x_y">$eq(x,y)</h3>
 
         <ul>
-          <li>Returns true, if
-            <code>x</code>equals
-            <code>y</code>.</li>
+          <li>Returns true if
+            <code>x</code> equals
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="ne_x_y">$ne(x,y)</h3>
 
         <ul>
-          <li>Returns true, if
-            <code>x</code>not equals
-            <code>y</code>.</li>
+          <li>Returns true if
+            <code>x</code> does not equal
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="lt_x_y">$lt(x,y)</h3>
 
         <ul>
-          <li>Returns true, if
-            <code>x</code>is lower than
-            <code>y</code>.</li>
+          <li>Returns true if
+            <code>x</code> is less than
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="lte_x_y">$lte(x,y)</h3>
 
         <ul>
-          <li>Returns true, if
-            <code>x</code>is lower than or equals
-            <code>y</code>.</li>
+          <li>Returns true if
+            <code>x</code> is less than or equal to
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="gt_x_y">$gt(x,y)</h3>
 
         <ul>
-          <li>Returns true, if
-            <code>x</code>is greater than
-            <code>y</code>.</li>
+          <li>Returns true if
+            <code>x</code> is greater than
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="gte_x_y">$gte(x,y)</h3>
 
         <ul>
-          <li>Returns true, if
-            <code>x</code>is greater than or equals
-            <code>y</code>.</li>
+          <li>Returns true if
+            <code>x</code> is greater than or equal to
+            <code>y</code>.
+          </li>
         </ul>
 
         <h3 id="noop">$noop(...)</h3>
@@ -349,7 +380,8 @@
         <ul>
           <li>Returns the performers where the performance type (e.g. "vocal") matches
             <code>pattern</code>, joined by
-            <code>join</code>.</li>
+            <code>join</code>.
+          </li>
           <li class="added">Since Picard 0.10</li>
         </ul>
 
@@ -358,8 +390,9 @@
         <ul>
           <li>Returns the first character of
             <code>text</code>. If
-            <code>text</code>is not an alphabetic character
-            <code>nonalpha</code>is returned instead.</li>
+            <code>text</code> is not an alphabetic character
+            <code>nonalpha</code> is returned instead.
+          </li>
           <li class="added">Since Picard 0.12</li>
         </ul>
 
@@ -367,7 +400,8 @@
 
         <ul>
           <li>Returns the first character of each word in
-            <code>text</code>, if it is an alphabetic character.</li>
+            <code>text</code>, if it is an alphabetic character.
+          </li>
           <li class="added">Since Picard 0.12</li>
         </ul>
 
@@ -375,8 +409,9 @@
 
         <ul>
           <li>Truncate
-            <code>text</code>to
-            <code>length</code>.</li>
+            <code>text</code> to
+            <code>length</code>.
+          </li>
           <li class="added">Since Picard 0.12</li>
         </ul>
 
@@ -384,8 +419,9 @@
 
         <ul>
           <li>Like $truncate except that it will only return the complete words from
-            <code>text</code>which fit within
-            <code>length</code>characters.</li>
+            <code>text</code> which fit within
+            <code>length</code> characters.
+          </li>
           <li class="added">Since Picard 0.12</li>
         </ul>
 
@@ -393,10 +429,11 @@
 
         <ul>
           <li>Moves the specified prefixes from the beginning to the end of text. If no prefix is specified
-            'A' and 'The' are used by default.</li>
+            'A' and 'The' are used by default.
+          </li>
           <li class="example">
             <pre>$swapprefix(%albumartist%,A,An,The,Le)</pre>
-          </li>  
+          </li>
           <li class="added">Integrated since Picard 1.3, previously as a plugin since Picard 0.13</li>
         </ul>
 
@@ -404,7 +441,8 @@
 
         <ul>
           <li>Deletes the specified prefixes from the beginning of text. If no prefix is specified 'A' and
-            'The' are used by default.</li>
+            'The' are used by default.
+          </li>
           <li class="added">Since Picard 1.3</li>
         </ul>
 
@@ -416,7 +454,7 @@
         <b><i>Options</i> &#8594; <i>Options...</i> &#8594; <i>Advanced</i> &#8594; <i>Scripting</i></b>
       </p>
       <p>
-        Tagger Script usually creates, modifies or deletes metadata variables.
+        Tagger Script usually creates, modifies, or deletes metadata variables.
       </p>
 
       <h3 id="artist_names">Artist names</h3>
