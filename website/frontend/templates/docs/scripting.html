@@ -52,7 +52,7 @@
 
         <ul>
           <li>If
-            <code>if</code>is not empty, it returns
+            <code>if</code> is not empty, it returns
             <code>then</code>, otherwise it returns
             <code>else</code>.</li>
         </ul>
@@ -67,21 +67,21 @@
 
         <ul>
           <li>Returns
-            <code>text</code>in lower case.</li>
+            <code>text</code> in lower case.</li>
         </ul>
 
         <h3 id="upper_text">$upper(text)</h3>
 
         <ul>
           <li>Returns
-            <code>text</code>in upper case.</li>
+            <code>text</code> in upper case.</li>
         </ul>
 
         <h3 id="left_text_num">$left(text,num)</h3>
 
         <ul>
           <li>Returns first
-            <code>num</code>characters from
+            <code>num</code> characters from
             <code>text</code>.</li>
         </ul>
 
@@ -96,7 +96,7 @@
 
         <ul>
           <li>Returns last
-            <code>num</code>characters from
+            <code>num</code> characters from
             <code>text</code>.</li>
         </ul>
 
@@ -104,8 +104,8 @@
 
         <ul>
           <li>Returns
-            <code>num</code>formatted to
-            <code>len</code>digits, where
+            <code>num</code> formatted to
+            <code>len</code> digits, where
             <code>len</code> cannot be greater than
             <code>20</code>.
           </li>
@@ -115,9 +115,9 @@
 
         <ul>
           <li>Replaces occurrences of
-            <code>search</code>in
-            <code>text</code>with value of
-            <code>replace</code>and returns the resulting string.</li>
+            <code>search</code> in
+            <code>text</code> with value of
+            <code>replace</code> and returns the resulting string.</li>
         </ul>
 
         <h3 id="rsearch_text_pattern">$rsearch(text,pattern)</h3>
@@ -137,7 +137,7 @@
 
         <ul>
           <li>Returns true, if
-            <code>x</code>contains
+            <code>x</code> contains
             <code>y</code>.</li>
         </ul>
 
@@ -145,7 +145,7 @@
 
         <ul>
           <li>Returns true if multi-value variable
-            <code>x</code>contains
+            <code>x</code> contains
             <code>y</code>.</li>
           <li class="added">Since Picard 1.0</li>
         </ul>
@@ -161,7 +161,7 @@
 
         <ul>
           <li>Sets the variable
-            <code>name</code>to
+            <code>name</code> to
             <code>value</code>.
           </li>
           <li class="note">
@@ -175,7 +175,7 @@
 
         <ul>
           <li>Sets the variable
-            <code>name</code>to
+            <code>name</code> to
             <code>value</code>, using the separator (or "; " if not passed) to coerce the value back into a proper
             multi-valued tag. This can be used to operate on multi-valued tags as a string, and then set
             them back as proper multi-valued tags, e.g</li>
@@ -189,7 +189,7 @@
 
         <ul>
           <li>Returns the variable
-            <code>name</code>(equivalent to
+            <code>name</code> (equivalent to
             <code>%name%</code>).</li>
         </ul>
 
@@ -197,10 +197,10 @@
 
         <ul>
           <li>Copies metadata from variable
-            <code>old</code>to
+            <code>old</code> to
             <code>new</code>. The difference between
-            <code>$set(new,%old%)</code>is that
-            <code>$copy(new,old)</code>copies multi-value variables without flattening them.</li>
+            <code>$set(new,%old%)</code> is that
+            <code>$copy(new,old)</code> copies multi-value variables without flattening them.</li>
           <li class="added">Since Picard 0.9</li>
         </ul>
 
@@ -208,7 +208,7 @@
 
         <ul>
           <li>Merges metadata from variable
-            <code>old</code>into
+            <code>old</code> into
             <code>new</code>, removing duplicates and appending to the end, so retaining the original ordering.
             Like
             <code>$copy</code>, this will also copy multi-valued variables without flattening them.</li>
@@ -226,7 +226,7 @@
 
         <ul>
           <li>Add
-            <code>y</code>to
+            <code>y</code> to
             <code>x</code>.</li>
         </ul>
 
@@ -234,7 +234,7 @@
 
         <ul>
           <li>Subtracts
-            <code>y</code>from
+            <code>y</code> from
             <code>x</code>.</li>
         </ul>
 
@@ -242,7 +242,7 @@
 
         <ul>
           <li>Divides
-            <code>x</code>by
+            <code>x</code> by
             <code>y</code>.</li>
         </ul>
 
@@ -250,7 +250,7 @@
 
         <ul>
           <li>Returns the remainder of
-            <code>x</code>divided by
+            <code>x</code> divided by
             <code>y</code>.</li>
         </ul>
 
@@ -258,7 +258,7 @@
 
         <ul>
           <li>Multiplies
-            <code>x</code>by
+            <code>x</code> by
             <code>y</code>.</li>
         </ul>
 
@@ -266,30 +266,30 @@
 
         <ul>
           <li>Returns true if either
-            <code>x</code>or
-            <code>y</code>not empty.</li>
+            <code>x</code> or
+            <code>y</code> not empty.</li>
         </ul>
 
         <h3 id="and_x_y">$and(x,y)</h3>
 
         <ul>
           <li>Returns true if both
-            <code>x</code>and
-            <code>y</code>are not empty.</li>
+            <code>x</code> and
+            <code>y</code> are not empty.</li>
         </ul>
 
         <h3 id="not_x">$not(x)</h3>
 
         <ul>
           <li>Returns true if
-            <code>x</code>is empty.</li>
+            <code>x</code> is empty.</li>
         </ul>
 
         <h3 id="eq_x_y">$eq(x,y)</h3>
 
         <ul>
           <li>Returns true if
-            <code>x</code>equals
+            <code>x</code> equals
             <code>y</code>.</li>
         </ul>
 
@@ -297,7 +297,7 @@
 
         <ul>
           <li>Returns true if
-            <code>x</code>not equals
+            <code>x</code> not equals
             <code>y</code>.</li>
         </ul>
 
@@ -305,7 +305,7 @@
 
         <ul>
           <li>Returns true if
-            <code>x</code>is lower than
+            <code>x</code> is lower than
             <code>y</code>.</li>
         </ul>
 
@@ -313,7 +313,7 @@
 
         <ul>
           <li>Returns true if
-            <code>x</code>is lower than or equals
+            <code>x</code> is lower than or equals
             <code>y</code>.</li>
         </ul>
 
@@ -321,7 +321,7 @@
 
         <ul>
           <li>Returns true if
-            <code>x</code>is greater than
+            <code>x</code> is greater than
             <code>y</code>.</li>
         </ul>
 
@@ -329,7 +329,7 @@
 
         <ul>
           <li>Returns true if
-            <code>x</code>is greater than or equals
+            <code>x</code> is greater than or equals
             <code>y</code>.</li>
         </ul>
 
@@ -358,8 +358,8 @@
         <ul>
           <li>Returns the first character of
             <code>text</code>. If
-            <code>text</code>is not an alphabetic character
-            <code>nonalpha</code>is returned instead.</li>
+            <code>text</code> is not an alphabetic character
+            <code>nonalpha</code> is returned instead.</li>
           <li class="added">Since Picard 0.12</li>
         </ul>
 
@@ -375,7 +375,7 @@
 
         <ul>
           <li>Truncate
-            <code>text</code>to
+            <code>text</code> to
             <code>length</code>.</li>
           <li class="added">Since Picard 0.12</li>
         </ul>
@@ -384,8 +384,8 @@
 
         <ul>
           <li>Like $truncate except that it will only return the complete words from
-            <code>text</code>which fit within
-            <code>length</code>characters.</li>
+            <code>text</code> which fit within
+            <code>length</code> characters.</li>
           <li class="added">Since Picard 0.12</li>
         </ul>
 
