@@ -21,6 +21,8 @@
 
           {% if line is re_search("\s+?\*\s+") %}
             <p class="newLine">{{ data | re_sub("\s+?\*\s+", "")}}</p>
+          {% elif line is re_search("\s*\*\*\s+") %}
+            <h4>{{ data | re_sub("\s*\*\*\s+", "")}}</h4>
           {% else %}
             <p>{{ data }}</p>
           {% endif %}
