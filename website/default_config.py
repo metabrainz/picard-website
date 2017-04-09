@@ -1,4 +1,4 @@
-PLUGINS_BUILD_DIR = "/plugins"
+PLUGINS_BUILD_DIR = "/code/plugins"
 PLUGINS_CACHE_TIMEOUT = 5 * 60
 PLUGIN_VERSIONS = {
     'v1': '1.0',
