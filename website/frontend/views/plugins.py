@@ -3,17 +3,19 @@ import os
 import json
 from urllib import urlopen
 from flask import current_app, Blueprint, render_template
-
+from website.frontend.views.api import plugins_json_file
 plugins_bp = Blueprint('plugins', __name__)
 
 
 @plugins_bp.route('/')
 def show_plugins():
-    ordered_plugins = OrderedDict()
-    plugins_json_file = os.path.join(
-        current_app.config['PLUGINS_REPOSITORY'], "plugins.json")
-    with open(plugins_json_file, "r") as fp:
-        plugins = json.loads(fp.read().decode("utf-8"))['plugins']
-        for key in sorted(plugins, key=lambda k: plugins[k]['name'].lower()):
-            ordered_plugins[key] = plugins[key]
-    return render_template('plugins.html', plugins=ordered_plugins)
+    all_plugins = OrderedDict()
+    for version, build_version in sorted(current_app.config['PLUGIN_VERSIONS'].items(), reverse=True):
+        ordered_plugins = OrderedDict()
+        build_json_file = plugins_json_file(current_app, build_version)
+        with open(build_json_file, "r") as fp:
+            plugins = json.loads(fp.read().decode("utf-8"))['plugins']
+            for key in sorted(plugins, key=lambda k: plugins[k]['name'].lower()):
+                ordered_plugins[key] = plugins[key]
+        all_plugins[version[1:]] = ordered_plugins
+    return render_template('plugins.html', all_plugins=all_plugins)
