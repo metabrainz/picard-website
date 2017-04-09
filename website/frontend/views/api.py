@@ -12,18 +12,18 @@ from flask import (
 api_bp = Blueprint('api', __name__)
 
 
-def plugins_repository(app):
-    return app.config['PLUGINS_REPOSITORY']
+def plugins_build_dir(app):
+    return app.config['PLUGINS_BUILD_DIR']
 
 
 def plugins_json_file(app, version):
     """Returns the file that contains json data"""
-    return os.path.join(plugins_repository(app), version, "plugins.json")
+    return os.path.join(plugins_build_dir(app), version, "plugins.json")
 
 
 def plugins_dir(app, version):
     """Returns the directory which contains plugin files"""
-    return os.path.join(plugins_repository(app), version)
+    return os.path.join(plugins_build_dir(app), version)
 
 
 def load_json_data(app, version):
@@ -59,8 +59,8 @@ def _download_plugin(app, version, pid):
         return not_found(404)
 
 
-def valid_api_version(app, version):
-    return version in app.config['PLUGIN_VERSIONS']
+def get_build_version(app, version):
+    return app.config['PLUGIN_VERSIONS'].get(version)
 
 
 def not_found(error):
@@ -76,9 +76,9 @@ def api_root(version):
     """
     Shows info about our API
     """
-    if valid_api_version(current_app, version):
+    if version and get_build_version(current_app, version):
         return make_response(
-            jsonify({'message': 'The two endpoints currently available'
+            jsonify({'message': 'The two endpoints currently available for this api version'
                      ' are /api/%s/plugins and /api/%s/download' % (version, version)}), 200)
     else:
         return invalid_api_version(404)
@@ -89,9 +89,10 @@ def get_plugin(version):
     """
     Lists data of a plugin
     """
-    if valid_api_version(current_app, version):
+    build_version = get_build_version(current_app, version)
+    if build_version:
         pid = request.args.get('id', None)
-        return _get_plugin(current_app, version, pid)
+        return _get_plugin(current_app, build_version, pid)
     else:
         return invalid_api_version(404)
 
@@ -103,10 +104,11 @@ def download_plugin(version):
 
     Single files are served as is, multiple ones are zipped.
     """
-    if valid_api_version(current_app, version):
+    build_version = get_build_version(current_app, version)
+    if build_version:
         pid = request.args.get('id', None)
         if pid:
-            return _download_plugin(current_app, version, pid)
+            return _download_plugin(current_app, build_version, pid)
         else:
             return make_response(
                 jsonify({'error': 'Plugin id not specified.',
