@@ -1,6 +1,9 @@
-PLUGINS_REPOSITORY = "/code/plugins"
+PLUGINS_BUILD_DIR = "/plugins"
 PLUGINS_CACHE_TIMEOUT = 5 * 60
-PLUGIN_VERSIONS = ['v1', 'v2']
+PLUGIN_VERSIONS = {
+    'v1': '1.0',
+    'v2': '2.0',
+}
 CHANGELOG_URL = "https://raw.githubusercontent.com/musicbrainz/picard/master/NEWS.txt"
 CHANGELOG_CACHE_TIMEOUT = 5 * 60
 
