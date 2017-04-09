@@ -6,10 +6,109 @@
   <div class="row">
     <div class="col-md-8">
       <p>
-        This page explains the process of building <a href="/" title="MusicBrainz Picard">MusicBrainz Picard</a> and
-        the installer for Windows. It only works for Picard 1.2 and newer, which no longer supports AmpliFIND.
+        This page is for Microsoft Windows users who want to contribute to the development of 
+        <a href="/" title="MusicBrainz Picard">MusicBrainz Picard</a>
+        or for other reasons want to be able to run Picard from source code.
+        It explains how to install the 3rd party software needed and also 
+        the installer for Windows. 
       </p>
       <h1 id="requirements">Requirements</h1>
+      <p>
+        Picard development (i.e. Github's master branch) is now focused on Picard version 2, 
+        which uses Python 3 and PyQt5. 
+        However if you need to test something in Picard 1.4, 
+        then a separate branch 1.4.x is available to run and this uses Python 2 and PqQt4. 
+        Instructions for building each environment are provided below.
+      </p>
+      
+      <h2 id="Picard2">Picard version 2</h2>
+
+      <h3 id="python">Python 3.5 or newer</h3>
+
+      <ul>
+        <li><a rel="nofollow" href="http://python.org/download/">http://python.org/download/</a>
+        </li>
+        <li>Download and install "Python 3 Windows Installer". 
+            The latest version is recommended, but if you already have Python 3 installed,
+            then the minimum version is 3.5.
+        </li>
+        <li>Python should add itself to your %PATH% environment variable, 
+            but if not add the Python install directory to %PATH%</li>
+      </ul>
+
+      <h3 id="pyqt">Python dependencies</h3>
+      
+      <p>
+         Picard needs the following additional python modules downloaded from PyPi to run:
+      </p>
+
+      <ul>
+        <li>PyQt 5.7.1 or later</li>
+        <li>Mutagen 1.37 or later</li>
+        <li>discid</li>
+      </ul>
+
+      <p>
+         The easiest way to install it is to open and Administrator command prompt and type:
+      </p>
+      <pre>pip3 install -r requirements.txt</pre>
+
+      <p>
+         Alternatively to install them individually type:
+      </p>
+      <ul>
+        <li>pip3 install PyQt>=5.7.1</li>
+        <li>pip3 install Mutagen>=1.37</li>
+        <li>pip3 install discid</li>
+      </ul>
+
+      <h3 id="gettext">gettext</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="http://gnuwin32.sourceforge.net/packages/gettext.htm">http://gnuwin32.sourceforge.net/packages/gettext.htm</a>
+        </li>
+        <li>Add the gettext folder to&#160;%PATH% (normally <i>C:\Programs\GnuWin32\bin</i>)
+        </li>
+      </ul>
+
+      <h3 id="visual-cpp">Visual C++ 2015 Community</h3>
+
+      <ul>
+        <li><a rel="nofollow" href="http://go.microsoft.com/?linkid=7729279">http://go.microsoft.com/?linkid=7729279</a></li>
+        <li>Download and install "vcsetup.exe"
+        </li>
+      </ul>
+
+      <h3 id="chromaprint">Chromaprint</h3>
+
+      <ul>
+        <li> <a rel="nofollow" href="http://acoustid.org/chromaprint">http://acoustid.org/chromaprint</a>
+        </li>
+        <li>Download "chromaprint-fpcalc-1.1-win-i86.zip" and put "fpcalc.exe" to the Picard source code
+          directory
+        </li>
+      </ul>
+
+      <h1 id="running_picard_from_sources">Running Picard From Sources</h1>
+
+      <p>
+        Before you can run Picard from sources, you need to build the C extension. Start the VS console using
+        "Visual Studio 2008 Command Prompt", go to the source directory and run these commands:
+      </p>
+
+      <pre>
+        python setup.py build_ext -i
+        python setup.py build_locales -i</pre>
+
+      <p>
+        After you have done this, you can run Picard directly from the sources using:
+      </p>
+
+      <pre>
+        python tagger.py
+      </pre>
+
+      <h2 id="Picard2">Picard version 2</h2>
 
       <h3 id="python">Python 2.7.x</h3>
 
