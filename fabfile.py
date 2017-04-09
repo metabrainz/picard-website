@@ -1,11 +1,9 @@
 from __future__ import with_statement
 from fabric.api import local
-from fabric.colors import green, yellow
-from fabric.context_managers import lcd
-from fabric.contrib.console import confirm
+from fabric.colors import green
 from fabric.utils import abort
+from website.build_plugins import generate_plugins
 import website.frontend
-import os.path
 
 
 def extract_strings():
@@ -62,20 +60,13 @@ def plugins_generate():
 
     Clone or pull repository from GitHub and run generate.py script
     """
-    repo = website.frontend.create_app().config['PLUGINS_REPOSITORY']
-    versions = website.frontend.create_app().config['PLUGIN_VERSIONS']
-    if not os.path.isdir(repo):
-        print(yellow("'%s' directory defined by PLUGINS_REPOSITORY doesn't exist" % repo))
-        if confirm("Do you want to clone picard-plugins from GitHub?"):
-            local('git clone https://github.com/musicbrainz/picard-plugins/ %s' %
-              repo)
-        else:
-            abort('Aborting...')
-    with lcd(repo):
-        local("git pull")
-        for version in versions:
-            local("python generate.py %s" % version)
-            print(green("Plugins files for version %s have been generated successfully." % version, bold=True))
+    config = website.frontend.create_app().config
+    versions = config['PLUGIN_VERSIONS'].values()
+    build_dir = config['PLUGINS_BUILD_DIR']
+    for version in versions:
+        print(build_dir, version)
+        generate_plugins(build_dir, version)
+        print(green("Plugins files for version %s have been generated successfully." % version, bold=True))
 
 
 def deploy():
