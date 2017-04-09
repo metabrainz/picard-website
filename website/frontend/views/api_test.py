@@ -4,7 +4,8 @@ from flask import url_for
 
 _MESSAGES = {
     'plugin_not_found': 'Plugin not found.',
-    'invalid_endpoint': 'The two endpoints currently available'
+    'missing_api_version': 'No API version specified',
+    'invalid_endpoint': 'The two endpoints currently available for this api version'
                         ' are /api/v1/plugins and /api/v1/download',
     'missing_id': 'Plugin id not specified.',
     'download_usage': 'Correct usage: /api/v1/download?id=<id>',
@@ -23,7 +24,7 @@ class ViewsTestCase(FrontendTestCase):
         response = self.client.get("/api")
         self.assert404(response)
         self.assertEquals(response.json, dict(
-            message=_MESSAGES['invalid_endpoint']))
+            message=_MESSAGES['missing_api_version']))
 
     # /v1/
 
