@@ -21,6 +21,21 @@
         Instructions for building each environment are provided below.
       </p>
       
+      <h2 id="source">Downloading the source</h2>
+      
+      <p>
+        If you are planning to simply run from source (rather than use the Picard installer / executable), 
+        then you can download the current master branch from 
+        <a rel="nofollow" href="https://github.com/metabrainz/picard/archive/master.zip">https://github.com/metabrainz/picard/archive/master.zip</a> 
+        or the 1.4.x branch from <a rel="nofollow" href="https://github.com/metabrainz/picard/archive/1.4.x.zip">https://github.com/metabrainz/picard/archive/1.4.x.zip</a>.
+      </p>
+
+      <p>
+        But if you are planning to submit proposed changes to Picard source,
+        then you should install <a rel="nofollow" target="_blank" href="https://desktop.github.com/">GitHub Desktop</a> 
+        or an alternative Git tool of your choice and use it to create your own local Git clone of Picard.
+      </p>
+
       <h2 id="Picard2">Picard version 2</h2>
 
       <h3 id="python">Python 3.5 or newer</h3>
@@ -39,7 +54,7 @@
       <h3 id="pyqt">Python dependencies</h3>
       
       <p>
-         Picard needs the following additional python modules downloaded from PyPi to run:
+         You need need the following additional python modules to run Picard from source:
       </p>
 
       <ul>
@@ -49,12 +64,12 @@
       </ul>
 
       <p>
-         The easiest way to install it is to open and Administrator command prompt and type:
+         The easiest way to install it is to open an Administrator command prompt,navigate to the Picard source directory and type:
       </p>
       <pre>pip3 install -r requirements.txt</pre>
 
       <p>
-         Alternatively to install them individually type:
+         Alternatively to install them individually run:
       </p>
       <ul>
         <li>pip3 install PyQt>=5.7.1</li>
@@ -62,53 +77,7 @@
         <li>pip3 install discid</li>
       </ul>
 
-      <h3 id="gettext">gettext</h3>
-
-      <ul>
-        <li> <a rel="nofollow" href="http://gnuwin32.sourceforge.net/packages/gettext.htm">http://gnuwin32.sourceforge.net/packages/gettext.htm</a>
-        </li>
-        <li>Add the gettext folder to&#160;%PATH% (normally <i>C:\Programs\GnuWin32\bin</i>)
-        </li>
-      </ul>
-
-      <h3 id="visual-cpp">Visual C++ 2015 Community</h3>
-
-      <ul>
-        <li><a rel="nofollow" href="http://go.microsoft.com/?linkid=7729279">http://go.microsoft.com/?linkid=7729279</a></li>
-        <li>Download and install "vcsetup.exe"
-        </li>
-      </ul>
-
-      <h3 id="chromaprint">Chromaprint</h3>
-
-      <ul>
-        <li> <a rel="nofollow" href="http://acoustid.org/chromaprint">http://acoustid.org/chromaprint</a>
-        </li>
-        <li>Download "chromaprint-fpcalc-1.1-win-i86.zip" and put "fpcalc.exe" to the Picard source code
-          directory
-        </li>
-      </ul>
-
-      <h1 id="running_picard_from_sources">Running Picard From Sources</h1>
-
-      <p>
-        Before you can run Picard from sources, you need to build the C extension. Start the VS console using
-        "Visual Studio 2008 Command Prompt", go to the source directory and run these commands:
-      </p>
-
-      <pre>
-        python setup.py build_ext -i
-        python setup.py build_locales -i</pre>
-
-      <p>
-        After you have done this, you can run Picard directly from the sources using:
-      </p>
-
-      <pre>
-        python tagger.py
-      </pre>
-
-      <h2 id="Picard2">Picard version 2</h2>
+      <h2 id="Picard1">Picard version 1.4.x</h2>
 
       <h3 id="python">Python 2.7.x</h3>
 
@@ -116,7 +85,7 @@
         <li><a rel="nofollow" href="http://python.org/download/">http://python.org/download/</a>
         </li>
         <li>Download and install "Python 2.7.x Windows Installer"</li>
-        <li>Add C:\Python27 to&#160;%PATH%</li>
+        <li>Add C:\Python27 to&nbsp;%PATH%</li>
       </ul>
 
       <h3 id="pyqt">PyQt 4.10.x</h3>
@@ -154,14 +123,53 @@
         </li>
       </ul>
 
-      <h3 id="gettext">gettext</h3>
+      <h1 id="running_picard_from_sources">Running Picard From Sources</h1>
+
+      <h3 id="chromaprint">Chromaprint</h3>
+      
+      <p>
+        If you want to run the Acoustid Scan function when running Picard from source, then you need to install
+        the Chromaprint fpcalc program into your Picard source directory.
 
       <ul>
-        <li> <a rel="nofollow" href="http://gnuwin32.sourceforge.net/packages/gettext.htm">http://gnuwin32.sourceforge.net/packages/gettext.htm</a>
+        <li>
+          Download <a rel="nofollow" href="https://github.com/acoustid/chromaprint/releases/download/v1.4.2/chromaprint-fpcalc-1.4.2-windows-x86_64.zip">the windows zip file</a> 
+          from <a rel="nofollow" href="http://acoustid.org/chromaprint">http://acoustid.org/chromaprint</a>
         </li>
-        <li>Add the gettext folder to&#160;%PATH% (normally <i>C:\Programs\GnuWin32\bin</i>)
+        <li>
+          Unzip "chromaprint-fpcalc-1.1-win-i86.zip" and put "fpcalc.exe" to the picard subdirectory 
+          of your Picard source code directory
         </li>
       </ul>
+
+      <h3 id="gettext">gettext</h3>
+      
+      <p> 
+        Picard uses gettext for internationalisation (i.e. for Picard to appear in your local language). 
+        To build the language mappings you need to install gettext.
+      </p> 
+
+      <ul>
+        <li>
+          Download and install <a rel="nofollow" href="https://downloads.sourceforge.net/project/gnuwin32/gettext/0.14.4/gettext-0.14.4.exe">gettext</a> 
+          from <a rel="nofollow" target="_blank" href="http://gnuwin32.sourceforge.net/packages/gettext.htm">http://gnuwin32.sourceforge.net/packages/gettext.htm</a>.
+        </li>
+        <li>
+          Add the gettext folder to&nbsp;%PATH% (default <i>C:\Program Files\GnuWin32\bin</i> or <i>C:\Program Files(x86)\GnuWin32\bin</i>)
+        </li>
+        <li>
+          From the Picard source directory run
+          <pre>py setup.py build_locales -i</pre>
+        </li>
+      </ul>
+
+      <p>
+        After you have done this, you can run Picard directly from the sources using:
+      </p>
+
+      <pre>
+        py tagger.py
+      </pre>
 
       <h3 id="visual-cpp">Visual C++ 2008 Express</h3>
 
@@ -223,6 +231,27 @@
         <li>Download and install "nsis-2.46-setup.exe"
         </li>
       </ul>
+
+      <h3 id="visual-cpp">Visual C++ 2015 Community</h3>
+      
+      Picard will run from source using a python version of the Levenshtein Distance fuzzy string comparison, 
+      however to build the C version for inclusion in the executable package, you will need to down  
+
+      <ul>
+        <li>Download the <a rel="nofollow" href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Microsoft Visual C++ 14.0 
+            standalone: Visual C++ Build Tools 2015 (x86, x64, ARM)</a> from http://landinghub.visualstudio.com/visual-cpp-build-tools</li>
+        <li>Install including both 
+        </li>
+      </ul>
+
+      <p>
+        Before you can run Picard from sources, you need to build the C extension. Start the VS console using
+        "Visual Studio 2008 Command Prompt", go to the source directory and run these commands:
+      </p>
+
+      <pre>
+        python setup.py build_ext -i
+        python setup.py build_locales -i</pre>
 
       <p>
         Then you need to copy msvcr90.dll and msvcp90.dll from "C:\Program Files\Microsoft Visual Studio 9.0\VC\redist\x86\Microsoft.VC90.CRT"
