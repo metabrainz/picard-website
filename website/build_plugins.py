@@ -24,7 +24,7 @@ PLUGIN_DIR = "plugins"
 
 VERSION_TO_BRANCH = {
     None: 'master',
-    '1.0': 'master',
+    '1.0': '1.0',
     '2.0': '2.0',
 }
 
