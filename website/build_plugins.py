@@ -155,6 +155,9 @@ def download_plugins(version=None):
 
 def generate_plugins(build_dir, version=None, json=True, zips=True):
     """Download and generate plugin build files for a given version"""
+    # Return if both are False
+    if not (json or zips):
+        return
     dest_dir = os.path.abspath(os.path.join(build_dir, version or ''))
     try:
         temp_dir, source_dir = download_plugins(version)
