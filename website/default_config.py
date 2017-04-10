@@ -1,5 +1,8 @@
 PLUGINS_BUILD_DIR = "/code/plugins"
 PLUGINS_CACHE_TIMEOUT = 5 * 60
+# Flask automatically orders them in ascending order while
+# retrieveing them. Since it is a string comparison, v10 appears before
+# v2. So be careful with the ordering.
 PLUGIN_VERSIONS = {
     'v1': '1.0',
     'v2': '2.0',
