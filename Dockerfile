@@ -40,8 +40,7 @@ RUN pybabel compile -d website/frontend/translations
 RUN ./node_modules/.bin/gulp
 
 # Plugins
-RUN git clone https://github.com/metabrainz/picard-plugins.git /code/plugins
-RUN cd /code/plugins && python generate.py
+RUN fab plugins_generate
 
 RUN apt-get purge -y $BUILD_DEPS && \
     apt-get autoremove -y
