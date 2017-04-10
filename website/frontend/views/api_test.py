@@ -42,7 +42,7 @@ class ViewsTestCase(FrontendTestCase):
 
     # /v1/plugins/
 
-    def test_api_v1_plugins(self):
+    def test_api_v1_plugins_redirect(self):
         "Test plugins list redirection"
         response = self.client.get("/api/v1/plugins")
         self.assertRedirects(response, url_for("api.get_plugin", version='v1'))
