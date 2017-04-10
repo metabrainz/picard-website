@@ -41,16 +41,15 @@
       <h3 id="python35">Python 3.5 or newer</h3>
 
       <ul>
-        <li><a rel="nofollow" target="_blank" href="http://python.org/downloads/">http://python.org/downloads/</a>
-        </li>
         <li>
-          Download and install Python 3 for Windows. 
+          Download and install Python 3 for Windows from 
+          <a rel="nofollow" target="_blank" href="http://python.org/downloads/">http://python.org/downloads/</a>. 
           The latest version is recommended, but if you already have Python 3 installed
           then the minimum version is 3.5.
         </li>
         <li>
           Python should add itself to your %PATH% environment variable, 
-          but if not add the Python install directory to %PATH%
+          but if not add both the Python install directory and its scripts subdirectory to %PATH%
         </li>
       </ul>
 
@@ -75,17 +74,22 @@
          Alternatively to install them individually run:
       </p>
       <pre>pip3 install PyQt>=5.7.1
-        pip3 install Mutagen>=1.37
-        pip3 install discid</pre>
+pip3 install Mutagen>=1.37
+pip3 install discid</pre>
 
       <h2 id="python_picard1">Python for Picard version 1.4.x</h2>
 
       <h3 id="python27">Python 2.7.x</h3>
 
       <ul>
-        <li><a rel="nofollow" target="_blank" href="http://python.org/downloads/">http://python.org/downloads/</a></li>
-        <li>Download and install Python 2.7.x for Windows</li>
-        <li>Add C:\Python27 to&nbsp;%PATH%</li>
+        <li>
+          Download and install Python 2.7.x for Windows from 
+          <a rel="nofollow" target="_blank" href="http://python.org/downloads/">http://python.org/downloads/</a>
+        </li>
+        <li>
+          Python should add itself to your %PATH% environment variable, 
+          but if not add both the Python install directory and its scripts subdirectory to %PATH%
+        </li>
       </ul>
 
       <h3 id="python2_packages">Python 2 packages</h3>
@@ -112,8 +116,8 @@
       </p>
       
       <pre>pip install PyQt4>=4.10
-        pip install Mutagen>=1.37
-        pip install discid</pre>
+pip install Mutagen>=1.37
+pip install discid</pre>
       
       <p>
         If you wish to install manually, here are the links you need:
@@ -160,7 +164,7 @@
           from <a rel="nofollow" target="_blank" href="http://gnuwin32.sourceforge.net/packages/gettext.htm">http://gnuwin32.sourceforge.net/packages/gettext.htm</a>.
         </li>
         <li>
-          Add the gettext folder to&nbsp;%PATH% (default <i>C:\Program Files\GnuWin32\bin</i> or <i>C:\Program Files (x86)\GnuWin32\bin</i>)
+          Add the gettext folder to&nbsp;%PATH% (default <i>C:\Program&nbsp;Files\GnuWin32\bin</i> or <i>C:\Program&nbsp;Files&nbsp;(x86)\GnuWin32\bin</i>)
         </li>
         <li>
           From the Picard source directory run
@@ -242,9 +246,8 @@
         go to the Picard source directory and run these commands:
       </p>
 
-      <pre>
-        python setup.py build_ext -i
-        python setup.py build_locales -i</pre>
+      <pre>python setup.py build_ext -i
+python setup.py build_locales -i</pre>
 
       <p>
         Then you need to copy the following files from Visual Studio to 
@@ -253,12 +256,12 @@
         
       <ul>
         <li>
-          Picard v2 / Python 3 - 
-          msvcp140.dll from "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\redist\x86\Microsoft.VC140.CRT"
+          Picard v2 / Python 3 - msvcp140.dll from 
+          <i>C:\Program&nbsp;Files&nbsp;(x86)\Microsoft&nbsp;Visual&nbsp;Studio&nbsp;14.0\VC\redist\x86\Microsoft.VC140.CRT</i>
         </li>
         <li>
-          Picard v1 / Python 2 - 
-          msvcr90.dll and msvcp90.dll from "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\redist\x86\Microsoft.VC90.CRT"
+          Picard v1 / Python 2 - msvcr90.dll and msvcp90.dll from 
+          <i>C:\Program&nbsp;Files&nbsp;(x86)\Microsoft&nbsp;Visual&nbsp;Studio&nbsp;9.0\VC\redist\x86\Microsoft.VC90.CRT</i>
         </li>
       </ul>
         
