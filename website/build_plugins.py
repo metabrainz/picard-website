@@ -156,12 +156,18 @@ def download_plugins(version=None):
 def generate_plugins(build_dir, version=None, json=True, zips=True):
     """Download and generate plugin build files for a given version"""
     dest_dir = os.path.abspath(os.path.join(build_dir, version or ''))
-    temp_dir, source_dir = download_plugins(version)
-    if not os.path.exists(dest_dir):
-        os.makedirs(dest_dir)
-    if json:
-        build_json(source_dir, dest_dir)
-    if zips:
-        zip_files(source_dir, dest_dir)
-
-    shutil.rmtree(temp_dir)
+    try:
+        temp_dir, source_dir = download_plugins(version)
+        if not os.path.exists(dest_dir):
+            os.makedirs(dest_dir)
+        if json:
+            build_json(source_dir, dest_dir)
+        if zips:
+            zip_files(source_dir, dest_dir)
+    except Exception as e:
+        print(e)
+    finally:
+        try:
+            shutil.rmtree(temp_dir)
+        except OSError:
+            pass

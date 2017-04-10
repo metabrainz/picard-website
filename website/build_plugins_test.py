@@ -27,12 +27,19 @@ class GenerateTestCase(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        shutil.rmtree(cls.temp_dir)
+        try:
+            shutil.rmtree(cls.temp_dir)
+        except OSError as e:
+            print(e)
 
     def setUp(self):
         # Destination directory
-        self.dest_dir = tempfile.mkdtemp()
-        self.addCleanup(shutil.rmtree, self.dest_dir)
+        try:
+            self.dest_dir = tempfile.mkdtemp()
+        except OSError as e:
+            print(e)
+        else:
+            self.addCleanup(shutil.rmtree, self.dest_dir)
         self.plugin_file = os.path.join(self.dest_dir, self.PLUGIN_FILE)
 
     def test_generate_json(self):
