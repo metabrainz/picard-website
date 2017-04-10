@@ -91,7 +91,7 @@ def get_plugin(version):
     """
     build_version = get_build_version(current_app, version)
     if build_version:
-        pid = request.args.get('id', None)
+        pid = request.args.get('id')
         return _get_plugin(current_app, build_version, pid)
     else:
         return invalid_api_version(404)
@@ -106,7 +106,7 @@ def download_plugin(version):
     """
     build_version = get_build_version(current_app, version)
     if build_version:
-        pid = request.args.get('id', None)
+        pid = request.args.get('id')
         if pid:
             return _download_plugin(current_app, build_version, pid)
         else:
