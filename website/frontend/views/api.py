@@ -112,6 +112,6 @@ def download_plugin(version):
         else:
             return make_response(
                 jsonify({'error': 'Plugin id not specified.',
-                         'message': 'Correct usage: /api/v1/download?id=<id>'}), 400)
+                         'message': 'Correct usage: /api/%s/download?id=<id>' % version}), 400)
     else:
         return invalid_api_version(404)
