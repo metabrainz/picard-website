@@ -210,14 +210,13 @@ def generate_plugins(build_dir, version=None, json=True, zips=True):
     if not (json or zips):
         return
     dest_dir = os.path.abspath(os.path.join(build_dir, version or ''))
-    supported_versions = [version_from_string(v) for v in VERSION_INFO[version]['api_versions']]
-    temp_dir, source_dir = download_plugins(version)
+    supported_versions = [version_from_string(v) for v in VERSION_INFO[version].get('api_versions')]
     try:
         temp_dir, source_dir = download_plugins(version)
         if not os.path.exists(dest_dir):
             os.makedirs(dest_dir)
         if json:
-            build_json(source_dir, dest_dir)
+            build_json(source_dir, dest_dir, supported_versions)
         if zips:
             zip_files(source_dir, dest_dir)
     except Exception as e:
