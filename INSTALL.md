@@ -1,4 +1,4 @@
-# Installation
+# Installation on Linux
 
 Pre-requisites:
 - python >= 2.7
