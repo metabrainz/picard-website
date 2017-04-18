@@ -10,7 +10,7 @@ plugins_bp = Blueprint('plugins', __name__)
 @plugins_bp.route('/')
 def show_plugins():
     all_plugins = OrderedDict()
-    for version, build_version in sorted(current_app.config['PLUGIN_VERSIONS'].items(), reverse=True):
+    for version, build_version in sorted(current_app.config['PLUGIN_VERSIONS'].items()):
         ordered_plugins = OrderedDict()
         build_json_file = plugins_json_file(current_app, build_version)
         with open(build_json_file, "r") as fp:
