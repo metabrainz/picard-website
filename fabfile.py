@@ -1,4 +1,5 @@
 from __future__ import with_statement
+from os.path import normpath
 from fabric.api import local
 from fabric.colors import green
 from fabric.utils import abort
@@ -51,7 +52,7 @@ def compile_styling():
     This command requires Less (CSS pre-processor). More information about it can be
     found at http://lesscss.org/.
     """
-    local("./node_modules/.bin/gulp")
+    local(normpath("./node_modules/.bin/gulp"))
     print(green("Style sheets have been compiled successfully.", bold=True))
 
 
