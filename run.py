@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 from werkzeug.serving import run_simple
 from website.frontend import create_app
