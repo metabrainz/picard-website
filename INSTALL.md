@@ -27,7 +27,7 @@ cd picard-website
 cp website/config.py.example website/config.py
 ```
 
-Edit website/config.py so that PLUGINS_BUILD_DIR points to where the plugin zip files should be put:
+Edit website/config.py so that PLUGINS_BUILD_DIR points to the directory where the plugin builds are to be generated:
 
 ```bash
 vim website/config.py
