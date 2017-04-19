@@ -1,3 +1,6 @@
+# This configuration is for production / docker
+# You need to copy config.py.example to config.py and edit the file to your own needs
+# to override these values.
 PLUGINS_BUILD_DIR = "/code/plugins"
 PLUGINS_CACHE_TIMEOUT = 5 * 60
 # Flask automatically orders them in ascending order while

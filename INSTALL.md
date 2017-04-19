@@ -27,7 +27,7 @@ cd picard-website
 cp website/config.py.example website/config.py
 ```
 
-Edit website/config.py so that PLUGINS_REPOSITORY points to your local copy of the picard-plugins repository:
+Edit website/config.py so that PLUGINS_BUILD_DIR points to the directory where the plugin builds are to be generated:
 
 ```bash
 vim website/config.py
