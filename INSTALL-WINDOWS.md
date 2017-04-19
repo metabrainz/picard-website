@@ -1,4 +1,4 @@
-# Installation
+# Installation on Windows
 
 Pre-requisites:
 - python >= 2.7
