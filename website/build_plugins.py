@@ -220,7 +220,7 @@ def generate_plugins(build_dir, version=None, json=True, zips=True):
         if zips:
             zip_files(source_dir, dest_dir)
     except Exception as e:
-        print(e)
+        raise e
     finally:
         try:
             shutil.rmtree(temp_dir)

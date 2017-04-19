@@ -1,7 +1,7 @@
 from __future__ import with_statement
 from os.path import normpath
 from fabric.api import local
-from fabric.colors import green
+from fabric.colors import green, red
 from fabric.utils import abort
 from website.build_plugins import generate_plugins
 import website.frontend
@@ -66,9 +66,11 @@ def plugins_generate():
     build_dir = config['PLUGINS_BUILD_DIR']
     for version in versions:
         print(build_dir, version)
-        generate_plugins(build_dir, version)
-        print(green("Plugins files for version %s have been generated successfully." % version, bold=True))
-
+        try:
+            generate_plugins(build_dir, version)
+            print(green("Plugin files for version %s have been generated successfully." % version, bold=True))
+        except Exception as e:
+            print(red("Plugin generation for version %s has FAILED.\nError Occured: %s" % (version, e), bold=True))
 
 def deploy():
     """Compile translations and styling."""
