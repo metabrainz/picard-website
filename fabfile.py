@@ -67,9 +67,9 @@ def plugins_generate():
         print(build_dir, version)
         try:
             generate_plugins(build_dir, version)
-            print(green("Plugins files for version %s have been generated successfully." % version, bold=True))
-        except:
-            print(red("Plugins files for version %s have NOT been generated successfully." % version, bold=True))
+            print(green("Plugin files for version %s have been generated successfully." % version, bold=True))
+        except Exception as e:
+            print(red("Plugin generation for version %s has FAILED.\nError Occured: %s" % (version, e), bold=True))
 
 def deploy():
     """Compile translations and styling."""
