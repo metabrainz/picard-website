@@ -6,34 +6,27 @@
   <div class="row">
     <div class="col-md-8">
       <p>
-        This page is for Microsoft Windows users who want to contribute to the development of 
+        This page is for Microsoft Windows users who want to contribute to the development of
         <a href="/" title="MusicBrainz Picard">MusicBrainz Picard</a>
         or for other reasons want to be able to run Picard from source code.
-        It explains how to install the 3rd party software needed and also 
-        the installer for Windows. 
+        It explains how to install the 3rd party software needed and also
+        the installer for Windows.
       </p>
       <h1 id="requirements">Requirements</h1>
       <p>
-        Picard development (i.e. Github's master branch) is now focused on Picard version 2, 
-        which uses Python 3 and PyQt5. 
-        However if you need to test something in Picard 1.4, 
-        then a separate branch 1.4.x is available to run and this uses Python 2 and PqQt4. 
+        Picard development (i.e. Github's master branch) is now focused on Picard version 2,
+        which uses Python 3 and PyQt5.
+        However if you need to test something in Picard version 1,
+        then a separate branch 1.4.x is available to run and this uses Python 2 and PqQt4.
         Instructions for building each environment are provided below.
       </p>
-      
+
       <h2 id="source">Downloading Picard source</h2>
-      
-      <p>
-        If you are planning to develop and submit changes to Picard source
-        then you should install <a rel="nofollow" target="_blank" href="https://desktop.github.com/">GitHub Desktop</a> 
-        or an alternative Git tool of your choice and use it to create your own local Git clone of Picard.
-      </p>
 
       <p>
-        But if you are planning only to run from source (rather than use the Picard installer / executable), 
-        then you can download and unzip the current master branch from 
-        <a rel="nofollow" href="https://github.com/metabrainz/picard/archive/master.zip">https://github.com/metabrainz/picard/archive/master.zip</a> 
-        or the 1.4.x branch from <a rel="nofollow" href="https://github.com/metabrainz/picard/archive/1.4.x.zip">https://github.com/metabrainz/picard/archive/1.4.x.zip</a>.
+        Install <a rel="nofollow" target="_blank" href="https://desktop.github.com/">GitHub Desktop</a>
+        or an alternative Git tool of your choice and use it to create your own local Git clone of
+        your own fork of the <a target="_blank" href="https://github.com/metabrainz/picard/">Picard's GitHub Repository</a>.
       </p>
 
       <h2 id="python_picard2">Python for Picard version 2</h2>
@@ -42,19 +35,19 @@
 
       <ul>
         <li>
-          Download and install Python 3 for Windows from 
-          <a rel="nofollow" target="_blank" href="http://python.org/downloads/">http://python.org/downloads/</a>. 
+          Download and install Python 3 for Windows from
+          <a rel="nofollow" target="_blank" href="http://python.org/downloads/">http://python.org/downloads/</a>.
           The latest version is recommended, but if you already have Python 3 installed
           then the minimum version is 3.5.
         </li>
         <li>
-          Python should add itself to your %PATH% environment variable, 
+          Python should add itself to your %PATH% environment variable,
           but if not add both the Python install directory and its scripts subdirectory to %PATH%
         </li>
       </ul>
 
       <h3 id="python3_packages">Python 3 packages</h3>
-      
+
       <p>
          You need need the following additional python packages to run Picard from source:
       </p>
@@ -77,25 +70,25 @@
 pip3 install Mutagen>=1.37
 pip3 install discid</pre>
 
-      <h2 id="python_picard1">Python for Picard version 1.4.x</h2>
+      <h2 id="python_picard1">Python for Picard version 1</h2>
 
       <h3 id="python27">Python 2.7.x</h3>
 
       <ul>
         <li>
-          Download and install Python 2.7.x for Windows from 
+          Download and install Python 2.7.x for Windows from
           <a rel="nofollow" target="_blank" href="http://python.org/downloads/">http://python.org/downloads/</a>
         </li>
         <li>
-          Python should add itself to your %PATH% environment variable, 
+          Python should add itself to your %PATH% environment variable,
           but if not add both the Python install directory and its scripts subdirectory to %PATH%
         </li>
       </ul>
 
       <h3 id="python2_packages">Python 2 packages</h3>
-      
+
       <p>
-         You need need the following additional python packages to run Picard 1.4.x from source:
+         You need need the following additional python packages to run Picard version 1 from source:
       </p>
 
       <ul>
@@ -103,38 +96,38 @@ pip3 install discid</pre>
         <li>Mutagen 1.37 or later</li>
         <li>discid</li>
       </ul>
-      
+
       <p>
-        The easiest way to install them is using PIP. 
+        The easiest way to install them is using PIP.
         PIP is included as standard in Python 2.7.9 or later - so this is a good reason to upgrade if you
         already have an earlier version of Python 2.7 installed.
         Alternatively you can install PIP separately on earlier versions or install the above packages manually.
       </p>
-        
+
       <p>
         Assuming that you want to use PIP, open an Administrator command prompt, navigate to the Picard source directory and type:
       </p>
-      
+
       <pre>pip install PyQt4>=4.10
 pip install Mutagen>=1.37
 pip install discid</pre>
-      
+
       <p>
         If you wish to install manually, here are the links you need:
       </p>
-      
+
       <ul>
         <li>PyQt4 - <a rel="nofollow" target="_blank" href="https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/">https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/</a></li>
         <li>
           discid - <a rel="nofollow" target="_blank" href="https://musicbrainz.org/doc/libdiscid">https://musicbrainz.org/doc/libdiscid</a><br />
-          Download "libdiscid-0.6.1-win32.zip" and put "discid.dll" in your Windows\System32 folder
+          Download "libdiscid-0.6.1-win32.zip" and put "discid.dll" in your <i>Windows\System32</i> folder
         </li>
       </ul>
 
       <h1 id="running_picard_from_source">Running Picard From Source</h1>
 
       <h3 id="chromaprint">Chromaprint</h3>
-      
+
       <p>
         If you want to run the Acoustid Scan function when running Picard from source, then you need to install
         the Chromaprint fpcalc program into your Picard source directory.
@@ -142,25 +135,25 @@ pip install discid</pre>
 
       <ul>
         <li>
-          Download <a rel="nofollow" href="https://github.com/acoustid/chromaprint/releases/download/v1.4.2/chromaprint-fpcalc-1.4.2-windows-x86_64.zip">the windows zip file</a> 
+          Download <a rel="nofollow" href="https://github.com/acoustid/chromaprint/releases/download/v1.4.2/chromaprint-fpcalc-1.4.2-windows-x86_64.zip">the x86_64 windows zip file</a>
           from <a rel="nofollow" href="http://acoustid.org/chromaprint">http://acoustid.org/chromaprint</a>
         </li>
         <li>
-          Unzip "chromaprint-fpcalc-1.1-win-i86.zip" and put "fpcalc.exe" to the picard subdirectory 
+          Unzip "chromaprint-fpcalc-1.1-win-i86.zip" and put "fpcalc.exe" to the picard subdirectory
           of your Picard source code directory
         </li>
       </ul>
 
       <h3 id="gettext">gettext</h3>
-      
-      <p> 
-        Picard uses gettext for internationalisation (i.e. for Picard to appear in your local language). 
+
+      <p>
+        Picard uses gettext for internationalisation (i.e. for Picard to appear in your local language).
         To build the language mappings you need to install gettext.
-      </p> 
+      </p>
 
       <ul>
         <li>
-          Download and install <a rel="nofollow" href="https://downloads.sourceforge.net/project/gnuwin32/gettext/0.14.4/gettext-0.14.4.exe">gettext</a> 
+          Download and install <a rel="nofollow" href="https://downloads.sourceforge.net/project/gnuwin32/gettext/0.14.4/gettext-0.14.4.exe">gettext</a>
           from <a rel="nofollow" target="_blank" href="http://gnuwin32.sourceforge.net/packages/gettext.htm">http://gnuwin32.sourceforge.net/packages/gettext.htm</a>.
         </li>
         <li>
@@ -188,10 +181,10 @@ pip install discid</pre>
 
       <ul>
         <li>
-          For Picard v2 / Python 3.5+, download and install py2exe 0.9.2.0 by executing: "pip3 install py2exe"
+          For Picard version 2 / Python 3.5+, download and install py2exe 0.9.2.0 by executing: "pip3 install py2exe"
         </li>
         <li>
-          For Picard v1 / Python 2.7, download and install "py2exe-0.6.9.win32-py2.7.exe" from <a rel="nofollow" href="http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/">http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/</a>
+          For Picard version 1 / Python 2.7, download and install "py2exe-0.6.9.win32-py2.7.exe" from <a rel="nofollow" href="http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/">http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/</a>
         </li>
       </ul>
 
@@ -205,44 +198,44 @@ pip install discid</pre>
       </ul>
 
       <h3 id="visual-cpp">Visual C++</h3>
-      
+
       <p>
-        Picard will run from source using a python version of the Levenshtein Distance fuzzy string comparison, 
+        Picard will run from source using a python version of the Levenshtein Distance fuzzy string comparison,
         however to build the C version for inclusion in the executable package you will need to download and install the
-        Microsoft C++ compiler suitable for the version of Picard / Python you are building for: 
+        Microsoft C++ compiler suitable for the version of Picard / Python you are building for:
       </p>
-        
+
       <h4 id="visual-cpp-py3">Python 2 - Visual C++ 2015 Community</h4>
 
       <p>
-        For Picard version 2 / Python 3, 
-        download <a rel="nofollow" href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Microsoft Visual C++ 14.0 
-        standalone: Visual C++ Build Tools 2015 (x86, x64, ARM)</a> from http://landinghub.visualstudio.com/visual-cpp-build-tools.
+        For Picard version 2 / Python 3,
+        download <a rel="nofollow" href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Microsoft Visual C++ 14.0
+        standalone: Visual C++ Build Tools 2015 (x86, x64, ARM) from http://landinghub.visualstudio.com/visual-cpp-build-tools</a>.
       </p>
-        
+
       <p>
         When you install, select the Windows 8.1 SDK for compile to work.
       </p>
-        
+
       <h4 id="visual-cpp-py2">Python 2 - Visual C++ 2008 Express</h4>
 
       <p>
-        For Picard version 1 / Python 2, 
-        download <a rel="nofollow" href="http://download.microsoft.com/download/A/5/4/A54BADB6-9C3F-478D-8657-93B3FC9FE62D/vcsetup.exe">Visual C++ 2008 Express</a>. 
+        For Picard version 1 / Python 2,
+        download <a rel="nofollow" href="http://download.microsoft.com/download/A/5/4/A54BADB6-9C3F-478D-8657-93B3FC9FE62D/vcsetup.exe">Visual C++ 2008 Express</a>.
       </p>
-        
+
       <p>
-        <b>Note:</b> There is also apparently a cut-down compiler specifically for compiling Python 2.7.x modules available at 
+        <b>Note:</b> There is also apparently a cut-down compiler specifically for compiling Python 2.7.x modules available at
         <a rel="nofollow" target="_blank" href="https://www.microsoft.com/en-gb/download/details.aspx?id=44266">https://www.microsoft.com/en-gb/download/details.aspx?id=44266</a>,
         though the author has not tried this.
       </p>
 
       <h3 id="visual_cpp">Visual C++</h3>
-      
+
       <p>
-        Before you can build the Python executable and installer, you need to build the astrcmp C extension and 
-        language internationalisation. 
-        Start the VS console using "Visual Studio 2008 Command Prompt" or "Visual C++ 2015 MSBuild Command Prompt", 
+        Before you can build the Python executable and installer, you need to build the astrcmp C extension and
+        language internationalisation.
+        Start the VS console using "Visual Studio 2008 Command Prompt" or "Visual C++ 2015 MSBuild Command Prompt",
         go to the Picard source directory and run these commands:
       </p>
 
@@ -250,39 +243,39 @@ pip install discid</pre>
 python setup.py build_locales -i</pre>
 
       <p>
-        Then you need to copy the following files from Visual Studio to 
+        Then you need to copy the following files from Visual Studio to
         to the source code directory, so that py2exe can find them:
       </p>
-        
+
       <ul>
         <li>
-          Picard v2 / Python 3 - msvcp140.dll from 
+          Picard version 2 / Python 3 - msvcp140.dll from
           <i>C:\Program&nbsp;Files&nbsp;(x86)\Microsoft&nbsp;Visual&nbsp;Studio&nbsp;14.0\VC\redist\x86\Microsoft.VC140.CRT</i>
         </li>
         <li>
-          Picard v1 / Python 2 - msvcr90.dll and msvcp90.dll from 
+          Picard version 1 / Python 2 - msvcr90.dll and msvcp90.dll from
           <i>C:\Program&nbsp;Files&nbsp;(x86)\Microsoft&nbsp;Visual&nbsp;Studio&nbsp;9.0\VC\redist\x86\Microsoft.VC90.CRT</i>
         </li>
       </ul>
-        
+
       <p>
-        You also need copy discid.dll (libdiscid) to the picard source.
+        You also need copy discid.dll (libdiscid) to the Picard source.
       </p>
-        
+
       <p>
         Then you can build the installer using this command:
       </p>
       <pre>python setup.py bdist_nsis</pre>
 
       <p>
-        The setup is installer\picard-setup-x.x.exe and an executable for your system is dist\picard.exe, which
+        The setup is <i>installer\picard-setup-x.x.exe</i> and an executable for your system is <i>dist\picard.exe</i>, which
         you can use to create a desktop shortcut.
       </p>
 
       <h1 id="known_issues">Known Issues</h1>
       <p>
         It is possible that the resulting picard.exe does not show the proper file icon.
-        This is probably a bug of py2exe on Vista. 
+        This is probably a bug of py2exe on Vista.
         You can fix the icon with the tool
         <a rel="nofollow" href="http://angusj.com/resourcehacker/">Resource Hacker</a> or any other tool, that
         can edit the resources in executables.
@@ -290,9 +283,12 @@ python setup.py build_locales -i</pre>
 
       <h1 id="support">Support</h1>
       <p>
-        If these instructions do not work, please research and try to solve the problem yourself - 
-        and report the issue and answer in IRC freenode/#metabrainz or by submitting a PR against Picard-Website.
-        If you are unable to resolve the issue after research and need further help, 
+        If these instructions do not work, please research and try to solve the problem yourself -
+        and report the issue and answer in the
+        <a target="_blank" href="https://tickets.metabrainz.org/">Metabrainz Ticketing system</a> under PICARD-WEBSITE
+        and by submitting a PR against the
+        <a target="_blank" href="https://github.com/metabrainz/picard-website/">Picard-Website Github Repository</a>.
+        If you are unable to resolve the issue after research and need further help,
         please use IRC freenode/#metabrainz to request help from the development community.
       </p>
 
@@ -315,7 +311,7 @@ python setup.py build_locales -i</pre>
                 </ul>
               </li>
               <li>
-                <a href="#python_picard1">Python for Picard version 1.4.x</a>
+                <a href="#python_picard1">Python for Picard version 1</a>
                 <ul class="nav">
                   <li><a href="#python27">Python 2.7.x</a></li>
                   <li><a href="#python2_packages">Python 2 packages</a></li>
@@ -339,7 +335,7 @@ python setup.py build_locales -i</pre>
             </ul>
           </li>
           <li><a href="#known_issues">Known Issues</a></li>
-          <li><a href="#support">Known Issues</a></li>
+          <li><a href="#support">Support</a></li>
         </ul>
         <!-- <a class="back-to-top" href="#top"> Back to top </a> -->
       </div>
