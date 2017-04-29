@@ -39,66 +39,6 @@
         <strong>except</strong> when used with special multi-value functions.
       </p>
 
-      <div id="scripting_technical_variables">
-
-        <h1 id="technical_variables">Technical Variables</h1>
-
-          <p>
-            <strong>Note:</strong> The technical variables available for a file depend on the media format
-            e.g. mp3, mp4, flac etc..
-          </p>
-
-        <h3 id="_bitrate">%_bitrate%</h3>
-
-        <ul>
-          <li>The bitrate of the file in Kbps.</li>
-          <li class="example">For example <i>320.0</i> for music ripped at 320Kbps.</li>
-        </ul>
-
-        <h3 id="_channels">%_channels%</h3>
-
-        <ul>
-          <li>The number of separate sound channels in the recording.</li>
-          <li class="example">For example stereo music would have <i>2</i> channels.</li>
-        </ul>
-
-        <h3 id="_dirname">%_dirname%</h3>
-
-        <ul>
-          <li>The directory that the file is currently stored in.</li>
-          <li class="example">For example <i>C:\Music\Abba - Greatest Hits</i>.</li>
-        </ul>
-
-        <h3 id="_filename">%_extension%</h3>
-
-        <ul>
-          <li>The current file name (without the file extension).</li>
-          <li class="example">For example <i>01 Track</i> for file <i>01 Track.mp3</i>.</li>
-        </ul>
-
-        <h3 id="_extension">%_extension%</h3>
-
-        <ul>
-          <li>Extension of the file name.</li>
-          <li class="example">For example <i>mp3</i> for file <i>01 Track.mp3</i>.</li>
-        </ul>
-
-        <h3 id="_format">%_format%</h3>
-
-        <ul>
-          <li>The media format for the file.</li>
-          <li class="example">For example file <i>01 Track.mp3</i> this might be <i>MPEG-1 Layer-3 - ID3v2.3</i>.</li>
-        </ul>
-
-        <h3 id="_samplerate">%_sample_rate%</h3>
-
-        <ul>
-          <li>The number of sound samples per second used when creating the music file.</li>
-          <li class="example">For example <i>44100</i> for music off a CD.</li>
-        </ul>
-
-      </div>
-
       <div id="scripting_functions">
 
         <h1 id="functions">Functions</h1>
@@ -765,7 +705,6 @@ $left(%album%,30) \(%releasestatus%-%releasetype%\)-$if($gt(%totaldiscs%,1),$if2
         <ul class="nav" data-spy="affix" data-offset-top="200">
           <li class="active"><a href="#syntax">Syntax</a></li>
           <li><a href="#metadata_variables">Metadata Variables</a></li>
-          <li><a href="#technical_variables">Technical Variables</a></li>
           <li><a href="#functions">Functions</a></li>
           <li>
             <a href="#tagger_script_examples">Tagger Script Examples</a>
