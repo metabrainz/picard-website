@@ -37,7 +37,7 @@
                 <td>{{ plugin["description"] | safe }}</td>
                 <td>{{ plugin["author"] | safe}}</td>
                 <td class="text-center">
-                  <a class="btn btn-primary btn-sm" href="/api/v1/download?id={{ id }}">{{ _("Download") }}</a>
+                  <a class="btn btn-primary btn-sm" href="/api/v{{version}}/download?id={{ id }}">{{ _("Download") }}</a>
                 </td>
               </tr>
               {% endfor %}
