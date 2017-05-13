@@ -9,8 +9,8 @@
         This page is for Microsoft Windows users who want to contribute to the development of
         <a href="/" title="MusicBrainz Picard">MusicBrainz Picard</a>
         or for other reasons want to be able to run Picard from source code.
-        It explains how to install the 3rd party software needed and also
-        the installer for Windows.
+        It explains how to install the 3rd party software needed to run from source
+        and also to build the Picard for Windows installer executable.
       </p>
       <h1 id="requirements">Requirements</h1>
       <p>
@@ -29,6 +29,8 @@
         your own fork of the <a target="_blank" href="https://github.com/metabrainz/picard/">Picard's GitHub Repository</a>.
       </p>
 
+      <hr/>
+
       <h2 id="python_picard2">Python for Picard version 2</h2>
 
       <h3 id="python35">Python 3.5 or newer</h3>
@@ -46,29 +48,42 @@
         </li>
       </ul>
 
+
       <h3 id="python3_packages">Python 3 packages</h3>
 
       <p>
-         You need need the following additional python packages to run Picard from source:
+         You need the following additional python packages to run Picard from source:
       </p>
 
       <ul>
+        <li>libdiscid</li>
+        <li>discid</li>
         <li>PyQt 5.7.1 or later</li>
         <li>Mutagen 1.37 or later</li>
-        <li>discid</li>
       </ul>
 
       <p>
-         The easiest way to install them is to open an Administrator command prompt, navigate to the Picard source directory and type:
+        To install libdiscid, download "libdiscid-0.6.1-win32.zip" from
+        <a rel="nofollow" target="_blank" href="https://musicbrainz.org/doc/libdiscid">https://musicbrainz.org/doc/libdiscid</a>
+        and put <i>discid.dll</i> in your
+        <i>Windows\System32</i> folder (Windows 32-bit) or
+        <i>Windows\SysWOW64</i> folder (Windows 64-bit).
+      </p>
+
+      <p>
+        The easiest way to install the remaining packages is to open an Administrator command prompt,
+        navigate to the Picard source directory and type:
       </p>
       <pre>pip3 install -r requirements.txt</pre>
 
       <p>
          Alternatively to install them individually run:
       </p>
-      <pre>pip3 install PyQt>=5.7.1
-pip3 install Mutagen>=1.37
-pip3 install discid</pre>
+      <pre>pip3 install discid
+pip3 install PyQt>=5.7.1
+pip3 install Mutagen>=1.37</pre>
+
+      <hr/>
 
       <h2 id="python_picard1">Python for Picard version 1</h2>
 
@@ -93,12 +108,28 @@ pip3 install discid</pre>
 
       <ul>
         <li>PyQt 4.10 or later</li>
-        <li>Mutagen 1.37 or later</li>
+        <li>libdiscid</li>
         <li>discid</li>
+        <li>Mutagen 1.22 or later</li>
       </ul>
 
       <p>
-        The easiest way to install Mutagen is using PIP.
+        You need to install PyQt4 and libdiscid manually.
+      </p>
+
+      <ul>
+        <li>PyQt4 - Download and run the installer from <a rel="nofollow" target="_blank" href="https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/">https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/</a>.</li>
+        <li>
+          libdiscid - Download "libdiscid-0.6.1-win32.zip" from
+          <a rel="nofollow" target="_blank" href="https://musicbrainz.org/doc/libdiscid">https://musicbrainz.org/doc/libdiscid</a>
+          and put <i>discid.dll</i> in your
+          <i>Windows\System32</i> folder (Windows 32-bit) or .
+          <i>Windows\SysWOW64</i> folder (Windows 64-bit).
+        </li>
+      </ul>
+
+      <p>
+        The easiest way to install Mutagen and discid is using PIP.
         PIP is included as standard in Python 2.7.9 or later - so this is a good reason to upgrade if you
         already have an earlier version of Python 2.7 installed.
         Alternatively you can install PIP separately on earlier versions or install the above packages manually.
@@ -108,20 +139,10 @@ pip3 install discid</pre>
         Assuming that you want to use PIP, open an Administrator command prompt, navigate to the Picard source directory and type:
       </p>
 
-      <pre>pip install Mutagen>=1.37</pre>
+      <pre>pip2 install Mutagen>=1.22
+pip2 install discid</pre>
 
-      <p>
-        You need to install PyQt4 and discid manually.
-      </p>
-
-      <ul>
-        <li>PyQt4 - Download and run the installer from <a rel="nofollow" target="_blank" href="https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/">https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/</a>.</li>
-        <li>
-          discid - Download "libdiscid-0.6.1-win32.zip" from
-          <a rel="nofollow" target="_blank" href="https://musicbrainz.org/doc/libdiscid">https://musicbrainz.org/doc/libdiscid</a>
-          and put <i>discid.dll</i> in your <i>Windows\System32</i> folder.
-        </li>
-      </ul>
+      <hr/>
 
       <h1 id="running_picard_from_source">Running Picard From Source</h1>
 
@@ -169,6 +190,8 @@ pip3 install discid</pre>
       </p>
 
       <pre>py tagger.py</pre>
+
+      <hr/>
 
       <h1 id="building_the_installer">Building the Installer</h1>
 
