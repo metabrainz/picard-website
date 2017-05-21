@@ -27,46 +27,10 @@
         <pre>flatpak install flathub org.musicbrainz.Picard</pre>
       </span>
 
-      <h1 id="fedora">Fedora 7, 8 and Higher</h1>
-      <span>
-        <p>Picard is now in the official Fedora package collection: </p>
-        <p>
-          <a rel="nofollow" class="external free" href="https://admin.fedoraproject.org/pkgdb/packages/name/picard">
-            https://admin.fedoraproject.org/pkgdb/packages/name/picard
-          </a>
-        </p>
-        <p>
-          since dependent packages PyQt4 and libdiscid are now also available in Fedora. Just install with yum
-        </p>
-        <pre>yum install picard</pre>
-        <p>
-          Currently these packages do not have support for acoustic fingerprinting because that depends on
-          ffmpeg which isn't available in Fedora due to patent issues in ffmpeg.
-        </p>
-        <p>
-          ffmpeg is available from the livna rpm repository. It is necessary to install the packages ffmpeg
-          and ffmpeg-devel, and rebuild picard from the source RPM in order to enable PUID generation within
-          picard on Fedora.
-        </p>
-      </span>
-
-      <h1 id="mandriva">Mandriva</h1>
-      <span>
-        <p>
-          Picard is available in the Mandriva development version Cooker in the contribs repository. </p>
-        <p>
-          Cooker users can simply install it by running <pre>urpmi picard </pre>
-        </p>
-        <p>or by selecting it in rpmdrake. </p>
-      </span>
-    </div>
-
     <div class="col-md-4">
       <div id="sidebar" class="hidden-xs">
         <ul class="nav" data-spy="affix" data-offset-top="200">
           <li class="active"><a href="#flatpak">Flatpak</a></li>
-          <li><a href="#fedora">Fedora</a></li>
-          <li><a href="#mandriva">Mandriva</a></li>
         </ul>
         <!-- <a class="back-to-top" href="#top"> Back to top </a> -->
       </div>
