@@ -10,6 +10,8 @@ import zipfile
 
 from hashlib import md5
 from tempfile import mkdtemp
+from datetime import datetime, timedelta
+from email.utils import parsedate_tz, mktime_tz
 # for Py2/3 compatibility
 try:
     from urllib import urlretrieve
@@ -64,6 +66,13 @@ class VersionError(Exception):
     pass
 
 
+def datetime_rfc_to_iso(datetime_str):
+    """Parse a RFC2822 datetime string and convert it to ISO8601 datetime in UTC"""
+    timestamp = mktime_tz(parsedate_tz('Wed, 24 May 2017 12:04:14 +0200'))
+    utc_time = datetime(1970, 1, 1) + timedelta(seconds=timestamp)
+    return str(utc_time)
+
+
 def version_from_string(version_str):
     m = _version_re.search(version_str)
     if m:
@@ -104,7 +113,7 @@ def get_plugin_data(filepath):
         if data:
             last_modified = subprocess.check_output(['git', 'log', '-1', '--format=%aD'],
                                                     cwd=os.path.dirname(filepath))
-            data['last_modified'] = last_modified.rstrip()
+            data['last_modified'] = datetime_rfc_to_iso(last_modified.rstrip())
 
         return data
 
