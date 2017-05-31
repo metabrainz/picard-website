@@ -2,6 +2,7 @@
 
 import ast
 import os
+import subprocess
 import json
 import re
 import shutil
@@ -15,7 +16,7 @@ try:
 except ImportError:
     from urllib.request import urlretrieve
 
-PLUGIN_DOWNLOAD_URL = "https://github.com/metabrainz/picard-plugins/archive/%s.zip"
+PLUGIN_GIT_URL = "https://github.com/metabrainz/picard-plugins.git"
 
 # The file that contains json data
 PLUGIN_FILE_NAME = "plugins.json"
@@ -191,16 +192,13 @@ def download_plugins(version=None):
     """Downloads and extracts the plugin source files"""
     temp_dir = mkdtemp(suffix="PICARD-WEBSITE")
     source_path = os.path.join(temp_dir, version or '')
-    zip_path = source_path + ".zip"
 
-    download_url = PLUGIN_DOWNLOAD_URL % (VERSION_INFO[version]['branch_name'])
     print("Downloading files. Please wait....")
-    urlretrieve(download_url, zip_path)
+    subprocess.call(['git', 'clone', PLUGIN_GIT_URL, source_path])
+    os.chdir(source_path)
+    subprocess.call(['git', 'checkout', VERSION_INFO[version]['branch_name']])
 
-    zip_file = zipfile.ZipFile(zip_path)
-    zip_file.extractall(source_path)
-
-    source_dir = os.path.join(source_path, zip_file.namelist()[0], PLUGIN_DIR)
+    source_dir = os.path.join(source_path, PLUGIN_DIR)
     return temp_dir, source_dir
 
 
