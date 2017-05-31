@@ -195,8 +195,7 @@ def download_plugins(version=None):
 
     print("Downloading files. Please wait....")
     subprocess.call(['git', 'clone', PLUGIN_GIT_URL, source_path])
-    os.chdir(source_path)
-    subprocess.call(['git', 'checkout', VERSION_INFO[version]['branch_name']])
+    subprocess.call(['git', 'checkout', VERSION_INFO[version]['branch_name']], cwd=source_path)
 
     source_dir = os.path.join(source_path, PLUGIN_DIR)
     return temp_dir, source_dir
