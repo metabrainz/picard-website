@@ -101,6 +101,11 @@ def get_plugin_data(filepath):
                             print('Cannot evaluate value in '
                                   + filepath + ':' +
                                   ast.dump(node))
+        if data:
+            last_modified = subprocess.check_output(['git', 'log', '-1', '--format=%aD'],
+                                                    cwd=os.path.dirname(filepath))
+            data['last_modified'] = last_modified.rstrip()
+
         return data
 
 
