@@ -21,11 +21,18 @@ class ViewsTestCase(FrontendTestCase):
         self.assert404(response)
 
     def test_api_root(self):
-        response = self.client.get("/api")
-        self.assert404(response)
-        self.assertEquals(response.json, dict(
-            message=_MESSAGES['missing_api_version']))
+        for path in ['/api', '/api/']:
+            response = self.client.get(path)
+            self.assert404(response)
+            self.assertEquals(response.json, dict(
+                message=_MESSAGES['missing_api_version']))
 
+    def test_api_noroute_path(self):
+        "Test API URLs with paths for which no route exists"
+        for path in ['/api/v1/:', '/api/v2/:', '/api/v3/:']:
+            response = self.client.get(path)
+            self.assert404(response)
+            self.assertTemplateUsed('errors/404.html')
     # /v1/
 
     def test_api_v1_redirect(self):
