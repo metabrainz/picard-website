@@ -11,44 +11,26 @@
         <a href="/downloads/#source" title="Source code for MusicBrainz Picard">here</a>.
       </p>
 
-      <h1 id="fedora">Fedora 7, 8 and Higher</h1>
-      <span>
-        <p>Picard is now in the official Fedora package collection: </p>
-        <p>
-          <a rel="nofollow" class="external free" href="https://admin.fedoraproject.org/pkgdb/packages/name/picard">
-            https://admin.fedoraproject.org/pkgdb/packages/name/picard
-          </a>
-        </p>
-        <p>
-          since dependent packages PyQt4 and libdiscid are now also available in Fedora. Just install with yum
-        </p>
-        <pre>yum install picard</pre>
-        <p>
-          Currently these packages do not have support for acoustic fingerprinting because that depends on
-          ffmpeg which isn't available in Fedora due to patent issues in ffmpeg.
-        </p>
-        <p>
-          ffmpeg is available from the livna rpm repository. It is necessary to install the packages ffmpeg
-          and ffmpeg-devel, and rebuild picard from the source RPM in order to enable PUID generation within
-          picard on Fedora.
-        </p>
-      </span>
-
-      <h1 id="mandriva">Mandriva</h1>
+      <h1 id="flatpak">Flatpak</h1>
       <span>
         <p>
-          Picard is available in the Mandriva development version Cooker in the contribs repository. </p>
-        <p>
-          Cooker users can simply install it by running <pre>urpmi picard </pre>
+          Picard is available on <a href="https://flathub.org">Flathub</a>. This version should work on all modern
+          Linux distributions, as long <a href="http://flatpak.org/getting.html">Flatpak is installed</a>.</p>
         </p>
-        <p>or by selecting it in rpmdrake. </p>
+        <p>
+          First enable the Flathub repository:
+        </p>
+        <pre>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</pre>
+        <p>
+          You can now install Picard:
+        </p>
+        <pre>flatpak install flathub org.musicbrainz.Picard</pre>
       </span>
 
     <div class="col-md-4">
       <div id="sidebar" class="hidden-xs">
         <ul class="nav" data-spy="affix" data-offset-top="200">
-          <li class="active"><a href="#fedora">Fedora</a></li>
-          <li><a href="#mandriva">Mandriva</a></li>
+          <li class="active"><a href="#flatpak">Flatpak</a></li>
         </ul>
         <!-- <a class="back-to-top" href="#top"> Back to top </a> -->
       </div>

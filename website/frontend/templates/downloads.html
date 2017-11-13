@@ -141,6 +141,12 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <td>{{ _("All distributions") }} (Flatpak)</td>
+                    <td>
+                      <a href="{{ url_for('docs.show_pages', page='linux', _anchor='flatpak') }}">Instructions</a>
+                    </td>
+                  </tr>
+                  <tr>
                     <td>Arch Linux</td>
                     <td>
                       <a href="https://www.archlinux.org/packages/community/x86_64/picard/">Community</a>
@@ -178,12 +184,6 @@
                       <a href="https://launchpad.net/~musicbrainz-developers/+archive/stable">MusicBrainz Stable PPA</a>
                       &middot
                       <a href="https://launchpad.net/~musicbrainz-developers/+archive/daily">MusicBrainz Daily PPA (Unstable)</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>{{ _("Others") }}</td>
-                    <td>
-                      <a href="{{ url_for('docs.show_pages', page='linux') }}">{{ _("Read the documentation") }}</a>
                     </td>
                   </tr>
                 </tbody>
