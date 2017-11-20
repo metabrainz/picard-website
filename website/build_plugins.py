@@ -24,7 +24,6 @@ PLUGIN_FILE_NAME = "plugins.json"
 PLUGIN_DIR = "plugins"
 
 VERSION_INFO = {
-    None: {'branch_name': 'master'},
     '1.0': {'branch_name': '1.0',
             'api_versions':  # Keep those ordered
             [
@@ -45,6 +44,8 @@ VERSION_INFO = {
             ]
             }
 }
+
+VERSION_INFO[None] = VERSION_INFO['1.0']
 
 KNOWN_DATA = [
     'PLUGIN_NAME',
