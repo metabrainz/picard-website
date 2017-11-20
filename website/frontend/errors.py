@@ -6,11 +6,14 @@ from flask import (
 )
 
 
+_API_ROOT_PATHS = ["/api", "/api/"]
+
+
 def init_error_handlers(app):
 
     @app.errorhandler(404)
     def not_found_handler(error):
-        if request.path.startswith("/api"):
+        if request.path in _API_ROOT_PATHS:
             return make_response(
                 jsonify({"message": "No API version specified"}), 404)
 
