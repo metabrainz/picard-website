@@ -2,6 +2,7 @@
 
 # Docker configuration
 /docker
+!docker/uwsgi.ini
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
