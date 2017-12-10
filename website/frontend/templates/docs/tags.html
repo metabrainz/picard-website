@@ -43,174 +43,219 @@
       </p>
 
       <table class="table table-bordered table-striped">
-        <tr>
-          <td>title</td>
-          <td> <a href="http://musicbrainz.org/doc/Track_Title" title="Track Title">Track Title</a></td>
-        </tr>
-        <tr>
-          <td>artist</td>
-          <td> <a href="http://musicbrainz.org/doc/Track_Artist" title="Track Artist">Track Artist</a> Name(s) (string)</td>
-        </tr>
-        <tr>
-          <td>artists</td>
-          <td> <a href="http://musicbrainz.org/doc/Track_Artist" title="Track Artist">Track Artist</a> Name(s) (multi-value)
-            (since Picard 1.3)</td>
-        </tr>
-        <tr>
-          <td>artistsort</td>
-          <td>Track <a href="http://musicbrainz.org/doc/Style/Artist/Sort_Name" title="Style/Artist/Sort Name">Artist Sort Name</a></td>
-        </tr>
-        <tr>
-          <td>albumartist</td>
-          <td> <a href="http://musicbrainz.org/doc/Release_Artist" title="Release Artist">Release Artist</a></td>
-        </tr>
-        <tr>
-          <td>albumartistsort</td>
-          <td> <a href="http://musicbrainz.org/doc/Release_Artist" title="Release Artist">Release Artist</a>'s
-            <a href="http://musicbrainz.org/doc/Style/Artist/Sort_Name" title="Style/Artist/Sort Name">Sort Name</a></td>
-        </tr>
-        <tr>
-          <td>releasestatus</td>
-          <td> <a href="http://musicbrainz.org/doc/Release_Status" title="Release Status">Release Status</a></td>
-        </tr>
-        <tr>
-          <td>releasetype</td>
-          <td> <a href="http://musicbrainz.org/doc/Release_Group/Type" title="Release Group/Type">Release Group Type</a> (see
-            also _primaryreleasetype / _secondaryreleasetype)</td>
-        </tr>
-        <tr>
-          <td>album</td>
-          <td> <a href="http://musicbrainz.org/doc/Release#Title" title="Release">Release Title</a></td>
-        </tr>
-        <tr>
-          <td>asin</td>
-          <td> <a href="http://musicbrainz.org/doc/ASIN" title="ASIN">ASIN</a></td>
-        </tr>
-        <tr>
-          <td>language</td>
-          <td> <a href="http://musicbrainz.org/doc/Work" title="Work">Work</a> lyric language as per <a rel="nofollow"
-            class="external text" href="http://www.sil.org/iso639-3">ISO 639-3</a>  <b>if</b> track relationships
-            are enabled in Options <b>and</b> a related work exists. (since Picard 0.10)</td>
-        </tr>
-        <tr>
-          <td>script</td>
-          <td> <a href="http://musicbrainz.org/doc/Release_Language#Language_and_script" title="Release Language"
-           >Release Script</a> (since Picard 0.10)</td>
-        </tr>
-        <tr>
-          <td>releasecountry</td>
-          <td> <a href="http://musicbrainz.org/doc/Release_Country" title="Release Country">Release Country</a></td>
-        </tr>
-        <tr>
-          <td>date</td>
-          <td> <a href="http://musicbrainz.org/doc/Release_Date" title="Release Date">Release Date</a> (YYYY-MM-DD)</td>
-        </tr>
-        <tr>
-          <td>originalartist</td>
-          <td>Original <a href="http://musicbrainz.org/doc/Track_Artist" title="Track Artist">Track Artist</a> of the earliest release in the <a href="http://musicbrainz.org/doc/Release_Group" title="Release Group">Release Group</a> intended for the performer(s) of the original recording.</td>
-        </tr>
-        <tr>
-          <td>originalalbum</td>
-          <td>Original <a href="http://musicbrainz.org/doc/Release#Title" title="Release">Release Title</a> of the earliest release in the <a href="http://musicbrainz.org/doc/Release_Group" title="Release Group">Release Group</a> intended for the title of the original recording (or source of sound)</td>
-        </tr>
-        <tr>
-          <td>originaldate</td>
-          <td>
-            Original <a href="http://musicbrainz.org/doc/Release_Date" title="Release Date">Release Date</a>
-            (YYYY-MM-DD) of the earliest release in the
-            <a href="http://musicbrainz.org/doc/Release_Group" title="Release Group">Release Group</a> intended
-            to provide e.g. the release date of the vinyl version of what you have on CD. (Included as standard
-            from Picard 0.15, and using the Original Release Date plugin if you are <b>still</b> using a non-NGS
-            version earlier than Picard 0.15)
-            <p>
-              Note: If you are storing tags in mp3 files as ID3v23 (which is the Windows / iTunes compatible
-              version) then original date can only be stored as a year.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>originalyear</td>
-          <td>Original release year intended for the release year of the original recording.</td>
-        </tr>
-        <tr>
-          <td>catalognumber</td>
-          <td>Release <a href="http://musicbrainz.org/doc/Catalog_Number" title="Catalog Number">Catalog Number</a>(s)</td>
-        </tr>
-        <tr>
-          <td>label</td>
-          <td>Release <a href="http://musicbrainz.org/doc/Label_Name" title="Label Name">Label Name</a>(s)</td>
-        </tr>
-        <tr>
-          <td>barcode</td>
-          <td>Release <a href="http://musicbrainz.org/doc/Barcode" title="Barcode">Barcode</a></td>
-        </tr>
-        <tr>
-          <td>media</td>
-          <td> <a href="http://musicbrainz.org/doc/Release_Format" title="Release Format">Release Format</a></td>
-        </tr>
-        <tr>
-          <td>discnumber</td>
-          <td> <a href="http://musicbrainz.org/doc/Disc_Number" title="Disc Number">Disc Number</a> of
-            the disc in this release that this track is on</td>
-        </tr>
-        <tr>
-          <td>totaldiscs</td>
-          <td>Total number of discs in this release</td>
-        </tr>
-        <tr>
-          <td>discsubtitle</td>
-          <td>The <a href="http://musicbrainz.org/doc/Release_Status#Title_2" title="Release Status">Media Title</a> given
-            to a specific disc.</td>
-        </tr>
-        <tr>
-          <td>tracknumber</td>
-          <td>Track number on the disc</td>
-        </tr>
-        <tr>
-          <td>totaltracks</td>
-          <td>Total tracks on this disc</td>
-        </tr>
-        <tr>
-          <td>isrc</td>
-          <td> <a href="http://musicbrainz.org/doc/ISRC" title="ISRC">ISRC</a> (since Picard 0.12)</td>
-        </tr>
-        <tr>
-          <td>compilation</td>
-          <td>(since Picard 1.3, compatible with iTunes) 1 for Various Artist albums, 0 otherwise
-            <p>(Picard 1.2 or previous) 1 if multiple track artists (including featured artists), 0 otherwise
-            </p></td>
-        </tr>
-        <tr>
-          <td>musicbrainz_trackid</td>
-          <td> <a href="http://musicbrainz.org/doc/Recording" title="Recording">Recording</a>  <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier"
-            title="MusicBrainz Identifier">MusicBrainz Identifier</a></td>
-        </tr>
-        <tr>
-          <td>musicbrainz_releasetrackid</td>
-          <td> <a href="http://musicbrainz.org/doc/Release" title="Release">Release</a> Track <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier"
-            title="MusicBrainz Identifier">MusicBrainz Identifier</a> (since Picard 1.3)</td>
-        </tr>
-        <tr>
-          <td>musicbrainz_artistid</td>
-          <td> <a href="http://musicbrainz.org/doc/Track_Artist" title="Track Artist">Track Artist</a>'s <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier"
-            title="MusicBrainz Identifier">MusicBrainz Identifier</a></td>
-        </tr>
-        <tr>
-          <td>musicbrainz_albumid</td>
-          <td> <a href="http://musicbrainz.org/doc/Release" title="Release">Release</a>  <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier"
-            title="MusicBrainz Identifier">MusicBrainz Identifier</a></td>
-        </tr>
-        <tr>
-          <td>musicbrainz_albumartistid</td>
-          <td> <a href="http://musicbrainz.org/doc/Release_Artist" title="Release Artist">Release Artist</a>'s
-            <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier" title="MusicBrainz Identifier">MusicBrainz Identifier</a></td>
-        </tr>
-        <tr>
-          <td>musicbrainz_discid</td>
-          <td> <a href="http://musicbrainz.org/doc/Disc_ID" title="Disc ID">Disc ID</a> if album added using CD
-            Lookup (since Picard 0.12)</td>
-        </tr>
+          <tr>
+            <td>title</td>
+            <td> <a href="http://musicbrainz.org/doc/Track_Title" title="Track Title">Track Title</a></td>
+          </tr>
+          <tr>
+            <td>artist</td>
+            <td> <a href="http://musicbrainz.org/doc/Track_Artist" title="Track Artist">Track Artist</a> Name(s) (string)</td>
+          </tr>
+          <tr>
+            <td>artists</td>
+            <td> <a href="http://musicbrainz.org/doc/Track_Artist" title="Track Artist">Track Artist</a> Name(s) (multi-value)
+              (since Picard 1.3)</td>
+          </tr>
+          <tr>
+            <td>artistsort</td>
+            <td>Track <a href="http://musicbrainz.org/doc/Style/Artist/Sort_Name" title="Style/Artist/Sort Name">Artist Sort Name</a></td>
+          </tr>
+          <tr>
+            <td>albumartist</td>
+            <td> <a href="http://musicbrainz.org/doc/Release_Artist" title="Release Artist">Release Artist</a></td>
+          </tr>
+          <tr>
+            <td>albumartistsort</td>
+            <td> <a href="http://musicbrainz.org/doc/Release_Artist" title="Release Artist">Release Artist</a>'s
+              <a href="http://musicbrainz.org/doc/Style/Artist/Sort_Name" title="Style/Artist/Sort Name">Sort Name</a></td>
+          </tr>
+          <tr>
+            <td>releasestatus</td>
+            <td> <a href="http://musicbrainz.org/doc/Release_Status" title="Release Status">Release Status</a></td>
+          </tr>
+          <tr>
+            <td>releasetype</td>
+            <td> <a href="http://musicbrainz.org/doc/Release_Group/Type" title="Release Group/Type">Release Group Type</a> (see
+              also _primaryreleasetype / _secondaryreleasetype)</td>
+          </tr>
+          <tr>
+            <td>album</td>
+            <td> <a href="http://musicbrainz.org/doc/Release#Title" title="Release">Release Title</a></td>
+          </tr>
+          <tr>
+            <td>asin</td>
+            <td> <a href="http://musicbrainz.org/doc/ASIN" title="ASIN">ASIN</a></td>
+          </tr>
+          <tr>
+            <td>language</td>
+            <td> <a href="http://musicbrainz.org/doc/Work" title="Work">Work</a> lyric language as per <a rel="nofollow"
+              class="external text" href="http://www.sil.org/iso639-3">ISO 639-3</a>  <b>if</b> track relationships
+              are enabled in Options <b>and</b> a related work exists. (since Picard 0.10)</td>
+          </tr>
+          <tr>
+            <td>script</td>
+            <td> <a href="http://musicbrainz.org/doc/Release_Language#Language_and_script" title="Release Language"
+             >Release Script</a> (since Picard 0.10)</td>
+          </tr>
+          <tr>
+            <td>releasecountry</td>
+            <td> <a href="http://musicbrainz.org/doc/Release_Country" title="Release Country">Release Country</a></td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td> <a href="http://musicbrainz.org/doc/Release_Date" title="Release Date">Release Date</a> (YYYY-MM-DD)</td>
+          </tr>
+          <tr>
+            <td>originalartist</td>
+            <td>Original <a href="http://musicbrainz.org/doc/Track_Artist" title="Track Artist">Track Artist</a> of the earliest release in the <a href="http://musicbrainz.org/doc/Release_Group" title="Release Group">Release Group</a> intended for the performer(s) of the original recording.</td>
+          </tr>
+          <tr>
+            <td>originalalbum</td>
+            <td>Original <a href="http://musicbrainz.org/doc/Release#Title" title="Release">Release Title</a> of the earliest release in the <a href="http://musicbrainz.org/doc/Release_Group" title="Release Group">Release Group</a> intended for the title of the original recording (or source of sound)</td>
+          </tr>
+          <tr>
+            <td>originaldate</td>
+            <td>
+              Original <a href="http://musicbrainz.org/doc/Release_Date" title="Release Date">Release Date</a>
+              (YYYY-MM-DD) of the earliest release in the
+              <a href="http://musicbrainz.org/doc/Release_Group" title="Release Group">Release Group</a> intended
+              to provide e.g. the release date of the vinyl version of what you have on CD. (Included as standard
+              from Picard 0.15, and using the Original Release Date plugin if you are <b>still</b> using a non-NGS
+              version earlier than Picard 0.15)
+              <p>
+                Note: If you are storing tags in mp3 files as ID3v23 (which is the Windows / iTunes compatible
+                version) then original date can only be stored as a year.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>originalyear</td>
+            <td>Original release year intended for the release year of the original recording.</td>
+          </tr>
+          <tr>
+            <td>catalognumber</td>
+            <td>Release <a href="http://musicbrainz.org/doc/Catalog_Number" title="Catalog Number">Catalog Number</a>(s)</td>
+          </tr>
+          <tr>
+            <td>label</td>
+            <td>Release <a href="http://musicbrainz.org/doc/Label_Name" title="Label Name">Label Name</a>(s)</td>
+          </tr>
+          <tr>
+            <td>barcode</td>
+            <td>Release <a href="http://musicbrainz.org/doc/Barcode" title="Barcode">Barcode</a></td>
+          </tr>
+          <tr>
+            <td>media</td>
+            <td> <a href="http://musicbrainz.org/doc/Release_Format" title="Release Format">Release Format</a></td>
+          </tr>
+          <tr>
+            <td>discnumber</td>
+            <td> <a href="http://musicbrainz.org/doc/Disc_Number" title="Disc Number">Disc Number</a> of
+              the disc in this release that this track is on</td>
+          </tr>
+          <tr>
+            <td>totaldiscs</td>
+            <td>Total number of discs in this release</td>
+          </tr>
+          <tr>
+            <td>discsubtitle</td>
+            <td>The <a href="http://musicbrainz.org/doc/Release_Status#Title_2" title="Release Status">Media Title</a> given
+              to a specific disc.</td>
+          </tr>
+          <tr>
+            <td>tracknumber</td>
+            <td>Track number on the disc</td>
+          </tr>
+          <tr>
+            <td>totaltracks</td>
+            <td>Total tracks on this disc</td>
+          </tr>
+          <tr>
+            <td>isrc</td>
+            <td> <a href="http://musicbrainz.org/doc/ISRC" title="ISRC">ISRC</a> (since Picard 0.12)</td>
+          </tr>
+          <tr>
+            <td>compilation</td>
+            <td>(since Picard 1.3, compatible with iTunes) 1 for Various Artist albums, 0 otherwise
+              <p>(Picard 1.2 or previous) 1 if multiple track artists (including featured artists), 0 otherwise
+              </p></td>
+          </tr>
+          <tr>
+            <td>musicbrainz_trackid</td>
+            <td> <a href="http://musicbrainz.org/doc/Recording" title="Recording">Recording</a>  <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier"
+              title="MusicBrainz Identifier">MusicBrainz Identifier</a></td>
+          </tr>
+          <tr>
+            <td>musicbrainz_releasetrackid</td>
+            <td> <a href="http://musicbrainz.org/doc/Release" title="Release">Release</a> Track <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier"
+              title="MusicBrainz Identifier">MusicBrainz Identifier</a> (since Picard 1.3)</td>
+          </tr>
+          <tr>
+            <td>musicbrainz_artistid</td>
+            <td> <a href="http://musicbrainz.org/doc/Track_Artist" title="Track Artist">Track Artist</a>'s <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier"
+              title="MusicBrainz Identifier">MusicBrainz Identifier</a></td>
+          </tr>
+          <tr>
+            <td>musicbrainz_albumid</td>
+            <td> <a href="http://musicbrainz.org/doc/Release" title="Release">Release</a>  <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier"
+              title="MusicBrainz Identifier">MusicBrainz Identifier</a></td>
+          </tr>
+          <tr>
+            <td>musicbrainz_albumartistid</td>
+            <td> <a href="http://musicbrainz.org/doc/Release_Artist" title="Release Artist">Release Artist</a>'s
+              <a href="http://musicbrainz.org/doc/MusicBrainz_Identifier" title="MusicBrainz Identifier">MusicBrainz Identifier</a></td>
+          </tr>
+          <tr>
+            <td>musicbrainz_discid</td>
+            <td> <a href="http://musicbrainz.org/doc/Disc_ID" title="Disc ID">Disc ID</a> if album added using CD
+              Lookup (since Picard 0.12)</td>
+          </tr>
+          <tr>
+            <td>musicbrainz_originalartistid</td>
+            <td>Original Track Artist's MusicBrainz Identifier</td>
+          </tr>
+          <tr>
+            <td>musicbrainz_originalalbumid</td>
+            <td>Original Release's MusicBrainz Identifier</td>
+          </tr>
+          <tr>
+            <td>musicbrainz_recordingid</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>musicbrainz_workid</td>
+            <td>Work Name MusicBrainz Identifier</td>
+          </tr>
+          <tr>
+            <td>musicbrainz_releasegroupid</td>
+            <td>Release Group's MusicBrainz Identifier</td>
+          </tr>
+          <tr>
+            <td>titlesort</td>
+            <td><a href="http://musicbrainz.org/doc/Track_Title" title="Track Title">Track Title</a>'s Sort Name</td>
+          </tr>
+          <tr>
+            <td>albumsort</td>
+            <td>Release Title's Sort Name</td>
+          </tr>
+          <tr>
+            <td>musicip_puid</td>
+            <td>MusicIP PUID’s associated with the track. </td>
+          </tr>
+          <tr>
+            <td>musicip_fingerprint</td>
+            <td>MusicIP's Fingerprint</td>
+          </tr>
+          <tr>
+            <td>acoustid_id</td>
+            <td>Acoustid's associated with the track.</td>
+          </tr>
+          <tr>
+            <td>acoustid_fingerprint</td>
+            <td>Acoustid's Fingerprint</td>
+          </tr>
       </table>
+
 
       <h1 id="basic_variables">Basic Variables</h1>
 
@@ -331,6 +376,10 @@
           <td>composer</td>
           <td> <a href="http://musicbrainz.org/relationship/d59d99ea-23d4-4a80-b066-edca32ee158f" class="extiw"
             title="rt:d59d99ea-23d4-4a80-b066-edca32ee158f">Composer Relationship Type</a></td>
+        </tr>
+        <tr>
+          <td>composersort</td>
+          <td>Composer Relationship Type's Sort Name</td>
         </tr>
         <tr>
           <td>conductor</td>
