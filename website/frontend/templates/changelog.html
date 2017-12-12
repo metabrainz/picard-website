@@ -12,7 +12,7 @@
           </h3>
         {% else %}
           {% if line is re_search("(PICARD\-\d+)") %}
-            {% set data = line | re_sub("(PICARD\-\d+)", '<a href="http://tickets.musicbrainz.org/browse/\g<1>">\g<1></a>') | safe %}
+            {% set data = line | re_sub("(PICARD\-\d+)", '<a href="https://tickets.musicbrainz.org/browse/\g<1>">\g<1></a>') | safe %}
           {% elif line is re_search("#(\d+)") %}
             {% set data = line | re_sub("#(\d+)", '<a href="http://bugs.musicbrainz.org/ticket/\g<1>">#\g<1></a>') | safe %}
           {% else %}
