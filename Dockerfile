@@ -1,4 +1,4 @@
-FROM python:2.7.13
+FROM python:3.6.4
 
 ARG BUILD_DEPS=" \
     build-essential \

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import re
-import cgi
+import html
 
 
 def encode_entities(string, quote=True):
-    return cgi.escape(string.decode('utf-8'), quote).encode('ascii', 'xmlcharrefreplace')
+    return html.escape(string, quote).encode('ascii', 'xmlcharrefreplace').decode('ascii')
 
 
 def expand(string, args, tag='a', default_attribute='href'):
@@ -12,7 +12,7 @@ def expand(string, args, tag='a', default_attribute='href'):
     def make_link(match):
         var = match.group(1)
         text = match.group(2)
-        if text in args.keys():
+        if text in list(args.keys()):
             final_text = args[text]
         else:
             final_text = text
@@ -32,14 +32,14 @@ def expand(string, args, tag='a', default_attribute='href'):
 
     def simple_expr(match):
         var = match.group(1)
-        if var in args.keys():
+        if var in list(args.keys()):
             return args[var]
         return '{' + var + '}'
 
-    r = '|'.join([re.escape(k) for k in args.keys()])
+    r = '|'.join([re.escape(k) for k in list(args.keys())])
 
-    r1 = re.compile('\{(' + r + ')\|(.*?)\}', re.UNICODE)
-    r2 = re.compile('\{(' + r + ')\}', re.UNICODE)
+    r1 = re.compile('\{(' + r + ')\|(.*?)\}')
+    r2 = re.compile('\{(' + r + ')\}')
 
     string = r1.sub(make_link, string)
     string = r2.sub(simple_expr, string)

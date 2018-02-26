@@ -11,7 +11,7 @@ from hashlib import md5
 from tempfile import mkdtemp
 # for Py2/3 compatibility
 try:
-    from urllib import urlretrieve
+    from urllib.request import urlretrieve
 except ImportError:
     from urllib.request import urlretrieve
 
@@ -85,7 +85,7 @@ def get_plugin_data(filepath):
         try:
             root = ast.parse(source, filepath)
         except Exception:
-            print("Cannot parse " + filepath)
+            print(("Cannot parse " + filepath))
             raise
         for node in ast.iter_child_nodes(root):
             if isinstance(node, ast.Assign) and len(node.targets) == 1:
@@ -98,9 +98,9 @@ def get_plugin_data(filepath):
                         try:
                             data[name] = ast.literal_eval(node.value)
                         except ValueError:
-                            print('Cannot evaluate value in '
+                            print(('Cannot evaluate value in '
                                   + filepath + ':' +
-                                  ast.dump(node))
+                                  ast.dump(node)))
         return data
 
 
@@ -136,7 +136,7 @@ def build_json(source_dir, dest_dir, supported_versions=None):
             if ((supported_versions
                  and set(map(version_from_string, data['api_versions'])) & set(supported_versions))
                  or not supported_versions):
-                print("Added: " + dirname)
+                print(("Added: " + dirname))
                 data['files'] = files
                 plugins[dirname] = data
     out_path = os.path.join(dest_dir, PLUGIN_FILE_NAME)
@@ -185,7 +185,7 @@ def zip_files(source_dir, dest_dir):
                                   name_in_zip,
                                   compress_type=zipfile.ZIP_DEFLATED)
 
-            print("Created: " + dirname + ".zip")
+            print(("Created: " + dirname + ".zip"))
 
 
 def download_plugins(version=None):
