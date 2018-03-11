@@ -126,8 +126,10 @@ def get_versions(version):
     """
     Provides latest version numbers and download urls for the release paths
     """
+    ret_obj = {}
+    ret_obj['versions'] = picard_versions(current_app)
     if version and get_build_version(current_app, version):
         return make_response(
-            jsonify({'versions': picard_versions(current_app)), 200)
+            jsonify(ret_obj), 200)
     else:
         return invalid_api_version(404)
