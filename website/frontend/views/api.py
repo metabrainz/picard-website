@@ -128,6 +128,6 @@ def get_versions(version):
     """
     if version and get_build_version(current_app, version):
         return make_response(
-            jsonify({'versions': picard_versions(current_app), 200)
+            jsonify({'versions': picard_versions(current_app)), 200)
     else:
         return invalid_api_version(404)
