@@ -8,9 +8,9 @@ from website.build_plugins import download_plugins, build_json, zip_files
 
 # python 2 & 3 compatibility
 try:
-    basestring
+    str
 except NameError:
-    basestring = str
+    str = str
 
 
 class GenerateTestCase(unittest.TestCase):
@@ -97,9 +97,9 @@ class GenerateTestCase(unittest.TestCase):
             plugin_json = json.load(in_file)["plugins"]
 
         # All plugins should contain all required fields
-        for module_name, data in plugin_json.items():
-            self.assertIsInstance(data['name'], basestring)
+        for module_name, data in list(plugin_json.items()):
+            self.assertIsInstance(data['name'], str)
             self.assertIsInstance(data['api_versions'], list)
-            self.assertIsInstance(data['author'], basestring)
-            self.assertIsInstance(data['description'], basestring)
-            self.assertIsInstance(data['version'], basestring)
+            self.assertIsInstance(data['author'], str)
+            self.assertIsInstance(data['description'], str)
+            self.assertIsInstance(data['version'], str)

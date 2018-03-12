@@ -1,4 +1,4 @@
-from urllib import urlopen
+from urllib.request import urlopen
 from flask import current_app, Blueprint, render_template
 import re
 
@@ -23,7 +23,7 @@ def load_changelog(app):
     data = app.cache.get(key)
     if data is None:
         url = app.config['CHANGELOG_URL']
-        data = urlopen(url).read().decode("utf-8-sig").splitlines()
+        data = urlopen(url).read().decode().splitlines()
         app.cache.set(key, data, timeout=app.config['CHANGELOG_CACHE_TIMEOUT'])
     return data
 
