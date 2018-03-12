@@ -10,6 +10,11 @@ PLUGIN_VERSIONS = {
     'v1': '1.0',
     'v2': '2.0',
 }
+PICARD_VERSIONS = {
+    'stable': ('1.4.2', 'http://picard.musicbrainz.org/'),
+    'beta': ('2.0.0.beta1', 'https://github.com/metabrainz/picard/releases/tag/2.0.0.dev4'),
+    'dev': ('2.0.0.dev4', 'https://github.com/metabrainz/picard/releases/tag/2.0.0.dev4'),
+}
 CHANGELOG_URL = "https://raw.githubusercontent.com/musicbrainz/picard/master/NEWS.txt"
 CHANGELOG_CACHE_TIMEOUT = 5 * 60
 

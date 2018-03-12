@@ -71,6 +71,10 @@ def invalid_api_version(error):
     return make_response(jsonify({'error': 'Invalid API version'}), 404)
 
 
+def picard_versions(app):
+    return app.config['PICARD_VERSIONS']
+
+
 @api_bp.route('/<version>/', methods=['GET'])
 def api_root(version):
     """
@@ -113,5 +117,19 @@ def download_plugin(version):
             return make_response(
                 jsonify({'error': 'Plugin id not specified.',
                          'message': 'Correct usage: /api/%s/download?id=<id>' % version}), 400)
+    else:
+        return invalid_api_version(404)
+
+
+@api_bp.route('/<version>/releases/', methods=['GET'])
+def get_versions(version):
+    """
+    Provides latest version numbers and download urls for the release paths
+    """
+    ret_obj = {}
+    ret_obj['versions'] = picard_versions(current_app)
+    if version and get_build_version(current_app, version):
+        return make_response(
+            jsonify(ret_obj), 200)
     else:
         return invalid_api_version(404)
