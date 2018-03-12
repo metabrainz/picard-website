@@ -80,7 +80,7 @@
          Alternatively to install them individually run:
       </p>
       <pre>pip3 install discid
-pip3 install PyQt>=5.7.1
+pip3 install PyQt5>=5.7.1
 pip3 install Mutagen>=1.37</pre>
 
       <hr/>
@@ -118,7 +118,9 @@ pip3 install Mutagen>=1.37</pre>
       </p>
 
       <ul>
-        <li>PyQt4 - Download and run the installer from <a rel="nofollow" target="_blank" href="https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/">https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/</a>.</li>
+        <li>PyQt4 - Riverbank Computing (authors of PyQt) no longer maintains an installation executable for the latest versions of PyQt.
+          The most recent Windows installer, for PyQt v4.11.4, is suitable for Picard v1 and can be downloaded and run from SourceForge
+          <a rel="nofollow" target="_blank" href="https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/">https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/</a>.</li>
         <li>
           libdiscid - Download "libdiscid-0.6.1-win32.zip" from
           <a rel="nofollow" target="_blank" href="https://musicbrainz.org/doc/libdiscid">https://musicbrainz.org/doc/libdiscid</a>
@@ -141,6 +143,11 @@ pip3 install Mutagen>=1.37</pre>
 
       <pre>pip2 install Mutagen>=1.22
 pip2 install discid</pre>
+
+      <p>
+        <b>Note:</b> If you get an error message "'pip2' is not recognized as an internal or external command, operable program or batch file." try fixing this with:
+        <pre>python -m ensurepip --default-pip</pre>
+      </p>
 
       <hr/>
 
