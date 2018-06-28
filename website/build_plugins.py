@@ -2,6 +2,7 @@
 
 import ast
 import os
+import subprocess
 import json
 import re
 import shutil
@@ -9,13 +10,15 @@ import zipfile
 
 from hashlib import md5
 from tempfile import mkdtemp
+from datetime import datetime, timedelta
+from email.utils import parsedate_tz, mktime_tz
 # for Py2/3 compatibility
 try:
     from urllib import urlretrieve
 except ImportError:
     from urllib.request import urlretrieve
 
-PLUGIN_DOWNLOAD_URL = "https://github.com/metabrainz/picard-plugins/archive/%s.zip"
+PLUGIN_GIT_URL = "https://github.com/metabrainz/picard-plugins.git"
 
 # The file that contains json data
 PLUGIN_FILE_NAME = "plugins.json"
@@ -64,6 +67,13 @@ class VersionError(Exception):
     pass
 
 
+def datetime_rfc_to_iso(datetime_str):
+    """Parse a RFC2822 datetime string and convert it to ISO8601 datetime in UTC"""
+    timestamp = mktime_tz(parsedate_tz(datetime_str))
+    utc_time = datetime(1970, 1, 1) + timedelta(seconds=timestamp)
+    return str(utc_time)
+
+
 def version_from_string(version_str):
     m = _version_re.search(version_str)
     if m:
@@ -101,6 +111,12 @@ def get_plugin_data(filepath):
                             print('Cannot evaluate value in '
                                   + filepath + ':' +
                                   ast.dump(node))
+        if data:
+            last_modified = subprocess.check_output(['git', 'log', '-1', '--format=%aD',
+                                                    os.path.basename(filepath)],
+                                                    cwd=os.path.dirname(filepath))
+            data['last_modified'] = datetime_rfc_to_iso(last_modified.rstrip())
+
         return data
 
 
@@ -192,16 +208,12 @@ def download_plugins(version=None):
     """Downloads and extracts the plugin source files"""
     temp_dir = mkdtemp(suffix="PICARD-WEBSITE")
     source_path = os.path.join(temp_dir, version or '')
-    zip_path = source_path + ".zip"
 
-    download_url = PLUGIN_DOWNLOAD_URL % (VERSION_INFO[version]['branch_name'])
     print("Downloading files. Please wait....")
-    urlretrieve(download_url, zip_path)
+    subprocess.call(['git', 'clone', PLUGIN_GIT_URL, source_path])
+    subprocess.call(['git', 'checkout', VERSION_INFO[version]['branch_name']], cwd=source_path)
 
-    zip_file = zipfile.ZipFile(zip_path)
-    zip_file.extractall(source_path)
-
-    source_dir = os.path.join(source_path, zip_file.namelist()[0], PLUGIN_DIR)
+    source_dir = os.path.join(source_path, PLUGIN_DIR)
     return temp_dir, source_dir
 
 

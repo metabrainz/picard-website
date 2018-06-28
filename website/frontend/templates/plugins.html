@@ -16,9 +16,10 @@
           <div class="table-responsive">
             <table class="table table-bordered table-hover">
               <col width="175px" name="Name"/>
-              <col width="100px" name="Version"/>
-              <col width="500px" name="Description"/>
-              <col width="150px" name="Author"/>
+              <col width="80px" name="Version"/>
+              <col width="450px" name="Description"/>
+              <col width="120px" name="Author"/>
+              <col width="100px" name="Last Modified"/>
               <col width="100px" name="Download"/>
               <thead>
                 <tr>
@@ -26,6 +27,7 @@
                   <th class="text-center">{{ _("Version") }}</th>
                   <th class="text-center">{{ _("Description") }}</th>
                   <th class="text-center">{{ _("Author(s)") }}</th>
+                  <th class="text-center">{{ _("Last Modified") }}</th>
                   <th class="text-center"></th>
                 </tr>
               </thead>
@@ -36,6 +38,9 @@
                 <td>{{ plugin["version"] }}</td>
                 <td>{{ plugin["description"] | safe }}</td>
                 <td>{{ plugin["author"] | safe}}</td>
+                <td>
+                  <time class="timeago" datetime="{{ plugin["last_modified"] | safe}}">{{ plugin["last_modified"] | safe}}</time>
+                </td>
                 <td class="text-center">
                   <a class="btn btn-primary btn-sm" href="/api/v{{version}}/download?id={{ id }}">{{ _("Download") }}</a>
                 </td>
@@ -48,3 +53,13 @@
       </div>
     </div>
 {% endblock %}
+
+{%- block scripts %}
+{{ super() }}
+
+<script>
+  jQuery(document).ready(function() {
+    jQuery("time.timeago").timeago();
+  });jQuery
+</script>
+{% endblock -%}
