@@ -11,40 +11,52 @@
             {{ _("The table is generated from the data of our plugin {urlrepo|repository}.")|expand({"urlrepo": "https://github.com/musicbrainz/picard-plugins"}) }}
         </p>
         {% endautoescape %}
+        <ul class="nav nav-tabs">
+        {% for version in all_plugins.keys() %}
+          <li {% if version == '1' %} class="active" {% endif %}>
+            <a data-toggle="tab" href="#apiv{{version}}">API v{{version}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+        <div class="tab-content">
         {% for version, plugins in all_plugins.items() %}
-        <h3>API Version: <strong>{{version}}</strong></h3>
-          <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-              <col width="175px" name="Name"/>
-              <col width="100px" name="Version"/>
-              <col width="500px" name="Description"/>
-              <col width="150px" name="Author"/>
-              <col width="100px" name="Download"/>
-              <thead>
-                <tr>
-                  <th class="text-center">{{ _("Name") }}</th>
-                  <th class="text-center">{{ _("Version") }}</th>
-                  <th class="text-center">{{ _("Description") }}</th>
-                  <th class="text-center">{{ _("Author(s)") }}</th>
-                  <th class="text-center"></th>
-                </tr>
-              </thead>
-              <tbody>
-              {% for id, plugin in plugins.items() %}
-              <tr>
-                <td>{{ plugin["name"] }}</td>
-                <td>{{ plugin["version"] }}</td>
-                <td>{{ plugin["description"] | safe }}</td>
-                <td>{{ plugin["author"] | safe}}</td>
-                <td class="text-center">
-                  <a class="btn btn-primary btn-sm" href="/api/v{{version}}/download?id={{ id }}">{{ _("Download") }}</a>
-                </td>
-              </tr>
-              {% endfor %}
-              </tbody>
-            </table>
+          <div class="tab-pane {{'active' if version == '1' }}" id="apiv{{version}}">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <col width="175px" name="Name"/>
+                <col width="100px" name="Version"/>
+                <col width="500px" name="Description"/>
+                <col width="150px" name="Author"/>
+                <col width="100px" name="Download"/>
+                <thead>
+                  <tr>
+                    <th class="text-center">{{ _("Name") }}</th>
+                    <th class="text-center">{{ _("Version") }}</th>
+                    <th class="text-center">{{ _("Description") }}</th>
+                    <th class="text-center">{{ _("Author(s)") }}</th>
+                    <th class="text-center"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for id, plugin in plugins.items() %}
+                  <tr>
+                    <td>{{ plugin["name"] }}</td>
+                    <td>{{ plugin["version"] }}</td>
+                    <td>{{ plugin["description"] | safe }}</td>
+                    <td>{{ plugin["author"] | safe}}</td>
+                    <td class="text-center">
+                      <a class="btn btn-primary btn-sm" href="/api/v{{version}}/download?id={{ id }}">
+                        {{ _("Download") }}
+                      </a>
+                    </td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
           </div>
         {% endfor %}
+        </div>
       </div>
     </div>
 {% endblock %}
