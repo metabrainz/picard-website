@@ -10,6 +10,36 @@ PLUGIN_VERSIONS = {
     'v1': '1.0',
     'v2': '2.0',
 }
+
+ # PICARD_VERSIONS dictionary valid keys are: 'stable', 'beta' and 'dev'.
+ # The 'version' tuple comprises int_major, int_minor, int_micro, str_type and int_development as defined in PEP-440.
+ # The Picard developers have standardized on using only 'dev' or 'final' as the str_type segment of the version tuple.
+PICARD_VERSIONS = {
+    'stable': {
+        'tag': '2.0.1',
+        'version': ( 2, 0, 1, 'final', 0),
+        'urls': {
+            'download': 'https://picard.musicbrainz.org/',
+            'changelog': 'https://picard.musicbrainz.org/changelog/',
+        }
+    },
+    'beta': {
+        'tag': '2.0.0.beta3',
+        'version': ( 2, 0, 0, 'dev', 6),
+        'urls': {
+            'download': 'https://github.com/metabrainz/picard/releases/tag/2.0.0dev6',
+            'changelog': 'https://github.com/metabrainz/picard/compare/2.0.0dev6...master',
+        }
+    },
+    'dev': {
+        'tag': '2.0.2.dev1',
+        'version': ( 2, 0, 2, 'dev', 1),
+        'urls': {
+            'download': 'https://github.com/metabrainz/picard',
+        }
+    },
+}
+
 CHANGELOG_URL = "https://raw.githubusercontent.com/musicbrainz/picard/master/NEWS.txt"
 CHANGELOG_CACHE_TIMEOUT = 5 * 60
 
