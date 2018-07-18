@@ -109,7 +109,7 @@
       if (/^Win/.test(platform) || /Windows/.test(navigator.userAgent)) {
         downloadURL = "http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-2.0.exe";
         iconClass = "fa-windows";
-        infoText = "v2.0 for Windows 64-bit";
+        infoText = "v2.0 for Windows (64-bit)";
 
       } else if (/Linux/.test(platform)) {
         downloadURL = "{{ url_for('frontend.show_downloads') }}#linux";

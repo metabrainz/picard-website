@@ -7,11 +7,11 @@
           {{ _("Picard is available for all major platforms. Just download and start the installer. It's that easy.") }}
         </p>
         <ul id="downloads">
-          <a name="windows"></a>
+          <a name="windows64"></a>
           <li class="download-item">
             <h3>
             <i class="fa fa-windows fa-2x"></i>
-            {{ _("Picard for <strong>Windows</strong>") }}
+            {{ _("Picard for <strong>Windows (64-bit)</strong>") }}
             </h3>
 
             <div class="table-responsive download-table">
@@ -48,11 +48,52 @@
             {% endautoescape %}
           </li>
 
+          <a name="windows32"></a>
+          <li class="download-item">
+            <h3>
+            <i class="fa fa-windows fa-2x"></i>
+            {{ _("Picard for <strong>Windows (32-bit)</strong>") }}
+            </h3>
+
+            <div class="table-responsive download-table">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>{{ _("Picard Version") }}</th>
+                    <th>{{ _("MD5 Hash") }}</th>
+                    <th>{{ _("Size") }}</th>
+                    <th>{{ _("Link") }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.4.2</td>
+                    <td>dc5a3cb4c55885a65a14fed51fd39bb1</td>
+                    <td>9.5 MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.4.2.exe">{{ _('US Mirror') }}</a></li>
+                          <li><a href="ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/picard-setup-1.4.2.exe">{{ _('EU Mirror') }}</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            {% autoescape false %}
+            <p>{{ _("If you get an error about being unable to run the program, install the {url|Microsoft Visual C++ 2008 Redistributable Package (x86)}.")|expand({'url': 'http://www.microsoft.com/downloads/details.aspx?FamilyID=9b2da534-3e03-4391-8a4d-074b9f2bc1bf&displaylang=en'}) }}</p>
+            {% endautoescape %}
+          </li>
+
           <a name="mac"></a>
           <li class="download-item">
             <h3>
             <i class="fa fa-apple fa-2x"></i>
-            {{ _('Picard for <strong>Mac OS X 10.7+ (x86_64)</strong>') }}
+            {{ _('Picard for <strong>Mac OS X 10.10+ (x86_64)</strong>') }}
             </h3>
 
             <div class="table-responsive download-table">
@@ -77,6 +118,44 @@
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-2.0.dmg">{{ _('US Mirror') }}</a></li>
                           <li><a href="ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-2.0.dmg">{{ _('EU Mirror') }}</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+
+          <a name="mac10.7-10.9"></a>
+          <li class="download-item">
+            <h3>
+            <i class="fa fa-apple fa-2x"></i>
+            {{ _('Picard for <strong>Mac OS X 10.7-10.9 (x86_64)</strong>') }}
+            </h3>
+
+            <div class="table-responsive download-table">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>{{ _("Picard Version") }}</th>
+                    <th>{{ _("MD5 Hash") }}</th>
+                    <th>{{ _("Size") }}</th>
+                    <th>{{ _("Link") }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.4.2</td>
+                    <td>bb9bdae898cb7c0702ff452a3ff4429c</td>
+                    <td>17 MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.4.2.dmg">{{ _('US Mirror') }}</a></li>
+                          <li><a href="ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.4.2.dmg">{{ _('EU Mirror') }}</a></li>
                         </ul>
                       </div>
                     </td>
