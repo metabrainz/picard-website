@@ -23,7 +23,7 @@ RUN apt-get install -y nodejs
 WORKDIR /code/website
 
 # Python dependencies
-RUN pip install uWSGI==2.0.13.1
+RUN pip install uWSGI==2.0.17.1
 COPY ./requirements.txt /code/website
 RUN pip install -r requirements.txt
 
