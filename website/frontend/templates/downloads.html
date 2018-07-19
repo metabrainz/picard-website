@@ -44,7 +44,7 @@
               </table>
             </div>
             {% autoescape false %}
-            <p>{{ _("If you get an error about being unable to run the program, install the {url|Microsoft Visual C++ 2008 Redistributable Package (x86)}.")|expand({'url': 'http://www.microsoft.com/downloads/details.aspx?FamilyID=9b2da534-3e03-4391-8a4d-074b9f2bc1bf&displaylang=en'}) }}</p>
+            <p>{{ _("If you get SSL errors or Picard 2.0 crashes on Windows 7, check our {url|FAQ page} for information on how to fix it.")|expand({'url': url_for('docs.show_pages', page='faq') + "#ssl-error" }) }}</p>
             {% endautoescape %}
           </li>
 

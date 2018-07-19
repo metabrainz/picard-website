@@ -13,6 +13,12 @@
         <a href="/quick-start/" title="How to Tag Files With Picard">explains the tagging process</a>.
       </p>
 
+      <h3 id="ssl-error">How do I fix Picard 2.0 crashes on Windows 7 or SSL errors while tagging my files?</h3>
+      <p>
+        Qt5, one of the dependencies of Picard requires a newer version of OpenSSL. Some versions of Windows ship with an older
+        version which causes Qt5 to throw an error. To fix this, simply download the latest <a href="https://indy.fulgan.com/SSL/openssl-1.0.2o-x64_86-win64.zip"> OpenSSL 1.0.2 64-bit binaries</a> and put the two DLLs (ssleay32.dll, libeay32.dll) in the same folder as the Picard 2.0 executable.
+      </p>
+
       <h3 id="tagger-icon">
       The green "Tagger" icon disappeared from MusicBrainz.org, how do I get it back?</h3>
 
