@@ -107,19 +107,19 @@
       var platform = navigator.platform, downloadURL, iconClass, infoText;
 
       if (/^Win/.test(platform) || /Windows/.test(navigator.userAgent)) {
-        downloadURL = "http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-2.0.exe";
+        downloadURL = "http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-2.0.1.exe";
         iconClass = "fa-windows";
-        infoText = "v2.0 for Windows (64-bit)";
+        infoText = "v2.0.1 for Windows (64-bit)";
 
       } else if (/Linux/.test(platform)) {
         downloadURL = "{{ url_for('frontend.show_downloads') }}#linux";
         iconClass = "fa-linux";
-        infoText = "v2.0 for Linux Distributions";
+        infoText = "v2.0.1 for Linux Distributions";
 
       } else if (platform === "MacIntel" || platform === "MacPPC") {
-        downloadURL = "ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-2.0.dmg";
+        downloadURL = "ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-2.0.1.dmg";
         iconClass = "fa-apple";
-        infoText = "v2.0 for OS X 10.10+";
+        infoText = "v2.0.1 for OS X 10.10+";
       }
 
       if (downloadURL) {
