@@ -1,12 +1,12 @@
 from website.frontend.testing import FrontendTestCase
 from flask import url_for
-
+import re
 
 _MESSAGES = {
     'plugin_not_found': 'Plugin not found.',
     'missing_api_version': 'No API version specified',
     'invalid_endpoint': 'The endpoints currently available for this api version'
-                        ' are /api/v1/plugins, /api/v1/download and /api/v1/releases',
+                        ' are /api/v1/plugins, /api/v1/download and /api/releases',
     'missing_id': 'Plugin id not specified.',
     'download_usage': 'Correct usage: /api/v1/download?id=<id>',
 }
@@ -99,3 +99,34 @@ class ViewsTestCase(FrontendTestCase):
         response = self.client.get("/api/v1/download/?id=addrelease")
         self.assert200(response)
         self.assertEquals(response.content_type, 'application/zip')
+
+    # /v1/releases
+
+    def test_api_v1_releases(self):
+        "Test /api/releases"
+        url_re = re.compile(r'^(ftp|https?)://[^\s"]+$', re.IGNORECASE)
+        response = self.client.get("/api/releases/")
+        self.assert200(response)
+        updates = response.json['versions']
+        self.assertIsInstance(updates, dict)
+        for testkey in ['stable', 'beta', 'dev']:
+            self.assertIn(testkey, updates)
+            for subkey in ['tag', 'version', 'urls']:
+                self.assertIn(subkey, updates[testkey])
+            # Tag tests
+            self.assertIsInstance(updates[testkey]['tag'], basestring)
+            self.assertNotEqual(updates[testkey]['tag'], '')
+            # Version tests
+            self.assertIsInstance(updates[testkey]['version'], list)
+            self.assertEquals(len(updates[testkey]['version']), 5)
+            for i in [0, 1, 2, 4]:
+                self.assertIsInstance(updates[testkey]['version'][i], int)
+                self.assertEquals(updates[testkey]['version'][i] >= 0, True)
+            self.assertIsInstance(updates[testkey]['version'][3], basestring)
+            self.assertIn(updates[testkey]['version'][3], ['final', 'dev'])
+            # Url tests
+            self.assertIn('download', updates[testkey]['urls'])     # Confirm download url always exists
+            for urlkey in updates[testkey]['urls']:
+                # Basic validation on all urls provided
+                self.assertIsInstance(updates[testkey]['urls'][urlkey], basestring)
+                self.assertRegexpMatches(updates[testkey]['urls'][urlkey], url_re)

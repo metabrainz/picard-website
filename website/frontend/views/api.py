@@ -83,8 +83,8 @@ def api_root(version):
     if version and get_build_version(current_app, version):
         return make_response(
             jsonify({'message': 'The endpoints currently available for this api version'
-                     ' are /api/%s/plugins, /api/%s/download and /api/%s/releases' %
-                     (version, version, version)}), 200)
+                     ' are /api/%s/plugins, /api/%s/download and /api/releases' %
+                     (version, version)}), 200)
     else:
         return invalid_api_version(404)
 
@@ -122,8 +122,8 @@ def download_plugin(version):
         return invalid_api_version(404)
 
 
-@api_bp.route('/<version>/releases/', methods=['GET'])
-def get_versions(version):
+@api_bp.route('/releases/', methods=['GET'])
+def get_versions():
     """
     Provides latest version numbers and download urls for the release paths.
 
@@ -172,10 +172,5 @@ def get_versions(version):
     new persistent variable: date of last update check, one new start-up action:
     automatic update check, and one new toolbar action: manually check for updates.
     """
-    ret_obj = {}
-    ret_obj['versions'] = picard_versions(current_app)
-    if version and get_build_version(current_app, version):
-        return make_response(
-            jsonify(ret_obj), 200)
-    else:
-        return invalid_api_version(404)
+    ret_obj = {'versions': picard_versions(current_app)}
+    return make_response(jsonify(ret_obj), 200)
