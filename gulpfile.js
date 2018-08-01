@@ -1,14 +1,21 @@
 // Gulp plugins
-var gulp = require('gulp'),
-    cleanCSS = require('gulp-clean-css'),
-    less = require('gulp-less');
+var gulp = require('gulp');
+var less = require('gulp-less');
+var cleanCSS = require('gulp-clean-css');
+var del = require('del');
+
+// Clean up existing files
+function clean() {
+  return del([ 'website/frontend/static/css' ]);
+}
 
 // Compile less files to css
-gulp.task('less', function() {
-    return gulp.src('website/frontend/static/less/styles.less')
-        .pipe(less())
-        .pipe(cleanCSS())
-        .pipe(gulp.dest('website/frontend/static/css'))
-});
+function styles() {
+  return gulp.src('website/frontend/static/less/styles.less')
+    .pipe(less())
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('website/frontend/static/css'))
+}
 
-gulp.task('default', ['less']);
+var build = gulp.series(clean, styles);
+gulp.task('default', build);
