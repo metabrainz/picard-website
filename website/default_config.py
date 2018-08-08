@@ -17,15 +17,21 @@ PLUGIN_VERSIONS = {
 PICARD_VERSIONS = {
     'stable': {
         'tag': '2.0.2',
-        'version': ( 2, 0, 2, 'final', 0),
+        'version': (2, 0, 2, 'final', 0),
         'urls': {
             'download': 'https://picard.musicbrainz.org/',
             'changelog': 'https://picard.musicbrainz.org/changelog/',
-        }
+        },
+        'win_size': '16.5',
+        'win_hash': 'b7c305cfc1171fd4d4d4dc25fe5097ce',
+        'mac_size': '20.7',
+        'mac_hash': 'e8fa46bd32d5450d615e6c0c13612162',
+        'linux_size': '2.9',
+        'linux_hash': '-',
     },
     'beta': {
         'tag': '2.0.0.beta3',
-        'version': ( 2, 0, 0, 'dev', 6),
+        'version': (2, 0, 0, 'dev', 6),
         'urls': {
             'download': 'https://github.com/metabrainz/picard/releases/tag/2.0.0dev6',
             'changelog': 'https://github.com/metabrainz/picard/compare/2.0.0dev6...master',
@@ -33,7 +39,7 @@ PICARD_VERSIONS = {
     },
     'dev': {
         'tag': '2.0.3.dev1',
-        'version': ( 2, 0, 3, 'dev', 1),
+        'version': (2, 0, 3, 'dev', 1),
         'urls': {
             'download': 'https://github.com/metabrainz/picard',
         }
