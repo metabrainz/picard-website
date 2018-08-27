@@ -722,6 +722,27 @@ $if(%date%,$left(%date%,4)) - $left(%album%,40) \(%releasestatus%-%releasetype%\
 $left(%album%,30) \(%releasestatus%-%releasetype%\)-$if($gt(%totaldiscs%,1),$if2(%media%,CD)%discnumber%-,)$num(%tracknumber%,2)-$left(%title%,30)
 
 )</code></pre>
+
+      <h1 id="coverart_naming_examples">Cover Art Naming Examples</h1>
+
+      <p>
+        <b><i>Options</i> &#8594; <i>Options...</i> &#8594; <i>Cover Art</i></b>
+      </p>
+      <p>
+        Tagger Script can be used to change the file names of saved cover art images.
+      </p>
+
+      <h3 id="album_title_as_cover_name">Use album title for cover art file names</h3>
+
+      <pre><code class="taggerscript">%album%</code></pre>
+
+      <h3 id="different_front_and_main_type">Use main type for images that are not front images</h3>
+
+      <p>
+        This will name front images "AlbumArt" and all other images according to their maintype (e.g. "medium" or "booklet").
+      </p>
+
+      <pre><code class="taggerscript">$if($eq(%coverart_maintype%,front),AlbumArt,%coverart_maintype%)</code></pre>
     </div>
 
     <div class="col-md-4">
@@ -752,6 +773,12 @@ $left(%album%,30) \(%releasestatus%-%releasetype%\)-$if($gt(%totaldiscs%,1),$if2
               <li><a href="#organize_by_alphabetical_folders_excluding_leading_the">Organize by alphabetical folders</a></li>
             </ul>
           </li>
+          <li>
+            <a href="#coverart_naming_examples">Cover Art Naming Examples</a>
+            <ul class="nav">
+              <li><a href="#album_title_as_cover_name">Use album title for cover art file names</a>
+              <li><a href="#different_front_and_main_type">Use main type for images that are not front images</a>
+            </ul>
         </ul>
       </div>
     </div>
