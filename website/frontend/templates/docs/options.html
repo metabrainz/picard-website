@@ -236,7 +236,21 @@
           The mask should <b>not</b> contain a file extension; this is added automatically based on the
           actual image type. The default value is
           <code>cover</code>. If you change this to
-          <code>folder</code>, Windows will use it to preview the containing folder.
+          <code>folder</code>, Windows will use it to preview the containing folder.<br />
+          In addition to scripting variables already available for a track you can use the following
+          cover art specific variables:
+          <ul>
+            <li>
+              <code>coverart_maintype</code>: The primary type (e.g. front, medium, booklet etc.). For front
+              images this will always be "front".
+            </li>
+            <li>
+              <code>coverart_types</code>: Full list of all types assigned to this image.
+            </li>
+            <li>
+              <code>coverart_comment</code>: The cover art comment.
+            </li>
+          </ul>
         </li>
         <li>
           <b>Overwrite the file if it already exists:</b> Check this to replace existing files. This is
