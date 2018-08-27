@@ -7,13 +7,13 @@
    }
 
    h1 {
-      font-size: 4em;
+      font-size: 2.6em;
       width: 100%;
-	  font-weight: 500;
+      font-weight: 500;
    }
 
    p {
-      font-size: 25px;
+      font-size: 16px;
       line-height: 2;
    }
 
@@ -21,13 +21,13 @@
       color: #fff;
       margin-top: 20px;
       padding: 20px 25px;
-      font-size: 25px;
+      font-size: 16px;
       border: 0px none;
       border-radius: 6px;
       background-color: #EB743B;
 
       .download-title {
-         font-size: 25px;
+         font-size: 16px;
       }
 
       #download-info {
@@ -64,9 +64,41 @@
    #screenshot {
       display: inline;
    }
-   .picard-icon{
-      height: 115px;
-      width: 115px;
+
+   .picard-icon {
+      height: 60px;
+      width: 60px;
+   }
+
+   @media (min-width: 400px) {
+     .download-btn {
+       font-size: 25px;
+
+       .download-title {
+          font-size: 25px;
+       }
+     }
+   }
+
+   @media (min-width: 590px) {
+     h1 {
+        font-size: 3em;
+     }
+   }
+
+   @media (min-width: 730px) {
+     h1 {
+        font-size: 4em;
+     }
+
+     p {
+        font-size: 25px;
+     }
+
+     .picard-icon {
+        height: 115px;
+        width: 115px;
+     }
    }
 }
 
