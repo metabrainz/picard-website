@@ -7,13 +7,13 @@
         {% autoescape false %}
         <p>
             {{ _("This is a list of plugins that are currently available for use with Picard.") }}
-            {{ _("The current production release of Picard v1.4.x uses API v1. The development version of Picard v2.0dev uses API v2.") }}
+            {{ _("The current production release of Picard 2.x uses API v2. The older Picard 1.x releases use API v1.") }}
             {{ _("The table is generated from the data of our plugin {urlrepo|repository}.")|expand({"urlrepo": "https://github.com/musicbrainz/picard-plugins"}) }}
         </p>
         {% endautoescape %}
         <ul class="nav nav-tabs">
         {% for version in all_plugins.keys() %}
-          <li {% if version == '1' %} class="active" {% endif %}>
+          <li {% if version == '2' %} class="active" {% endif %}>
             <a data-toggle="tab" href="#apiv{{version}}">API v{{version}}</a>
           </li>
         {% endfor %}
