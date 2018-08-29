@@ -81,10 +81,15 @@ def api_root(version):
     Shows info about our API
     """
     if version and get_build_version(current_app, version):
-        return make_response(
-            jsonify({'message': 'The endpoints currently available for this api version'
-                     ' are /api/%s/plugins, /api/%s/download and /api/releases' %
-                     (version, version)}), 200)
+        if version == 'v2':
+            msg_text = 'The endpoints currently available for this api version' \
+                ' are /api/{ver}/plugins, /api/{ver}/download and /api/{ver}/releases'.format(
+                    ver=version)
+        else:
+            msg_text = 'The endpoints currently available for this api version' \
+                ' are /api/{ver}/plugins and /api/{ver}/download'.format(
+                    ver=version)
+        return make_response(jsonify({'message': msg_text}), 200)
     else:
         return invalid_api_version(404)
 
@@ -122,7 +127,7 @@ def download_plugin(version):
         return invalid_api_version(404)
 
 
-@api_bp.route('/releases/', methods=['GET'])
+@api_bp.route('/v2/releases/', methods=['GET'])
 def get_versions():
     """
     Provides latest version numbers and download urls for the release paths.
