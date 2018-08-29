@@ -62,7 +62,7 @@ def plugins_generate():
     Clone or pull repository from GitHub and run generate.py script
     """
     config = website.frontend.create_app().config
-    versions = config['PLUGIN_VERSIONS'].values()
+    versions = [ z['title'] for z in config['PLUGIN_VERSIONS'].values() ]
     build_dir = config['PLUGINS_BUILD_DIR']
     for version in versions:
         print(build_dir, version)

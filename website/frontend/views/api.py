@@ -60,7 +60,11 @@ def _download_plugin(app, version, pid):
 
 
 def get_build_version(app, version):
-    return app.config['PLUGIN_VERSIONS'].get(version)
+    item = app.config['PLUGIN_VERSIONS'].get(version)
+    if item:
+        return item['title']
+    else:
+        return item
 
 
 def not_found(error):
@@ -81,15 +85,7 @@ def api_root(version):
     Shows info about our API
     """
     if version and get_build_version(current_app, version):
-        if version == 'v2':
-            msg_text = 'The endpoints currently available for this api version' \
-                ' are /api/{ver}/plugins, /api/{ver}/download and /api/{ver}/releases'.format(
-                    ver=version)
-        else:
-            msg_text = 'The endpoints currently available for this api version' \
-                ' are /api/{ver}/plugins and /api/{ver}/download'.format(
-                    ver=version)
-        return make_response(jsonify({'message': msg_text}), 200)
+        return make_response(jsonify({'message': current_app.config['PLUGIN_VERSIONS'].get(version)['response']}), 200)
     else:
         return invalid_api_version(404)
 
