@@ -7,8 +7,16 @@ PLUGINS_CACHE_TIMEOUT = 5 * 60
 # retrieveing them. Since it is a string comparison, v10 appears before
 # v2. So be careful with the ordering.
 PLUGIN_VERSIONS = {
-    'v1': '1.0',
-    'v2': '2.0',
+    'v1': {
+        'title': '1.0',
+        'response': 'The endpoints currently available for this api version' \
+                ' are /api/v1/plugins and /api/v1/download',
+    },
+    'v2': {
+        'title': '2.0',
+        'response': 'The endpoints currently available for this api version' \
+                ' are /api/v2/plugins, /api/v2/download and /api/v2/releases',
+    },
 }
 
 # PICARD_VERSIONS dictionary valid keys are: 'stable', 'beta' and 'dev'.
