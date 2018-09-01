@@ -1,10 +1,14 @@
 # Docker Compose file for testing
+#
 version: "2"
 services:
-
   web_test:
     build:
       context: ..
       dockerfile: ./Dockerfile
+    image: docker_web_test
     network_mode: bridge
-    command: py.test --junitxml=/data/test_report.xml --cov-report xml:/data/coverage.xml
+    ports:
+        - "127.0.0.1:3031:3031"
+    volumes:
+        - ./uwsgi-test.ini:/etc/uwsgi/uwsgi.ini
