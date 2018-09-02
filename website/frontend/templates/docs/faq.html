@@ -182,8 +182,25 @@
 
       <h1 id="configuration">Configuration</h1>
 
+      <h3 id="config-location">
+      Where is the Picard configuration saved?</h3>
+
+      <p>
+        Picard saves the configuration in the file <code>Picard.ini</code>. Its location depends on the operating system:
+      </p>
+
+      <p>
+        <b>Windows:</b> <code>%APPDATA%\MusicBrainz\Picard.ini</code><br>
+        This usually will be <code>C:\Users\YourUserName\AppData\Roaming\MusicBrainz</code>, where <code>YourUserName</code>
+        should be replaced with your actual Windows user name.
+      </p>
+
+      <p>
+        <b>macOS, Linux and other Unix like systems:</b> <code>$HOME/.config/MusicBrainz/Picard.ini</code>
+      </p>
+
       <h3 id="picard-itunes">
-      I tagged a file in Picard, but iTunes is not seeing the tags! </h3>
+      I tagged a file in Picard, but iTunes is not seeing the tags!</h3>
 
       <p>
         Firstly, you need to force iTunes to re-read the information from your tags and update its library.
@@ -256,6 +273,7 @@
           <li>
             <a href="#configuration">Configuration</a>
             <ul class="nav">
+              <li><a href="#config-location">Where is the Picard configuration saved?</a></li>
               <li><a href="#picard-itunes">iTunes doesn't see the tags!</a></li>
               <li><a href="#tags-truncated">My tags are being truncated to 30 characters!</a></li>
               <li><a href="#which-browser">How do I tell Picard which browser to use?</a></li>
