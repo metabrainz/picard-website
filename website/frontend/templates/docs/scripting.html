@@ -168,17 +168,6 @@
           <li class="added">Since Picard 1.0</li>
         </ul>
 
-        <h3 id="unset_name">$unset(name)</h3>
-
-        <ul>
-          <li>Unsets the variable
-            <code>name</code>.
-          </li>
-          <li>Allows for wildcards to unset certain tags (works with 'performer:*', 'comment:*', and 'lyrics:*').
-            <br>i.e. <code>$unset(performer:*)</code> would unset all performer tags.
-          </li>
-        </ul>
-
         <h3 id="set_name_value">$set(name,value)</h3>
 
         <ul>
@@ -205,6 +194,30 @@
             <pre><code class="taggerscript">$setmulti(genre,$lower(%genre%))</code></pre>
           </li>
           <li class="added">Since Picard 1.0</li>
+        </ul>
+
+        <h3 id="unset_name">$unset(name)</h3>
+
+        <ul>
+          <li>Unsets the variable
+            <code>name</code>.
+          </li>
+          <li>Allows for wildcards to unset certain tags (works with 'performer:*', 'comment:*', and 'lyrics:*').
+            <br>i.e. <code>$unset(performer:*)</code> would unset all performer tags.
+          </li>
+        </ul>
+
+        <h3 id="delete_name">$delete(name)</h3>
+
+        <ul>
+          <li>Unsets the variable <code>name</code> and marks the tag for deletion.
+          </li>
+          <li>
+            This is similar to <code>$unset(name)</code> but also marks the tag for deletion.
+            E.g. running <code>$delete(genre)</code> will actually remove the genre tag from a file
+            when saving.
+          </li>
+          <li class="added">Since Picard 2.1</li>
         </ul>
 
         <h3 id="get_name">$get(name)</h3>
