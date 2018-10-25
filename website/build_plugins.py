@@ -51,7 +51,7 @@ KNOWN_DATA = [
     'PLUGIN_NAME',
     'PLUGIN_AUTHOR',
     'PLUGIN_VERSION',
-    'PLUGIN_API_VERSIONS',
+    'PLUGIN_API_VERSIONS', # Determine the version of Picard's API to be used in the plugin
     'PLUGIN_LICENSE',
     'PLUGIN_LICENSE_URL',
     'PLUGIN_DESCRIPTION',

@@ -57,6 +57,8 @@
       PLUGIN_NAME = &quot;...&quot;
       PLUGIN_AUTHOR = &quot;...&quot;
       PLUGIN_DESCRIPTION = &quot;...&quot;
+	  PLUGIN_VERSION = &quot;...&quot;
+	  PLUGIN_API_VERSIONS = &quot;...&quot;
 
       from picard.file import File
       from picard.formats import register_format
@@ -71,6 +73,30 @@
 
       register_format(MyFile)</pre>
 
+	  <p>
+		Variables explanation:
+		<li>"PLUGIN_DESCRIPTION" should be as simple as possible, while still describing the main function</li> 
+		<li>"PLUGIN_VERSION" should be filled with the version of Plugin</li>
+		<li>"PLUGIN_API_VERSIONS" should be set to the version of Picard this plugin to run with.</li>
+		<li>(if the plugin has a license, add "PLUGIN_LICENSE" and "PLUGIN_LICENSE_URL")</li> 
+		<br>
+		<br>
+		PLUGIN_API_VERSIONS available:
+		<ul>v1.0
+		<li>0.15.0</li>
+		<li>0.15.1</li>
+		<li>0.16.0</li>
+		<li>1.0.0</li>
+		<li>1.1.0</li>
+		<li>1.2.0</li>
+		<li>1.3.0</li>
+		<li>1.4.0</li>
+		</ul>
+		<ul>v2.0
+		<li>2.0</li>
+		</ul>
+	  </p>
+	  <br>
       <h1 id="tagger_script_functions">Tagger Script Functions</h1>
 
       <p>
@@ -86,7 +112,9 @@
       PLUGIN_NAME = &quot;Initials&quot;
       PLUGIN_AUTHOR = &quot;Lukas Lalinsky&quot;
       PLUGIN_DESCRIPTION = &quot;Provides tagger script function $initials(text).&quot;
-
+	  PLUGIN_VERSION = '0.1'
+      PLUGIN_API_VERSIONS = ['2.0']
+	  
       from picard.script import register_script_function
 
       def initials(parser, text):
@@ -119,7 +147,7 @@
       PLUGIN_AUTHOR = u'ichneumon, hrglgrmpf'
       PLUGIN_DESCRIPTION = u'''Remove all perfectly matched albums from the selection.'''
       PLUGIN_VERSION = '0.2'
-      PLUGIN_API_VERSIONS = ['0.15']
+      PLUGIN_API_VERSIONS = ['0.15.1']
 
       from picard.album import Album
       from picard.ui.itemviews import BaseAction, register_album_action
