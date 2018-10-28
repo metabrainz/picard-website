@@ -57,6 +57,10 @@
       PLUGIN_NAME = &quot;...&quot;
       PLUGIN_AUTHOR = &quot;...&quot;
       PLUGIN_DESCRIPTION = &quot;...&quot;
+      PLUGIN_VERSION = '...'
+      PLUGIN_API_VERSIONS = ['...']
+      PLUGIN_LICENSE = &quot;...&quot;
+      PLUGIN_LICENSE_URL = &quot;...&quot;
 
       from picard.file import File
       from picard.formats import register_format
@@ -70,6 +74,36 @@
               ....
 
       register_format(MyFile)</pre>
+
+    <p>
+    Variables explanation:
+    <ul>
+      <li>"PLUGIN_DESCRIPTION" should be as simple as possible, while still describing the main function.</li>
+      <li>"PLUGIN_VERSION" should be filled with the version of Plugin.</li>
+      <li>"PLUGIN_API_VERSIONS" should be set to the version of Picard this plugin to run with.</li>
+      <li>"PLUGIN_LICENSE" should be set with the license name of the plugin. It is welcomed to use any license you like, even it's not written in <a href="https://spdx.org/licenses/">this license database</a>.</li>
+      <li>"PLUGIN_LICENSE_URL" should be set with the license url.</li>
+    </ul>
+    </p>
+    <p>
+    PLUGIN_API_VERSIONS available:</p>
+    <p>v1.0
+    <ul>
+        <li>0.15.1</li> 
+        <li>0.16.0</li>
+        <li>1.0.0</li>
+        <li>1.1.0</li>
+        <li>1.2.0</li>
+        <li>1.3.0</li>
+        <li>1.4.0</li>
+    </ul>
+    </p>
+    <p>v2.0
+      <ul>
+        <li>2.0</li>
+      </ul>
+    </p>
+    
 
       <h1 id="tagger_script_functions">Tagger Script Functions</h1>
 
@@ -86,6 +120,10 @@
       PLUGIN_NAME = &quot;Initials&quot;
       PLUGIN_AUTHOR = &quot;Lukas Lalinsky&quot;
       PLUGIN_DESCRIPTION = &quot;Provides tagger script function $initials(text).&quot;
+      PLUGIN_VERSION = '0.1'
+      PLUGIN_API_VERSIONS = ['2.0']
+      PLUGIN_LICENSE = &quot;GPL-2.0&quot;
+      PLUGIN_LICENSE_URL = &quot;https://www.gnu.org/licenses/gpl-2.0.txt&quot;
 
       from picard.script import register_script_function
 
@@ -95,7 +133,7 @@
       register_script_function(initials)</pre>
 
       <p>
-        <code>register_script_function</code>supports two optional arguments:
+        <code>register_script_function</code> supports two optional arguments:
       </p>
       <ul>
         <li> <b>eval_args</b>: If this is <b>False</b>, the arguments will not be evaluated before being passed
@@ -119,7 +157,9 @@
       PLUGIN_AUTHOR = u'ichneumon, hrglgrmpf'
       PLUGIN_DESCRIPTION = u'''Remove all perfectly matched albums from the selection.'''
       PLUGIN_VERSION = '0.2'
-      PLUGIN_API_VERSIONS = ['0.15']
+      PLUGIN_API_VERSIONS = ['0.15.1']
+      PLUGIN_LICENSE = &quot;GPL-2.0&quot;
+      PLUGIN_LICENSE_URL = &quot;https://www.gnu.org/licenses/gpl-2.0.txt&quot; 
 
       from picard.album import Album
       from picard.ui.itemviews import BaseAction, register_album_action
