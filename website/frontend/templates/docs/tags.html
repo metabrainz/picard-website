@@ -541,6 +541,58 @@
         </tr>
       </table>
 
+      <h1 id="classical_variables">Tags for Classical Music</h1>
+
+      <p>
+        With the help of plugins like "Classical Extras" or "Work &amp; Movement"
+        you can make use of the following tags for tagging your classical music.
+      </p>
+
+      <table class="table table-bordered table-striped">
+        <tr>
+          <td>work</td>
+          <td>
+            <a href="https://musicbrainz.org/doc/Work#Name" title="Work">Work Name</a> of
+            the overall work, e.g. "Symphony no. 5 in C minor, op. 67".
+          </td>
+        </tr>
+        <tr>
+          <td>movement</td>
+          <td>
+            Name of the movement, e.g. "Andante con moto".
+          </td>
+        </tr>
+        <tr>
+          <td>movementnumber</td>
+          <td>
+            Movement number in Arabic numerals, e.g. "2". Players explicitly supporting this
+            tag will often display it in Roman numerals, in this example as "II".
+          </td>
+        </tr>
+        <tr>
+          <td>movementtotal</td>
+          <td>
+            Total number of movements in the work, e.g. "4".
+          </td>
+        </tr>
+        <tr>
+          <td>showmovement</td>
+          <td>
+            Show Work &amp; Movement: If this tag is set to "1" players supporting this
+            tag, like iTunes and MusicBee, will display the work, movement number and
+            movement name instead of the track title. E.g. the track will be displayed
+            as "Symphony no. 5 in C minor, op. 67: II. Andante con moto" regardless of
+            the value of the <code>title</code> tag.
+          </td>
+        </tr>
+      </table>
+
+      <p>
+        <em>Note: If you are using iTunes together with MP3 files you should activate
+        the option <a href="/docs/options/#tag_compatibility" title="Tag Compatibility Options">Save iTunes compatible grouping and work</a>
+        in order for the work to be displayed correctly.</em>
+      </p>
+
       <h1 id="plugins">Plugins</h1>
 
       <p>
@@ -660,6 +712,7 @@
           <li><a href="#basic_variables">Basic Variables</a></li>
           <li><a href="#advanced_tags">Advanced Tags</a></li>
           <li><a href="#advanced_variables">Advanced Variables</a></li>
+          <li><a href="#classical_variables">Tags for Classical Music</a></li>
           <li>
           <a href="#plugins">Plugins</a>
             <ul class="nav">
