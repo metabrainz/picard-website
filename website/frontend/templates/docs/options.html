@@ -104,10 +104,6 @@
           <b>Use track relationships:</b> Check to write track-level relationships to your files, e.g. composer,
           lyricist, performer, remixer, etc.
         </li>
-        <li>
-          <b>Use folksonomy tags as genres:</b> Check to write MusicBrainz folksonomy tags as genres. (See
-          options under "Folksonomy Tags")
-        </li>
         <li><b>Various artists:</b> Choose how you want the 'Various Artists' artist spelled.</li>
         <li>
           <b>Non-album tracks:</b> Choose how you want 'non-album tracks'
@@ -135,24 +131,30 @@
         </li>
       </ul>
 
-      <h3 id="folksonomy_tags">Folksonomy tags</h3>
+      <h3 id="genres">Genres</h3>
 
-      <p>The following settings are only applicable if you enable the <i>use folksonomy tags as genres</i> option.
-      </p>
       <ul class="options">
-        <li> <b>Ignore tags:</b> Comma-separated list of tags to ignore when writing genres.
+        <li>
+          <b>Use genres from MusicBrainz:</b> Use <a href="https://musicbrainz.org/doc/Genre" title="Genres">genres</a>
+          provided by MusicBrainz and save them to the <code>genre</code> tag.
         </li>
-        <li> <b>Only use my tags:</b> Check to only write genres with tags that you personally have submitted
+        <li> <b>Only use my genres:</b> Check to only write genres you personally have submitted
           to MusicBrainz. You'll need to set your username and password to use this feature.
         </li>
-        <li> <b>Minimal tag usage:</b> Choose how popular the tag must be before it is written by Picard. Default:
-          90%. Lowering the value here will lead to more tags in your files, but possibly less relevant
-          tags.
+        <li>
+          <b>Use folksonomy tags as genres:</b> Check to use all
+          <a href="https://musicbrainz.org/doc/Folksonomy_Tagging" title="Folksonomy Tagging">folksonomy tags</a>
+          to set the genre. Otherwise only the tags considered by MusicBrainz to be proper genres will be used.
         </li>
-        <li> <b>Maximum number of tags:</b> Choose how many tags to write as genres. Default: 5. If you only
+        <li> <b>Genres or folksonomy tags to exclude:</b> Comma-separated list of genres or tags to ignore when writing genres.
+        </li>
+        <li> <b>Minimal genre usage:</b> Choose how popular the genre must be before it is written by Picard. Default:
+          90%. Lowering the value here will lead to more, but possibly less relevant, genres in your files.
+        </li>
+        <li> <b>Maximum number of genres:</b> Choose how many genres to use. Default: 5. If you only
           want a single genre, set this to 1.
         </li>
-        <li> <b>Join multiple tags with:</b> Select which character should be used to separate multiple tags.
+        <li> <b>Join multiple genres with:</b> Select which character should be used to separate multiple genres.
         </li>
       </ul>
 
@@ -575,7 +577,7 @@
             <a href="#metadata">Metadata</a>
             <ul class="nav">
               <li><a href="#preferred_releases">Preferred Releases</a></li>
-              <li><a href="#folksonomy_tags">Folksonomy tags</a></li>
+              <li><a href="#genres">Genres</a></li>
               <li><a href="#ratings">Ratings</a></li>
             </ul>
           </li>
