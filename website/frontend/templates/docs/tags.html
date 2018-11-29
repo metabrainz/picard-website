@@ -532,6 +532,14 @@
           <td> <a href="https://musicbrainz.org/doc/Recording#Disambiguation_comment" title="Recording">Recording disambiguation comment</a> (since
             Picard 0.15)</td>
         </tr>
+        <tr>
+          <td>_performance_attributes</td>
+          <td>
+            List of <a href="https://musicbrainz.org/relationship/a3005666-a872-32c3-ad06-98af558e99b0" title="Relationship Types / Recording-Work / Performance">performance attributes for the work</a>
+            e.g. "live", "cover", "medley" etc.<br>
+            Use <code>$inmulti</code> to check for a specific type, i.e. <code>$if($inmulti(%_performance_attributes%,medley), (Medley),)</code> (since
+            Picard 1.3)</td>
+        </tr>
       </table>
 
       <h1 id="plugins">Plugins</h1>
