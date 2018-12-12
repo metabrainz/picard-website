@@ -46,10 +46,10 @@ PICARD_VERSIONS = {
         }
     },
     'dev': {
-        'tag': '2.1.0.dev2',
-        'version': (2, 1, 0, 'dev', 2),
+        'tag': '2.1.0.dev3',
+        'version': (2, 1, 0, 'dev', 3),
         'urls': {
-            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.1.0dev2',
+            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.1.0dev3',
         }
     },
 }
