@@ -41,6 +41,7 @@ VERSION_INFO = {
             'api_versions':  # Keep those ordered
             [
                 "2.0",
+                "2.1",
             ]
             }
 }
