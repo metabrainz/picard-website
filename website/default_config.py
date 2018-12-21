@@ -49,7 +49,7 @@ PICARD_VERSIONS = {
         'tag': '2.1.1.dev1',
         'version': (2, 1, 1, 'dev', 1),
         'urls': {
-            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.1.0dev3',
+            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.1.1dev1',
         }
     },
 }
