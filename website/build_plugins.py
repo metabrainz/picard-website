@@ -86,9 +86,9 @@ def get_plugin_data(filepath):
         source = plugin_file.read()
         try:
             root = ast.parse(source, filepath)
-        except Exception:
-            print("Cannot parse " + filepath)
-            raise
+        except Exception as e:
+            print("Cannot parse %r: %s" % (filepath, e))
+            return {}
         for node in ast.iter_child_nodes(root):
             if isinstance(node, ast.Assign) and len(node.targets) == 1:
                 target = node.targets[0]
