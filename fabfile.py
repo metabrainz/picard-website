@@ -3,7 +3,6 @@ from os.path import normpath
 from fabric.api import local
 from fabric.colors import green, red
 from fabric.utils import abort
-from website.build_plugins import generate_plugins
 import website.frontend
 
 
@@ -38,23 +37,6 @@ def update_strings():
     """Extract strings and pull translations from Transifex."""
     extract_strings()
     pull_translations()
-
-
-def plugins_generate():
-    """Generate plugins.json and zipped plugin archive files
-
-    Clone or pull repository from GitHub and run generate.py script
-    """
-    config = website.frontend.create_app().config
-    versions = [ z['title'] for z in config['PLUGIN_VERSIONS'].values() ]
-    build_dir = config['PLUGINS_BUILD_DIR']
-    for version in versions:
-        print(build_dir, version)
-        try:
-            generate_plugins(build_dir, version)
-            print(green("Plugin files for version %s have been generated successfully." % version, bold=True))
-        except Exception as e:
-            print(red("Plugin generation for version %s has FAILED.\nError Occured: %s" % (version, e), bold=True))
 
 
 def reload():
