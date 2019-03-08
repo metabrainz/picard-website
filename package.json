@@ -2,8 +2,8 @@
   "name": "picard-website",
   "version": "0.0.0",
   "dependencies": {
+    "child-process-promise": "^2.2.1",
     "del": "^4.0.0",
-    "exec-chainable": "0.0.3",
     "gulp": "^=4.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-less": "^=4.0.1",
