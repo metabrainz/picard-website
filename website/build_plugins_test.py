@@ -17,7 +17,7 @@ class GenerateTestCase(unittest.TestCase):
     # The directory which contains plugin files
     @classmethod
     def setUpClass(cls):
-        cls.temp_dir, cls.plugin_dir = download_plugins()
+        cls.temp_dir, cls.plugin_dir = download_plugins('2.0')
 
     @classmethod
     def tearDownClass(cls):
