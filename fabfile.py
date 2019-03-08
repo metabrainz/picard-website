@@ -40,22 +40,6 @@ def update_strings():
     pull_translations()
 
 
-def compile_translations():
-    """Compile translations for use."""
-    local("pybabel compile -d website/frontend/translations")
-    print(green("Translated strings have been compiled and ready to be used.", bold=True))
-
-
-def compile_styling():
-    """Compile styles.less into styles.css.
-
-    This command requires Less (CSS pre-processor). More information about it can be
-    found at http://lesscss.org/.
-    """
-    local(normpath("./node_modules/.bin/gulp"))
-    print(green("Style sheets have been compiled successfully.", bold=True))
-
-
 def plugins_generate():
     """Generate plugins.json and zipped plugin archive files
 
@@ -71,11 +55,6 @@ def plugins_generate():
             print(green("Plugin files for version %s have been generated successfully." % version, bold=True))
         except Exception as e:
             print(red("Plugin generation for version %s has FAILED.\nError Occured: %s" % (version, e), bold=True))
-
-def deploy():
-    """Compile translations and styling."""
-    compile_translations()
-    compile_styling()
 
 
 def reload():

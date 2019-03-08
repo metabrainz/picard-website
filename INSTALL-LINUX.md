@@ -1,7 +1,7 @@
 # Installation on Linux
 
 Pre-requisites:
-- python >= 2.7
+- python >= 3
 - python-dev (required to build some dependencies)
 - git
 - nodejs
@@ -63,7 +63,7 @@ fab plugins_generate
 Compile CSS and translations:
 
 ```bash
-fab deploy
+gulp deploy
 ```
 
 To run the development server, do:

@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "dependencies": {
     "del": "^3.0.0",
+    "exec-chainable": "0.0.3",
     "gulp": "^=4.0.0",
     "gulp-clean-css": "^=3.9.4",
     "gulp-less": "^=4.0.1",
     "less": "^=3.8.0"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {}
 }

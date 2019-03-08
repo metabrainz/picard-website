@@ -1,15 +1,15 @@
 # Installation on Windows
 
 Pre-requisites:
-- python >= 2.7
+- python >= 3
 - Github for Windows or equivalent
 - nodejs and npm
 
-Download and install `Python 2.7+` from https://www.python.org/downloads/
+Download and install `Python 3+` from https://www.python.org/downloads/
 
 Download and install `Node.js` from https://nodejs.org/en/download/current/
 
-Open a new **Administrator** command prompt and check that both `Python` and `Node.js` are in your path environment variable. 
+Open a new **Administrator** command prompt and check that both `Python` and `Node.js` are in your path environment variable.
 You may need to reboot for this to become visible.
 
 Install `gulp` by running:
@@ -53,7 +53,7 @@ Install node dependencies:
 npm install
 ```
 
-Node dependencies (including gulp and less, which are required to compile/minify CSS) are installed to `./node_modules`, 
+Node dependencies (including gulp and less, which are required to compile/minify CSS) are installed to `./node_modules`,
 and batch files are installed into `./node_modules/.bin`. You may want to add the latter into your path environment variable.
 
 Install gulp in the Picard-Website project:
@@ -71,7 +71,7 @@ fab plugins_generate
 Compile CSS and translations:
 
 ```
-fab deploy
+gulp deploy
 ```
 
 To run the development server, do:
