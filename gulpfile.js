@@ -41,9 +41,16 @@ function resync_po_files_from_pot() {
 }
 resync_po_files_from_pot.description = '[dev only] Resync .po files according to .pot file, not using Transifex'
 
-async function pull_translations() {
-  const languages = await exec("python -c \"import website.frontend; print(','.join(website.frontend.create_app().config['SUPPORTED_LANGUAGES']))\"")
-  return exec(`tx pull -f -r picard-website.website -l ${languages}`)
+function pull_translations() {
+  return exec("python -c \"import website.frontend; print(','.join(website.frontend.create_app().config['SUPPORTED_LANGUAGES']))\"")
+    .then(result => {
+      if (result.stderr) {
+        return Promise.reject(new Error(result.stderr))
+      }
+
+      const languages = result.stdout
+      return exec(`tx pull -f -r picard-website.website -l ${languages}`)
+    })
     .then(log_exec_output)
 }
 pull_translations.description = 'Pull translations for languages defined in config from Transifex and compile them'
