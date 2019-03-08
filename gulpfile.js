@@ -25,5 +25,5 @@ function translate() {
 
 exports.build = series(clean, styles)
 exports.translate = translate
-exports.deploy = parallel(exports.styles, translate)
+exports.deploy = parallel(exports.build, translate)
 exports.default = exports.deploy
