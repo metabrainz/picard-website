@@ -12,6 +12,7 @@ env/
 
 website/config.py
 node_modules/
+plugins/
 
 ###Python###
 
