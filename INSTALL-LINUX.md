@@ -1,7 +1,7 @@
 # Installation on Linux
 
 Pre-requisites:
-- python >= 3
+- python >= 3.3
 - python-dev (required to build some dependencies)
 - git
 - nodejs
@@ -57,7 +57,7 @@ Node dependencies (including gulp and less, which are required to compile/minify
 To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repository and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
 
 ```bash
-fab plugins_generate
+./plugins_generate.py
 ```
 
 Compile CSS and translations:
