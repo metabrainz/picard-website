@@ -8,7 +8,7 @@ class ViewsTestCase(FrontendTestCase):
         "Test /changelog/"
         response = self.client.get("/changelog/")
         self.assert200(response)
-        self.assertIn('Version', response.data)
+        self.assertIn(b'Version', response.data)
 
     def test_changelog_redirect(self):
         "Test /changelog"

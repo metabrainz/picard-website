@@ -28,10 +28,10 @@ class ViewsTestCase(FrontendTestCase):
         headers = {'Cookie': 'language=fr'}
         response = self.client.get("/", headers=headers)
         self.assert200(response)
-        self.assertIn('fichiers audio', response.data)
+        self.assertIn(b'fichiers audio', response.data)
 
     def test_home_page_french_url(self):
         "Test / in french (url parameter)"
         response = self.client.get("/?l=fr")
         self.assert200(response)
-        self.assertIn('fichiers audio', response.data)
+        self.assertIn(b'fichiers audio', response.data)
