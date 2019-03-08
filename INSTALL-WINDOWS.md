@@ -71,7 +71,7 @@ python plugins_generate.py
 Compile CSS and translations:
 
 ```
-gulp deploy
+gulp build
 ```
 
 To run the development server, do:

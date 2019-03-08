@@ -63,7 +63,7 @@ To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repo
 Compile CSS and translations:
 
 ```bash
-gulp deploy
+gulp build
 ```
 
 To run the development server, do:

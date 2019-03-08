@@ -34,7 +34,7 @@ RUN npm install
 COPY . /code/website
 
 # Static files
-RUN ./node_modules/.bin/gulp deploy
+RUN ./node_modules/.bin/gulp build
 
 # Plugins
 RUN ./plugins-generate.py
