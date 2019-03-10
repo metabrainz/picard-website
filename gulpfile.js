@@ -42,7 +42,7 @@ function resync_po_files_from_pot() {
 resync_po_files_from_pot.description = '[dev only] Resync .po files according to .pot file, not using Transifex'
 
 function pull_translations() {
-  return exec("python -c \"import website.frontend; print(','.join(website.frontend.create_app().config['SUPPORTED_LANGUAGES']))\"")
+  return exec('python -c "import website.frontend; print(\',\'.join(website.frontend.create_app().config[\'SUPPORTED_LANGUAGES\']))"')
     .then(result => {
       if (result.stderr) {
         return Promise.reject(new Error(result.stderr))

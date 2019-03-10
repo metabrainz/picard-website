@@ -1,0 +1,14 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "arrow-parens": "off",
+    "camelcase": "off",
+    "curly": ["error", "multi-line"],
+    "no-console": "off",
+    "semi": ["error", "never"],
+    "quotes": ["warn", "single"]
+  }
+}
