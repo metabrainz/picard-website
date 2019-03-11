@@ -1,15 +1,15 @@
 # Installation on Windows
 
 Pre-requisites:
-- python >= 2.7
+- python >= 3.3
 - Github for Windows or equivalent
 - nodejs and npm
 
-Download and install `Python 2.7+` from https://www.python.org/downloads/
+Download and install `Python 3+` from https://www.python.org/downloads/
 
 Download and install `Node.js` from https://nodejs.org/en/download/current/
 
-Open a new **Administrator** command prompt and check that both `Python` and `Node.js` are in your path environment variable. 
+Open a new **Administrator** command prompt and check that both `Python` and `Node.js` are in your path environment variable.
 You may need to reboot for this to become visible.
 
 Install `gulp` by running:
@@ -37,15 +37,15 @@ Edit website/config.py so that PLUGINS_REPOSITORY points to your local copy of t
 If you need virtual python environments because you need different versionsof dependencies for different projects then run the following
 
 ```
-pip2 install -U virtualenv
+pip install -U virtualenv
 virtualenv env
 env\Scripts\activate
 ```
 
 Install Python dependencies:
 ```
-pip2 install http://sourceforge.net/projects/py2exe/files/latest/download?source=files
-pip2 install -r requirements.txt
+pip install http://sourceforge.net/projects/py2exe/files/latest/download?source=files
+pip install -r requirements.txt
 ```
 
 Install node dependencies:
@@ -53,7 +53,7 @@ Install node dependencies:
 npm install
 ```
 
-Node dependencies (including gulp and less, which are required to compile/minify CSS) are installed to `./node_modules`, 
+Node dependencies (including gulp and less, which are required to compile/minify CSS) are installed to `./node_modules`,
 and batch files are installed into `./node_modules/.bin`. You may want to add the latter into your path environment variable.
 
 Install gulp in the Picard-Website project:
@@ -65,19 +65,19 @@ To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repo
 and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
 
 ```
-fab plugins_generate
+python plugins_generate.py
 ```
 
 Compile CSS and translations:
 
 ```
-fab deploy
+gulp build
 ```
 
 To run the development server, do:
 
 ```
-py run.py
+python run.py
 ```
 
 By default, it listens on 127.0.0.1 port 6060.

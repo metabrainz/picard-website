@@ -80,7 +80,7 @@ class MyTestCase(unittest.TestCase):
             }
         }
         s = u'xx{url|Picard1}xxxx{url|Picard2}xx'
-        expected = 'xx<a class="ext" href="http://picard?id=test" title="title with &lt;&#8364;&#224;&#249;&#238;&#233;&gt; &quot;&quot; l\'a in it">Picard1</a>xxxx<a class="ext" href="http://picard?id=test" title="title with &lt;&#8364;&#224;&#249;&#238;&#233;&gt; &quot;&quot; l\'a in it">Picard2</a>xx'
+        expected = 'xx<a class="ext" href="http://picard?id=test" title="title with &lt;&#8364;&#224;&#249;&#238;&#233;&gt; &quot;&quot; l&#x27;a in it">Picard1</a>xxxx<a class="ext" href="http://picard?id=test" title="title with &lt;&#8364;&#224;&#249;&#238;&#233;&gt; &quot;&quot; l&#x27;a in it">Picard2</a>xx'
         self.assertEqual(expected, expand(s, d))
 
     def test_expand_11(self):

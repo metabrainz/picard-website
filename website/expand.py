@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
+import html
 import re
-import cgi
 
 
 def encode_entities(string, quote=True):
-    return cgi.escape(string.decode('utf-8'), quote).encode('ascii', 'xmlcharrefreplace')
+    return html.escape(string, quote).encode('ascii', 'xmlcharrefreplace').decode('utf8')
 
 
 def expand(string, args, tag='a', default_attribute='href'):

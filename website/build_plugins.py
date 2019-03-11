@@ -82,7 +82,7 @@ def version_from_string(version_str):
 def get_plugin_data(filepath):
     """Parse a python file and return a dict with plugin metadata"""
     data = {}
-    with open(filepath, 'rU') as plugin_file:
+    with open(filepath, 'r') as plugin_file:
         source = plugin_file.read()
         try:
             root = ast.parse(source, filepath)

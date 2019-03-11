@@ -24,7 +24,7 @@ class ViewsTestCase(FrontendTestCase):
         for path in ['/api', '/api/']:
             response = self.client.get(path)
             self.assert404(response)
-            self.assertEquals(response.json, dict(
+            self.assertEqual(response.json, dict(
                 message=_MESSAGES['missing_api_version']))
 
     def test_api_noroute_path(self):
@@ -44,7 +44,7 @@ class ViewsTestCase(FrontendTestCase):
         "Test /api/v1/"
         response = self.client.get("/api/v1/")
         self.assert200(response)
-        self.assertEquals(response.json, dict(
+        self.assertEqual(response.json, dict(
             message=_MESSAGES['invalid_endpoint']))
 
     # /v1/plugins/
@@ -64,7 +64,7 @@ class ViewsTestCase(FrontendTestCase):
         "Test bad plugin id"
         response = self.client.get("/api/v1/plugins/?id=0")
         self.assert404(response)
-        self.assertEquals(
+        self.assertEqual(
             response.json, dict(error=_MESSAGES['plugin_not_found']))
 
     def test_api_v1_plugins_with_id(self):
@@ -84,21 +84,21 @@ class ViewsTestCase(FrontendTestCase):
         "Test download with invalid plugin id"
         response = self.client.get("/api/v1/download/?id=0")
         self.assert404(response)
-        self.assertEquals(
+        self.assertEqual(
             response.json, dict(error=_MESSAGES['plugin_not_found']))
 
     def test_api_v1_download_with_no_id(self):
         "Test download with no plugin id"
         response = self.client.get("/api/v1/download/")
         self.assert400(response)
-        self.assertEquals(response.json, dict(error=_MESSAGES['missing_id'],
+        self.assertEqual(response.json, dict(error=_MESSAGES['missing_id'],
                                               message=_MESSAGES['download_usage']))
 
     def test_api_v1_download_with_id(self):
         "Test download with a valid plugin id"
         response = self.client.get("/api/v1/download/?id=addrelease")
         self.assert200(response)
-        self.assertEquals(response.content_type, 'application/zip')
+        self.assertEqual(response.content_type, 'application/zip')
 
     # /v2/releases
 
@@ -114,19 +114,19 @@ class ViewsTestCase(FrontendTestCase):
             for subkey in ['tag', 'version', 'urls']:
                 self.assertIn(subkey, updates[testkey])
             # Tag tests
-            self.assertIsInstance(updates[testkey]['tag'], basestring)
+            self.assertIsInstance(updates[testkey]['tag'], str)
             self.assertNotEqual(updates[testkey]['tag'], '')
             # Version tests
             self.assertIsInstance(updates[testkey]['version'], list)
-            self.assertEquals(len(updates[testkey]['version']), 5)
+            self.assertEqual(len(updates[testkey]['version']), 5)
             for i in [0, 1, 2, 4]:
                 self.assertIsInstance(updates[testkey]['version'][i], int)
-                self.assertEquals(updates[testkey]['version'][i] >= 0, True)
-            self.assertIsInstance(updates[testkey]['version'][3], basestring)
+                self.assertEqual(updates[testkey]['version'][i] >= 0, True)
+            self.assertIsInstance(updates[testkey]['version'][3], str)
             self.assertIn(updates[testkey]['version'][3], ['final', 'dev'])
             # Url tests
             self.assertIn('download', updates[testkey]['urls'])     # Confirm download url always exists
             for urlkey in updates[testkey]['urls']:
                 # Basic validation on all urls provided
-                self.assertIsInstance(updates[testkey]['urls'][urlkey], basestring)
-                self.assertRegexpMatches(updates[testkey]['urls'][urlkey], url_re)
+                self.assertIsInstance(updates[testkey]['urls'][urlkey], str)
+                self.assertRegex(updates[testkey]['urls'][urlkey], url_re)

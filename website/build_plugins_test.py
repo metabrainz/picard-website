@@ -6,12 +6,6 @@ import tempfile
 import unittest
 from website.build_plugins import download_plugins, build_json, zip_files
 
-# python 2 & 3 compatibility
-try:
-    basestring
-except NameError:
-    basestring = str
-
 
 class GenerateTestCase(unittest.TestCase):
 
@@ -23,7 +17,7 @@ class GenerateTestCase(unittest.TestCase):
     # The directory which contains plugin files
     @classmethod
     def setUpClass(cls):
-        cls.temp_dir, cls.plugin_dir = download_plugins()
+        cls.temp_dir, cls.plugin_dir = download_plugins('2.0')
 
     @classmethod
     def tearDownClass(cls):
@@ -98,8 +92,8 @@ class GenerateTestCase(unittest.TestCase):
 
         # All plugins should contain all required fields
         for module_name, data in plugin_json.items():
-            self.assertIsInstance(data['name'], basestring)
+            self.assertIsInstance(data['name'], str)
             self.assertIsInstance(data['api_versions'], list)
-            self.assertIsInstance(data['author'], basestring)
-            self.assertIsInstance(data['description'], basestring)
-            self.assertIsInstance(data['version'], basestring)
+            self.assertIsInstance(data['author'], str)
+            self.assertIsInstance(data['description'], str)
+            self.assertIsInstance(data['version'], str)

@@ -1,6 +1,8 @@
 from flask import Flask
 
 import os
+from .errors import init_error_handlers
+from .babel import init_app
 
 frontend_folder = os.path.dirname(os.path.abspath(__file__))
 template_folder = os.path.join(frontend_folder, 'templates')
@@ -23,12 +25,10 @@ def create_app():
     ), silent=True)
 
     # Error handling
-    import errors
-    errors.init_error_handlers(app)
+    init_error_handlers(app)
 
     # I18n
-    import babel
-    babel.init_app(app)
+    init_app(app)
 
     # Caching
     from werkzeug.contrib.cache import SimpleCache
@@ -41,12 +41,12 @@ def create_app():
     app.jinja_env.filters['expand'] = expand
 
     # Blueprints
-    from views import frontend_bp
-    from views.changelog import changelog_bp
-    from views.humans import humans_bp
-    from views.plugins import plugins_bp
-    from views.docs import docs_bp
-    from views.api import api_bp
+    from .views import frontend_bp
+    from .views.changelog import changelog_bp
+    from .views.humans import humans_bp
+    from .views.plugins import plugins_bp
+    from .views.docs import docs_bp
+    from .views.api import api_bp
 
     app.register_blueprint(frontend_bp)
     app.register_blueprint(changelog_bp, url_prefix='/changelog')
