@@ -1,9 +1,13 @@
 from urllib.request import urlopen
 from flask import current_app, Blueprint, render_template
+from markupsafe import Markup
 import re
 
 
 changelog_bp = Blueprint('changelog', __name__)
+re_code = re.compile(r'`(.*?)`')
+re_tickets = re.compile(r'(PICARD\-\d+)')
+re_version = re.compile(r'^Version\s+(.*?)\s+-\s+(.*?)$')
 
 
 def re_sub(string, find, replace):
@@ -15,7 +19,14 @@ def re_search(string, pattern):
 
 
 def version(string, group):
-    return re.match(r"^Version\s+(.*?)\s+-\s+(.*?)$", string).group(group)
+    return re_version.match(string).group(group)
+
+
+def add_markup(string):
+    # if re_tickets.search(string):
+    string = re_tickets.sub('<a href="https://tickets.musicbrainz.org/browse/\g<1>">\g<1></a>', string)
+    string = re_code.sub('<code>\g<1></code>', string)
+    return Markup(string)
 
 
 def load_changelog(app):
@@ -35,4 +46,5 @@ def show_changelog():
     app.jinja_env.tests['re_search'] = re_search
     app.jinja_env.filters['re_sub'] = re_sub
     app.jinja_env.filters['version'] = version
+    app.jinja_env.filters['add_markup'] = add_markup
     return render_template('changelog.html', lines=load_changelog(app))
