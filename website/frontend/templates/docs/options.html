@@ -490,6 +490,48 @@
         For a list of plugins see <a href="/plugins/" title="Picard Plugins">Picard Plugins</a>.
       </p>
 
+      <h1 id="interface">User interface</h1>
+
+      <ul class="options">
+        <li>
+          <b>Show text labels under icon:</b> Uncheck to make the toolbar a little smaller.
+        </li>
+        <li>
+          <b>Allow selection of multiple directories:</b> Check to bypass the native directory selector
+          and use QT's file dialog since the native directory selector usually doesn't allow you to select
+          more than one directory. This applies for the 'Add folder' dialog, the file browser always
+          allows multiple directory selection.
+        </li>
+        <li>
+          <b>Use advanced query syntax:</b> Check to enable
+          <a href="https://musicbrainz.org/doc/Text_Search_Syntax" title="Text Search Syntax">advanced query syntax</a>
+          parsing on your searches.
+          This only applies for the search box at the top right of Picard, not the lookup buttons.
+        </li>
+        <li>
+          <b>Show a quit confirmation dialog for unsaved changes:</b> Check to show a dialog when you try
+          to quit Picard with unsaved files loaded. This may help prevent accidentally losing tag changes
+          you've made, but not yet saved.
+        </li>
+        <li>
+          <b>Begin browsing in the following directory:</b> By default, Picard remembers the last directory
+          you loaded files from. If you check this box and provide a directory, Picard will start in
+          the directory provided instead.
+        </li>
+        <li>
+          <b>User interface language:</b> By default, Picard will display in the language displayed by your
+          operating system, however you can override this here if needed.
+        </li>
+      </ul>
+
+      <h1 id="scripting">Scripting</h1>
+
+      <p>
+        For scripting help see
+        <a href="/docs/scripting/" title="Picard Scripting">Picard Scripting</a>
+        and <a href="/docs/tags/" title="Picard Tags">Picard Tags</a> for variables available to script with.
+      </p>
+
       <h1 id="advanced">Advanced</h1>
 
       <h3 id="network">Networking</h3>
@@ -530,48 +572,6 @@
         As a general rule, lowering the percentages may increase the chance of finding a match at the risk
         of false positives and incorrect matches.
       </p>
-
-      <h3 id="scripting">Scripting</h3>
-
-      <p>
-        For scripting help see
-        <a href="/docs/scripting/" title="Picard Scripting">Picard Scripting</a>
-        and <a href="/docs/tags/" title="Picard Tags">Picard Tags</a> for variables available to script with.
-      </p>
-
-      <h3 id="interface">User interface</h3>
-
-      <ul class="options">
-        <li>
-          <b>Show text labels under icon:</b> Uncheck to make the toolbar a little smaller.
-        </li>
-        <li>
-          <b>Allow selection of multiple directories:</b> Check to bypass the native directory selector
-          and use QT's file dialog since the native directory selector usually doesn't allow you to select
-          more than one directory. This applies for the 'Add folder' dialog, the file browser always
-          allows multiple directory selection.
-        </li>
-        <li>
-          <b>Use advanced query syntax:</b> Check to enable
-          <a href="https://musicbrainz.org/doc/Text_Search_Syntax" title="Text Search Syntax">advanced query syntax</a>
-          parsing on your searches.
-          This only applies for the search box at the top right of Picard, not the lookup buttons.
-        </li>
-        <li>
-          <b>Show a quit confirmation dialog for unsaved changes:</b> Check to show a dialog when you try
-          to quit Picard with unsaved files loaded. This may help prevent accidentally losing tag changes
-          you've made, but not yet saved.
-        </li>
-        <li>
-          <b>Begin browsing in the following directory:</b> By default, Picard remembers the last directory
-          you loaded files from. If you check this box and provide a directory, Picard will start in
-          the directory provided instead.
-        </li>
-        <li>
-          <b>User interface language:</b> By default, Picard will display in the language displayed by your
-          operating system, however you can override this here if needed.
-        </li>
-      </ul>
     </div>
 
     <div class="col-md-4">
@@ -613,13 +613,13 @@
             </ul>
           </li>
           <li><a href="#plugins">Plugins</a></li>
+          <li><a href="#interface">User interface</a></li>
+          <li><a href="#scripting">Scripting</a></li>
           <li>
             <a href="#advanced">Advanced</a>
             <ul class="nav">
               <li><a href="#network">Networking</a></li>
               <li><a href="#matching">Matching</a></li>
-              <li><a href="#scripting">Scripting</a></li>
-              <li><a href="#interface">User interface</a></li>
             </ul>
           </li>
         </ul>
