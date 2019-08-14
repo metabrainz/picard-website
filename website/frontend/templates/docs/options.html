@@ -117,7 +117,7 @@
         </li>
       </ul>
 
-      <h3 id="releases">Preferred Releases</h3>
+      <h2 id="releases">Preferred Releases</h2>
 
       <ul class="options">
         <li> <b>Preferred release types</b>: Adjust the sliders for various release types to tweak how likely
@@ -136,7 +136,7 @@
         </li>
       </ul>
 
-      <h3 id="genres">Genres</h3>
+      <h2 id="genres">Genres</h2>
 
       <ul class="options">
         <li>
@@ -163,7 +163,7 @@
         </li>
       </ul>
 
-      <h3 id="ratings">Ratings</h3>
+      <h2 id="ratings">Ratings</h2>
 
       <ul class="options">
         <li> <b>Enable track ratings:</b> Check to write track ratings to your files.
@@ -184,7 +184,7 @@
         </li>
       </ul>
 
-      <h3 id="before_tagging">Before Tagging</h3>
+      <h2 id="before_tagging">Before Tagging</h2>
 
       <ul class="options">
         <li>
@@ -213,7 +213,7 @@
         </li>
       </ul>
 
-      <h3 id="tag_compatibility">Tag Compatibility</h3>
+      <h2 id="tag_compatibility">Tag Compatibility</h2>
 
       <ul class="options">
         <li>
@@ -262,7 +262,7 @@
          </b>
       </p>
 
-      <h3 id="location">Location</h3>
+      <h2 id="location">Location</h2>
 
       <ul class="options">
         <li>
@@ -303,7 +303,7 @@
         </li>
       </ul>
 
-      <h3 id="cover_art_providers">Cover Art Providers</h3>
+      <h2 id="cover_art_providers">Cover Art Providers</h2>
 
       <p>
         Picard can download Cover Art from a number of sources, and you can choose which sources you want
@@ -333,7 +333,7 @@
         <i>Note: CD Baby and other whitelist sites are no longer being used by MusicBrainz for new Cover Art.</i>
       </p>
 
-      <h3 id="cover_art_archive">Cover Art Archive</h3>
+      <h2 id="cover_art_archive">Cover Art Archive</h2>
 
       <p>In this section you can decide which types of cover art you would like to download from the Cover
         Art Archive, and what quality (size) you want to download. Obviously, the better the quality,
@@ -446,14 +446,14 @@
         This is where you tell Picard which CD drive it should use for looking up CDs.
       </p>
 
-      <h3 id="windows">Windows</h3>
+      <h2 id="windows">Windows</h2>
 
       <p>
         On Windows, Picard has a pulldown menu listing the various CD drives it has found. Pull down the
         menu and select the drive you want.
       </p>
 
-      <h3 id="os_x">OS X</h3>
+      <h2 id="os_x">OS X</h2>
 
       <p>
         In OS X, this option is currently a text field. The device is usually /dev/rdisk1.
@@ -467,13 +467,13 @@
         in Picard's preferences.
       </p>
 
-      <h3 id="linux">Linux</h3>
+      <h2 id="linux">Linux</h2>
 
       <p>In Linux, Picard has a pulldown menu like in Windows. If you're using an older version with a text
         field, you should enter the device name (typically /dev/cdrom) here.
       </p>
 
-      <h3 id="other_platforms">Other platforms</h3>
+      <h2 id="other_platforms">Other platforms</h2>
 
       <p>
         On other platforms, the CD Lookup option is a text field and you should enter the path to the CD
@@ -534,13 +534,44 @@
 
       <h1 id="advanced">Advanced</h1>
 
-      <h3 id="network">Networking</h3>
+      <h2 id="network">Networking</h2>
+
+      <h3>Web Proxy</h3>
 
       <p>
         If you need a proxy to make an outside connection you may specify one here.
       </p>
 
-      <h3 id="matching">Matching</h3>
+      <h3>Browser Integration</h3>
+
+      <p>
+        The browser integration allows you to load releases and recordings into
+        Picard directly from the MusicBrainz website. Once you have opened musicbrainz.org
+        in your browser from Picard the website will show the green tagger button
+        <img alt="Tagger" src="https://staticbrainz.org/MB/mblookup-tagger-b8fe559.png">
+        next to releases and recordings, clicking on this button will load the corresponding
+        release or recording into Picard.
+      </p>
+
+      <ul class="options">
+        <li> <b>Default listening port:</b> The default port Picard will listen on
+          for the browser integration. If the port is not available Picard will try
+          to increase the port number by one until it finds a free port.
+        </li>
+        <li> <b>Listen only on localhost:</b> By default Picard will limit access to
+          the browser integration port to your local machine. Deactivating this option
+          will expose the port on your network, allowing you to request Picard to
+          load a specific release or recording via the network. This is used for
+          example by the <a target="_blank" href="https://play.google.com/store/apps/details?id=org.musicbrainz.picard.barcodescanner">Picard Barcode Scanner</a>
+          Android app.<br>
+          <br>
+          <em>Warning: Only enable this option when you actually need it and only on
+          networks you trust. Exposing application ports via the network can open
+          potential security holes on your system.</em>
+        </li>
+      </ul>
+
+      <h2 id="matching">Matching</h2>
 
       <p>
         It is recommended for most users to not change these settings. However for advanced users, it allows
