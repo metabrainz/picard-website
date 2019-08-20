@@ -307,7 +307,9 @@
 
       <p>
         Picard can download Cover Art from a number of sources, and you can choose which sources you want
-        Picard to download cover art from:
+        Picard to download cover art from. You can activate more than one provider and choose the order in
+        which the providers are used. Picard will try the providers from top to bottom and the first provider
+        which provides images will be used.
       </p>
 
       <ul class="options">
@@ -318,20 +320,46 @@
           CDs etc.).
         </li>
         <li>
+          <b>CAA Release Group:</b> This provider uses the Cover Art Archive cover image assigned to the
+          release group. This is usually the image that best describes the release group as a whole or
+          the image with the best visual quality, but is not necessarily the exact cover of the release
+          your are tagging. This provider is a good choice if you care more about visual quality then having
+          an exact representation of your release. It is also a good fallback for the Cover Art Archive provider.
+        </li>
+        <li>
+          <b>Sites on the whitelist:</b>
+          See <a href="https://musicbrainz.org/doc/Style/Relationships/URLs/Cover_art_whitelist"
+          title="Style/Relationships/URLs/Cover art whitelist">Style/Relationships/URLs/Cover_art_whitelist</a><br>
+          <em>Note: CD Baby and other whitelist sites are no longer being used by MusicBrainz for new Cover Art.</em>
+        </li>
+        <li>
+          <b>Local Files:</b> Load cover art from local files. The file names to load can be configured in the
+          <a href="#local_files">Local Files provider options</a>.
+        </li>
+      </ul>
+
+      <p>
+        In addition to the built-in cover art providers described above, additional cover art providers can
+        be installed as <a href="/plugins/" title="Available Plugins">plugins</a>.
+      </p>
+
+      <ul class="options">
+        <li>
           <b>Amazon:</b> Amazon often has cover art when other sites don't, however whilst this art is almost
           always for the correct Artist/Album, it may not be the absolute correct cover art for the specific
           Release that you have tagged your music with.
         </li>
         <li>
-          <b>Sites on the whitelist:</b>
-          See <a href="https://musicbrainz.org/doc/Style/Relationships/URLs/Cover_art_whitelist"
-          title="Style/Relationships/URLs/Cover art whitelist">Style/Relationships/URLs/Cover_art_whitelist</a>
+          <b>fanart.tv:</b> Uses cover art from <a href="https://fanart.tv/" title="fanart.tv">fanart.tv</a>,
+          which focuses on cover art with high visual quality. This provider provides cover art representative for
+          the release group and not the individual release.
+        </li>
+        <li>
+          <b>TheAudioDB:</b> Uses cover art from <a href="https://www.theaudiodb.com/" title="TheAudioDB">TheAudioDB</a>,
+          which focuses on cover art with high visual quality. This provider provides cover art representative for
+          the release group and not the individual release.
         </li>
       </ul>
-
-      <p>
-        <i>Note: CD Baby and other whitelist sites are no longer being used by MusicBrainz for new Cover Art.</i>
-      </p>
 
       <h2 id="cover_art_archive">Cover Art Archive</h2>
 
@@ -353,6 +381,14 @@
         image is found for the release. In this case, the cover may not match the exact release you are
         tagging (eg. a 1979 vinyl front cover may be used in place of the Deluxe 2010 CD reissue).
       </p>
+
+      <h2 id="local_files">Local Files</h2>
+
+      <p>
+        In this section you can configure the file names to be used by the Local Files cover art provider. The
+        file names are defined using a regular expression. The default is to load files with the name
+        <code>cover</code>, <code>folder</code> or <code>albumart</code> and the file extension <code>jpg</code>,
+        <code>png</code>, <code>gif</code> or <code>tiff</code> (e.g. <code>folder.jpg</code> or <code>cover.png</code>).
 
       <h1 id="filerenaming">File Naming</h1>
 
@@ -685,6 +721,7 @@
               <li><a href="#location">Location</a></li>
               <li><a href="#cover_art_providers">Cover Art Providers</a></li>
               <li><a href="#cover_art_archive">Cover Art Archive</a></li>
+              <li><a href="#local_files">Local Files</a></li>
             </ul>
           </li>
           <li><a href="#filerenaming">File Naming</a></li>
