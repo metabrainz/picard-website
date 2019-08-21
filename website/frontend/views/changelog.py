@@ -1,32 +1,27 @@
 from urllib.request import urlopen
 from flask import current_app, Blueprint, render_template
-from markupsafe import Markup
 import re
+import mistune
 
 
 changelog_bp = Blueprint('changelog', __name__)
-re_code = re.compile(r'`(.*?)`')
-re_tickets = re.compile(r'(PICARD\-\d+)')
 re_version = re.compile(r'^Version\s+(.*?)\s+-\s+(.*?)$')
+version_header = '<h3 id="release-{0}">Version <strong>{0}</strong> <span>{1}</span></h3>'
 
 
-def re_sub(string, find, replace):
-    return re.sub(find, replace, string)
+class ChangelogRenderer(mistune.Renderer):
+    def header(self, text, level, raw=None):
+        if level == 1:
+            match = re_version.match(text)
+            if match:
+                version = match.group(1)
+                date = match.group(2).replace("xxxx-xx-xx", "Yet to be released")
+                return version_header.format(version, date)
+        return super().header(text, level + 2, raw)
 
 
-def re_search(string, pattern):
-    return re.search(pattern, string)
-
-
-def version(string, group):
-    return re_version.match(string).group(group)
-
-
-def add_markup(string):
-    # if re_tickets.search(string):
-    string = re_tickets.sub('<a href="https://tickets.musicbrainz.org/browse/\g<1>">\g<1></a>', string)
-    string = re_code.sub('<code>\g<1></code>', string)
-    return Markup(string)
+renderer = ChangelogRenderer()
+markdown = mistune.Markdown(renderer=renderer)
 
 
 def load_changelog(app):
@@ -35,7 +30,8 @@ def load_changelog(app):
     if data is None:
         url = app.config['CHANGELOG_URL']
         with urlopen(url) as conn:
-            data = conn.read().decode("utf-8-sig").splitlines()
+            data = conn.read().decode("utf-8-sig")
+            data = markdown(data)
             app.cache.set(key, data, timeout=app.config['CHANGELOG_CACHE_TIMEOUT'])
     return data
 
@@ -43,8 +39,4 @@ def load_changelog(app):
 @changelog_bp.route('/')
 def show_changelog():
     app = current_app
-    app.jinja_env.tests['re_search'] = re_search
-    app.jinja_env.filters['re_sub'] = re_sub
-    app.jinja_env.filters['version'] = version
-    app.jinja_env.filters['add_markup'] = add_markup
-    return render_template('changelog.html', lines=load_changelog(app))
+    return render_template('changelog.html', changelog=load_changelog(app))

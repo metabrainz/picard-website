@@ -54,7 +54,7 @@ PICARD_VERSIONS = {
     },
 }
 
-CHANGELOG_URL = "https://raw.githubusercontent.com/musicbrainz/picard/master/NEWS.txt"
+CHANGELOG_URL = "https://raw.githubusercontent.com/musicbrainz/picard/master/NEWS.md"
 CHANGELOG_CACHE_TIMEOUT = 5 * 60
 
 SUPPORTED_LANGUAGES = [
