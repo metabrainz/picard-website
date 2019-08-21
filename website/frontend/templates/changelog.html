@@ -4,22 +4,7 @@
 {% block content %}
     <div class="container">
       <div id="log">
-      {% for line in lines %}
-        {% if line is re_search("^Version\s+(.*?)\s+-\s+(.*?)") %}
-          <h3 id="release-{{ line | version(1) }}">Version
-            <strong>{{ line | version(1) }}</strong>
-            <span>{{ line | version(2) | re_sub("xxxx\-xx\-xx", "Yet to be released.")}}</span>
-          </h3>
-        {% else %}
-          {% if line is re_search("\s+?\*\s+") %}
-            <p class="newLine">{{ line | re_sub("\s+?\*\s+", "") | add_markup }}</p>
-          {% elif line is re_search("\s*\*\*\s+") %}
-            <h4>{{ line | re_sub("\s*\*\*\s+", "")}}</h4>
-          {% else %}
-            <p>{{ line | add_markup }}</p>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
+        {{ changelog | safe }}
       </div>
 {% endblock %}
     </div><!-- /.container -->
