@@ -1,12 +1,12 @@
 {% extends 'docs/base.html' %}
 {% set git_doc = "build-osx.html" %}
-{% set doc_title = _("Build on OSX") %}
+{% set doc_title = _("Build on macOS") %}
 {% block content %}
 <div id="docs" class="container">
   <div class="row">
     <div class="col-md-8">
       <p>
-        This guide details the process I've used to build Tiger-compatible Picard app bundles on OS X.
+        This guide details the process I've used to build Tiger-compatible Picard app bundles on macOS.
         There are many ways to achieve this, but I've found these steps to be the simplest and most compatible
         after much trial and error.
       </p>
@@ -40,7 +40,7 @@
           python-2.7.3-macosx10.3.dmg</a>.
 
           Use the provided Update Shell Profile.command to make this your default Python. Note: this
-          is required. You can't use the system Python that comes with OS X! py2app won't allow you to
+          is required. You can't use the system Python that comes with macOS! py2app won't allow you to
           build standalone app bundles with it.
         </li>
         <li>
