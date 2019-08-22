@@ -3,6 +3,7 @@
 import ast
 import os
 import json
+import mistune
 import re
 import shutil
 import zipfile
@@ -60,6 +61,7 @@ KNOWN_DATA = [
 ]
 
 _version_re = re.compile(r"(\d+)[._](\d+)(?:[._](\d+)[._]?(?:(dev|final)[._]?(\d+))?)?$")
+markdown = mistune.Markdown()
 
 
 class VersionError(Exception):
@@ -98,7 +100,10 @@ def get_plugin_data(filepath):
                     name = target.id.replace('PLUGIN_', '', 1).lower()
                     if name not in data:
                         try:
-                            data[name] = ast.literal_eval(node.value)
+                            value = ast.literal_eval(node.value)
+                            if name == 'description':
+                                value = markdown(value)
+                            data[name] = value
                         except ValueError:
                             print('Cannot evaluate value in '
                                   + filepath + ':' +
