@@ -2,7 +2,7 @@
 {% set git_doc = "mappings.html"%}
 {% set doc_title = _("Tag Mappings") %}
 {% block content %}
-<div id="docs" class="container">
+<div id="mappings" class="container">
     <p>Table of mapping between <a href="/" title="MusicBrainz Picard">Picard</a> internal
       tag names and various tagging formats.
     </p>
@@ -107,7 +107,7 @@
           </td>
         </tr>
         <tr>
-          <th>Work Title (Picard&gt;=1.3)
+          <th>Work Title <span class="comment">Picard&gt;=1.3</span>
           </th>
           <td>
             <code>work</code>
@@ -125,7 +125,7 @@
             <code>WORK</code>
           </td>
           <td>
-            <code>&copy;wrk</code>  <i>(Picard&gt;=2.1)</i>
+            <code>&copy;wrk</code> <span class="comment">Picard&gt;=2.1</span>
           </td>
           <td>
             <code>WM/Work</code>
@@ -204,9 +204,9 @@
             <code>albumartistsort</code>
           </td>
           <td>
-            <code>TSO2</code> <i>(Picard&gt;=1.2)</i>
+            <code>TSO2</code> <span class="comment">Picard&gt;=1.2</span>
             <br />
-            <code>TXXX:ALBUMARTISTSORT</code> <i>(Picard&lt;=1.1)</i>
+            <code>TXXX:ALBUMARTISTSORT</code> <span class="comment">Picard&lt;=1.1</span>
           </td>
           <td>
             <code>ALBUMARTISTSORT</code>
@@ -250,10 +250,9 @@
             <code>date</code>
           </td>
           <td>
-            <code>TDRC</code> <i>(id3v24)</i>
+            <code>TDRC</code> <span class="comment">id3v24</span>
             <br />
-            <code>TYER</code>+
-            <code>TDAT</code> <i>(id3v23)</i>
+            <code>TYER</code> + <code>TDAT</code> <span class="comment">id3v23</span>
           </td>
           <td>
             <code>DATE</code>
@@ -283,7 +282,7 @@
           <td>
           </td>
           <td>
-            <code>WM/OriginalAlbumTitle</code>  <i>(Picard&gt;=2.1)</i>
+            <code>WM/OriginalAlbumTitle</code> <span class="comment">Picard&gt;=2.1</span>
           </td>
         </tr>
         <tr>
@@ -297,12 +296,12 @@
           <td>
           </td>
           <td>
-            <code>Original Artist</code>  <i>(Picard&gt;=2.1)</i>
+            <code>Original Artist</code> <span class="comment">Picard&gt;=2.1</span>
           </td>
           <td>
           </td>
           <td>
-            <code>WM/OriginalArtist</code>  <i>(Picard&gt;=2.1)</i>
+            <code>WM/OriginalArtist</code> <span class="comment">Picard&gt;=2.1</span>
           </td>
         </tr>
         <tr>
@@ -312,9 +311,9 @@
             <code>originaldate</code>
           </td>
           <td>
-            <code>TDOR</code> <i>(id3v24)</i>
+            <code>TDOR</code> <span class="comment">id3v24</span>
             <br />
-            <code>TORY</code> <i>(id3v23)</i>
+            <code>TORY</code> <span class="comment">id3v23</span>
           </td>
           <td>
             <code>ORIGINALDATE</code>
@@ -324,9 +323,9 @@
           <td>
           </td>
           <td>
-            <code>WM/OriginalReleaseTime</code> <i>(Picard&gt;=1.3.1)</i>
+            <code>WM/OriginalReleaseTime</code> <span class="comment">Picard&gt;=1.3.1</span>
             <br />
-            <code>WM/OriginalReleaseYear</code> <i>(Picard&lt;=1.3.0)</i>
+            <code>WM/OriginalReleaseYear</code> <span class="comment">Picard&lt;=1.3.0</span>
           </td>
         </tr>
         <tr>
@@ -346,7 +345,7 @@
           <td>
           </td>
           <td>
-            <code>WM/OriginalReleaseYear</code> <i>(Picard&gt;=1.3.1)</i>
+            <code>WM/OriginalReleaseYear</code> <span class="comment">Picard&gt;=1.3.1</span>
           </td>
         </tr>
         <tr>
@@ -379,9 +378,9 @@
             <code>composersort</code>
           </td>
           <td>
-            <code>TSOC</code> <i>(Picard&gt;=1.3)</i>
+            <code>TSOC</code> <span class="comment">Picard&gt;=1.3</span>
             <br />
-            <code>TXXX:COMPOSERSORT</code> <i>(Picard&lt;=1.2)</i>
+            <code>TXXX:COMPOSERSORT</code> <span class="comment">Picard&lt;=1.2</span>
           </td>
           <td>
             <code>COMPOSERSORT</code>
@@ -393,7 +392,7 @@
             <code>soco</code>
           </td>
           <td>
-            <code>WM/ComposerSortOrder</code> <i>(Picard&gt;=1.3)</i>
+            <code>WM/ComposerSortOrder</code> <span class="comment">Picard&gt;=1.3</span>
           </td>
         </tr>
         <tr>
@@ -427,7 +426,7 @@
             <code>writer</code>
           </td>
           <td>
-            <code>TXXX:Writer</code> <i>(Picard&gt;=1.3)</i>
+            <code>TXXX:Writer</code> <span class="comment">Picard&gt;=1.3</span>
           </td>
           <td>
             <code>WRITER</code>
@@ -476,17 +475,15 @@
             <code>performer:instrument</code>
           </td>
           <td>
-            <code>TMCL:instrument</code> <i>(id3v24)</i>
+            <code>TMCL:instrument</code> <span class="comment">id3v24</span>
             <br />
-            <code>IPLS:instrument</code> <i>(id3v23)</i>
+            <code>IPLS:instrument</code> <span class="comment">id3v23</span>
           </td>
           <td>
-            <code>PERFORMER</code>=<i>artist</i> (
-            <code>instrument</code>)
+            <code>PERFORMER=<i>{artist}</i> (instrument)</code>
           </td>
           <td>
-            <code>Performer</code>=<i>artist</i> (
-            <code>instrument</code>)
+            <code>Performer=<i>{artist}</i> (instrument)</code>
           </td>
           <td>
           </td>
@@ -524,9 +521,9 @@
             <code>arranger</code>
           </td>
           <td>
-            <code>TIPL:arranger</code> <i>(id3v24)</i>
+            <code>TIPL:arranger</code> <span class="comment">id3v24</span>
             <br />
-            <code>IPLS:arranger</code> <i>(id3v23)</i>
+            <code>IPLS:arranger</code> <span class="comment">id3v23</span>
           </td>
           <td>
             <code>ARRANGER</code>
@@ -547,9 +544,9 @@
             <code>engineer</code>
           </td>
           <td>
-            <code>TIPL:engineer</code> <i>(id3v24)</i>
+            <code>TIPL:engineer</code> <span class="comment">id3v24</span>
             <br />
-            <code>IPLS:engineer</code> <i>(id3v23)</i>
+            <code>IPLS:engineer</code> <span class="comment">id3v23</span>
           </td>
           <td>
             <code>ENGINEER</code>
@@ -572,9 +569,9 @@
             <code>producer</code>
           </td>
           <td>
-            <code>TIPL:producer</code> <i>(id3v24)</i>
+            <code>TIPL:producer</code> <span class="comment">id3v24</span>
             <br />
-            <code>IPLS:producer</code> <i>(id3v23)</i>
+            <code>IPLS:producer</code> <span class="comment">id3v23</span>
           </td>
           <td>
             <code>PRODUCER</code>
@@ -597,9 +594,9 @@
             <code>djmixer</code>
           </td>
           <td>
-            <code>TIPL:DJ-mix</code> <i>(id3v24)</i>
+            <code>TIPL:DJ-mix</code> <span class="comment">id3v24</span>
             <br />
-            <code>IPLS:DJ-mix</code> <i>(id3v23)</i>
+            <code>IPLS:DJ-mix</code> <span class="comment">id3v23</span>
           </td>
           <td>
             <code>DJMIXER</code>
@@ -622,9 +619,9 @@
             <code>mixer</code>
           </td>
           <td>
-            <code>TIPL:mix</code> <i>(id3v24)</i>
+            <code>TIPL:mix</code> <span class="comment">id3v24</span>
             <br />
-            <code>IPLS:mix</code> <i>(id3v23)</i>
+            <code>IPLS:mix</code> <span class="comment">id3v23</span>
           </td>
           <td>
             <code>MIXER</code>
@@ -662,7 +659,7 @@
           </td>
         </tr>
         <tr>
-          <th>Movement<sup id="cite_ref-notinstockpicard_3-0" class="reference"><a href="#cite_note-notinstockpicard-3">[4]</a></sup> (Picard&gt;=2.1)
+          <th>Movement<sup id="cite_ref-notinstockpicard_3-0" class="reference"><a href="#cite_note-notinstockpicard-3">[4]</a></sup> <span class="comment">Picard&gt;=2.1</span>
           </th>
           <td>
             <code>movement</code>
@@ -683,7 +680,7 @@
           </td>
         </tr>
         <tr>
-          <th>Movement Number<sup id="cite_ref-notinstockpicard_3-0" class="reference"><a href="#cite_note-notinstockpicard-3">[4]</a></sup> (Picard&gt;=2.1)
+          <th>Movement Number<sup id="cite_ref-notinstockpicard_3-0" class="reference"><a href="#cite_note-notinstockpicard-3">[4]</a></sup> <span class="comment">Picard&gt;=2.1</span>
           </th>
           <td>
             <code>movementnumber</code>
@@ -704,7 +701,7 @@
           </td>
         </tr>
         <tr>
-          <th>Movement Count<sup id="cite_ref-notinstockpicard_3-0" class="reference"><a href="#cite_note-notinstockpicard-3">[4]</a></sup> (Picard&gt;=2.1)
+          <th>Movement Count<sup id="cite_ref-notinstockpicard_3-0" class="reference"><a href="#cite_note-notinstockpicard-3">[4]</a></sup> <span class="comment">Picard&gt;=2.1</span>
           </th>
           <td>
             <code>movementtotal</code>
@@ -725,7 +722,7 @@
           </td>
         </tr>
         <tr>
-          <th>Show Work &amp; Movement<sup id="cite_ref-notinstockpicard_3-0" class="reference"><a href="#cite_note-notinstockpicard-3">[4]</a></sup> (Picard&gt;=2.1)
+          <th>Show Work &amp; Movement<sup id="cite_ref-notinstockpicard_3-0" class="reference"><a href="#cite_note-notinstockpicard-3">[4]</a></sup> <span class="comment">Picard&gt;=2.1</span>
           </th>
           <td>
             <code>showmovement</code>
@@ -799,7 +796,7 @@
             <code>discsubtitle</code>
           </td>
           <td>
-            <code>TSST</code> <i>(id3v24 only)</i>
+            <code>TSST</code> <span class="comment">id3v24 only</span>
           </td>
           <td>
             <code>DISCSUBTITLE</code>
@@ -898,7 +895,7 @@
             <code>disk</code>
           </td>
           <td>
-            <code>WM/PartOfSet</code> <i>(Picard&gt;=1.3.1)</i>
+            <code>WM/PartOfSet</code> <span class="comment">Picard&gt;=1.3.1</span>
           </td>
         </tr>
         <tr>
@@ -1016,7 +1013,7 @@
             <code>mood</code>
           </td>
           <td>
-            <code>TMOO</code> <i>(id3v24 only)</i>
+            <code>TMOO</code> <span class="comment">id3v24 only</span>
           </td>
           <td>
             <code>MOOD</code>
@@ -1309,9 +1306,9 @@
             <code>license</code>
           </td>
           <td>
-            <code>WCOP</code> <i>(single URL)</i>
+            <code>WCOP</code> <span class="comment">single URL</span>
             <br />
-            <code>TXXX:LICENSE</code>(multiple or non-URL)
+            <code>TXXX:LICENSE</code> <span class="comment">multiple or non-URL</span>
           </td>
           <td>
             <code>LICENSE</code>
@@ -1365,7 +1362,7 @@
           <td>
           </td>
           <td>
-            <code>WM/EncodingSettings</code> <i>(Picard&gt;=1.3.1)</i>
+            <code>WM/EncodingSettings</code> <span class="comment">Picard&gt;=1.3.1</span>
           </td>
         </tr>
         <tr>
@@ -1534,10 +1531,10 @@
           <td>
           </td>
           <td>
-            <code>----:com.apple.iTunes:MusicBrainz Original Album Id</code> <i>(Picard&gt;=2.1)</i>
+            <code>----:com.apple.iTunes:MusicBrainz Original Album Id</code> <span class="comment">Picard&gt;=2.1</span>
           </td>
           <td>
-            <code>MusicBrainz/Original Album Id</code> <i>(Picard&gt;=2.1)</i>
+            <code>MusicBrainz/Original Album Id</code> <span class="comment">Picard&gt;=2.1</span>
           </td>
         </tr>
         <tr>
@@ -1577,10 +1574,10 @@
           <td>
           </td>
           <td>
-            <code>----:com.apple.iTunes:MusicBrainz Original Artist Id</code> <i>(Picard&gt;=2.1)</i>
+            <code>----:com.apple.iTunes:MusicBrainz Original Artist Id</code> <span class="comment">Picard&gt;=2.1</span>
           </td>
           <td>
-            <code>MusicBrainz/Original Artist Id</code> <i>(Picard&gt;=2.1)</i>
+            <code>MusicBrainz/Original Artist Id</code> <span class="comment">Picard&gt;=2.1</span>
           </td>
         </tr>
         <tr>
@@ -1769,7 +1766,7 @@
             <code>TXXX:MusicMagic Fingerprint</code>
           </td>
           <td>
-            <code>FINGERPRINT=MusicMagic Fingerprint</code> <i>{fingerprint}</i>
+            <code>FINGERPRINT=MusicMagic Fingerprint <i>{fingerprint}</i></code>
           </td>
           <td>
           </td>
@@ -1797,7 +1794,7 @@
           <td>
           </td>
           <td>
-            <code>WM/AuthorURL</code> <i>(Picard&gt;=1.3.1)</i>
+            <code>WM/AuthorURL</code> <span class="comment">Picard&gt;=1.3.1</span>
           </td>
         </tr>
         <tr>
@@ -1823,7 +1820,7 @@
           </td>
         </tr>
         <tr>
-          <th>ReplayGain Album Gain (Picard&gt;=2.2)
+          <th>ReplayGain Album Gain <span class="comment">Picard&gt;=2.2</span>
           </th>
           <td>
             <code>replaygain_album_gain</code>
@@ -1845,7 +1842,7 @@
           </td>
         </tr>
         <tr>
-          <th>ReplayGain Album Peak (Picard&gt;=2.2)
+          <th>ReplayGain Album Peak <span class="comment">Picard&gt;=2.2</span>
           </th>
           <td>
             <code>replaygain_album_peak</code>
@@ -1867,7 +1864,7 @@
           </td>
         </tr>
         <tr>
-          <th>ReplayGain Album Range (Picard&gt;=2.2)
+          <th>ReplayGain Album Range <span class="comment">Picard&gt;=2.2</span>
           </th>
           <td>
             <code>replaygain_album_range</code>
@@ -1889,7 +1886,7 @@
           </td>
         </tr>
         <tr>
-          <th>ReplayGain Track Gain (Picard&gt;=2.2)
+          <th>ReplayGain Track Gain <span class="comment">Picard&gt;=2.2</span>
           </th>
           <td>
             <code>replaygain_track_gain</code>
@@ -1911,7 +1908,7 @@
           </td>
         </tr>
         <tr>
-          <th>ReplayGain Track Peak (Picard&gt;=2.2)
+          <th>ReplayGain Track Peak <span class="comment">Picard&gt;=2.2</span>
           </th>
           <td>
             <code>replaygain_track_peak</code>
@@ -1933,7 +1930,7 @@
           </td>
         </tr>
         <tr>
-          <th>ReplayGain Track Range (Picard&gt;=2.2)
+          <th>ReplayGain Track Range <span class="comment">Picard&gt;=2.2</span>
           </th>
           <td>
             <code>replaygain_track_range</code>
@@ -1955,7 +1952,7 @@
           </td>
         </tr>
         <tr>
-          <th>ReplayGain Reference Loudness (Picard&gt;=2.2)
+          <th>ReplayGain Reference Loudness <span class="comment">Picard&gt;=2.2</span>
           </th>
           <td>
             <code>replaygain_reference_loudness</code>
