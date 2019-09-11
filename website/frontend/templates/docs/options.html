@@ -155,8 +155,6 @@
           <a href="https://musicbrainz.org/doc/Folksonomy_Tagging" title="Folksonomy Tagging">folksonomy tags</a>
           to set the genre. Otherwise only the tags considered by MusicBrainz to be proper genres will be used.
         </li>
-        <li> <b>Genres or folksonomy tags to exclude:</b> Comma-separated list of genres or tags to ignore when writing genres.
-        </li>
         <li> <b>Minimal genre usage:</b> Choose how popular the genre must be before it is written by Picard. Default:
           90%. Lowering the value here will lead to more, but possibly less relevant, genres in your files.
         </li>
@@ -164,6 +162,33 @@
           want a single genre, set this to 1.
         </li>
         <li> <b>Join multiple genres with:</b> Select which character should be used to separate multiple genres.
+        </li>
+        <li>
+          <p>
+            <b>Genres or folksonomy tags to include or exclude:</b> One expression per line, case-insensitive.
+            You can use the "Playground" text field to enter some genres and test the rules you have setup. Genres
+            that will be excluded will be marked red, included genres will be marked green.
+          </p>
+          <p><b>Comments</b></p>
+          <p>Lines not starting with <code>-</code> or <code>+</code> are ignored.</p>
+          <pre>#comment
+!comment
+comment</pre>
+          <p><b>Strict filtering:</b></p>
+          <p>Exclude exactly <em>word</em> by prefixing it with <code>-</code>:</p>
+          <pre>-word</pre>
+          <p>Include exactly <em>word</em>, even if another rule would exclude it, by prefixing it with <code>+</code>:</p>
+          <pre>+word</pre>
+          <p><b>Wildcard filtering:</b></p>
+          <p>Exclude all genres ending with <em>word</em>:</p>
+          <pre>-*word</pre>
+          <p>Include all genres starting with <em>word</em>:</p>
+          <pre>+word*</pre>
+          <p>Exclude all genres starting with <em>w</em> and ending with <em>rd</em>:</p>
+          <pre>-w*rd</pre>
+          <p><b>Regular expressions filtering (Python re syntax):</b></p>
+          <p>Exclude genres starting with <em>w</em> followed by any character, then <em>r</em> followed by at least one <em>d</em>:</p>
+          <pre>-/^w.rd+/</pre>
         </li>
       </ul>
 
