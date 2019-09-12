@@ -7,11 +7,10 @@
           {{ _("Picard is available for all major platforms. Just download and start the installer. It's that easy.") }}
         </p>
         <ul id="downloads">
-          <a name="windows64"></a>
-          <li class="download-item">
+          <li class="download-item" id="windows">
             <h3>
             <i class="fa fa-windows fa-2x"></i>
-            {{ _("Picard for <strong>Windows (64-bit)</strong>") }}
+            {{ _("Picard for <strong>Windows</strong>") }}
             </h3>
 
             <div class="table-responsive download-table">
@@ -26,7 +25,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>{{tag}}</td>
+                    <td>{{tag}} <em>64-bit</em></td>
                     <td>{{win_hash}}</td>
                     <td>{{win_size}} MB</td>
                     <td>
@@ -40,31 +39,8 @@
                       </div>
                     </td>
                   </tr>
-                </tbody>
-              </table>
-            </div>
-          </li>
-
-          <a name="windows32"></a>
-          <li class="download-item">
-            <h3>
-            <i class="fa fa-windows fa-2x"></i>
-            {{ _("Picard for <strong>Windows (32-bit)</strong>") }}
-            </h3>
-
-            <div class="table-responsive download-table">
-              <table class="table table-striped">
-                <thead>
                   <tr>
-                    <th>{{ _("Picard Version") }}</th>
-                    <th>{{ _("MD5 Hash") }}</th>
-                    <th>{{ _("Size") }}</th>
-                    <th>{{ _("Link") }}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1.4.2</td>
+                    <td>1.4.2 <em>32-bit</em></td>
                     <td>dc5a3cb4c55885a65a14fed51fd39bb1</td>
                     <td>9.5 MB</td>
                     <td>
@@ -82,15 +58,14 @@
               </table>
             </div>
             {% autoescape false %}
-            <p>{{ _("If you get an error about being unable to run the program, install the {url|Microsoft Visual C++ 2008 Redistributable Package (x86)}.")|expand({'url': 'http://www.microsoft.com/downloads/details.aspx?FamilyID=9b2da534-3e03-4391-8a4d-074b9f2bc1bf&displaylang=en'}) }}</p>
+            <p>{{ _("If you get an error about being unable to run the 32-bit version, install the {url|Microsoft Visual C++ 2008 Redistributable Package (x86)}.")|expand({'url': 'http://www.microsoft.com/downloads/details.aspx?FamilyID=9b2da534-3e03-4391-8a4d-074b9f2bc1bf&displaylang=en'}) }}</p>
             {% endautoescape %}
           </li>
 
-          <a name="mac"></a>
-          <li class="download-item">
+          <li class="download-item" id="mac">
             <h3>
             <i class="fa fa-apple fa-2x"></i>
-            {{ _('Picard for <strong>Mac OS X 10.10+ (x86_64)</strong>') }}
+            {{ _('Picard for <strong>macOS</strong>') }}
             </h3>
 
             <div class="table-responsive download-table">
@@ -105,7 +80,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>{{tag}}</td>
+                    <td>{{tag}} <em>macOS 10.12+ (x86_64)</em></td>
                     <td>{{mac_hash}}</td>
                     <td>{{mac_size}} MB</td>
                     <td>
@@ -119,31 +94,23 @@
                       </div>
                     </td>
                   </tr>
-                </tbody>
-              </table>
-            </div>
-          </li>
-
-          <a name="mac10.7-10.9"></a>
-          <li class="download-item">
-            <h3>
-            <i class="fa fa-apple fa-2x"></i>
-            {{ _('Picard for <strong>Mac OS X 10.7-10.9 (x86_64)</strong>') }}
-            </h3>
-
-            <div class="table-responsive download-table">
-              <table class="table table-striped">
-                <thead>
                   <tr>
-                    <th>{{ _("Picard Version") }}</th>
-                    <th>{{ _("MD5 Hash") }}</th>
-                    <th>{{ _("Size") }}</th>
-                    <th>{{ _("Link") }}</th>
+                    <td>2.1.3 <em>macOS 10.10+ (x86_64)</em></td>
+                    <td>4d781ca512c48fe4c3c00a432e80ed96</td>
+                    <td>22 MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz.Picard.2.1.3.dmg">{{ _('US Mirror') }}</a></li>
+                          <li><a href="ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/MusicBrainz.Picard.2.1.3.dmg">{{ _('EU Mirror') }}</a></li>
+                        </ul>
+                      </div>
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td>1.4.2</td>
+                    <td>1.4.2 <em>macOS 10.7-10.10 (x86_64)</em></td>
                     <td>bb9bdae898cb7c0702ff452a3ff4429c</td>
                     <td>17 MB</td>
                     <td>
@@ -157,31 +124,8 @@
                       </div>
                     </td>
                   </tr>
-                </tbody>
-              </table>
-            </div>
-          </li>
-
-          <a name="mac10.4-10.6"></a>
-          <li class="download-item">
-            <h3>
-            <i class="fa fa-apple fa-2x"></i>
-            {{ _('Picard for <strong>Mac OS X 10.4-10.6 (i386)</strong>') }}
-            </h3>
-
-            <div class="table-responsive download-table">
-              <table class="table table-striped">
-                <thead>
                   <tr>
-                    <th>{{ _("Picard Version") }}</th>
-                    <th>{{ _("MD5 Hash") }}</th>
-                    <th>{{ _("Size") }}</th>
-                    <th>{{ _("Link") }}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1.2</td>
+                    <td>1.2 <em>macOS 10.4-10.6 (i386)</em></td>
                     <td>db8c5c9f1221b11904305d3e280421bb</td>
                     <td>13 MB</td>
                     <td>
@@ -195,13 +139,12 @@
                       </div>
                     </td>
                   </tr>
-                 </tbody>
+                </tbody>
               </table>
             </div>
           </li>
 
-          <a name="linux"></a>
-          <li class="download-item">
+          <li class="download-item" id="linux">
             <h3>
             <i class="fa fa-linux fa-2x"></i>
             {{ _("Picard for <strong>Linux</strong>") }}
@@ -220,6 +163,8 @@
                     <td>{{ _("All distributions") }} (Flatpak)</td>
                     <td>
                       <a href="{{ url_for('docs.show_pages', page='linux', _anchor='flatpak') }}">Instructions</a>
+                      &middot;
+                      <a href="https://flathub.org/apps/details/org.musicbrainz.Picard">Flathub</a>
                     </td>
                   </tr>
                   <tr>
@@ -239,7 +184,8 @@
                   <tr>
                     <td>Fedora</td>
                     <td>
-                      <a href="{{ url_for('docs.show_pages', page='faq', _anchor='fedora-acoustid') }}">{{ _("Read the FAQ") }}</a>
+                      <a href="https://apps.fedoraproject.org/packages/picard">latest package</a>
+                      (<a href="{{ url_for('docs.show_pages', page='faq', _anchor='fedora-acoustid') }}">{{ _("read the FAQ") }}</a>)
                     </td>
                   </tr>
                   <tr>
@@ -251,7 +197,7 @@
                   <tr>
                     <td>OpenSUSE</td>
                     <td>
-                      <a href="https://software.opensuse.org/package/picard?search_term=picard">13.2</a>
+                      <a href="https://software.opensuse.org/package/picard?search_term=picard">latest package</a>
                     </td>
                   </tr>
                   <tr>

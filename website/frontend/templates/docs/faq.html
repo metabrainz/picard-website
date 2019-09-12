@@ -61,7 +61,7 @@
         Windows Explorer does not. </p>
 
       <h3 id="network-folders">
-      I'm using OS X, where are my network folders or drives? </h3>
+      I'm using macOS, where are my network folders or drives? </h3>
 
       <p>
         These should show up OK in the add file and add folder dialogs, but they aren't visible by default
@@ -161,6 +161,32 @@
       </ol>
       <p>This process should work in both panes. </p>
 
+      <h3 id="player-supported-formats">
+      The built-in audio player cannot playback my file. Which formats does it support?</h3>
+
+      <p>
+        The formats supported by the built-in audio player depend on the formats supported by your
+        operating system.
+      </p>
+
+      <p>
+        <b>Windows:</b> The supported formats depend on the installed codecs. Depending on the Windows
+        version certain codecs are pre-installed, but you can install additional codecs.
+      </p>
+      <p>
+        You might want to install the <a href="https://xiph.org/dshow/downloads/">Directshow Filters for Ogg</a>
+        to add support for Ogg Vorbis, Ogg Speex, Ogg Theora, Ogg FLAC, native FLAC, and WebM files.
+      </p>
+      <p>
+        See also Microsoft's <a href="https://support.microsoft.com/en-us/help/15070/windows-media-player-codecs-frequently-asked-questions">Codecs FAQ</a>.
+      </p>
+
+      <p>
+        <b>Linux:</b> On Linux the player uses GStreamer which does support most common audio formats, although
+        some distributions might exclude some codecs due to licensing issues. For the best formats support make
+        sure you install all of the GStreamer plugins available for your distribution.
+      </p>
+
       <h3 id="fedora-acoustid">
       I am using Fedora, why doesn't acoustic fingerprinting work? </h3>
 
@@ -230,8 +256,8 @@
       <h3 id="which-browser">How do I tell Picard which browser to use?</h3>
 
       <p>
-        On Windows, GNOME and KDE, Picard uses the standard browser for these systems.
-        On other systems, you can use the <code>BROWSER</code>environment variable.
+        On Windows, macOS, GNOME and KDE, Picard uses the standard browser for these systems.
+        On other systems, you can use the <code>BROWSER</code> environment variable.
       </p>
 
       <p>For example: </p>
@@ -266,6 +292,7 @@
               <li><a href="#future-formats">What formats will Picard support?</a></li>
               <li><a href="#current-tags">Which tags can Picard write?</a></li>
               <li><a href="#multiple-tags">How do I edit several tags at once?</a></li>
+              <li><a href="#player-supported-formats">Which formats does the built-in audio player support?</a></li>
               <li><a href="#fedora-acoustid">Why doesn't the acoustic fingerprinting work on Fedora?</a></li>
             </ul>
           </li>
