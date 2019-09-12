@@ -106,6 +106,77 @@ def remove_featartists(tagger, metadata, track, release):
 
 register_track_metadata_processor(remove_featartists)</code></pre>
 
+
+      <h2 id="event_hooks">Event Hooks</h2>
+      <p>
+        Plugins can register themselves to listen for different events. Currently the following
+        event hooks are available:
+      </p>
+      <p>
+        <em>Note: Event hooks are available since API version 2.2</em>
+      </p>
+
+      <h3 id="file_post_load_processor">file_post_load_processor(file)</h3>
+      <p>
+        This hook is
+        called after a file has been loaded into Picard. This could for example be used
+        to load additional data for a file. Usage:
+      </p>
+      <pre><code>from picard.file import register_file_post_load_processor
+
+def file_post_load_processor(file):
+  pass
+
+register_file_post_load_processor(file_post_load_processor)</code></pre>
+
+      <h3 id="file_post_save_processor">file_post_save_processor(file)</h3>
+      <p>
+        This hook is called after a file has been saved. This can for example be used to
+        run additional post-processing on the file or write extra data. Note that the
+        file's metadata is already the newly saved metadata. Usage:
+      </p>
+      <pre><code>from picard.file import register_file_post_save_processor
+
+def file_post_save_processor(file):
+  pass
+
+register_file_post_save_processor(file_post_save_processor)</code></pre>
+
+      <h3 id="file_post_addition_to_track_processor">file_post_addition_to_track_processor(track, file)</h3>
+      <p>
+        This hook is called after a file has been added to a track (on the right pane of Picard).
+      </p>
+      <pre><code>from picard.file import register_file_post_addition_to_track_processor
+
+def file_post_addition_to_track_processor(track, file):
+  pass
+
+register_file_post_addition_to_track_processor(file_post_addition_to_track_processor)</code></pre>
+
+      <h3 id="file_post_removal_from_track_processor">file_post_removal_from_track_processor(track, file)</h3>
+      <p>
+        This hook is called after a file has been removed from a track (on the right pane of Picard).
+      </p>
+      <pre><code>from picard.file import register_file_post_removal_from_track_processor
+
+def file_post_removal_from_track_processor(track, file):
+  pass
+
+register_file_post_removal_from_track_processor(file_post_removal_from_track_processor)</code></pre>
+
+      <h3 id="album_post_removal_processor">album_post_removal_processor(album)</h3>
+      <p>
+        This hook is called after an album has been removed from Picard.
+      </p>
+      <pre><code>from picard.album import register_album_post_removal_processor
+
+def album_post_removal_processor(album):
+  pass
+
+register_album_post_removal_processor(album_post_removal_processor)</code></pre>
+
+
+
       <h2 id="file_formats">File Formats</h2>
 
       <p>
@@ -221,10 +292,22 @@ register_album_action(RemovePerfectAlbums())</code></pre>
         <ul class="nav" data-spy="affix" data-offset-top="200">
           <li class="active">
             <a href="#plugin_metadata">Plugin Metadata</a>
+          </li>
+          <li>
             <a href="#metadata_processors">Metadata Processors</a>
             <ul class="nav">
               <li><a href="#album">Album</a></li>
               <li><a href="#track">Track</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#event_hooks">Event Hooks</a>
+            <ul class="nav">
+              <li><a href="#file_post_load_processor">file_post_load_processor(file)</a></li>
+              <li><a href="#file_post_save_processor">file_post_save_processor(file)</a></li>
+              <li><a href="#file_post_addition_to_track_processor">file_post_addition_to_track_processor(track, file)</a></li>
+              <li><a href="#file_post_removal_from_track_processor">file_post_removal_from_track_processor(track, file)</a></li>
+              <li><a href="#album_post_removal_processor">album_post_removal_processor(album)</a></li>
             </ul>
           </li>
           <li><a href="#file_formats">File Formats</a></li>
