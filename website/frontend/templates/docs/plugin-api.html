@@ -13,13 +13,13 @@
         placed at the top of the file.
       </p>
 
-      <pre>PLUGIN_NAME = &quot;Example plugin&quot;
+      <pre><code class="python">PLUGIN_NAME = &quot;Example plugin&quot;
 PLUGIN_AUTHOR = &quot;This authors name&quot;
 PLUGIN_DESCRIPTION = &quot;This plugin is an example&quot;
 PLUGIN_VERSION = '0.1'
 PLUGIN_API_VERSIONS = ['2.1', '2.2']
 PLUGIN_LICENSE = &quot;GPL-2.0-or-later&quot;
-PLUGIN_LICENSE_URL = &quot;https://www.gnu.org/licenses/gpl-2.0.html&quot;</pre>
+PLUGIN_LICENSE_URL = &quot;https://www.gnu.org/licenses/gpl-2.0.html&quot;</code></pre>
 
       <p>
         Variables explanation:
@@ -78,7 +78,7 @@ PLUGIN_LICENSE_URL = &quot;https://www.gnu.org/licenses/gpl-2.0.html&quot;</pre>
       </p>
 
       <h3 id="album">Album metadata example:</h3>
-      <pre>PLUGIN_NAME = &quot;Disc Numbers&quot;
+      <pre><code class="python">PLUGIN_NAME = &quot;Disc Numbers&quot;
 PLUGIN_AUTHOR = &quot;Lukas Lalinsky&quot;
 PLUGIN_DESCRIPTION = &quot;Moves disc numbers from album titles to tags.&quot;
 
@@ -91,10 +91,10 @@ def remove_discnumbers(tagger, metadata, release):
         metadata[&quot;discnumber&quot;] = matches.group(1)
         metadata[&quot;album&quot;] = re.sub(r&quot;\(disc \d+\)&quot;, &quot;&quot;, metadata[&quot;album&quot;])
 
-register_album_metadata_processor(remove_discnumbers)</pre>
+register_album_metadata_processor(remove_discnumbers)</code></pre>
 
       <h3 id="track">Track metadata example:</h3>
-      <pre>PLUGIN_NAME = &quot;Feat. Artists&quot;
+      <pre><code class="python">PLUGIN_NAME = &quot;Feat. Artists&quot;
 PLUGIN_AUTHOR = &quot;Lukas Lalinsky&quot;
 PLUGIN_DESCRIPTION = &quot;Removes feat. artists from track titles.&quot;
 
@@ -104,7 +104,7 @@ import re
 def remove_featartists(tagger, metadata, track, release):
     metadata[&quot;title&quot;] = re.sub(r&quot;\(feat. [^)]*\)&quot;, &quot;&quot;, metadata[&quot;title&quot;])
 
-register_track_metadata_processor(remove_featartists)</pre>
+register_track_metadata_processor(remove_featartists)</code></pre>
 
       <h2 id="file_formats">File Formats</h2>
 
@@ -113,7 +113,7 @@ register_track_metadata_processor(remove_featartists)</pre>
         <a rel="nofollow" href="https://github.com/metabrainz/picard/tree/master/picard/formats">file format implementations</a>
         for details on how to implement the <code>_load</code> and <code>_save</code> methods.
         Example:</p>
-      <pre>PLUGIN_NAME = &quot;...&quot;
+      <pre><code class="python">PLUGIN_NAME = &quot;...&quot;
 PLUGIN_AUTHOR = &quot;...&quot;
 PLUGIN_DESCRIPTION = &quot;...&quot;
 PLUGIN_VERSION = '...'
@@ -141,7 +141,7 @@ class MyFile(File):
         # Implement saving the metadata to the file here.
         pass
 
-register_format(MyFile)</pre>
+register_format(MyFile)</code></pre>
 
 
       <h2 id="tagger_script_functions">Tagger Script Functions</h2>
@@ -155,7 +155,7 @@ register_format(MyFile)</pre>
         arguments passed to it are the arguments from the function call in the tagger script.
       </p>
       <p>Example:</p>
-      <pre>PLUGIN_NAME = &quot;Initials&quot;
+      <pre><code class="python">PLUGIN_NAME = &quot;Initials&quot;
 PLUGIN_AUTHOR = &quot;Lukas Lalinsky&quot;
 PLUGIN_DESCRIPTION = &quot;Provides tagger script function $initials(text).&quot;
 PLUGIN_VERSION = '0.1'
@@ -168,7 +168,7 @@ from picard.script import register_script_function
 def initials(parser, text):
     return &quot;&quot;.join(a[:1] for a in text.split(&quot; &quot;) if a[:1].isalpha())
 
-register_script_function(initials)</pre>
+register_script_function(initials)</code></pre>
 
       <p>
         <code>register_script_function</code> supports two optional arguments:
@@ -190,7 +190,7 @@ register_script_function(initials)</pre>
         and the ClusterList (parent folder of Clusters).
       </p>
       <p>Example:</p>
-      <pre>PLUGIN_NAME = u'Remove Perfect Albums'
+      <pre><code class="python">PLUGIN_NAME = u'Remove Perfect Albums'
 PLUGIN_AUTHOR = u'ichneumon, hrglgrmpf'
 PLUGIN_DESCRIPTION = u'''Remove all perfectly matched albums from the selection.'''
 PLUGIN_VERSION = '0.2'
@@ -211,7 +211,7 @@ class RemovePerfectAlbums(BaseAction):
                and album.get_num_unsaved_files() == 0 and album.loaded == True:
                 self.tagger.remove_album(album)
 
-register_album_action(RemovePerfectAlbums())</pre>
+register_album_action(RemovePerfectAlbums())</code></pre>
 
       <p>Use <code>register_x_action</code> where x is album, track, file, cluster or clusterlist.</p>
     </div>
@@ -236,4 +236,10 @@ register_album_action(RemovePerfectAlbums())</pre>
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/highlight.pack.js') }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 {% endblock %}
