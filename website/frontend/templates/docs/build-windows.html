@@ -13,13 +13,6 @@
         and also to build the Picard for Windows installer executable.
       </p>
       <h1 id="requirements">Requirements</h1>
-      <p>
-        Picard development (i.e. Github's master branch) is now focused on Picard version 2,
-        which uses Python 3 and PyQt5.
-        However if you need to test something in Picard version 1,
-        then a separate branch 1.4.x is available to run and this uses Python 2 and PqQt4.
-        Instructions for building each environment are provided below.
-      </p>
 
       <h2 id="source">Downloading Picard source</h2>
 
@@ -29,11 +22,7 @@
         your own fork of the <a target="_blank" href="https://github.com/metabrainz/picard/">Picard's GitHub Repository</a>.
       </p>
 
-      <hr/>
-
-      <h2 id="python_picard2">Python for Picard version 2</h2>
-
-      <h3 id="python35">Python 3.5 or newer</h3>
+      <h2 id="python35">Python 3.5 or newer</h2>
 
       <ul>
         <li>
@@ -49,7 +38,7 @@
       </ul>
 
 
-      <h3 id="python3_packages">Python 3 packages</h3>
+      <h2 id="python3_packages">Python 3 packages</h2>
 
       <p>
          You need the following additional python packages to run Picard from source:
@@ -85,72 +74,6 @@ pip3 install Mutagen>=1.37</pre>
 
       <hr/>
 
-      <h2 id="python_picard1">Python for Picard version 1</h2>
-
-      <h3 id="python27">Python 2.7.x</h3>
-
-      <ul>
-        <li>
-          Download and install Python 2.7.x for Windows from
-          <a rel="nofollow" target="_blank" href="https://python.org/downloads/">https://python.org/downloads/</a>
-        </li>
-        <li>
-          Python should add itself to your %PATH% environment variable,
-          but if not add both the Python install directory and its scripts subdirectory to %PATH%
-        </li>
-      </ul>
-
-      <h3 id="python2_packages">Python 2 packages</h3>
-
-      <p>
-         You need need the following additional python packages to run Picard version 1 from source:
-      </p>
-
-      <ul>
-        <li>PyQt 4.10 or later</li>
-        <li>libdiscid</li>
-        <li>discid</li>
-        <li>Mutagen 1.22 or later</li>
-      </ul>
-
-      <p>
-        You need to install PyQt4 and libdiscid manually.
-      </p>
-
-      <ul>
-        <li>PyQt4 - Riverbank Computing (authors of PyQt) no longer maintains an installation executable for the latest versions of PyQt.
-          The most recent Windows installer, for PyQt v4.11.4, is suitable for Picard v1 and can be downloaded and run from SourceForge
-          <a rel="nofollow" target="_blank" href="https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/">https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/</a>.</li>
-        <li>
-          libdiscid - Download "libdiscid-0.6.1-win32.zip" from
-          <a rel="nofollow" target="_blank" href="https://musicbrainz.org/doc/libdiscid">https://musicbrainz.org/doc/libdiscid</a>
-          and put <i>discid.dll</i> in your
-          <i>Windows\System32</i> folder (Windows 32-bit) or .
-          <i>Windows\SysWOW64</i> folder (Windows 64-bit).
-        </li>
-      </ul>
-
-      <p>
-        The easiest way to install Mutagen and discid is using PIP.
-        PIP is included as standard in Python 2.7.9 or later - so this is a good reason to upgrade if you
-        already have an earlier version of Python 2.7 installed.
-        Alternatively you can install PIP separately on earlier versions or install the above packages manually.
-      </p>
-
-      <p>
-        Assuming that you want to use PIP, open an Administrator command prompt, navigate to the Picard source directory and type:
-      </p>
-
-      <pre>pip2 install Mutagen>=1.22
-pip2 install discid</pre>
-
-      <p>
-        <b>Note:</b> If you get an error message "'pip2' is not recognized as an internal or external command, operable program or batch file." try fixing this with:
-        <pre>python -m ensurepip --default-pip</pre>
-      </p>
-
-      <hr/>
-
       <h1 id="running_picard_from_source">Running Picard From Source</h1>
 
       <h3 id="chromaprint">Chromaprint</h3>
@@ -166,7 +89,7 @@ pip2 install discid</pre>
           from <a rel="nofollow" href="https://acoustid.org/chromaprint">https://acoustid.org/chromaprint</a>
         </li>
         <li>
-          Unzip "chromaprint-fpcalc-1.1-win-i86.zip" and put "fpcalc.exe" to the picard subdirectory
+          Unzip "chromaprint-fpcalc-1.4.2-windows-x86_64.zip" and put "fpcalc.exe" to the picard subdirectory
           of your Picard source code directory
         </li>
       </ul>
@@ -212,9 +135,6 @@ pip2 install discid</pre>
         <li>
           For Picard version 2 / Python 3.5+, download and install py2exe 0.9.2.0 by executing: "pip3 install py2exe"
         </li>
-        <li>
-          For Picard version 1 / Python 2.7, download and install "py2exe-0.6.9.win32-py2.7.exe" from <a rel="nofollow" href="https://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/">https://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/</a>
-        </li>
       </ul>
 
       <h3 id="nsis">NSIS 2.46</h3>
@@ -234,8 +154,6 @@ pip2 install discid</pre>
         Microsoft C++ compiler suitable for the version of Picard / Python you are building for:
       </p>
 
-      <h4 id="visual-cpp-py3">Python 2 - Visual C++ 2015 Community</h4>
-
       <p>
         For Picard version 2 / Python 3,
         download <a rel="nofollow" href="https://landinghub.visualstudio.com/visual-cpp-build-tools">Microsoft Visual C++ 14.0
@@ -246,20 +164,7 @@ pip2 install discid</pre>
         When you install, select the Windows 8.1 SDK for compile to work.
       </p>
 
-      <h4 id="visual-cpp-py2">Python 2 - Visual C++ 2008 Express</h4>
-
-      <p>
-        For Picard version 1 / Python 2,
-        download <a rel="nofollow" href="https://download.microsoft.com/download/A/5/4/A54BADB6-9C3F-478D-8657-93B3FC9FE62D/vcsetup.exe">Visual C++ 2008 Express</a>.
-      </p>
-
-      <p>
-        <b>Note:</b> There is also apparently a cut-down compiler specifically for compiling Python 2.7.x modules available at
-        <a rel="nofollow" target="_blank" href="https://www.microsoft.com/en-gb/download/details.aspx?id=44266">https://www.microsoft.com/en-gb/download/details.aspx?id=44266</a>,
-        though the author has not tried this.
-      </p>
-
-      <h3 id="visual_cpp">Visual C++</h3>
+      <h3 id="building">Building</h3>
 
       <p>
         Before you can build the Python executable and installer, you need to build the astrcmp C extension and
@@ -280,10 +185,6 @@ python setup.py build_locales -i</pre>
         <li>
           Picard version 2 / Python 3 - msvcp140.dll from
           <i>C:\Program&nbsp;Files&nbsp;(x86)\Microsoft&nbsp;Visual&nbsp;Studio&nbsp;14.0\VC\redist\x86\Microsoft.VC140.CRT</i>
-        </li>
-        <li>
-          Picard version 1 / Python 2 - msvcr90.dll and msvcp90.dll from
-          <i>C:\Program&nbsp;Files&nbsp;(x86)\Microsoft&nbsp;Visual&nbsp;Studio&nbsp;9.0\VC\redist\x86\Microsoft.VC90.CRT</i>
         </li>
       </ul>
 
@@ -332,20 +233,8 @@ python setup.py build_locales -i</pre>
               <li>
                 <a href="#source">Downloading Picard Source</a>
               </li>
-              <li>
-                <a href="#python_picard2">Python for Picard version 2</a>
-                <ul class="nav">
-                  <li><a href="#python35">Python 3.5+</a></li>
-                  <li><a href="#python3_packages">Python 3 packages</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#python_picard1">Python for Picard version 1</a>
-                <ul class="nav">
-                  <li><a href="#python27">Python 2.7.x</a></li>
-                  <li><a href="#python2_packages">Python 2 packages</a></li>
-                </ul>
-              </li>
+              <li><a href="#python35">Python 3.5+</a></li>
+              <li><a href="#python3_packages">Python 3 packages</a></li>
             </ul>
           </li>
           <li>
@@ -361,6 +250,7 @@ python setup.py build_locales -i</pre>
               <li><a href="#py2exe">py2exe 0.6.9</a></li>
               <li><a href="#nsis">NSIS 2.46</a></li>
               <li><a href="#visual_cpp">Visual C++</a></li>
+              <li><a href="#building">Building</a></li>
             </ul>
           </li>
           <li><a href="#known_issues">Known Issues</a></li>
