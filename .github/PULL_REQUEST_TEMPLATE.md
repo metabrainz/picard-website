@@ -34,7 +34,7 @@
 
 * JIRA ticket (_optional_): [PW-XXX](https://tickets.metabrainz.org/browse/PW-XXX)
 <!--
-    Please make sure you prefix your pull request title with 'PICARD-XXX' in order
+    Please make sure you prefix your pull request title with 'PW-XXX' in order
     for our ticket tracker to link your pull request to the relevant ticket.
 -->
 
