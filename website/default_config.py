@@ -38,18 +38,18 @@ PICARD_VERSIONS = {
         'linux_hash': '-',
     },
     'beta': {
-        'tag': '2.1.0.beta1',
-        'version': (2, 1, 0, 'dev', 2),
+        'tag': '2.3.0b1',
+        'version': (2, 3, 0, 'beta', 1),
         'urls': {
-            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.1.0dev2',
-            'changelog': 'https://blog.metabrainz.org/2018/12/04/picard-2-1-0dev2-release/',
+            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.3.0b1',
+            'changelog': 'https://blog.metabrainz.org/2020/01/30/picard-2-3-beta-1/',
         }
     },
     'dev': {
-        'tag': '2.1.1.dev1',
-        'version': (2, 1, 1, 'dev', 1),
+        'tag': '2.3.0b1',
+        'version': (2, 3, 0, 'beta', 1),
         'urls': {
-            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.1.1dev1',
+            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.3.0b1',
         }
     },
 }

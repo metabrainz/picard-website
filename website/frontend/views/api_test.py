@@ -123,7 +123,7 @@ class ViewsTestCase(FrontendTestCase):
                 self.assertIsInstance(updates[testkey]['version'][i], int)
                 self.assertEqual(updates[testkey]['version'][i] >= 0, True)
             self.assertIsInstance(updates[testkey]['version'][3], str)
-            self.assertIn(updates[testkey]['version'][3], ['final', 'dev'])
+            self.assertIn(updates[testkey]['version'][3], ['final', 'dev', 'beta', 'alpha'])
             # Url tests
             self.assertIn('download', updates[testkey]['urls'])     # Confirm download url always exists
             for urlkey in updates[testkey]['urls']:
