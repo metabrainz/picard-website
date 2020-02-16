@@ -280,6 +280,27 @@ comment</pre>
           <b>Also include ID3v1 tags in the files:</b> Not recommended at all. ID3v1.1 tags are obsolete
           and may not work with non-latin scripts.
         </li>
+        <li>
+          <p><b>AAC / AC3 files:</b> Picard can save APEv2 tags to pure AAC or AC3 files, which by default do not support
+          tagging. APEv2 tags in AAC or AC3 are supported by some players (e.g. foobar2000 or MusicBee), but players not
+          supporting AAC or AC3 files with APEv2 tags can have issues loading and playing those files. Most often they
+          display a wrong duration, causing issues on track change. To deal with this you can choose whether to save
+          tags to those files:</p>
+          <ul>
+            <li>
+              <b>Save APEv2 tags:</b> Picard will save APEv2 tags to the files.
+            </li>
+            <li>
+              <b>Do not save tags:</b> Picard will <em>not</em> save any tags to the files, but you can still use
+              Picard to rename them. By default existing APEv2 tags will be kept in the file.
+            </li>
+            <li>
+              <b>Remove APEv2 tags:</b> If you have "Do not save tags" enabled checking this option will cause Picard
+              to remove existing APEv2 tags from the file on saving.
+            </li>
+          </ul>
+          <p>Regardless of how you have configured saving tags Picard will always read existing APEv2 tags in AAC or AC3 files.</p>
+        </li>
       </ul>
 
       <h1 id="cover">Cover art</h1>
