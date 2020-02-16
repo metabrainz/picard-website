@@ -25,12 +25,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>{{tag}} <em>64-bit</em></td>
+                    <td>{{tag}} <em>{{ _('64-bit installer') }}</em></td>
                     <td>{{win_hash}}</td>
                     <td>{{win_size}} MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-setup-{{tag}}.exe">{{ _('US Mirror') }}</a></li>
@@ -40,18 +42,35 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>2.1.3 <em>64-bit</em></td>
-                    <td>52c4fe1c66b689de1faae8cba0ba855e</td>
-                    <td>28 MB</td>
+                    <td>{{tag}} <em>{{ _('64-bit portable') }}</em></td>
+                    <td>{{win_portable_hash}}</td>
+                    <td>{{win_portable_size}} MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-setup-2.1.3.exe">{{ _('US Mirror') }}</a></li>
-                          <li><a href="ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/picard-setup-2.1.3.exe">{{ _('EU Mirror') }}</a></li>
+                          <li><a
+                              href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{tag}}.exe">{{ _('US Mirror') }}</a>
+                          </li>
+                          <li><a
+                              href="ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{tag}}.exe">{{ _('EU Mirror') }}</a>
+                          </li>
                         </ul>
                       </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      {{tag}} <em>{{ _('Windows 10 app') }}</em>
+                    </td>
+                    <td>
+                      <a class="btn btn-primary btn-sm"
+                        href="https://www.microsoft.com/store/apps/9NJ9Q3JR29L2">
+                        <i class="fa fa-windows"></i>&emsp;{{ _('Windows Store') }}
+                      </a>
                     </td>
                   </tr>
                   <tr>
@@ -60,7 +79,9 @@
                     <td>9.5 MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-setup-1.4.2.exe">{{ _('US Mirror') }}</a></li>
@@ -72,7 +93,9 @@
                 </tbody>
               </table>
               {% autoescape false %}
-              <p>{{ _("If you get an error about being unable to run the 32-bit version, install the {url|Microsoft Visual C++ 2008 Redistributable Package (x86)}.")|expand({'url': 'https://www.microsoft.com/en-US/download/details.aspx?id=29'}) }}</p>
+              <p>
+                {{ _("If you get an error about being unable to run the 32-bit version, install the {url|Microsoft Visual C++ 2008 Redistributable Package (x86)}.")|expand({'url': 'https://www.microsoft.com/en-US/download/details.aspx?id=29'}) }}
+              </p>
               {% endautoescape %}
             </div>
           </li>
@@ -100,7 +123,9 @@
                     <td>{{mac_size}} MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz.Picard.{{tag}}.dmg">{{ _('US Mirror') }}</a></li>
@@ -115,7 +140,9 @@
                     <td>22 MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz.Picard.2.1.3.dmg">{{ _('US Mirror') }}</a></li>
@@ -130,7 +157,9 @@
                     <td>17 MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.4.2.dmg">{{ _('US Mirror') }}</a></li>
@@ -145,7 +174,9 @@
                     <td>13 MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-1.2.dmg">{{ _('US Mirror') }}</a></li>
@@ -295,7 +326,9 @@
                     <td>{{linux_size}} MB</td>
                     <td>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> {{ _('Download') }} <span class="caret"></span>
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-{{tag}}.tar.gz">{{ _('US Mirror (tar)') }}</a></li>
