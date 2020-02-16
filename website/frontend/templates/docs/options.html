@@ -677,6 +677,39 @@ comment</pre>
 
       <h1 id="advanced">Advanced</h1>
 
+      <ul>
+        <li>
+          <b>Ignore file paths matching the following regular expression:</b> You can specify patterns for files and
+          folders to never load into Picard. E.g. if you set this to the regular expression <code>\.bak$</code>
+          any file ending in ".bak" will be ignored when loading files.
+        </li>
+        <li>
+          <b>Ignore hidden files:</b> If enabled hidden files and folders will not be loaded. This includes also any
+          file or sub-folder inside a hidden folder.
+        </li>
+        <li>
+          <b>Include sub-folders when adding files from folders:</b> If enabled Picard will load all audio files in
+          the selected folder and all its sub-folders. If disabled only audio files directly in the selected folder
+          will get loaded.
+        </li>
+        <li>
+          <b>Ignore track duration difference under this number of seconds:</b> If a file differs from the length
+          in the MusicBrainz database by less then the number of seconds configured here (default: 2 seconds) it will
+          still be considered the same.
+        </li>
+        <li>
+          <b>Ignore the following tracks when determining whether a release is complete:</b> Missing tracks of the
+          selected type (video, pregap, data or silence) will be ignored when checking a release for completeness.
+          E.g. if "video" is selected here a release with a bonus video will be marked as complete if it has all the
+          audio tracks matched with a file even if the video file is missing.
+        </li>
+        <li>
+          <b>Tags to ignore for comparison:</b> Tags in this list will not be considered when comparing the existing
+          file metadata to the data loaded from MusicBrainz. A file where the only tag difference is with one of the
+          tags in this ignore list will still be considered unmodified.
+        </li>
+      </ul>
+
       <h2 id="network">Networking</h2>
 
       <h3>Web Proxy</h3>
