@@ -75,6 +75,13 @@
           </li>
         </ul>
 
+        <h3 id="reverse_text">$reverse(text)</h3>
+
+        <ul>
+          <li>Returns <code>text</code>> in reverse order.
+          </li>
+        </ul>
+
         <h3 id="left_text_num">$left(text,num)</h3>
 
         <ul>
@@ -90,6 +97,29 @@
           <li>Returns the last
             <code>num</code> characters from
             <code>text</code>.
+          </li>
+        </ul>
+
+        <h3 id="substr_text_start_end">$substr(text,start,end)</h3>
+
+        <ul>
+          <li>Returns the substring beginning with the character at the
+            <code>start</code> index, up to (but not including) the character at the
+            <code>end</code> index.  Indexes are zero-based. Negative numbers will be
+            counted back from the end of the string. If the
+            <code>start</code> or
+            <code>end</code> indexes are left blank, they will default to the start
+            and end of the string respectively.
+          </li>
+        </ul>
+
+        <h3 id="find_haystack_needle">$find(haystack,needle)</h3>
+
+        <ul>
+          <li>Finds the location of one string within another.
+            Returns the index of the first occurrance of
+            <code>needle</code> in <code>haystack</code>, or -1 if
+            <code>needle</code> was not found.
           </li>
         </ul>
 
@@ -225,6 +255,95 @@
           <li>Returns the variable
             <code>name</code> (equivalent to
             <code>%name%</code>).
+          </li>
+        </ul>
+
+        <h3 id="getmulti_name_index_separator">$getmulti(name,index,separator="; ")</h3>
+
+        <ul>
+          <li>Gets the element at
+            <code>index</code> from the multi-value tag
+            <code>name</code>.  A literal value representing a multi-value can be substituted for
+            <code>name</code>, using the separator (or "; " if not passed) to coerce the value into
+            a proper multi-valued tag.
+          </li>
+        </ul>
+
+        <h3 id="slice_name_index_separator">$slice(name,start,end,separator="; ")</h3>
+
+        <ul>
+          <li>Returns a multi-value variable containing the elements between the
+            <code>start</code> and
+            <code>end</code> indexes from the multi-value tag
+            <code>name</code>.  A literal value representing a multi-value can be substituted for
+            <code>name</code>, using the separator (or "; " if not passed) to coerce the value into
+            a proper multi-valued tag. Indexes are zero based. Negative numbers will be counted
+            back from the end of the list. If the
+            <code>start</code> or
+            <code>end</code> indexes are left blank, they will default to the start and end of the
+            list respectively.
+          </li>
+          <li>For example, the following will create a multi-value variable with all artists in
+            <code>%artists%</code> except the first, which can be used to create a "feat." list.
+          </li>
+          <li class="example">
+            <pre><code class="taggerscript">$setmulti(supporting_artists,$slice(%artists%,1,))</code></pre>
+          </li>
+        </ul>
+
+        <h3 id="join_name_text_separator">$join(name,text,separator="; ")</h3>
+
+        <ul>
+          <li>Joins all elements in
+            <code>name</code>, placing
+            <code>text</code> between each element, and returns the result as a string.
+          </li>
+        </ul>
+
+        <h3 id="map_name_code_separator">$map(name,code,separator="; ")</h3>
+
+        <ul>
+          <li>Iterates over each element found in the multi-value tag
+            <code>name</code> and updates the value of the element to
+            the value returned by
+            <code>code</code>, returning the updated multi-value tag.
+            For each loop, the element value is first stored in the tag
+            <code>_loop_value</code> and the count is stored in the tag
+            <code>_loop_count</code>.  This allows the element or count
+            value to be accessed within the
+            <code>code</code> script.
+          </li>
+        </ul>
+
+        <h3 id="foreach_name_code_separator">$foreach(name,code,separator="; ")</h3>
+
+        <ul>
+          <li>Iterates over each element found in the multi-value tag
+            <code>name</code>, executing
+            <code>code</code>.
+            For each loop, the element value is first stored in the tag
+            <code>_loop_value</code> and the count is stored in the tag
+            <code>_loop_count</code>.  This allows the element or count
+            value to be accessed within the
+            <code>code</code> script. A literal value representing a
+            multi-value can be substituted for
+            <code>name</code>, using the separator (or "; " if not passed)
+            to coerce the value into a proper multi-valued tag.
+          </li>
+        </ul>
+
+        <h3 id="while_condition_code">$while(condition,code)</h3>
+
+        <ul>
+          <li>Standard 'while' loop. Executes
+            <code>code</code> repeatedly until
+            <code>condition</code> no longer evaluates to
+            <code>True</code>. For each loop, the count is stored in the tag
+            <code>_loop_count</code>.  This allows the count
+            value to be accessed within the
+            <code>code</code> script.  The function limites the maximum
+            number of iterations to 1000 as a safeguard against accidentally
+            creating an infinite loop.
           </li>
         </ul>
 
@@ -492,6 +611,21 @@
           <li>Returns the number of characters in <code>text</code>.</li>
         </ul>
 
+        <h3 id="lenmulti_name_separator">$lenmulti(name,separator="; ")</h3>
+
+        <ul>
+          <li>Returns the number of elements in the multi-value tag
+            <code>name</code>. A literal value representing a multi-value can
+            be substituted for <code>name</code>, using the
+            <code>separator</code> (or "; " if not passed) to coerce the value
+            into a proper multi-valued tag.</li>
+          <li>For example, the following will return the value "3".
+          </li>
+          <li class="example">
+            <pre><code class="taggerscript">$lenmulti(One; Two; Three)</code></pre>
+          </li>
+        </ul>
+
         <h3 id="performer_pattern_join">$performer(pattern="",join=", ")</h3>
 
         <ul>
@@ -604,6 +738,17 @@
         <ul>
           <li>Returns true, if the file processed is an video file.</li>
           <li class="added">Since Picard 2.2</li>
+        </ul>
+
+        <h3 id="datetime">$datetime(format="%Y-%m-%d %H:%M:%S")</h3>
+
+        <ul>
+          <li>Returns the current date and time in the specified
+            <code>format</code>, which is based on the standard Python
+            <code>strftime</code> <a rel="nofollow" class="external text" href="https://strftime.org/">format codes</a>. If no
+            <code>format</code> is specified the date/time will be
+            returned in the form '2020-02-05 14:26:32'.</li>
+          <li class="added">Since Picard 2.3</li>
         </ul>
 
       </div>

@@ -280,6 +280,27 @@ comment</pre>
           <b>Also include ID3v1 tags in the files:</b> Not recommended at all. ID3v1.1 tags are obsolete
           and may not work with non-latin scripts.
         </li>
+        <li>
+          <p><b>AAC / AC3 files:</b> Picard can save APEv2 tags to pure AAC or AC3 files, which by default do not support
+          tagging. APEv2 tags in AAC or AC3 are supported by some players (e.g. foobar2000 or MusicBee), but players not
+          supporting AAC or AC3 files with APEv2 tags can have issues loading and playing those files. Most often they
+          display a wrong duration, causing issues on track change. To deal with this you can choose whether to save
+          tags to those files:</p>
+          <ul>
+            <li>
+              <b>Save APEv2 tags:</b> Picard will save APEv2 tags to the files.
+            </li>
+            <li>
+              <b>Do not save tags:</b> Picard will <em>not</em> save any tags to the files, but you can still use
+              Picard to rename them. By default existing APEv2 tags will be kept in the file.
+            </li>
+            <li>
+              <b>Remove APEv2 tags:</b> If you have "Do not save tags" enabled checking this option will cause Picard
+              to remove existing APEv2 tags from the file on saving.
+            </li>
+          </ul>
+          <p>Regardless of how you have configured saving tags Picard will always read existing APEv2 tags in AAC or AC3 files.</p>
+        </li>
       </ul>
 
       <h1 id="cover">Cover art</h1>
@@ -646,6 +667,15 @@ comment</pre>
         </tbody>
       </table>
 
+      <h2 id="interface_top_tags">Top Tags</h2>
+      <p>
+        The tags specified here will always be shown in this order at the top
+        of the metadata view (which shows the metadata of selected files or tracks
+        in the lower section of the main window). This allows you to have the most
+        important tags always on top of the list. Tags not listed here will be shown
+        in alphabetical order below the top tags.
+      </p>
+
       <h1 id="scripting">Scripting</h1>
 
       <p>
@@ -655,6 +685,39 @@ comment</pre>
       </p>
 
       <h1 id="advanced">Advanced</h1>
+
+      <ul>
+        <li>
+          <b>Ignore file paths matching the following regular expression:</b> You can specify patterns for files and
+          folders to never load into Picard. E.g. if you set this to the regular expression <code>\.bak$</code>
+          any file ending in ".bak" will be ignored when loading files.
+        </li>
+        <li>
+          <b>Ignore hidden files:</b> If enabled hidden files and folders will not be loaded. This includes also any
+          file or sub-folder inside a hidden folder.
+        </li>
+        <li>
+          <b>Include sub-folders when adding files from folders:</b> If enabled Picard will load all audio files in
+          the selected folder and all its sub-folders. If disabled only audio files directly in the selected folder
+          will get loaded.
+        </li>
+        <li>
+          <b>Ignore track duration difference under this number of seconds:</b> If a file differs from the length
+          in the MusicBrainz database by less then the number of seconds configured here (default: 2 seconds) it will
+          still be considered the same.
+        </li>
+        <li>
+          <b>Ignore the following tracks when determining whether a release is complete:</b> Missing tracks of the
+          selected type (video, pregap, data or silence) will be ignored when checking a release for completeness.
+          E.g. if "video" is selected here a release with a bonus video will be marked as complete if it has all the
+          audio tracks matched with a file even if the video file is missing.
+        </li>
+        <li>
+          <b>Tags to ignore for comparison:</b> Tags in this list will not be considered when comparing the existing
+          file metadata to the data loaded from MusicBrainz. A file where the only tag difference is with one of the
+          tags in this ignore list will still be considered unmodified.
+        </li>
+      </ul>
 
       <h2 id="network">Networking</h2>
 
@@ -771,6 +834,7 @@ comment</pre>
             <a href="#interface">User interface</a>
             <ul class="nav">
               <li><a href="#interface_colors">Colors</a></li>
+              <li><a href="#interface_top_tags">Top Tags</a></li>
             </ul>
           </li>
           <li><a href="#scripting">Scripting</a></li>
