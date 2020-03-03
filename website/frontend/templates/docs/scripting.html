@@ -767,6 +767,12 @@
             <code>format</code> is specified the date/time will be
             returned in the form '2020-02-05 14:26:32'.</li>
           <li class="added">Since Picard 2.3</li>
+          <li class="note">
+            Note: Platform-specific formatting codes should be avoided to help ensure the portability of scripts across the
+            different platforms.  These codes include: remove zero-padding (e.g. <code>%-d</code> and <code>%-m</code> on Linux
+            or OSX, and their equivalent <code>%#d</code> and <code>%#m</code> on Windows); element length specifiers (e.g.
+            <code>%3Y</code>); and hanging '%' at the end of the format string.
+          </li>
         </ul>
 
       </div>
