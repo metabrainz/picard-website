@@ -118,8 +118,12 @@
         <ul>
           <li>Finds the location of one string within another.
             Returns the index of the first occurrance of
-            <code>needle</code> in <code>haystack</code>, or -1 if
+            <code>needle</code> in <code>haystack</code>, or "" if
             <code>needle</code> was not found.
+          </li>
+          <li class="added">Added in version 2.3</li>
+          <li class="note">
+            Note that prior to Picard 2.3.2 <code>$find</code> returned "-1" if <code>needle</code> was not found.
           </li>
         </ul>
 
