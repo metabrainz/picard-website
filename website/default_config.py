@@ -24,7 +24,7 @@ PLUGIN_VERSIONS = {
 # The Picard developers have standardized on using only 'dev' or 'final' as the str_type segment of the version tuple.
 PICARD_VERSIONS = {
     'stable': {
-        'tag': '2.3.1',
+        'tag': '2.3.2',
         'version': (2, 3, 2, 'final', 0),
         'urls': {
             'download': 'https://picard.musicbrainz.org/',
