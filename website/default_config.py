@@ -25,17 +25,17 @@ PLUGIN_VERSIONS = {
 PICARD_VERSIONS = {
     'stable': {
         'tag': '2.3.1',
-        'version': (2, 3, 1, 'final', 0),
+        'version': (2, 3, 2, 'final', 0),
         'urls': {
             'download': 'https://picard.musicbrainz.org/',
             'changelog': 'https://picard.musicbrainz.org/changelog/',
         },
         'win_size': '29',
-        'win_hash': '5a1ddd43c091ba454adb999ada7222dc',
+        'win_hash': '67f54c20d098bd263cb3304ebdbe4cde',
         'win_portable_size': '43',
-        'win_portable_hash': '30985b9680215d29dd8ddff4d037e74a',
+        'win_portable_hash': '572b7ebfa532fedef2b0d6f82c84149b',
         'mac_size': '31',
-        'mac_hash': '6228718b1a06b0110e05c9107f9631e8',
+        'mac_hash': '8a391a30a69826b21fb5d732328e03a3',
         'linux_size': '3.7',
         'linux_hash': '-',
     },
