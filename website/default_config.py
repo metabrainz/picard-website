@@ -40,18 +40,26 @@ PICARD_VERSIONS = {
         'linux_hash': '-',
     },
     'beta': {
-        'tag': '2.3.0rc1',
-        'version': (2, 3, 0, 'rc', 1),
+        'tag': '2.4.0b1',
+        'version': (2, 4, 0, 'beta', 1),
         'urls': {
-            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.3.0rc1',
-            'changelog': 'https://blog.metabrainz.org/2020/02/11/picard-2-3-release-candidate/',
-        }
+            'download': 'https://picard.musicbrainz.org/downloads/',
+            'changelog': 'https://picard.musicbrainz.org/changelog/#release-2.4.0b1',
+        },
+        'win_size': '30',
+        'win_hash': 'fae372a01306069a0cf323006a24eeb0',
+        'win_portable_size': '43',
+        'win_portable_hash': '73c8f69b9fa061f3ffdc7ee7d8ea8100',
+        'mac_size': '32',
+        'mac_hash': 'e36068f971931ffdd59ff7c95efea745',
+        'linux_size': '3.9',
+        'linux_hash': '-',
     },
     'dev': {
-        'tag': '2.3.0rc1',
-        'version': (2, 3, 0, 'rc', 1),
+        'tag': '2.4.0b1',
+        'version': (2, 4, 0, 'beta', 1),
         'urls': {
-            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.3.0rc1',
+            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.4.0b1',
         }
     },
 }
