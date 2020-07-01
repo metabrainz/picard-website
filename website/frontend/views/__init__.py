@@ -19,7 +19,7 @@ def show_index():
 @frontend_bp.route('/downloads/')
 def show_downloads():
     return render_template('downloads.html',
-                           **current_app.config['PICARD_VERSIONS']['stable'])
+                           **current_app.config['PICARD_VERSIONS'])
 
 
 @frontend_bp.route('/quick-start/')
