@@ -73,7 +73,7 @@
                       </a>
                     </td>
                   </tr>
-                  {% if beta.version > stable.version %}
+                  {% if show_beta %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('beta release, 64-bit installer') }}</em></td>
                     <td>{{beta.win_hash}}</td>
@@ -173,7 +173,7 @@
                       </div>
                     </td>
                   </tr>
-                  {% if beta.version > stable.version %}
+                  {% if show_beta %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('beta release, macOS 10.12+ (x86_64)') }}</em></td>
                     <td>{{beta.mac_hash}}</td>
@@ -350,7 +350,7 @@
                       </div>
                     </td>
                   </tr>
-                  {% if beta.version > stable.version %}
+                  {% if show_beta %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('beta release') }}</em></td>
                     <td>{{beta.linux_hash}}</td>
