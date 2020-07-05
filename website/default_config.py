@@ -40,26 +40,27 @@ PICARD_VERSIONS = {
         'linux_hash': '-',
     },
     'beta': {
-        'tag': '2.4.0b1',
-        'version': (2, 4, 0, 'beta', 1),
+        'tag': '2.4.0b2',
+        'version': (2, 4, 0, 'beta', 2),
         'urls': {
             'download': 'https://picard.musicbrainz.org/downloads/',
-            'changelog': 'https://picard.musicbrainz.org/changelog/#release-2.4.0b1',
+            'changelog': 'https://picard.musicbrainz.org/changelog/#release-2.4.0b2',
         },
         'win_size': '30',
-        'win_hash': 'fae372a01306069a0cf323006a24eeb0',
+        'win_hash': '083e001ca516e268d5b0473f93ac1e23',
         'win_portable_size': '43',
-        'win_portable_hash': '73c8f69b9fa061f3ffdc7ee7d8ea8100',
+        'win_portable_hash': '34deae4084c57a9cd96745bf9349b4c0',
         'mac_size': '32',
-        'mac_hash': 'e36068f971931ffdd59ff7c95efea745',
+        'mac_hash': '55f553a0e674795e5227fee768ed5acc',
         'linux_size': '3.9',
         'linux_hash': '-',
     },
     'dev': {
-        'tag': '2.4.0b1',
-        'version': (2, 4, 0, 'beta', 1),
+        'tag': '2.4.0b2',
+        'version': (2, 4, 0, 'beta', 2),
         'urls': {
-            'download': 'https://github.com/metabrainz/picard/releases/tag/release-2.4.0b1',
+            'download':
+            'https://github.com/metabrainz/picard/releases/tag/release-2.4.0b2',
         }
     },
 }
