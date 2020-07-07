@@ -16,7 +16,7 @@ def show_basics():
     return render_template('docs/basics.html')
 
 
-@docs_bp.route('/user-guide')
+@docs_bp.route('/user-guide/')
 def show_guide():
     return redirect('https://picard-docs.musicbrainz.org')
 
