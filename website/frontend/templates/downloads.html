@@ -219,7 +219,7 @@
                   <tr>
                     <td>{{ _("All distributions") }} (Flatpak)</td>
                     <td>
-                      <a href="{{ url_for('docs.show_pages', page='linux', _anchor='flatpak') }}">Instructions</a>
+                      <a href="{{ url_for('docs.show_install_linux') }}">Instructions</a>
                       &middot;
                       <a href="https://flathub.org/apps/details/org.musicbrainz.Picard">Flathub</a>
                     </td>
@@ -244,7 +244,7 @@
                     <td>Fedora</td>
                     <td>
                       <a href="https://apps.fedoraproject.org/packages/picard">latest package</a>
-                      (<a href="{{ url_for('docs.show_pages', page='faq', _anchor='fedora-acoustid') }}">{{ _("read the FAQ") }}</a>)
+                      (<a href="http://picard-docs.musicbrainz.org/en/faq/faq_file_formats.html#index-3">{{ _("read the FAQ") }}</a>)
                     </td>
                   </tr>
                   <tr>
@@ -381,7 +381,7 @@
                   {% endif %}
                </tbody>
               </table>
-              <p>You can also view the latest Picard source code on <a href="https://github.com/musicbrainz/picard">Github</a>.</p>
+              <p>You can also view the latest Picard source code on <a href="https://github.com/musicbrainz/picard">Github</a>. See <a href="{{ url_for('docs.show_pages', page='development') }}">{{ _("Development") }}</a> on how you can start contributing to the Picard source code.</p>
             </div>
           </li>
         </ul>
