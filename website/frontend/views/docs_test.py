@@ -1,5 +1,6 @@
 from website.frontend.testing import FrontendTestCase
 from flask import url_for
+from flask import current_app as app
 
 
 class ViewsTestCase(FrontendTestCase):
@@ -7,11 +8,18 @@ class ViewsTestCase(FrontendTestCase):
     def test_docs_root(self):
         "Test /docs/ main page"
         response = self.client.get("/docs/")
-        self.assert200(response)
+        self.assertStatus(response, status_code=301)
+        self.assert_redirects(response, app.config['DOCS_BASE_URL'] + '/')
+
+    def test_docs_redirect(self):
+        "Test /docs/ valid sub-page"
+        response = self.client.get("/docs/basics/")
+        self.assertStatus(response, status_code=301)
+        self.assert_redirects(response, app.config['DOCS_BASE_URL'] + '/en/introduction.html')
 
     def test_docs_subpage(self):
         "Test /docs/ valid sub-page"
-        response = self.client.get("/docs/basics/")
+        response = self.client.get("/docs/development/")
         self.assert200(response)
 
     def test_docs_404(self):
