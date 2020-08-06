@@ -42,7 +42,7 @@
 #    },
 #}
 #
-#DOCS_BASE_URL = "http://picard-docs.musicbrainz.org"
+#DOCS_BASE_URL = "https://picard-docs.musicbrainz.org"
 #CHANGELOG_URL = "https://raw.githubusercontent.com/musicbrainz/picard/master/NEWS.md"
 #CHANGELOG_CACHE_TIMEOUT = 5 * 60
 #
