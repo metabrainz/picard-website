@@ -27,7 +27,7 @@ cd picard-website
 cp website/config.py.example website/config.py
 ```
 
-Edit website/config.py so that PLUGINS_BUILD_DIR points to the directory where the plugin builds are to be generated:
+Edit `website/config.py` so that `PLUGINS_BUILD_DIR` points to the directory where the plugin builds are to be generated:
 
 ```bash
 vim website/config.py
@@ -36,7 +36,7 @@ vim website/config.py
 Make sure [virtualenv](http://virtualenv.readthedocs.org/en/latest/) is installed before proceeding.
 
 ```bash
-virtualenv env
+virtualenv -p /usr/bin/python3 env
 source env/bin/activate
 ```
 
@@ -57,7 +57,7 @@ Node dependencies (including gulp and less, which are required to compile/minify
 To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repository and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
 
 ```bash
-./plugins_generate.py
+./plugins-generate.py
 ```
 
 Compile CSS and translations:
