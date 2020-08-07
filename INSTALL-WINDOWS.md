@@ -32,7 +32,7 @@ In the command prompt, navigate to the directory for your new clone and run:
 copy website/config.py.example website/config.py
 ```
 
-Edit website/config.py so that PLUGINS_REPOSITORY points to your local copy of the picard-plugins repository etc.
+Edit `website/config.py` so that `PLUGINS_REPOSITORY` points to your local copy of the picard-plugins repository etc.
 
 If you need virtual python environments because you need different versionsof dependencies for different projects then run the following
 
@@ -65,7 +65,7 @@ To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repo
 and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
 
 ```
-python plugins_generate.py
+python plugins-generate.py
 ```
 
 Compile CSS and translations:
