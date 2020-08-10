@@ -39,8 +39,8 @@ RUN ./node_modules/.bin/gulp build
 # Plugins
 RUN ./plugins-generate.py
 
-RUN apt-get purge -y $BUILD_DEPS && \
-    apt-get autoremove -y
+RUN apt-get update && apt-get purge -y $BUILD_DEPS && \
+    apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
 COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
 EXPOSE 3031
