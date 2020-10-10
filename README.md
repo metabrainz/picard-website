@@ -1,4 +1,4 @@
-# MusicBrainz Picard's Website
+# Welcome To MusicBrainz Picard's Website
 
 Website for MusicBrainz [Picard](https://picard.musicbrainz.org/).
 
