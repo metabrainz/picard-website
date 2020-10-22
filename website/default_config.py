@@ -24,19 +24,19 @@ PLUGIN_VERSIONS = {
 # The Picard developers have standardized on using only 'dev' or 'final' as the str_type segment of the version tuple.
 PICARD_VERSIONS = {
     'stable': {
-        'tag': '2.4.4',
-        'version': (2, 4, 4, 'final', 0),
+        'tag': '2.5',
+        'version': (2, 5, 0, 'final', 0),
         'urls': {
             'download': 'https://picard.musicbrainz.org/',
             'changelog': 'https://picard.musicbrainz.org/changelog/',
         },
         'win_size': '30',
-        'win_hash': 'bf370dc3d9d1ea91ec98f6f468c05a85',
+        'win_hash': '16cb9706d9036fa272ab1eaf38028ac9',
         'win_portable_size': '43',
-        'win_portable_hash': 'dba7ebecf7e129053c74e259b930ad25',
+        'win_portable_hash': 'ef222d80a1ad2338d87dbc24bacea8b0',
         'mac_size': '32',
-        'mac_hash': '06c6507dda30a7cc050028a832b9761f',
-        'linux_size': '4.0',
+        'mac_hash': 'b0cf05354bae73bb7ada0cf26f891a43',
+        'linux_size': '4.1',
         'linux_hash': '-',
     },
     'beta': {
