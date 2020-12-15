@@ -219,9 +219,17 @@
                   <tr>
                     <td>{{ _("All distributions") }} (Flatpak)</td>
                     <td>
-                      <a href="{{ url_for('docs.show_install_linux') }}">Instructions</a>
+                      <a href="{{ config['DOCS_BASE_URL'] }}/en/getting_started/download.html#installing-with-flatpak">Instructions</a>
                       &middot;
                       <a href="https://flathub.org/apps/details/org.musicbrainz.Picard">Flathub</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>{{ _("All distributions") }} (Snap)</td>
+                    <td>
+                      <a href="{{ config['DOCS_BASE_URL'] }}/en/getting_started/download.html#installing-with-snap">Instructions</a>
+                      &middot;
+                      <a href="https://snapcraft.io/picard">Snap Store</a>
                     </td>
                   </tr>
                   <tr>

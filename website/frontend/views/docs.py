@@ -53,7 +53,7 @@ def show_plugin_api():
 
 @docs_bp.route('/linux/')
 def show_install_linux():
-    return redirect_docs('/en/getting_started/download.html#installing-using-flatpak')
+    return redirect_docs('/en/getting_started/download.html#installing-picard-on-linux')
 
 @docs_bp.route('/<string:page>/')
 def show_pages(page):
