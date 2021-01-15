@@ -45,11 +45,11 @@ def show_tags():
 
 @docs_bp.route('/mappings/')
 def show_mappings():
-    return redirect_docs('/en/technical/tag_mapping.html')
+    return redirect_docs('/en/appendices/tag_mapping.html')
 
 @docs_bp.route('/plugin-api/')
 def show_plugin_api():
-    return redirect_docs('/en/technical/plugins_api.html')
+    return redirect_docs('/en/appendices/plugins_api.html')
 
 @docs_bp.route('/linux/')
 def show_install_linux():
