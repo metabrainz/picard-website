@@ -175,7 +175,7 @@
                   </tr>
                   {% if show_beta %}
                   <tr>
-                    <td>{{beta.tag}} <em>{{ _('beta release, macOS 10.12+ (x86_64)') }}</em></td>
+                    <td>{{beta.tag}} <em>{{ _('beta release, macOS 10.14+ (x86_64)') }}</em></td>
                     <td>{{beta.mac_hash}}</td>
                     <td>{{beta.mac_size}} MB</td>
                     <td>
@@ -186,10 +186,31 @@
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a
-                              href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}.dmg">{{ _('US Mirror') }}</a>
+                              href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}-macOS-10.14.dmg">{{ _('US Mirror') }}</a>
                           </li>
                           <li><a
-                              href="ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}.dmg">{{ _('EU Mirror') }}</a>
+                              href="ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}-macOS-10.14.dmg">{{ _('EU Mirror') }}</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>{{beta.tag}} <em>{{ _('beta release, macOS 10.12+ (x86_64)') }}</em></td>
+                    <td>{{beta.mac_10_12_hash}}</td>
+                    <td>{{beta.mac_10_12_size}} MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}-macOS-10.12.dmg">{{ _('US
+                              Mirror') }}</a>
+                          </li>
+                          <li><a href="ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}-macOS-10.12.dmg">{{ _('EU
+                              Mirror') }}</a>
                           </li>
                         </ul>
                       </div>
