@@ -3,7 +3,7 @@
 import ast
 import os
 import json
-import mistune
+from markdown import markdown
 import re
 import shutil
 import zipfile
@@ -66,7 +66,6 @@ KNOWN_DATA = [
 ]
 
 _version_re = re.compile(r"(\d+)[._](\d+)(?:[._](\d+)[._]?(?:(dev|final)[._]?(\d+))?)?$")
-markdown = mistune.Markdown()
 
 
 class VersionError(Exception):
