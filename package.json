@@ -1,16 +1,19 @@
 {
   "name": "picard-website",
   "version": "0.0.0",
-  "dependencies": {
-    "child-process-promise": "^2.2.1",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-less": "^4.0.1",
-    "less": "^3.13.1"
+  "devDependencies": {
+    "clean-css-cli": "^5.3.0",
+    "less": "^4.1.1"
   },
   "private": true,
-  "devDependencies": {
-    "minimist": ">=1.2.2"
+  "scripts": {
+    "clean": "rm -rf website/frontend/static/css/",
+    "styles": "lessc -m=always website/frontend/static/less/styles.less | cleancss -o website/frontend/static/css/styles.css",
+    "build": "npm run clean && npm run styles && npm run translate",
+    "translate": "pybabel compile -d website/frontend/translations",
+    "extract_strings": "pybabel extract -F website/frontend/babel.cfg -k lazy_gettext -o website/frontend/messages.pot website/frontend",
+    "resync_po_files_from_pot": "pybabel update -i website/frontend/messages.pot -d website/frontend/translations/",
+    "pull_translations": "python -c \"import website.frontend; print(','.join(website.frontend.create_app().config['SUPPORTED_LANGUAGES']))\"",
+    "update_strings": "npm run extract_strings && npm run pull_translations"
   }
 }

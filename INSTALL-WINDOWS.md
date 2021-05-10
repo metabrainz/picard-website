@@ -12,16 +12,6 @@ Download and install `Node.js` from https://nodejs.org/en/download/current/
 Open a new **Administrator** command prompt and check that both `Python` and `Node.js` are in your path environment variable.
 You may need to reboot for this to become visible.
 
-Install `gulp` by running:
-```
-npm install -g gulp
-```
-
-Check that `gulp` is working, check its version using:
-```
-gulp -v
-```
-
 Download and install [`GitHub for Windows`](https://desktop.github.com/)
 
 Use GitHub for Windows to fork and clone the `metabrainz/Picard-Website` repo(sitory).
@@ -53,13 +43,8 @@ Install node dependencies:
 npm install
 ```
 
-Node dependencies (including gulp and less, which are required to compile/minify CSS) are installed to `./node_modules`,
+Node dependencies (including less and cleancss, which are required to compile/minify CSS) are installed to `./node_modules`,
 and batch files are installed into `./node_modules/.bin`. You may want to add the latter into your path environment variable.
-
-Install gulp in the Picard-Website project:
-```
-npm install gulp
-```
 
 To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repository
 and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
@@ -71,7 +56,7 @@ python plugins-generate.py
 Compile CSS and translations:
 
 ```
-gulp build
+npm run build
 ```
 
 To run the development server, do:
