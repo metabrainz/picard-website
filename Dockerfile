@@ -1,4 +1,4 @@
-FROM python:3.7.2
+FROM python:3.9.5
 
 ARG BUILD_DEPS=" \
     build-essential \
@@ -17,13 +17,13 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Node
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 
 WORKDIR /code/website
 
 # Python dependencies
-RUN pip install uWSGI==2.0.18
+RUN pip install uWSGI==2.0.19.1
 COPY ./requirements.txt /code/website
 RUN pip install -r requirements.txt
 
