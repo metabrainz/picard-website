@@ -6,7 +6,11 @@ ARG BUILD_DEPS=" \
     libffi-dev \
     libssl-dev \
     libxml2-dev \
-    libxslt1-dev"
+    libxslt1-dev \
+    nodejs"
+
+# Configure apt repository for node
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 
 RUN apt-get update && \
     apt-get install \
@@ -15,10 +19,6 @@ RUN apt-get update && \
         -y \
         $BUILD_DEPS && \
     rm -rf /var/lib/apt/lists/*
-
-# Node
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get install -y nodejs
 
 WORKDIR /code/website
 
