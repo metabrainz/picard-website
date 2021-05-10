@@ -12,13 +12,6 @@ To install those on Ubuntu:
 sudo apt-get install python python-dev git nodejs npm
 ```
 
-Be sure `gulp` is working, check its version using:
-```bash
-gulp -v
-```
-If it complains about `node` being not found on Ubuntu/Debian you may have to install `nodejs-legacy` package
-or create a symlink between `nodejs` and `node`.
-
 Checkout picard-website and configure it:
 
 ```bash
@@ -52,7 +45,7 @@ Install node dependencies (requires [Node.js](http://nodejs.org/download/)):
 npm install
 ```
 
-Node dependencies (including gulp and less, which are required to compile/minify CSS) are installed to `./node_modules`, and binaries are symlinked into `./node_modules/.bin`. You may want to add the latter into your `$PATH`.
+Node dependencies (including less and cleancss, which are required to compile/minify CSS) are installed to `./node_modules`, and binaries are symlinked into `./node_modules/.bin`. You may want to add the latter into your `$PATH`.
 
 To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repository and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
 
@@ -63,7 +56,7 @@ To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repo
 Compile CSS and translations:
 
 ```bash
-gulp build
+npm run build
 ```
 
 To run the development server, do:
