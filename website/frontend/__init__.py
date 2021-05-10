@@ -31,7 +31,7 @@ def create_app():
     init_app(app)
 
     # Caching
-    from werkzeug.contrib.cache import SimpleCache
+    from cachelib import SimpleCache
     app.cache = SimpleCache()
 
     # Template utilities
