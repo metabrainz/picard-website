@@ -36,6 +36,7 @@ Install Python dependencies:
 ```
 pip install http://sourceforge.net/projects/py2exe/files/latest/download?source=files
 pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 Install node dependencies:

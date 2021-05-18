@@ -1,15 +1,10 @@
 blinker==1.4
 cachelib==0.1.1
-Flask-Babel == 2.0.0
-Flask-Testing == 0.8.1
+Flask-Babel==2.0.0
 Flask==1.1.2
 itsdangerous==1.1.0
 Jinja2==2.11.3
 markdown==3.3.4
 MarkupSafe==1.1.1
 mistune==0.8.4
-pytest-cov==2.11.1
-pytest==6.2.4
-six==1.16.0
-transifex-client==0.14.2
 Werkzeug==1.0.1

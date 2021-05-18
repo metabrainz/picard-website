@@ -37,6 +37,7 @@ Install Python dependencies:
 
 ```bash
 pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 Install node dependencies (requires [Node.js](http://nodejs.org/download/)):
