@@ -36,11 +36,13 @@ COPY . /code/website
 # Static files
 RUN npm run build
 
-# Plugins
-RUN ./plugins-generate.py
-
+# Cleanup build dependencies
+RUN rm -rf ./node_modules
 RUN apt-get update && apt-get purge -y $BUILD_DEPS && \
     apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
+
+# Plugins
+RUN ./plugins-generate.py
 
 COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
 EXPOSE 3031
