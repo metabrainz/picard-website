@@ -3,6 +3,7 @@ from flask import Flask
 import os
 from .errors import init_error_handlers
 from .babel import init_app
+from .scheduler import init_scheduler
 
 frontend_folder = os.path.dirname(os.path.abspath(__file__))
 template_folder = os.path.join(frontend_folder, 'templates')
@@ -33,6 +34,9 @@ def create_app():
     # Caching
     from cachelib import SimpleCache
     app.cache = SimpleCache()
+
+    # Initialize scheduler
+    init_scheduler(app)
 
     # Template utilities
     app.jinja_env.add_extension('jinja2.ext.do')

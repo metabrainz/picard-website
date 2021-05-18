@@ -2,7 +2,8 @@
 # You need to copy config.py.example to config.py and edit the file to your own needs
 # to override these values.
 PLUGINS_BUILD_DIR = "/code/plugins"
-PLUGINS_CACHE_TIMEOUT = 5 * 60
+PLUGINS_REFRESH_INTERVAL_SECONDS = 12 * 60 * 60
+PLUGINS_CACHE_TIMEOUT = 0  # never expire, handled by plugin refresh
 # Flask automatically orders them in ascending order while
 # retrieveing them. Since it is a string comparison, v10 appears before
 # v2. So be careful with the ordering.
@@ -80,3 +81,4 @@ SUPPORTED_LANGUAGES = [
 
 SERVER_HOSTNAME = "127.0.0.1"
 SERVER_PORT = 6060
+SCHEDULER_API_ENABLED = True

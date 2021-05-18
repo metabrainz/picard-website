@@ -2,7 +2,7 @@ from collections import OrderedDict
 import os
 import json
 from flask import current_app, Blueprint, render_template
-from website.frontend.views.api import plugins_json_file
+from website.plugin_utils import plugins_json_file
 plugins_bp = Blueprint('plugins', __name__)
 
 
