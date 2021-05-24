@@ -32,8 +32,12 @@ def create_app():
     init_app(app)
 
     # Caching
-    from cachelib import SimpleCache
-    app.cache = SimpleCache()
+    try:
+        from cachelib import UWSGICache
+        app.cache = UWSGICache()
+    except (ModuleNotFoundError, RuntimeError):
+        from cachelib import SimpleCache
+        app.cache = SimpleCache()
 
     # Initialize scheduler
     init_scheduler(app)
