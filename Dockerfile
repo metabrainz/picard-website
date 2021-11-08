@@ -1,31 +1,30 @@
 FROM python:3.9-slim-buster
 
 ARG BUILD_DEPS=" \
-    build-essential \
+    curl \
     git \
-    libffi-dev \
-    libssl-dev \
-    libxml2-dev \
-    libxslt1-dev \
-    nodejs"
-
-# Configure apt repository for node
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+    gcc g++ make \
+    "
 
 RUN apt-get update && \
     apt-get install \
         --no-install-suggests \
         --no-install-recommends \
         -y \
-        $BUILD_DEPS && \
-    rm -rf /var/lib/apt/lists/*
+        $BUILD_DEPS
+
+# Install nvm
+SHELL ["/bin/bash", "--login", "-c"]
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+# Install nodejs & npm
+RUN nvm install --lts && npm install -g npm@latest
 
 WORKDIR /code/website
 
 # Python dependencies
-RUN pip install uWSGI==2.0.19.1
 COPY ./requirements.txt /code/website
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install uWSGI==2.0.20 && pip install -r requirements.txt
 
 # Node dependencies
 COPY ./package.json /code/website
@@ -37,8 +36,7 @@ COPY . /code/website
 RUN npm run build
 
 # Cleanup build dependencies
-RUN rm -rf ./node_modules
-RUN apt-get update && apt-get purge -y $BUILD_DEPS && \
+RUN rm -rf ./node_modules && apt-get purge -y $BUILD_DEPS && \
     apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
 # Plugins
