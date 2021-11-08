@@ -25,7 +25,7 @@ jobs:
             metabrainz/picard-website
           # generate Docker tags based on the following events/attributes
           tags: |
-            type=semver,pattern={{raw}}
+            type=ref,event=tag
             type=edge,branch=master
           flavor: |
             latest=auto
