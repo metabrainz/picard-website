@@ -24,24 +24,31 @@ WORKDIR /code/website
 
 # Python dependencies
 COPY ./requirements.txt /code/website
-RUN pip install --upgrade pip && pip install uWSGI==2.0.20 && pip install -r requirements.txt
+RUN pip install --upgrade pip \
+    && pip install uWSGI==2.0.20 \
+    && pip install -r requirements.txt
 
 # Node dependencies
 COPY ./package.json /code/website
 RUN npm install
 
-COPY . /code/website
+COPY website /code/website/website
+COPY run.py plugins-generate.py pytest.ini /code/website/
 
 # Static files
 RUN npm run build
 
-# Cleanup build dependencies
-RUN rm -rf ./node_modules && apt-get purge -y $BUILD_DEPS && \
-    apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
-
 # Plugins
 RUN ./plugins-generate.py
+RUN python -m pytest
 
 COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
+
+# Cleanup build dependencies
+RUN rm -rf ./node_modules .pytest_cache .coverage \
+    && apt-get purge -y $BUILD_DEPS \
+    && apt-get autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
+
 EXPOSE 3031
 CMD ["uwsgi", "/etc/uwsgi/uwsgi.ini"]
