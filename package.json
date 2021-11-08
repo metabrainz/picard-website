@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf website/frontend/static/css/",
-    "styles": "lessc -m=always website/frontend/static/less/styles.less | cleancss -o website/frontend/static/css/styles.css",
+    "styles": "lessc website/frontend/static/less/styles.less | cleancss -o website/frontend/static/css/styles.css",
     "build": "npm run clean && npm run styles && npm run translate",
     "translate": "pybabel compile -d website/frontend/translations",
     "extract_strings": "pybabel extract -F website/frontend/babel.cfg -k lazy_gettext -o website/frontend/messages.pot website/frontend",
