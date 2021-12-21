@@ -25,22 +25,22 @@ PLUGIN_VERSIONS = {
 # The Picard developers have standardized on using only 'dev' or 'final' as the str_type segment of the version tuple.
 PICARD_VERSIONS = {
     'stable': {
-        'tag': '2.7',
-        'version': (2, 7, 0, 'final', 0),
+        'tag': '2.7.1',
+        'version': (2, 7, 1, 'final', 0),
         'urls': {
             'download': 'https://picard.musicbrainz.org/',
-            'changelog': 'https://blog.metabrainz.org/2021/12/16/picard-2-7-released/',
+            'changelog': 'https://blog.metabrainz.org/2021/12/21/picard-2-7-1-released/',
         },
         'win_size': '34',
-        'win_hash': '683c1b32352ad37faadaafb9cee3597d',
+        'win_hash': '327470651a1056a262b9f2fa9c903822',
         'win_portable_size': '49',
-        'win_portable_hash': '771382c503d9ca38514d54dbb13b8d7f',
+        'win_portable_hash': 'c164b0404f938f48e8a91799c7f1c63c',
         'mac_10_12_size': '37',
-        'mac_10_12_hash': '4d538499a2e96b4607014ffbe83f9034',
+        'mac_10_12_hash': 'f8bd481fb05a4e07ab17f2fb4ff4af45',
         'mac_size': '39',
-        'mac_hash': '9916a5f527df990fc9898594e3e9bb09',
+        'mac_hash': 'ce925feab10b9f9c85fad7bddeb22da9',
         'linux_size': '5',
-        'linux_hash': '0b447f3dc2ee9e76c7f42ea97fca3887',
+        'linux_hash': 'bd6a26fde0810307ec7df3a700c558d1',
     },
     'beta': {
         'tag': '2.7.0b3',
