@@ -10,13 +10,13 @@ from .api import *
 frontend_bp = Blueprint('frontend', __name__)
 
 
-@frontend_bp.route('/')
+@frontend_bp.get('/')
 def show_index():
     return render_template('index.html',
                            **current_app.config['PICARD_VERSIONS']['stable'])
 
 
-@frontend_bp.route('/downloads/')
+@frontend_bp.get('/downloads/')
 def show_downloads():
     version_config = current_app.config['PICARD_VERSIONS']
     show_beta = version_config['beta']['version'] > version_config['stable']['version']
@@ -24,6 +24,6 @@ def show_downloads():
                            **version_config, show_beta=show_beta)
 
 
-@frontend_bp.route('/quick-start/')
+@frontend_bp.get('/quick-start/')
 def show_quick_start():
     return render_template('quick-start.html')

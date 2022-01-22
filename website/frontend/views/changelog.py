@@ -36,7 +36,7 @@ def load_changelog(app):
     return data
 
 
-@changelog_bp.route('/')
+@changelog_bp.get('/')
 def show_changelog():
     app = current_app
     return render_template('changelog.html', changelog=load_changelog(app))
