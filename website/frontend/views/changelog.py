@@ -9,15 +9,15 @@ re_version = re.compile(r'^Version\s+(.*?)\s+-\s+(.*?)$')
 version_header = '<h3 id="release-{0}">Version <strong>{0}</strong> <span>{1}</span></h3>'
 
 
-class ChangelogRenderer(mistune.Renderer):
-    def header(self, text, level, raw=None):
+class ChangelogRenderer(mistune.HTMLRenderer):
+    def heading(self, text, level):
         if level == 1:
             match = re_version.match(text)
             if match:
                 version = match.group(1)
                 date = match.group(2).replace("xxxx-xx-xx", "Yet to be released")
                 return version_header.format(version, date)
-        return super().header(text, level + 2, raw)
+        return super().heading(text, level + 2)
 
 
 renderer = ChangelogRenderer()

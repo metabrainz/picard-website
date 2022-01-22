@@ -8,7 +8,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 markdown==3.3.6
 MarkupSafe==1.1.1
-mistune==0.8.4
+mistune==2.0.2
 pytest-cov==2.11.1
 pytest==6.2.5
 transifex-client==0.14.4
