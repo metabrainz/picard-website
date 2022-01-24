@@ -55,7 +55,7 @@ def picard_versions(app):
     return app.config['PICARD_VERSIONS']
 
 
-@api_bp.route('/<version>/', methods=['GET'])
+@api_bp.get('/<version>/')
 def api_root(version):
     """
     Shows info about our API
@@ -67,7 +67,7 @@ def api_root(version):
         return invalid_api_version(404)
 
 
-@api_bp.route('/<version>/plugins/', methods=['GET'])
+@api_bp.get('/<version>/plugins/')
 def get_plugin(version):
     """
     Lists data of a plugin
@@ -80,7 +80,7 @@ def get_plugin(version):
         return invalid_api_version(404)
 
 
-@api_bp.route('/<version>/download/', methods=['GET'])
+@api_bp.get('/<version>/download/')
 def download_plugin(version):
     """
     Serves files as a download attachment.
@@ -100,7 +100,7 @@ def download_plugin(version):
         return invalid_api_version(404)
 
 
-@api_bp.route('/v2/releases/', methods=['GET'])
+@api_bp.get('/v2/releases/')
 def get_versions():
     """
     Provides latest version numbers and download urls for the release paths.

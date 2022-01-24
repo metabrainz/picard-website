@@ -6,7 +6,7 @@ from website.plugin_utils import plugins_json_file
 plugins_bp = Blueprint('plugins', __name__)
 
 
-@plugins_bp.route('/')
+@plugins_bp.get('/')
 def show_plugins():
     all_plugins = OrderedDict()
     versions = current_app.config['PLUGIN_VERSIONS']
