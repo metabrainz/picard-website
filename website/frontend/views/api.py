@@ -31,7 +31,11 @@ def _get_plugin(app, version, pid=None):
 def _download_plugin(app, version, pid):
     plugins = load_json_data(current_app, version)
     if pid in plugins:
-        return send_from_directory(plugins_dir(current_app, version), pid + ".zip", as_attachment=True)
+        return send_from_directory(
+            plugins_dir(current_app, version),
+            pid + ".zip",
+            as_attachment=True,
+            mimetype='application/zip')
     else:
         return not_found(404)
 
