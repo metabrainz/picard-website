@@ -9,6 +9,7 @@ Jinja2==3.1.2
 markdown==3.3.7
 MarkupSafe==2.1.1
 mistune==2.0.2
+packaging==21.3
 pytest-cov==3.0.0
 pytest==7.1.2
 transifex-client==0.14.4
