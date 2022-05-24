@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, current_app
+from packaging import version
 
 from .changelog import *
 from .humans import *
@@ -19,7 +20,9 @@ def show_index():
 @frontend_bp.get('/downloads/')
 def show_downloads():
     version_config = current_app.config['PICARD_VERSIONS']
-    show_beta = version_config['beta']['version'] > version_config['stable']['version']
+    beta_version = version.parse(version_config['beta']['tag'])
+    stable_version = version.parse(version_config['stable']['tag'])
+    show_beta = beta_version > stable_version
     return render_template('downloads.html',
                            **version_config, show_beta=show_beta)
 
