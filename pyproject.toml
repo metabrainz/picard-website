@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "picard-website"
+version = "0.1.0"
+description = "Website for MusicBrainz Picard"
+authors = [
+    "Shadab Zafar <dufferzafar0@gmail.com>",
+    "Michael Wiencek <mwtuea@gmail.com>",
+    "Laurent Monin <zas@norz.org>",
+    "Sambhav Kothari <sambhavs.email@gmail.com>",
+    "Philipp Wolfer <ph.wolfer@gmail.com>",
+    "Sophist <github@sodalis.co.uk>",
+    "Bob Swift <bswift@rsds.ca>",
+    "Wieland Hoffmann <themineo@gmail.com>",
+    "Raptorial <raptka@gmail.com>",
+    "Roman Tsukanov <roman@tsukanov.me>",
+    "TheJYKoder <thejykoder@gmail.com>",
+    "Frederik “Freso” S. Olesen <freso.dk@gmail.com>",
+    "Hartama Putra <hartamaadesaputra@gmail.com>",
+    "Wieland Hoffmann <mineo@users.noreply.github.com>",
+    "Nicolás Tamargo <reosarevok@gmail.com>",
+    "Abhigyan Khaund <mail@abhigyan.xyz>",
+    "Aerozol <aerozol1@gmail.com>",
+    "Mathieu Bridon <bochecha@daitauha.fr>",
+    "Akash Nagaraj <grassknoted@gmail.com>",
+    "Anjali Ujjainia <ujjainia.2906@gmail.com>",
+    "Justin W. Flory <git@jwf.io>",
+    "LeoVerto <LeoVerto@users.noreply.github.com>",
+    "Mark Trolley <marktrolley@gmail.com>",
+    "Rahul Kumar Gupta <rahul.hp.gupta08@gmail.com>",
+    "Shen-Ta Hsieh <ibmibmibm.tw@gmail.com>",
+    "Sumit Ghosh <sumit.ghosh32@gmail.com>",
+    "Suraj Nath <devversitymail@gmail.com>",
+    "Theodore Fabian Rudy <dorerudy@gmail.com>",
+    "Ville Skyttä <ville.skytta@iki.fi>",
+    "jomo <git@jomo.tv>",
+    "vedantc98 <vedantc98@gmail.com>",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+blinker = "^1.4"
+cachelib = "^0.7.0"
+Flask = "^2.1.2"
+Flask-APScheduler = "^1.12.3"
+Flask-Babel = "^2.0.0"
+Markdown = "^3.3.7"
+mistune = "^2.0.2"
+packaging = "^21.3"
+
+[tool.poetry.dev-dependencies]
+Flask-Testing = "^0.8.1"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
