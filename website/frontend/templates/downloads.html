@@ -7,7 +7,7 @@
           {{ _("Picard is available for all major platforms. Just download and start the installer. It's that easy.") }}
         </p>
         <p>
-          <a href="https://blog.metabrainz.org/2021/12/16/picard-2-7-released/">{{ _("Learn about the new features in Picard {version}")|expand({'version': '2.7'}) }}</a>
+          <a href="{{stable.urls.changelog}}">{{ _("Learn about the new features in Picard {version}")|expand({'version': stable.tag}) }}</a>
         </p>
         <ul id="downloads">
           <li class="download-item" id="windows">
