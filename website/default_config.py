@@ -29,7 +29,7 @@ PICARD_VERSIONS = {
         'version': (2, 8, 0, 'final', 0),
         'urls': {
             'download': 'https://picard.musicbrainz.org/',
-            'changelog': 'https://blog.metabrainz.org/2022/05/22/picard-2-8-released/',
+            'changelog': 'https://blog.metabrainz.org/2022/05/24/picard-2-8-released/',
         },
         'win_size': '31',
         'win_hash': 'd6253b12029ecaca897a9adcfbc090aa',
