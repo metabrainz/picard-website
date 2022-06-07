@@ -23,16 +23,17 @@ RUN nvm install --lts && npm install -g npm@latest
 WORKDIR /code/website
 
 # Python dependencies
-COPY ./requirements.txt /code/website
 RUN pip install --upgrade pip \
-    && pip install uWSGI==2.0.20 \
-    && pip install -r requirements.txt
+    && pip install uWSGI==2.0.20 poetry==1.1.13
+COPY poetry.lock pyproject.toml /code/website/
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-interaction --no-ansi
 
 # Node dependencies
-COPY ./package.json /code/website
+COPY ./package.json /code/website/
 RUN npm install
 
-COPY website /code/website/website
+COPY website /code/website/website/
 COPY run.py plugins-generate.py pytest.ini /code/website/
 
 # Static files
@@ -45,6 +46,7 @@ RUN python -m pytest
 COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
 
 # Cleanup build dependencies
+#RUN poetry install --no-dev
 RUN rm -rf ./node_modules .pytest_cache .coverage \
     && apt-get purge -y $BUILD_DEPS \
     && apt-get autoremove -y \
