@@ -3,13 +3,14 @@
 Pre-requisites:
 - python >= 3.3
 - python-dev (required to build some dependencies)
+- [poetry](https://python-poetry.org/)
 - git
 - nodejs
 - npm
 
 To install those on Ubuntu:
 ```bash
-sudo apt-get install python python-dev git nodejs npm
+sudo apt-get install python3 python3-dev python3-poetry git nodejs npm
 ```
 
 Checkout picard-website and configure it:
@@ -26,17 +27,10 @@ Edit `website/config.py` so that `PLUGINS_BUILD_DIR` points to the directory whe
 vim website/config.py
 ```
 
-Make sure [virtualenv](http://virtualenv.readthedocs.org/en/latest/) is installed before proceeding.
-
-```bash
-virtualenv -p /usr/bin/python3 env
-source env/bin/activate
-```
-
 Install Python dependencies:
 
 ```bash
-pip install -r requirements.txt
+poetry install
 ```
 
 Install node dependencies (requires [Node.js](http://nodejs.org/download/)):
@@ -50,7 +44,7 @@ Node dependencies (including less and cleancss, which are required to compile/mi
 To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repository and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
 
 ```bash
-./plugins-generate.py
+poetry run python plugins-generate.py
 ```
 
 Compile CSS and translations:
@@ -62,7 +56,7 @@ npm run build
 To run the development server, do:
 
 ```bash
-./run.py
+poetry run python run.py
 ```
 
 By default, it listens on 127.0.0.1 port 6060.

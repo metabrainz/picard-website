@@ -10,9 +10,9 @@
     "clean": "rm -rf website/frontend/static/css/",
     "styles": "lessc website/frontend/static/less/styles.less | cleancss -o website/frontend/static/css/styles.css",
     "build": "npm run clean && npm run styles && npm run translate",
-    "translate": "pybabel compile -d website/frontend/translations",
-    "extract_strings": "pybabel extract -F website/frontend/babel.cfg -k lazy_gettext -o website/frontend/messages.pot website/frontend",
-    "resync_po_files_from_pot": "pybabel update -i website/frontend/messages.pot -d website/frontend/translations/",
+    "translate": "poetry run pybabel compile -d website/frontend/translations",
+    "extract_strings": "poetry run pybabel extract -F website/frontend/babel.cfg -k lazy_gettext -o website/frontend/messages.pot website/frontend",
+    "resync_po_files_from_pot": "poetry run pybabel update -i website/frontend/messages.pot -d website/frontend/translations/",
     "pull_translations": "tx pull -f -r picard-website.website -l ${languages} $(python -c \"import website.frontend; print(','.join(website.frontend.create_app().config['SUPPORTED_LANGUAGES']))\")",
     "update_strings": "npm run extract_strings && npm run pull_translations"
   }
