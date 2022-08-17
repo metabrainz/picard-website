@@ -25,22 +25,22 @@ PLUGIN_VERSIONS = {
 # The Picard developers have standardized on using only 'dev' or 'final' as the str_type segment of the version tuple.
 PICARD_VERSIONS = {
     'stable': {
-        'tag': '2.8.2',
-        'version': (2, 8, 2, 'final', 0),
+        'tag': '2.8.3',
+        'version': (2, 8, 3, 'final', 0),
         'urls': {
             'download': 'https://picard.musicbrainz.org/',
-            'changelog': 'https://blog.metabrainz.org/2022/07/07/picard-2-8-2-released/',
+            'changelog': 'https://blog.metabrainz.org/2022/08/17/picard-2-8-3-released/',
         },
         'win_size': '31',
-        'win_hash': 'c4076c2bf9087a28a3ae2ba6a29c48e3',
+        'win_hash': 'dd66b0c4a2a0078fd6de2cf418ee18b1',
         'win_portable_size': '44',
-        'win_portable_hash': 'bfecc469ffc40c11a2d49dae3127d921',
+        'win_portable_hash': 'f21626f0c136933d4de4b5c947d242ef',
         'mac_10_12_size': '32',
-        'mac_10_12_hash': '199d4d1aed76fac692dc5d60364f7bd7',
+        'mac_10_12_hash': 'a96ee10d7f5be07890e9b2de35e026d5',
         'mac_size': '35',
-        'mac_hash': '0a1e7797484bef4d635caaffd9de7513',
+        'mac_hash': 'ad0fef5abda4a046c86e5d6f2f417130',
         'linux_size': '5',
-        'linux_hash': 'f3ffe5ca7e23ca3a6caaa27c9d79246d',
+        'linux_hash': 'd3cb76031ed7bc6d346fa1320e2ce0a8',
     },
     'beta': {
         'tag': '2.8.0rc2',
