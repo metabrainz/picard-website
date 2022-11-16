@@ -30,6 +30,19 @@
             <li{% if active_page == 'quick_start' %} class="active"{% endif %}><a href="{{ url_for('frontend.show_quick_start') }}">{{ _("Quick-Start") }}</a></li>
             <li{% if active_page == 'docs' %} class="active"{% endif %}><a href="{{ config['DOCS_BASE_URL'] }}" target="_blank">{{ _("Documentation") }}</a></li>
           </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-language"></i> {{ _('Language') }} <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                {% for language in config.LANGUAGES|dictsort(false, 'value') %}
+                <li><a href="?l={{ language[0] }}">{{ language[1]|capitalize }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -47,25 +60,120 @@
     <div class="clearfix"></div>
 
     {% block footer %}
-    <div class="container">
-      <hr />
-      <div class="footer clearfix">
-        <ul class="list-inline pull-left">
-          <li><a href="https://blog.musicbrainz.org/">{{ _("MusicBrainz Blog") }}</a></li>
-          <li><a href="https://community.metabrainz.org/c/picard">{{ _("Picard Forum") }}</a></li>
-        </ul>
-        <div id="language-selector" class="btn-group dropup pull-right">
-          <button type="button" class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
-            {{ _('Language') }} <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            {% for language in config.LANGUAGES|dictsort(false, 'value') %}
-              <li><a href="?l={{ language[0] }}">{{ language[1]|capitalize }}</a></li>
-            {% endfor %}
-          </ul>
+    <section class="footer">
+      <div class="container">
+        <hr />
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h3>
+              <img src="{{ url_for('static', filename='img/picard-logo.svg') }}" alt="MusicBrainz Picard" width="180">
+            </h3>
+            <br>
+            <p>
+              {{ _("Picard helps you organize your music collection by renaming your music files and sorting them into a folder structure exactly the way you want it. A variety of plugins are available and you can even write your own. Picard supports a wide range of audio formats and can also lookup an entire CD for you.") }}
+            </p>
+            <ul class="list-unstyled">
+              <li>
+                {{ _("IRC: {url|#metabrainz}")|expand({'url': 'https://kiwiirc.com/nextclient/irc.libera.chat/?#metabrainz'})|safe }}
+              </li>
+              <li>
+                {{ _("Email: {url|support@metabrainz.org}")|expand({'url': 'mailto:support@metabrainz.org'})|safe }}
+              </li>
+            </ul>
+          </div>
+          <br>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <h3>{{ _("Useful Links") }}</h3>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-angle-double-right"></i> <a
+                  href="https://metabrainz.org/donate" target="_blank" rel="noopener noreferrer">{{ _("Donate") }}</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right"></i> <a
+                  href="https://picard-docs.musicbrainz.org/" target="_blank" rel="noopener noreferrer">{{ _("Documentation") }}</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right"></i> <a
+                  href="https://community.metabrainz.org/c/picard" target="_blank" rel="noopener noreferrer">{{ _("Community") }}</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right"></i> <a
+                  href="https://blog.metabrainz.org/" target="_blank" rel="noopener noreferrer">{{ _("Blog") }}</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right"></i> <a
+                  href="https://www.redbubble.com/people/metabrainz/shop" target="_blank" rel="noopener noreferrer">{{ _("Shop") }}</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right"></i> <a
+                  href="https://metabrainz.org/" target="_blank" rel="noopener noreferrer">{{ _("MetaBrainz") }}</a>
+              </li>
+              <li class="visible-xs">
+                <i class="fa fa-angle-double-right"></i> <a
+                  href="https://github.com/metabrainz/listenbrainz-server" target="_blank"
+                  rel="noopener noreferrer">{{ _("Contribute Here") }}</a>
+              </li>
+              <li class="visible-xs">
+                <i class="fa fa-angle-double-right"></i> <a
+                  href="https://tickets.metabrainz.org/" target="_blank" rel="noopener noreferrer">{{ _("Bug Tracker") }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <h3>{{ _("Fellow Projects") }}</h3>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-angle-double-right"></i> <img
+                  src="{{ url_for('static', filename='img/meb-icons/musicbrainz-icon.svg') }}" alt="MusicBrainz" width="18" height="18"> <a
+                  href="https://musicbrainz.org/" target="_blank" rel="noopener noreferrer">MusicBrainz</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right"></i> <img
+                  src="{{ url_for('static', filename='img/meb-icons/critiquebrainz-icon.svg') }}" alt="CritiqueBrainz" width="18" height="18"> <a
+                  href="https://critiquebrainz.org/" target="_blank" rel="noopener noreferrer">CritiqueBrainz</a>
+              </li>
+              <li class="item-list-a">
+                <i class="fa fa-angle-double-right"></i> <img
+                  src="{{ url_for('static', filename='img/meb-icons/listenbrainz-icon.svg') }}" alt="ListenBrainz" width="18" height="18"> <a
+                  href="https://listenbrainz.org/" target="_blank" rel="noopener noreferrer">ListenBrainz</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right"></i> <img
+                  src="{{ url_for('static', filename='img/meb-icons/coverartarchive-icon.svg') }}" alt="CoverArtArchive" width="18" height="18"> <a
+                  href="https://coverartarchive.org" target="_blank" rel="noopener noreferrer">Cover Art Archive</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right"></i> <img
+                  src="{{ url_for('static', filename='img/meb-icons/bookbrainz-icon.svg') }}" alt="BookBrainz" width="18" height="18"> <a
+                  href="https://bookbrainz.org/" target="_blank" rel="noopener noreferrer">BookBrainz</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row center-p">
+          <div class="col-md-3 d-none d-md-block hidden-xs">
+            <p class="section-line">
+              {{ _("OSS Geek? {url|Contribute Here}")|expand({'url': 'https://github.com/metabrainz/picard'})|safe }}
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p class="section-line">
+              {% set expand={
+                'metabrainz': '<img src="' + url_for('static', filename='img/meb-icons/metabrainz-icon-detail.svg') + '" alt="MetaBrainz" width="30" height="30"> <span> MetaBrainz Foundation </span>'
+              }
+              %}
+              {{ _("Brought to you by {metabrainz}")|expand(expand)|safe }}
+            </p>
+          </div>
+          <div class="col-md-3 d-none d-md-block hidden-xs">
+            <p class="section-line">
+              {{ _("Found an Issue? {url|Report Here}")|expand({'url': 'https://tickets.metabrainz.org/browse/PICARD'})|safe }}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
     {% endblock %}
 
     {%- block scripts %}
