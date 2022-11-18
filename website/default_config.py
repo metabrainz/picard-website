@@ -76,6 +76,7 @@ CHANGELOG_CACHE_TIMEOUT = 5 * 60
 
 SUPPORTED_LANGUAGES = [
     'en',
+    'de',
     'fr',
 ]
 
