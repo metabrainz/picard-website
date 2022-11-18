@@ -226,11 +226,11 @@
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}-macOS-10.12.dmg">{{ _('US
-                              Mirror') }}</a>
+                          <li>
+                            <a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}-macOS-10.12.dmg">{{ _('US Mirror') }}</a>
                           </li>
-                          <li><a href="https://data.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}-macOS-10.12.dmg">{{ _('EU
-                              Mirror') }}</a>
+                          <li>
+                            <a href="https://data.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{beta.tag}}-macOS-10.12.dmg">{{ _('EU Mirror') }}</a>
                           </li>
                         </ul>
                       </div>
@@ -260,7 +260,7 @@
                   <tr>
                     <td>{{ _("All distributions") }} (Flatpak)</td>
                     <td>
-                      <a href="{{ config['DOCS_BASE_URL'] }}/en/getting_started/download.html#installing-with-flatpak">Instructions</a>
+                      <a href="{{ config['DOCS_BASE_URL'] }}/en/getting_started/download.html#installing-with-flatpak">{{ _("Instructions") }}</a>
                       &middot;
                       <a href="https://flathub.org/apps/details/org.musicbrainz.Picard">Flathub</a>
                     </td>
@@ -268,7 +268,7 @@
                   <tr>
                     <td>{{ _("All distributions") }} (Snap)</td>
                     <td>
-                      <a href="{{ config['DOCS_BASE_URL'] }}/en/getting_started/download.html#installing-with-snap">Instructions</a>
+                      <a href="{{ config['DOCS_BASE_URL'] }}/en/getting_started/download.html#installing-with-snap">{{ _("Instructions") }}</a>
                       &middot;
                       <a href="https://snapcraft.io/picard">Snap Store</a>
                     </td>
@@ -318,7 +318,7 @@
                   </tr>
                 </tbody>
               </table>
-              <p>{{ _("In addition to what is listed above Picard is available in the official repositories of most Linux distributions.") }}</p>
+              <p>{{ _("In addition Picard is also available in the official repositories of most Linux distributions.") }}</p>
             </div>
           </li>
 
@@ -430,7 +430,16 @@
                   {% endif %}
                </tbody>
               </table>
-              <p>You can also view the latest Picard source code on <a href="https://github.com/musicbrainz/picard">Github</a>. See <a href="{{ url_for('docs.show_pages', page='development') }}">{{ _("Development") }}</a> on how you can start contributing to the Picard source code.</p>
+              <p>
+                {% autoescape false %}
+                {% set links={
+                  'urldev': url_for('docs.show_pages', page='development'),
+                  'urlgithub': 'https://github.com/musicbrainz/picard'
+                }
+                %}
+                {{ _("You can also view the latest Picard source code on {urlgithub|Github}. See {urldev|Development} on how you can start contributing to the Picard source code.")|expand(links) }}
+                {% endautoescape %}
+              </p>
             </div>
           </li>
         </ul>

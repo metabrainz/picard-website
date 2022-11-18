@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-18 15:33+0100\n"
+"POT-Creation-Date: 2022-11-18 16:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -188,6 +188,7 @@ msgstr ""
 #: website/frontend/templates/downloads.html:173
 #: website/frontend/templates/downloads.html:190
 #: website/frontend/templates/downloads.html:209
+#: website/frontend/templates/downloads.html:230
 msgid "US Mirror"
 msgstr ""
 
@@ -199,6 +200,7 @@ msgstr ""
 #: website/frontend/templates/downloads.html:174
 #: website/frontend/templates/downloads.html:191
 #: website/frontend/templates/downloads.html:212
+#: website/frontend/templates/downloads.html:233
 msgid "EU Mirror"
 msgstr ""
 
@@ -246,18 +248,6 @@ msgstr ""
 msgid "pre-release, macOS 10.12+ (x86_64)"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:229
-msgid ""
-"US\n"
-"                              Mirror"
-msgstr ""
-
-#: website/frontend/templates/downloads.html:232
-msgid ""
-"EU\n"
-"                              Mirror"
-msgstr ""
-
 #: website/frontend/templates/downloads.html:248
 msgid "Picard for <strong>Linux</strong>"
 msgstr ""
@@ -271,14 +261,19 @@ msgstr ""
 msgid "All distributions"
 msgstr ""
 
+#: website/frontend/templates/downloads.html:263
+#: website/frontend/templates/downloads.html:271
+msgid "Instructions"
+msgstr ""
+
 #: website/frontend/templates/downloads.html:296
 msgid "read the FAQ"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:321
 msgid ""
-"In addition to what is listed above Picard is available in the official "
-"repositories of most Linux distributions."
+"In addition Picard is also available in the official repositories of most"
+" Linux distributions."
 msgstr ""
 
 #: website/frontend/templates/downloads.html:328
@@ -317,11 +312,14 @@ msgstr ""
 msgid "pre-release"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:433
-msgid "Development"
+#: website/frontend/templates/downloads.html:440
+msgid ""
+"You can also view the latest Picard source code on {urlgithub|Github}. "
+"See {urldev|Development} on how you can start contributing to the Picard "
+"source code."
 msgstr ""
 
-#: website/frontend/templates/downloads.html:438
+#: website/frontend/templates/downloads.html:447
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
