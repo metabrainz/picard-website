@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-18 16:56+0100\n"
+"POT-Creation-Date: 2022-11-23 08:04+0100\n"
 "PO-Revision-Date: 2014-10-20 22:42+0100\n"
 "Last-Translator: Laurent Monin <i18n@norz.org>\n"
 "Language: fr\n"
@@ -47,7 +47,8 @@ msgid "Plugins"
 msgstr "Greffons"
 
 #: website/frontend/templates/base.html:30
-msgid "Quick-Start"
+#: website/frontend/templates/quick-start.html:3
+msgid "Quick Start"
 msgstr ""
 
 #: website/frontend/templates/base.html:31
@@ -497,10 +498,6 @@ msgstr "Description"
 #: website/frontend/templates/plugins.html:36
 msgid "Author(s)"
 msgstr "Auteur(s)"
-
-#: website/frontend/templates/quick-start.html:3
-msgid "Quick Start"
-msgstr ""
 
 #: website/frontend/templates/docs/build-osx.html:3
 #, fuzzy

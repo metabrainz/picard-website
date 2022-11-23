@@ -27,7 +27,7 @@
           <ul class="nav navbar-nav">
             <li{% if active_page == 'downloads' %} class="active"{% endif %}><a href="{{ url_for('frontend.show_downloads') }}">{{ _("Downloads") }}</a></li>
             <li{% if active_page == 'plugins' %} class="active"{% endif %}><a href="{{ url_for('plugins.show_plugins') }}">{{ _("Plugins") }}</a></li>
-            <li{% if active_page == 'quick_start' %} class="active"{% endif %}><a href="{{ url_for('frontend.show_quick_start') }}">{{ _("Quick-Start") }}</a></li>
+            <li{% if active_page == 'quick_start' %} class="active"{% endif %}><a href="{{ url_for('frontend.show_quick_start') }}">{{ _("Quick Start") }}</a></li>
             <li{% if active_page == 'docs' %} class="active"{% endif %}><a href="{{ config['DOCS_BASE_URL'] }}" target="_blank">{{ _("Documentation") }}</a></li>
           </ul>
 
