@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-23 08:04+0100\n"
+"POT-Creation-Date: 2022-11-23 08:29+0100\n"
 "PO-Revision-Date: 2022-11-18 17:16+0100\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language: de\n"
@@ -128,7 +128,8 @@ msgid "Found an Issue? {url|Report Here}"
 msgstr "Fehler gefunden? {url|Hier melden}"
 
 #: website/frontend/templates/changelog.html:3
-msgid "What's New"
+#: website/frontend/templates/index.html:22
+msgid "What’s New"
 msgstr "Was ist neu?"
 
 #: website/frontend/templates/downloads.html:7
@@ -355,10 +356,6 @@ msgstr ""
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
 msgstr "Picard herunterladen"
-
-#: website/frontend/templates/index.html:22
-msgid "What’s New"
-msgstr "Was ist neu?"
 
 #: website/frontend/templates/index.html:25
 msgid "Other Downloads"

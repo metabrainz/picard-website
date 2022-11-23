@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-23 08:04+0100\n"
+"POT-Creation-Date: 2022-11-23 08:29+0100\n"
 "PO-Revision-Date: 2022-11-23 08:25+0100\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: fr <LL@li.org>\n"
 "Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Generated-By: Babel 2.11.0\n"
-"X-Generator: Poedit 3.2.1\n"
 
 #: website/frontend/templates/base.html:7
 msgid ""
@@ -64,17 +63,17 @@ msgstr "Langue"
 
 #: website/frontend/templates/base.html:73
 msgid ""
-"Picard helps you organize your music collection by renaming your music files "
-"and sorting them into a folder structure exactly the way you want it. A "
-"variety of plugins are available and you can even write your own. Picard "
-"supports a wide range of audio formats and can also lookup an entire CD for "
-"you."
+"Picard helps you organize your music collection by renaming your music "
+"files and sorting them into a folder structure exactly the way you want "
+"it. A variety of plugins are available and you can even write your own. "
+"Picard supports a wide range of audio formats and can also lookup an "
+"entire CD for you."
 msgstr ""
 "Picard vous aide à organiser votre collection musicale en renommant vos "
-"fichiers audio et en les triant dans une structure de répertoires exactement "
-"comme vous le souhaitez. Différents greffons sont disponibles et vous pouvez "
-"même créer le vôtre. Picard supporte une grande variété de formats audio et "
-"peut aussi rechercher un CD entier pour vous."
+"fichiers audio et en les triant dans une structure de répertoires "
+"exactement comme vous le souhaitez. Différents greffons sont disponibles "
+"et vous pouvez même créer le vôtre. Picard supporte une grande variété de"
+" formats audio et peut aussi rechercher un CD entier pour vous."
 
 #: website/frontend/templates/base.html:77
 msgid "IRC: {url|#metabrainz}"
@@ -129,7 +128,8 @@ msgid "Found an Issue? {url|Report Here}"
 msgstr ""
 
 #: website/frontend/templates/changelog.html:3
-msgid "What's New"
+#: website/frontend/templates/index.html:22
+msgid "What’s New"
 msgstr "Nouveautés"
 
 #: website/frontend/templates/downloads.html:7
@@ -137,8 +137,8 @@ msgid ""
 "Picard is available for all major platforms. Just download and start the "
 "installer. It's that easy."
 msgstr ""
-"Picard est disponible pour les principales plateformes. Télécharger et lancer "
-"l'installateur. C'est aussi facile que ça."
+"Picard est disponible pour les principales plateformes. Télécharger et "
+"lancer l'installateur. C'est aussi facile que ça."
 
 #: website/frontend/templates/downloads.html:10
 msgid "Learn about the new features in Picard {version}"
@@ -287,8 +287,8 @@ msgstr "lire la FAQ"
 
 #: website/frontend/templates/downloads.html:321
 msgid ""
-"In addition Picard is also available in the official repositories of most "
-"Linux distributions."
+"In addition Picard is also available in the official repositories of most"
+" Linux distributions."
 msgstr ""
 
 #: website/frontend/templates/downloads.html:328
@@ -331,9 +331,9 @@ msgstr ""
 
 #: website/frontend/templates/downloads.html:440
 msgid ""
-"You can also view the latest Picard source code on {urlgithub|Github}. See "
-"{urldev|Development} on how you can start contributing to the Picard source "
-"code."
+"You can also view the latest Picard source code on {urlgithub|Github}. "
+"See {urldev|Development} on how you can start contributing to the Picard "
+"source code."
 msgstr ""
 
 #: website/frontend/templates/downloads.html:447
@@ -341,23 +341,21 @@ msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
 msgstr ""
-"Cette page liste les téléchargements les plus récents. Si vous recherchez "
-"d'anciennes versions de Picard, {url|consultez notre serveur FTP}."
+"Cette page liste les téléchargements les plus récents. Si vous recherchez"
+" d'anciennes versions de Picard, {url|consultez notre serveur FTP}."
 
 #: website/frontend/templates/index.html:11
 #, fuzzy
 msgid ""
-"Picard is a cross-platform music tagger powered by the MusicBrainz database."
+"Picard is a cross-platform music tagger powered by the MusicBrainz "
+"database."
 msgstr ""
-"Picard est un marqueur de fichiers audio multi-plateformes écrit en Python."
+"Picard est un marqueur de fichiers audio multi-plateformes écrit en "
+"Python."
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
 msgstr "Télécharger Picard"
-
-#: website/frontend/templates/index.html:22
-msgid "What’s New"
-msgstr "Nouveautés"
 
 #: website/frontend/templates/index.html:25
 msgid "Other Downloads"
@@ -373,11 +371,11 @@ msgstr "Formats multiples"
 
 #: website/frontend/templates/index.html:42
 msgid ""
-"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
-"WMA, WAV, and more."
+"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
+" WMA, WAV, and more."
 msgstr ""
-"Picard supporte tous les formats audionumériques courants, notamment MP3, "
-"FLAC, OGG, M4A, WMA, WAV, et davantage."
+"Picard supporte tous les formats audionumériques courants, notamment MP3,"
+" FLAC, OGG, M4A, WMA, WAV, et davantage."
 
 #: website/frontend/templates/index.html:49
 msgid "AcoustID"
@@ -388,9 +386,9 @@ msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
 msgstr ""
-"Picard utilise les empreintes audio-acoustiques {url|AcoustID}, permettant "
-"l'identification des fichiers par la musique, même s'ils ne possèdent aucune "
-"métadonnée."
+"Picard utilise les empreintes audio-acoustiques {url|AcoustID}, "
+"permettant l'identification des fichiers par la musique, même s'ils ne "
+"possèdent aucune métadonnée."
 
 #: website/frontend/templates/index.html:66
 msgid "Comprehensive Database"
@@ -398,12 +396,12 @@ msgstr "Base de données riche"
 
 #: website/frontend/templates/index.html:75
 msgid ""
-"Picard uses the open and community-maintained {url|MusicBrainz} database to "
-"provide accurate information about millions of music releases."
+"Picard uses the open and community-maintained {url|MusicBrainz} database "
+"to provide accurate information about millions of music releases."
 msgstr ""
-"Picard utilise la base de données ouverte et maintenue par une communauté de "
-"MusicBrainz, pour fournir des informations précises à propos de millions de "
-"parutions musicales."
+"Picard utilise la base de données ouverte et maintenue par une communauté"
+" de MusicBrainz, pour fournir des informations précises à propos de "
+"millions de parutions musicales."
 
 #: website/frontend/templates/index.html:83
 msgid "CD Lookups"
@@ -423,8 +421,8 @@ msgid ""
 "{urlgithub|GitHub} where it’s\n"
 "                actively developed by some awesome developers."
 msgstr ""
-"Picard est diffusé sous licence {urlgpl|GPL 2.0 ou plus}, et est hébergé sur "
-"GitHub où il est activement maintenu par de formidables développeurs."
+"Picard est diffusé sous licence {urlgpl|GPL 2.0 ou plus}, et est hébergé "
+"sur GitHub où il est activement maintenu par de formidables développeurs."
 
 #: website/frontend/templates/index.html:107
 msgid "Cover Art"
@@ -440,12 +438,13 @@ msgstr "Langage de script"
 
 #: website/frontend/templates/index.html:118
 msgid ""
-"A flexible but easy to learn scripting language allows you to exactly specify "
-"how your music files will be named and how the tags will look like."
+"A flexible but easy to learn scripting language allows you to exactly "
+"specify how your music files will be named and how the tags will look "
+"like."
 msgstr ""
-"Un langage de script, souple et simple à apprendre, vous permet de spécifier "
-"exactement comment vous voulez que vos fichiers soient nommés et à quoi les "
-"balises doivent ressembler."
+"Un langage de script, souple et simple à apprendre, vous permet de "
+"spécifier exactement comment vous voulez que vos fichiers soient nommés "
+"et à quoi les balises doivent ressembler."
 
 #: website/frontend/templates/index.html:125
 msgid "Plugin Support"
@@ -453,12 +452,12 @@ msgstr "Support de greffons"
 
 #: website/frontend/templates/index.html:127
 msgid ""
-"If you need a particular feature, you can choose from a selection of {url|"
-"available plugins} or write\n"
+"If you need a particular feature, you can choose from a selection of "
+"{url|available plugins} or write\n"
 "                your own."
 msgstr ""
-"Si vous avez besoin d'une fonctionnalité particulière, vous pouvez choisir "
-"parmi les {url|greffons disponibles} ou écrire le vôtre."
+"Si vous avez besoin d'une fonctionnalité particulière, vous pouvez "
+"choisir parmi les {url|greffons disponibles} ou écrire le vôtre."
 
 #: website/frontend/templates/plugins.html:3
 msgid "Available Plugins"
@@ -466,13 +465,14 @@ msgstr "Greffons disponibles"
 
 #: website/frontend/templates/plugins.html:9
 msgid ""
-"This is a list of plugins that are currently available for use with Picard."
+"This is a list of plugins that are currently available for use with "
+"Picard."
 msgstr "Ceci est une liste des greffons actuellement disponibles pour Picard."
 
 #: website/frontend/templates/plugins.html:10
 msgid ""
-"The current production release of Picard 2.x uses API v2. The older Picard 1."
-"x releases use API v1."
+"The current production release of Picard 2.x uses API v2. The older "
+"Picard 1.x releases use API v1."
 msgstr ""
 
 #: website/frontend/templates/plugins.html:11
@@ -577,12 +577,15 @@ msgstr ""
 #~ msgstr "Daily Builds pour Windows"
 
 #~ msgid ""
-#~ "If you get an error about being unable to run the program, install the "
-#~ "{url|Microsoft Visual C++ 2008 Redistributable Package (x86)}."
+#~ "If you get an error about being"
+#~ " unable to run the program, install"
+#~ " the {url|Microsoft Visual C++ 2008 "
+#~ "Redistributable Package (x86)}."
 #~ msgstr ""
-#~ "Si vous obtenez une erreur disant que vous ne pouvez exécuter le "
-#~ "programme, installez {url|Microsoft Visual C++ 2008 Redistributable "
-#~ "Package (x86)}."
+#~ "Si vous obtenez une erreur disant "
+#~ "que vous ne pouvez exécuter le "
+#~ "programme, installez {url|Microsoft Visual C++"
+#~ " 2008 Redistributable Package (x86)}."
 
 #~ msgid "Picard for <strong>Mac OS X 10.7+ (x86_64)</strong>"
 #~ msgstr "Picard pour <strong>Mac OS X 10.7+ (x86_64)</strong>"
