@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-25 11:03+0100\n"
+"POT-Creation-Date: 2022-11-25 14:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -222,7 +222,7 @@ msgstr ""
 
 #: website/frontend/templates/downloads.html:70
 #: website/frontend/templates/downloads.html:73
-msgid "Windows 10 app"
+msgid "Windows 10&thinsp;/&thinsp;11 app"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:78
@@ -277,6 +277,11 @@ msgstr ""
 #: website/frontend/templates/downloads.html:266
 #: website/frontend/templates/downloads.html:274
 msgid "Instructions"
+msgstr ""
+
+#: website/frontend/templates/downloads.html:298
+#: website/frontend/templates/downloads.html:311
+msgid "latest package"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:299

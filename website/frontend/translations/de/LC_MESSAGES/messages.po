@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-25 11:03+0100\n"
-"PO-Revision-Date: 2022-11-25 11:11+0100\n"
+"POT-Creation-Date: 2022-11-25 14:05+0100\n"
+"PO-Revision-Date: 2022-11-25 14:06+0100\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -234,8 +234,8 @@ msgstr "64-Bit Portable"
 
 #: website/frontend/templates/downloads.html:70
 #: website/frontend/templates/downloads.html:73
-msgid "Windows 10 app"
-msgstr "Windows 10 App"
+msgid "Windows 10&thinsp;/&thinsp;11 app"
+msgstr "Windows 10&thinsp;/&thinsp;11 App"
 
 #: website/frontend/templates/downloads.html:78
 msgid "Windows Store"
@@ -290,6 +290,11 @@ msgstr "Alle Distributionen"
 #: website/frontend/templates/downloads.html:274
 msgid "Instructions"
 msgstr "Anleitung"
+
+#: website/frontend/templates/downloads.html:298
+#: website/frontend/templates/downloads.html:311
+msgid "latest package"
+msgstr "aktuellstes Paket"
 
 #: website/frontend/templates/downloads.html:299
 msgid "read the FAQ"
