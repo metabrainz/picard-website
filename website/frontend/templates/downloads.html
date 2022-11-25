@@ -381,9 +381,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>{{stable.tag}}</td>
-                    <td>{{stable.linux_hash}}</td>
-                    <td>{{stable.linux_size}} MB</td>
+                    <td>{{stable.tag}} <em>{{ _('tar') }}</em></td>
+                    <td>{{stable.source_tar_hash}}</td>
+                    <td>{{stable.source_tar_size}} MB</td>
                     <td>
                       <div class="btn-group">
                         <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
@@ -391,19 +391,34 @@
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-{{stable.tag}}.tar.gz">{{ _('US Mirror (tar)') }}</a></li>
-                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-{{stable.tag}}.zip">{{ _('US Mirror (zip)') }}</a></li>
-                          <li><a href="https://data.musicbrainz.org/pub/musicbrainz/picard/picard-{{stable.tag}}.tar.gz">{{ _('EU Mirror (tar)') }}</a></li>
-                          <li><a href="https://data.musicbrainz.org/pub/musicbrainz/picard/picard-{{stable.tag}}.zip">{{ _('EU Mirror (zip)') }}</a></li>
+                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-{{stable.tag}}.tar.gz">{{ _('US Mirror') }}</a></li>
+                          <li><a href="https://data.musicbrainz.org/pub/musicbrainz/picard/picard-{{stable.tag}}.tar.gz">{{ _('EU Mirror') }}</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>{{stable.tag}} <em>{{ _('zip') }}</em></td>
+                    <td>{{stable.source_zip_hash}}</td>
+                    <td>{{stable.source_zip_size}} MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-{{stable.tag}}.zip">{{ _('US Mirror') }}</a></li>
+                          <li><a href="https://data.musicbrainz.org/pub/musicbrainz/picard/picard-{{stable.tag}}.zip">{{ _('EU Mirror') }}</a></li>
                         </ul>
                       </div>
                     </td>
                   </tr>
                   {% if show_beta %}
                   <tr>
-                    <td>{{beta.tag}} <em>{{ _('pre-release') }}</em></td>
-                    <td>{{beta.linux_hash}}</td>
-                    <td>{{beta.linux_size}} MB</td>
+                    <td>{{beta.tag}} <em>{{ _('pre-release, tar') }}</em></td>
+                    <td>{{beta.source_tar_hash}}</td>
+                    <td>{{beta.source_tar_size}} MB</td>
                     <td>
                       <div class="btn-group">
                         <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
@@ -411,18 +426,25 @@
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a
-                              href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-{{beta.tag}}.tar.gz">{{ _('US Mirror (tar)') }}</a>
-                          </li>
-                          <li><a
-                              href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-{{beta.tag}}.zip">{{ _('US Mirror (zip)') }}</a>
-                          </li>
-                          <li><a
-                              href="https://data.musicbrainz.org/pub/musicbrainz/picard/picard-{{beta.tag}}.tar.gz">{{ _('EU Mirror (tar)') }}</a>
-                          </li>
-                          <li><a
-                              href="https://data.musicbrainz.org/pub/musicbrainz/picard/picard-{{beta.tag}}.zip">{{ _('EU Mirror (zip)') }}</a>
-                          </li>
+                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-{{beta.tag}}.tar.gz">{{ _('US Mirror') }}</a></li>
+                          <li><a href="https://data.musicbrainz.org/pub/musicbrainz/picard/picard-{{beta.tag}}.tar.gz">{{ _('EU Mirror') }}</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>{{beta.tag}} <em>{{ _('pre-release, zip') }}</em></td>
+                    <td>{{beta.source_zip_hash}}</td>
+                    <td>{{beta.source_zip_size}} MB</td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-{{beta.tag}}.zip">{{ _('US Mirror') }}</a></li>
+                          <li><a href="https://data.musicbrainz.org/pub/musicbrainz/picard/picard-{{beta.tag}}.zip">{{ _('EU Mirror') }}</a></li>
                         </ul>
                       </div>
                     </td>
