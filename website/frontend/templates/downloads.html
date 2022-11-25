@@ -20,16 +20,16 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>{{ _("Picard Version") }}</th>
-                    <th class="hidden-xs">{{ _("MD5 Hash") }}</th>
-                    <th>{{ _("Size") }}</th>
-                    <th>{{ _("Link") }}</th>
+                    <th class="col-description">{{ _("Picard Version") }}</th>
+                    <th class="hidden-xs hidden-sm col-hash">{{ _("MD5 Hash") }}</th>
+                    <th class="col-size">{{ _("Size") }}</th>
+                    <th class="col-link">{{ _("Link") }}</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('64-bit installer') }}</em></td>
-                    <td class="hidden-xs">{{stable.win_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{stable.win_hash}}</td>
                     <td>{{stable.win_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -46,7 +46,7 @@
                   </tr>
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('64-bit portable') }}</em></td>
-                    <td class="hidden-xs">{{stable.win_portable_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{stable.win_portable_hash}}</td>
                     <td>{{stable.win_portable_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -66,10 +66,10 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="hidden-xs" colspan="3">
+                    <td class="hidden-xs hidden-sm" colspan="3">
                       {{stable.tag}} <em>{{ _('Windows 10&thinsp;/&thinsp;11 app') }}</em>
                     </td>
-                    <td class="visible-xs" colspan="2">
+                    <td class="visible-xs visible-sm" colspan="2">
                       {{stable.tag}} <em>{{ _('Windows 10&thinsp;/&thinsp;11 app') }}</em>
                     </td>
                     <td>
@@ -82,7 +82,7 @@
                   {% if show_beta %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, 64-bit installer') }}</em></td>
-                    <td class="hidden-xs">{{beta.win_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{beta.win_hash}}</td>
                     <td>{{beta.win_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -103,7 +103,7 @@
                   </tr>
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, 64-bit portable') }}</em></td>
-                    <td class="hidden-xs">{{beta.win_portable_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{beta.win_portable_hash}}</td>
                     <td>{{beta.win_portable_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -138,16 +138,16 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>{{ _("Picard Version") }}</th>
-                    <th class="hidden-xs">{{ _("MD5 Hash") }}</th>
-                    <th>{{ _("Size") }}</th>
-                    <th>{{ _("Link") }}</th>
+                    <th class="col-description">{{ _("Picard Version") }}</th>
+                    <th class="hidden-xs hidden-sm col-hash">{{ _("MD5 Hash") }}</th>
+                    <th class="col-size">{{ _("Size") }}</th>
+                    <th class="col-link">{{ _("Link") }}</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('macOS 10.14+ (x86_64)') }}</em></td>
-                    <td class="hidden-xs">{{stable.mac_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{stable.mac_hash}}</td>
                     <td>{{stable.mac_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -164,7 +164,7 @@
                   </tr>
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('macOS 10.12+ (x86_64)') }}</em></td>
-                    <td class="hidden-xs">{{stable.mac_10_12_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{stable.mac_10_12_hash}}</td>
                     <td>{{stable.mac_10_12_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -181,7 +181,7 @@
                   </tr>
                   <tr>
                     <td>2.1.3 <em>{{ _('macOS 10.10+ (x86_64)') }}</em></td>
-                    <td class="hidden-xs">4d781ca512c48fe4c3c00a432e80ed96</td>
+                    <td class="hidden-xs hidden-sm">4d781ca512c48fe4c3c00a432e80ed96</td>
                     <td>22 MB</td>
                     <td>
                       <div class="btn-group">
@@ -199,7 +199,7 @@
                   {% if show_beta %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, macOS 10.14+ (x86_64)') }}</em></td>
-                    <td class="hidden-xs">{{beta.mac_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{beta.mac_hash}}</td>
                     <td>{{beta.mac_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -220,7 +220,7 @@
                   </tr>
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, macOS 10.12+ (x86_64)') }}</em></td>
-                    <td class="hidden-xs">{{beta.mac_10_12_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{beta.mac_10_12_hash}}</td>
                     <td>{{beta.mac_10_12_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -255,7 +255,7 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>{{ _("Distribution") }}</th>
+                    <th class="col-description">{{ _("Distribution") }}</th>
                     <th>{{ _("Link") }}</th>
                   </tr>
                 </thead>
@@ -335,7 +335,7 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>{{ _("Operating system") }}</th>
+                    <th class="col-description">{{ _("Operating system") }}</th>
                     <th>{{ _("Link") }}</th>
                   </tr>
                 </thead>
@@ -376,16 +376,16 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>{{ _("Picard Version") }}</th>
-                    <th class="hidden-xs">{{ _("MD5 Hash") }}</th>
-                    <th>{{ _("Size") }}</th>
-                    <th>{{ _("Link") }}</th>
+                    <th class="col-description">{{ _("Picard Version") }}</th>
+                    <th class="hidden-xs hidden-sm col-hash">{{ _("MD5 Hash") }}</th>
+                    <th class="col-size">{{ _("Size") }}</th>
+                    <th class="col-link">{{ _("Link") }}</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('tar') }}</em></td>
-                    <td class="hidden-xs">{{stable.source_tar_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{stable.source_tar_hash}}</td>
                     <td>{{stable.source_tar_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -402,7 +402,7 @@
                   </tr>
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('zip') }}</em></td>
-                    <td class="hidden-xs">{{stable.source_zip_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{stable.source_zip_hash}}</td>
                     <td>{{stable.source_zip_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -420,7 +420,7 @@
                   {% if show_beta %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, tar') }}</em></td>
-                    <td class="hidden-xs">{{beta.source_tar_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{beta.source_tar_hash}}</td>
                     <td>{{beta.source_tar_size}} MB</td>
                     <td>
                       <div class="btn-group">
@@ -437,7 +437,7 @@
                   </tr>
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, zip') }}</em></td>
-                    <td class="hidden-xs">{{beta.source_zip_hash}}</td>
+                    <td class="hidden-xs hidden-sm">{{beta.source_zip_hash}}</td>
                     <td>{{beta.source_zip_size}} MB</td>
                     <td>
                       <div class="btn-group">

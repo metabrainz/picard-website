@@ -36,12 +36,32 @@
          }
       }
 
-      table {
+      .download-table table {
          background: none repeat scroll 0% 0% #FFF;
          border: 1px solid #DDD;
 
+         thead {
+            .col-description {
+               width: 280px;
+            }
+
+            .col-size {
+               width: 80px;
+            }
+
+            .col-link {
+               width: 200px;
+            }
+         }
+
          td {
             vertical-align: middle;
+
+            em {
+               color: grey;
+               font-style: normal;
+               margin-left: .8em;
+            }
          }
 
          .btn {
@@ -49,12 +69,6 @@
             min-width: 140px;
             text-align: left;
          }
-      }
-
-      .download-table td em {
-         color: grey;
-         font-style: normal;
-         margin-left: .8em;
       }
    }
 }
