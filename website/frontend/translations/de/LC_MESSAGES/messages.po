@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-11-25 11:03+0100\n"
-"PO-Revision-Date: 2022-11-25 11:04+0100\n"
+"PO-Revision-Date: 2022-11-25 11:11+0100\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -275,7 +275,7 @@ msgstr "Vorabversion, macOS 10.12+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:251
 msgid "Picard for <strong>Linux</strong>"
-msgstr "Picard for <strong>Linux</strong>"
+msgstr "Picard für <strong>Linux</strong>"
 
 #: website/frontend/templates/downloads.html:258
 msgid "Distribution"
