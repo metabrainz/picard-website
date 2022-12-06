@@ -1,5 +1,5 @@
 from flask import g, request
-from flask_babel import Babel, Locale
+from flask_babel import Babel, Locale, get_locale
 
 
 def init_app(app):
@@ -39,3 +39,9 @@ def init_app(app):
                 return language_cookie
 
         return request.accept_languages.best_match(supported_languages)
+
+    @app.context_processor
+    def inject_language_var():
+        return {
+            'active_language': get_locale(),
+        }
