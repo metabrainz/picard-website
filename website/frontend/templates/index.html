@@ -45,23 +45,6 @@
 
           <div class="col-md-4">
             <div class="col-md-10 col-md-offset-1">
-              <i class="features-img fa fa-music fa-5x"></i>
-              <h2>{{ _("AcoustID") }}</h2>
-              {% autoescape false %}
-              {% set links={
-                'url': {
-                  'href': 'http://acoustid.org/',
-                  'class': 'external_link'
-                  }
-                }
-              %}
-              <p>{{ _("Picard uses {url|AcoustID} audio fingerprints, allowing files to be identified by the actual music, even if they have no metadata.")|expand(links) }}</p>
-              {% endautoescape %}
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="col-md-10 col-md-offset-1">
               <i class="features-img fa fa-database fa-5x"></i>
               <h2>{{ _("Comprehensive Database") }}</h2>
               {% autoescape false %}
@@ -77,6 +60,25 @@
             </div>
           </div>
 
+          <div class="col-md-4">
+            <div class="col-md-10 col-md-offset-1">
+              <i class="features-img fa fa-music fa-5x"></i>
+              <h2>{{ _("AcoustID") }}</h2>
+              {% autoescape false %}
+              {% set links={
+              'url': {
+              'href': 'http://acoustid.org/',
+              'class': 'external_link'
+              }
+              }
+              %}
+              <p>{{ _("Picard uses {url|AcoustID} audio fingerprints, allowing files to be identified by the actual music, even if they have no metadata.")|expand(links) }}</p>
+              {% endautoescape %}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
           <div class="col-md-4">
             <div class="col-md-10 col-md-offset-1">
               <i class="fa fa-circle-o fa-5x"></i>
