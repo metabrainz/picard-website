@@ -17,4 +17,4 @@ for version in versions:
         generate_plugins(build_dir, version)
         print("Plugin files for version %s have been generated successfully." % version)
     except Exception as e:
-        print("Plugin generation for version %s has FAILED.\nError Occured: %s" % (version, e))
+        print("Plugin generation for version %s has FAILED.\nError occurred: %s" % (version, e))
