@@ -65,11 +65,11 @@ PICARD_VERSIONS = {
         'source_zip_hash': '6486ac88543d5ab98f452b0db314eccb',
     },
     'dev': {
-        'tag': '2.8.0rc2',
-        'version': (2, 8, 0, 'rc', 2),
+        'tag': '2.9.0a1',
+        'version': (2, 9, 0, 'alpha', 1),
         'urls': {
             'download':
-            'https://github.com/metabrainz/picard/releases/tag/release-2.8.0rc2',
+            'https://github.com/metabrainz/picard/releases/tag/release-2.9.0a1',
         }
     },
 }
