@@ -69,7 +69,7 @@ PICARD_VERSIONS = {
         'version': (2, 9, 0, 'alpha', 1),
         'urls': {
             'download':
-            'https://github.com/metabrainz/picard/releases/tag/release-2.9.0a1',
+            'https://blog.metabrainz.org/2023/01/03/picard-2-9-alpha-1-available-for-testing/',
         }
     },
 }
