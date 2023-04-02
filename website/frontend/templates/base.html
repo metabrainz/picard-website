@@ -107,36 +107,36 @@
             <h3>{{ _("Useful Links") }}</h3>
             <ul class="list-unstyled">
               <li>
-                <i class="fa fa-angle-double-right"></i> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://metabrainz.org/donate" target="_blank" rel="noopener noreferrer">{{ _("Donate") }}</a>
               </li>
               <li>
-                <i class="fa fa-angle-double-right"></i> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://picard-docs.musicbrainz.org/" target="_blank" rel="noopener noreferrer">{{ _("Documentation") }}</a>
               </li>
               <li>
-                <i class="fa fa-angle-double-right"></i> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://community.metabrainz.org/c/picard" target="_blank" rel="noopener noreferrer">{{ _("Community") }}</a>
               </li>
               <li>
-                <i class="fa fa-angle-double-right"></i> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://blog.metabrainz.org/" target="_blank" rel="noopener noreferrer">{{ _("Blog") }}</a>
               </li>
               <li>
-                <i class="fa fa-angle-double-right"></i> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://www.redbubble.com/people/metabrainz/shop" target="_blank" rel="noopener noreferrer">{{ _("Shop") }}</a>
               </li>
               <li>
-                <i class="fa fa-angle-double-right"></i> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://metabrainz.org/" target="_blank" rel="noopener noreferrer">{{ _("MetaBrainz") }}</a>
               </li>
               <li class="visible-xs">
-                <i class="fa fa-angle-double-right"></i> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://github.com/metabrainz/picard" target="_blank"
                   rel="noopener noreferrer">{{ _("Contribute Here") }}</a>
               </li>
               <li class="visible-xs">
-                <i class="fa fa-angle-double-right"></i> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://tickets.metabrainz.org/browse/PICARD" target="_blank" rel="noopener noreferrer">{{ _("Bug Tracker") }}</a>
               </li>
             </ul>
@@ -145,41 +145,36 @@
             <h3>{{ _("Fellow Projects") }}</h3>
             <ul class="list-unstyled">
               <li>
-                <i class="fa fa-angle-double-right"></i> <img
-                  src="{{ url_for('static', filename='img/meb-icons/musicbrainz-icon.svg') }}" alt="MusicBrainz" width="18" height="18"> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://musicbrainz.org/" target="_blank" rel="noopener noreferrer">MusicBrainz</a>
               </li>
               <li>
-                <i class="fa fa-angle-double-right"></i> <img
-                  src="{{ url_for('static', filename='img/meb-icons/critiquebrainz-icon.svg') }}" alt="CritiqueBrainz" width="18" height="18"> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://critiquebrainz.org/" target="_blank" rel="noopener noreferrer">CritiqueBrainz</a>
               </li>
               <li class="item-list-a">
-                <i class="fa fa-angle-double-right"></i> <img
-                  src="{{ url_for('static', filename='img/meb-icons/listenbrainz-icon.svg') }}" alt="ListenBrainz" width="18" height="18"> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://listenbrainz.org/" target="_blank" rel="noopener noreferrer">ListenBrainz</a>
               </li>
               <li>
-                <i class="fa fa-angle-double-right"></i> <img
-                  src="{{ url_for('static', filename='img/meb-icons/coverartarchive-icon.svg') }}" alt="CoverArtArchive" width="18" height="18"> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://coverartarchive.org" target="_blank" rel="noopener noreferrer">Cover Art Archive</a>
               </li>
               <li>
-                <i class="fa fa-angle-double-right"></i> <img
-                  src="{{ url_for('static', filename='img/meb-icons/bookbrainz-icon.svg') }}" alt="BookBrainz" width="18" height="18"> <a
+                <i class="fa fa-angle-right"></i> <a
                   href="https://bookbrainz.org/" target="_blank" rel="noopener noreferrer">BookBrainz</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="row center-p">
-          <div class="col-md-3 d-none d-md-block hidden-xs">
-            <p class="section-line">
+          <div class="col-md-3 d-none d-md-block hidden-xs section-line">
+            <p>
               {{ _("OSS Geek? {url|Contribute Here}")|expand({'url': 'https://github.com/metabrainz/picard'})|safe }}
             </p>
           </div>
-          <div class="col-md-6">
-            <p class="section-line">
+          <div class="col-md-6 section-line">
+            <p>
               {% set expand={
                 'metabrainz': '<img src="' + url_for('static', filename='img/meb-icons/metabrainz-icon-detail.svg') + '" alt="MetaBrainz" width="30" height="30"> <span> MetaBrainz Foundation </span>'
               }
@@ -187,8 +182,8 @@
               {{ _("Brought to you by {metabrainz}")|expand(expand)|safe }}
             </p>
           </div>
-          <div class="col-md-3 d-none d-md-block hidden-xs">
-            <p class="section-line">
+          <div class="col-md-3 d-none d-md-block hidden-xs section-line">
+            <p>
               {{ _("Found an Issue? {url|Report Here}")|expand({'url': 'https://tickets.metabrainz.org/browse/PICARD'})|safe }}
             </p>
           </div>
