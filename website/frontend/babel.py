@@ -22,7 +22,6 @@ def init_app(app):
         g.after_request_callbacks.append(f)
         return f
 
-    @babel.localeselector
     def get_locale():
         supported_languages = app.config['SUPPORTED_LANGUAGES']
         language_arg = request.args.get('l')
@@ -45,3 +44,5 @@ def init_app(app):
         return {
             'active_language': get_locale(),
         }
+
+    babel.init_app(app, locale_selector=get_locale)
