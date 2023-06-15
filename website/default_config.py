@@ -45,7 +45,7 @@ PICARD_VERSIONS = {
         'source_zip_hash': 'dc2e5c45859950213b7e574b9050a0f6',
     },
     'beta': {
-        'tag': '2.9.0b1',
+        'tag': '2.9.0b2',
         'version': (2, 9, 0, 'beta', 2),
         'urls': {
             'download': 'https://picard.musicbrainz.org/downloads/',
