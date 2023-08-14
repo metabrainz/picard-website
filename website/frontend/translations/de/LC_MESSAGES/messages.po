@@ -14,7 +14,7 @@ msgstr ""
 "website/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.17\n"
@@ -22,8 +22,8 @@ msgstr ""
 
 #: website/frontend/templates/base.html:7
 msgid ""
-"Official website for MusicBrainz Picard, a cross-platform music tagger written "
-"in Python."
+"Official website for MusicBrainz Picard, a cross-platform music tagger "
+"written in Python."
 msgstr ""
 "Offizielle Website für MusicBrainz Picard, ein plattformübergreifender Musik-"
 "Tagger, der in Python geschrieben wurde."
@@ -342,9 +342,9 @@ msgid ""
 "{urldev|Development} on how you can start contributing to the Picard source "
 "code."
 msgstr ""
-"Du kannst den aktuellen Picard-Quellcode auch auf {urlgithub|Github} einsehen. "
-"Unter {urldev|Entwicklung} erfährst du, wie du zum Picard-Quellcode beitragen "
-"kannst."
+"Du kannst den aktuellen Picard-Quellcode auch auf {urlgithub|Github} "
+"einsehen. Unter {urldev|Entwicklung} erfährst du, wie du zum Picard-"
+"Quellcode beitragen kannst."
 
 #: website/frontend/templates/downloads.html:472
 msgid ""
@@ -379,11 +379,11 @@ msgstr "Viele Formate"
 
 #: website/frontend/templates/index.html:42
 msgid ""
-"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, WMA, "
-"WAV, and more."
+"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
+"WMA, WAV, and more."
 msgstr ""
-"Picard unterstützt alle populären Musikformate, einschließlich MP3, FLAC, OGG, "
-"M4A, WMA, WAV und mehr."
+"Picard unterstützt alle populären Musikformate, einschließlich MP3, FLAC, "
+"OGG, M4A, WMA, WAV und mehr."
 
 #: website/frontend/templates/index.html:49
 msgid "AcoustID"
@@ -391,8 +391,8 @@ msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:58
 msgid ""
-"Picard uses {url|AcoustID} audio fingerprints, allowing files to be identified "
-"by the actual music, even if they have no metadata."
+"Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
+"identified by the actual music, even if they have no metadata."
 msgstr ""
 "Picard verwendet {url|AcoustID} Audio-Fingerabdrücke, um Dateien anhand der "
 "Musik zu identifizieren, ganz ohne vorhandene Metadaten."
@@ -406,9 +406,9 @@ msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
 msgstr ""
-"Picard verwendet die offene und von der Community betriebene {url|MusicBrainz}-"
-"Datenbank, um akkurate Informationen zu Millionen von Musik-Veröffentlichungen "
-"zu bieten."
+"Picard verwendet die offene und von der Community betriebene {url|"
+"MusicBrainz}-Datenbank, um akkurate Informationen zu Millionen von Musik-"
+"Veröffentlichungen zu bieten."
 
 #: website/frontend/templates/index.html:83
 msgid "CD Lookups"
@@ -438,7 +438,8 @@ msgstr "Cover-Art"
 
 #: website/frontend/templates/index.html:108
 msgid "Picard can find and download the correct cover art for your albums."
-msgstr "Picard kann das richtige Cover für deine Alben finden und herunterladen."
+msgstr ""
+"Picard kann das richtige Cover für deine Alben finden und herunterladen."
 
 #: website/frontend/templates/index.html:117
 msgid "Scripting"
@@ -446,8 +447,8 @@ msgstr "Scripting"
 
 #: website/frontend/templates/index.html:118
 msgid ""
-"A flexible but easy to learn scripting language allows you to exactly specify "
-"how your music files will be named and how the tags will look like."
+"A flexible but easy to learn scripting language allows you to exactly "
+"specify how your music files will be named and how the tags will look like."
 msgstr ""
 "Eine flexible aber einfach zu erlernende Scriptsprache erlaubt dir genau "
 "festzulegen, wie deine Musikdateien benannt und wie die Tags aussehen werden."
@@ -462,8 +463,9 @@ msgid ""
 "available plugins} or write\n"
 "                your own."
 msgstr ""
-"Plugin-Unterstützung: Wenn du ein bestimmtes Feature benötigst, kannst du aus "
-"einer Vielzahl {url|verfügbarer Plugins} wählen oder dein eigenes schreiben."
+"Plugin-Unterstützung: Wenn du ein bestimmtes Feature benötigst, kannst du "
+"aus einer Vielzahl {url|verfügbarer Plugins} wählen oder dein eigenes "
+"schreiben."
 
 #: website/frontend/templates/plugins.html:3
 msgid "Available Plugins"
@@ -476,14 +478,15 @@ msgstr "Dies ist eine Liste an Plugins, die derzeit für Picard verfügbar sind.
 
 #: website/frontend/templates/plugins.html:10
 msgid ""
-"The current production release of Picard 2.x uses API v2. The older Picard 1.x "
-"releases use API v1."
+"The current production release of Picard 2.x uses API v2. The older Picard 1."
+"x releases use API v1."
 msgstr ""
 "Die aktuelle Produktionsversion von Picard 2.x verwendet API v2. Die älteren "
 "Picard 1.x-Versionen verwenden API v1."
 
 #: website/frontend/templates/plugins.html:11
-msgid "The table is generated from the data of our plugin {urlrepo|repository}."
+msgid ""
+"The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
 "Die Tabelle wird aus den Daten unseres {urlrepo|Plugin-Repositoriums} "
 "generiert."
@@ -526,8 +529,8 @@ msgstr "404 Seite nicht gefunden"
 
 #: website/frontend/templates/errors/404.html:6
 msgid ""
-"You don't have to worry, someone is working on fixing things as you're reading "
-"this."
+"You don't have to worry, someone is working on fixing things as you're "
+"reading this."
 msgstr ""
 "Keine Sorge, während du das liest, arbeitet jemand an der Behebung der "
 "Probleme."
