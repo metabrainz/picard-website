@@ -10,7 +10,7 @@ version_header = '<h3 id="release-{0}">Version <strong>{0}</strong> <span>{1}</s
 
 
 class ChangelogRenderer(mistune.HTMLRenderer):
-    def heading(self, text, level):
+    def heading(self, text, level, **attrs):
         if level == 1:
             match = re_version.match(text)
             if match:
