@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-25 14:05+0100\n"
+"POT-Creation-Date: 2023-08-27 10:07+0200\n"
 "PO-Revision-Date: 2023-08-27 07:54+0000\n"
 "Last-Translator: \"salo.rock\" <salo.rock+musicbrainz@gmail.com>\n"
 "Language-Team: Italian <https://translations.metabrainz.org/projects/picard/"
 "website/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.18.2\n"
@@ -29,46 +29,54 @@ msgstr ""
 "scritto in Python."
 
 #: website/frontend/templates/base.html:11
-#: website/frontend/templates/base.html:23
+#: website/frontend/templates/base.html:47
 #: website/frontend/templates/index.html:8
 msgid "MusicBrainz Picard"
 msgstr "MusicBrainz Picard"
 
-#: website/frontend/templates/base.html:18
+#: website/frontend/templates/base.html:21
+#: website/frontend/templates/index.html:11
+msgid ""
+"Picard is a cross-platform music tagger powered by the MusicBrainz database."
+msgstr ""
+"Picard è un tagger musicale multipiattaforma alimentato dal database di "
+"MusicBrainz."
+
+#: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
 msgstr "Attiva/disattiva navigazione"
 
-#: website/frontend/templates/base.html:28
+#: website/frontend/templates/base.html:52
 #: website/frontend/templates/downloads.html:3
 msgid "Downloads"
 msgstr "Download"
 
-#: website/frontend/templates/base.html:29
+#: website/frontend/templates/base.html:53
 msgid "Plugins"
 msgstr "Plugin"
 
-#: website/frontend/templates/base.html:30
+#: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
 msgid "Quick Start"
 msgstr "Guida rapida"
 
-#: website/frontend/templates/base.html:31
-#: website/frontend/templates/base.html:91
+#: website/frontend/templates/base.html:55
+#: website/frontend/templates/base.html:115
 #: website/frontend/templates/docs/base.html:3
 msgid "Documentation"
 msgstr "Documentazione"
 
-#: website/frontend/templates/base.html:37
+#: website/frontend/templates/base.html:61
 msgid "Language"
 msgstr "Lingua"
 
-#: website/frontend/templates/base.html:73
+#: website/frontend/templates/base.html:97
 msgid ""
-"Picard helps you organize your music collection by renaming your music "
-"files and sorting them into a folder structure exactly the way you want "
-"it. A variety of plugins are available and you can even write your own. "
-"Picard supports a wide range of audio formats and can also lookup an "
-"entire CD for you."
+"Picard helps you organize your music collection by renaming your music files "
+"and sorting them into a folder structure exactly the way you want it. A "
+"variety of plugins are available and you can even write your own. Picard "
+"supports a wide range of audio formats and can also lookup an entire CD for "
+"you."
 msgstr ""
 "Picard ti aiuta a organizzare la tua collezione di musica rinominando i file "
 "musicali e ordinandoli in una struttura a cartelle precisamente nel modo che "
@@ -76,55 +84,55 @@ msgstr ""
 "tuoi. Picard supporta un'ampia gamma di formati audio ed è anche in grado di "
 "cercare un intero CD per te."
 
-#: website/frontend/templates/base.html:77
+#: website/frontend/templates/base.html:101
 msgid "IRC: {url|#metabrainz}"
 msgstr "IRC: {url|#metabrainz}"
 
-#: website/frontend/templates/base.html:83
+#: website/frontend/templates/base.html:107
 msgid "Useful Links"
 msgstr "Collegamenti utili"
 
-#: website/frontend/templates/base.html:87
+#: website/frontend/templates/base.html:111
 msgid "Donate"
 msgstr "Fai una donazione"
 
-#: website/frontend/templates/base.html:95
+#: website/frontend/templates/base.html:119
 msgid "Community"
 msgstr "Comunità"
 
-#: website/frontend/templates/base.html:99
+#: website/frontend/templates/base.html:123
 msgid "Blog"
 msgstr "Blog"
 
-#: website/frontend/templates/base.html:103
+#: website/frontend/templates/base.html:127
 msgid "Shop"
 msgstr "Negozio"
 
-#: website/frontend/templates/base.html:107
+#: website/frontend/templates/base.html:131
 msgid "MetaBrainz"
 msgstr "MetaBrainz"
 
-#: website/frontend/templates/base.html:112
+#: website/frontend/templates/base.html:136
 msgid "Contribute Here"
 msgstr "Contribuisci qui"
 
-#: website/frontend/templates/base.html:116
+#: website/frontend/templates/base.html:140
 msgid "Bug Tracker"
 msgstr "Bug tracker"
 
-#: website/frontend/templates/base.html:121
+#: website/frontend/templates/base.html:145
 msgid "Fellow Projects"
 msgstr "Progetti associati"
 
-#: website/frontend/templates/base.html:154
+#: website/frontend/templates/base.html:173
 msgid "OSS Geek? {url|Contribute Here}"
 msgstr "Appassionato di open source? {url|Contribuisci qui}"
 
-#: website/frontend/templates/base.html:163
+#: website/frontend/templates/base.html:182
 msgid "Brought to you by {metabrainz}"
 msgstr "Offerto dalla {metabrainz}"
 
-#: website/frontend/templates/base.html:168
+#: website/frontend/templates/base.html:187
 msgid "Found an Issue? {url|Report Here}"
 msgstr "Hai notato un problema? {url|Segnalalo qui}"
 
@@ -302,8 +310,8 @@ msgstr "leggi la domanda frequente"
 
 #: website/frontend/templates/downloads.html:324
 msgid ""
-"In addition Picard is also available in the official repositories of most"
-" Linux distributions."
+"In addition Picard is also available in the official repositories of most "
+"Linux distributions."
 msgstr ""
 "Inoltre, Picard è disponibile anche nei repository ufficiali della maggior "
 "parte delle distribuzioni Linux."
@@ -338,13 +346,13 @@ msgstr "versione di anteprima, zip"
 
 #: website/frontend/templates/downloads.html:465
 msgid ""
-"You can also view the latest Picard source code on {urlgithub|Github}. "
-"See {urldev|Development} on how you can start contributing to the Picard "
-"source code."
+"You can also view the latest Picard source code on {urlgithub|Github}. See "
+"{urldev|Development} on how you can start contributing to the Picard source "
+"code."
 msgstr ""
-"Puoi anche consultare il codice sorgente più recente di Picard su "
-"{urlgithub|GitHub}. Vai alla pagina {urldev|Sviluppo} per informazioni su "
-"come iniziare a contribuire al codice sorgente di Picard."
+"Puoi anche consultare il codice sorgente più recente di Picard su {urlgithub|"
+"GitHub}. Vai alla pagina {urldev|Sviluppo} per informazioni su come iniziare "
+"a contribuire al codice sorgente di Picard."
 
 #: website/frontend/templates/downloads.html:472
 msgid ""
@@ -353,14 +361,6 @@ msgid ""
 msgstr ""
 "Questa pagina elenca i download più recenti. Se stai cercando versioni "
 "precedenti di Picard, {url|dirigiti al nostro server FTP}."
-
-#: website/frontend/templates/index.html:11
-msgid ""
-"Picard is a cross-platform music tagger powered by the MusicBrainz "
-"database."
-msgstr ""
-"Picard è un tagger musicale multipiattaforma alimentato dal database di "
-"MusicBrainz."
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
@@ -380,17 +380,30 @@ msgstr "Più formati"
 
 #: website/frontend/templates/index.html:42
 msgid ""
-"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
-" WMA, WAV, and more."
+"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
+"WMA, WAV, and more."
 msgstr ""
 "Picard supporta tutti i formati di musica più popolari, tra cui MP3, FLAC, "
 "OGG, M4A, WMA, WAV e altri."
 
 #: website/frontend/templates/index.html:49
+msgid "Comprehensive Database"
+msgstr "Database esauriente"
+
+#: website/frontend/templates/index.html:58
+msgid ""
+"Picard uses the open and community-maintained {url|MusicBrainz} database to "
+"provide accurate information about millions of music releases."
+msgstr ""
+"Picard usa il database aperto e mantenuto dalla comunità di {url|"
+"MusicBrainz} per fornire informazioni accurate su milioni di pubblicazioni "
+"musicali."
+
+#: website/frontend/templates/index.html:66
 msgid "AcoustID"
 msgstr "AcoustID"
 
-#: website/frontend/templates/index.html:58
+#: website/frontend/templates/index.html:75
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
@@ -398,31 +411,19 @@ msgstr ""
 "Picard usa le impronte digitali audio {url|AcoustID}, che permettono di "
 "identificare i file a partire dalla musica, anche in assenza di metadati."
 
-#: website/frontend/templates/index.html:66
-msgid "Comprehensive Database"
-msgstr "Database esauriente"
-
-#: website/frontend/templates/index.html:75
-msgid ""
-"Picard uses the open and community-maintained {url|MusicBrainz} database "
-"to provide accurate information about millions of music releases."
-msgstr ""
-"Picard usa il database aperto e mantenuto dalla comunità di {url|MusicBrainz}"
-" per fornire informazioni accurate su milioni di pubblicazioni musicali."
-
-#: website/frontend/templates/index.html:83
+#: website/frontend/templates/index.html:85
 msgid "CD Lookups"
 msgstr "Ricerche CD"
 
-#: website/frontend/templates/index.html:84
+#: website/frontend/templates/index.html:86
 msgid "Picard can lookup entire music CDs with a click."
 msgstr "Picard può cercare interi CD musicali con un clic."
 
-#: website/frontend/templates/index.html:91
+#: website/frontend/templates/index.html:93
 msgid "Open Source"
 msgstr "Open source"
 
-#: website/frontend/templates/index.html:98
+#: website/frontend/templates/index.html:100
 msgid ""
 "Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
 "{urlgithub|GitHub} where it’s\n"
@@ -433,36 +434,35 @@ msgstr ""
 "                dove è sviluppato attivamente da degli sviluppatori "
 "fantastici."
 
-#: website/frontend/templates/index.html:107
+#: website/frontend/templates/index.html:109
 msgid "Cover Art"
 msgstr "Copertine"
 
-#: website/frontend/templates/index.html:108
+#: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
 msgstr "Picard può trovare e scaricare le copertine corrette per i tuoi album."
 
-#: website/frontend/templates/index.html:117
+#: website/frontend/templates/index.html:119
 msgid "Scripting"
 msgstr "Scripting"
 
-#: website/frontend/templates/index.html:118
+#: website/frontend/templates/index.html:120
 msgid ""
 "A flexible but easy to learn scripting language allows you to exactly "
-"specify how your music files will be named and how the tags will look "
-"like."
+"specify how your music files will be named and how the tags will look like."
 msgstr ""
 "Un linguaggio di script flessibile ma facile da imparare ti permette di "
 "specificare con esattezza come rinominare i tuoi file musicali e come far "
 "apparire i tuoi tag."
 
-#: website/frontend/templates/index.html:125
+#: website/frontend/templates/index.html:127
 msgid "Plugin Support"
 msgstr "Supporto plugin"
 
-#: website/frontend/templates/index.html:127
+#: website/frontend/templates/index.html:129
 msgid ""
-"If you need a particular feature, you can choose from a selection of "
-"{url|available plugins} or write\n"
+"If you need a particular feature, you can choose from a selection of {url|"
+"available plugins} or write\n"
 "                your own."
 msgstr ""
 "Se hai bisogno di una funzionalità specifica, puoi scegliere da un elenco di "
@@ -475,20 +475,24 @@ msgstr "Plugin disponibili"
 
 #: website/frontend/templates/plugins.html:9
 msgid ""
-"This is a list of plugins that are currently available for use with "
-"Picard."
+"This is a list of plugins that are currently available for use with Picard."
 msgstr "Questo è un elenco dei plugin attualmente disponibili per Picard."
 
 #: website/frontend/templates/plugins.html:10
+#, fuzzy
+#| msgid ""
+#| "The current production release of Picard 2.x uses API v2. The older "
+#| "Picard 1.x releases use API v1."
 msgid ""
-"The current production release of Picard 2.x uses API v2. The older "
-"Picard 1.x releases use API v1."
+"The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
+"use API v1."
 msgstr ""
 "La versione attuale 2.x di Picard utilizza l'API v2. Le versioni precedenti "
 "1.x di Picard utilizzano l'API v1."
 
 #: website/frontend/templates/plugins.html:11
-msgid "The table is generated from the data of our plugin {urlrepo|repository}."
+msgid ""
+"The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
 "La tabella è generata a partire dai dati del nostro {urlrepo|repository} di "
 "plugin."
