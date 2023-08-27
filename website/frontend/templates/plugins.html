@@ -7,7 +7,7 @@
         {% autoescape false %}
         <p>
             {{ _("This is a list of plugins that are currently available for use with Picard.") }}
-            {{ _("The current production release of Picard 2.x uses API v2. The older Picard 1.x releases use API v1.") }}
+            {{ _("The current release of Picard 2.x uses API v2. The older Picard 1.x releases use API v1.") }}
             {{ _("The table is generated from the data of our plugin {urlrepo|repository}.")|expand({"urlrepo": "https://github.com/musicbrainz/picard-plugins"}) }}
         </p>
         {% endautoescape %}
