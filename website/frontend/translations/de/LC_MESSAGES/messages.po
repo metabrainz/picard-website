@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-08-27 10:07+0200\n"
-"PO-Revision-Date: 2023-06-02 15:26+0000\n"
+"PO-Revision-Date: 2023-08-28 08:27+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://translations.metabrainz.org/projects/picard/"
 "website/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 4.18.2\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -478,16 +478,12 @@ msgid ""
 msgstr "Dies ist eine Liste an Plugins, die derzeit für Picard verfügbar sind."
 
 #: website/frontend/templates/plugins.html:10
-#, fuzzy
-#| msgid ""
-#| "The current production release of Picard 2.x uses API v2. The older "
-#| "Picard 1.x releases use API v1."
 msgid ""
 "The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
 "use API v1."
 msgstr ""
-"Die aktuelle Produktionsversion von Picard 2.x verwendet API v2. Die älteren "
-"Picard 1.x-Versionen verwenden API v1."
+"Die aktuelle Version von Picard 2.x verwendet API v2. Die älteren Picard 1.x-"
+"Versionen verwenden API v1."
 
 #: website/frontend/templates/plugins.html:11
 msgid ""
