@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # mfmeulenbelt <mfmeulenbelt@gmail.com>, 2023.
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-08-27 10:07+0200\n"
-"PO-Revision-Date: 2023-08-30 09:27+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-08-31 21:27+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Dutch <https://translations.metabrainz.org/projects/picard/"
 "website/nl/>\n"
 "Language: nl\n"
@@ -50,7 +51,7 @@ msgstr ""
 
 #: website/frontend/templates/base.html:53
 msgid "Plugins"
-msgstr ""
+msgstr "Plug-ins"
 
 #: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
@@ -61,11 +62,11 @@ msgstr ""
 #: website/frontend/templates/base.html:115
 #: website/frontend/templates/docs/base.html:3
 msgid "Documentation"
-msgstr ""
+msgstr "Documentatie"
 
 #: website/frontend/templates/base.html:61
 msgid "Language"
-msgstr ""
+msgstr "Taal"
 
 #: website/frontend/templates/base.html:97
 msgid ""
@@ -384,7 +385,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
-msgstr ""
+msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
 msgid ""
@@ -413,7 +414,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:109
 msgid "Cover Art"
-msgstr ""
+msgstr "Hoesafbeeldingen"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
@@ -421,7 +422,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
-msgstr ""
+msgstr "Scripting"
 
 #: website/frontend/templates/index.html:120
 msgid ""
@@ -463,11 +464,11 @@ msgstr ""
 
 #: website/frontend/templates/plugins.html:33
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 #: website/frontend/templates/plugins.html:34
 msgid "Version"
-msgstr ""
+msgstr "Versie"
 
 #: website/frontend/templates/plugins.html:35
 msgid "Description"
