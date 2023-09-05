@@ -145,17 +145,17 @@
       if (/^Win/.test(platform) || /Windows/.test(navigator.userAgent)) {
         downloadURL = "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/picard-setup-{{tag}}.exe";
         iconClass = "fa-windows";
-        infoText = "v{{tag}} for Windows (64-bit)";
+        infoText = {{_('v{version} for Windows (64-bit)')|expand({'version': tag})|tojson}};
 
       } else if (/Linux/.test(platform)) {
         downloadURL = "{{ url_for('frontend.show_downloads') }}#linux";
         iconClass = "fa-linux";
-        infoText = "v{{tag}} for Linux Distributions";
+        infoText = {{_('v{version} for Linux Distributions')|expand({'version': tag})|tojson}};
 
       } else if (platform === "MacIntel" || platform === "MacPPC") {
         downloadURL = "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{tag}}-macOS-10.14.dmg";
         iconClass = "fa-apple";
-        infoText = "v{{tag}} for macOS 10.14+";
+        infoText = {{_('v{version} for macOS 10.14+')|expand({'version': tag})|tojson}};
       }
 
       if (downloadURL) {
