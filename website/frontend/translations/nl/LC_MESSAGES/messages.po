@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-27 10:07+0200\n"
+"POT-Creation-Date: 2023-09-05 15:36+0200\n"
 "PO-Revision-Date: 2023-08-31 21:27+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Dutch <https://translations.metabrainz.org/projects/picard/"
 "website/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.18.2\n"
@@ -36,8 +36,7 @@ msgstr "MusicBrainz Picard"
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
 msgid ""
-"Picard is a cross-platform music tagger powered by the MusicBrainz "
-"database."
+"Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr ""
 
 #: website/frontend/templates/base.html:42
@@ -70,11 +69,11 @@ msgstr "Taal"
 
 #: website/frontend/templates/base.html:97
 msgid ""
-"Picard helps you organize your music collection by renaming your music "
-"files and sorting them into a folder structure exactly the way you want "
-"it. A variety of plugins are available and you can even write your own. "
-"Picard supports a wide range of audio formats and can also lookup an "
-"entire CD for you."
+"Picard helps you organize your music collection by renaming your music files "
+"and sorting them into a folder structure exactly the way you want it. A "
+"variety of plugins are available and you can even write your own. Picard "
+"supports a wide range of audio formats and can also lookup an entire CD for "
+"you."
 msgstr ""
 "Met Picard kan je je muziekverzameling beheren door je muziekbestanden naar "
 "je eigen voorkeuren te hernoemen en op te slaan in een mapstructuur. Er zijn "
@@ -306,8 +305,8 @@ msgstr ""
 
 #: website/frontend/templates/downloads.html:324
 msgid ""
-"In addition Picard is also available in the official repositories of most"
-" Linux distributions."
+"In addition Picard is also available in the official repositories of most "
+"Linux distributions."
 msgstr ""
 
 #: website/frontend/templates/downloads.html:331
@@ -340,9 +339,9 @@ msgstr ""
 
 #: website/frontend/templates/downloads.html:465
 msgid ""
-"You can also view the latest Picard source code on {urlgithub|Github}. "
-"See {urldev|Development} on how you can start contributing to the Picard "
-"source code."
+"You can also view the latest Picard source code on {urlgithub|Github}. See "
+"{urldev|Development} on how you can start contributing to the Picard source "
+"code."
 msgstr ""
 
 #: website/frontend/templates/downloads.html:472
@@ -369,8 +368,8 @@ msgstr ""
 
 #: website/frontend/templates/index.html:42
 msgid ""
-"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
-" WMA, WAV, and more."
+"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
+"WMA, WAV, and more."
 msgstr ""
 
 #: website/frontend/templates/index.html:49
@@ -379,8 +378,8 @@ msgstr ""
 
 #: website/frontend/templates/index.html:58
 msgid ""
-"Picard uses the open and community-maintained {url|MusicBrainz} database "
-"to provide accurate information about millions of music releases."
+"Picard uses the open and community-maintained {url|MusicBrainz} database to "
+"provide accurate information about millions of music releases."
 msgstr ""
 
 #: website/frontend/templates/index.html:66
@@ -427,8 +426,7 @@ msgstr "Scripting"
 #: website/frontend/templates/index.html:120
 msgid ""
 "A flexible but easy to learn scripting language allows you to exactly "
-"specify how your music files will be named and how the tags will look "
-"like."
+"specify how your music files will be named and how the tags will look like."
 msgstr ""
 
 #: website/frontend/templates/index.html:127
@@ -437,9 +435,21 @@ msgstr ""
 
 #: website/frontend/templates/index.html:129
 msgid ""
-"If you need a particular feature, you can choose from a selection of "
-"{url|available plugins} or write\n"
+"If you need a particular feature, you can choose from a selection of {url|"
+"available plugins} or write\n"
 "                your own."
+msgstr ""
+
+#: website/frontend/templates/index.html:148
+msgid "v{version} for Windows (64-bit)"
+msgstr ""
+
+#: website/frontend/templates/index.html:153
+msgid "v{version} for Linux Distributions"
+msgstr ""
+
+#: website/frontend/templates/index.html:158
+msgid "v{version} for macOS 10.14+"
 msgstr ""
 
 #: website/frontend/templates/plugins.html:3
@@ -448,18 +458,18 @@ msgstr ""
 
 #: website/frontend/templates/plugins.html:9
 msgid ""
-"This is a list of plugins that are currently available for use with "
-"Picard."
+"This is a list of plugins that are currently available for use with Picard."
 msgstr ""
 
 #: website/frontend/templates/plugins.html:10
 msgid ""
-"The current release of Picard 2.x uses API v2. The older Picard 1.x "
-"releases use API v1."
+"The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
+"use API v1."
 msgstr ""
 
 #: website/frontend/templates/plugins.html:11
-msgid "The table is generated from the data of our plugin {urlrepo|repository}."
+msgid ""
+"The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
 
 #: website/frontend/templates/plugins.html:33

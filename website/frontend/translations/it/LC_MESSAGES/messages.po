@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-27 10:07+0200\n"
+"POT-Creation-Date: 2023-09-05 15:36+0200\n"
 "PO-Revision-Date: 2023-08-28 08:27+0000\n"
 "Last-Translator: \"salo.rock\" <salo.rock+musicbrainz@gmail.com>\n"
 "Language-Team: Italian <https://translations.metabrainz.org/projects/picard/"
@@ -468,6 +468,18 @@ msgstr ""
 "Se hai bisogno di una funzionalità specifica, puoi scegliere da un elenco di "
 "{url|plugin disponibili}\n"
 "                o creare il tuo."
+
+#: website/frontend/templates/index.html:148
+msgid "v{version} for Windows (64-bit)"
+msgstr ""
+
+#: website/frontend/templates/index.html:153
+msgid "v{version} for Linux Distributions"
+msgstr ""
+
+#: website/frontend/templates/index.html:158
+msgid "v{version} for macOS 10.14+"
+msgstr ""
 
 #: website/frontend/templates/plugins.html:3
 msgid "Available Plugins"
