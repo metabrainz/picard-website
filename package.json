@@ -12,6 +12,6 @@
     "build": "npm run clean && npm run styles && npm run translate",
     "translate": "poetry run pybabel compile -d website/frontend/translations",
     "extract_strings": "poetry run pybabel extract -F website/frontend/babel.cfg -k lazy_gettext -o website/frontend/messages.pot website/frontend",
-    "resync_po_files_from_pot": "poetry run pybabel update -i website/frontend/messages.pot -d website/frontend/translations/",
+    "resync_po_files_from_pot": "poetry run pybabel update -i website/frontend/messages.pot -d website/frontend/translations/"
   }
 }
