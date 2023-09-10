@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-09-05 15:36+0200\n"
-"PO-Revision-Date: 2023-06-02 15:26+0000\n"
+"PO-Revision-Date: 2023-09-10 15:27+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: French <https://translations.metabrainz.org/projects/picard/"
 "website/fr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 4.18.2\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -473,15 +473,15 @@ msgstr ""
 
 #: website/frontend/templates/index.html:148
 msgid "v{version} for Windows (64-bit)"
-msgstr ""
+msgstr "v{version} pour Windows (64-bit)"
 
 #: website/frontend/templates/index.html:153
 msgid "v{version} for Linux Distributions"
-msgstr ""
+msgstr "v{version} pour les distributions Linux"
 
 #: website/frontend/templates/index.html:158
 msgid "v{version} for macOS 10.14+"
-msgstr ""
+msgstr "v{version} pour macOS 10.14+"
 
 #: website/frontend/templates/plugins.html:3
 msgid "Available Plugins"
