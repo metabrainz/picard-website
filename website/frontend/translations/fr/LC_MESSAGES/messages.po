@@ -4,13 +4,14 @@
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 # Philipp Wolfer <ph.wolfer@gmail.com>, 2023.
+# Zas <Zas@users.noreply.translations.metabrainz.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-09-05 15:36+0200\n"
-"PO-Revision-Date: 2023-09-10 15:27+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2023-09-12 06:51+0000\n"
+"Last-Translator: Zas <Zas@users.noreply.translations.metabrainz.org>\n"
 "Language-Team: French <https://translations.metabrainz.org/projects/picard/"
 "website/fr/>\n"
 "Language: fr\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18.2\n"
+"X-Generator: Weblate 5.0.1\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -493,16 +494,12 @@ msgid ""
 msgstr "Ceci est une liste des greffons actuellement disponibles pour Picard."
 
 #: website/frontend/templates/plugins.html:10
-#, fuzzy
-#| msgid ""
-#| "The current production release of Picard 2.x uses API v2. The older "
-#| "Picard 1.x releases use API v1."
 msgid ""
 "The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
 "use API v1."
 msgstr ""
-"La version de production courante de Picard 2.x utilise l'API v2. Les "
-"anciennes versions 1.x de Picard utilisent l'API v1."
+"La version courante de Picard 2.x utilise l'API v2. Les anciennes versions "
+"1.x de Picard utilisent l'API v1."
 
 #: website/frontend/templates/plugins.html:11
 msgid ""
