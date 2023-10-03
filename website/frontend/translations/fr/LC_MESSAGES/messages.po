@@ -498,8 +498,8 @@ msgid ""
 "The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
 "use API v1."
 msgstr ""
-"La version courante de Picard 2.x utilise l'API v2. Les anciennes versions "
-"1.x de Picard utilisent l'API v1."
+"La version courante de Picard 2.x utilise l'API v2. Les anciennes versions 1."
+"x de Picard utilisent l'API v1."
 
 #: website/frontend/templates/plugins.html:11
 msgid ""
