@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # jaimeMF <musicbrainz@jregistros.fastmail.net>, 2023.
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-09-05 15:36+0200\n"
 "PO-Revision-Date: 2023-10-11 22:27+0000\n"
-"Last-Translator: jaimeMF <musicbrainz@jregistros.fastmail.net>\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Spanish <https://translations.metabrainz.org/projects/picard/"
 "website/es/>\n"
 "Language: es\n"
@@ -29,8 +30,9 @@ msgstr ""
 #: website/frontend/templates/base.html:11
 #: website/frontend/templates/base.html:47
 #: website/frontend/templates/index.html:8
+#, fuzzy
 msgid "MusicBrainz Picard"
-msgstr ""
+msgstr "MusicBrainz Picard"
 
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
@@ -40,8 +42,9 @@ msgid ""
 msgstr ""
 
 #: website/frontend/templates/base.html:42
+#, fuzzy
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Toggle navigation"
 
 #: website/frontend/templates/base.html:52
 #: website/frontend/templates/downloads.html:3
@@ -49,13 +52,15 @@ msgid "Downloads"
 msgstr "Descargas"
 
 #: website/frontend/templates/base.html:53
+#, fuzzy
 msgid "Plugins"
-msgstr ""
+msgstr "Complementos"
 
 #: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
+#, fuzzy
 msgid "Quick Start"
-msgstr ""
+msgstr "Inicio rápido"
 
 #: website/frontend/templates/base.html:55
 #: website/frontend/templates/base.html:115
@@ -68,6 +73,7 @@ msgid "Language"
 msgstr "Idioma"
 
 #: website/frontend/templates/base.html:97
+#, fuzzy
 msgid ""
 "Picard helps you organize your music collection by renaming your music "
 "files and sorting them into a folder structure exactly the way you want "
@@ -75,6 +81,11 @@ msgid ""
 "Picard supports a wide range of audio formats and can also lookup an "
 "entire CD for you."
 msgstr ""
+"Picard lo ayuda a organizar su colección de música cambiando el nombre de "
+"sus archivos de música y ordenándolos en una estructura de carpetas "
+"exactamente como lo desea. Hay una variedad de complementos disponibles e "
+"incluso puedes escribir los tuyos. Picard admite una amplia gama de formatos "
+"de audio y también puede buscar un CD completo por ti."
 
 #: website/frontend/templates/base.html:101
 msgid "IRC: {url|#metabrainz}"
@@ -85,32 +96,38 @@ msgid "Useful Links"
 msgstr ""
 
 #: website/frontend/templates/base.html:111
+#, fuzzy
 msgid "Donate"
-msgstr ""
+msgstr "Donar"
 
 #: website/frontend/templates/base.html:119
+#, fuzzy
 msgid "Community"
-msgstr ""
+msgstr "Comunidad"
 
 #: website/frontend/templates/base.html:123
+#, fuzzy
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: website/frontend/templates/base.html:127
+#, fuzzy
 msgid "Shop"
-msgstr ""
+msgstr "Tienda"
 
 #: website/frontend/templates/base.html:131
+#, fuzzy
 msgid "MetaBrainz"
-msgstr ""
+msgstr "MetaBrainz"
 
 #: website/frontend/templates/base.html:136
 msgid "Contribute Here"
 msgstr ""
 
 #: website/frontend/templates/base.html:140
+#, fuzzy
 msgid "Bug Tracker"
-msgstr ""
+msgstr "Seg. de fallos"
 
 #: website/frontend/templates/base.html:145
 msgid "Fellow Projects"
@@ -170,8 +187,9 @@ msgstr ""
 #: website/frontend/templates/downloads.html:259
 #: website/frontend/templates/downloads.html:339
 #: website/frontend/templates/downloads.html:382
+#, fuzzy
 msgid "Link"
-msgstr ""
+msgstr "Enlace"
 
 #: website/frontend/templates/downloads.html:31
 msgid "64-bit installer"
@@ -409,16 +427,18 @@ msgid ""
 msgstr ""
 
 #: website/frontend/templates/index.html:109
+#, fuzzy
 msgid "Cover Art"
-msgstr ""
+msgstr "Carátula"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
 msgstr ""
 
 #: website/frontend/templates/index.html:119
+#, fuzzy
 msgid "Scripting"
-msgstr ""
+msgstr "Escritura de scripts"
 
 #: website/frontend/templates/index.html:120
 msgid ""
@@ -471,16 +491,19 @@ msgid "The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
 
 #: website/frontend/templates/plugins.html:33
+#, fuzzy
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: website/frontend/templates/plugins.html:34
+#, fuzzy
 msgid "Version"
-msgstr ""
+msgstr "Versión"
 
 #: website/frontend/templates/plugins.html:35
+#, fuzzy
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: website/frontend/templates/plugins.html:36
 msgid "Author(s)"
