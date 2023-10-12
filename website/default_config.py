@@ -29,7 +29,7 @@ PICARD_VERSIONS = {
         'version': (2, 10, 0, 'final', 0),
         'urls': {
             'download': 'https://picard.musicbrainz.org/',
-            'changelog': 'https://blog.metabrainz.org/2023/10/12/picard-2-10-0-released/',
+            'changelog': 'https://blog.metabrainz.org/2023/10/12/picard-2-10-released/',
         },
         'win_size': '31',
         'win_hash': '5724eab624df58d750b23d76fd50387f',
