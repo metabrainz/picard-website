@@ -44,7 +44,7 @@ Flask = "^2.3.3"
 Flask-APScheduler = "^1.12.3"
 Flask-Babel = "^3.1.0"
 Markdown = "^3.3.7"
-mistune = "^3.0.1"
+mistune = "^3.0.2"
 packaging = "^23.1"
 
 [tool.poetry.dev-dependencies]
