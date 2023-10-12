@@ -45,7 +45,7 @@ Flask-APScheduler = "^1.12.3"
 Flask-Babel = "^3.1.0"
 Markdown = "^3.3.7"
 mistune = "^3.0.2"
-packaging = "^23.1"
+packaging = "^23.2"
 
 [tool.poetry.dev-dependencies]
 Flask-Testing = "^0.8.1"
