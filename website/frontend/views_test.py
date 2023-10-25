@@ -26,7 +26,7 @@ class ViewsTestCase(FrontendTestCase):
     def test_home_page_french_cookie(self):
         "Test / in french (cookie)"
         server_name = self.app.config.get('SERVER_NAME') or 'localhost'
-        self.client.set_cookie(server_name, 'language', 'fr')
+        self.client.set_cookie('language', 'fr', domain=server_name)
         response = self.client.get("/")
         self.assert200(response)
         self.assertIn(b'fichiers audio', response.data)
