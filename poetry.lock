@@ -207,13 +207,13 @@ python-dateutil = ">=2.4.2"
 
 [[package]]
 name = "flask-babel"
-version = "3.1.0"
+version = "4.0.0"
 description = "Adds i18n/l10n support for Flask applications."
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = ">=3.8,<4.0"
 files = [
-    {file = "flask_babel-3.1.0-py3-none-any.whl", hash = "sha256:deb3ee272d5adf97f5974ed09ab501243d63e7fb4a047501a00de4bd4aca4830"},
-    {file = "flask_babel-3.1.0.tar.gz", hash = "sha256:be015772c5d7f046f3b99c508dcf618636eb93d21b713b356db79f3e79f69f39"},
+    {file = "flask_babel-4.0.0-py3-none-any.whl", hash = "sha256:638194cf91f8b301380f36d70e2034c77ee25b98cb5d80a1626820df9a6d4625"},
+    {file = "flask_babel-4.0.0.tar.gz", hash = "sha256:dbeab4027a3f4a87678a11686496e98e1492eb793cbdd77ab50f4e9a2602a593"},
 ]
 
 [package.dependencies]
@@ -567,4 +567,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "d66b48d029416be6692287702ec5d884ad6240c56f29ff64d88dc7fbe14a5d3e"
+content-hash = "1ad4c4b515041e7d2558b8eb8153909fd5f2074be800de57c2d0b50552ebd87b"
