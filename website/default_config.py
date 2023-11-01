@@ -82,6 +82,7 @@ SUPPORTED_LANGUAGES = [
     'de',
     'fr',
     'it',
+    'lt',
 ]
 
 SERVER_HOSTNAME = "127.0.0.1"
