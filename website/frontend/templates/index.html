@@ -143,7 +143,7 @@
       var platform = navigator.platform, downloadURL, iconClass, infoText;
 
       if (/^Win/.test(platform) || /Windows/.test(navigator.userAgent)) {
-        downloadURL = "https://data.musicbrainz.org/pub/musicbrainz/picard/picard-setup-{{tag}}.exe";
+        downloadURL = "{{ config['FILESERVER_URL'] }}/picard-setup-{{tag}}.exe";
         iconClass = "fa-windows";
         infoText = {{_('v{version} for Windows (64-bit)')|expand({'version': tag})|tojson}};
 
@@ -153,7 +153,7 @@
         infoText = {{_('v{version} for Linux Distributions')|expand({'version': tag})|tojson}};
 
       } else if (platform === "MacIntel" || platform === "MacPPC") {
-        downloadURL = "https://data.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-{{tag}}-macOS-10.14.dmg";
+        downloadURL = "{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{tag}}-macOS-10.14.dmg";
         iconClass = "fa-apple";
         infoText = {{_('v{version} for macOS 10.14+')|expand({'version': tag})|tojson}};
       }
