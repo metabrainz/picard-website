@@ -1,3 +1,4 @@
+<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 {% extends 'base.html' %}
 {% set active_page = "plugins" %}
 {% set page_title =  _("Available Plugins") %}
@@ -22,7 +23,7 @@
         {% for version, plugins in all_plugins.items() %}
           <div class="tab-pane {{'active' if version == '2' }}" id="apiv{{version}}">
             <div class="table-responsive">
-              <table class="table table-bordered table-hover">
+              <table class="table table-bordered table-hover sortable">
                 <col width="175px" name="Name"/>
                 <col width="100px" name="Version"/>
                 <col width="500px" name="Description"/>
