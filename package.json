@@ -2,7 +2,7 @@
   "name": "picard-website",
   "version": "0.0.0",
   "devDependencies": {
-    "clean-css-cli": "^5.3.0",
+    "clean-css-cli": "^5.6.3",
     "less": "^4.2.0"
   },
   "private": true,
