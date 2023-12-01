@@ -192,17 +192,17 @@ dotenv = ["python-dotenv"]
 
 [[package]]
 name = "flask-apscheduler"
-version = "1.13.0"
+version = "1.13.1"
 description = "Adds APScheduler support to Flask"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "Flask-APScheduler-1.13.0.tar.gz", hash = "sha256:19555d6761990f110678aa584ab3ad0e7e698238e6ff60d8f38ab1322bda14c2"},
+    {file = "Flask-APScheduler-1.13.1.tar.gz", hash = "sha256:b929846f026fb339b76360b0e4fc75da78b75c6d08625715bd0d37949bd607da"},
 ]
 
 [package.dependencies]
 apscheduler = ">=3.2.0,<4.0.0"
-flask = ">=2.2.5,<3.0.0"
+flask = ">=2.2.5,<4.0.0"
 python-dateutil = ">=2.4.2"
 
 [[package]]
@@ -567,4 +567,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "7ff4c910a6aaaa63768bae1fdf6547d6b4a418bbcb1aa85dd42131ad7fe1bbc3"
+content-hash = "7e173962b48d497ab2a17d17d76ba0e60b7167fd33bfd1161aea67febf8e26fd"
