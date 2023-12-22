@@ -3,18 +3,23 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # stiltezh <theyarmolyuk@gmail.com>, 2023.
+# Nerten <alex@nerten.info>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-09-05 15:36+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-12-22 19:28+0000\n"
+"Last-Translator: Nerten <alex@nerten.info>\n"
+"Language-Team: Ukrainian <https://translations.metabrainz.org/projects/"
+"picard/website/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.3\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: website/frontend/templates/base.html:7
@@ -27,7 +32,7 @@ msgstr ""
 #: website/frontend/templates/base.html:47
 #: website/frontend/templates/index.html:8
 msgid "MusicBrainz Picard"
-msgstr ""
+msgstr "MusicBrainz Picard"
 
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
@@ -43,26 +48,26 @@ msgstr ""
 #: website/frontend/templates/base.html:52
 #: website/frontend/templates/downloads.html:3
 msgid "Downloads"
-msgstr ""
+msgstr "Завантаження"
 
 #: website/frontend/templates/base.html:53
 msgid "Plugins"
-msgstr ""
+msgstr "Модулі"
 
 #: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
 msgid "Quick Start"
-msgstr ""
+msgstr "Швидкий старт"
 
 #: website/frontend/templates/base.html:55
 #: website/frontend/templates/base.html:115
 #: website/frontend/templates/docs/base.html:3
 msgid "Documentation"
-msgstr ""
+msgstr "Документація"
 
 #: website/frontend/templates/base.html:61
 msgid "Language"
-msgstr ""
+msgstr "Мова"
 
 #: website/frontend/templates/base.html:97
 msgid ""
@@ -87,23 +92,23 @@ msgstr ""
 
 #: website/frontend/templates/base.html:119
 msgid "Community"
-msgstr ""
+msgstr "Спільнота"
 
 #: website/frontend/templates/base.html:123
 msgid "Blog"
-msgstr ""
+msgstr "Блог"
 
 #: website/frontend/templates/base.html:127
 msgid "Shop"
-msgstr ""
+msgstr "Магазин"
 
 #: website/frontend/templates/base.html:131
 msgid "MetaBrainz"
-msgstr ""
+msgstr "MetaBrainz"
 
 #: website/frontend/templates/base.html:136
 msgid "Contribute Here"
-msgstr ""
+msgstr "Зробити свій внесок тут"
 
 #: website/frontend/templates/base.html:140
 msgid "Bug Tracker"
@@ -128,7 +133,7 @@ msgstr ""
 #: website/frontend/templates/changelog.html:3
 #: website/frontend/templates/index.html:22
 msgid "What’s New"
-msgstr ""
+msgstr "Що нового"
 
 #: website/frontend/templates/downloads.html:7
 msgid ""
@@ -307,7 +312,7 @@ msgstr ""
 
 #: website/frontend/templates/downloads.html:338
 msgid "Operating system"
-msgstr ""
+msgstr "Операційна система"
 
 #: website/frontend/templates/downloads.html:372
 msgid "Picard <strong>Source Code</strong>"
@@ -344,11 +349,11 @@ msgstr ""
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
-msgstr ""
+msgstr "Завантажити Picard"
 
 #: website/frontend/templates/index.html:25
 msgid "Other Downloads"
-msgstr ""
+msgstr "Інші завантаження"
 
 #: website/frontend/templates/index.html:30
 msgid "Screenshot"
@@ -376,7 +381,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
-msgstr ""
+msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
 msgid ""
@@ -405,7 +410,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:109
 msgid "Cover Art"
-msgstr ""
+msgstr "Обкладинки"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
