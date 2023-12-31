@@ -21,8 +21,9 @@
         <div class="tab-content">
         {% for version, plugins in all_plugins.items() %}
           <div class="tab-pane {{'active' if version == '2' }}" id="apiv{{version}}">
+            <br/>
             <div class="table-responsive">
-              <table class="table table-bordered table-hover">
+              <table id="plugins-table-v{{version}}" class="table table-bordered table-hover">
                 <col width="175px" name="Name"/>
                 <col width="100px" name="Version"/>
                 <col width="500px" name="Description"/>
@@ -30,11 +31,11 @@
                 <col width="100px" name="Download"/>
                 <thead>
                   <tr>
-                    <th class="text-center">{{ _("Name") }}</th>
-                    <th class="text-center">{{ _("Version") }}</th>
-                    <th class="text-center">{{ _("Description") }}</th>
+                    <th class="text-center" data-sortable="true">{{ _("Name") }}</th>
+                    <th class="text-center" data-sortable="true">{{ _("Version") }}</th>
+                    <th class="text-center" data-sortable="true">{{ _("Description") }}</th>
                     <th class="text-center">{{ _("Author(s)") }}</th>
-                    <th class="text-center"></th>
+                    <th class="text-center" data-sortable="false"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -53,6 +54,19 @@
                 {% endfor %}
                 </tbody>
               </table>
+              <script type="text/javascript">
+                (function f(version) {
+                    let storedSort = Cookies.get('userSortPreference-v' + version);
+
+                    let dataTable = new DataTable('#plugins-table-v{{version}}', {
+                          "order": storedSort ? JSON.parse(storedSort) : []
+                    })
+
+                    dataTable.on('click', 'thead th', function () {
+                        Cookies.set('userSortPreference-v' + version, JSON.stringify(dataTable.order()));
+                    });
+                })({{version}})
+              </script>
             </div>
           </div>
         {% endfor %}
@@ -60,3 +74,4 @@
       </div>
     </div>
 {% endblock %}
+
