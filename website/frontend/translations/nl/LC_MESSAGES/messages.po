@@ -4,13 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # mfmeulenbelt <mfmeulenbelt@gmail.com>, 2023.
 # Philipp Wolfer <ph.wolfer@gmail.com>, 2023.
+# mfmeulenbelt <mfmeulenbelt@users.noreply.translations.metabrainz.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-09-05 15:36+0200\n"
-"PO-Revision-Date: 2023-09-23 09:27+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2024-01-07 12:28+0000\n"
+"Last-Translator: mfmeulenbelt <mfmeulenbelt@users.noreply.translations."
+"metabrainz.org>\n"
 "Language-Team: Dutch <https://translations.metabrainz.org/projects/picard/"
 "website/nl/>\n"
 "Language: nl\n"
@@ -18,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.3\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: website/frontend/templates/base.html:7
@@ -26,6 +28,8 @@ msgid ""
 "Official website for MusicBrainz Picard, a cross-platform music tagger "
 "written in Python."
 msgstr ""
+"Officiële website van MusicBrainz Picard, een platformoverschrijdende tagger "
+"voor muziek, geschreven in Python."
 
 #: website/frontend/templates/base.html:11
 #: website/frontend/templates/base.html:47
@@ -38,15 +42,17 @@ msgstr "MusicBrainz Picard"
 msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr ""
+"Picard is een platformoverschrijdende tagger voor muziek op basis van de "
+"MusicBrainz-databank."
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Navigatie omschakelen"
 
 #: website/frontend/templates/base.html:52
 #: website/frontend/templates/downloads.html:3
 msgid "Downloads"
-msgstr ""
+msgstr "Downloads"
 
 #: website/frontend/templates/base.html:53
 msgid "Plugins"
@@ -55,7 +61,7 @@ msgstr "Plug-ins"
 #: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
 msgid "Quick Start"
-msgstr ""
+msgstr "Snel starten"
 
 #: website/frontend/templates/base.html:55
 #: website/frontend/templates/base.html:115
@@ -76,99 +82,101 @@ msgid ""
 "you."
 msgstr ""
 "Met Picard kan je je muziekverzameling beheren door je muziekbestanden naar "
-"je eigen voorkeuren te hernoemen en op te slaan in een mapstructuur. Er zijn "
-"veel plug-ins beschikbaar en je kan ook zelf plug-ins schrijven. Picard "
+"je eigen voorkeuren te hernoemen en op te slaan in een mappenstructuur. Er "
+"zijn veel plug-ins beschikbaar en je kan ook zelf plug-ins schrijven. Picard "
 "ondersteunt een breed scala aan audioformaten en kan ook een hele cd voor je "
 "opzoeken."
 
 #: website/frontend/templates/base.html:101
 msgid "IRC: {url|#metabrainz}"
-msgstr ""
+msgstr "IRC: {url|#metabrainz}"
 
 #: website/frontend/templates/base.html:107
 msgid "Useful Links"
-msgstr ""
+msgstr "Nuttige links"
 
 #: website/frontend/templates/base.html:111
 msgid "Donate"
-msgstr ""
+msgstr "Doneren"
 
 #: website/frontend/templates/base.html:119
 msgid "Community"
-msgstr ""
+msgstr "Gemeenschap"
 
 #: website/frontend/templates/base.html:123
 msgid "Blog"
-msgstr ""
+msgstr "Weblog"
 
 #: website/frontend/templates/base.html:127
 msgid "Shop"
-msgstr ""
+msgstr "Winkel"
 
 #: website/frontend/templates/base.html:131
 msgid "MetaBrainz"
-msgstr ""
+msgstr "MetaBrainz"
 
 #: website/frontend/templates/base.html:136
 msgid "Contribute Here"
-msgstr ""
+msgstr "Help mee"
 
 #: website/frontend/templates/base.html:140
 msgid "Bug Tracker"
-msgstr ""
+msgstr "Bugtracker"
 
 #: website/frontend/templates/base.html:145
 msgid "Fellow Projects"
-msgstr ""
+msgstr "Bevriende projecten"
 
 #: website/frontend/templates/base.html:173
 msgid "OSS Geek? {url|Contribute Here}"
-msgstr ""
+msgstr "Houd je van openbronsoftware? {url|Help mee}"
 
 #: website/frontend/templates/base.html:182
 msgid "Brought to you by {metabrainz}"
-msgstr ""
+msgstr "Aangeboden door {metabrainz}"
 
 #: website/frontend/templates/base.html:187
 msgid "Found an Issue? {url|Report Here}"
-msgstr ""
+msgstr "Kwam je een probleem tegen? {url|Meld het hier}"
 
 #: website/frontend/templates/changelog.html:3
 #: website/frontend/templates/index.html:22
 msgid "What’s New"
-msgstr ""
+msgstr "Wat is er nieuw"
 
 #: website/frontend/templates/downloads.html:7
 msgid ""
 "Picard is available for all major platforms. Just download and start the "
 "installer. It's that easy."
 msgstr ""
+"Picard is voor alle belangrijke platformen beschikbaar. Je hoeft het "
+"installatiebestand alleen maar te downloaden en starten."
 
 #: website/frontend/templates/downloads.html:10
 msgid "Learn about the new features in Picard {version}"
-msgstr ""
+msgstr "Ontdek de nieuwe functies in Picard {version}"
 
 #: website/frontend/templates/downloads.html:16
 msgid "Picard for <strong>Windows</strong>"
-msgstr ""
+msgstr "Picard voor <strong>Windows</strong>"
 
 #: website/frontend/templates/downloads.html:23
 #: website/frontend/templates/downloads.html:141
 #: website/frontend/templates/downloads.html:379
 msgid "Picard Version"
-msgstr ""
+msgstr "Picard-versie"
 
 #: website/frontend/templates/downloads.html:24
 #: website/frontend/templates/downloads.html:142
 #: website/frontend/templates/downloads.html:380
 msgid "MD5 Hash"
-msgstr ""
+msgstr "MD5-hash"
 
 #: website/frontend/templates/downloads.html:25
 #: website/frontend/templates/downloads.html:143
 #: website/frontend/templates/downloads.html:381
 msgid "Size"
-msgstr ""
+msgstr "Grootte"
 
 #: website/frontend/templates/downloads.html:26
 #: website/frontend/templates/downloads.html:144
@@ -176,11 +184,11 @@ msgstr ""
 #: website/frontend/templates/downloads.html:339
 #: website/frontend/templates/downloads.html:382
 msgid "Link"
-msgstr ""
+msgstr "Koppeling"
 
 #: website/frontend/templates/downloads.html:31
 msgid "64-bit installer"
-msgstr ""
+msgstr "64 bits installeerbaar"
 
 #: website/frontend/templates/downloads.html:37
 #: website/frontend/templates/downloads.html:54
@@ -197,7 +205,7 @@ msgstr ""
 #: website/frontend/templates/downloads.html:445
 #: website/frontend/templates/plugins.html:49
 msgid "Download"
-msgstr ""
+msgstr "Downloaden"
 
 #: website/frontend/templates/downloads.html:41
 #: website/frontend/templates/downloads.html:59
@@ -213,7 +221,7 @@ msgstr ""
 #: website/frontend/templates/downloads.html:432
 #: website/frontend/templates/downloads.html:449
 msgid "US Mirror"
-msgstr ""
+msgstr "Amerikaanse spiegelserver"
 
 #: website/frontend/templates/downloads.html:42
 #: website/frontend/templates/downloads.html:62
@@ -229,113 +237,115 @@ msgstr ""
 #: website/frontend/templates/downloads.html:433
 #: website/frontend/templates/downloads.html:450
 msgid "EU Mirror"
-msgstr ""
+msgstr "Europese spiegelserver"
 
 #: website/frontend/templates/downloads.html:48
 msgid "64-bit portable"
-msgstr ""
+msgstr "64 bits draagbaar"
 
 #: website/frontend/templates/downloads.html:70
 #: website/frontend/templates/downloads.html:73
 msgid "Windows 10&thinsp;/&thinsp;11 app"
-msgstr ""
+msgstr "Windows 10/11-app"
 
 #: website/frontend/templates/downloads.html:78
 msgid "Windows Store"
-msgstr ""
+msgstr "Windows Store"
 
 #: website/frontend/templates/downloads.html:84
 msgid "pre-release, 64-bit installer"
-msgstr ""
+msgstr "testversie, 64 bits installeerbaar"
 
 #: website/frontend/templates/downloads.html:105
 msgid "pre-release, 64-bit portable"
-msgstr ""
+msgstr "testversie, 64 bits draagbaar"
 
 #: website/frontend/templates/downloads.html:134
 msgid "Picard for <strong>macOS</strong>"
-msgstr ""
+msgstr "Picard voor <strong>macOS</strong>"
 
 #: website/frontend/templates/downloads.html:149
 msgid "macOS 10.14+ (x86_64)"
-msgstr ""
+msgstr "macOS 10.14+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:166
 msgid "macOS 10.12+ (x86_64)"
-msgstr ""
+msgstr "macOS 10.12+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:183
 msgid "macOS 10.10+ (x86_64)"
-msgstr ""
+msgstr "macOS 10.10+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:201
 msgid "pre-release, macOS 10.14+ (x86_64)"
-msgstr ""
+msgstr "testversie, macOS 10.14+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:222
 msgid "pre-release, macOS 10.12+ (x86_64)"
-msgstr ""
+msgstr "testversie, macOS 10.12+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:251
 msgid "Picard for <strong>Linux</strong>"
-msgstr ""
+msgstr "Picard voor <strong>Linux</strong>"
 
 #: website/frontend/templates/downloads.html:258
 msgid "Distribution"
-msgstr ""
+msgstr "Distributie"
 
 #: website/frontend/templates/downloads.html:264
 #: website/frontend/templates/downloads.html:272
 msgid "All distributions"
-msgstr ""
+msgstr "Alle distributies"
 
 #: website/frontend/templates/downloads.html:266
 #: website/frontend/templates/downloads.html:274
 msgid "Instructions"
-msgstr ""
+msgstr "Instructies"
 
 #: website/frontend/templates/downloads.html:298
 #: website/frontend/templates/downloads.html:311
 msgid "latest package"
-msgstr ""
+msgstr "Nieuwste pakket"
 
 #: website/frontend/templates/downloads.html:299
 msgid "read the FAQ"
-msgstr ""
+msgstr "lees de veelgestelde vragen"
 
 #: website/frontend/templates/downloads.html:324
 msgid ""
 "In addition Picard is also available in the official repositories of most "
 "Linux distributions."
 msgstr ""
+"Picard is ook in de officiële opslagplaatsen van de meeste Linux-"
+"distributies beschikbaar."
 
 #: website/frontend/templates/downloads.html:331
 msgid "Picard for <strong>other operating systems</strong>"
-msgstr ""
+msgstr "Picard voor <strong>andere besturingssystemen</strong>"
 
 #: website/frontend/templates/downloads.html:338
 msgid "Operating system"
-msgstr ""
+msgstr "Besturingssysteem"
 
 #: website/frontend/templates/downloads.html:372
 msgid "Picard <strong>Source Code</strong>"
-msgstr ""
+msgstr "<strong>Broncode</strong> van Picard"
 
 #: website/frontend/templates/downloads.html:387
 msgid "tar"
-msgstr ""
+msgstr "tar"
 
 #: website/frontend/templates/downloads.html:404
 msgid "zip"
-msgstr ""
+msgstr "zip"
 
 #: website/frontend/templates/downloads.html:422
 msgid "pre-release, tar"
-msgstr ""
+msgstr "testversie, tar"
 
 #: website/frontend/templates/downloads.html:439
 msgid "pre-release, zip"
-msgstr ""
+msgstr "testversie, zip"
 
 #: website/frontend/templates/downloads.html:465
 msgid ""
@@ -343,83 +353,79 @@ msgid ""
 "{urldev|Development} on how you can start contributing to the Picard source "
 "code."
 msgstr ""
+"Je kan de nieuwste Picard-broncode ook op {urlgithub|Github} vinden. Zie "
+"{urldev|Ontwikkeling} als je wil weten hoe je aan de broncode van Picard "
+"kunt bijdragen."
 
 #: website/frontend/templates/downloads.html:472
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
 msgstr ""
+"Op deze pagina zie je de recentste downloads. Als je oudere versies van "
+"Picard zoekt, {url|kan je op onze FTP-server kijken}."
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
-msgstr ""
+msgstr "Picard downloaden"
 
 #: website/frontend/templates/index.html:25
 msgid "Other Downloads"
-msgstr ""
+msgstr "Andere downloads"
 
 #: website/frontend/templates/index.html:30
 msgid "Screenshot"
-msgstr ""
+msgstr "Schermafbeelding"
 
 #: website/frontend/templates/index.html:41
-#, fuzzy
 msgid "Multiple Formats"
-msgstr "Veel bestandsformaten"
+msgstr "Verschillende indelingen"
 
 #: website/frontend/templates/index.html:42
-#, fuzzy
 msgid ""
 "Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
 "WMA, WAV, and more."
 msgstr ""
-"Picard ondersteunt alle populaire muziekformaten, waaronder mp3, FLAC, OGG, "
-"M4A, WMA, WAV en nog veel meer."
+"Picard ondersteunt alle populaire muziekindelingen, zoals mp3, flac, ogg, "
+"m4a, wma en wav."
 
 #: website/frontend/templates/index.html:49
-#, fuzzy
 msgid "Comprehensive Database"
-msgstr "Uitgebreide database"
+msgstr "Uitgebreide databank"
 
 #: website/frontend/templates/index.html:58
-#, fuzzy
 msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
 msgstr ""
-"Dankzij de open en door de gemeenschap onderhouden {url|MusicBrainz}-"
-"database geeft Picard je precieze informatie over miljoenen uitgaves."
+"Picard gebruikt de open en gemeenschappelijk onderhouden {url|MusicBrainz}-"
+"databank om je nauwkeurige informatie over miljoenen uitgaven te geven."
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
 msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
-#, fuzzy
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
 msgstr ""
-"Picard gebruikt {url|AcoustID}-vingerafdrukken om bestanden aan de hand van "
-"het geluid te identificeren, zelfs als ze geen tags hebben."
+"Picard gebruikt {url|AcoustID}-audiovingerafdrukken om bestanden aan de hand "
+"van de muziek te herkennen, zelfs als ze geen tags hebben."
 
 #: website/frontend/templates/index.html:85
-#, fuzzy
 msgid "CD Lookups"
 msgstr "Cd’s opzoeken"
 
 #: website/frontend/templates/index.html:86
-#, fuzzy
 msgid "Picard can lookup entire music CDs with a click."
-msgstr "Picard kan hele muziek-cd’s met een klik opzoeken."
+msgstr "Picard kan hele cd’s met één klik opzoeken."
 
 #: website/frontend/templates/index.html:93
-#, fuzzy
 msgid "Open Source"
-msgstr "Open bron"
+msgstr "Openbron"
 
 #: website/frontend/templates/index.html:100
-#, fuzzy
 msgid ""
 "Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
 "{urlgithub|GitHub} where it’s\n"
@@ -433,7 +439,6 @@ msgid "Cover Art"
 msgstr "Hoesafbeeldingen"
 
 #: website/frontend/templates/index.html:110
-#, fuzzy
 msgid "Picard can find and download the correct cover art for your albums."
 msgstr ""
 "Picard kan de juiste afbeeldingen voor je uitgaven vinden en downloaden."
@@ -443,7 +448,6 @@ msgid "Scripting"
 msgstr "Scripting"
 
 #: website/frontend/templates/index.html:120
-#, fuzzy
 msgid ""
 "A flexible but easy to learn scripting language allows you to exactly "
 "specify how your music files will be named and how the tags will look like."
@@ -453,12 +457,10 @@ msgstr ""
 "passen."
 
 #: website/frontend/templates/index.html:127
-#, fuzzy
 msgid "Plugin Support"
 msgstr "Plug-inondersteuning"
 
 #: website/frontend/templates/index.html:129
-#, fuzzy
 msgid ""
 "If you need a particular feature, you can choose from a selection of {url|"
 "available plugins} or write\n"
@@ -469,35 +471,39 @@ msgstr ""
 
 #: website/frontend/templates/index.html:148
 msgid "v{version} for Windows (64-bit)"
-msgstr ""
+msgstr "versie {version} voor Windows (64 bits)"
 
 #: website/frontend/templates/index.html:153
 msgid "v{version} for Linux Distributions"
-msgstr ""
+msgstr "versie {version} voor Linux-distributies"
 
 #: website/frontend/templates/index.html:158
 msgid "v{version} for macOS 10.14+"
-msgstr ""
+msgstr "versie {version} voor macOS vanaf 10.14"
 
 #: website/frontend/templates/plugins.html:3
 msgid "Available Plugins"
-msgstr ""
+msgstr "Beschikbare plug-ins"
 
 #: website/frontend/templates/plugins.html:9
 msgid ""
 "This is a list of plugins that are currently available for use with Picard."
-msgstr ""
+msgstr "Dit is een lijst met plug-ins die nu voor Picard beschikbaar zijn."
 
 #: website/frontend/templates/plugins.html:10
 msgid ""
 "The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
 "use API v1."
 msgstr ""
+"De huidige versiereeks van Picard, 2.x, gebruikt API-versie 2. De oudere "
+"versiereeks, 1.x, gebruikt API-versie 1."
 
 #: website/frontend/templates/plugins.html:11
 msgid ""
 "The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
+"De tabel is aangemaakt op basis van informatie uit onze "
+"{urlrepo|opslagplaats} voor plug-ins."
 
 #: website/frontend/templates/plugins.html:33
 msgid "Name"
@@ -509,34 +515,34 @@ msgstr "Versie"
 
 #: website/frontend/templates/plugins.html:35
 msgid "Description"
-msgstr ""
+msgstr "Omschrijving"
 
 #: website/frontend/templates/plugins.html:36
 msgid "Author(s)"
-msgstr ""
+msgstr "Auteur(s)"
 
 #: website/frontend/templates/docs/build-osx.html:3
 msgid "Build on macOS"
-msgstr ""
+msgstr "Bouwen op macOS"
 
 #: website/frontend/templates/docs/build-windows.html:3
 msgid "Build on Windows"
-msgstr ""
+msgstr "Bouwen op Windows"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
-msgstr ""
+msgstr "Ontwikkeling"
 
 #: website/frontend/templates/docs/development.html:25
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Probleemoplossing"
 
 #: website/frontend/templates/errors/404.html:3
 msgid "404 Not Found"
-msgstr ""
+msgstr "404 niet gevonden"
 
 #: website/frontend/templates/errors/404.html:6
 msgid ""
 "You don't have to worry, someone is working on fixing things as you're "
 "reading this."
-msgstr ""
+msgstr "Geen zorgen: terwijl je dit leest is iemand het al aan het oplossen."
