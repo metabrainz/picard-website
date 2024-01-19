@@ -1,4 +1,25 @@
 {% extends 'base.html' %}
+{%- block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/js.cookie.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dataTables.min.js') }}"></script>
+
+    {% for version, plugins in all_plugins.items() %}
+        <script type="text/javascript">
+            (function f(version) {
+                let storedSort = Cookies.get('userSortPreference-v' + version);
+
+                let dataTable = new DataTable('#plugins-table-v{{version}}', {
+                    "order": storedSort ? JSON.parse(storedSort) : []
+                });
+
+                dataTable.on('click', 'thead th', function () {
+                    Cookies.set('userSortPreference-v' + version, JSON.stringify(dataTable.order()));
+                });
+            })({{version}});
+        </script>
+    {% endfor %}
+{% endblock -%}
 {% set active_page = "plugins" %}
 {% set page_title =  _("Available Plugins") %}
 {% block content %}
@@ -54,19 +75,6 @@
                 {% endfor %}
                 </tbody>
               </table>
-              <script type="text/javascript">
-                (function f(version) {
-                    let storedSort = Cookies.get('userSortPreference-v' + version);
-
-                    let dataTable = new DataTable('#plugins-table-v{{version}}', {
-                          "order": storedSort ? JSON.parse(storedSort) : []
-                    })
-
-                    dataTable.on('click', 'thead th', function () {
-                        Cookies.set('userSortPreference-v' + version, JSON.stringify(dataTable.order()));
-                    });
-                })({{version}})
-              </script>
             </div>
           </div>
         {% endfor %}
@@ -74,4 +82,3 @@
       </div>
     </div>
 {% endblock %}
-
