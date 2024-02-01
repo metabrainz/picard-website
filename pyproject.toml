@@ -43,7 +43,7 @@ cachelib = "^0.10.2"
 Flask = "^3.0.0"
 Flask-APScheduler = "^1.13.1"
 Flask-Babel = "^4.0.0"
-Markdown = "^3.5.1"
+Markdown = "^3.5.2"
 mistune = "^3.0.2"
 packaging = "^23.2"
 
