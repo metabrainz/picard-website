@@ -1,4 +1,4 @@
-FROM python:3.9-slim-buster
+FROM python:3.12-slim-bookworm
 
 ARG BUILD_DEPS=" \
     curl \
@@ -24,7 +24,7 @@ WORKDIR /code/website
 
 # Python dependencies
 RUN pip install --upgrade pip \
-    && pip install uWSGI==2.0.21 poetry==1.3.2
+    && pip install uWSGI==2.0.23 poetry==1.7.1
 COPY poetry.lock pyproject.toml /code/website/
 RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi
