@@ -40,7 +40,11 @@ COPY run.py plugins-generate.py pytest.ini /code/website/
 RUN npm run build
 
 # Plugins
+RUN mkdir /code/plugins && chown www-data:www-data /code/plugins
+USER www-data:www-data
 RUN ./plugins-generate.py
+
+USER root
 RUN python -m pytest
 
 COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
