@@ -55,13 +55,13 @@ files = [
 
 [[package]]
 name = "cachelib"
-version = "0.10.2"
+version = "0.12.0"
 description = "A collection of cache libraries in the same API interface."
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "cachelib-0.10.2-py3-none-any.whl", hash = "sha256:42d49f2fad9310dd946d7be73d46776bcd4d5fde4f49ad210cfdd447fbdfc346"},
-    {file = "cachelib-0.10.2.tar.gz", hash = "sha256:593faeee62a7c037d50fc835617a01b887503f972fb52b188ae7e50e9cb69740"},
+    {file = "cachelib-0.12.0-py3-none-any.whl", hash = "sha256:038f4d855afc3eb8caab10458f6eac55c328911f9055824c22c2f259ef9ed3a3"},
+    {file = "cachelib-0.12.0.tar.gz", hash = "sha256:8243029a028436fd23229113dee517c0700bb43a8a289ec5a963e4af9ca2b194"},
 ]
 
 [[package]]
@@ -570,4 +570,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "d0988cedfe7d06036fff4f84824d623c5098f3725d6ebe3341e3b59f0d37a184"
+content-hash = "c7509b3933c70a43621cb7ff4189fc0e5961f6ca3b78b96588cfd788dea73b5d"
