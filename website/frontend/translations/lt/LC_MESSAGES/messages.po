@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # "Vac31." <gateway_31@protonmail.com>, 2023.
+# Vaclovas Intas <gateway_31@protonmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 09:24+0200\n"
-"PO-Revision-Date: 2023-11-12 20:27+0000\n"
-"Last-Translator: \"Vac31.\" <gateway_31@protonmail.com>\n"
+"PO-Revision-Date: 2024-06-25 19:42+0000\n"
+"Last-Translator: Vaclovas Intas <gateway_31@protonmail.com>\n"
 "Language-Team: Lithuanian <https://translations.metabrainz.org/projects/"
 "picard/website/lt/>\n"
 "Language: lt\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.6\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: website/frontend/templates/base.html:7
@@ -27,22 +28,22 @@ msgid ""
 "Official website for MusicBrainz Picard, a cross-platform music tagger "
 "written in Python."
 msgstr ""
-"Oficiali MusicBrainz Picard svetainė – tarpplatforminė muzikos žymeklė, "
-"parašyta Python kalba."
+"Oficiali „MusicBrainz Picard“ svetainė – tarpplatforminė muzikos žymeklė, "
+"parašyta „Python“ kalba."
 
 #: website/frontend/templates/base.html:11
 #: website/frontend/templates/base.html:47
 #: website/frontend/templates/index.html:8
 msgid "MusicBrainz Picard"
-msgstr "MusicBrainz Picard"
+msgstr "„MusicBrainz Picard“"
 
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
 msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr ""
-"Picard yra tarpplatforminė muzikos žymeklė, naudojanti MusicBrainz duomenų "
-"bazę."
+"„Picard“ – tai tarpplatforminė muzikos žymeklė, naudojanti „MusicBrainz“ "
+"duomenų bazę."
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
@@ -80,14 +81,15 @@ msgid ""
 "supports a wide range of audio formats and can also lookup an entire CD for "
 "you."
 msgstr ""
-"Picard padeda tvarkyti muzikos kolekciją pervadinant muzikos failus ir "
+"„Picard“ padeda tvarkyti muzikos kolekciją pervadinant muzikos failus ir "
 "surūšiuojant juos į aplankų struktūrą būtent taip, kaip nori. Galima naudoti "
-"įvairius įskiepius ir netgi gali parašyti savo įskiepį. Picard palaiko "
+"įvairius įskiepius ir netgi gali parašyti savo įskiepį. „Picard“ palaiko "
 "daugybę garso formatų, taip pat gali peržiūrėti visą CD."
 
 #: website/frontend/templates/base.html:101
+#, fuzzy
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
-msgstr ""
+msgstr "Bendrauk su mumis: {url|„Matrix“, IRC, „Discord“}"
 
 #: website/frontend/templates/base.html:107
 msgid "Useful Links"
@@ -111,7 +113,7 @@ msgstr "Parduotuvė"
 
 #: website/frontend/templates/base.html:131
 msgid "MetaBrainz"
-msgstr "MetaBrainz"
+msgstr "„MetaBrainz“"
 
 #: website/frontend/templates/base.html:136
 msgid "Contribute Here"
@@ -119,7 +121,7 @@ msgstr "Prisidėk čia"
 
 #: website/frontend/templates/base.html:140
 msgid "Bug Tracker"
-msgstr "Klaidų sekiklis"
+msgstr "Riktų sekimas"
 
 #: website/frontend/templates/base.html:145
 msgid "Fellow Projects"
@@ -131,7 +133,7 @@ msgstr "OSS specialistas? {url|Prisidėk čia}"
 
 #: website/frontend/templates/base.html:182
 msgid "Brought to you by {metabrainz}"
-msgstr "Pristato {metabrainz}"
+msgstr "Pristato „{metabrainz}“"
 
 #: website/frontend/templates/base.html:187
 msgid "Found an Issue? {url|Report Here}"
@@ -147,22 +149,22 @@ msgid ""
 "Picard is available for all major platforms. Just download and start the "
 "installer. It's that easy."
 msgstr ""
-"Picard prieinama visose pagrindinėse platformose. Tiesiog atsisiųsk ir "
-"paleisk diegimo programą. Tai taip paprasta."
+"„Picard“ prieinama visose pagrindinėse platformose. Tiesiog atsisiųsk ir "
+"paleisk diegyklę. Tai taip paprasta."
 
 #: website/frontend/templates/downloads.html:10
 msgid "Learn about the new features in Picard {version}"
-msgstr "Sužinok apie naujas fukcijas Picard {version}"
+msgstr "Sužinoti apie naujas fukcijas programoje „Picard“ {version}"
 
 #: website/frontend/templates/downloads.html:16
 msgid "Picard for <strong>Windows</strong>"
-msgstr "Picard, skirta <strong>Windows</strong>"
+msgstr "„Picard“, skirta <strong>„Windows“</strong>"
 
 #: website/frontend/templates/downloads.html:23
 #: website/frontend/templates/downloads.html:101
 #: website/frontend/templates/downloads.html:296
 msgid "Picard Version"
-msgstr "Picard versija"
+msgstr "„Picard“ versija"
 
 #: website/frontend/templates/downloads.html:24
 #: website/frontend/templates/downloads.html:102
@@ -186,7 +188,7 @@ msgstr "Nuoroda"
 
 #: website/frontend/templates/downloads.html:31
 msgid "64-bit installer"
-msgstr "64 bitų diegimo programa"
+msgstr "64 bitų diegyklė"
 
 #: website/frontend/templates/downloads.html:36
 #: website/frontend/templates/downloads.html:46
@@ -212,15 +214,15 @@ msgstr "64 bitų nešiojamasis"
 #: website/frontend/templates/downloads.html:52
 #: website/frontend/templates/downloads.html:55
 msgid "Windows 10&thinsp;/&thinsp;11 app"
-msgstr "Windows 10&thinsp;/&thinsp;11 programėlė"
+msgstr "„Windows 10“&thinsp;/&thinsp;„11“ programėlė"
 
 #: website/frontend/templates/downloads.html:60
 msgid "Windows Store"
-msgstr "Windows Store"
+msgstr "„Windows Store“"
 
 #: website/frontend/templates/downloads.html:66
 msgid "pre-release, 64-bit installer"
-msgstr "preliminarus leidimas, 64 bitų diegimo programa"
+msgstr "preliminarus leidimas, 64 bitų diegyklė"
 
 #: website/frontend/templates/downloads.html:76
 msgid "pre-release, 64-bit portable"
@@ -228,31 +230,31 @@ msgstr "preliminarus leidimas, 64 bitų nešiojamasis"
 
 #: website/frontend/templates/downloads.html:94
 msgid "Picard for <strong>macOS</strong>"
-msgstr "Picard, skirta <strong>macOS</strong>"
+msgstr "„Picard“, skirta <strong>„macOS“</strong>"
 
 #: website/frontend/templates/downloads.html:109
 msgid "macOS 10.14+ (x86_64)"
-msgstr "macOS 10.14+ (x86_64)"
+msgstr "„macOS“ 10.14+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:119
 msgid "macOS 10.12+ (x86_64)"
-msgstr "macOS 10.12+ (x86_64)"
+msgstr "„macOS“ 10.12+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:129
 msgid "macOS 10.10+ (x86_64)"
-msgstr "macOS 10.10+ (x86_64)"
+msgstr "„macOS“ 10.10+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:140
 msgid "pre-release, macOS 10.14+ (x86_64)"
-msgstr "preliminarus leidimas, macOS 10.14+ (x86_64)"
+msgstr "preliminarus leidimas, „macOS“ 10.14+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:150
 msgid "pre-release, macOS 10.12+ (x86_64)"
-msgstr "preliminarus leidimas, macOS 10.12+ (x86_64)"
+msgstr "preliminarus leidimas, „macOS“ 10.12+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:168
 msgid "Picard for <strong>Linux</strong>"
-msgstr "Picard, skirta <strong>Linux</strong>"
+msgstr "„Picard“, skirta <strong>„Linux“</strong>"
 
 #: website/frontend/templates/downloads.html:175
 msgid "Distribution"
@@ -275,19 +277,19 @@ msgstr "naujausias paketas"
 
 #: website/frontend/templates/downloads.html:216
 msgid "read the FAQ"
-msgstr "perskaityk DUK"
+msgstr "skaityti DUK"
 
 #: website/frontend/templates/downloads.html:241
 msgid ""
 "In addition Picard is also available in the official repositories of most "
 "Linux distributions."
 msgstr ""
-"Be to, Picard taip pat prieinama daugumos Linux platinimų paketų oficialiose "
-"saugyklose."
+"Be to, „Picard“ taip pat prieinama daugumos „Linux“ platinimų paketų "
+"oficialiose saugyklose."
 
 #: website/frontend/templates/downloads.html:248
 msgid "Picard for <strong>other operating systems</strong>"
-msgstr "Picard, skirta <strong>kitoms operacinėms sistemoms</strong>"
+msgstr "„Picard“, skirta <strong>kitoms operacinėms sistemoms</strong>"
 
 #: website/frontend/templates/downloads.html:255
 msgid "Operating system"
@@ -295,7 +297,7 @@ msgstr "Operacinė sistema"
 
 #: website/frontend/templates/downloads.html:289
 msgid "Picard <strong>Source Code</strong>"
-msgstr "Picard <strong>šaltinio kodas</strong>"
+msgstr "„Picard“ <strong>šaltinio kodas</strong>"
 
 #: website/frontend/templates/downloads.html:304
 msgid "tar"
@@ -319,9 +321,9 @@ msgid ""
 "{urldev|Development} on how you can start contributing to the Picard source "
 "code."
 msgstr ""
-"Taip pat gali peržiūrėti naujausią Picard šaltinio kodą {urlgithub|Github}. "
-"Apie tai, kaip gali pradėti prisidėti prie Picard šaltinio kodo kūrimo, "
-"žiūrėk {urldev|Kūrimas}."
+"Taip pat gali peržiūrėti naujausią „Picard“ šaltinio kodą sistemoje "
+"„{urlgithub|Github}“. Apie tai, kaip gali pradėti prisidėti prie „Picard“ "
+"šaltinio kodo kūrimo, žiūrėk {urldev|Kūrimas}."
 
 #: website/frontend/templates/downloads.html:361
 msgid ""
@@ -329,11 +331,11 @@ msgid ""
 "versions of Picard, {url|browse our FTP server}."
 msgstr ""
 "Šiame puslapyje pateikiami naujausi atsisiuntimai. Jei ieškai senesnių "
-"Picard versijų, {url|naršyk mūsų FTP serverį}."
+"„Picard“ versijų, {url|naršyk mūsų FTP serverį}."
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
-msgstr "Atsisiųsti Picard"
+msgstr "Atsisiųsti „Picard“"
 
 #: website/frontend/templates/index.html:25
 msgid "Other Downloads"
@@ -352,8 +354,8 @@ msgid ""
 "Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
 "WMA, WAV, and more."
 msgstr ""
-"Picard palaiko visus populiarius muzikos formatus, įskaitant MP3, FLAC, OGG, "
-"M4A, WMA, WAV ir daugiau."
+"„Picard“ palaiko visus populiarius muzikos formatus, įskaitant MP3, FLAC, "
+"OGG, M4A, WMA, WAV ir daugiau."
 
 #: website/frontend/templates/index.html:49
 msgid "Comprehensive Database"
@@ -364,20 +366,21 @@ msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
 msgstr ""
-"Picard naudoja atvirą ir bendruomenės prižiūrimą {url|MusicBrainz} duomenų "
-"bazę, kad pateiktų tikslią informaciją apie milijonus muzikos leidinių."
+"„Picard“ naudoja atvirą ir bendruomenės prižiūrimą „{url|MusicBrainz}“ "
+"duomenų bazę, kad pateiktų tikslią informaciją apie milijonus muzikos "
+"leidinių."
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
-msgstr "AcoustID"
+msgstr "„AcoustID“"
 
 #: website/frontend/templates/index.html:75
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
 msgstr ""
-"Picard naudoja {url|AcoustID} garso atspaudus, leidžiančius identifikuoti "
-"failus pagal tikrąją muziką, net jei jie neturi metaduomenų."
+"„Picard“ naudoja „{url|AcoustID}“ garso atspaudus, leidžiančius "
+"identifikuoti failus pagal tikrąją muziką, net jei jie neturi metaduomenų."
 
 #: website/frontend/templates/index.html:85
 msgid "CD Lookups"
@@ -385,11 +388,11 @@ msgstr "CD peržiūros"
 
 #: website/frontend/templates/index.html:86
 msgid "Picard can lookup entire music CDs with a click."
-msgstr "Picard gali vienu paspaudimu peržiūrėti ištisų muzikos CD diskų."
+msgstr "„Picard“ gali vienu paspaudimu peržiūrėti ištisų muzikos CD diskų."
 
 #: website/frontend/templates/index.html:93
 msgid "Open Source"
-msgstr "Atviras kodas"
+msgstr "Atviro kodo"
 
 #: website/frontend/templates/index.html:100
 msgid ""
@@ -397,17 +400,19 @@ msgid ""
 "{urlgithub|GitHub} where it’s\n"
 "                actively developed by some awesome developers."
 msgstr ""
-"Picard yra licencijuota pagal {urlgpl|GPL 2.0 ar vėlesnę licenciją} ir "
-"talpinama {urlgithub|GitHub}, kur ją\n"
+"„Picard“ licencijuota pagal {urlgpl|GPL 2.0 ar vėlesnę licenciją} ir "
+"talpinama sistemoje „{urlgithub|GitHub}“, kur ją\n"
 "                aktyviai kuria nuostabūs kūrėjai."
 
 #: website/frontend/templates/index.html:109
 msgid "Cover Art"
-msgstr "Viršelis"
+msgstr "Viršelio apipavidalinimai"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
-msgstr "Picard gali surasti ir atsisiųsti tinkamą viršelį tavo albumams."
+msgstr ""
+"„Picard“ gali surasti ir atsisiųsti tinkamą viršelio apipavidalinimus tavo "
+"albumams."
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
@@ -419,7 +424,7 @@ msgid ""
 "specify how your music files will be named and how the tags will look like."
 msgstr ""
 "Lanksti, bet lengvai išmokstama skriptų kalba leidžia tiksliai nurodyti, "
-"kaip bus pavadinti tavo muzikos failai ir kaip atrodys žymos."
+"kaip bus pavadinti tavo muzikos failai ir kaip atrodys žymės."
 
 #: website/frontend/templates/index.html:127
 msgid "Plugin Support"
@@ -437,15 +442,15 @@ msgstr ""
 
 #: website/frontend/templates/index.html:148
 msgid "v{version} for Windows (64-bit)"
-msgstr "v{version}, skirta Windows (64 bitų)"
+msgstr "v{version}, skirta „Windows“ (64 bitų)"
 
 #: website/frontend/templates/index.html:153
 msgid "v{version} for Linux Distributions"
-msgstr "v{version}, skirta Linux platinimams paketams"
+msgstr "v{version}, skirta „Linux“ platinimams paketams"
 
 #: website/frontend/templates/index.html:158
 msgid "v{version} for macOS 10.14+"
-msgstr "v{version}, skirta macOS 10.14+"
+msgstr "v{version}, skirta „macOS“ 10.14+"
 
 #: website/frontend/templates/plugins.html:24
 msgid "Available Plugins"
@@ -454,15 +459,15 @@ msgstr "Galimi įskiepiai"
 #: website/frontend/templates/plugins.html:30
 msgid ""
 "This is a list of plugins that are currently available for use with Picard."
-msgstr "Tai – sąrašas įskiepių, kuriuos šiuo metu galima naudoti su Picard."
+msgstr "Tai – sąrašas įskiepių, kuriuos šiuo metu galima naudoti su „Picard“."
 
 #: website/frontend/templates/plugins.html:31
 msgid ""
 "The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
 "use API v1."
 msgstr ""
-"Dabartinėje leidime Picard 2.x naudojama API v2. Senesniuose Picard 1.x "
-"leidimuose naudojama API v1."
+"Dabartinis „Picard“ 2.x leidimas naudoja API v2. Senesnės „Picard“ 1.x "
+"leidimai naudoja API v1."
 
 #: website/frontend/templates/plugins.html:32
 msgid ""
@@ -487,15 +492,15 @@ msgstr "Autorius (-ė, -iai)"
 
 #: website/frontend/templates/docs/build-osx.html:3
 msgid "Build on macOS"
-msgstr "Sukurti MacOS"
+msgstr "Kurti sistemoje „MacOS“"
 
 #: website/frontend/templates/docs/build-windows.html:3
 msgid "Build on Windows"
-msgstr "Sukurti Windows"
+msgstr "Kurti sistemoje „Windows“"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
-msgstr "Kurimas"
+msgstr "Kaip kurti"
 
 #: website/frontend/templates/docs/development.html:25
 msgid "Troubleshooting"
