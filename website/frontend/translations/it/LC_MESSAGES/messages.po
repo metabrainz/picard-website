@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # "salo.rock" <salo.rock+musicbrainz@gmail.com>, 2023.
-# "salo.rock" <salo.rock@users.noreply.translations.metabrainz.org>, 2023.
+# "salo.rock" <salo.rock@users.noreply.translations.metabrainz.org>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 09:24+0200\n"
-"PO-Revision-Date: 2023-09-10 15:27+0000\n"
+"PO-Revision-Date: 2024-06-26 21:42+0000\n"
 "Last-Translator: \"salo.rock\" <salo.rock@users.noreply.translations."
 "metabrainz.org>\n"
 "Language-Team: Italian <https://translations.metabrainz.org/projects/picard/"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18.2\n"
+"X-Generator: Weblate 5.6\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -80,15 +80,15 @@ msgid ""
 "supports a wide range of audio formats and can also lookup an entire CD for "
 "you."
 msgstr ""
-"Picard ti aiuta a organizzare la tua collezione di musica rinominando i file "
-"musicali e ordinandoli in una struttura a cartelle precisamente nel modo che "
-"desideri. Ha a disposizione diversi plugin e puoi addirittura crearne di "
-"tuoi. Picard supporta un'ampia gamma di formati audio ed è anche in grado di "
-"cercare un intero CD per te."
+"Picard ti aiuta a organizzare la tua collezione musicale rinominando i file "
+"e ordinandoli in cartelle secondo la struttura che desideri. Diversi plugin "
+"sono già disponibili e puoi persino crearne di nuovi. Picard supporta "
+"un'ampia gamma di formati audio ed è anche in grado di cercare un intero CD "
+"per te."
 
 #: website/frontend/templates/base.html:101
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
-msgstr ""
+msgstr "Parla con noi: {url|Matrix, IRC, Discord}"
 
 #: website/frontend/templates/base.html:107
 msgid "Useful Links"
