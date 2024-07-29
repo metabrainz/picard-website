@@ -3,18 +3,23 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # "ApeKattQuest, MonkeyPython" <ApeKattQuestMonkeyPython@users.noreply.translations.metabrainz.org>, 2024.
+# "ApeKattQuest, MonkeyPython" <monkeypython+inst@yepmail.net>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 09:24+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-07-29 20:42+0000\n"
+"Last-Translator: \"ApeKattQuest, MonkeyPython\" <monkeypython+inst@yepmail."
+"net>\n"
+"Language-Team: Norwegian Bokmål <https://translations.metabrainz.org/"
+"projects/picard/website/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 "Generated-By: Babel 2.15.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -22,6 +27,8 @@ msgid ""
 "Official website for MusicBrainz Picard, a cross-platform music tagger "
 "written in Python."
 msgstr ""
+"Offisielt nettsted for MusicBrainz Picard, et tverrplattformmusikk-"
+"taggerprogram skrevet i Python."
 
 #: website/frontend/templates/base.html:11
 #: website/frontend/templates/base.html:47
@@ -35,34 +42,36 @@ msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz "
 "database."
 msgstr ""
+"Picard er et tverrplattformmusikk-taggerprogram drevet av MusicBrainz-"
+"databasen."
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Aktiver navigasjon"
 
 #: website/frontend/templates/base.html:52
 #: website/frontend/templates/downloads.html:3
 msgid "Downloads"
-msgstr ""
+msgstr "Nedlastninger"
 
 #: website/frontend/templates/base.html:53
 msgid "Plugins"
-msgstr ""
+msgstr "Programtillegg"
 
 #: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
 msgid "Quick Start"
-msgstr ""
+msgstr "Hurtigstart"
 
 #: website/frontend/templates/base.html:55
 #: website/frontend/templates/base.html:115
 #: website/frontend/templates/docs/base.html:3
 msgid "Documentation"
-msgstr ""
+msgstr "Dokumentasjon"
 
 #: website/frontend/templates/base.html:61
 msgid "Language"
-msgstr ""
+msgstr "Språk"
 
 #: website/frontend/templates/base.html:97
 msgid ""
@@ -128,7 +137,7 @@ msgstr ""
 #: website/frontend/templates/changelog.html:3
 #: website/frontend/templates/index.html:22
 msgid "What’s New"
-msgstr ""
+msgstr "Hva er nytt?"
 
 #: website/frontend/templates/downloads.html:7
 msgid ""
@@ -160,7 +169,7 @@ msgstr ""
 #: website/frontend/templates/downloads.html:103
 #: website/frontend/templates/downloads.html:298
 msgid "Size"
-msgstr ""
+msgstr "Størrelse"
 
 #: website/frontend/templates/downloads.html:26
 #: website/frontend/templates/downloads.html:104
@@ -312,11 +321,11 @@ msgstr ""
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
-msgstr ""
+msgstr "Last ned Picard"
 
 #: website/frontend/templates/index.html:25
 msgid "Other Downloads"
-msgstr ""
+msgstr "Andre nedlastninger"
 
 #: website/frontend/templates/index.html:30
 msgid "Screenshot"
@@ -324,45 +333,51 @@ msgstr ""
 
 #: website/frontend/templates/index.html:41
 msgid "Multiple Formats"
-msgstr ""
+msgstr "Mange formater"
 
 #: website/frontend/templates/index.html:42
 msgid ""
 "Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
 " WMA, WAV, and more."
 msgstr ""
+"Picard støtter masse populære formater, så som; mp3, flac, ogg, m4a, wma, "
+"wav og mange flere."
 
 #: website/frontend/templates/index.html:49
 msgid "Comprehensive Database"
-msgstr ""
+msgstr "Omfattende database"
 
 #: website/frontend/templates/index.html:58
 msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database "
 "to provide accurate information about millions of music releases."
 msgstr ""
+"Picard bruker den åpne og felleskaps-vedlikeholdte {url|MusicBrainz}"
+"databasen for å gi korrekt informasjon om millioner av musikkutgivelser."
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
-msgstr ""
+msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
 msgstr ""
+"Picard bruker {url|AcoustID} lydavtrykk for å identifisere filer basert på "
+"selve musikken, også uten eksisterende metadata."
 
 #: website/frontend/templates/index.html:85
 msgid "CD Lookups"
-msgstr ""
+msgstr "CD oppsøk"
 
 #: website/frontend/templates/index.html:86
 msgid "Picard can lookup entire music CDs with a click."
-msgstr ""
+msgstr "Picard kan søke opp CDer med ett enkelt klikk."
 
 #: website/frontend/templates/index.html:93
 msgid "Open Source"
-msgstr ""
+msgstr "Åpen kildekode"
 
 #: website/frontend/templates/index.html:100
 msgid ""
@@ -370,14 +385,17 @@ msgid ""
 "{urlgithub|GitHub} where it’s\n"
 "                actively developed by some awesome developers."
 msgstr ""
+"Picard er lisensiert under {urlgpl|GPL 2.0 eller nyere}, og huses på "
+"{urlgithub|GitHub} under aktivt vedlikeholdt av noen absolutt formidable "
+"utviklere."
 
 #: website/frontend/templates/index.html:109
 msgid "Cover Art"
-msgstr ""
+msgstr "Omslagsbilder"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
-msgstr ""
+msgstr "Picard kan finne og laste ned de riktige omslagsbildene for dine album."
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
@@ -435,11 +453,11 @@ msgstr ""
 
 #: website/frontend/templates/plugins.html:55
 msgid "Name"
-msgstr ""
+msgstr "Navn"
 
 #: website/frontend/templates/plugins.html:56
 msgid "Version"
-msgstr ""
+msgstr "Versjon"
 
 #: website/frontend/templates/plugins.html:57
 msgid "Description"
