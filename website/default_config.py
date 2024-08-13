@@ -25,24 +25,24 @@ PLUGIN_VERSIONS = {
 # The Picard developers have standardized on using only 'dev' or 'final' as the str_type segment of the version tuple.
 PICARD_VERSIONS = {
     'stable': {
-        'tag': '2.12',
-        'version': (2, 12, 0, 'final', 0),
+        'tag': '2.12.1',
+        'version': (2, 12, 1, 'final', 0),
         'urls': {
             'download': 'https://picard.musicbrainz.org/',
-            'changelog': 'https://blog.metabrainz.org/2024/06/27/picard-2-12-released/',
+            'changelog': 'https://blog.metabrainz.org/2024/08/13/picard-2-12-1-released/',
         },
         'win_size': '31',
-        'win_hash': '9289abc05c670ce9aac8419a5412cf45',
+        'win_hash': '0fc9b4a2d0b344d2f6a34bbb3aca10ed',
         'win_portable_size': '45',
-        'win_portable_hash': '6841746d79b5a5d149efcdb889ac4073',
+        'win_portable_hash': '8f4507072831a15e487fa0432855f67a',
         'mac_10_12_size': '35',
-        'mac_10_12_hash': 'ccb84d0f375a6e01cc511a46c228e54d',
+        'mac_10_12_hash': '163c295dd120a94b54c94cffb94f8cb4',
         'mac_size': '38',
-        'mac_hash': '9cf1e8545022d6482b9e1ef2e88d2107',
+        'mac_hash': 'b2c7655c6c733a20d436bb7eea39cab1',
         'source_tar_size': '5.6',
-        'source_tar_hash': '68273b25ae4b0416ec927a8d7fd4f1f8',
+        'source_tar_hash': 'cb9e48de4c8da49e2b7f7fa10b9acc0f',
         'source_zip_size': '6.2',
-        'source_zip_hash': '3fe2a6277ab8051d7030ad51e28c7a9b',
+        'source_zip_hash': '6acfd087f678abc6ff367377c39f59cc',
     },
     'beta': {
         'tag': '2.11.0rc1',
