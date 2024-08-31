@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 09:24+0200\n"
-"PO-Revision-Date: 2024-05-20 10:42+0000\n"
-"Last-Translator: wileyfoxyx <wileyfoxyx@users.noreply.translations."
-"metabrainz.org>\n"
+"PO-Revision-Date: 2024-08-31 12:42+0000\n"
+"Last-Translator: wileyfoxyx <wileyfoxyx@users.noreply.translations.metabrainz"
+".org>\n"
 "Language-Team: Russian <https://translations.metabrainz.org/projects/picard/"
 "website/ru/>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5.4\n"
+"X-Generator: Weblate 5.7.1\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: website/frontend/templates/base.html:7
@@ -88,7 +88,7 @@ msgstr ""
 
 #: website/frontend/templates/base.html:101
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
-msgstr ""
+msgstr "Пообщайтесь с нами в {url|Matrix, IRC, Discord}"
 
 #: website/frontend/templates/base.html:107
 msgid "Useful Links"
@@ -128,7 +128,7 @@ msgstr "Дружественные проекты"
 
 #: website/frontend/templates/base.html:173
 msgid "OSS Geek? {url|Contribute Here}"
-msgstr ""
+msgstr "Разбираетесь в OSS? {url|Внесите вклад здесь}"
 
 #: website/frontend/templates/base.html:182
 msgid "Brought to you by {metabrainz}"
@@ -148,7 +148,7 @@ msgid ""
 "Picard is available for all major platforms. Just download and start the "
 "installer. It's that easy."
 msgstr ""
-"Picard доступен для всех основных платформ. Просто загрузите и запустите "
+"Picard доступен на всех основных платформах. Просто загрузите и запустите "
 "установщик. Вот так легко."
 
 #: website/frontend/templates/downloads.html:10
@@ -365,9 +365,9 @@ msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
 msgstr ""
-"Picard использует открытую и поддерживаемую сообществом базу данных {url|"
-"MusicBrainz} для предоставления точных данных о миллионах музыкальных "
-"релизах."
+"Picard использует открытую и поддерживаемую сообществом базу данных "
+"{url|MusicBrainz} для предоставления точных данных о миллионах музыкальных "
+"релизов."
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
@@ -392,7 +392,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:93
 msgid "Open Source"
-msgstr "С открытым кодом"
+msgstr "Открытый исходный код"
 
 #: website/frontend/templates/index.html:100
 msgid ""
@@ -402,7 +402,7 @@ msgid ""
 msgstr ""
 "Picard распространяется по лицензии {urlgpl|GPL 2.0 or later}, и хранится на "
 "{urlgithub|GitHub}, где\n"
-"                активно разрабатывается крутыми разработчиками.."
+"                активно разрабатывается крутыми разработчиками."
 
 #: website/frontend/templates/index.html:109
 msgid "Cover Art"
@@ -426,7 +426,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:127
 msgid "Plugin Support"
-msgstr "Поддерживает плагины"
+msgstr "Поддержка плагинов"
 
 #: website/frontend/templates/index.html:129
 msgid ""
