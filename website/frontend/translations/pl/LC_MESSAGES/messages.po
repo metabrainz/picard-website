@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 09:24+0200\n"
-"PO-Revision-Date: 2024-08-31 12:42+0000\n"
+"PO-Revision-Date: 2024-09-01 13:42+0000\n"
 "Last-Translator: Echelon666 <echelon01@wp.pl>\n"
 "Language-Team: Polish <https://translations.metabrainz.org/projects/picard/"
 "website/pl/>\n"
@@ -135,7 +135,7 @@ msgstr "Dostarczone przez {metabrainz}"
 
 #: website/frontend/templates/base.html:187
 msgid "Found an Issue? {url|Report Here}"
-msgstr "Znalazłeś problem? {url|Zgłoś się tutaj}"
+msgstr "Znalazłeś problem? {url|Zgłoś to tutaj}"
 
 #: website/frontend/templates/changelog.html:3
 #: website/frontend/templates/index.html:22
