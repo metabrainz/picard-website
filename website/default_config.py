@@ -85,6 +85,8 @@ SUPPORTED_LANGUAGES = [
     'it',
     'lt',
     'nl',
+    'pl',
+    'ru',
     'tr',
 ]
 
