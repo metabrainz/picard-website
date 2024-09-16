@@ -4,13 +4,14 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # stiltezh <theyarmolyuk@gmail.com>, 2023.
 # Nerten <alex@nerten.info>, 2023.
+# Echelon666 <echelon01@wp.pl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 09:24+0200\n"
-"PO-Revision-Date: 2023-12-22 19:28+0000\n"
-"Last-Translator: Nerten <alex@nerten.info>\n"
+"PO-Revision-Date: 2024-09-16 11:42+0000\n"
+"Last-Translator: Echelon666 <echelon01@wp.pl>\n"
 "Language-Team: Ukrainian <https://translations.metabrainz.org/projects/"
 "picard/website/uk/>\n"
 "Language: uk\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.3\n"
+"X-Generator: Weblate 5.7.2\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: website/frontend/templates/base.html:7
@@ -36,9 +37,10 @@ msgstr "MusicBrainz Picard"
 
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
+#, fuzzy
 msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz database."
-msgstr ""
+msgstr "Picard — це кросплатформний музичний теггер на базі даних MusicBrainz."
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
@@ -328,23 +330,30 @@ msgstr ""
 
 #: website/frontend/templates/index.html:41
 msgid "Multiple Formats"
-msgstr ""
+msgstr "Кілька форматів"
 
 #: website/frontend/templates/index.html:42
+#, fuzzy
 msgid ""
 "Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
 "WMA, WAV, and more."
 msgstr ""
+"Picard підтримує всі популярні музичні формати, включаючи MP3, FLAC, OGG, "
+"M4A, WMA, WAV тощо."
 
 #: website/frontend/templates/index.html:49
+#, fuzzy
 msgid "Comprehensive Database"
-msgstr ""
+msgstr "Комплексна база даних"
 
 #: website/frontend/templates/index.html:58
+#, fuzzy
 msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
 msgstr ""
+"Picard використовує відкриту базу даних {url|MusicBrainz}, яку підтримує "
+"спільнота, щоб надати точну інформацію про мільйони музичних релізів."
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
