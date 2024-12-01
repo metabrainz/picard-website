@@ -38,7 +38,7 @@ authors = [
 
 [tool.poetry.dependencies]
 python = "^3.9"
-blinker = "^1.8"
+blinker = "^1.9"
 cachelib = "^0.13.0"
 Flask = "^3.0.3"
 Flask-APScheduler = "^1.13.1"
