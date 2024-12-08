@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # yyb987 <yyb987@users.noreply.translations.metabrainz.org>, 2024.
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 09:24+0200\n"
-"PO-Revision-Date: 2024-12-02 15:42+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-12-08 14:42+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Japanese <https://translations.metabrainz.org/projects/picard/"
 "website/ja/>\n"
 "Language: ja\n"
@@ -49,8 +50,9 @@ msgid "Downloads"
 msgstr ""
 
 #: website/frontend/templates/base.html:53
+#, fuzzy
 msgid "Plugins"
-msgstr ""
+msgstr "プラグイン"
 
 #: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
@@ -64,8 +66,9 @@ msgid "Documentation"
 msgstr ""
 
 #: website/frontend/templates/base.html:61
+#, fuzzy
 msgid "Language"
-msgstr ""
+msgstr "言語"
 
 #: website/frontend/templates/base.html:97
 msgid ""
@@ -350,8 +353,9 @@ msgid ""
 msgstr ""
 
 #: website/frontend/templates/index.html:66
+#, fuzzy
 msgid "AcoustID"
-msgstr ""
+msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
 msgid ""
@@ -379,16 +383,18 @@ msgid ""
 msgstr ""
 
 #: website/frontend/templates/index.html:109
+#, fuzzy
 msgid "Cover Art"
-msgstr ""
+msgstr "カバーアート"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
 msgstr ""
 
 #: website/frontend/templates/index.html:119
+#, fuzzy
 msgid "Scripting"
-msgstr ""
+msgstr "スクリプト"
 
 #: website/frontend/templates/index.html:120
 msgid ""
@@ -441,12 +447,14 @@ msgid "The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
 
 #: website/frontend/templates/plugins.html:55
+#, fuzzy
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: website/frontend/templates/plugins.html:56
+#, fuzzy
 msgid "Version"
-msgstr ""
+msgstr "バージョン"
 
 #: website/frontend/templates/plugins.html:57
 msgid "Description"
