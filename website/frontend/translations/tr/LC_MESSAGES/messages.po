@@ -1,4 +1,4 @@
-# Translations template for PROJECT.
+# Turkish translations for PROJECT.
 # Copyright (C) 2024 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-21 09:24+0200\n"
+"POT-Creation-Date: 2025-01-10 08:58+0100\n"
 "PO-Revision-Date: 2024-07-20 11:42+0000\n"
 "Last-Translator: brtc <brtc@users.noreply.translations.metabrainz.org>\n"
-"Language-Team: Turkish <https://translations.metabrainz.org/projects/picard/"
-"website/tr/>\n"
 "Language: tr\n"
+"Language-Team: Turkish "
+"<https://translations.metabrainz.org/projects/picard/website/tr/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
 msgid ""
@@ -41,8 +40,8 @@ msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz "
 "database."
 msgstr ""
-"Picard, MusicBrainz veri tabanı tarafından desteklenen, platformlar arası "
-"bir müzik etiketleme yazılımıdır."
+"Picard, MusicBrainz veri tabanı tarafından desteklenen, platformlar arası"
+" bir müzik etiketleme yazılımıdır."
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
@@ -80,11 +79,11 @@ msgid ""
 "Picard supports a wide range of audio formats and can also lookup an "
 "entire CD for you."
 msgstr ""
-"Picard, müzik dosyalarınızı yeniden adlandırarak ve bunları tam istediğiniz "
-"gibi bir klasör yapısında sıralayarak müzik koleksiyonunuzu düzenlemenize "
-"yardımcı olur. Çeşitli eklentiler mevcuttur ve hatta kendinizinkini bile "
-"yazabilirsiniz. Picard çok çeşitli ses biçimlerini destekler ve ayrıca sizin "
-"için bir CD'nin tamamını arayabilir."
+"Picard, müzik dosyalarınızı yeniden adlandırarak ve bunları tam "
+"istediğiniz gibi bir klasör yapısında sıralayarak müzik koleksiyonunuzu "
+"düzenlemenize yardımcı olur. Çeşitli eklentiler mevcuttur ve hatta "
+"kendinizinkini bile yazabilirsiniz. Picard çok çeşitli ses biçimlerini "
+"destekler ve ayrıca sizin için bir CD'nin tamamını arayabilir."
 
 #: website/frontend/templates/base.html:101
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
@@ -319,8 +318,8 @@ msgid ""
 "source code."
 msgstr ""
 "Ayrıca en son Picard kaynak kodunu {urlgithub|Github}'da "
-"görüntüleyebilirsiniz. Picard kaynak koduna nasıl katkıda bulunabileceğinizi "
-"öğrenmek için {urldev|Geliştirme} sayfasına bakın."
+"görüntüleyebilirsiniz. Picard kaynak koduna nasıl katkıda "
+"bulunabileceğinizi öğrenmek için {urldev|Geliştirme} sayfasına bakın."
 
 #: website/frontend/templates/downloads.html:361
 msgid ""
@@ -351,8 +350,8 @@ msgid ""
 "Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
 " WMA, WAV, and more."
 msgstr ""
-"Picard, MP3, FLAC, OGG, M4A, WMA, WAV ve daha fazlası dahil olmak üzere tüm "
-"popüler müzik biçimlerini destekler."
+"Picard, MP3, FLAC, OGG, M4A, WMA, WAV ve daha fazlası dahil olmak üzere "
+"tüm popüler müzik biçimlerini destekler."
 
 #: website/frontend/templates/index.html:49
 msgid "Comprehensive Database"
@@ -363,8 +362,9 @@ msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database "
 "to provide accurate information about millions of music releases."
 msgstr ""
-"Picard, milyonlarca müziğin sürümü hakkında doğru bilgi sağlamak için açık "
-"ve topluluk tarafından korunan {url|MusicBrainz} veri tabanını kullanıyor."
+"Picard, milyonlarca müziğin sürümü hakkında doğru bilgi sağlamak için "
+"açık ve topluluk tarafından korunan {url|MusicBrainz} veri tabanını "
+"kullanıyor."
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
@@ -407,8 +407,7 @@ msgstr "Kapak Görseli"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
-msgstr ""
-"Picard, albümleriniz için doğru kapak görselini bulabilir ve indirebilir."
+msgstr "Picard, albümleriniz için doğru kapak görselini bulabilir ve indirebilir."
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
@@ -421,8 +420,8 @@ msgid ""
 "like."
 msgstr ""
 "Esnek ancak öğrenmesi kolay bir komut dili, müzik dosyalarınızın nasıl "
-"adlandırılacağını ve etiketlerin nasıl görüneceğini tam olarak belirtmenize "
-"olanak tanır."
+"adlandırılacağını ve etiketlerin nasıl görüneceğini tam olarak "
+"belirtmenize olanak tanır."
 
 #: website/frontend/templates/index.html:127
 msgid "Plugin Support"
@@ -465,8 +464,8 @@ msgid ""
 "The current release of Picard 2.x uses API v2. The older Picard 1.x "
 "releases use API v1."
 msgstr ""
-"Picard 2.x'in mevcut sürümü API v2'yi kullanıyor. Eski Picard 1.x sürümleri "
-"API v1'i kullanır."
+"Picard 2.x'in mevcut sürümü API v2'yi kullanıyor. Eski Picard 1.x "
+"sürümleri API v1'i kullanır."
 
 #: website/frontend/templates/plugins.html:32
 msgid "The table is generated from the data of our plugin {urlrepo|repository}."
@@ -513,5 +512,6 @@ msgid ""
 "You don't have to worry, someone is working on fixing things as you're "
 "reading this."
 msgstr ""
-"Endişelenmenize gerek yok, siz bunu okurken birileri bazı şeyleri düzeltmeye "
-"çalışıyor."
+"Endişelenmenize gerek yok, siz bunu okurken birileri bazı şeyleri "
+"düzeltmeye çalışıyor."
+

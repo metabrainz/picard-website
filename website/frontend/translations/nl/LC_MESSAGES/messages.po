@@ -1,35 +1,35 @@
-# Translations template for PROJECT.
+# Dutch translations for PROJECT.
 # Copyright (C) 2023 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # mfmeulenbelt <mfmeulenbelt@gmail.com>, 2023.
 # Philipp Wolfer <ph.wolfer@gmail.com>, 2023.
-# mfmeulenbelt <mfmeulenbelt@users.noreply.translations.metabrainz.org>, 2024.
+# mfmeulenbelt <mfmeulenbelt@users.noreply.translations.metabrainz.org>,
+# 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-21 09:24+0200\n"
+"POT-Creation-Date: 2025-01-10 08:58+0100\n"
 "PO-Revision-Date: 2024-08-05 20:42+0000\n"
-"Last-Translator: mfmeulenbelt <mfmeulenbelt@users.noreply.translations."
-"metabrainz.org>\n"
-"Language-Team: Dutch <https://translations.metabrainz.org/projects/picard/"
-"website/nl/>\n"
+"Last-Translator: mfmeulenbelt "
+"<mfmeulenbelt@users.noreply.translations.metabrainz.org>\n"
 "Language: nl\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Dutch "
+"<https://translations.metabrainz.org/projects/picard/website/nl/>\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
-"Generated-By: Babel 2.12.1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
 msgid ""
 "Official website for MusicBrainz Picard, a cross-platform music tagger "
 "written in Python."
 msgstr ""
-"Officiële website van MusicBrainz Picard, een platformoverschrijdende tagger "
-"voor muziek, geschreven in Python."
+"Officiële website van MusicBrainz Picard, een platformoverschrijdende "
+"tagger voor muziek, geschreven in Python."
 
 #: website/frontend/templates/base.html:11
 #: website/frontend/templates/base.html:47
@@ -40,7 +40,8 @@ msgstr "MusicBrainz Picard"
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
 msgid ""
-"Picard is a cross-platform music tagger powered by the MusicBrainz database."
+"Picard is a cross-platform music tagger powered by the MusicBrainz "
+"database."
 msgstr ""
 "Picard is een platformoverschrijdende tagger voor muziek op basis van de "
 "MusicBrainz-databank."
@@ -75,17 +76,17 @@ msgstr "Taal"
 
 #: website/frontend/templates/base.html:97
 msgid ""
-"Picard helps you organize your music collection by renaming your music files "
-"and sorting them into a folder structure exactly the way you want it. A "
-"variety of plugins are available and you can even write your own. Picard "
-"supports a wide range of audio formats and can also lookup an entire CD for "
-"you."
+"Picard helps you organize your music collection by renaming your music "
+"files and sorting them into a folder structure exactly the way you want "
+"it. A variety of plugins are available and you can even write your own. "
+"Picard supports a wide range of audio formats and can also lookup an "
+"entire CD for you."
 msgstr ""
-"Met Picard kan je je muziekverzameling beheren door je muziekbestanden naar "
-"je eigen voorkeuren te hernoemen en op te slaan in een mappenstructuur. Er "
-"zijn veel plug-ins beschikbaar en je kan ook zelf plug-ins schrijven. Picard "
-"ondersteunt een breed scala aan audioformaten en kan ook een hele cd voor je "
-"opzoeken."
+"Met Picard kan je je muziekverzameling beheren door je muziekbestanden "
+"naar je eigen voorkeuren te hernoemen en op te slaan in een "
+"mappenstructuur. Er zijn veel plug-ins beschikbaar en je kan ook zelf "
+"plug-ins schrijven. Picard ondersteunt een breed scala aan audioformaten "
+"en kan ook een hele cd voor je opzoeken."
 
 #: website/frontend/templates/base.html:101
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
@@ -281,8 +282,8 @@ msgstr "lees de veelgestelde vragen"
 
 #: website/frontend/templates/downloads.html:241
 msgid ""
-"In addition Picard is also available in the official repositories of most "
-"Linux distributions."
+"In addition Picard is also available in the official repositories of most"
+" Linux distributions."
 msgstr ""
 "Picard is ook in de officiële opslagplaatsen van de meeste Linux-"
 "distributies beschikbaar."
@@ -317,9 +318,9 @@ msgstr "testversie, zip"
 
 #: website/frontend/templates/downloads.html:354
 msgid ""
-"You can also view the latest Picard source code on {urlgithub|Github}. See "
-"{urldev|Development} on how you can start contributing to the Picard source "
-"code."
+"You can also view the latest Picard source code on {urlgithub|Github}. "
+"See {urldev|Development} on how you can start contributing to the Picard "
+"source code."
 msgstr ""
 "Je kan de nieuwste Picard-broncode ook op {urlgithub|Github} vinden. Zie "
 "{urldev|Ontwikkeling} als je wil weten hoe je aan de broncode van Picard "
@@ -351,11 +352,11 @@ msgstr "Verschillende indelingen"
 
 #: website/frontend/templates/index.html:42
 msgid ""
-"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
-"WMA, WAV, and more."
+"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
+" WMA, WAV, and more."
 msgstr ""
-"Picard ondersteunt alle populaire muziekindelingen, zoals mp3, flac, ogg, "
-"m4a, wma en wav."
+"Picard ondersteunt alle populaire muziekindelingen, zoals mp3, flac, ogg,"
+" m4a, wma en wav."
 
 #: website/frontend/templates/index.html:49
 msgid "Comprehensive Database"
@@ -363,11 +364,12 @@ msgstr "Uitgebreide databank"
 
 #: website/frontend/templates/index.html:58
 msgid ""
-"Picard uses the open and community-maintained {url|MusicBrainz} database to "
-"provide accurate information about millions of music releases."
+"Picard uses the open and community-maintained {url|MusicBrainz} database "
+"to provide accurate information about millions of music releases."
 msgstr ""
-"Picard gebruikt de open en gemeenschappelijk onderhouden {url|MusicBrainz}-"
-"databank om je nauwkeurige informatie over miljoenen uitgaven te geven."
+"Picard gebruikt de open en gemeenschappelijk onderhouden "
+"{url|MusicBrainz}-databank om je nauwkeurige informatie over miljoenen "
+"uitgaven te geven."
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
@@ -378,8 +380,8 @@ msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
 msgstr ""
-"Picard gebruikt {url|AcoustID}-audiovingerafdrukken om bestanden aan de hand "
-"van de muziek te herkennen, zelfs als ze geen tags hebben."
+"Picard gebruikt {url|AcoustID}-audiovingerafdrukken om bestanden aan de "
+"hand van de muziek te herkennen, zelfs als ze geen tags hebben."
 
 #: website/frontend/templates/index.html:85
 msgid "CD Lookups"
@@ -400,7 +402,8 @@ msgid ""
 "                actively developed by some awesome developers."
 msgstr ""
 "Picard heeft een {urlgpl|GPL 2.0-licentie of hoger} en wordt gehost op "
-"{urlgithub|GitHub}, waar het door geweldige ontwikkelaars wordt ontwikkeld."
+"{urlgithub|GitHub}, waar het door geweldige ontwikkelaars wordt "
+"ontwikkeld."
 
 #: website/frontend/templates/index.html:109
 msgid "Cover Art"
@@ -408,8 +411,7 @@ msgstr "Hoesafbeeldingen"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
-msgstr ""
-"Picard kan de juiste afbeeldingen voor je uitgaven vinden en downloaden."
+msgstr "Picard kan de juiste afbeeldingen voor je uitgaven vinden en downloaden."
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
@@ -418,11 +420,12 @@ msgstr "Scripting"
 #: website/frontend/templates/index.html:120
 msgid ""
 "A flexible but easy to learn scripting language allows you to exactly "
-"specify how your music files will be named and how the tags will look like."
+"specify how your music files will be named and how the tags will look "
+"like."
 msgstr ""
-"Een flexibele maar eenvoudig te leren scripttaal geeft je de mogelijkheid om "
-"de bestandsnamen en tags van je muziekbestanden aan je eigen wensen aan te "
-"passen."
+"Een flexibele maar eenvoudig te leren scripttaal geeft je de mogelijkheid"
+" om de bestandsnamen en tags van je muziekbestanden aan je eigen wensen "
+"aan te passen."
 
 #: website/frontend/templates/index.html:127
 msgid "Plugin Support"
@@ -430,12 +433,12 @@ msgstr "Plug-inondersteuning"
 
 #: website/frontend/templates/index.html:129
 msgid ""
-"If you need a particular feature, you can choose from a selection of {url|"
-"available plugins} or write\n"
+"If you need a particular feature, you can choose from a selection of "
+"{url|available plugins} or write\n"
 "                your own."
 msgstr ""
-"Als je een bepaalde functie nodig hebt, kan je kiezen uit een brede selectie "
-"{url|beschikbare plug-ins} of er zelf een schrijven."
+"Als je een bepaalde functie nodig hebt, kan je kiezen uit een brede "
+"selectie {url|beschikbare plug-ins} of er zelf een schrijven."
 
 #: website/frontend/templates/index.html:148
 msgid "v{version} for Windows (64-bit)"
@@ -455,23 +458,23 @@ msgstr "Beschikbare plug-ins"
 
 #: website/frontend/templates/plugins.html:30
 msgid ""
-"This is a list of plugins that are currently available for use with Picard."
+"This is a list of plugins that are currently available for use with "
+"Picard."
 msgstr "Dit is een lijst met plug-ins die nu voor Picard beschikbaar zijn."
 
 #: website/frontend/templates/plugins.html:31
 msgid ""
-"The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
-"use API v1."
+"The current release of Picard 2.x uses API v2. The older Picard 1.x "
+"releases use API v1."
 msgstr ""
 "De huidige versiereeks van Picard, 2.x, gebruikt API-versie 2. De oudere "
 "versiereeks, 1.x, gebruikt API-versie 1."
 
 #: website/frontend/templates/plugins.html:32
-msgid ""
-"The table is generated from the data of our plugin {urlrepo|repository}."
+msgid "The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
-"De tabel is aangemaakt op basis van informatie uit onze {urlrepo|"
-"opslagplaats} voor plug-ins."
+"De tabel is aangemaakt op basis van informatie uit onze "
+"{urlrepo|opslagplaats} voor plug-ins."
 
 #: website/frontend/templates/plugins.html:55
 msgid "Name"
@@ -523,3 +526,4 @@ msgstr "Geen zorgen: terwijl je dit leest is iemand het al aan het oplossen."
 
 #~ msgid "EU Mirror"
 #~ msgstr "Europese spiegelserver"
+
