@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # jaimeMF <musicbrainz@jregistros.fastmail.net>, 2023.
-# Philipp Wolfer <ph.wolfer@gmail.com>, 2023.
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2023, 2025.
 # reosarevok <reosarevok@users.noreply.translations.metabrainz.org>, 2023.
 # jaimeMF <jaimeMF@users.noreply.translations.metabrainz.org>, 2024.
 # Echelon666 <echelon01@wp.pl>, 2024.
@@ -14,8 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-10 08:58+0100\n"
 "PO-Revision-Date: 2025-01-11 08:44+0000\n"
-"Last-Translator: afrocat <afrocat@users.noreply.translations.metabrainz.org>"
-"\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Spanish <https://translations.metabrainz.org/projects/picard/"
 "website/es/>\n"
 "Language: es\n"
@@ -118,7 +117,6 @@ msgid "Shop"
 msgstr "Tienda"
 
 #: website/frontend/templates/base.html:131
-#, fuzzy
 msgid "MetaBrainz"
 msgstr "MetaBrainz"
 
