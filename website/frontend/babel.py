@@ -3,12 +3,25 @@ from flask_babel import Babel, Locale, get_locale
 
 
 def init_app(app):
-    babel = Babel(app)
+    with app.app_context():
+        babel = Babel(app)
+        available_locales = babel.list_translations()
+        desired_languages = app.config['SUPPORTED_LANGUAGES']
 
-    app.config['LANGUAGES'] = {}
-    for language in app.config['SUPPORTED_LANGUAGES']:
-        app.config['LANGUAGES'][
-            language] = Locale.parse(language).language_name
+        found_locales = {}
+        for language in desired_languages:
+            try:
+                locale = Locale.parse(language)
+                if locale in available_locales:
+                    found_locales[language] = locale.language_name
+            except BaseException as e:
+                app.logger.error('%s',  e)
+
+        if not found_locales:
+            found_locales = {str(l): l.language_name for l in available_locales}
+
+        app.config['LANGUAGES'] = found_locales
+        app.logger.debug('Languages: %r', list(app.config['LANGUAGES']))
 
     @app.after_request
     def call_after_request_callbacks(response):
@@ -23,10 +36,10 @@ def init_app(app):
         return f
 
     def get_locale():
-        supported_languages = app.config['SUPPORTED_LANGUAGES']
+        languages = list(app.config['LANGUAGES'])
         language_arg = request.args.get('l')
         if language_arg is not None:
-            if language_arg in supported_languages:
+            if language_arg in languages:
                 @after_this_request
                 def remember_language(response):
                     response.set_cookie('language', language_arg)
@@ -34,10 +47,11 @@ def init_app(app):
                 return language_arg
         else:
             language_cookie = request.cookies.get('language')
-            if language_cookie in supported_languages:
-                return language_cookie
+            if language_cookie is not None:
+                if language_cookie in languages:
+                    return language_cookie
 
-        return request.accept_languages.best_match(supported_languages)
+        return request.accept_languages.best_match(languages)
 
     @app.context_processor
     def inject_language_var():
