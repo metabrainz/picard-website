@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-10 08:58+0100\n"
-"PO-Revision-Date: 2025-01-11 08:44+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-01-12 17:44+0000\n"
+"Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://translations.metabrainz.org/projects/picard/"
 "website/sq/>\n"
 "Language: sq\n"
@@ -25,6 +25,8 @@ msgid ""
 "Official website for MusicBrainz Picard, a cross-platform music tagger "
 "written in Python."
 msgstr ""
+"Sajti zyrtar për MusicBrainz Picard, një etiketues ndërplatformësh i shkruar "
+"në Python."
 
 #: website/frontend/templates/base.html:11
 #: website/frontend/templates/base.html:47
@@ -37,34 +39,36 @@ msgstr "MusicBrainz Picard"
 msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr ""
+"Picard-i është një etiketues ndërplatformësh muzike që bazohet në bazën e të "
+"dhënave MusicBrainz."
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Shfaqni/fshini lëvizjen"
 
 #: website/frontend/templates/base.html:52
 #: website/frontend/templates/downloads.html:3
 msgid "Downloads"
-msgstr ""
+msgstr "Shkarkime"
 
 #: website/frontend/templates/base.html:53
 msgid "Plugins"
-msgstr ""
+msgstr "Shtojca"
 
 #: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
 msgid "Quick Start"
-msgstr ""
+msgstr "Nisje e Shpejtë"
 
 #: website/frontend/templates/base.html:55
 #: website/frontend/templates/base.html:115
 #: website/frontend/templates/docs/base.html:3
 msgid "Documentation"
-msgstr ""
+msgstr "Dokumentim"
 
 #: website/frontend/templates/base.html:61
 msgid "Language"
-msgstr ""
+msgstr "Gjuhë"
 
 #: website/frontend/templates/base.html:97
 msgid ""
@@ -82,92 +86,94 @@ msgstr ""
 
 #: website/frontend/templates/base.html:101
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
-msgstr ""
+msgstr "Bisedoni me ne: {url|Matrix, IRC, Discord}"
 
 #: website/frontend/templates/base.html:107
 msgid "Useful Links"
-msgstr ""
+msgstr "Lidhje të Dobishme"
 
 #: website/frontend/templates/base.html:111
 msgid "Donate"
-msgstr ""
+msgstr "Dhuroni"
 
 #: website/frontend/templates/base.html:119
 msgid "Community"
-msgstr ""
+msgstr "Bashkësi"
 
 #: website/frontend/templates/base.html:123
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: website/frontend/templates/base.html:127
 msgid "Shop"
-msgstr ""
+msgstr "Shitore"
 
 #: website/frontend/templates/base.html:131
 msgid "MetaBrainz"
-msgstr ""
+msgstr "MetaBrainz"
 
 #: website/frontend/templates/base.html:136
 msgid "Contribute Here"
-msgstr ""
+msgstr "Kontribuoni Këtu"
 
 #: website/frontend/templates/base.html:140
 msgid "Bug Tracker"
-msgstr ""
+msgstr "Ndjekës të Metash"
 
 #: website/frontend/templates/base.html:145
 msgid "Fellow Projects"
-msgstr ""
+msgstr "Projekte të Afërt"
 
 #: website/frontend/templates/base.html:173
 msgid "OSS Geek? {url|Contribute Here}"
-msgstr ""
+msgstr "Programues OSS? {url|Kontribuoni Këtu}"
 
 #: website/frontend/templates/base.html:182
 msgid "Brought to you by {metabrainz}"
-msgstr ""
+msgstr "Sjellë për ju nga {metabrainz}"
 
 #: website/frontend/templates/base.html:187
 msgid "Found an Issue? {url|Report Here}"
-msgstr ""
+msgstr "Gjetën një Problem? {url|Njoftojeni Këtu}"
 
 #: website/frontend/templates/changelog.html:3
 #: website/frontend/templates/index.html:22
 msgid "What’s New"
-msgstr ""
+msgstr "Ç’ka të Re"
 
 #: website/frontend/templates/downloads.html:7
 msgid ""
 "Picard is available for all major platforms. Just download and start the "
 "installer. It's that easy."
 msgstr ""
+"Picard mund të kihet për krejt platformat e njohura. Thjesht shkarkoni dhe "
+"vini në punë instaluesin. Kaq e lehtë është."
 
 #: website/frontend/templates/downloads.html:10
 msgid "Learn about the new features in Picard {version}"
-msgstr ""
+msgstr "Mësoni mbi veçoritë e reja në Picard {version}"
 
 #: website/frontend/templates/downloads.html:16
 msgid "Picard for <strong>Windows</strong>"
-msgstr ""
+msgstr "Picard për <strong>Windows</strong>"
 
 #: website/frontend/templates/downloads.html:23
 #: website/frontend/templates/downloads.html:101
 #: website/frontend/templates/downloads.html:296
 msgid "Picard Version"
-msgstr ""
+msgstr "Version Picard-i"
 
 #: website/frontend/templates/downloads.html:24
 #: website/frontend/templates/downloads.html:102
 #: website/frontend/templates/downloads.html:297
 msgid "MD5 Hash"
-msgstr ""
+msgstr "Hash MD5"
 
 #: website/frontend/templates/downloads.html:25
 #: website/frontend/templates/downloads.html:103
 #: website/frontend/templates/downloads.html:298
 msgid "Size"
-msgstr ""
+msgstr "Madhësi"
 
 #: website/frontend/templates/downloads.html:26
 #: website/frontend/templates/downloads.html:104
@@ -175,11 +181,11 @@ msgstr ""
 #: website/frontend/templates/downloads.html:256
 #: website/frontend/templates/downloads.html:299
 msgid "Link"
-msgstr ""
+msgstr "Lidhje"
 
 #: website/frontend/templates/downloads.html:31
 msgid "64-bit installer"
-msgstr ""
+msgstr "Instalues 64-bit"
 
 #: website/frontend/templates/downloads.html:36
 #: website/frontend/templates/downloads.html:46
@@ -196,113 +202,115 @@ msgstr ""
 #: website/frontend/templates/downloads.html:340
 #: website/frontend/templates/plugins.html:71
 msgid "Download"
-msgstr ""
+msgstr "Shkarkoje"
 
 #: website/frontend/templates/downloads.html:41
 msgid "64-bit portable"
-msgstr ""
+msgstr "64-bit, i bartshëm"
 
 #: website/frontend/templates/downloads.html:52
 #: website/frontend/templates/downloads.html:55
 msgid "Windows 10&thinsp;/&thinsp;11 app"
-msgstr ""
+msgstr "Aplikacion për Windows 10&thinsp;/&thinsp;11"
 
 #: website/frontend/templates/downloads.html:60
 msgid "Windows Store"
-msgstr ""
+msgstr "Windows Store"
 
 #: website/frontend/templates/downloads.html:66
 msgid "pre-release, 64-bit installer"
-msgstr ""
+msgstr "hedhje paraprake në qarkullim, instalues 64-bit"
 
 #: website/frontend/templates/downloads.html:76
 msgid "pre-release, 64-bit portable"
-msgstr ""
+msgstr "hedhje paraprake në qarkullim, 64-bit, i bartshëm"
 
 #: website/frontend/templates/downloads.html:94
 msgid "Picard for <strong>macOS</strong>"
-msgstr ""
+msgstr "Picard për <strong>macOS</strong>"
 
 #: website/frontend/templates/downloads.html:109
 msgid "macOS 10.14+ (x86_64)"
-msgstr ""
+msgstr "macOS 10.14+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:119
 msgid "macOS 10.12+ (x86_64)"
-msgstr ""
+msgstr "macOS 10.12+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:129
 msgid "macOS 10.10+ (x86_64)"
-msgstr ""
+msgstr "macOS 10.10+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:140
 msgid "pre-release, macOS 10.14+ (x86_64)"
-msgstr ""
+msgstr "hedhje paraprake në qarkullim, macOS 10.14+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:150
 msgid "pre-release, macOS 10.12+ (x86_64)"
-msgstr ""
+msgstr "hedhje paraprake në qarkullim, macOS 10.12+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:168
 msgid "Picard for <strong>Linux</strong>"
-msgstr ""
+msgstr "Picard për <strong>Linux</strong>"
 
 #: website/frontend/templates/downloads.html:175
 msgid "Distribution"
-msgstr ""
+msgstr "Shpërndarje"
 
 #: website/frontend/templates/downloads.html:181
 #: website/frontend/templates/downloads.html:189
 msgid "All distributions"
-msgstr ""
+msgstr "Krejt shpërndarjet"
 
 #: website/frontend/templates/downloads.html:183
 #: website/frontend/templates/downloads.html:191
 msgid "Instructions"
-msgstr ""
+msgstr "Udhëzime"
 
 #: website/frontend/templates/downloads.html:215
 #: website/frontend/templates/downloads.html:228
 msgid "latest package"
-msgstr ""
+msgstr "paketa më e re"
 
 #: website/frontend/templates/downloads.html:216
 msgid "read the FAQ"
-msgstr ""
+msgstr "lexoni PBR"
 
 #: website/frontend/templates/downloads.html:241
 msgid ""
 "In addition Picard is also available in the official repositories of most "
 "Linux distributions."
 msgstr ""
+"Veç kësaj, Picard-i gjendet edhe në depot zyrtare të shumicës së "
+"shpërndarjeve Linux."
 
 #: website/frontend/templates/downloads.html:248
 msgid "Picard for <strong>other operating systems</strong>"
-msgstr ""
+msgstr "Picard për <strong>sisteme të tjerë operativë</strong>"
 
 #: website/frontend/templates/downloads.html:255
 msgid "Operating system"
-msgstr ""
+msgstr "Sistem operativ"
 
 #: website/frontend/templates/downloads.html:289
 msgid "Picard <strong>Source Code</strong>"
-msgstr ""
+msgstr "<strong>Kodin Burim</strong> i Picard-it"
 
 #: website/frontend/templates/downloads.html:304
 msgid "tar"
-msgstr ""
+msgstr "tar"
 
 #: website/frontend/templates/downloads.html:314
 msgid "zip"
-msgstr ""
+msgstr "zip"
 
 #: website/frontend/templates/downloads.html:325
 msgid "pre-release, tar"
-msgstr ""
+msgstr "hedhje paraprake në qarkullim, tar"
 
 #: website/frontend/templates/downloads.html:335
 msgid "pre-release, zip"
-msgstr ""
+msgstr "hedhje paraprake në qarkullim, zip"
 
 #: website/frontend/templates/downloads.html:354
 msgid ""
@@ -310,66 +318,78 @@ msgid ""
 "{urldev|Development} on how you can start contributing to the Picard source "
 "code."
 msgstr ""
+"Mundeni edhe të shihni kodin burim më të ri të Picard-it në "
+"{urlgithub|Github}. Se si mund të nisni të jepni ndihmesë në kodin burim të "
+"Picard-it, shihni te {urldev|Zhvillim}."
 
 #: website/frontend/templates/downloads.html:361
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
 msgstr ""
+"Kjo faqe paraqet shkarkimet më të freskëta. Nëse po kërkoni për versione më "
+"të vjetër të Picard-it, {url|shfletoni shërbyesin tonë FTP}."
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
-msgstr ""
+msgstr "Shkarkojeni Picard-in"
 
 #: website/frontend/templates/index.html:25
 msgid "Other Downloads"
-msgstr ""
+msgstr "Shkarkime të Tjera"
 
 #: website/frontend/templates/index.html:30
 msgid "Screenshot"
-msgstr ""
+msgstr "Foto ekrani"
 
 #: website/frontend/templates/index.html:41
 msgid "Multiple Formats"
-msgstr ""
+msgstr "Formate të Shumtë"
 
 #: website/frontend/templates/index.html:42
 msgid ""
 "Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
 "WMA, WAV, and more."
 msgstr ""
+"Picard-i mbulon krejt formatet popullore për muzikën, përfshi MP3, FLAC, "
+"OGG, M4A, WMA, WAV, etj."
 
 #: website/frontend/templates/index.html:49
 msgid "Comprehensive Database"
-msgstr ""
+msgstr "Bazë Shteruese të Dhënash"
 
 #: website/frontend/templates/index.html:58
 msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
 msgstr ""
+"Picard-i përdor bazën e të dhënave të hapët dhe të mirëmbajtur nga bashkësia "
+"{url|MusicBrainz} për të dhënë informacion të përpiktë rreth milionash "
+"hedhjesh muzikore në qarkullim."
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
-msgstr ""
+msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
 msgstr ""
+"Picard-i përdor shenja gishtash {url|AcoustID} audio, duke lejuar që "
+"kartelat të identifikohen nga muzikë faktike, edhe nëse s’kanë tejtëdhëna."
 
 #: website/frontend/templates/index.html:85
 msgid "CD Lookups"
-msgstr ""
+msgstr "Kërkim CD-sh"
 
 #: website/frontend/templates/index.html:86
 msgid "Picard can lookup entire music CDs with a click."
-msgstr ""
+msgstr "Picard-i mund të kërkojë për CD të tëra muzikore me një klikim."
 
 #: website/frontend/templates/index.html:93
 msgid "Open Source"
-msgstr ""
+msgstr "Burim i Hapët"
 
 #: website/frontend/templates/index.html:100
 msgid ""
@@ -377,28 +397,34 @@ msgid ""
 "{urlgithub|GitHub} where it’s\n"
 "                actively developed by some awesome developers."
 msgstr ""
+"Picard-i licencohet sipas {urlgpl|GPL 2.0 ose të mëvonshëm} dhe strehohet në "
+"{urlgithub|GitHub},\n"
+"                ku zhvillohet aktivisht nga disa programues të mrekullueshëm."
 
 #: website/frontend/templates/index.html:109
 msgid "Cover Art"
-msgstr ""
+msgstr "Kopertinë"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
-msgstr ""
+msgstr "Picard-i mund të gjejë dhe shkarkojë kapakun e saktë për albumet tuaja."
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
-msgstr ""
+msgstr "Shkrim Programthesh"
 
 #: website/frontend/templates/index.html:120
 msgid ""
 "A flexible but easy to learn scripting language allows you to exactly "
 "specify how your music files will be named and how the tags will look like."
 msgstr ""
+"Një gjuhë script-imi e zhdërvjellët, por e kollajtë për t’u mësuar, ju lejon "
+"të specifikoni saktësisht se si do të emërtohen kartelat tuaja muzikore dhe "
+"se si do të duken etiketat."
 
 #: website/frontend/templates/index.html:127
 msgid "Plugin Support"
-msgstr ""
+msgstr "Asistencë Shtojce"
 
 #: website/frontend/templates/index.html:129
 msgid ""
@@ -406,77 +432,86 @@ msgid ""
 "available plugins} or write\n"
 "                your own."
 msgstr ""
+"Nëse ju duhet një veçori e caktuar, mund të zgjidhni nga një përzgjedhje "
+"{url|shtojcash të gatshme},\n"
+"                ose të shkruani tuajën."
 
 #: website/frontend/templates/index.html:148
 msgid "v{version} for Windows (64-bit)"
-msgstr ""
+msgstr "v{version} për Windows (64-bit)"
 
 #: website/frontend/templates/index.html:153
 msgid "v{version} for Linux Distributions"
-msgstr ""
+msgstr "v{version} Shpërndarje GNU/Linux"
 
 #: website/frontend/templates/index.html:158
 msgid "v{version} for macOS 10.14+"
-msgstr ""
+msgstr "v{version} për macOS 10.14+"
 
 #: website/frontend/templates/plugins.html:24
 msgid "Available Plugins"
-msgstr ""
+msgstr "Shtojca të Gatshme"
 
 #: website/frontend/templates/plugins.html:30
 msgid ""
 "This is a list of plugins that are currently available for use with Picard."
 msgstr ""
+"Kjo është një listë e shtojcave që janë të gatshme për përdorim me Picard-in."
 
 #: website/frontend/templates/plugins.html:31
 msgid ""
 "The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
 "use API v1."
 msgstr ""
+"Hedhja e tanishme në qarkullim e Picard 2.x përdor API v2. Hedhjet e "
+"dikurshme në qarkullim Picard 1.x përdorin API v1."
 
 #: website/frontend/templates/plugins.html:32
 msgid ""
 "The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
+"Tabela është prodhuar nga të dhëna të {urlrepo|depos} sonë të shtojcave."
 
 #: website/frontend/templates/plugins.html:55
 msgid "Name"
-msgstr ""
+msgstr "Emër"
 
 #: website/frontend/templates/plugins.html:56
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: website/frontend/templates/plugins.html:57
 msgid "Description"
-msgstr ""
+msgstr "Përshkrim"
 
 #: website/frontend/templates/plugins.html:58
 msgid "Author(s)"
-msgstr ""
+msgstr "Autor(ë)"
 
 #: website/frontend/templates/docs/build-osx.html:3
 msgid "Build on macOS"
-msgstr ""
+msgstr "Montojeni në macOS"
 
 #: website/frontend/templates/docs/build-windows.html:3
 msgid "Build on Windows"
-msgstr ""
+msgstr "Montojeni në Windows"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
-msgstr ""
+msgstr "Zhvillim"
 
 #: website/frontend/templates/docs/development.html:25
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Diagnostikim"
 
 #: website/frontend/templates/errors/404.html:3
 msgid "404 Not Found"
-msgstr ""
+msgstr "404 S’u Gjet"
 
 #: website/frontend/templates/errors/404.html:6
 msgid ""
 "You don't have to worry, someone is working on fixing things as you're "
 "reading this."
 msgstr ""
+"S’keni pse bëheni merak, dikush po merret me ndreqje gjërash teksa lexoni "
+"këtë."
