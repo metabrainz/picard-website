@@ -1,4 +1,4 @@
-from flask import g, request
+from flask import g, request, abort
 from flask_babel import Babel, Locale, get_locale
 
 
@@ -45,11 +45,15 @@ def init_app(app):
                     response.set_cookie('language', language_arg)
 
                 return language_arg
+            else:
+                abort(400)
         else:
             language_cookie = request.cookies.get('language')
             if language_cookie is not None:
                 if language_cookie in languages:
                     return language_cookie
+                else:
+                    abort(400)
 
         return request.accept_languages.best_match(languages)
 
