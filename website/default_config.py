@@ -76,6 +76,7 @@ PICARD_VERSIONS = {
 DOCS_BASE_URL = "https://picard-docs.musicbrainz.org"
 CHANGELOG_URL = "https://raw.githubusercontent.com/musicbrainz/picard/master/NEWS.md"
 FILESERVER_URL = "https://data.musicbrainz.org/pub/musicbrainz/picard"
+HELP_WITH_TRANSLATION_URL = "https://translations.metabrainz.org/projects/picard/website/"
 CHANGELOG_CACHE_TIMEOUT = 5 * 60
 
 SUPPORTED_LANGUAGES = [

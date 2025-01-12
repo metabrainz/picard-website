@@ -64,6 +64,8 @@
                 {% for language in config.LANGUAGES|dictsort(false, 'value') %}
                 <li><a href="?l={{ language[0] }}">{{ language[1]|capitalize }}</a></li>
                 {% endfor %}
+		<li class="divider"></li>
+		<li><a href="{{ config.HELP_WITH_TRANSLATION_URL }}">{{ _("Help with translation") }}</a></li>
               </ul>
             </li>
           </ul>
