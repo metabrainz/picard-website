@@ -79,6 +79,7 @@ FILESERVER_URL = "https://data.musicbrainz.org/pub/musicbrainz/picard"
 HELP_WITH_TRANSLATION_URL = "https://translations.metabrainz.org/projects/picard/website/"
 CHANGELOG_CACHE_TIMEOUT = 5 * 60
 
+# An empty SUPPORTED_LANGUAGES list will select all available translations
 SUPPORTED_LANGUAGES = [
     'en',
     'de',
