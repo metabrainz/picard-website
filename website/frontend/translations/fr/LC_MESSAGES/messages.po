@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-10 08:58+0100\n"
+"POT-Creation-Date: 2025-01-13 16:49+0100\n"
 "PO-Revision-Date: 2024-09-05 09:42+0000\n"
 "Last-Translator: Echelon666 <echelon01@wp.pl>\n"
 "Language-Team: French <https://translations.metabrainz.org/projects/picard/"
@@ -63,7 +63,7 @@ msgid "Quick Start"
 msgstr "Démarrage rapide"
 
 #: website/frontend/templates/base.html:55
-#: website/frontend/templates/base.html:115
+#: website/frontend/templates/base.html:117
 #: website/frontend/templates/docs/base.html:3
 msgid "Documentation"
 msgstr "Documentation"
@@ -72,7 +72,11 @@ msgstr "Documentation"
 msgid "Language"
 msgstr "Langue"
 
-#: website/frontend/templates/base.html:97
+#: website/frontend/templates/base.html:68
+msgid "Help with translation"
+msgstr "Aider à traduire"
+
+#: website/frontend/templates/base.html:99
 msgid ""
 "Picard helps you organize your music collection by renaming your music files "
 "and sorting them into a folder structure exactly the way you want it. A "
@@ -86,55 +90,55 @@ msgstr ""
 "même créer le vôtre. Picard supporte une grande variété de formats audio et "
 "peut aussi rechercher un CD entier pour vous."
 
-#: website/frontend/templates/base.html:101
+#: website/frontend/templates/base.html:103
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
 msgstr "Chat avec nous : {url|Matrix, IRC, Discord}"
 
-#: website/frontend/templates/base.html:107
+#: website/frontend/templates/base.html:109
 msgid "Useful Links"
 msgstr "Liens utiles"
 
-#: website/frontend/templates/base.html:111
+#: website/frontend/templates/base.html:113
 msgid "Donate"
 msgstr "Faire un don"
 
-#: website/frontend/templates/base.html:119
+#: website/frontend/templates/base.html:121
 msgid "Community"
 msgstr "Communauté"
 
-#: website/frontend/templates/base.html:123
+#: website/frontend/templates/base.html:125
 msgid "Blog"
 msgstr "Blogue"
 
-#: website/frontend/templates/base.html:127
+#: website/frontend/templates/base.html:129
 msgid "Shop"
 msgstr "Boutique"
 
-#: website/frontend/templates/base.html:131
+#: website/frontend/templates/base.html:133
 msgid "MetaBrainz"
 msgstr "MetaBrainz"
 
-#: website/frontend/templates/base.html:136
+#: website/frontend/templates/base.html:138
 msgid "Contribute Here"
 msgstr "Contribuer ici"
 
-#: website/frontend/templates/base.html:140
+#: website/frontend/templates/base.html:142
 msgid "Bug Tracker"
 msgstr "Suivi de bogues"
 
-#: website/frontend/templates/base.html:145
+#: website/frontend/templates/base.html:147
 msgid "Fellow Projects"
 msgstr "Projets associés"
 
-#: website/frontend/templates/base.html:173
+#: website/frontend/templates/base.html:175
 msgid "OSS Geek? {url|Contribute Here}"
 msgstr "OSS Geek ? {url|Contribuer ici}"
 
-#: website/frontend/templates/base.html:182
+#: website/frontend/templates/base.html:184
 msgid "Brought to you by {metabrainz}"
 msgstr "Délivré pour vous par la {metabrainz}"
 
-#: website/frontend/templates/base.html:187
+#: website/frontend/templates/base.html:189
 msgid "Found an Issue? {url|Report Here}"
 msgstr "Problème découvert ? {url|Rapporter ici}"
 
