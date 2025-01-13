@@ -10,4 +10,4 @@ Translations: https://translations.metabrainz.org/projects/picard/website/
 
 ## Updating `website/frontend/messages.pot` from sources
 
-Run `poetry run npm run extract_strings`
+Run `npm run extract_strings`
