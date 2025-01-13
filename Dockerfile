@@ -24,10 +24,10 @@ WORKDIR /code/website
 
 # Python dependencies
 RUN pip install --upgrade pip \
-    && pip install uWSGI==2.0.23 poetry==1.7.1
+    && pip install uWSGI==2.0.23 poetry==2.0.1
 COPY poetry.lock pyproject.toml /code/website/
 RUN poetry config virtualenvs.create false \
-    && poetry install --no-interaction --no-ansi
+    && poetry install --no-interaction --no-ansi --no-root --with dev
 
 # Node dependencies
 COPY ./package.json /code/website/
