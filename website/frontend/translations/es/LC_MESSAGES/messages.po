@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-10 08:58+0100\n"
-"PO-Revision-Date: 2025-01-11 08:44+0000\n"
+"PO-Revision-Date: 2025-01-13 15:52+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Spanish <https://translations.metabrainz.org/projects/picard/"
 "website/es/>\n"
@@ -48,9 +48,8 @@ msgstr ""
 "de MusicBrainz."
 
 #: website/frontend/templates/base.html:42
-#, fuzzy
 msgid "Toggle navigation"
-msgstr "Toggle navigation"
+msgstr ""
 
 #: website/frontend/templates/base.html:52
 #: website/frontend/templates/downloads.html:3
