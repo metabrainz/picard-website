@@ -214,8 +214,8 @@ msgid "Windows 10&thinsp;/&thinsp;11 app"
 msgstr "Windows 10&thinsp;/&thinsp;11 uygulaması"
 
 #: website/frontend/templates/downloads.html:60
-msgid "Windows Store"
-msgstr "Windows Mağazası"
+msgid "Microsoft Store"
+msgstr "Microsoft Mağazası"
 
 #: website/frontend/templates/downloads.html:66
 msgid "pre-release, 64-bit installer"

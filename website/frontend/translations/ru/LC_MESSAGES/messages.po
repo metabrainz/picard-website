@@ -215,7 +215,7 @@ msgid "Windows 10&thinsp;/&thinsp;11 app"
 msgstr "приложение для Windows 10&thinsp;/&thinsp;11"
 
 #: website/frontend/templates/downloads.html:60
-msgid "Windows Store"
+msgid "Microsoft Store"
 msgstr "Microsoft Store"
 
 #: website/frontend/templates/downloads.html:66

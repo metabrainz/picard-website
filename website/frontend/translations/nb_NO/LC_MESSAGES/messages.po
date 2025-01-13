@@ -209,7 +209,7 @@ msgid "Windows 10&thinsp;/&thinsp;11 app"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:60
-msgid "Windows Store"
+msgid "Microsoft Store"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:66

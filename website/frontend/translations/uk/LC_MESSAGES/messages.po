@@ -222,7 +222,7 @@ msgid "Windows 10&thinsp;/&thinsp;11 app"
 msgstr "Програма Windows 10&thinsp;/&thinsp;11"
 
 #: website/frontend/templates/downloads.html:60
-msgid "Windows Store"
+msgid "Microsoft Store"
 msgstr "Магазин Microsoft"
 
 #: website/frontend/templates/downloads.html:66
