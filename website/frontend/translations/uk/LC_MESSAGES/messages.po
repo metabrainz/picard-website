@@ -5,13 +5,14 @@
 # stiltezh <theyarmolyuk@gmail.com>, 2023.
 # Nerten <alex@nerten.info>, 2023.
 # Echelon666 <echelon01@wp.pl>, 2024.
+# emptybrainz <okep.and.spore@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-10 08:58+0100\n"
-"PO-Revision-Date: 2024-09-21 18:42+0000\n"
-"Last-Translator: Echelon666 <echelon01@wp.pl>\n"
+"PO-Revision-Date: 2025-01-13 15:52+0000\n"
+"Last-Translator: emptybrainz <okep.and.spore@gmail.com>\n"
 "Language-Team: Ukrainian <https://translations.metabrainz.org/projects/"
 "picard/website/uk/>\n"
 "Language: uk\n"
@@ -20,6 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.9.2\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -27,7 +29,7 @@ msgid ""
 "Official website for MusicBrainz Picard, a cross-platform music tagger "
 "written in Python."
 msgstr ""
-"Офіційний веб-сайт MusicBrainz Picard, крос-платформного музичного тегера, "
+"Офіційний вебсайт MusicBrainz Picard, кросплатформного музичного теггера, "
 "написаного на Python."
 
 #: website/frontend/templates/base.html:11
@@ -38,13 +40,11 @@ msgstr "MusicBrainz Picard"
 
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
-#, fuzzy
 msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz database."
-msgstr "Picard — це кросплатформний музичний теггер на базі даних MusicBrainz."
+msgstr "Picard — це кросплатформний теггер музики на базі даних MusicBrainz."
 
 #: website/frontend/templates/base.html:42
-#, fuzzy
 msgid "Toggle navigation"
 msgstr "Увімкнути навігацію"
 
@@ -87,18 +87,16 @@ msgstr ""
 "компакт-диск."
 
 #: website/frontend/templates/base.html:101
-#, fuzzy
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
-msgstr "Chat з нами: {url|Matrix, IRC, Discord}"
+msgstr "Напишіть нам: {url|Matrix, IRC, Discord}"
 
 #: website/frontend/templates/base.html:107
-#, fuzzy
 msgid "Useful Links"
 msgstr "Корисні посилання"
 
 #: website/frontend/templates/base.html:111
 msgid "Donate"
-msgstr "Пожертвуйте"
+msgstr "Пожертвування"
 
 #: website/frontend/templates/base.html:119
 msgid "Community"
@@ -118,7 +116,7 @@ msgstr "MetaBrainz"
 
 #: website/frontend/templates/base.html:136
 msgid "Contribute Here"
-msgstr "Зробити свій внесок тут"
+msgstr "Зробіть свій внесок тут"
 
 #: website/frontend/templates/base.html:140
 msgid "Bug Tracker"
@@ -126,21 +124,19 @@ msgstr "Відстеження помилок"
 
 #: website/frontend/templates/base.html:145
 msgid "Fellow Projects"
-msgstr "Проекти колег"
+msgstr "Проєкти колег"
 
 #: website/frontend/templates/base.html:173
-#, fuzzy
 msgid "OSS Geek? {url|Contribute Here}"
-msgstr "OSS Geek? {url|Зробити свій внесок}"
+msgstr "Підтримуєте відкрите ПЗ? {url|Зробіть свій внесок}"
 
 #: website/frontend/templates/base.html:182
-#, fuzzy
 msgid "Brought to you by {metabrainz}"
 msgstr "Представлено {metabrainz}"
 
 #: website/frontend/templates/base.html:187
 msgid "Found an Issue? {url|Report Here}"
-msgstr "Знайшли проблему? {url|Повідомити тут}"
+msgstr "Знайшли проблему? {url|Повідомте тут}"
 
 #: website/frontend/templates/changelog.html:3
 #: website/frontend/templates/index.html:22
@@ -172,9 +168,8 @@ msgstr "Версія Picard"
 #: website/frontend/templates/downloads.html:24
 #: website/frontend/templates/downloads.html:102
 #: website/frontend/templates/downloads.html:297
-#, fuzzy
 msgid "MD5 Hash"
-msgstr "MD5 Hash"
+msgstr "MD5-хеш"
 
 #: website/frontend/templates/downloads.html:25
 #: website/frontend/templates/downloads.html:103
@@ -192,7 +187,7 @@ msgstr "Посилання"
 
 #: website/frontend/templates/downloads.html:31
 msgid "64-bit installer"
-msgstr "64-bit інсталятор"
+msgstr "64-біт інсталятор"
 
 #: website/frontend/templates/downloads.html:36
 #: website/frontend/templates/downloads.html:46
@@ -213,13 +208,12 @@ msgstr "Завантажити"
 
 #: website/frontend/templates/downloads.html:41
 msgid "64-bit portable"
-msgstr "64-bit портативний"
+msgstr "64-біт портативний"
 
 #: website/frontend/templates/downloads.html:52
 #: website/frontend/templates/downloads.html:55
-#, fuzzy
 msgid "Windows 10&thinsp;/&thinsp;11 app"
-msgstr "Програма Windows 10&thinsp;/&thinsp;11"
+msgstr "Застосунок для Windows 10&thinsp;/&thinsp;11"
 
 #: website/frontend/templates/downloads.html:60
 msgid "Microsoft Store"
@@ -227,11 +221,11 @@ msgstr "Магазин Microsoft"
 
 #: website/frontend/templates/downloads.html:66
 msgid "pre-release, 64-bit installer"
-msgstr "попередній випуск, 64-bit інсталятор"
+msgstr "передвипуск, 64-біт інсталятор"
 
 #: website/frontend/templates/downloads.html:76
 msgid "pre-release, 64-bit portable"
-msgstr "попередній випуск, 64-bit портативний"
+msgstr "передвипуск, 64-біт портативний"
 
 #: website/frontend/templates/downloads.html:94
 msgid "Picard for <strong>macOS</strong>"
@@ -251,11 +245,11 @@ msgstr "macOS 10.10+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:140
 msgid "pre-release, macOS 10.14+ (x86_64)"
-msgstr "попередній випуск, macOS 10.14+ (x86_64)"
+msgstr "передвипуск, macOS 10.14+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:150
 msgid "pre-release, macOS 10.12+ (x86_64)"
-msgstr "попередній випуск, macOS 10.12+ (x86_64)"
+msgstr "передвипуск, macOS 10.12+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:168
 msgid "Picard for <strong>Linux</strong>"
@@ -268,7 +262,7 @@ msgstr "Дистрибутив"
 #: website/frontend/templates/downloads.html:181
 #: website/frontend/templates/downloads.html:189
 msgid "All distributions"
-msgstr "Всі дистрибутивів"
+msgstr "Всі дистрибутиви"
 
 #: website/frontend/templates/downloads.html:183
 #: website/frontend/templates/downloads.html:191
@@ -278,7 +272,7 @@ msgstr "Інструкції"
 #: website/frontend/templates/downloads.html:215
 #: website/frontend/templates/downloads.html:228
 msgid "latest package"
-msgstr "останній пакет"
+msgstr "найновіший пакет"
 
 #: website/frontend/templates/downloads.html:216
 msgid "read the FAQ"
@@ -289,7 +283,7 @@ msgid ""
 "In addition Picard is also available in the official repositories of most "
 "Linux distributions."
 msgstr ""
-"Крім того, Picard також доступний в офіційних сховищах більшості "
+"Крім того, Picard також доступний в офіційних репозиторіях більшості "
 "дистрибутивів Linux."
 
 #: website/frontend/templates/downloads.html:248
@@ -326,9 +320,9 @@ msgid ""
 "{urldev|Development} on how you can start contributing to the Picard source "
 "code."
 msgstr ""
-"Ви також можете переглянути останній вихідний код Picard на {urlgithub|"
-"Github}. Перегляньте {urldev|Development} про те, як ви можете почати робити "
-"внесок у вихідний код Picard."
+"Ви також можете переглянути вихідний код найновішого Picard на "
+"{urlgithub|GitHub}. Дивіться \"{urldev|Розробка}\", якщо Ви бажаєте почати "
+"робити внесок у вихідний код Picard."
 
 #: website/frontend/templates/downloads.html:361
 msgid ""
@@ -352,56 +346,49 @@ msgstr "Скріншот"
 
 #: website/frontend/templates/index.html:41
 msgid "Multiple Formats"
-msgstr "Кілька форматів"
+msgstr "Багато форматів"
 
 #: website/frontend/templates/index.html:42
-#, fuzzy
 msgid ""
 "Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
 "WMA, WAV, and more."
 msgstr ""
-"Picard підтримує всі популярні музичні формати, включаючи MP3, FLAC, OGG, "
+"Picard підтримує всі популярні музичні формати, в тому числі MP3, FLAC, OGG, "
 "M4A, WMA, WAV тощо."
 
 #: website/frontend/templates/index.html:49
-#, fuzzy
 msgid "Comprehensive Database"
 msgstr "Комплексна база даних"
 
 #: website/frontend/templates/index.html:58
-#, fuzzy
 msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
 msgstr ""
 "Picard використовує відкриту базу даних {url|MusicBrainz}, яку підтримує "
-"спільнота, щоб надати точну інформацію про мільйони музичних релізів."
+"спільнота, щоб надавати точну інформацію про мільйони музичних релізів."
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
 msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
-#, fuzzy
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
 msgstr ""
 "Picard використовує аудіовідбитки {url|AcoustID}, що дозволяє ідентифікувати "
-"файли за фактичною музикою, навіть якщо вони не мають метаданих."
+"файли за фактичною музикою, навіть якщо вони не містять метаданих."
 
 #: website/frontend/templates/index.html:85
-#, fuzzy
 msgid "CD Lookups"
 msgstr "Пошук CD"
 
 #: website/frontend/templates/index.html:86
-#, fuzzy
 msgid "Picard can lookup entire music CDs with a click."
-msgstr "Picard може одним клацанням шукати цілі музичні компакт-диски."
+msgstr "Picard може одним натиском миші шукати цілі компакт-диски з музикою."
 
 #: website/frontend/templates/index.html:93
-#, fuzzy
 msgid "Open Source"
 msgstr "Відкритий код"
 
@@ -423,7 +410,7 @@ msgstr "Обкладинки"
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
 msgstr ""
-"Picard може знайти та завантажити правильну обкладинку для ваших альбомів."
+"Picard може знайти та завантажити правильні обкладинки для ваших альбомів."
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
@@ -438,7 +425,6 @@ msgstr ""
 "будуть називатися ваші музичні файли та як виглядатимуть теги."
 
 #: website/frontend/templates/index.html:127
-#, fuzzy
 msgid "Plugin Support"
 msgstr "Підтримка плагінів"
 
@@ -454,7 +440,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:148
 msgid "v{version} for Windows (64-bit)"
-msgstr "v{version} для Windows (64-bit)"
+msgstr "v{version} для Windows (64-біт)"
 
 #: website/frontend/templates/index.html:153
 msgid "v{version} for Linux Distributions"
@@ -474,7 +460,6 @@ msgid ""
 msgstr "Це список плагінів, які зараз доступні для використання з Picard."
 
 #: website/frontend/templates/plugins.html:31
-#, fuzzy
 msgid ""
 "The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
 "use API v1."
@@ -483,10 +468,9 @@ msgstr ""
 "використовують API v1."
 
 #: website/frontend/templates/plugins.html:32
-#, fuzzy
 msgid ""
 "The table is generated from the data of our plugin {urlrepo|repository}."
-msgstr "Таблиця створена з даних нашого плагіна {urlrepo|сховище}."
+msgstr "Таблиця створена з даних нашого {urlrepo|репозиторію} плагінів."
 
 #: website/frontend/templates/plugins.html:55
 msgid "Name"
@@ -505,18 +489,16 @@ msgid "Author(s)"
 msgstr "Автор(и)"
 
 #: website/frontend/templates/docs/build-osx.html:3
-#, fuzzy
 msgid "Build on macOS"
-msgstr "Створення на базі macOS"
+msgstr "Збірка на macOS"
 
 #: website/frontend/templates/docs/build-windows.html:3
-#, fuzzy
 msgid "Build on Windows"
-msgstr "Створення на базі Windows"
+msgstr "Збірка на Windows"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
-msgstr "Розвиток"
+msgstr "Розробка"
 
 #: website/frontend/templates/docs/development.html:25
 msgid "Troubleshooting"
