@@ -6,13 +6,14 @@
 # Nerten <alex@nerten.info>, 2023.
 # Echelon666 <echelon01@wp.pl>, 2024.
 # emptybrainz <okep.and.spore@gmail.com>, 2025.
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2025-01-13 15:52+0000\n"
-"Last-Translator: emptybrainz <okep.and.spore@gmail.com>\n"
+"PO-Revision-Date: 2025-01-13 16:51+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Ukrainian <https://translations.metabrainz.org/projects/"
 "picard/website/uk/>\n"
 "Language: uk\n"
@@ -397,7 +398,6 @@ msgid "Open Source"
 msgstr "Відкритий код"
 
 #: website/frontend/templates/index.html:100
-#, fuzzy
 msgid ""
 "Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
 "{urlgithub|GitHub} where it’s\n"

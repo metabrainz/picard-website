@@ -2,13 +2,13 @@
 # Copyright (C) 2022 ORGANIZATION
 # This file is distributed under the same license as the MusicBrainz Picard
 # project.
-# Philipp Wolfer <ph.wolfer@gmail.com>, 2022, 2023, 2024.
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2024-06-26 21:42+0000\n"
+"PO-Revision-Date: 2025-01-13 16:51+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://translations.metabrainz.org/projects/picard/"
 "website/de/>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.9.2\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -71,7 +72,7 @@ msgstr "Sprache"
 
 #: website/frontend/templates/base.html:68
 msgid "Help with translation"
-msgstr ""
+msgstr "Hilf zu übersetzen"
 
 #: website/frontend/templates/base.html:99
 msgid ""
