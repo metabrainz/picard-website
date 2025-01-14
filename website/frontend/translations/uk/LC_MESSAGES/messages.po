@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2025-01-13 16:51+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2025-01-14 17:44+0000\n"
+"Last-Translator: emptybrainz <okep.and.spore@gmail.com>\n"
 "Language-Team: Ukrainian <https://translations.metabrainz.org/projects/"
 "picard/website/uk/>\n"
 "Language: uk\n"
@@ -75,7 +75,7 @@ msgstr "Мова"
 
 #: website/frontend/templates/base.html:68
 msgid "Help with translation"
-msgstr ""
+msgstr "Допомогти з перекладом"
 
 #: website/frontend/templates/base.html:99
 msgid ""
@@ -222,7 +222,7 @@ msgstr "Застосунок для Windows 10&thinsp;/&thinsp;11"
 
 #: website/frontend/templates/downloads.html:60
 msgid "Microsoft Store"
-msgstr "Магазин Microsoft"
+msgstr "Microsoft Store"
 
 #: website/frontend/templates/downloads.html:66
 msgid "pre-release, 64-bit installer"
@@ -403,9 +403,9 @@ msgid ""
 "{urlgithub|GitHub} where it’s\n"
 "                actively developed by some awesome developers."
 msgstr ""
-"Picard ліцензовано відповідно до {urlgpl|GPL 2.0 або пізнішої версії} та "
-"розміщено на {urlgithub|GitHub}, де\n"
-" активно розробляється деякими чудовими розробниками."
+"Picard ліцензується відповідно до {urlgpl|GPL 2.0 або пізнішої версії} та "
+"розміщається на {urlgithub|GitHub}, де\n"
+"                активно розробляється кількома чудовими розробниками."
 
 #: website/frontend/templates/index.html:109
 msgid "Cover Art"
