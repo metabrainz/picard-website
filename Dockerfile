@@ -50,7 +50,8 @@ RUN python -m pytest
 COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
 
 # Cleanup build dependencies
-#RUN poetry install --no-dev
+RUN poetry remove --no-interaction --no-ansi --group dev \
+    flask-testing pytest pytest-cov
 RUN rm -rf ./node_modules .pytest_cache .coverage \
     && apt-get purge -y $BUILD_DEPS \
     && apt-get autoremove -y \
