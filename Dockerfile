@@ -24,10 +24,10 @@ WORKDIR /code/website
 
 # Python dependencies
 RUN pip install --upgrade pip \
-    && pip install uWSGI==2.0.23 poetry==1.7.1
+    && pip install uWSGI==2.0.23 poetry==2.0.1
 COPY poetry.lock pyproject.toml /code/website/
 RUN poetry config virtualenvs.create false \
-    && poetry install --no-interaction --no-ansi
+    && poetry install --no-interaction --no-ansi --no-root --with dev
 
 # Node dependencies
 COPY ./package.json /code/website/
@@ -50,7 +50,8 @@ RUN python -m pytest
 COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
 
 # Cleanup build dependencies
-#RUN poetry install --no-dev
+RUN poetry remove --no-interaction --no-ansi --group dev \
+    flask-testing pytest pytest-cov
 RUN rm -rf ./node_modules .pytest_cache .coverage \
     && apt-get purge -y $BUILD_DEPS \
     && apt-get autoremove -y \
