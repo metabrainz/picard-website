@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2025-01-12 17:44+0000\n"
+"PO-Revision-Date: 2025-01-21 07:44+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://translations.metabrainz.org/projects/picard/"
 "website/sq/>\n"
@@ -72,7 +72,7 @@ msgstr "Gjuhë"
 
 #: website/frontend/templates/base.html:68
 msgid "Help with translation"
-msgstr ""
+msgstr "Ndihmoni me përkthim"
 
 #: website/frontend/templates/base.html:99
 msgid ""
