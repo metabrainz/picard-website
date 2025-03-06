@@ -35,6 +35,8 @@ authors = [
     "jomo <git@jomo.tv>",
     "vedantc98 <vedantc98@gmail.com>",
 ]
+package-mode = false
+
 
 [tool.poetry.dependencies]
 python = "^3.9"
