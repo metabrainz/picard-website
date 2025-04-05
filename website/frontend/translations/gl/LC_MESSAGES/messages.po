@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
 "PO-Revision-Date: 2025-04-05 19:08+0000\n"
-"Last-Translator: ninjum <ninjum@gmx.es>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Galician <https://translations.metabrainz.org/projects/picard/"
 "website/gl/>\n"
 "Language: gl\n"
@@ -32,7 +32,7 @@ msgstr ""
 #: website/frontend/templates/base.html:47
 #: website/frontend/templates/index.html:8
 msgid "MusicBrainz Picard"
-msgstr ""
+msgstr "MusicBrainz Picard"
 
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
@@ -83,6 +83,11 @@ msgid ""
 "Picard supports a wide range of audio formats and can also lookup an "
 "entire CD for you."
 msgstr ""
+"Picard axúdache a organizar a túa colección de música cambiando o nome dos "
+"teus ficheiros de música e clasificándoos nunha estrutura de cartafoles "
+"exactamente como queres. Hai unha variedade de complementos dispoñibles e "
+"incluso podes escribir o teu. Picard admite unha ampla gama de formatos de "
+"son e tamén pode buscar un CD completo para ti."
 
 #: website/frontend/templates/base.html:103
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
