@@ -55,6 +55,14 @@ def show_plugin_api():
 def show_install_linux():
     return redirect_docs('/en/getting_started/download.html#installing-picard-on-linux')
 
+@docs_bp.get('/build-osx/')
+def show_build_osx():
+    return redirect('https://github.com/metabrainz/picard/blob/master/INSTALL.md')
+
+@docs_bp.get('/build-windows/')
+def show_build_windows():
+    return redirect('https://github.com/metabrainz/picard/blob/master/INSTALL.md')
+
 @docs_bp.get('/<string:page>/')
 def show_pages(page):
     if os.path.isfile(os.path.join(template_folder, 'docs', page + '.html')):
