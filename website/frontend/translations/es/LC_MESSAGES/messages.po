@@ -8,13 +8,14 @@
 # jaimeMF <jaimeMF@users.noreply.translations.metabrainz.org>, 2024.
 # Echelon666 <echelon01@wp.pl>, 2024.
 # afrocat <afrocat@users.noreply.translations.metabrainz.org>, 2025.
+# deusdagon <mendez.jorge1988@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2025-01-13 15:52+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2025-09-05 04:49+0000\n"
+"Last-Translator: deusdagon <mendez.jorge1988@gmail.com>\n"
 "Language-Team: Spanish <https://translations.metabrainz.org/projects/picard/"
 "website/es/>\n"
 "Language: es\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.13\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
