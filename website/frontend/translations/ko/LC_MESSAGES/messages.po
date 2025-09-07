@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2025-04-13 08:20+0000\n"
+"PO-Revision-Date: 2025-09-07 09:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://translations.metabrainz.org/projects/picard/"
 "website/ko/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.13.1\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -50,7 +50,7 @@ msgstr ""
 
 #: website/frontend/templates/base.html:53
 msgid "Plugins"
-msgstr ""
+msgstr "플러그인"
 
 #: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
@@ -61,11 +61,11 @@ msgstr ""
 #: website/frontend/templates/base.html:117
 #: website/frontend/templates/docs/base.html:3
 msgid "Documentation"
-msgstr ""
+msgstr "다큐먼트"
 
 #: website/frontend/templates/base.html:61
 msgid "Language"
-msgstr ""
+msgstr "언어"
 
 #: website/frontend/templates/base.html:68
 msgid "Help with translation"
@@ -351,7 +351,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:66
 msgid "AcoustID"
-msgstr ""
+msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
 msgid ""
@@ -380,7 +380,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:109
 msgid "Cover Art"
-msgstr ""
+msgstr "커버 아트"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
@@ -388,7 +388,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
-msgstr ""
+msgstr "스크립트 작성"
 
 #: website/frontend/templates/index.html:120
 msgid ""
@@ -442,11 +442,11 @@ msgstr ""
 
 #: website/frontend/templates/plugins.html:55
 msgid "Name"
-msgstr ""
+msgstr "이름"
 
 #: website/frontend/templates/plugins.html:56
 msgid "Version"
-msgstr ""
+msgstr "버전"
 
 #: website/frontend/templates/plugins.html:57
 msgid "Description"

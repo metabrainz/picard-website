@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2024-07-29 20:42+0000\n"
+"PO-Revision-Date: 2025-09-07 09:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://translations.metabrainz.org/"
 "projects/picard/website/nb_NO/>\n"
@@ -20,6 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.1\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -403,7 +404,7 @@ msgstr ""
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
-msgstr ""
+msgstr "Skripting"
 
 #: website/frontend/templates/index.html:120
 msgid ""
