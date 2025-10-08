@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2025-01-14 17:44+0000\n"
+"PO-Revision-Date: 2025-10-08 18:02+0000\n"
 "Last-Translator: Vaclovas Intas <gateway_31@protonmail.com>\n"
 "Language-Team: Lithuanian <https://translations.metabrainz.org/projects/"
 "picard/website/lt/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.13.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -42,8 +42,8 @@ msgstr "„MusicBrainz Picard“"
 msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr ""
-"„Picard“ – tai tarpplatforminė muzikos žymeklė, naudojanti „MusicBrainz“ "
-"duomenų bazę."
+"„Picard“ – tai tarpplatforminė muzikos žymeklė, veikiama su „MusicBrainz“ "
+"duomenų baze."
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
@@ -86,13 +86,13 @@ msgid ""
 "you."
 msgstr ""
 "„Picard“ padeda tvarkyti muzikos kolekciją pervadinant muzikos failus ir "
-"surūšiuojant juos į aplankų struktūrą būtent taip, kaip nori. Galima naudoti "
-"įvairius įskiepius ir netgi gali parašyti savo įskiepį. „Picard“ palaiko "
-"daugybę garso formatų, taip pat gali peržiūrėti visą CD."
+"surikiuojant juos į aplankų struktūrą būtent taip, kaip norite. Galima "
+"naudoti įvairius įskiepius ir netgi galite parašyti savo įskiepį. „Picard“ "
+"palaiko daugybę garso formatų, taip pat gali peržiūrėti visą CD."
 
 #: website/frontend/templates/base.html:103
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
-msgstr "Bendrauk su mumis: {url|Matrix, IRC, Discord}"
+msgstr "Bendraukite su mumis: „{url|Matrix, IRC, Discord}“"
 
 #: website/frontend/templates/base.html:109
 msgid "Useful Links"
@@ -120,19 +120,19 @@ msgstr "„MetaBrainz“"
 
 #: website/frontend/templates/base.html:138
 msgid "Contribute Here"
-msgstr "Prisidėk čia"
+msgstr "Prisidėti čia"
 
 #: website/frontend/templates/base.html:142
 msgid "Bug Tracker"
-msgstr "Riktų sekimas"
+msgstr "Riktų sekiklis"
 
 #: website/frontend/templates/base.html:147
 msgid "Fellow Projects"
-msgstr "Bendradarbių projektai"
+msgstr "Bendrieji projektai"
 
 #: website/frontend/templates/base.html:175
 msgid "OSS Geek? {url|Contribute Here}"
-msgstr "OSS specialistas? {url|Prisidėk čia}"
+msgstr "OSS specialistas? {url|Prisidėti čia}"
 
 #: website/frontend/templates/base.html:184
 msgid "Brought to you by {metabrainz}"
@@ -140,7 +140,7 @@ msgstr "Pristato „{metabrainz}“"
 
 #: website/frontend/templates/base.html:189
 msgid "Found an Issue? {url|Report Here}"
-msgstr "Radai problemą? {url|Pranešk čia}"
+msgstr "Radote problemą? {url|Pranešti čia}"
 
 #: website/frontend/templates/changelog.html:3
 #: website/frontend/templates/index.html:22
@@ -152,8 +152,8 @@ msgid ""
 "Picard is available for all major platforms. Just download and start the "
 "installer. It's that easy."
 msgstr ""
-"„Picard“ prieinama visose pagrindinėse platformose. Tiesiog atsisiųsk ir "
-"paleisk diegyklę. Tai taip paprasta."
+"„Picard“ prieinama visoms pagrindinėms platformoms. Tiesiog atsisiųskite ir "
+"paleiskite diegyklę. Tai taip paprasta."
 
 #: website/frontend/templates/downloads.html:10
 msgid "Learn about the new features in Picard {version}"
@@ -217,7 +217,7 @@ msgstr "64 bitų nešiojamasis"
 #: website/frontend/templates/downloads.html:52
 #: website/frontend/templates/downloads.html:55
 msgid "Windows 10&thinsp;/&thinsp;11 app"
-msgstr "„Windows 10“&thinsp;/&thinsp;„11“ programėlė"
+msgstr "„Windows 10“&thinsp;/&thinsp;„11“ programa"
 
 #: website/frontend/templates/downloads.html:60
 msgid "Microsoft Store"
@@ -324,17 +324,17 @@ msgid ""
 "{urldev|Development} on how you can start contributing to the Picard source "
 "code."
 msgstr ""
-"Taip pat gali peržiūrėti naujausią „Picard“ šaltinio kodą sistemoje "
-"„{urlgithub|Github}“. Apie tai, kaip gali pradėti prisidėti prie „Picard“ "
-"šaltinio kodo kūrimo, žiūrėk {urldev|Kūrimas}."
+"Taip pat galite peržiūrėti naujausią „Picard“ šaltinio kodą platformoje "
+"„{urlgithub|Github}“. Apie tai, kaip galima pradėti prisidėti prie „Picard“ "
+"šaltinio kodo kūrimo, žiūrėkite {urldev|Kūrimas}."
 
 #: website/frontend/templates/downloads.html:361
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
 msgstr ""
-"Šiame puslapyje pateikiami naujausi atsisiuntimai. Jei ieškai senesnių "
-"„Picard“ versijų, {url|naršyk mūsų FTP serverį}."
+"Šis puslapis pateikia naujausius atsisiuntimus. Jei ieškote senesnių „Picard“"
+" versijų, {url|naršykite mūsų FTP serverį}."
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
@@ -457,7 +457,7 @@ msgstr "v{version}, skirta „macOS“ 10.14+"
 
 #: website/frontend/templates/plugins.html:24
 msgid "Available Plugins"
-msgstr "Galimi įskiepiai"
+msgstr "Pasiekiami įskiepiai"
 
 #: website/frontend/templates/plugins.html:30
 msgid ""
@@ -469,13 +469,13 @@ msgid ""
 "The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
 "use API v1."
 msgstr ""
-"Dabartinis „Picard“ 2.x leidimas naudoja API v2. Senesnės „Picard“ 1.x "
+"Dabartinis „Picard“ 2.x leidimas naudoja API v2. Senesni „Picard“ 1.x "
 "leidimai naudoja API v1."
 
 #: website/frontend/templates/plugins.html:32
 msgid ""
 "The table is generated from the data of our plugin {urlrepo|repository}."
-msgstr "Lentelė generuojama iš mūsų įskiepio {urlrepo|saugyklos} duomenų."
+msgstr "Lentelė sugeneruota iš mūsų įskiepių {urlrepo|saugyklos} duomenų."
 
 #: website/frontend/templates/plugins.html:55
 msgid "Name"
@@ -487,19 +487,19 @@ msgstr "Versija"
 
 #: website/frontend/templates/plugins.html:57
 msgid "Description"
-msgstr "Aprašymas"
+msgstr "Aprašas"
 
 #: website/frontend/templates/plugins.html:58
 msgid "Author(s)"
-msgstr "Autorius (-ė, -iai)"
+msgstr "Autorius (-iai)"
 
 #: website/frontend/templates/docs/build-osx.html:3
 msgid "Build on macOS"
-msgstr "Kurti sistemoje „MacOS“"
+msgstr "Sukurti sistemoje „MacOS“"
 
 #: website/frontend/templates/docs/build-windows.html:3
 msgid "Build on Windows"
-msgstr "Kurti sistemoje „Windows“"
+msgstr "Sukurti sistemoje „Windows“"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
@@ -518,7 +518,7 @@ msgid ""
 "You don't have to worry, someone is working on fixing things as you're "
 "reading this."
 msgstr ""
-"Tau nereikia nerimauti, kol skaitai šį tekstą, kažkas jau dirba, kad viską "
+"Jums nereikia nerimauti, kol skaitote šį tekstą. Kažkas jau dirba, kad viską "
 "ištaisytų."
 
 #~ msgid "IRC: {url|#metabrainz}"
