@@ -9,13 +9,14 @@
 # Echelon666 <echelon01@wp.pl>, 2024.
 # afrocat <afrocat@users.noreply.translations.metabrainz.org>, 2025.
 # deusdagon <mendez.jorge1988@gmail.com>, 2025.
+# Dino RTX <rtxdino36@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2025-09-05 04:49+0000\n"
-"Last-Translator: deusdagon <mendez.jorge1988@gmail.com>\n"
+"PO-Revision-Date: 2025-10-22 07:08+0000\n"
+"Last-Translator: Dino RTX <rtxdino36@gmail.com>\n"
 "Language-Team: Spanish <https://translations.metabrainz.org/projects/picard/"
 "website/es/>\n"
 "Language: es\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13\n"
+"X-Generator: Weblate 5.13.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -50,7 +51,7 @@ msgstr ""
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Cambiar navegación"
 
 #: website/frontend/templates/base.html:52
 #: website/frontend/templates/downloads.html:3
@@ -415,9 +416,8 @@ msgstr ""
 "{urlgithub|GitHub} dónde unos maravillosos desarrolladores la desarrollan."
 
 #: website/frontend/templates/index.html:109
-#, fuzzy
 msgid "Cover Art"
-msgstr "Carátula"
+msgstr "Imágenes"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
