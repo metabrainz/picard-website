@@ -12,12 +12,14 @@ version_header = '<h3 id="release-{0}">Version <strong>{0}</strong> <span>{1}</s
 class ChangelogRenderer(mistune.HTMLRenderer):
     def heading(self, text, level, **attrs):
         if level == 1:
+            return ""
+        if level == 2:
             match = re_version.match(text)
             if match:
                 version = match.group(1)
                 date = match.group(2).replace("xxxx-xx-xx", "Yet to be released")
                 return version_header.format(version, date)
-        return super().heading(text, level + 2)
+        return super().heading(text, level + 1)
 
 
 renderer = ChangelogRenderer()
