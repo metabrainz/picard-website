@@ -10,6 +10,8 @@ def show_plugins():
     all_plugins = OrderedDict()
     versions = current_app.config['PLUGIN_VERSIONS']
     for version, build_version in sorted([(key, versions[key]['title']) for key in versions]):
+        if version not in {'v1', 'v2'}:
+            continue
         ordered_plugins = OrderedDict()
         build_json_file = plugins_json_file(current_app, build_version)
         with open(build_json_file, "r", encoding='utf-8') as fp:
