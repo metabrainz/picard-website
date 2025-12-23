@@ -1,5 +1,6 @@
 from collections import OrderedDict
 from urllib.request import urlopen
+
 from tomllib import loads
 
 
@@ -11,7 +12,7 @@ def load_registry_toml(app, force_refresh=False) -> str:
         return data
 
     url = app.config['PLUGINS_V3_REGISTRY_URL']
-    with urlopen(url) as conn:
+    with urlopen(url, timeout=app.config['PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT_SECONDS']) as conn:
         data = conn.read().decode("utf-8")
         app.cache.set(key, data, timeout=app.config['PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS'])
     return data

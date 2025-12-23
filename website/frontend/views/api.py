@@ -1,11 +1,12 @@
 from flask import (
-    current_app,
     Blueprint,
+    current_app,
     jsonify,
     make_response,
     request,
     send_from_directory
 )
+from urllib.error import HTTPError
 
 from website.plugin_utils import (
     load_json_data,
@@ -161,7 +162,12 @@ def get_versions():
 
 @api_bp.get('/v3/registry/plugins.toml')
 def get_v3_registry():
-    data = load_registry_toml(current_app)
-    response = make_response(data, 200)
-    response.headers['Content-Type'] = 'application/toml'
+    try:
+        data = load_registry_toml(current_app)
+        response = make_response(data, 200)
+        response.headers['Content-Type'] = 'application/toml'
+    except HTTPError as err:
+        current_app.logger.error('Failed loading registry: %s',  err)
+        response = make_response({"error": "registry unavailable"}, 503)
+
     return response
