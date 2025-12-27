@@ -12,7 +12,21 @@
 #        'response': 'The endpoints currently available for this api version' \
 #                ' are /api/v2/plugins, /api/v2/download and /api/v2/releases',
 #    },
+#    'v3': {
+#        'title': '3.0',
+#        'response': 'The endpoints currently available for this api version' \
+#                ' are /api/v3/registry/plugins.toml',
+#    },
 #}
+#
+## Download URL for v3 registry file
+#PLUGINS_V3_REGISTRY_URL = "https://raw.githubusercontent.com/metabrainz/picard-plugins-registry/refs/heads/main/plugins.toml"
+#
+## v3 plugins registry cache timeout
+#PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS = 4 * 60 * 60
+#
+## v3 plugins registry cache timeout
+#PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT_SECONDS = 5
 #
 ## PICARD_VERSIONS dictionary valid keys are: 'stable', 'beta' and 'dev'.
 ## The 'version' tuple comprises int_major, int_minor, int_micro, str_type and int_development as defined in PEP-440.

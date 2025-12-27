@@ -1,16 +1,18 @@
 from flask import (
-    current_app,
     Blueprint,
+    current_app,
     jsonify,
     make_response,
     request,
     send_from_directory
 )
+from urllib.error import HTTPError
 
 from website.plugin_utils import (
     load_json_data,
     plugins_dir
 )
+from website.plugin3_registry import load_registry_toml
 
 api_bp = Blueprint('api', __name__)
 
@@ -156,3 +158,16 @@ def get_versions():
     """
     ret_obj = {'versions': picard_versions(current_app)}
     return make_response(jsonify(ret_obj), 200)
+
+
+@api_bp.get('/v3/registry/plugins.toml')
+def get_v3_registry():
+    data = load_registry_toml(current_app)
+    if data:
+        response = make_response(data, 200)
+        response.headers['Content-Type'] = 'application/toml'
+    else:
+        current_app.logger.error('Registry data unavailable')
+        response = make_response({"error": "registry unavailable"}, 503)
+
+    return response

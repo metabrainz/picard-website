@@ -130,3 +130,17 @@ class ViewsTestCase(FrontendTestCase):
                 # Basic validation on all urls provided
                 self.assertIsInstance(updates[testkey]['urls'][urlkey], str)
                 self.assertRegex(updates[testkey]['urls'][urlkey], url_re)
+
+    # /v3/
+    def test_api_v3(self):
+        "Test /api/v3/"
+        response = self.client.get("/api/v3/")
+        self.assert200(response)
+
+    def test_api_v3_registry_download(self):
+        "Test registry download"
+        response = self.client.get("/api/v3/registry/plugins.toml")
+        self.assert200(response)
+        self.assertEqual(response.content_type, 'application/toml')
+        self.assertIn(b'api_version = "3.0"', response.data)
+        self.assertIn(b'[[plugins]]', response.data)

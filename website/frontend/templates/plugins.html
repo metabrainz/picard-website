@@ -46,31 +46,43 @@
             <div class="table-responsive">
               <table id="plugins-table-v{{version}}" class="table table-bordered table-hover">
                 <col width="175px" name="Name"/>
+                {% if version != '3' %}
                 <col width="100px" name="Version"/>
+                {% endif %}
                 <col width="500px" name="Description"/>
                 <col width="150px" name="Author"/>
+                {% if version != '3' %}
                 <col width="100px" name="Download"/>
+                {% endif %}
                 <thead>
                   <tr>
                     <th class="text-center" data-sortable="true">{{ _("Name") }}</th>
+                    {% if version != '3' %}
                     <th class="text-center" data-sortable="true">{{ _("Version") }}</th>
+                    {% endif %}
                     <th class="text-center" data-sortable="true">{{ _("Description") }}</th>
                     <th class="text-center">{{ _("Author(s)") }}</th>
+                    {% if version != '3' %}
                     <th class="text-center" data-sortable="false"></th>
+                    {% endif %}
                   </tr>
                 </thead>
                 <tbody>
                 {% for id, plugin in plugins.items() %}
                   <tr>
                     <td>{{ plugin["name"] }}</td>
+                    {% if version != '3' %}
                     <td>{{ plugin["version"] }}</td>
+                    {% endif %}
                     <td>{{ plugin["description"] | safe }}</td>
                     <td>{{ plugin["author"] | safe}}</td>
+                    {% if version != '3' %}
                     <td class="text-center">
                       <a class="btn btn-primary btn-sm" href="/api/v{{version}}/download?id={{ id }}">
                         {{ _("Download") }}
                       </a>
                     </td>
+                    {% endif %}
                   </tr>
                 {% endfor %}
                 </tbody>
