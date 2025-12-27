@@ -1,0 +1,31 @@
+name: Tests
+permissions:
+  contents: read
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Repo
+        uses: actions/checkout@v4
+      - name: Set up
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install python3-poetry npm
+      - name: Setup build environment
+        run: |
+          echo "PLUGINS_BUILD_DIR = \"${PWD}/plugins/\"" > website/config.py
+          poetry install
+          npm install
+          npm run build
+      - name: Generate plugins
+        run: poetry run python plugins-generate.py
+      - name: PyTest
+        run: poetry run pytest
