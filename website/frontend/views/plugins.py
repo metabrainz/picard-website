@@ -35,9 +35,4 @@ def _load_v1_v2_plugins(build_version) -> OrderedDict:
 
 
 def _load_v3_plugins() -> OrderedDict:
-    try:
-        plugins = load_plugin_list(current_app)
-    except HTTPError as err:
-        current_app.logger.error('Failed loading v3 plugins: %s',  err)
-        plugins = OrderedDict()
-    return plugins
+    return load_plugin_list(current_app)

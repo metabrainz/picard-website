@@ -162,12 +162,12 @@ def get_versions():
 
 @api_bp.get('/v3/registry/plugins.toml')
 def get_v3_registry():
-    try:
-        data = load_registry_toml(current_app)
+    data = load_registry_toml(current_app)
+    if data:
         response = make_response(data, 200)
         response.headers['Content-Type'] = 'application/toml'
-    except HTTPError as err:
-        current_app.logger.error('Failed loading registry: %s',  err)
+    else:
+        current_app.logger.error('Registry data unavailable')
         response = make_response({"error": "registry unavailable"}, 503)
 
     return response
