@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-13 17:30+0100\n"
-"PO-Revision-Date: 2026-01-08 16:11+0000\n"
+"PO-Revision-Date: 2026-01-10 04:11+0000\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
 "translations.metabrainz.org/projects/picard/website/zh_Hans/>\n"
@@ -37,7 +37,7 @@ msgstr "MusicBrainz Picard"
 msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz "
 "database."
-msgstr "Picard 是由 MusicBrainz 数据库驱动的跨平台音乐标签工具。"
+msgstr "Picard 是由 MusicBrainz 数据库驱动的跨平台音乐标签编辑器。"
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
@@ -144,7 +144,7 @@ msgstr "新特性"
 msgid ""
 "Picard is available for all major platforms. Just download and start the "
 "installer. It's that easy."
-msgstr "Picard 支持所有主流平台，只需下载并运行安装器即可，就这么简单。"
+msgstr "Picard 支持所有主流平台，只需下载并运行安装程序即可，就是这么简单。"
 
 #: website/frontend/templates/downloads.html:10
 msgid "Learn about the new features in Picard {version}"
@@ -182,7 +182,7 @@ msgstr "链接"
 
 #: website/frontend/templates/downloads.html:31
 msgid "64-bit installer"
-msgstr "64 位安装器"
+msgstr "64 位安装程序"
 
 #: website/frontend/templates/downloads.html:36
 #: website/frontend/templates/downloads.html:46
@@ -216,11 +216,11 @@ msgstr "Microsoft Store"
 
 #: website/frontend/templates/downloads.html:66
 msgid "pre-release, 64-bit installer"
-msgstr "预发布版 64 位安装器"
+msgstr "预发布版，64 位安装程序"
 
 #: website/frontend/templates/downloads.html:76
 msgid "pre-release, 64-bit portable"
-msgstr "预发布版 64 位便携版"
+msgstr "预发布版，64 位便携版"
 
 #: website/frontend/templates/downloads.html:94
 msgid "Picard for <strong>macOS</strong>"
@@ -495,4 +495,4 @@ msgstr "404 找不到页面"
 msgid ""
 "You don't have to worry, someone is working on fixing things as you're "
 "reading this."
-msgstr "不必担心，在你阅读这段文字的时候，有人正在努力修复问题了。"
+msgstr "不必担心，在你阅读这段文字的时候，已经有人在努力修复问题了。"
