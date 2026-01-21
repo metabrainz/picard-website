@@ -10,7 +10,12 @@
                 let storedSort = Cookies.get('userSortPreference-v' + version);
 
                 let dataTable = new DataTable('#plugins-table-v{{version}}', {
-                    "order": storedSort ? JSON.parse(storedSort) : []
+                    order: storedSort ? JSON.parse(storedSort) : [],
+                    {% if active_language != 'en' %}
+                    language: {
+                      url: "{{ url_for('static', filename='js/dataTables.' + active_language + '.json') }}"
+                    }
+                    {% endif %}
                 });
 
                 dataTable.on('click', 'thead th', function () {
