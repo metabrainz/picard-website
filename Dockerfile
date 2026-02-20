@@ -47,7 +47,7 @@ USER www-data:www-data
 RUN UV_NO_CACHE=1 uv run ./plugins-generate.py
 
 USER root
-RUN python -m pytest
+RUN uv run pytest
 
 COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
 
