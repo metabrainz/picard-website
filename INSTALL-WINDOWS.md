@@ -1,8 +1,8 @@
 # Installation on Windows
 
 Pre-requisites:
-- python >= 3.3
-- [poetry](https://python-poetry.org/)
+- python >= 3.9
+- [uv](https://docs.astral.sh/uv/)
 - Github for Windows or equivalent
 - nodejs and npm
 
@@ -25,15 +25,15 @@ copy website/config.py.example website/config.py
 
 Edit `website/config.py` so that `PLUGINS_REPOSITORY` points to your local copy of the picard-plugins repository etc.
 
-If not already installed, install poetry now:
+If not already installed, install uv now:
 
 ```
-pip install poetry
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
 Install Python dependencies:
 ```
-poetry install
+uv sync --extra dev
 ```
 
 Install node dependencies:
@@ -48,7 +48,7 @@ To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repo
 and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
 
 ```
-poetry run python plugins-generate.py
+uv run python plugins-generate.py
 ```
 
 Compile CSS and translations:
@@ -60,7 +60,7 @@ npm run build
 To run the development server, do:
 
 ```
-poetry run python run.py
+uv run python run.py
 ```
 
 By default, it listens on 127.0.0.1 port 6060.
