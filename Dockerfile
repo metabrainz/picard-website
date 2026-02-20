@@ -44,7 +44,7 @@ RUN npm run build
 # Plugins
 RUN mkdir /code/plugins && chown www-data:www-data /code/plugins
 USER www-data:www-data
-RUN ./plugins-generate.py
+RUN uv run ./plugins-generate.py
 
 USER root
 RUN python -m pytest
