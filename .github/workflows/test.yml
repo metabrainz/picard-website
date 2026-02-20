@@ -18,14 +18,16 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install python3-poetry npm
+          sudo apt-get install npm
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
       - name: Setup build environment
         run: |
           echo "PLUGINS_BUILD_DIR = \"${PWD}/plugins/\"" > website/config.py
-          poetry install
+          uv sync --extra dev
           npm install
           npm run build
       - name: Generate plugins
-        run: poetry run python plugins-generate.py
+        run: uv run python plugins-generate.py
       - name: PyTest
-        run: poetry run pytest
+        run: uv run pytest

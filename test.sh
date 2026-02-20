@@ -7,6 +7,9 @@ if [ ! -f website/config.py ]; then
     exit 1
 fi
 
+# Ensure poetry is not in PATH to catch migration issues
+export PATH=$(echo "$PATH" | tr ':' '\n' | grep -v poetry | tr '\n' ':')
+
 uv sync --extra dev
 npm install
 npm run build
