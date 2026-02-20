@@ -22,12 +22,14 @@ RUN nvm install --lts && npm install -g npm@latest
 
 WORKDIR /code/website
 
+# Install uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
+
 # Python dependencies
 RUN pip install --upgrade pip \
-    && pip install uWSGI==2.0.23 poetry==2.0.1
-COPY poetry.lock pyproject.toml /code/website/
-RUN poetry config virtualenvs.create false \
-    && poetry install --no-interaction --no-ansi --no-root --with dev
+    && pip install uWSGI==2.0.23
+COPY uv.lock pyproject.toml /code/website/
+RUN uv sync --frozen --extra dev
 
 # Node dependencies
 COPY ./package.json /code/website/
@@ -50,8 +52,7 @@ RUN python -m pytest
 COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
 
 # Cleanup build dependencies
-RUN poetry remove --no-interaction --no-ansi --group dev \
-    flask-testing pytest pytest-cov
+RUN uv pip uninstall flask-testing pytest pytest-cov
 RUN rm -rf ./node_modules .pytest_cache .coverage \
     && apt-get purge -y $BUILD_DEPS \
     && apt-get autoremove -y \

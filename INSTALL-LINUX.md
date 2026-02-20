@@ -1,16 +1,17 @@
 # Installation on Linux
 
 Pre-requisites:
-- python >= 3.3
+- python >= 3.9
 - python-dev (required to build some dependencies)
-- [poetry](https://python-poetry.org/)
+- [uv](https://docs.astral.sh/uv/)
 - git
 - nodejs
 - npm
 
 To install those on Ubuntu:
 ```bash
-sudo apt-get install python3 python3-dev python3-poetry git nodejs npm
+sudo apt-get install python3 python3-dev git nodejs npm
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 Checkout picard-website and configure it:
@@ -30,7 +31,7 @@ vim website/config.py
 Install Python dependencies:
 
 ```bash
-poetry install
+uv sync --extra dev
 ```
 
 Install node dependencies (requires [Node.js](http://nodejs.org/download/)):
@@ -44,7 +45,7 @@ Node dependencies (including less and cleancss, which are required to compile/mi
 To retrieve [picard-plugins](https://github.com/musicbrainz/picard-plugins) repository and generate `plugins.json` and zipped plugin archives needed by Picard Website and plugins webservice, run:
 
 ```bash
-poetry run python plugins-generate.py
+uv run python plugins-generate.py
 ```
 
 Compile CSS and translations:
@@ -56,7 +57,7 @@ npm run build
 To run the development server, do:
 
 ```bash
-poetry run python run.py
+uv run python run.py
 ```
 
 By default, it listens on 127.0.0.1 port 6060.
