@@ -3,7 +3,7 @@ from website.frontend.testing import FrontendTestCase
 
 
 class SchedulerViewsTest(FrontendTestCase):
-    """Tests for APScheduler management routes"""
+    """Tests for APScheduler management routes (localhost only)"""
 
     def test_scheduler_info_returns_200(self):
         """Test GET /scheduler returns scheduler info"""
