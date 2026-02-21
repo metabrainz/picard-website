@@ -51,9 +51,7 @@
                 {% endif %}
                 <col width="500px" name="Description"/>
                 <col width="150px" name="Author"/>
-                {% if version != '3' %}
-                <col width="100px" name="Download"/>
-                {% endif %}
+                <col width="100px" name="{% if version == '3' %}Repository{% else %}Download{% endif %}"/>
                 <thead>
                   <tr>
                     <th class="text-center" data-sortable="true">{{ _("Name") }}</th>
@@ -62,9 +60,7 @@
                     {% endif %}
                     <th class="text-center" data-sortable="true">{{ _("Description") }}</th>
                     <th class="text-center">{{ _("Author(s)") }}</th>
-                    {% if version != '3' %}
-                    <th class="text-center" data-sortable="false"></th>
-                    {% endif %}
+                    <th class="text-center" data-sortable="false">{% if version == '3' %}{{ _("Repository") }}{% endif %}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -76,13 +72,19 @@
                     {% endif %}
                     <td>{{ plugin["description"] | safe }}</td>
                     <td>{{ plugin["author"] | safe}}</td>
-                    {% if version != '3' %}
                     <td class="text-center">
-                      <a class="btn btn-primary btn-sm" href="/api/v{{version}}/download?id={{ id }}">
-                        {{ _("Download") }}
-                      </a>
+                      {% if version == '3' %}
+                        {% if plugin.get("git_url") %}
+                        <a class="btn btn-primary btn-sm" href="{{ plugin['git_url'] }}" target="_blank" rel="noopener" title="{{ _('Open repository in a new tab') }}">
+                          {{ _("Repository") }}
+                        </a>
+                        {% endif %}
+                      {% else %}
+                        <a class="btn btn-primary btn-sm" href="/api/v{{version}}/download?id={{ id }}">
+                          {{ _("Download") }}
+                        </a>
+                      {% endif %}
                     </td>
-                    {% endif %}
                   </tr>
                 {% endfor %}
                 </tbody>

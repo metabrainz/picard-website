@@ -102,5 +102,6 @@ def load_plugin_list(app, force_refresh=False) -> OrderedDict:
             'description': plugin.get('description', ''),
             'author': ', '.join(plugin.get('authors', [])),
             'version': '',
+            'git_url': plugin.get('git_url', ''),
         }
     return plugins
