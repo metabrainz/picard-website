@@ -1,9 +1,13 @@
 # This configuration is for production / docker
 # You need to copy config.py.example to config.py and edit the file to your own needs
 # to override these values.
+
+# Default cache timeout - used when no specific timeout is specified
+DEFAULT_CACHE_TIMEOUT = 5 * 60
+
 PLUGINS_BUILD_DIR = "/code/plugins"
 PLUGINS_REFRESH_INTERVAL_SECONDS = 12 * 60 * 60
-PLUGINS_CACHE_TIMEOUT = 0  # never expire, handled by plugin refresh
+PLUGINS_CACHE_TIMEOUT = 0  # never expire, handled by plugin refresh scheduler
 # Flask automatically orders them in ascending order while
 # retrieveing them. Since it is a string comparison, v10 appears before
 # v2. So be careful with the ordering.
@@ -29,10 +33,10 @@ PLUGINS_V3_REGISTRY_URL = (
 )
 
 # v3 plugins registry cache timeout
-PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS = 4 * 60 * 60
+PLUGINS_V3_REGISTRY_CACHE_TIMEOUT = 4 * 60 * 60
 
-# v3 plugins registry cache timeout
-PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT_SECONDS = 5
+# v3 plugins registry request timeout
+PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT = 5
 
 # PICARD_VERSIONS dictionary valid keys are: 'stable', 'beta' and 'dev'.
 # The 'version' tuple comprises int_major, int_minor, int_micro, str_type and int_development as defined in PEP-440.

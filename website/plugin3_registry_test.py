@@ -34,8 +34,8 @@ class TestLoadRegistryToml(unittest.TestCase):
         self.app = Mock()
         self.app.config = {
             'PLUGINS_V3_REGISTRY_URL': 'https://example.com/plugins.toml',
-            'PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS': 300,
-            'PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT_SECONDS': 5,
+            'PLUGINS_V3_REGISTRY_CACHE_TIMEOUT': 300,
+            'PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT': 5,
         }
         self.app.cache = Mock()
         self.app.logger = Mock()

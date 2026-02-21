@@ -6,6 +6,8 @@ from urllib.request import Request, urlopen
 
 from tomllib import loads
 
+from website.cache_utils import cached
+
 
 @dataclass
 class RegistryCacheEntry:
@@ -34,7 +36,7 @@ class RegistryCacheEntry:
 def load_registry_toml(app, force_refresh=False) -> str | None:
     """Load the registry TOML file from PLUGINS_V3_REGISTRY_URL"""
     key = 'plugin3_registry'
-    cache_timeout = app.config['PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS']
+    cache_timeout = app.config['PLUGINS_V3_REGISTRY_CACHE_TIMEOUT']
     cache_entry = app.cache.get(key) if not force_refresh else None
 
     # If cache is fresh, return it
@@ -51,7 +53,7 @@ def load_registry_toml(app, force_refresh=False) -> str | None:
         request.add_header('If-None-Match', cache_entry.etag)
 
     try:
-        with urlopen(request, timeout=app.config['PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT_SECONDS']) as conn:
+        with urlopen(request, timeout=app.config['PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT']) as conn:
             registry = conn.read().decode("utf-8")
             etag = conn.headers.get('ETag')
 
@@ -82,13 +84,9 @@ def load_registry_toml(app, force_refresh=False) -> str | None:
     return cache_entry.registry if cache_entry else None
 
 
+@cached('plugin3_full_list', 'PLUGINS_V3_REGISTRY_CACHE_TIMEOUT')
 def load_plugin_list(app, force_refresh=False) -> OrderedDict:
     """Return the plugins from the registry in a format compatible with other versions."""
-    key = 'plugin3_full_list'
-    plugins = app.cache.get(key) if not force_refresh else None
-    if plugins:
-        return plugins
-
     registry_toml = load_registry_toml(app, force_refresh)
     registry = loads(registry_toml) if registry_toml else {}
     plugins = OrderedDict()
@@ -105,6 +103,4 @@ def load_plugin_list(app, force_refresh=False) -> OrderedDict:
             'author': ', '.join(plugin.get('authors', [])),
             'version': '',
         }
-
-    app.cache.set(key, plugins, timeout=app.config['PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS'])
     return plugins

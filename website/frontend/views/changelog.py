@@ -8,6 +8,8 @@ from flask import (
 )
 import mistune
 
+from website.cache_utils import cached
+
 
 changelog_bp = Blueprint('changelog', __name__)
 re_version = re.compile(r'^Version\s+(.*?)\s+-\s+(.*?)$')
@@ -33,16 +35,12 @@ renderer = ChangelogRenderer()
 markdown = mistune.Markdown(renderer=renderer)
 
 
+@cached('changelog_data', 'CHANGELOG_CACHE_TIMEOUT')
 def load_changelog(app):
-    key = 'changelog_data'
-    data = app.cache.get(key)
-    if data is None:
-        url = app.config['CHANGELOG_URL']
-        with urlopen(url) as conn:
-            data = conn.read().decode("utf-8-sig")
-            data = markdown(data)
-            app.cache.set(key, data, timeout=app.config['CHANGELOG_CACHE_TIMEOUT'])
-    return data
+    url = app.config['CHANGELOG_URL']
+    with urlopen(url) as conn:
+        data = conn.read().decode("utf-8-sig")
+        return markdown(data)
 
 
 @changelog_bp.get('/')
