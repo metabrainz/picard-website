@@ -2,21 +2,33 @@ from collections import OrderedDict
 from dataclasses import dataclass
 from time import time
 from urllib.error import HTTPError
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 
 from tomllib import loads
+
 
 @dataclass
 class RegistryCacheEntry:
     registry: str
     timestamp: int
+    etag: str | None = None
 
-    def __init__(self, registry: str):
+    def __init__(self, registry: str, etag: str | None = None):
         self.registry = registry
-        self.timestamp = int(time())
+        self.etag = etag
+        self.refresh_timestamp()
+
+    @staticmethod
+    def now():
+        """Get current timestamp"""
+        return int(time())
 
     def is_valid(self, timeout_seconds: int):
-        return int(time()) - self.timestamp <= timeout_seconds
+        return self.now() - self.timestamp <= timeout_seconds
+
+    def refresh_timestamp(self):
+        """Update timestamp to current time"""
+        self.timestamp = self.now()
 
 
 def load_registry_toml(app, force_refresh=False) -> str | None:
@@ -24,18 +36,49 @@ def load_registry_toml(app, force_refresh=False) -> str | None:
     key = 'plugin3_registry'
     cache_timeout = app.config['PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS']
     cache_entry = app.cache.get(key) if not force_refresh else None
+
+    # If cache is fresh, return it
     if cache_entry and cache_entry.is_valid(cache_timeout):
         return cache_entry.registry
 
+    # Cache is stale or missing, try to refresh
     url = app.config['PLUGINS_V3_REGISTRY_URL']
     app.logger.debug('Refreshing v3 plugin registry from %s', url)
+
+    # Build request with conditional headers
+    request = Request(url)
+    if cache_entry and cache_entry.etag:
+        request.add_header('If-None-Match', cache_entry.etag)
+
     try:
-        with urlopen(url, timeout=app.config['PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT_SECONDS']) as conn:
+        with urlopen(request, timeout=app.config['PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT_SECONDS']) as conn:
             registry = conn.read().decode("utf-8")
-            cache_entry = RegistryCacheEntry(registry)
+            etag = conn.headers.get('ETag')
+
+            # Validate it's parseable TOML before caching
+            try:
+                loads(registry)
+            except Exception as parse_err:
+                app.logger.error('Registry content is not valid TOML: %s. Using stale cache if available.', parse_err)
+                return cache_entry.registry if cache_entry else None
+
+            cache_entry = RegistryCacheEntry(registry, etag)
             app.cache.set(key, cache_entry, timeout=0)
+            return cache_entry.registry
     except HTTPError as err:
-        app.logger.error('Failed loading v3 plugin registry: %s',  err)
+        if err.code == 304:  # Not Modified
+            if not cache_entry:
+                app.logger.error('Received 304 but cache_entry is None - this should not happen')
+                return None
+            app.logger.debug('Registry unchanged (304), refreshing timestamp')
+            cache_entry.refresh_timestamp()
+            app.cache.set(key, cache_entry, timeout=0)
+            return cache_entry.registry
+        app.logger.warning('Failed loading v3 plugin registry: %s. Using stale cache if available.', err)
+    except Exception as err:
+        app.logger.error('Error fetching v3 plugin registry: %s. Using stale cache if available.', err)
+
+    # Return stale cache as fallback
     return cache_entry.registry if cache_entry else None
 
 
