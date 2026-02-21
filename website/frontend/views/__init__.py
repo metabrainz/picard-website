@@ -5,11 +5,14 @@ from flask import (
 )
 from packaging import version
 
-from .api import *
-from .changelog import *
-from .docs import *
-from .humans import *
-from .plugins import *
+from .api import api_bp
+from .changelog import changelog_bp
+from .docs import docs_bp
+from .humans import humans_bp
+from .plugins import plugins_bp
+
+
+__all__ = ['api_bp', 'changelog_bp', 'docs_bp', 'frontend_bp', 'humans_bp', 'plugins_bp']
 
 
 frontend_bp = Blueprint('frontend', __name__)

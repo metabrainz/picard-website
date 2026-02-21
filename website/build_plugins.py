@@ -88,7 +88,7 @@ def version_from_string(version_str):
         if g[3] is None:
             return (int(g[0]), int(g[1]), int(g[2]), 'final', 0)
         return (int(g[0]), int(g[1]), int(g[2]), g[3], int(g[4]))
-    raise VersionError("String '%s' does not match regex '%s'" % (version_str, _version_re.pattern))
+    raise VersionError(f"String '{version_str}' does not match regex '{_version_re.pattern}'")
 
 
 def get_plugin_data(filepath):
@@ -99,7 +99,7 @@ def get_plugin_data(filepath):
         try:
             root = ast.parse(source, filepath)
         except Exception as e:
-            print("Cannot parse %r: %s" % (filepath, e))
+            print(f"Cannot parse {filepath!r}: {e}")
             return {}
         for node in ast.iter_child_nodes(root):
             if isinstance(node, ast.Assign) and len(node.targets) == 1:
@@ -131,7 +131,7 @@ def build_json(source_dir, dest_dir, supported_versions=None):
             continue
 
         dirpath = os.path.join(source_dir, dirname)
-        for root, dirs, filenames in os.walk(dirpath):
+        for root, _dirs, filenames in os.walk(dirpath):
             for filename in filenames:
                 ext = os.path.splitext(filename)[1]
 
@@ -176,7 +176,7 @@ def zip_files(source_dir, dest_dir):
             dirpath = os.path.join(source_dir, dirname)
             plugin_files = []
 
-            for root, dirs, filenames in os.walk(dirpath):
+            for root, _dirs, filenames in os.walk(dirpath):
                 for filename in filenames:
                     file_path = os.path.join(root, filename)
                     plugin_files.append(file_path)

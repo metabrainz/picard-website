@@ -104,7 +104,7 @@ def download_plugin(version):
                 jsonify(
                     {
                         'error': 'Plugin id not specified.',
-                        'message': 'Correct usage: /api/%s/download?id=<id>' % version,
+                        'message': f'Correct usage: /api/{version}/download?id=<id>',
                     }
                 ),
                 400,

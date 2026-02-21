@@ -18,7 +18,7 @@ def init_app(app):
                 app.logger.error('%s', e)
 
         if not found_locales:
-            found_locales = {str(l): l.language_name for l in available_locales}
+            found_locales = {str(locale): locale.language_name for locale in available_locales}
 
         app.config['LANGUAGES'] = found_locales
         app.logger.debug('Languages: %r', list(app.config['LANGUAGES']))

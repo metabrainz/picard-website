@@ -19,7 +19,7 @@ def plugins_dir(app, version):
 
 def load_json_data(app, version, force_refresh=False):
     """Load JSON Data"""
-    key = 'plugins_json_data_%s' % version
+    key = f'plugins_json_data_{version}'
     data = app.cache.get(key) if not force_refresh else None
     if data is None:
         with open(plugins_json_file(app, version)) as fp:

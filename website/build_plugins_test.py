@@ -91,7 +91,7 @@ class GenerateTestCase(unittest.TestCase):
             plugin_json = json.load(in_file)["plugins"]
 
         # All plugins should contain all required fields
-        for module_name, data in plugin_json.items():
+        for _module_name, data in plugin_json.items():
             self.assertIsInstance(data['name'], str)
             self.assertIsInstance(data['api_versions'], list)
             self.assertIsInstance(data['author'], str)

@@ -22,10 +22,10 @@ def expand(string, args, tag='a', default_attribute='href'):
                 d = {default_attribute: args[var]}
             else:
                 d = {}
-        attribs = ' '.join(["%s=\"%s\"" % (k, encode_entities(d[k])) for k in sorted(d.keys())])
+        attribs = ' '.join([f"{k}=\"{encode_entities(d[k])}\"" for k in sorted(d.keys())])
         if attribs:
             attribs = ' ' + attribs
-        return '<%s%s>%s</%s>' % (tag, attribs, final_text, tag)
+        return f'<{tag}{attribs}>{final_text}</{tag}>'
 
     def simple_expr(match):
         var = match.group(1)
