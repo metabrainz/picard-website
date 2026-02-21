@@ -1,6 +1,6 @@
 """Tests for cache_utils.py"""
+
 import unittest
-from unittest.mock import Mock
 
 from website.cache_utils import cached
 
@@ -8,6 +8,7 @@ from website.cache_utils import cached
 class TestCachedDecorator(unittest.TestCase):
     def test_cached_without_app_raises_error(self):
         """Should raise ValueError when app is not provided"""
+
         @cached('test_key')
         def test_func():
             return "data"

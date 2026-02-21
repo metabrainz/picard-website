@@ -146,6 +146,7 @@ class ViewsTestCase(FrontendTestCase):
     def test_api_v3_registry_unavailable(self):
         "Test registry unavailable returns 503"
         from unittest.mock import patch
+
         with patch('website.frontend.views.api.load_registry_toml', return_value=None):
             response = self.client.get("/api/v3/registry/plugins.toml")
             self.assertEqual(response.status_code, 503)

@@ -1,4 +1,5 @@
 """Cache utilities for the website"""
+
 from functools import wraps
 
 
@@ -25,6 +26,7 @@ def cached(key, timeout_config_key=None, force_refresh_param='force_refresh'):
         def load_versioned_data(app, version, force_refresh=False):
             return expensive_operation(version)
     """
+
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
@@ -50,4 +52,5 @@ def cached(key, timeout_config_key=None, force_refresh_param='force_refresh'):
             return data
 
         return wrapper
+
     return decorator

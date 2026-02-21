@@ -221,6 +221,7 @@ class TestLoadRegistryToml(unittest.TestCase):
     def test_load_plugin_list_skips_invalid_plugins(self):
         """Should skip plugins without id or name"""
         from unittest.mock import patch
+
         from website.plugin3_registry import load_plugin_list
 
         # Mock registry with invalid plugins
