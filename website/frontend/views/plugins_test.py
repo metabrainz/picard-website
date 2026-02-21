@@ -1,9 +1,7 @@
 from website.frontend.testing import FrontendTestCase
-from flask import url_for
 
 
 class ViewsTestCase(FrontendTestCase):
-
     def test_plugins_404(self):
         "Test /plugins/ invalid subpage"
         response = self.client.get("/plugins/404")

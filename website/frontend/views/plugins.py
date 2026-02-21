@@ -1,9 +1,16 @@
 from collections import OrderedDict
 import json
-from flask import current_app, Blueprint, render_template
-from urllib.error import HTTPError
-from website.plugin_utils import plugins_json_file
+
+from flask import (
+    Blueprint,
+    current_app,
+    render_template,
+)
+
 from website.plugin3_registry import load_plugin_list
+from website.plugin_utils import plugins_json_file
+
+
 plugins_bp = Blueprint('plugins', __name__)
 
 
@@ -27,7 +34,7 @@ def show_plugins():
 def _load_v1_v2_plugins(build_version) -> OrderedDict:
     ordered_plugins = OrderedDict()
     build_json_file = plugins_json_file(current_app, build_version)
-    with open(build_json_file, "r", encoding='utf-8') as fp:
+    with open(build_json_file, encoding='utf-8') as fp:
         plugins = json.loads(fp.read())['plugins']
         for key in sorted(plugins, key=lambda k: plugins[k]['name'].lower()):
             ordered_plugins[key] = plugins[key]

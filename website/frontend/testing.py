@@ -1,10 +1,11 @@
+from urllib.parse import urljoin, urlparse
+
 from flask_testing import TestCase
+
 from website.frontend import create_app
-from urllib.parse import urlparse, urljoin
 
 
 class FrontendTestCase(TestCase):
-
     def create_app(self):
         app = create_app()
         app.config['TESTING'] = True

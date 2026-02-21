@@ -1,15 +1,15 @@
-# -*- coding: utf-8 -*-
-
 import ast
-import os
+from hashlib import md5
 import json
-from markdown import markdown
+import os
 import re
 import shutil
+from tempfile import mkdtemp
 import zipfile
 
-from hashlib import md5
-from tempfile import mkdtemp
+from markdown import markdown
+
+
 # for Py2/3 compatibility
 try:
     from urllib import urlretrieve
@@ -25,37 +25,39 @@ PLUGIN_FILE_NAME = "plugins.json"
 PLUGIN_DIR = "plugins"
 
 VERSION_INFO = {
-    '1.0': {'branch_name': '1.0',
-            'api_versions':  # Keep those ordered
-            [
-                "0.15.0",
-                "0.15.1",
-                "0.16.0",
-                "1.0.0",
-                "1.1.0",
-                "1.2.0",
-                "1.3.0",
-                "1.4.0",
-            ]
-            },
-    '2.0': {'branch_name': '2.0',
-            'api_versions':  # Keep those ordered
-            [
-                "2.0",
-                "2.1",
-                "2.2",
-                "2.3",
-                "2.4",
-                "2.5",
-                "2.6",
-                "2.7",
-                "2.8",
-                "2.9",
-                "2.10",
-                "2.11",
-                "2.12",
-            ]
-            }
+    '1.0': {
+        'branch_name': '1.0',
+        'api_versions':  # Keep those ordered
+        [
+            "0.15.0",
+            "0.15.1",
+            "0.16.0",
+            "1.0.0",
+            "1.1.0",
+            "1.2.0",
+            "1.3.0",
+            "1.4.0",
+        ],
+    },
+    '2.0': {
+        'branch_name': '2.0',
+        'api_versions':  # Keep those ordered
+        [
+            "2.0",
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4",
+            "2.5",
+            "2.6",
+            "2.7",
+            "2.8",
+            "2.9",
+            "2.10",
+            "2.11",
+            "2.12",
+        ],
+    },
 }
 
 VERSION_INFO[None] = VERSION_INFO['1.0']
@@ -86,14 +88,13 @@ def version_from_string(version_str):
         if g[3] is None:
             return (int(g[0]), int(g[1]), int(g[2]), 'final', 0)
         return (int(g[0]), int(g[1]), int(g[2]), g[3], int(g[4]))
-    raise VersionError("String '%s' does not match regex '%s'" % (version_str,
-                                                                  _version_re.pattern))
+    raise VersionError("String '%s' does not match regex '%s'" % (version_str, _version_re.pattern))
 
 
 def get_plugin_data(filepath):
     """Parse a python file and return a dict with plugin metadata"""
     data = {}
-    with open(filepath, 'r', encoding='utf-8') as plugin_file:
+    with open(filepath, encoding='utf-8') as plugin_file:
         source = plugin_file.read()
         try:
             root = ast.parse(source, filepath)
@@ -103,9 +104,7 @@ def get_plugin_data(filepath):
         for node in ast.iter_child_nodes(root):
             if isinstance(node, ast.Assign) and len(node.targets) == 1:
                 target = node.targets[0]
-                if (isinstance(target, ast.Name)
-                    and isinstance(target.ctx, ast.Store)
-                        and target.id in KNOWN_DATA):
+                if isinstance(target, ast.Name) and isinstance(target.ctx, ast.Store) and target.id in KNOWN_DATA:
                     name = target.id.replace('PLUGIN_', '', 1).lower()
                     if name not in data:
                         try:
@@ -114,9 +113,7 @@ def get_plugin_data(filepath):
                                 value = markdown(value)
                             data[name] = value
                         except ValueError:
-                            print('Cannot evaluate value in '
-                                  + filepath + ':' +
-                                  ast.dump(node))
+                            print('Cannot evaluate value in ' + filepath + ':' + ast.dump(node))
         return data
 
 
@@ -127,7 +124,6 @@ def build_json(source_dir, dest_dir, supported_versions=None):
 
     # All top level directories in source_dir are plugins
     for dirname in next(os.walk(source_dir))[1]:
-
         files = {}
         data = {}
 
@@ -149,9 +145,9 @@ def build_json(source_dir, dest_dir, supported_versions=None):
                         data = get_plugin_data(os.path.join(source_dir, dirname, filename))
 
         if files and data:
-            if ((supported_versions
-                 and set(map(version_from_string, data['api_versions'])) & set(supported_versions))
-                 or not supported_versions):
+            if (
+                supported_versions and set(map(version_from_string, data['api_versions'])) & set(supported_versions)
+            ) or not supported_versions:
                 print("Added: " + dirname)
                 data['files'] = files
                 plugins[dirname] = data
@@ -173,8 +169,7 @@ def zip_files(source_dir, dest_dir):
     valid_plugins = get_valid_plugins(dest_dir)
 
     for dirname in next(os.walk(source_dir))[1]:
-        if ((valid_plugins and dirname in valid_plugins)
-            or not valid_plugins):
+        if (valid_plugins and dirname in valid_plugins) or not valid_plugins:
             archive_path = os.path.join(dest_dir, dirname)
             archive = zipfile.ZipFile(archive_path + ".zip", "w")
 
@@ -186,21 +181,15 @@ def zip_files(source_dir, dest_dir):
                     file_path = os.path.join(root, filename)
                     plugin_files.append(file_path)
 
-            if (len(plugin_files) == 1
-                and os.path.basename(plugin_files[0]) != '__init__.py'):
+            if len(plugin_files) == 1 and os.path.basename(plugin_files[0]) != '__init__.py':
                 # There's only one file, put it directly into the zipfile
-                archive.write(plugin_files[0],
-                              os.path.basename(plugin_files[0]),
-                              compress_type=zipfile.ZIP_DEFLATED)
+                archive.write(plugin_files[0], os.path.basename(plugin_files[0]), compress_type=zipfile.ZIP_DEFLATED)
             else:
                 for filename in plugin_files:
                     # Preserve the folder structure relative to source_dir
                     # in the zip file
-                    name_in_zip = os.path.join(os.path.relpath(filename,
-                                                               source_dir))
-                    archive.write(filename,
-                                  name_in_zip,
-                                  compress_type=zipfile.ZIP_DEFLATED)
+                    name_in_zip = os.path.join(os.path.relpath(filename, source_dir))
+                    archive.write(filename, name_in_zip, compress_type=zipfile.ZIP_DEFLATED)
 
             print("Created: " + dirname + ".zip")
 

@@ -1,4 +1,3 @@
-
 from flask_apscheduler import APScheduler
 
 from website.build_plugins import generate_plugins
@@ -24,7 +23,6 @@ def init_scheduler(app):
                 logger.info("Plugin generation for version %s successful.", version)
             except Exception as e:
                 logger.error("Plugin generation for version %s failed: %s", version, e)
-
 
     scheduler.start()
     return scheduler

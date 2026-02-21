@@ -10,23 +10,23 @@ PLUGINS_CACHE_TIMEOUT = 0  # never expire, handled by plugin refresh
 PLUGIN_VERSIONS = {
     'v1': {
         'title': '1.0',
-        'response': 'The endpoints currently available for this api version' \
-                ' are /api/v1/plugins and /api/v1/download',
+        'response': 'The endpoints currently available for this api version are /api/v1/plugins and /api/v1/download',
     },
     'v2': {
         'title': '2.0',
-        'response': 'The endpoints currently available for this api version' \
-                ' are /api/v2/plugins, /api/v2/download and /api/v2/releases',
+        'response': 'The endpoints currently available for this api version'
+        ' are /api/v2/plugins, /api/v2/download and /api/v2/releases',
     },
     'v3': {
         'title': '3.0',
-        'response': 'The endpoints currently available for this api version' \
-                ' are /api/v3/registry/plugins.toml',
+        'response': 'The endpoints currently available for this api version are /api/v3/registry/plugins.toml',
     },
 }
 
 # Download URL for v3 registry file
-PLUGINS_V3_REGISTRY_URL = "https://raw.githubusercontent.com/metabrainz/picard-plugins-registry/refs/heads/main/plugins.toml"
+PLUGINS_V3_REGISTRY_URL = (
+    "https://raw.githubusercontent.com/metabrainz/picard-plugins-registry/refs/heads/main/plugins.toml"
+)
 
 # v3 plugins registry cache timeout
 PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS = 4 * 60 * 60
@@ -83,7 +83,7 @@ PICARD_VERSIONS = {
         'version': (2, 9, 0, 'alpha', 1),
         'urls': {
             'download': 'https://blog.metabrainz.org/2023/01/03/picard-2-9-alpha-1-available-for-testing/',
-        }
+        },
     },
 }
 

@@ -1,5 +1,5 @@
-from flask import g, request, abort
-from flask_babel import Babel, Locale, get_locale
+from flask import abort, g, request
+from flask_babel import Babel, Locale
 
 
 def init_app(app):
@@ -15,7 +15,7 @@ def init_app(app):
                 if locale in available_locales:
                     found_locales[language] = locale.language_name
             except BaseException as e:
-                app.logger.error('%s',  e)
+                app.logger.error('%s', e)
 
         if not found_locales:
             found_locales = {str(l): l.language_name for l in available_locales}
@@ -40,6 +40,7 @@ def init_app(app):
         language_arg = request.args.get('l')
         if language_arg is not None:
             if language_arg in languages:
+
                 @after_this_request
                 def remember_language(response):
                     response.set_cookie('language', language_arg)

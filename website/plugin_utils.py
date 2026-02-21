@@ -1,4 +1,5 @@
 import os
+
 from flask import json
 
 
@@ -23,6 +24,5 @@ def load_json_data(app, version, force_refresh=False):
     if data is None:
         with open(plugins_json_file(app, version)) as fp:
             data = json.load(fp)['plugins']
-            app.cache.set(key, data,
-                          timeout=app.config['PLUGINS_CACHE_TIMEOUT'])
+            app.cache.set(key, data, timeout=app.config['PLUGINS_CACHE_TIMEOUT'])
     return data

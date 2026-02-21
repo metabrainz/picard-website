@@ -1,10 +1,9 @@
-from website.frontend.testing import FrontendTestCase
-from flask import url_for
 from flask import current_app as app
+
+from website.frontend.testing import FrontendTestCase
 
 
 class ViewsTestCase(FrontendTestCase):
-
     def test_docs_root(self):
         "Test /docs/ main page"
         response = self.client.get("/docs/")

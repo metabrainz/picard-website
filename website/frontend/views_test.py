@@ -2,7 +2,6 @@ from website.frontend.testing import FrontendTestCase
 
 
 class ViewsTestCase(FrontendTestCase):
-
     def test_home_page(self):
         "Test /"
         response = self.client.get("/")

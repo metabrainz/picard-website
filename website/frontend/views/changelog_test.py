@@ -1,9 +1,9 @@
-from website.frontend.testing import FrontendTestCase
 from flask import url_for
+
+from website.frontend.testing import FrontendTestCase
 
 
 class ViewsTestCase(FrontendTestCase):
-
     def test_changelog(self):
         "Test /changelog/"
         response = self.client.get("/changelog/")

@@ -1,6 +1,11 @@
-from urllib.request import urlopen
-from flask import current_app, Blueprint, render_template
 import re
+from urllib.request import urlopen
+
+from flask import (
+    Blueprint,
+    current_app,
+    render_template,
+)
 import mistune
 
 

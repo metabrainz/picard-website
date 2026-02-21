@@ -1,14 +1,14 @@
-import os
 import glob
 import json
+import os
 import shutil
 import tempfile
 import unittest
-from website.build_plugins import download_plugins, build_json, zip_files
+
+from website.build_plugins import build_json, download_plugins, zip_files
 
 
 class GenerateTestCase(unittest.TestCase):
-
     """Run tests"""
 
     # The file that contains json data
@@ -47,7 +47,7 @@ class GenerateTestCase(unittest.TestCase):
         build_json(self.plugin_dir, self.dest_dir)
 
         # Load the json file
-        with open(self.plugin_file, "r") as in_file:
+        with open(self.plugin_file) as in_file:
             plugin_json = json.load(in_file)["plugins"]
 
         # All top level directories in plugin_dir
@@ -87,7 +87,7 @@ class GenerateTestCase(unittest.TestCase):
         build_json(self.plugin_dir, self.dest_dir)
 
         # Load the json file
-        with open(self.plugin_file, "r") as in_file:
+        with open(self.plugin_file) as in_file:
             plugin_json = json.load(in_file)["plugins"]
 
         # All plugins should contain all required fields
