@@ -218,6 +218,24 @@ class TestLoadRegistryToml(unittest.TestCase):
         self.app.logger.error.assert_called_once()
         self.assertIn('304 but cache_entry is None', self.app.logger.error.call_args[0][0])
 
+    def test_load_plugin_list_skips_invalid_plugins(self):
+        """Should skip plugins without id or name"""
+        from unittest.mock import patch
+        from website.plugin3_registry import load_plugin_list
+
+        # Mock registry with invalid plugins
+        invalid_toml = "[[plugins]]\nid = \"valid\"\nname = \"Valid Plugin\"\n\n[[plugins]]\nname = \"No ID\"\n\n[[plugins]]\nid = \"no-name\"\n"
+
+        # Need to bypass cache
+        self.app.cache.get.return_value = None
+        with patch('website.plugin3_registry.load_registry_toml', return_value=invalid_toml):
+            result = load_plugin_list(self.app, force_refresh=True)
+
+        # Should only have the valid plugin
+        self.assertEqual(len(result), 1)
+        self.assertIn('valid', result)
+        self.assertNotIn('no-name', result)
+
 
 if __name__ == '__main__':
     unittest.main()
