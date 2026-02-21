@@ -4,8 +4,8 @@
 # Clone or pull repository from GitHub and run generate.py script
 
 
-import website.frontend
 from website.build_plugins import generate_plugins
+import website.frontend
 
 
 config = website.frontend.create_app().config
