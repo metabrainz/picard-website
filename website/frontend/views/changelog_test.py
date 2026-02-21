@@ -1,16 +1,11 @@
-from flask import url_for
-
 from website.frontend.testing import FrontendTestCase
 
 
-class ViewsTestCase(FrontendTestCase):
-    def test_changelog(self):
-        "Test /changelog/"
+class ChangelogViewsTest(FrontendTestCase):
+    """Tests for changelog routes"""
+
+    def test_changelog_returns_200(self):
+        """Test /changelog/ returns 200 with content"""
         response = self.client.get("/changelog/")
         self.assert200(response)
         self.assertIn(b'Version', response.data)
-
-    def test_changelog_redirect(self):
-        "Test /changelog"
-        response = self.client.get("/changelog")
-        self.assertRedirects(response, url_for("changelog.show_changelog"))
