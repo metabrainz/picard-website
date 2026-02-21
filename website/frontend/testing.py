@@ -1,10 +1,11 @@
+from urllib.parse import urljoin, urlparse
+
 from flask_testing import TestCase
+
 from website.frontend import create_app
-from urllib.parse import urlparse, urljoin
 
 
 class FrontendTestCase(TestCase):
-
     def create_app(self):
         app = create_app()
         app.config['TESTING'] = True
@@ -31,10 +32,10 @@ class FrontendTestCase(TestCase):
             expected_location = location
         else:
             server_name = self.app.config.get('SERVER_NAME') or 'localhost'
-            expected_location = urljoin("http://%s" % server_name, location)
+            expected_location = urljoin(f"http://{server_name}", location)
 
         valid_status_codes = (301, 302, 303, 305, 307, 308)
         valid_status_code_str = ', '.join(str(code) for code in valid_status_codes)
-        not_redirect = "HTTP Status %s expected but got %d" % (valid_status_code_str, response.status_code)
+        not_redirect = f"HTTP Status {valid_status_code_str} expected but got {response.status_code}"
         self.assertTrue(response.status_code in valid_status_codes, message or not_redirect)
         self.assertEqual(response.location, expected_location, message)

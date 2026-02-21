@@ -1,3 +1,7 @@
+#
+## Default cache timeout - used when no specific timeout is specified
+#DEFAULT_CACHE_TIMEOUT = 5 * 60
+#
 #PLUGINS_BUILD_DIR = "/home/user/.config/PW/plugins"
 #PLUGINS_REFRESH_INTERVAL_SECONDS = 12 * 60 * 60
 #PLUGINS_CACHE_TIMEOUT = 5 * 60
@@ -23,10 +27,10 @@
 #PLUGINS_V3_REGISTRY_URL = "https://raw.githubusercontent.com/metabrainz/picard-plugins-registry/refs/heads/main/plugins.toml"
 #
 ## v3 plugins registry cache timeout
-#PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS = 4 * 60 * 60
+#PLUGINS_V3_REGISTRY_CACHE_TIMEOUT = 4 * 60 * 60
 #
-## v3 plugins registry cache timeout
-#PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT_SECONDS = 5
+## v3 plugins registry request timeout
+#PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT = 5
 #
 ## PICARD_VERSIONS dictionary valid keys are: 'stable', 'beta' and 'dev'.
 ## The 'version' tuple comprises int_major, int_minor, int_micro, str_type and int_development as defined in PEP-440.
@@ -69,4 +73,6 @@
 #
 #SERVER_HOSTNAME = "127.0.0.1"
 #SERVER_PORT = 6060
+## Scheduler API is restricted to localhost only (see scheduler.py)
+## Safe to enable for local debugging and monitoring
 #SCHEDULER_API_ENABLED = True

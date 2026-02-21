@@ -1,38 +1,42 @@
 # This configuration is for production / docker
 # You need to copy config.py.example to config.py and edit the file to your own needs
 # to override these values.
+
+# Default cache timeout - used when no specific timeout is specified
+DEFAULT_CACHE_TIMEOUT = 5 * 60
+
 PLUGINS_BUILD_DIR = "/code/plugins"
 PLUGINS_REFRESH_INTERVAL_SECONDS = 12 * 60 * 60
-PLUGINS_CACHE_TIMEOUT = 0  # never expire, handled by plugin refresh
+PLUGINS_CACHE_TIMEOUT = 0  # never expire, handled by plugin refresh scheduler
 # Flask automatically orders them in ascending order while
 # retrieveing them. Since it is a string comparison, v10 appears before
 # v2. So be careful with the ordering.
 PLUGIN_VERSIONS = {
     'v1': {
         'title': '1.0',
-        'response': 'The endpoints currently available for this api version' \
-                ' are /api/v1/plugins and /api/v1/download',
+        'response': 'The endpoints currently available for this api version are /api/v1/plugins and /api/v1/download',
     },
     'v2': {
         'title': '2.0',
-        'response': 'The endpoints currently available for this api version' \
-                ' are /api/v2/plugins, /api/v2/download and /api/v2/releases',
+        'response': 'The endpoints currently available for this api version'
+        ' are /api/v2/plugins, /api/v2/download and /api/v2/releases',
     },
     'v3': {
         'title': '3.0',
-        'response': 'The endpoints currently available for this api version' \
-                ' are /api/v3/registry/plugins.toml',
+        'response': 'The endpoints currently available for this api version are /api/v3/registry/plugins.toml',
     },
 }
 
 # Download URL for v3 registry file
-PLUGINS_V3_REGISTRY_URL = "https://raw.githubusercontent.com/metabrainz/picard-plugins-registry/refs/heads/main/plugins.toml"
+PLUGINS_V3_REGISTRY_URL = (
+    "https://raw.githubusercontent.com/metabrainz/picard-plugins-registry/refs/heads/main/plugins.toml"
+)
 
 # v3 plugins registry cache timeout
-PLUGINS_V3_REGISTRY_CACHE_TIMEOUT_SECONDS = 4 * 60 * 60
+PLUGINS_V3_REGISTRY_CACHE_TIMEOUT = 4 * 60 * 60
 
-# v3 plugins registry cache timeout
-PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT_SECONDS = 5
+# v3 plugins registry request timeout
+PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT = 5
 
 # PICARD_VERSIONS dictionary valid keys are: 'stable', 'beta' and 'dev'.
 # The 'version' tuple comprises int_major, int_minor, int_micro, str_type and int_development as defined in PEP-440.
@@ -83,7 +87,7 @@ PICARD_VERSIONS = {
         'version': (2, 9, 0, 'alpha', 1),
         'urls': {
             'download': 'https://blog.metabrainz.org/2023/01/03/picard-2-9-alpha-1-available-for-testing/',
-        }
+        },
     },
 }
 
@@ -111,4 +115,6 @@ SUPPORTED_LANGUAGES = [
 
 SERVER_HOSTNAME = "127.0.0.1"
 SERVER_PORT = 6060
+# Scheduler API is restricted to localhost only (see scheduler.py)
+# Safe to enable for local debugging and monitoring
 SCHEDULER_API_ENABLED = True

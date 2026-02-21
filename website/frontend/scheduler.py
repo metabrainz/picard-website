@@ -1,4 +1,4 @@
-
+from flask import request
 from flask_apscheduler import APScheduler
 
 from website.build_plugins import generate_plugins
@@ -10,6 +10,20 @@ def init_scheduler(app):
     config = app.config
     scheduler = APScheduler()
     scheduler.init_app(app)
+
+    # Restrict scheduler API to localhost only
+    @app.before_request
+    def restrict_scheduler_api():
+        if request.path.startswith('/scheduler'):
+            # Allow localhost/127.0.0.1 only
+            if request.remote_addr not in ['127.0.0.1', 'localhost', '::1']:
+                logger.warning(
+                    'Scheduler API access denied from %s to %s',
+                    request.remote_addr,
+                    request.path
+                )
+                from flask import abort
+                abort(403)
 
     @scheduler.task('interval', id='plugins_generate', seconds=config['PLUGINS_REFRESH_INTERVAL_SECONDS'])
     def plugins_generate():
@@ -24,7 +38,6 @@ def init_scheduler(app):
                 logger.info("Plugin generation for version %s successful.", version)
             except Exception as e:
                 logger.error("Plugin generation for version %s failed: %s", version, e)
-
 
     scheduler.start()
     return scheduler

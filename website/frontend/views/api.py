@@ -4,15 +4,15 @@ from flask import (
     jsonify,
     make_response,
     request,
-    send_from_directory
+    send_from_directory,
 )
-from urllib.error import HTTPError
 
+from website.plugin3_registry import load_registry_toml
 from website.plugin_utils import (
     load_json_data,
-    plugins_dir
+    plugins_dir,
 )
-from website.plugin3_registry import load_registry_toml
+
 
 api_bp = Blueprint('api', __name__)
 
@@ -37,7 +37,8 @@ def _download_plugin(app, version, pid):
             plugins_dir(current_app, version),
             pid + ".zip",
             as_attachment=True,
-            mimetype='application/zip')
+            mimetype='application/zip',
+        )
     else:
         return not_found(404)
 
@@ -100,8 +101,14 @@ def download_plugin(version):
             return _download_plugin(current_app, build_version, pid)
         else:
             return make_response(
-                jsonify({'error': 'Plugin id not specified.',
-                         'message': 'Correct usage: /api/%s/download?id=<id>' % version}), 400)
+                jsonify(
+                    {
+                        'error': 'Plugin id not specified.',
+                        'message': f'Correct usage: /api/{version}/download?id=<id>',
+                    }
+                ),
+                400,
+            )
     else:
         return invalid_api_version(404)
 

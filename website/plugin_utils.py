@@ -1,5 +1,8 @@
 import os
+
 from flask import json
+
+from website.cache_utils import cached
 
 
 def plugins_build_dir(app):
@@ -16,13 +19,8 @@ def plugins_dir(app, version):
     return os.path.join(plugins_build_dir(app), version)
 
 
+@cached(lambda app, version, **kw: f'plugins_json_data_{version}', 'PLUGINS_CACHE_TIMEOUT')
 def load_json_data(app, version, force_refresh=False):
     """Load JSON Data"""
-    key = 'plugins_json_data_%s' % version
-    data = app.cache.get(key) if not force_refresh else None
-    if data is None:
-        with open(plugins_json_file(app, version)) as fp:
-            data = json.load(fp)['plugins']
-            app.cache.set(key, data,
-                          timeout=app.config['PLUGINS_CACHE_TIMEOUT'])
-    return data
+    with open(plugins_json_file(app, version)) as fp:
+        return json.load(fp)['plugins']
