@@ -8,6 +8,7 @@ from .scheduler import init_scheduler
 
 
 frontend_folder = os.path.dirname(os.path.abspath(__file__))
+website_folder = os.path.dirname(frontend_folder)
 template_folder = os.path.join(frontend_folder, 'templates')
 static_folder = os.path.join(frontend_folder, 'static')
 
@@ -17,8 +18,8 @@ def create_app():
     app.debug = True
 
     # Configuration files
-    app.config.from_pyfile(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'default_config.py'))
-    app.config.from_pyfile(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'config.py'), silent=True)
+    app.config.from_pyfile(os.path.join(website_folder, 'default_config.py'))
+    app.config.from_pyfile(os.path.join(website_folder, 'config.py'), silent=True)
 
     # Error handling
     init_error_handlers(app)
