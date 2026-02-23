@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-from werkzeug.serving import run_simple
 from website.frontend import create_app
+from werkzeug.serving import run_simple
+
 
 app = create_app()
 

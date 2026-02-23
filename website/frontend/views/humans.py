@@ -1,5 +1,6 @@
 from flask import Blueprint, send_file
 
+
 humans_bp = Blueprint('humans', __name__)
 
 
