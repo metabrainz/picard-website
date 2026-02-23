@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-13 17:30+0100\n"
+"POT-Creation-Date: 2026-02-21 15:07+0100\n"
 "PO-Revision-Date: 2025-09-07 09:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://translations.metabrainz.org/projects/picard/"
 "website/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.13.1\n"
@@ -35,8 +35,7 @@ msgstr "MusicBrainz Picard"
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
 msgid ""
-"Picard is a cross-platform music tagger powered by the MusicBrainz "
-"database."
+"Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr ""
 
 #: website/frontend/templates/base.html:42
@@ -73,14 +72,15 @@ msgstr ""
 
 #: website/frontend/templates/base.html:99
 msgid ""
-"Picard helps you organize your music collection by renaming your music "
-"files and sorting them into a folder structure exactly the way you want "
-"it. A variety of plugins are available and you can even write your own. "
-"Picard supports a wide range of audio formats and can also lookup an "
-"entire CD for you."
+"Picard helps you organize your music collection by renaming your music files "
+"and sorting them into a folder structure exactly the way you want it. A "
+"variety of plugins are available and you can even write your own. Picard "
+"supports a wide range of audio formats and can also lookup an entire CD for "
+"you."
 msgstr ""
 
 #: website/frontend/templates/base.html:103
+#, python-brace-format
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
 msgstr ""
 
@@ -121,14 +121,17 @@ msgid "Fellow Projects"
 msgstr ""
 
 #: website/frontend/templates/base.html:175
+#, python-brace-format
 msgid "OSS Geek? {url|Contribute Here}"
 msgstr ""
 
 #: website/frontend/templates/base.html:184
+#, python-brace-format
 msgid "Brought to you by {metabrainz}"
 msgstr ""
 
 #: website/frontend/templates/base.html:189
+#, python-brace-format
 msgid "Found an Issue? {url|Report Here}"
 msgstr ""
 
@@ -144,6 +147,7 @@ msgid ""
 msgstr ""
 
 #: website/frontend/templates/downloads.html:10
+#, python-brace-format
 msgid "Learn about the new features in Picard {version}"
 msgstr ""
 
@@ -194,7 +198,7 @@ msgstr ""
 #: website/frontend/templates/downloads.html:319
 #: website/frontend/templates/downloads.html:330
 #: website/frontend/templates/downloads.html:340
-#: website/frontend/templates/plugins.html:71
+#: website/frontend/templates/plugins.html:84
 msgid "Download"
 msgstr ""
 
@@ -272,8 +276,8 @@ msgstr ""
 
 #: website/frontend/templates/downloads.html:241
 msgid ""
-"In addition Picard is also available in the official repositories of most"
-" Linux distributions."
+"In addition Picard is also available in the official repositories of most "
+"Linux distributions."
 msgstr ""
 
 #: website/frontend/templates/downloads.html:248
@@ -305,13 +309,15 @@ msgid "pre-release, zip"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:354
+#, python-brace-format
 msgid ""
-"You can also view the latest Picard source code on {urlgithub|Github}. "
-"See {urldev|Development} on how you can start contributing to the Picard "
-"source code."
+"You can also view the latest Picard source code on {urlgithub|Github}. See "
+"{urldev|Development} on how you can start contributing to the Picard source "
+"code."
 msgstr ""
 
 #: website/frontend/templates/downloads.html:361
+#, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
@@ -335,8 +341,8 @@ msgstr ""
 
 #: website/frontend/templates/index.html:42
 msgid ""
-"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
-" WMA, WAV, and more."
+"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
+"WMA, WAV, and more."
 msgstr ""
 
 #: website/frontend/templates/index.html:49
@@ -344,9 +350,10 @@ msgid "Comprehensive Database"
 msgstr ""
 
 #: website/frontend/templates/index.html:58
+#, python-brace-format
 msgid ""
-"Picard uses the open and community-maintained {url|MusicBrainz} database "
-"to provide accurate information about millions of music releases."
+"Picard uses the open and community-maintained {url|MusicBrainz} database to "
+"provide accurate information about millions of music releases."
 msgstr ""
 
 #: website/frontend/templates/index.html:66
@@ -354,6 +361,7 @@ msgid "AcoustID"
 msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
+#, python-brace-format
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
@@ -372,6 +380,7 @@ msgid "Open Source"
 msgstr ""
 
 #: website/frontend/templates/index.html:100
+#, python-brace-format
 msgid ""
 "Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
 "{urlgithub|GitHub} where it’s\n"
@@ -393,8 +402,7 @@ msgstr "스크립트 작성"
 #: website/frontend/templates/index.html:120
 msgid ""
 "A flexible but easy to learn scripting language allows you to exactly "
-"specify how your music files will be named and how the tags will look "
-"like."
+"specify how your music files will be named and how the tags will look like."
 msgstr ""
 
 #: website/frontend/templates/index.html:127
@@ -402,21 +410,25 @@ msgid "Plugin Support"
 msgstr ""
 
 #: website/frontend/templates/index.html:129
+#, python-brace-format
 msgid ""
-"If you need a particular feature, you can choose from a selection of "
-"{url|available plugins} or write\n"
+"If you need a particular feature, you can choose from a selection of {url|"
+"available plugins} or write\n"
 "                your own."
 msgstr ""
 
 #: website/frontend/templates/index.html:148
+#, python-brace-format
 msgid "v{version} for Windows (64-bit)"
 msgstr ""
 
 #: website/frontend/templates/index.html:153
+#, python-brace-format
 msgid "v{version} for Linux Distributions"
 msgstr ""
 
 #: website/frontend/templates/index.html:158
+#, python-brace-format
 msgid "v{version} for macOS 10.14+"
 msgstr ""
 
@@ -426,42 +438,44 @@ msgstr ""
 
 #: website/frontend/templates/plugins.html:30
 msgid ""
-"This is a list of plugins that are currently available for use with "
-"Picard."
+"This is a list of plugins that are currently available for use with Picard."
 msgstr ""
 
 #: website/frontend/templates/plugins.html:31
 msgid ""
-"The current release of Picard 2.x uses API v2. The older Picard 1.x "
-"releases use API v1."
+"The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
+"use API v1."
 msgstr ""
 
 #: website/frontend/templates/plugins.html:32
-msgid "The table is generated from the data of our plugin {urlrepo|repository}."
+#, python-brace-format
+msgid ""
+"The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
 
-#: website/frontend/templates/plugins.html:55
+#: website/frontend/templates/plugins.html:57
 msgid "Name"
 msgstr "이름"
 
-#: website/frontend/templates/plugins.html:56
+#: website/frontend/templates/plugins.html:59
 msgid "Version"
 msgstr "버전"
 
-#: website/frontend/templates/plugins.html:57
+#: website/frontend/templates/plugins.html:61
 msgid "Description"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:58
+#: website/frontend/templates/plugins.html:62
 msgid "Author(s)"
 msgstr ""
 
-#: website/frontend/templates/docs/build-osx.html:3
-msgid "Build on macOS"
+#: website/frontend/templates/plugins.html:63
+#: website/frontend/templates/plugins.html:79
+msgid "Repository"
 msgstr ""
 
-#: website/frontend/templates/docs/build-windows.html:3
-msgid "Build on Windows"
+#: website/frontend/templates/plugins.html:78
+msgid "Open repository in a new tab"
 msgstr ""
 
 #: website/frontend/templates/docs/development.html:3

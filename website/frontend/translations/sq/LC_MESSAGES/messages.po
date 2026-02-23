@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-13 17:30+0100\n"
+"POT-Creation-Date: 2026-02-21 15:07+0100\n"
 "PO-Revision-Date: 2025-01-21 07:44+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://translations.metabrainz.org/projects/picard/"
@@ -89,6 +89,7 @@ msgstr ""
 "dhe mund të kërkojë për ju një CD të tërë."
 
 #: website/frontend/templates/base.html:103
+#, python-brace-format
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
 msgstr "Bisedoni me ne: {url|Matrix, IRC, Discord}"
 
@@ -129,14 +130,17 @@ msgid "Fellow Projects"
 msgstr "Projekte të Afërt"
 
 #: website/frontend/templates/base.html:175
+#, python-brace-format
 msgid "OSS Geek? {url|Contribute Here}"
 msgstr "Programues OSS? {url|Kontribuoni Këtu}"
 
 #: website/frontend/templates/base.html:184
+#, python-brace-format
 msgid "Brought to you by {metabrainz}"
 msgstr "Sjellë për ju nga {metabrainz}"
 
 #: website/frontend/templates/base.html:189
+#, python-brace-format
 msgid "Found an Issue? {url|Report Here}"
 msgstr "Gjetën një Problem? {url|Njoftojeni Këtu}"
 
@@ -154,6 +158,7 @@ msgstr ""
 "vini në punë instaluesin. Kaq e lehtë është."
 
 #: website/frontend/templates/downloads.html:10
+#, python-brace-format
 msgid "Learn about the new features in Picard {version}"
 msgstr "Mësoni mbi veçoritë e reja në Picard {version}"
 
@@ -204,7 +209,7 @@ msgstr "Instalues 64-bit"
 #: website/frontend/templates/downloads.html:319
 #: website/frontend/templates/downloads.html:330
 #: website/frontend/templates/downloads.html:340
-#: website/frontend/templates/plugins.html:71
+#: website/frontend/templates/plugins.html:84
 msgid "Download"
 msgstr "Shkarkoje"
 
@@ -317,6 +322,7 @@ msgid "pre-release, zip"
 msgstr "hedhje paraprake në qarkullim, zip"
 
 #: website/frontend/templates/downloads.html:354
+#, python-brace-format
 msgid ""
 "You can also view the latest Picard source code on {urlgithub|Github}. See "
 "{urldev|Development} on how you can start contributing to the Picard source "
@@ -327,6 +333,7 @@ msgstr ""
 "shihni te {urldev|Zhvillim}."
 
 #: website/frontend/templates/downloads.html:361
+#, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
@@ -363,6 +370,7 @@ msgid "Comprehensive Database"
 msgstr "Bazë Shteruese të Dhënash"
 
 #: website/frontend/templates/index.html:58
+#, python-brace-format
 msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
@@ -376,6 +384,7 @@ msgid "AcoustID"
 msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
+#, python-brace-format
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
@@ -396,6 +405,7 @@ msgid "Open Source"
 msgstr "Burim i Hapët"
 
 #: website/frontend/templates/index.html:100
+#, python-brace-format
 msgid ""
 "Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
 "{urlgithub|GitHub} where it’s\n"
@@ -432,6 +442,7 @@ msgid "Plugin Support"
 msgstr "Asistencë Shtojce"
 
 #: website/frontend/templates/index.html:129
+#, python-brace-format
 msgid ""
 "If you need a particular feature, you can choose from a selection of {url|"
 "available plugins} or write\n"
@@ -442,14 +453,17 @@ msgstr ""
 "                ose të shkruani tuajën."
 
 #: website/frontend/templates/index.html:148
+#, python-brace-format
 msgid "v{version} for Windows (64-bit)"
 msgstr "v{version} për Windows (64-bit)"
 
 #: website/frontend/templates/index.html:153
+#, python-brace-format
 msgid "v{version} for Linux Distributions"
 msgstr "v{version} Shpërndarje GNU/Linux"
 
 #: website/frontend/templates/index.html:158
+#, python-brace-format
 msgid "v{version} for macOS 10.14+"
 msgstr "v{version} për macOS 10.14+"
 
@@ -472,34 +486,36 @@ msgstr ""
 "dikurshme në qarkullim Picard 1.x përdorin API v1."
 
 #: website/frontend/templates/plugins.html:32
+#, python-brace-format
 msgid ""
 "The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
 "Tabela është prodhuar nga të dhëna të {urlrepo|depos} sonë të shtojcave."
 
-#: website/frontend/templates/plugins.html:55
+#: website/frontend/templates/plugins.html:57
 msgid "Name"
 msgstr "Emër"
 
-#: website/frontend/templates/plugins.html:56
+#: website/frontend/templates/plugins.html:59
 msgid "Version"
 msgstr "Version"
 
-#: website/frontend/templates/plugins.html:57
+#: website/frontend/templates/plugins.html:61
 msgid "Description"
 msgstr "Përshkrim"
 
-#: website/frontend/templates/plugins.html:58
+#: website/frontend/templates/plugins.html:62
 msgid "Author(s)"
 msgstr "Autor(ë)"
 
-#: website/frontend/templates/docs/build-osx.html:3
-msgid "Build on macOS"
-msgstr "Montojeni në macOS"
+#: website/frontend/templates/plugins.html:63
+#: website/frontend/templates/plugins.html:79
+msgid "Repository"
+msgstr ""
 
-#: website/frontend/templates/docs/build-windows.html:3
-msgid "Build on Windows"
-msgstr "Montojeni në Windows"
+#: website/frontend/templates/plugins.html:78
+msgid "Open repository in a new tab"
+msgstr ""
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
@@ -520,3 +536,9 @@ msgid ""
 msgstr ""
 "S’keni pse bëheni merak, dikush po merret me ndreqje gjërash teksa lexoni "
 "këtë."
+
+#~ msgid "Build on macOS"
+#~ msgstr "Montojeni në macOS"
+
+#~ msgid "Build on Windows"
+#~ msgstr "Montojeni në Windows"

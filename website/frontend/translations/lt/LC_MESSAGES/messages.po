@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-13 17:30+0100\n"
+"POT-Creation-Date: 2026-02-21 15:07+0100\n"
 "PO-Revision-Date: 2025-10-09 19:02+0000\n"
 "Last-Translator: Vaclovas Intas <gateway_31@protonmail.com>\n"
 "Language-Team: Lithuanian <https://translations.metabrainz.org/projects/"
@@ -17,9 +17,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural="
-"(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : "
-"((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
 "X-Generator: Weblate 5.13.3\n"
 "Generated-By: Babel 2.16.0\n"
 
@@ -91,6 +91,7 @@ msgstr ""
 "palaiko daugybę garso formatų, taip pat gali peržiūrėti visą CD."
 
 #: website/frontend/templates/base.html:103
+#, python-brace-format
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
 msgstr "Bendraukite su mumis: „{url|Matrix, IRC, Discord}“"
 
@@ -131,14 +132,17 @@ msgid "Fellow Projects"
 msgstr "Bendrieji projektai"
 
 #: website/frontend/templates/base.html:175
+#, python-brace-format
 msgid "OSS Geek? {url|Contribute Here}"
 msgstr "OSS specialistas? {url|Prisidėti čia}"
 
 #: website/frontend/templates/base.html:184
+#, python-brace-format
 msgid "Brought to you by {metabrainz}"
 msgstr "Pristato „{metabrainz}“"
 
 #: website/frontend/templates/base.html:189
+#, python-brace-format
 msgid "Found an Issue? {url|Report Here}"
 msgstr "Radote problemą? {url|Pranešti čia}"
 
@@ -156,6 +160,7 @@ msgstr ""
 "paleiskite diegyklę. Tai taip paprasta."
 
 #: website/frontend/templates/downloads.html:10
+#, python-brace-format
 msgid "Learn about the new features in Picard {version}"
 msgstr "Sužinoti apie naujas fukcijas programoje „Picard“ {version}"
 
@@ -206,7 +211,7 @@ msgstr "64 bitų diegyklė"
 #: website/frontend/templates/downloads.html:319
 #: website/frontend/templates/downloads.html:330
 #: website/frontend/templates/downloads.html:340
-#: website/frontend/templates/plugins.html:71
+#: website/frontend/templates/plugins.html:84
 msgid "Download"
 msgstr "Atsisiųsti"
 
@@ -319,6 +324,7 @@ msgid "pre-release, zip"
 msgstr "preliminarus leidimas, zip"
 
 #: website/frontend/templates/downloads.html:354
+#, python-brace-format
 msgid ""
 "You can also view the latest Picard source code on {urlgithub|Github}. See "
 "{urldev|Development} on how you can start contributing to the Picard source "
@@ -329,12 +335,13 @@ msgstr ""
 "šaltinio kodo kūrimo, žiūrėkite {urldev|Kūrimas}."
 
 #: website/frontend/templates/downloads.html:361
+#, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
 msgstr ""
-"Šis puslapis pateikia naujausius atsisiuntimus. Jei ieškote senesnių „Picard“"
-" versijų, {url|naršykite mūsų FTP serverį}."
+"Šis puslapis pateikia naujausius atsisiuntimus. Jei ieškote senesnių "
+"„Picard“ versijų, {url|naršykite mūsų FTP serverį}."
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
@@ -365,6 +372,7 @@ msgid "Comprehensive Database"
 msgstr "Visapusiška duomenų bazė"
 
 #: website/frontend/templates/index.html:58
+#, python-brace-format
 msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
@@ -378,6 +386,7 @@ msgid "AcoustID"
 msgstr "„AcoustID“"
 
 #: website/frontend/templates/index.html:75
+#, python-brace-format
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
@@ -398,6 +407,7 @@ msgid "Open Source"
 msgstr "Atviro kodo"
 
 #: website/frontend/templates/index.html:100
+#, python-brace-format
 msgid ""
 "Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
 "{urlgithub|GitHub} where it’s\n"
@@ -433,6 +443,7 @@ msgid "Plugin Support"
 msgstr "Įskiepių palaikymas"
 
 #: website/frontend/templates/index.html:129
+#, python-brace-format
 msgid ""
 "If you need a particular feature, you can choose from a selection of {url|"
 "available plugins} or write\n"
@@ -443,14 +454,17 @@ msgstr ""
 "                savo."
 
 #: website/frontend/templates/index.html:148
+#, python-brace-format
 msgid "v{version} for Windows (64-bit)"
 msgstr "v{version}, skirta „Windows“ (64 bitų)"
 
 #: website/frontend/templates/index.html:153
+#, python-brace-format
 msgid "v{version} for Linux Distributions"
 msgstr "v{version}, skirta „Linux“ platinimams paketams"
 
 #: website/frontend/templates/index.html:158
+#, python-brace-format
 msgid "v{version} for macOS 10.14+"
 msgstr "v{version}, skirta „macOS“ 10.14+"
 
@@ -472,33 +486,35 @@ msgstr ""
 "leidimai naudoja API v1."
 
 #: website/frontend/templates/plugins.html:32
+#, python-brace-format
 msgid ""
 "The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr "Lentelė sugeneruota iš mūsų įskiepių {urlrepo|saugyklos} duomenų."
 
-#: website/frontend/templates/plugins.html:55
+#: website/frontend/templates/plugins.html:57
 msgid "Name"
 msgstr "Pavadinimas"
 
-#: website/frontend/templates/plugins.html:56
+#: website/frontend/templates/plugins.html:59
 msgid "Version"
 msgstr "Versija"
 
-#: website/frontend/templates/plugins.html:57
+#: website/frontend/templates/plugins.html:61
 msgid "Description"
 msgstr "Aprašas"
 
-#: website/frontend/templates/plugins.html:58
+#: website/frontend/templates/plugins.html:62
 msgid "Author(s)"
 msgstr "Autorius (-iai)"
 
-#: website/frontend/templates/docs/build-osx.html:3
-msgid "Build on macOS"
-msgstr "Sukurti sistemoje „MacOS“"
+#: website/frontend/templates/plugins.html:63
+#: website/frontend/templates/plugins.html:79
+msgid "Repository"
+msgstr ""
 
-#: website/frontend/templates/docs/build-windows.html:3
-msgid "Build on Windows"
-msgstr "Sukurti sistemoje „Windows“"
+#: website/frontend/templates/plugins.html:78
+msgid "Open repository in a new tab"
+msgstr ""
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
@@ -519,6 +535,12 @@ msgid ""
 msgstr ""
 "Jums nereikia nerimauti, kol skaitote šį tekstą. Kažkas jau dirba, kad viską "
 "ištaisytų."
+
+#~ msgid "Build on macOS"
+#~ msgstr "Sukurti sistemoje „MacOS“"
+
+#~ msgid "Build on Windows"
+#~ msgstr "Sukurti sistemoje „Windows“"
 
 #~ msgid "IRC: {url|#metabrainz}"
 #~ msgstr "IRC: {url|#metabrainz}"

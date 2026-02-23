@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-13 17:30+0100\n"
+"POT-Creation-Date: 2026-02-21 15:07+0100\n"
 "PO-Revision-Date: 2025-04-14 13:20+0000\n"
 "Last-Translator: Marc Riera <marc@marcriera.cat>\n"
 "Language-Team: Catalan <https://translations.metabrainz.org/projects/picard/"
 "website/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.10.4\n"
@@ -37,8 +37,7 @@ msgstr "MusicBrainz Picard"
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
 msgid ""
-"Picard is a cross-platform music tagger powered by the MusicBrainz "
-"database."
+"Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr ""
 "Picard és un editor d'etiquetes de música multiplataforma basat en la base "
 "de dades MusicBrainz."
@@ -77,11 +76,11 @@ msgstr "Ajuda amb la traducció"
 
 #: website/frontend/templates/base.html:99
 msgid ""
-"Picard helps you organize your music collection by renaming your music "
-"files and sorting them into a folder structure exactly the way you want "
-"it. A variety of plugins are available and you can even write your own. "
-"Picard supports a wide range of audio formats and can also lookup an "
-"entire CD for you."
+"Picard helps you organize your music collection by renaming your music files "
+"and sorting them into a folder structure exactly the way you want it. A "
+"variety of plugins are available and you can even write your own. Picard "
+"supports a wide range of audio formats and can also lookup an entire CD for "
+"you."
 msgstr ""
 "Picard us ajuda a organitzar la vostra col·lecció musical canviant el nom "
 "dels fitxers de música i ordenant-los en una estructura de carpetes "
@@ -90,6 +89,7 @@ msgstr ""
 "d'àudio i també pot cercar un CD sencer."
 
 #: website/frontend/templates/base.html:103
+#, python-brace-format
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
 msgstr "Xateja amb nosaltres: {url|Matrix, IRC, Discord}"
 
@@ -130,14 +130,17 @@ msgid "Fellow Projects"
 msgstr "Projectes germans"
 
 #: website/frontend/templates/base.html:175
+#, python-brace-format
 msgid "OSS Geek? {url|Contribute Here}"
 msgstr "Friqui del programari lliure? {url|Col·laboreu aquí}"
 
 #: website/frontend/templates/base.html:184
+#, python-brace-format
 msgid "Brought to you by {metabrainz}"
 msgstr "Fet realitat per {metabrainz}"
 
 #: website/frontend/templates/base.html:189
+#, python-brace-format
 msgid "Found an Issue? {url|Report Here}"
 msgstr "Heu trobar un error? {url|Informeu-ne aquí}"
 
@@ -155,6 +158,7 @@ msgstr ""
 "i iniciar l'instal·lador. És així de fàcil."
 
 #: website/frontend/templates/downloads.html:10
+#, python-brace-format
 msgid "Learn about the new features in Picard {version}"
 msgstr "Més informació sobre les noves característiques de Picard {version}"
 
@@ -205,7 +209,7 @@ msgstr "instal·lador de 64 bits"
 #: website/frontend/templates/downloads.html:319
 #: website/frontend/templates/downloads.html:330
 #: website/frontend/templates/downloads.html:340
-#: website/frontend/templates/plugins.html:71
+#: website/frontend/templates/plugins.html:84
 msgid "Download"
 msgstr "Baixa"
 
@@ -283,8 +287,8 @@ msgstr "llegeix les PMF"
 
 #: website/frontend/templates/downloads.html:241
 msgid ""
-"In addition Picard is also available in the official repositories of most"
-" Linux distributions."
+"In addition Picard is also available in the official repositories of most "
+"Linux distributions."
 msgstr ""
 "A més, Picard també està disponible als repositoris oficials de la majoria "
 "de distribucions del Linux."
@@ -318,16 +322,18 @@ msgid "pre-release, zip"
 msgstr "versió preliminar, zip"
 
 #: website/frontend/templates/downloads.html:354
+#, python-brace-format
 msgid ""
-"You can also view the latest Picard source code on {urlgithub|Github}. "
-"See {urldev|Development} on how you can start contributing to the Picard "
-"source code."
+"You can also view the latest Picard source code on {urlgithub|Github}. See "
+"{urldev|Development} on how you can start contributing to the Picard source "
+"code."
 msgstr ""
 "També podeu veure el codi font de Picard més recent a {urlgithub|GitHub}. "
 "Consulteu {urldev|Desenvolupament} per a veure com podeu començar a "
 "contribuir al codi font de Picard."
 
 #: website/frontend/templates/downloads.html:361
+#, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
@@ -353,8 +359,8 @@ msgstr "Compatibilitat de formats"
 
 #: website/frontend/templates/index.html:42
 msgid ""
-"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
-" WMA, WAV, and more."
+"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
+"WMA, WAV, and more."
 msgstr ""
 "Picard és compatible amb tots els formats de música populars, incloent-hi "
 "MP3, FLAC, OGG, M4A, WMA, WAV i més."
@@ -364,9 +370,10 @@ msgid "Comprehensive Database"
 msgstr "Base de dades exhaustiva"
 
 #: website/frontend/templates/index.html:58
+#, python-brace-format
 msgid ""
-"Picard uses the open and community-maintained {url|MusicBrainz} database "
-"to provide accurate information about millions of music releases."
+"Picard uses the open and community-maintained {url|MusicBrainz} database to "
+"provide accurate information about millions of music releases."
 msgstr ""
 "Picard fa servir la base de dades {url|MusicBrainz}, oberta i mantinguda per "
 "la comunitat, per a proporcionar informació precisa sobre milions de "
@@ -377,6 +384,7 @@ msgid "AcoustID"
 msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
+#, python-brace-format
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
@@ -397,6 +405,7 @@ msgid "Open Source"
 msgstr "Programari lliure"
 
 #: website/frontend/templates/index.html:100
+#, python-brace-format
 msgid ""
 "Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
 "{urlgithub|GitHub} where it’s\n"
@@ -412,7 +421,8 @@ msgstr "Caràtules"
 
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
-msgstr "Picard pot trobar i baixar la caràtula correcta per als vostres àlbums."
+msgstr ""
+"Picard pot trobar i baixar la caràtula correcta per als vostres àlbums."
 
 #: website/frontend/templates/index.html:119
 msgid "Scripting"
@@ -421,8 +431,7 @@ msgstr "Scripts"
 #: website/frontend/templates/index.html:120
 msgid ""
 "A flexible but easy to learn scripting language allows you to exactly "
-"specify how your music files will be named and how the tags will look "
-"like."
+"specify how your music files will be named and how the tags will look like."
 msgstr ""
 "Un llenguatge de scripts flexible però fàcil d'aprendre us permet "
 "especificar exactament quin nom tindran els vostres fitxers musicals i quin "
@@ -433,23 +442,27 @@ msgid "Plugin Support"
 msgstr "Compatibilitat amb connectors"
 
 #: website/frontend/templates/index.html:129
+#, python-brace-format
 msgid ""
-"If you need a particular feature, you can choose from a selection of "
-"{url|available plugins} or write\n"
+"If you need a particular feature, you can choose from a selection of {url|"
+"available plugins} or write\n"
 "                your own."
 msgstr ""
 "Si voleu una característica en concret, podeu triar entre els molts {url|"
 "connectors disponibles} o crear-ne el vostre propi."
 
 #: website/frontend/templates/index.html:148
+#, python-brace-format
 msgid "v{version} for Windows (64-bit)"
 msgstr "v{version} per al Windows (64 bits)"
 
 #: website/frontend/templates/index.html:153
+#, python-brace-format
 msgid "v{version} for Linux Distributions"
 msgstr "v{version} per a distribucions del Linux"
 
 #: website/frontend/templates/index.html:158
+#, python-brace-format
 msgid "v{version} for macOS 10.14+"
 msgstr "v{version} per al macOS 10.14+"
 
@@ -459,48 +472,50 @@ msgstr "Connectors disponibles"
 
 #: website/frontend/templates/plugins.html:30
 msgid ""
-"This is a list of plugins that are currently available for use with "
-"Picard."
+"This is a list of plugins that are currently available for use with Picard."
 msgstr ""
 "Aquí teniu una llista de connectors disponibles actualment per a Picard."
 
 #: website/frontend/templates/plugins.html:31
 msgid ""
-"The current release of Picard 2.x uses API v2. The older Picard 1.x "
-"releases use API v1."
+"The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
+"use API v1."
 msgstr ""
 "La versió actual de Picard 2.x fa servir la v2 de l'API. Les versions "
 "anteriors de Picard 1.x fan servir la v1 de l'API."
 
 #: website/frontend/templates/plugins.html:32
-msgid "The table is generated from the data of our plugin {urlrepo|repository}."
+#, python-brace-format
+msgid ""
+"The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
-"Aquesta taula es genera a partir de les dades del nostre {urlrepo|repositori}"
-" de connectors."
+"Aquesta taula es genera a partir de les dades del nostre {urlrepo|"
+"repositori} de connectors."
 
-#: website/frontend/templates/plugins.html:55
+#: website/frontend/templates/plugins.html:57
 msgid "Name"
 msgstr "Nom"
 
-#: website/frontend/templates/plugins.html:56
+#: website/frontend/templates/plugins.html:59
 msgid "Version"
 msgstr "Versió"
 
-#: website/frontend/templates/plugins.html:57
+#: website/frontend/templates/plugins.html:61
 msgid "Description"
 msgstr "Descripció"
 
-#: website/frontend/templates/plugins.html:58
+#: website/frontend/templates/plugins.html:62
 msgid "Author(s)"
 msgstr "Autors"
 
-#: website/frontend/templates/docs/build-osx.html:3
-msgid "Build on macOS"
-msgstr "Compilació al macOS"
+#: website/frontend/templates/plugins.html:63
+#: website/frontend/templates/plugins.html:79
+msgid "Repository"
+msgstr ""
 
-#: website/frontend/templates/docs/build-windows.html:3
-msgid "Build on Windows"
-msgstr "Compilació al Windows"
+#: website/frontend/templates/plugins.html:78
+msgid "Open repository in a new tab"
+msgstr ""
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
@@ -519,3 +534,9 @@ msgid ""
 "You don't have to worry, someone is working on fixing things as you're "
 "reading this."
 msgstr "No patiu, hi ha algú treballant per a resoldre-ho mentre llegiu això."
+
+#~ msgid "Build on macOS"
+#~ msgstr "Compilació al macOS"
+
+#~ msgid "Build on Windows"
+#~ msgstr "Compilació al Windows"

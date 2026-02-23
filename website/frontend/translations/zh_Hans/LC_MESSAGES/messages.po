@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-13 17:30+0100\n"
+"POT-Creation-Date: 2026-02-21 15:07+0100\n"
 "PO-Revision-Date: 2026-01-10 04:11+0000\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
 "translations.metabrainz.org/projects/picard/website/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15.1\n"
@@ -35,8 +35,7 @@ msgstr "MusicBrainz Picard"
 #: website/frontend/templates/base.html:21
 #: website/frontend/templates/index.html:11
 msgid ""
-"Picard is a cross-platform music tagger powered by the MusicBrainz "
-"database."
+"Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr "Picard 是由 MusicBrainz 数据库驱动的跨平台音乐标签编辑器。"
 
 #: website/frontend/templates/base.html:42
@@ -73,17 +72,18 @@ msgstr "协助翻译"
 
 #: website/frontend/templates/base.html:99
 msgid ""
-"Picard helps you organize your music collection by renaming your music "
-"files and sorting them into a folder structure exactly the way you want "
-"it. A variety of plugins are available and you can even write your own. "
-"Picard supports a wide range of audio formats and can also lookup an "
-"entire CD for you."
+"Picard helps you organize your music collection by renaming your music files "
+"and sorting them into a folder structure exactly the way you want it. A "
+"variety of plugins are available and you can even write your own. Picard "
+"supports a wide range of audio formats and can also lookup an entire CD for "
+"you."
 msgstr ""
 "Picard 通过重命名音乐文件并将其完全按照所需的方式分类到文件夹结构中，从而帮助"
 "您组织音乐集。 它提供了各种插件，您甚至可以编写自己的插件。 Picard 支持多种音"
 "频格式，还可以为您查找整个 CD。"
 
 #: website/frontend/templates/base.html:103
+#, python-brace-format
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
 msgstr "跟我们聊天：{url|Matrix, IRC, Discord}"
 
@@ -124,14 +124,17 @@ msgid "Fellow Projects"
 msgstr "相关项目"
 
 #: website/frontend/templates/base.html:175
+#, python-brace-format
 msgid "OSS Geek? {url|Contribute Here}"
 msgstr "你是开源极客吗？{url|来这里贡献}"
 
 #: website/frontend/templates/base.html:184
+#, python-brace-format
 msgid "Brought to you by {metabrainz}"
 msgstr "由 {metabrainz} 出品"
 
 #: website/frontend/templates/base.html:189
+#, python-brace-format
 msgid "Found an Issue? {url|Report Here}"
 msgstr "发现问题了？{url|在这里报告}"
 
@@ -147,6 +150,7 @@ msgid ""
 msgstr "Picard 支持所有主流平台，只需下载并运行安装程序即可，就是这么简单。"
 
 #: website/frontend/templates/downloads.html:10
+#, python-brace-format
 msgid "Learn about the new features in Picard {version}"
 msgstr "了解 Picard {version} 的新功能"
 
@@ -197,7 +201,7 @@ msgstr "64 位安装程序"
 #: website/frontend/templates/downloads.html:319
 #: website/frontend/templates/downloads.html:330
 #: website/frontend/templates/downloads.html:340
-#: website/frontend/templates/plugins.html:71
+#: website/frontend/templates/plugins.html:84
 msgid "Download"
 msgstr "下载"
 
@@ -275,8 +279,8 @@ msgstr "查阅常见问题"
 
 #: website/frontend/templates/downloads.html:241
 msgid ""
-"In addition Picard is also available in the official repositories of most"
-" Linux distributions."
+"In addition Picard is also available in the official repositories of most "
+"Linux distributions."
 msgstr "此外，Picard 还可在大多数 Linux 发行版的官方软件仓库中获取。"
 
 #: website/frontend/templates/downloads.html:248
@@ -308,15 +312,17 @@ msgid "pre-release, zip"
 msgstr "预发行版，zip"
 
 #: website/frontend/templates/downloads.html:354
+#, python-brace-format
 msgid ""
-"You can also view the latest Picard source code on {urlgithub|Github}. "
-"See {urldev|Development} on how you can start contributing to the Picard "
-"source code."
+"You can also view the latest Picard source code on {urlgithub|Github}. See "
+"{urldev|Development} on how you can start contributing to the Picard source "
+"code."
 msgstr ""
 "你也可以在 {urlgithub|Github} 浏览 Picard 的最新代码。查阅 {urldev|开发} 页面"
 "以了解如何开始贡献 Picard 源代码。"
 
 #: website/frontend/templates/downloads.html:361
+#, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
@@ -342,8 +348,8 @@ msgstr "多格式支持"
 
 #: website/frontend/templates/index.html:42
 msgid ""
-"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A,"
-" WMA, WAV, and more."
+"Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
+"WMA, WAV, and more."
 msgstr "Picard 支持所有主流音乐格式，包括 MP3、FLAC、OGG、M4A、WMA、WAV 等。"
 
 #: website/frontend/templates/index.html:49
@@ -351,9 +357,10 @@ msgid "Comprehensive Database"
 msgstr "全面的数据库"
 
 #: website/frontend/templates/index.html:58
+#, python-brace-format
 msgid ""
-"Picard uses the open and community-maintained {url|MusicBrainz} database "
-"to provide accurate information about millions of music releases."
+"Picard uses the open and community-maintained {url|MusicBrainz} database to "
+"provide accurate information about millions of music releases."
 msgstr ""
 "Picard 使用开放且由社区维护的 {url|MusicBrainz} 数据库，为数百万音乐发行品提"
 "供准确信息。"
@@ -363,6 +370,7 @@ msgid "AcoustID"
 msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
+#, python-brace-format
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
@@ -383,6 +391,7 @@ msgid "Open Source"
 msgstr "开源"
 
 #: website/frontend/templates/index.html:100
+#, python-brace-format
 msgid ""
 "Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
 "{urlgithub|GitHub} where it’s\n"
@@ -406,32 +415,36 @@ msgstr "脚本编写"
 #: website/frontend/templates/index.html:120
 msgid ""
 "A flexible but easy to learn scripting language allows you to exactly "
-"specify how your music files will be named and how the tags will look "
-"like."
-msgstr "脚本语言灵活且易于学习，可让您精确指定音乐文件的命名方式与标签的呈现形式。"
+"specify how your music files will be named and how the tags will look like."
+msgstr ""
+"脚本语言灵活且易于学习，可让您精确指定音乐文件的命名方式与标签的呈现形式。"
 
 #: website/frontend/templates/index.html:127
 msgid "Plugin Support"
 msgstr "插件支持"
 
 #: website/frontend/templates/index.html:129
+#, python-brace-format
 msgid ""
-"If you need a particular feature, you can choose from a selection of "
-"{url|available plugins} or write\n"
+"If you need a particular feature, you can choose from a selection of {url|"
+"available plugins} or write\n"
 "                your own."
 msgstr ""
 "如果你需要一个特定功能，你可以从一系列{url|可用插件}中进行选择，或自行编写插"
 "件。"
 
 #: website/frontend/templates/index.html:148
+#, python-brace-format
 msgid "v{version} for Windows (64-bit)"
 msgstr "Windows (64 位) v{version}"
 
 #: website/frontend/templates/index.html:153
+#, python-brace-format
 msgid "v{version} for Linux Distributions"
 msgstr "Linux 发行版 v{version}"
 
 #: website/frontend/templates/index.html:158
+#, python-brace-format
 msgid "v{version} for macOS 10.14+"
 msgstr "macOS 10.14+ v{version}"
 
@@ -441,43 +454,45 @@ msgstr "可用插件"
 
 #: website/frontend/templates/plugins.html:30
 msgid ""
-"This is a list of plugins that are currently available for use with "
-"Picard."
+"This is a list of plugins that are currently available for use with Picard."
 msgstr "此处列出了目前可与 Picard 配合使用的插件。"
 
 #: website/frontend/templates/plugins.html:31
 msgid ""
-"The current release of Picard 2.x uses API v2. The older Picard 1.x "
-"releases use API v1."
+"The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
+"use API v1."
 msgstr "当前版本的 Picard 2.x 使用 API v2。旧版 Picard 1.x 使用 API v1。"
 
 #: website/frontend/templates/plugins.html:32
-msgid "The table is generated from the data of our plugin {urlrepo|repository}."
+#, python-brace-format
+msgid ""
+"The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr "该表格使用插件{urlrepo|仓库}的数据生成。"
 
-#: website/frontend/templates/plugins.html:55
+#: website/frontend/templates/plugins.html:57
 msgid "Name"
 msgstr "名称"
 
-#: website/frontend/templates/plugins.html:56
+#: website/frontend/templates/plugins.html:59
 msgid "Version"
 msgstr "版本"
 
-#: website/frontend/templates/plugins.html:57
+#: website/frontend/templates/plugins.html:61
 msgid "Description"
 msgstr "简介"
 
-#: website/frontend/templates/plugins.html:58
+#: website/frontend/templates/plugins.html:62
 msgid "Author(s)"
 msgstr "作者"
 
-#: website/frontend/templates/docs/build-osx.html:3
-msgid "Build on macOS"
-msgstr "在 macOS 构建"
+#: website/frontend/templates/plugins.html:63
+#: website/frontend/templates/plugins.html:79
+msgid "Repository"
+msgstr ""
 
-#: website/frontend/templates/docs/build-windows.html:3
-msgid "Build on Windows"
-msgstr "在 Windows 构建"
+#: website/frontend/templates/plugins.html:78
+msgid "Open repository in a new tab"
+msgstr ""
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
@@ -496,3 +511,9 @@ msgid ""
 "You don't have to worry, someone is working on fixing things as you're "
 "reading this."
 msgstr "不必担心，在你阅读这段文字的时候，已经有人在努力修复问题了。"
+
+#~ msgid "Build on macOS"
+#~ msgstr "在 macOS 构建"
+
+#~ msgid "Build on Windows"
+#~ msgstr "在 Windows 构建"

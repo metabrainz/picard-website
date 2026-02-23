@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-13 17:30+0100\n"
+"POT-Creation-Date: 2026-02-21 15:07+0100\n"
 "PO-Revision-Date: 2025-12-16 17:11+0000\n"
 "Last-Translator: wileyfoxyx "
 "<wileyfoxyx@users.noreply.translations.metabrainz.org>\n"
@@ -91,6 +91,7 @@ msgstr ""
 "а также может просмотреть весь компакт-диск."
 
 #: website/frontend/templates/base.html:103
+#, python-brace-format
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
 msgstr "Пообщайтесь с нами в {url|Matrix, IRC, Discord}"
 
@@ -131,14 +132,17 @@ msgid "Fellow Projects"
 msgstr "Дружественные проекты"
 
 #: website/frontend/templates/base.html:175
+#, python-brace-format
 msgid "OSS Geek? {url|Contribute Here}"
 msgstr "Разбираетесь в OSS? {url|Внесите вклад здесь}"
 
 #: website/frontend/templates/base.html:184
+#, python-brace-format
 msgid "Brought to you by {metabrainz}"
 msgstr "Проект {metabrainz}"
 
 #: website/frontend/templates/base.html:189
+#, python-brace-format
 msgid "Found an Issue? {url|Report Here}"
 msgstr "Нашли проблему? {url|Сообщите здесь}"
 
@@ -156,6 +160,7 @@ msgstr ""
 "установщик. Вот так легко."
 
 #: website/frontend/templates/downloads.html:10
+#, python-brace-format
 msgid "Learn about the new features in Picard {version}"
 msgstr "Узнать о новых возможностях Picard {version}"
 
@@ -206,7 +211,7 @@ msgstr "версия x64"
 #: website/frontend/templates/downloads.html:319
 #: website/frontend/templates/downloads.html:330
 #: website/frontend/templates/downloads.html:340
-#: website/frontend/templates/plugins.html:71
+#: website/frontend/templates/plugins.html:84
 msgid "Download"
 msgstr "Загрузить"
 
@@ -319,6 +324,7 @@ msgid "pre-release, zip"
 msgstr "пре-релиз, zip"
 
 #: website/frontend/templates/downloads.html:354
+#, python-brace-format
 msgid ""
 "You can also view the latest Picard source code on {urlgithub|Github}. See "
 "{urldev|Development} on how you can start contributing to the Picard source "
@@ -329,6 +335,7 @@ msgstr ""
 "как внести вклад в исходный код Picard."
 
 #: website/frontend/templates/downloads.html:361
+#, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
 "versions of Picard, {url|browse our FTP server}."
@@ -365,6 +372,7 @@ msgid "Comprehensive Database"
 msgstr "Обширная база данных"
 
 #: website/frontend/templates/index.html:58
+#, python-brace-format
 msgid ""
 "Picard uses the open and community-maintained {url|MusicBrainz} database to "
 "provide accurate information about millions of music releases."
@@ -378,6 +386,7 @@ msgid "AcoustID"
 msgstr "AcoustID"
 
 #: website/frontend/templates/index.html:75
+#, python-brace-format
 msgid ""
 "Picard uses {url|AcoustID} audio fingerprints, allowing files to be "
 "identified by the actual music, even if they have no metadata."
@@ -399,6 +408,7 @@ msgid "Open Source"
 msgstr "Открытый исходный код"
 
 #: website/frontend/templates/index.html:100
+#, python-brace-format
 msgid ""
 "Picard is licensed under {urlgpl|GPL 2.0 or later}, and is hosted on "
 "{urlgithub|GitHub} where it’s\n"
@@ -433,6 +443,7 @@ msgid "Plugin Support"
 msgstr "Поддержка плагинов"
 
 #: website/frontend/templates/index.html:129
+#, python-brace-format
 msgid ""
 "If you need a particular feature, you can choose from a selection of {url|"
 "available plugins} or write\n"
@@ -443,14 +454,17 @@ msgstr ""
 "                или написать свой собственный."
 
 #: website/frontend/templates/index.html:148
+#, python-brace-format
 msgid "v{version} for Windows (64-bit)"
 msgstr "v{version} для Windows (x64)"
 
 #: website/frontend/templates/index.html:153
+#, python-brace-format
 msgid "v{version} for Linux Distributions"
 msgstr "v{version} для дистрибутивов Linux"
 
 #: website/frontend/templates/index.html:158
+#, python-brace-format
 msgid "v{version} for macOS 10.14+"
 msgstr "v{version} для macOS 10.14 и новее"
 
@@ -472,34 +486,36 @@ msgstr ""
 "используют API v1."
 
 #: website/frontend/templates/plugins.html:32
+#, python-brace-format
 msgid ""
 "The table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
 "Таблица формируется на основе данных нашего {urlrepo|репозитория плагинов}."
 
-#: website/frontend/templates/plugins.html:55
+#: website/frontend/templates/plugins.html:57
 msgid "Name"
 msgstr "Имя"
 
-#: website/frontend/templates/plugins.html:56
+#: website/frontend/templates/plugins.html:59
 msgid "Version"
 msgstr "Версия"
 
-#: website/frontend/templates/plugins.html:57
+#: website/frontend/templates/plugins.html:61
 msgid "Description"
 msgstr "Описание"
 
-#: website/frontend/templates/plugins.html:58
+#: website/frontend/templates/plugins.html:62
 msgid "Author(s)"
 msgstr "Автор(ы)"
 
-#: website/frontend/templates/docs/build-osx.html:3
-msgid "Build on macOS"
-msgstr "Сборка на macOS"
+#: website/frontend/templates/plugins.html:63
+#: website/frontend/templates/plugins.html:79
+msgid "Repository"
+msgstr ""
 
-#: website/frontend/templates/docs/build-windows.html:3
-msgid "Build on Windows"
-msgstr "Сборка на Windows"
+#: website/frontend/templates/plugins.html:78
+msgid "Open repository in a new tab"
+msgstr ""
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
@@ -520,6 +536,12 @@ msgid ""
 msgstr ""
 "Можете не беспокоиться: пока вы это читаете, кто-то уже работает над "
 "исправлением ситуации."
+
+#~ msgid "Build on macOS"
+#~ msgstr "Сборка на macOS"
+
+#~ msgid "Build on Windows"
+#~ msgstr "Сборка на Windows"
 
 #~ msgid "IRC: {url|#metabrainz}"
 #~ msgstr "IRC-чат: {url|#metabrainz}"
