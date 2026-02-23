@@ -5,6 +5,19 @@
 
       td {
         overflow: hidden;
+
+        // Center buttons in table cells
+        &.text-center .btn {
+          display: block;
+          margin: 0.15em auto;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
       }
    }
+}
+
+// Prevent external link icon on all buttons
+.btn[target="_blank"]::after {
+  content: none !important;
 }
