@@ -13,13 +13,17 @@ template_folder = os.path.join(frontend_folder, 'templates')
 static_folder = os.path.join(frontend_folder, 'static')
 
 
-def create_app():
+def create_app(config_overrides=None):
     app = Flask(__name__, static_folder=static_folder, template_folder=template_folder)
     app.debug = True
 
     # Configuration files
     app.config.from_pyfile(os.path.join(website_folder, 'default_config.py'))
     app.config.from_pyfile(os.path.join(website_folder, 'config.py'), silent=True)
+    
+    # Apply config overrides (for testing)
+    if config_overrides:
+        app.config.update(config_overrides)
 
     # Error handling
     init_error_handlers(app)
