@@ -8,8 +8,9 @@ from website.frontend.testing import FrontendTestCase
 _MESSAGES = {
     'plugin_not_found': 'Plugin not found.',
     'missing_api_version': 'No API version specified',
-    'invalid_endpoint': 'The endpoints currently available for this api version'
-    ' are /api/v1/plugins and /api/v1/download',
+    'invalid_endpoint': (
+        'The endpoints currently available for this api version are /api/v1/plugins and /api/v1/download'
+    ),
     'missing_id': 'Plugin id not specified.',
     'download_usage': 'Correct usage: /api/v1/download?id=<id>',
 }
