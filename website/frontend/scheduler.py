@@ -11,18 +11,15 @@ def init_scheduler(app):
     scheduler = APScheduler()
     scheduler.init_app(app)
 
-    # Restrict scheduler API to localhost only
+    # Restrict scheduler API to allowed hosts only
     @app.before_request
     def restrict_scheduler_api():
         if request.path.startswith('/scheduler'):
-            # Allow localhost/127.0.0.1 only
-            if request.remote_addr not in ['127.0.0.1', 'localhost', '::1']:
-                logger.warning(
-                    'Scheduler API access denied from %s to %s',
-                    request.remote_addr,
-                    request.path
-                )
+            allowed_hosts = config.get('SCHEDULER_ALLOWED_HOSTS', ['127.0.0.1', 'localhost', '::1'])
+            if request.remote_addr not in allowed_hosts:
+                logger.warning('Scheduler API access denied from %s to %s', request.remote_addr, request.path)
                 from flask import abort
+
                 abort(403)
 
     @scheduler.task('interval', id='plugins_generate', seconds=config['PLUGINS_REFRESH_INTERVAL_SECONDS'])
