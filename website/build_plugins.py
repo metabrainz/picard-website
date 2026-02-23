@@ -113,7 +113,7 @@ def get_plugin_data(filepath):
                                 value = markdown(value)
                             data[name] = value
                         except ValueError:
-                            print('Cannot evaluate value in ' + filepath + ':' + ast.dump(node))
+                            print(f'Cannot evaluate value in {filepath}:{ast.dump(node)}')
         return data
 
 
