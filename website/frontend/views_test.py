@@ -30,3 +30,14 @@ class FrontendViewsTest(FrontendTestCase):
         response = self.client.get("/?l=fr")
         self.assert200(response)
         self.assertIn(b'fichiers audio', response.data)
+
+    def test_registry_redirect(self):
+        """Test /registry/plugins.toml redirects to /api/v3/registry/plugins.toml"""
+        response = self.client.get("/registry/plugins.toml")
+        self.assertStatus(response, 302)
+        self.assertEqual(response.location, '/api/v3/registry/plugins.toml')
+
+    def test_registry_redirect_no_follow(self):
+        """Test /registry/plugins.toml redirect is temporary (302)"""
+        response = self.client.get("/registry/plugins.toml", follow_redirects=False)
+        self.assertEqual(response.status_code, 302)
