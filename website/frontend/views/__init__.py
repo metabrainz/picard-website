@@ -1,6 +1,7 @@
 from flask import (
     Blueprint,
     current_app,
+    redirect,
     render_template,
 )
 from packaging import version
@@ -35,3 +36,8 @@ def show_downloads():
 @frontend_bp.get('/quick-start/')
 def show_quick_start():
     return render_template('quick-start.html')
+
+
+@frontend_bp.get('/registry/plugins.toml')
+def redirect_registry():
+    return redirect('/api/v3/registry/plugins.toml', code=302)
