@@ -2,13 +2,13 @@
 # Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
-# Marc Riera <marc@marcriera.cat>, 2025.
+# Marc Riera <marc@marcriera.cat>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-02-21 15:07+0100\n"
-"PO-Revision-Date: 2025-04-14 13:20+0000\n"
+"PO-Revision-Date: 2026-03-18 10:11+0000\n"
 "Last-Translator: Marc Riera <marc@marcriera.cat>\n"
 "Language-Team: Catalan <https://translations.metabrainz.org/projects/picard/"
 "website/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.16.2\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -511,11 +511,11 @@ msgstr "Autors"
 #: website/frontend/templates/plugins.html:63
 #: website/frontend/templates/plugins.html:79
 msgid "Repository"
-msgstr ""
+msgstr "Repositori"
 
 #: website/frontend/templates/plugins.html:78
 msgid "Open repository in a new tab"
-msgstr ""
+msgstr "Obre el repositori en una pestanya nova"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
