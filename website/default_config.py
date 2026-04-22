@@ -100,6 +100,7 @@ CHANGELOG_CACHE_TIMEOUT = 5 * 60
 # An empty SUPPORTED_LANGUAGES list will select all available translations
 SUPPORTED_LANGUAGES = [
     'en',
+    'ca',
     'de',
     'es',
     'fr',
