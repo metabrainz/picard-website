@@ -105,6 +105,31 @@
                   </tr>
                 </thead>
                 <tbody>
+                  {% if stable.mac_arm64_hash %}
+                  <tr>
+                    <td>{{stable.tag}} <em>{{ _('macOS 11.0+ (arm64)') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{stable.mac_arm64_hash}}</td>
+                    <td>{{stable.mac_arm64_size}} MB</td>
+                    <td>
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{stable.tag}}-macOS-11.0-arm64.dmg">
+                        <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                      </a>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% if stable.mac_x86_64_hash %}
+                  <tr>
+                    <td>{{stable.tag}} <em>{{ _('macOS 11.0+ (x86_64)') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{stable.mac_x86_64_hash}}</td>
+                    <td>{{stable.mac_x86_64_size}} MB</td>
+                    <td>
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{stable.tag}}-macOS-11.0-x86_64.dmg">
+                        <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                      </a>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% if stable.mac_hash %}
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('macOS 10.14+ (x86_64)') }}</em></td>
                     <td class="hidden-xs hidden-sm">{{stable.mac_hash}}</td>
@@ -115,6 +140,8 @@
                       </a>
                     </td>
                   </tr>
+                  {% endif %}
+                  {% if stable.mac_10_12_hash %}
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('macOS 10.12+ (x86_64)') }}</em></td>
                     <td class="hidden-xs hidden-sm">{{stable.mac_10_12_hash}}</td>
@@ -125,6 +152,7 @@
                       </a>
                     </td>
                   </tr>
+                  {% endif %}
                   <tr>
                     <td>2.1.3 <em>{{ _('macOS 10.10+ (x86_64)') }}</em></td>
                     <td class="hidden-xs hidden-sm">4d781ca512c48fe4c3c00a432e80ed96</td>
@@ -136,6 +164,31 @@
                     </td>
                   </tr>
                   {% if show_beta %}
+                  {% if beta.mac_arm64_hash %}
+                  <tr>
+                    <td>{{beta.tag}} <em>{{ _('pre-release, macOS 11.0+ (arm64)') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{beta.mac_arm64_hash}}</td>
+                    <td>{{beta.mac_arm64_size}} MB</td>
+                    <td>
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{beta.tag}}-macOS-11.0-arm64.dmg">
+                        <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                      </a>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% if beta.mac_x86_64_hash %}
+                  <tr>
+                    <td>{{beta.tag}} <em>{{ _('pre-release, macOS 11.0+ (x86_64)') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{beta.mac_x86_64_hash}}</td>
+                    <td>{{beta.mac_x86_64_size}} MB</td>
+                    <td>
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{beta.tag}}-macOS-11.0-x86_64.dmg">
+                        <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                      </a>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% if beta.mac_hash %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, macOS 10.14+ (x86_64)') }}</em></td>
                     <td class="hidden-xs hidden-sm">{{beta.mac_hash}}</td>
@@ -146,6 +199,8 @@
                       </a>
                     </td>
                   </tr>
+                  {% endif %}
+                  {% if beta.mac_10_12_hash %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, macOS 10.12+ (x86_64)') }}</em></td>
                     <td class="hidden-xs hidden-sm">{{beta.mac_10_12_hash}}</td>
@@ -156,6 +211,7 @@
                       </a>
                     </td>
                   </tr>
+                  {% endif %}
                   {% endif %}
                 </tbody>
               </table>
@@ -321,6 +377,7 @@
                     </td>
                   </tr>
                   {% if show_beta %}
+                  {% if beta.source_tar_hash %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, tar') }}</em></td>
                     <td class="hidden-xs hidden-sm">{{beta.source_tar_hash}}</td>
@@ -331,6 +388,8 @@
                       </a>
                     </td>
                   </tr>
+                  {% endif %}
+                  {% if beta.source_zip_hash %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, zip') }}</em></td>
                     <td class="hidden-xs hidden-sm">{{beta.source_zip_hash}}</td>
@@ -341,6 +400,7 @@
                       </a>
                     </td>
                   </tr>
+                  {% endif %}
                   {% endif %}
                </tbody>
               </table>
