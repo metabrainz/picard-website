@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-02-21 15:07+0100\n"
+"POT-Creation-Date: 2026-04-23 11:44+0200\n"
 "PO-Revision-Date: 2026-02-13 12:11+0000\n"
 "Last-Translator: mfmeulenbelt "
 "<mfmeulenbelt@users.noreply.translations.metabrainz.org>\n"
@@ -172,27 +172,27 @@ msgstr "Picard voor <strong>Windows</strong>"
 
 #: website/frontend/templates/downloads.html:23
 #: website/frontend/templates/downloads.html:101
-#: website/frontend/templates/downloads.html:296
+#: website/frontend/templates/downloads.html:352
 msgid "Picard Version"
 msgstr "Picard-versie"
 
 #: website/frontend/templates/downloads.html:24
 #: website/frontend/templates/downloads.html:102
-#: website/frontend/templates/downloads.html:297
+#: website/frontend/templates/downloads.html:353
 msgid "MD5 Hash"
 msgstr "MD5-hash"
 
 #: website/frontend/templates/downloads.html:25
 #: website/frontend/templates/downloads.html:103
-#: website/frontend/templates/downloads.html:298
+#: website/frontend/templates/downloads.html:354
 msgid "Size"
 msgstr "Grootte"
 
 #: website/frontend/templates/downloads.html:26
 #: website/frontend/templates/downloads.html:104
-#: website/frontend/templates/downloads.html:176
-#: website/frontend/templates/downloads.html:256
-#: website/frontend/templates/downloads.html:299
+#: website/frontend/templates/downloads.html:232
+#: website/frontend/templates/downloads.html:312
+#: website/frontend/templates/downloads.html:355
 msgid "Link"
 msgstr "Koppeling"
 
@@ -204,15 +204,19 @@ msgstr "64 bits installeerbaar"
 #: website/frontend/templates/downloads.html:46
 #: website/frontend/templates/downloads.html:71
 #: website/frontend/templates/downloads.html:81
-#: website/frontend/templates/downloads.html:114
-#: website/frontend/templates/downloads.html:124
-#: website/frontend/templates/downloads.html:134
-#: website/frontend/templates/downloads.html:145
-#: website/frontend/templates/downloads.html:155
-#: website/frontend/templates/downloads.html:309
-#: website/frontend/templates/downloads.html:319
-#: website/frontend/templates/downloads.html:330
-#: website/frontend/templates/downloads.html:340
+#: website/frontend/templates/downloads.html:115
+#: website/frontend/templates/downloads.html:127
+#: website/frontend/templates/downloads.html:139
+#: website/frontend/templates/downloads.html:151
+#: website/frontend/templates/downloads.html:162
+#: website/frontend/templates/downloads.html:174
+#: website/frontend/templates/downloads.html:186
+#: website/frontend/templates/downloads.html:198
+#: website/frontend/templates/downloads.html:210
+#: website/frontend/templates/downloads.html:365
+#: website/frontend/templates/downloads.html:375
+#: website/frontend/templates/downloads.html:387
+#: website/frontend/templates/downloads.html:399
 #: website/frontend/templates/plugins.html:84
 msgid "Download"
 msgstr "Downloaden"
@@ -242,54 +246,78 @@ msgstr "testversie, 64 bits draagbaar"
 msgid "Picard for <strong>macOS</strong>"
 msgstr "Picard voor <strong>macOS</strong>"
 
-#: website/frontend/templates/downloads.html:109
+#: website/frontend/templates/downloads.html:110
+#, fuzzy
+#| msgid "macOS 10.10+ (x86_64)"
+msgid "macOS 11.0+ (arm64)"
+msgstr "macOS 10.10+ (x86_64)"
+
+#: website/frontend/templates/downloads.html:122
+#, fuzzy
+#| msgid "macOS 10.10+ (x86_64)"
+msgid "macOS 11.0+ (x86_64)"
+msgstr "macOS 10.10+ (x86_64)"
+
+#: website/frontend/templates/downloads.html:134
 msgid "macOS 10.14+ (x86_64)"
 msgstr "macOS 10.14+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:119
+#: website/frontend/templates/downloads.html:146
 msgid "macOS 10.12+ (x86_64)"
 msgstr "macOS 10.12+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:129
+#: website/frontend/templates/downloads.html:157
 msgid "macOS 10.10+ (x86_64)"
 msgstr "macOS 10.10+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:140
+#: website/frontend/templates/downloads.html:169
+#, fuzzy
+#| msgid "pre-release, macOS 10.14+ (x86_64)"
+msgid "pre-release, macOS 11.0+ (arm64)"
+msgstr "testversie, macOS 10.14+ (x86_64)"
+
+#: website/frontend/templates/downloads.html:181
+#, fuzzy
+#| msgid "pre-release, macOS 10.14+ (x86_64)"
+msgid "pre-release, macOS 11.0+ (x86_64)"
+msgstr "testversie, macOS 10.14+ (x86_64)"
+
+#: website/frontend/templates/downloads.html:193
 msgid "pre-release, macOS 10.14+ (x86_64)"
 msgstr "testversie, macOS 10.14+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:150
+#: website/frontend/templates/downloads.html:205
 msgid "pre-release, macOS 10.12+ (x86_64)"
 msgstr "testversie, macOS 10.12+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:168
+#: website/frontend/templates/downloads.html:224
 msgid "Picard for <strong>Linux</strong>"
 msgstr "Picard voor <strong>Linux</strong>"
 
-#: website/frontend/templates/downloads.html:175
+#: website/frontend/templates/downloads.html:231
 msgid "Distribution"
 msgstr "Distributie"
 
-#: website/frontend/templates/downloads.html:181
-#: website/frontend/templates/downloads.html:189
+#: website/frontend/templates/downloads.html:237
+#: website/frontend/templates/downloads.html:245
 msgid "All distributions"
 msgstr "Alle distributies"
 
-#: website/frontend/templates/downloads.html:183
-#: website/frontend/templates/downloads.html:191
+#: website/frontend/templates/downloads.html:239
+#: website/frontend/templates/downloads.html:247
 msgid "Instructions"
 msgstr "Instructies"
 
-#: website/frontend/templates/downloads.html:215
-#: website/frontend/templates/downloads.html:228
+#: website/frontend/templates/downloads.html:271
+#: website/frontend/templates/downloads.html:284
 msgid "latest package"
 msgstr "Nieuwste pakket"
 
-#: website/frontend/templates/downloads.html:216
+#: website/frontend/templates/downloads.html:272
 msgid "read the FAQ"
 msgstr "lees de veelgestelde vragen"
 
-#: website/frontend/templates/downloads.html:241
+#: website/frontend/templates/downloads.html:297
 msgid ""
 "In addition Picard is also available in the official repositories of most "
 "Linux distributions."
@@ -297,35 +325,35 @@ msgstr ""
 "Picard is ook in de officiële opslagplaatsen van de meeste Linux-"
 "distributies beschikbaar."
 
-#: website/frontend/templates/downloads.html:248
+#: website/frontend/templates/downloads.html:304
 msgid "Picard for <strong>other operating systems</strong>"
 msgstr "Picard voor <strong>andere besturingssystemen</strong>"
 
-#: website/frontend/templates/downloads.html:255
+#: website/frontend/templates/downloads.html:311
 msgid "Operating system"
 msgstr "Besturingssysteem"
 
-#: website/frontend/templates/downloads.html:289
+#: website/frontend/templates/downloads.html:345
 msgid "Picard <strong>Source Code</strong>"
 msgstr "<strong>Broncode</strong> van Picard"
 
-#: website/frontend/templates/downloads.html:304
+#: website/frontend/templates/downloads.html:360
 msgid "tar"
 msgstr "tar"
 
-#: website/frontend/templates/downloads.html:314
+#: website/frontend/templates/downloads.html:370
 msgid "zip"
 msgstr "zip"
 
-#: website/frontend/templates/downloads.html:325
+#: website/frontend/templates/downloads.html:382
 msgid "pre-release, tar"
 msgstr "testversie, tar"
 
-#: website/frontend/templates/downloads.html:335
+#: website/frontend/templates/downloads.html:394
 msgid "pre-release, zip"
 msgstr "testversie, zip"
 
-#: website/frontend/templates/downloads.html:354
+#: website/frontend/templates/downloads.html:414
 #, python-brace-format
 msgid ""
 "You can also view the latest Picard source code on {urlgithub|Github}. See "
@@ -336,7 +364,7 @@ msgstr ""
 "{urldev|Ontwikkeling} als je wil weten hoe je aan de broncode van Picard "
 "kunt bijdragen."
 
-#: website/frontend/templates/downloads.html:361
+#: website/frontend/templates/downloads.html:421
 #, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
