@@ -6,14 +6,14 @@
 # Nerten <alex@nerten.info>, 2023.
 # Echelon666 <echelon01@wp.pl>, 2024.
 # emptybrainz <okep.and.spore@gmail.com>, 2025.
-# Philipp Wolfer <ph.wolfer@gmail.com>, 2025.
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-23 11:44+0200\n"
-"PO-Revision-Date: 2025-01-14 17:44+0000\n"
-"Last-Translator: emptybrainz <okep.and.spore@gmail.com>\n"
+"PO-Revision-Date: 2026-04-24 08:31+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Ukrainian <https://translations.metabrainz.org/projects/"
 "picard/website/uk/>\n"
 "Language: uk\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.17\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -246,16 +246,12 @@ msgid "Picard for <strong>macOS</strong>"
 msgstr "Picard для <strong>macOS</strong>"
 
 #: website/frontend/templates/downloads.html:110
-#, fuzzy
-#| msgid "macOS 10.10+ (x86_64)"
 msgid "macOS 11.0+ (arm64)"
-msgstr "macOS 10.10+ (x86_64)"
+msgstr "macOS 11.0+ (arm64)"
 
 #: website/frontend/templates/downloads.html:122
-#, fuzzy
-#| msgid "macOS 10.10+ (x86_64)"
 msgid "macOS 11.0+ (x86_64)"
-msgstr "macOS 10.10+ (x86_64)"
+msgstr "macOS 11.0+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:134
 msgid "macOS 10.14+ (x86_64)"
@@ -270,16 +266,12 @@ msgid "macOS 10.10+ (x86_64)"
 msgstr "macOS 10.10+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:169
-#, fuzzy
-#| msgid "pre-release, macOS 10.14+ (x86_64)"
 msgid "pre-release, macOS 11.0+ (arm64)"
-msgstr "передвипуск, macOS 10.14+ (x86_64)"
+msgstr "передвипуск, macOS 11.0+ (arm64)"
 
 #: website/frontend/templates/downloads.html:181
-#, fuzzy
-#| msgid "pre-release, macOS 10.14+ (x86_64)"
 msgid "pre-release, macOS 11.0+ (x86_64)"
-msgstr "передвипуск, macOS 10.14+ (x86_64)"
+msgstr "передвипуск, macOS 11.0+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:193
 msgid "pre-release, macOS 10.14+ (x86_64)"
@@ -334,7 +326,7 @@ msgstr "Операційна система"
 
 #: website/frontend/templates/downloads.html:345
 msgid "Picard <strong>Source Code</strong>"
-msgstr "Picard<strong>Вихідний код</strong>"
+msgstr "Picard <strong>Вихідний код</strong>"
 
 #: website/frontend/templates/downloads.html:360
 msgid "tar"

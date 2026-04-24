@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 # ninjum <ninjum@gmx.es>, 2025.
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-23 11:44+0200\n"
-"PO-Revision-Date: 2025-04-05 19:08+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-04-24 08:31+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Galician <https://translations.metabrainz.org/projects/picard/"
 "website/gl/>\n"
 "Language: gl\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.17\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -243,16 +244,12 @@ msgid "Picard for <strong>macOS</strong>"
 msgstr "Picard para <strong>macOS</strong>"
 
 #: website/frontend/templates/downloads.html:110
-#, fuzzy
-#| msgid "macOS 10.10+ (x86_64)"
 msgid "macOS 11.0+ (arm64)"
-msgstr "macOS 10.10+ (x86_64)"
+msgstr "macOS 11.0+ (arm64)"
 
 #: website/frontend/templates/downloads.html:122
-#, fuzzy
-#| msgid "macOS 10.10+ (x86_64)"
 msgid "macOS 11.0+ (x86_64)"
-msgstr "macOS 10.10+ (x86_64)"
+msgstr "macOS 11.0+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:134
 msgid "macOS 10.14+ (x86_64)"
@@ -267,16 +264,12 @@ msgid "macOS 10.10+ (x86_64)"
 msgstr "macOS 10.10+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:169
-#, fuzzy
-#| msgid "pre-release, macOS 10.14+ (x86_64)"
 msgid "pre-release, macOS 11.0+ (arm64)"
-msgstr "versión previa, macOS 10.14+ (x86_64)"
+msgstr "versión previa, macOS 11.0+ (arm64)"
 
 #: website/frontend/templates/downloads.html:181
-#, fuzzy
-#| msgid "pre-release, macOS 10.14+ (x86_64)"
 msgid "pre-release, macOS 11.0+ (x86_64)"
-msgstr "versión previa, macOS 10.14+ (x86_64)"
+msgstr "versión previa, macOS 11.0+ (x86_64)"
 
 #: website/frontend/templates/downloads.html:193
 msgid "pre-release, macOS 10.14+ (x86_64)"
