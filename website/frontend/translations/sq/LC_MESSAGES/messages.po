@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-23 11:44+0200\n"
-"PO-Revision-Date: 2026-04-24 08:31+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2026-04-25 21:11+0000\n"
+"Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://translations.metabrainz.org/projects/picard/"
 "website/sq/>\n"
 "Language: sq\n"
@@ -481,7 +481,7 @@ msgstr "v{version} për Windows (64-bit)"
 #: website/frontend/templates/index.html:153
 #, python-brace-format
 msgid "v{version} for Linux Distributions"
-msgstr "v{version} Shpërndarje GNU/Linux"
+msgstr "v{version} për Shpërndarje Linux"
 
 #: website/frontend/templates/index.html:158
 #, python-brace-format
