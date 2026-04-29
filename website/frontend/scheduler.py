@@ -1,7 +1,7 @@
 from flask import request
 from flask_apscheduler import APScheduler
 
-from website.build_plugins import generate_plugins
+from website.build_plugins import VERSION_INFO, generate_plugins
 from website.plugin_utils import load_json_data
 
 
@@ -15,7 +15,7 @@ def init_scheduler(app):
     @app.before_request
     def restrict_scheduler_api():
         if request.path.startswith('/scheduler'):
-            allowed_hosts = config.get('SCHEDULER_ALLOWED_HOSTS', ['127.0.0.1', 'localhost', '::1'])
+            allowed_hosts = config.get('SCHEDULER_API_ALLOWED_HOSTS', ['127.0.0.1', 'localhost', '::1'])
             if request.remote_addr not in allowed_hosts:
                 logger.warning('Scheduler API access denied from %s to %s', request.remote_addr, request.path)
                 from flask import abort
@@ -27,6 +27,9 @@ def init_scheduler(app):
         versions = [z['title'] for z in config['PLUGIN_VERSIONS'].values()]
         build_dir = config['PLUGINS_BUILD_DIR']
         for version in versions:
+            # Only generate for versions using the build system (v3+ use remote registry)
+            if version not in VERSION_INFO:
+                continue
             logger.info("Generating plugins for version %s in %s", version, build_dir)
             try:
                 generate_plugins(build_dir, version)
