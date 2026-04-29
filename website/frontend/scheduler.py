@@ -15,7 +15,7 @@ def init_scheduler(app):
     @app.before_request
     def restrict_scheduler_api():
         if request.path.startswith('/scheduler'):
-            allowed_hosts = config.get('SCHEDULER_ALLOWED_HOSTS', ['127.0.0.1', 'localhost', '::1'])
+            allowed_hosts = config.get('SCHEDULER_API_ALLOWED_HOSTS', ['127.0.0.1', 'localhost', '::1'])
             if request.remote_addr not in allowed_hosts:
                 logger.warning('Scheduler API access denied from %s to %s', request.remote_addr, request.path)
                 from flask import abort

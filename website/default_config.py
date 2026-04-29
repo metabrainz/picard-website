@@ -120,4 +120,4 @@ SERVER_PORT = 6060
 # Scheduler API is restricted to localhost only (see scheduler.py)
 # Safe to enable for local debugging and monitoring
 SCHEDULER_API_ENABLED = False
-SCHEDULER_ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '::1']
+SCHEDULER_API_ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '::1']
