@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # "salo.rock" <salo.rock+musicbrainz@gmail.com>, 2023.
-# "salo.rock" <salo.rock@users.noreply.translations.metabrainz.org>, 2023,, 2025.
+# "salo.rock" <salo.rock@users.noreply.translations.metabrainz.org>, 2023,, 2025, 2026.
 # 2024.
 # Philipp Wolfer <ph.wolfer@gmail.com>, 2026.
 msgid ""
@@ -11,8 +11,9 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-23 11:44+0200\n"
-"PO-Revision-Date: 2026-04-24 08:31+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2026-05-02 11:11+0000\n"
+"Last-Translator: \"salo.rock\" "
+"<salo.rock@users.noreply.translations.metabrainz.org>\n"
 "Language-Team: Italian <https://translations.metabrainz.org/projects/picard/"
 "website/it/>\n"
 "Language: it\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 5.17.1\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -534,11 +535,11 @@ msgstr "Autore/i"
 #: website/frontend/templates/plugins.html:63
 #: website/frontend/templates/plugins.html:79
 msgid "Repository"
-msgstr ""
+msgstr "Repository"
 
 #: website/frontend/templates/plugins.html:78
 msgid "Open repository in a new tab"
-msgstr ""
+msgstr "Apri il repository in una nuova scheda"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
