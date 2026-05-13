@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-23 11:44+0200\n"
-"PO-Revision-Date: 2026-04-24 08:31+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2026-05-13 07:12+0000\n"
+"Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
 "translations.metabrainz.org/projects/picard/website/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 5.17.1\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -114,7 +114,7 @@ msgstr "MetaBrainz"
 
 #: website/frontend/templates/base.html:138
 msgid "Contribute Here"
-msgstr "来这里贡献"
+msgstr "参与贡献"
 
 #: website/frontend/templates/base.html:142
 msgid "Bug Tracker"
@@ -127,7 +127,7 @@ msgstr "相关项目"
 #: website/frontend/templates/base.html:175
 #, python-brace-format
 msgid "OSS Geek? {url|Contribute Here}"
-msgstr "你是开源极客吗？{url|来这里贡献}"
+msgstr "你是开源极客吗？{url|参与贡献}"
 
 #: website/frontend/templates/base.html:184
 #, python-brace-format
@@ -509,11 +509,11 @@ msgstr "作者"
 #: website/frontend/templates/plugins.html:63
 #: website/frontend/templates/plugins.html:79
 msgid "Repository"
-msgstr ""
+msgstr "仓库"
 
 #: website/frontend/templates/plugins.html:78
 msgid "Open repository in a new tab"
-msgstr ""
+msgstr "在新标签页打开仓库"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
