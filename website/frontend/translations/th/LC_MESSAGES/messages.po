@@ -229,11 +229,11 @@ msgid "Picard for <strong>macOS</strong>"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:110
-msgid "macOS 11.0+ (arm64)"
+msgid "macOS 13.0+ (arm64)"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:122
-msgid "macOS 11.0+ (x86_64)"
+msgid "macOS 13.0+ (x86_64)"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:134
@@ -249,11 +249,11 @@ msgid "macOS 10.10+ (x86_64)"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:169
-msgid "pre-release, macOS 11.0+ (arm64)"
+msgid "pre-release, macOS 13.0+ (arm64)"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:181
-msgid "pre-release, macOS 11.0+ (x86_64)"
+msgid "pre-release, macOS 13.0+ (x86_64)"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:193
