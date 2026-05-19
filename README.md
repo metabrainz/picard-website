@@ -17,6 +17,7 @@ Translations: https://translations.metabrainz.org/projects/picard/website/
 - Installs Python dependencies with uv
 - Installs npm dependencies
 - Builds static assets
+- Downloads and generates plugin data from [picard-plugins](https://github.com/metabrainz/picard-plugins) repository (requires network access)
 - Runs pytest tests
 - Starts the local development server
 
