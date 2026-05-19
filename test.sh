@@ -13,6 +13,5 @@ export PATH=$(echo "$PATH" | tr ':' '\n' | grep -v poetry | tr '\n' ':')
 uv sync --group dev
 npm install
 npm run build
-uv run python plugins-generate.py
 uv run pytest
 uv run python run.py
