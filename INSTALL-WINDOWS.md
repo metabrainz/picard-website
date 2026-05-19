@@ -33,7 +33,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 Install Python dependencies:
 ```
-uv sync --extra dev
+uv sync --group dev
 ```
 
 Install node dependencies:

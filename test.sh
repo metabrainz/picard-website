@@ -10,7 +10,7 @@ fi
 # Ensure poetry is not in PATH to catch migration issues
 export PATH=$(echo "$PATH" | tr ':' '\n' | grep -v poetry | tr '\n' ':')
 
-uv sync --extra dev
+uv sync --group dev
 npm install
 npm run build
 uv run pytest

@@ -29,7 +29,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 RUN pip install --upgrade pip \
     && pip install uWSGI==2.0.23
 COPY uv.lock pyproject.toml /code/website/
-RUN uv sync --frozen --extra dev
+RUN uv sync --frozen --group dev
 
 # Node dependencies
 COPY ./package.json /code/website/
