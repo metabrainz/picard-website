@@ -2,7 +2,7 @@
 name = "picard-website"
 version = "0.1.0"
 description = "Website for MusicBrainz Picard"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [
     {name = "Shadab Zafar", email = "dufferzafar0@gmail.com"},
     {name = "Michael Wiencek", email = "mwtuea@gmail.com"},
@@ -49,10 +49,10 @@ dependencies = [
     "werkzeug>=3.1.5",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
     "Flask-Testing>=0.8.1",
-    "pytest>=8.4.1",
+    "pytest>=9.0.3",
     "pytest-cov>=7.0.0",
     "ruff>=0.13.0",
 ]

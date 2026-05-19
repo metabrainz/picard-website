@@ -20,6 +20,8 @@ Translations: https://translations.metabrainz.org/projects/picard/website/
 - Runs pytest tests
 - Starts the local development server
 
+Note: To serve plugin data locally, run `uv run python plugins-generate.py` separately (requires network access to download from [picard-plugins](https://github.com/metabrainz/picard-plugins) repository). Without it, plugin pages will return 503.
+
 ### Translation Management
 
 `npm run extract_strings` - Extract translatable strings from Python source files to `website/frontend/messages.pot`

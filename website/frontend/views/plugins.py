@@ -26,18 +26,25 @@ def show_plugins():
         else:
             ordered_plugins = None
 
+        if ordered_plugins is None:
+            return render_template('errors/503.html'), 503
         if ordered_plugins:
             all_plugins[version[1:]] = ordered_plugins
     return render_template('plugins.html', all_plugins=all_plugins)
 
 
-def _load_v1_v2_plugins(build_version) -> OrderedDict:
-    ordered_plugins = OrderedDict()
+def _load_v1_v2_plugins(build_version):
+    """Returns OrderedDict of plugins, or None if data not generated."""
     build_json_file = plugins_json_file(current_app, build_version)
-    with open(build_json_file, encoding='utf-8') as fp:
-        plugins = json.loads(fp.read())['plugins']
-        for key in sorted(plugins, key=lambda k: plugins[k]['name'].lower()):
-            ordered_plugins[key] = plugins[key]
+    try:
+        with open(build_json_file, encoding='utf-8') as fp:
+            plugins = json.loads(fp.read())['plugins']
+    except FileNotFoundError:
+        current_app.logger.warning("Plugin data not found: %s. Run plugins-generate.py to generate it.", build_json_file)
+        return None
+    ordered_plugins = OrderedDict()
+    for key in sorted(plugins, key=lambda k: plugins[k]['name'].lower()):
+        ordered_plugins[key] = plugins[key]
     return ordered_plugins
 
 

@@ -31,7 +31,7 @@ vim website/config.py
 Install Python dependencies:
 
 ```bash
-uv sync --extra dev
+uv sync --group dev
 ```
 
 Install node dependencies (requires [Node.js](http://nodejs.org/download/)):

@@ -21,6 +21,10 @@ def plugins_dir(app, version):
 
 @cached(lambda app, version, **kw: f'plugins_json_data_{version}', 'PLUGINS_CACHE_TIMEOUT')
 def load_json_data(app, version, force_refresh=False):
-    """Load JSON Data"""
-    with open(plugins_json_file(app, version)) as fp:
-        return json.load(fp)['plugins']
+    """Load JSON Data. Returns None if plugin data has not been generated."""
+    try:
+        with open(plugins_json_file(app, version)) as fp:
+            return json.load(fp)['plugins']
+    except FileNotFoundError:
+        app.logger.warning("Plugin data not found for version %s. Run plugins-generate.py to generate it.", version)
+        return None

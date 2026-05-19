@@ -24,7 +24,7 @@ jobs:
       - name: Setup build environment
         run: |
           echo "PLUGINS_BUILD_DIR = \"${PWD}/plugins/\"" > website/config.py
-          uv sync --extra dev
+          uv sync --group dev
           npm install
           npm run build
       - name: Generate plugins
