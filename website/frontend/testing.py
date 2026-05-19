@@ -1,3 +1,4 @@
+import os
 from urllib.parse import urljoin, urlparse
 
 from flask_testing import TestCase
@@ -7,7 +8,14 @@ from website.frontend import create_app
 
 class FrontendTestCase(TestCase):
     def create_app(self):
-        app = create_app(config_overrides={'TESTING': True, 'SCHEDULER_API_ENABLED': True})
+        overrides = {
+            'TESTING': True,
+            'SCHEDULER_API_ENABLED': True,
+        }
+        plugins_dir = os.environ.get("PICARD_WEBSITE_TEST_PLUGINS_DIR")
+        if plugins_dir:
+            overrides['PLUGINS_BUILD_DIR'] = plugins_dir
+        app = create_app(config_overrides=overrides)
         return app
 
     def setUp(self):
