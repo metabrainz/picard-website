@@ -19,6 +19,8 @@ api_bp = Blueprint('api', __name__)
 
 def _get_plugin(app, version, pid=None):
     plugins = load_json_data(app, version)
+    if plugins is None:
+        return make_response(jsonify({'error': 'Plugin data unavailable.'}), 503)
     if pid:
         if pid in plugins:
             plugin = {'plugin': plugins[pid]}
@@ -32,6 +34,8 @@ def _get_plugin(app, version, pid=None):
 
 def _download_plugin(app, version, pid):
     plugins = load_json_data(current_app, version)
+    if plugins is None:
+        return make_response(jsonify({'error': 'Plugin data unavailable.'}), 503)
     if pid in plugins:
         return send_from_directory(
             plugins_dir(current_app, version),
