@@ -4,13 +4,14 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # yyb987 <yyb987@users.noreply.translations.metabrainz.org>, 2024.
 # Philipp Wolfer <ph.wolfer@gmail.com>, 2024.
+# RT2231 <shirokuma0822@outlook.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-23 11:44+0200\n"
-"PO-Revision-Date: 2024-12-08 14:42+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2026-05-23 11:12+0000\n"
+"Last-Translator: RT2231 <shirokuma0822@outlook.com>\n"
 "Language-Team: Japanese <https://translations.metabrainz.org/projects/picard/"
 "website/ja/>\n"
 "Language: ja\n"
@@ -18,6 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.5\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -37,15 +39,17 @@ msgstr "MusicBrainz Picard"
 msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr ""
+"Picardは、MusicBrainzデータベースを搭載したクロスプラットフォームの音楽"
+"タッガーです。"
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
-msgstr ""
+msgstr "ナビゲーションを切り替える"
 
 #: website/frontend/templates/base.html:52
 #: website/frontend/templates/downloads.html:3
 msgid "Downloads"
-msgstr ""
+msgstr "ダウンロード"
 
 #: website/frontend/templates/base.html:53
 #, fuzzy
@@ -55,13 +59,13 @@ msgstr "プラグイン"
 #: website/frontend/templates/base.html:54
 #: website/frontend/templates/quick-start.html:3
 msgid "Quick Start"
-msgstr ""
+msgstr "クイックスタート"
 
 #: website/frontend/templates/base.html:55
 #: website/frontend/templates/base.html:117
 #: website/frontend/templates/docs/base.html:3
 msgid "Documentation"
-msgstr ""
+msgstr "ドキュメント"
 
 #: website/frontend/templates/base.html:61
 #, fuzzy
@@ -92,11 +96,11 @@ msgstr ""
 
 #: website/frontend/templates/base.html:109
 msgid "Useful Links"
-msgstr ""
+msgstr "役立つリンク"
 
 #: website/frontend/templates/base.html:113
 msgid "Donate"
-msgstr ""
+msgstr "寄付する"
 
 #: website/frontend/templates/base.html:121
 msgid "Community"
@@ -104,7 +108,7 @@ msgstr ""
 
 #: website/frontend/templates/base.html:125
 msgid "Blog"
-msgstr ""
+msgstr "ブログ"
 
 #: website/frontend/templates/base.html:129
 msgid "Shop"
@@ -116,15 +120,15 @@ msgstr ""
 
 #: website/frontend/templates/base.html:138
 msgid "Contribute Here"
-msgstr ""
+msgstr "こちらからご寄付ください"
 
 #: website/frontend/templates/base.html:142
 msgid "Bug Tracker"
-msgstr ""
+msgstr "バグトラッカー"
 
 #: website/frontend/templates/base.html:147
 msgid "Fellow Projects"
-msgstr ""
+msgstr "関連プロジェクト"
 
 #: website/frontend/templates/base.html:175
 #, python-brace-format
@@ -144,7 +148,7 @@ msgstr ""
 #: website/frontend/templates/changelog.html:3
 #: website/frontend/templates/index.html:22
 msgid "What’s New"
-msgstr ""
+msgstr "新着情報"
 
 #: website/frontend/templates/downloads.html:7
 msgid ""
@@ -351,29 +355,31 @@ msgstr ""
 
 #: website/frontend/templates/index.html:16
 msgid "Download Picard"
-msgstr ""
+msgstr "Picardをダウンロード"
 
 #: website/frontend/templates/index.html:25
 msgid "Other Downloads"
-msgstr ""
+msgstr "他のダウンロード"
 
 #: website/frontend/templates/index.html:30
 msgid "Screenshot"
-msgstr ""
+msgstr "スクリーンショット"
 
 #: website/frontend/templates/index.html:41
 msgid "Multiple Formats"
-msgstr ""
+msgstr "複数のプラットフォーム"
 
 #: website/frontend/templates/index.html:42
 msgid ""
 "Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
 "WMA, WAV, and more."
 msgstr ""
+"Picardは、MP3、FLAC、OGG、M4A、WMA、WAVなど、すべてのポピュラーな音楽"
+"フォーマットに対応しています。"
 
 #: website/frontend/templates/index.html:49
 msgid "Comprehensive Database"
-msgstr ""
+msgstr "包括的なデータベース"
 
 #: website/frontend/templates/index.html:58
 #, python-brace-format
@@ -396,15 +402,15 @@ msgstr ""
 
 #: website/frontend/templates/index.html:85
 msgid "CD Lookups"
-msgstr ""
+msgstr "CD検索"
 
 #: website/frontend/templates/index.html:86
 msgid "Picard can lookup entire music CDs with a click."
-msgstr ""
+msgstr "Picardはワンクリックで音楽CD全体を検索できます。"
 
 #: website/frontend/templates/index.html:93
 msgid "Open Source"
-msgstr ""
+msgstr "ソースを開く"
 
 #: website/frontend/templates/index.html:100
 #, python-brace-format
@@ -422,6 +428,8 @@ msgstr "カバーアート"
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
 msgstr ""
+"Picardは、あなたのアルバムの正しいカバーアートを見つけてダウンロードできます"
+"。"
 
 #: website/frontend/templates/index.html:119
 #, fuzzy
@@ -433,10 +441,12 @@ msgid ""
 "A flexible but easy to learn scripting language allows you to exactly "
 "specify how your music files will be named and how the tags will look like."
 msgstr ""
+"柔軟でありながら習得しやすいスクリプト言語を使えば、音楽ファイルの命名規則や"
+"タグの表示形式を詳細に指定することができます。"
 
 #: website/frontend/templates/index.html:127
 msgid "Plugin Support"
-msgstr ""
+msgstr "プラグインをサポート"
 
 #: website/frontend/templates/index.html:129
 #, python-brace-format
@@ -449,21 +459,21 @@ msgstr ""
 #: website/frontend/templates/index.html:148
 #, python-brace-format
 msgid "v{version} for Windows (64-bit)"
-msgstr ""
+msgstr "Windows (64ビット) 用 v{version}"
 
 #: website/frontend/templates/index.html:153
 #, python-brace-format
 msgid "v{version} for Linux Distributions"
-msgstr ""
+msgstr "Linux ディストリビューション用 v{version}"
 
 #: website/frontend/templates/index.html:158
 #, python-brace-format
 msgid "v{version} for macOS 10.14+"
-msgstr ""
+msgstr "macOS 10.14以降用 v{version}"
 
 #: website/frontend/templates/plugins.html:24
 msgid "Available Plugins"
-msgstr ""
+msgstr "利用可能なプラグイン"
 
 #: website/frontend/templates/plugins.html:30
 msgid ""
