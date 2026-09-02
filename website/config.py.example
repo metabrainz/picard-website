@@ -78,3 +78,8 @@
 ## Scheduler API is restricted to localhost only (see scheduler.py)
 ## Safe to enable for local debugging and monitoring
 #SCHEDULER_API_ENABLED = True
+#
+## /healthz access control (see frontend/healthz.py). CIDR ranges / IPs allowed
+## to reach the health endpoint. Default (in default_config.py) allows loopback
+## and the RFC1918 private ranges. Set to [] to allow everyone (local dev).
+#HEALTH_ALLOWED_IPS = ['127.0.0.0/8', '::1/128', '10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16']

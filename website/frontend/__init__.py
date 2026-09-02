@@ -4,6 +4,7 @@ from flask import Flask
 
 from .babel import init_app
 from .errors import init_error_handlers
+from .healthz import init_healthz
 from .scheduler import init_scheduler
 
 
@@ -20,7 +21,7 @@ def create_app(config_overrides=None):
     # Configuration files
     app.config.from_pyfile(os.path.join(website_folder, 'default_config.py'))
     app.config.from_pyfile(os.path.join(website_folder, 'config.py'), silent=True)
-    
+
     # Apply config overrides (for testing)
     if config_overrides:
         app.config.update(config_overrides)
@@ -43,6 +44,9 @@ def create_app(config_overrides=None):
 
     # Initialize scheduler
     init_scheduler(app)
+
+    # Health check endpoint (/healthz)
+    init_healthz(app)
 
     # Template utilities
     app.jinja_env.add_extension('jinja2.ext.do')

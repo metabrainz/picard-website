@@ -121,3 +121,16 @@ SERVER_PORT = 6060
 # Safe to enable for local debugging and monitoring
 SCHEDULER_API_ENABLED = False
 SCHEDULER_API_ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '::1']
+
+# /healthz access control (see frontend/healthz.py).
+# List of CIDR ranges / IPs allowed to reach the health endpoint. The Consul
+# check connects directly to the backend on the internal (VLAN) address, so the
+# default allows loopback and the RFC1918 private ranges and blocks the public
+# internet. Set to [] to allow everyone (e.g. for local development).
+HEALTH_ALLOWED_IPS = [
+    '127.0.0.0/8',
+    '::1/128',
+    '10.0.0.0/8',
+    '172.16.0.0/12',
+    '192.168.0.0/16',
+]
