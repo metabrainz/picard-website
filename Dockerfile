@@ -58,5 +58,5 @@ RUN rm -rf ./node_modules .pytest_cache .coverage \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 3031
+EXPOSE 3031 3032
 CMD ["uwsgi", "/etc/uwsgi/uwsgi.ini"]
