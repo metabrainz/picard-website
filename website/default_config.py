@@ -134,3 +134,16 @@ HEALTH_ALLOWED_IPS = [
     '172.16.0.0/12',
     '192.168.0.0/16',
 ]
+
+# Reverse-proxy trust for the production WSGI entrypoint (see wsgi.py).
+# List of hosts/CIDR ranges (or a single string) whose X-Forwarded-For and
+# X-Forwarded-Proto headers granian should trust and use to rewrite the client
+# address/scheme. Keep this tight: a too-broad value lets clients spoof their
+# address. The special value '*' trusts every host (disables the check).
+TRUSTED_PROXIES = [
+    '127.0.0.0/8',
+    '::1/128',
+    '10.0.0.0/8',
+    '172.16.0.0/12',
+    '192.168.0.0/16',
+]

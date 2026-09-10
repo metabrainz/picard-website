@@ -68,4 +68,4 @@ CMD ["/code/website/.venv/bin/granian", \
      "--host", "0.0.0.0", \
      "--port", "3031", \
      "--workers", "4", \
-     "website.frontend:create_app"]
+     "website.wsgi:create_wsgi_app"]

@@ -83,3 +83,8 @@
 ## to reach the health endpoint. Default (in default_config.py) allows loopback
 ## and the RFC1918 private ranges. Set to [] to allow everyone (local dev).
 #HEALTH_ALLOWED_IPS = ['127.0.0.0/8', '::1/128', '10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16']
+#
+## Reverse-proxy trust for the production WSGI entrypoint (see wsgi.py). Hosts /
+## CIDR ranges whose X-Forwarded-For / X-Forwarded-Proto headers granian should
+## trust. Keep this tight; '*' trusts everyone (disables the check).
+#TRUSTED_PROXIES = ['127.0.0.0/8', '::1/128', '10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16']
