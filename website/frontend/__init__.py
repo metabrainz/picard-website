@@ -64,6 +64,12 @@ def create_app(config_overrides=None):
     # Health check endpoint (/healthz)
     init_healthz(app)
 
+    # Cache-busting for static assets (adds ?v=<content-hash> to static URLs so
+    # a long Cache-Control max-age is safe across releases).
+    from .static_versioning import init_static_versioning
+
+    init_static_versioning(app)
+
     # Template utilities
     app.jinja_env.add_extension('jinja2.ext.do')
 

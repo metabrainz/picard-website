@@ -72,9 +72,22 @@ ENV GRANIAN_WORKERS=4
 ENV GRANIAN_LOG_ACCESS_ENABLED=true
 ENV GRANIAN_LOG_ACCESS_FMT="[%(time)s] %(addr)s xff=%(header{x-forwarded-for})s \"%(method)s %(path)s %(protocol)s\" %(status)d %(dt_ms).3f"
 EXPOSE 3031
+# Offload /static/* directly to granian (served from Rust, bypassing the Python
+# app) instead of Flask's static view. The mount path is relative to WORKDIR
+# (/code/website) and matches Flask's static_folder, so url_for('static', ...)
+# still generates /static/... URLs that granian intercepts.
+#
+# Assets use a long cache lifetime (30 days). This is safe because create_app()
+# appends ?v=<content-hash> to every static URL (see static_versioning.py): when
+# a file changes its URL changes, so clients never serve a stale asset across
+# releases. granian ignores the query string when serving the file. Override
+# GRANIAN_STATIC_PATH_EXPIRES to change the lifetime.
+ENV GRANIAN_STATIC_PATH_EXPIRES=2592000
 CMD ["/code/website/.venv/bin/granian", \
      "--interface", "wsgi", \
      "--factory", \
      "--host", "0.0.0.0", \
      "--port", "3031", \
+     "--static-path-route", "/static", \
+     "--static-path-mount", "website/frontend/static", \
      "website.wsgi:create_wsgi_app"]
