@@ -8,6 +8,9 @@ services:
     restart: always
     environment:
       DEPLOY_ENV: "prod"
+      # granian worker processes (see Dockerfile). Override here to tune
+      # concurrency without rebuilding the image.
+      GRANIAN_WORKERS: "4"
       SERVICE_3031_NAME: "picard-website"
       SERVICE_3031_CHECK_TCP: "true"
       SERVICE_3031_CHECK_INTERVAL: "15s"

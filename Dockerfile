@@ -60,12 +60,15 @@ RUN rm -rf ./node_modules .pytest_cache .coverage \
 # 3032; granian is HTTP-only and takes over the service port 3031.
 # Invoke granian directly from the venv (not via `uv run`) so no uv cache is
 # needed at runtime under the unprivileged www-data user.
+# Worker count is overridable at runtime via the GRANIAN_WORKERS env var
+# (granian reads GRANIAN_* env vars natively); the reverse proxy/orchestrator
+# may prefer 1 worker per container and scaling containers instead.
 USER www-data:www-data
+ENV GRANIAN_WORKERS=4
 EXPOSE 3031
 CMD ["/code/website/.venv/bin/granian", \
      "--interface", "wsgi", \
      "--factory", \
      "--host", "0.0.0.0", \
      "--port", "3031", \
-     "--workers", "4", \
      "website.wsgi:create_wsgi_app"]
