@@ -60,11 +60,23 @@ RUN rm -rf ./node_modules .pytest_cache .coverage \
 # 3032; granian is HTTP-only and takes over the service port 3031.
 # Invoke granian directly from the venv (not via `uv run`) so no uv cache is
 # needed at runtime under the unprivileged www-data user.
-# Worker count is overridable at runtime via the GRANIAN_WORKERS env var
-# (granian reads GRANIAN_* env vars natively); the reverse proxy/orchestrator
-# may prefer 1 worker per container and scaling containers instead.
+#
+# Concurrency (all overridable at runtime; granian reads GRANIAN_* natively).
+# This is a low-traffic site sharing a host with many other services, so the
+# defaults are deliberately modest rather than a port of uwsgi's process count:
+#   WORKERS=2          two processes for basic redundancy across respawns
+#   BLOCKING_THREADS=2 threads per worker that enter Python (GIL contention);
+#                      small is best for light, mostly-cached responses
+#   BACKPRESSURE=16    max concurrent requests per worker before granian stops
+#                      accepting (granian recommends limiting concurrency this
+#                      way rather than via a large thread pool; must stay above
+#                      the number of keep-alive connections from the proxy)
+# Net: 2x2 = 4 potential Python threads instead of the default 128, which also
+# clears granian's "up to 128 Python threads" startup warning.
 USER www-data:www-data
-ENV GRANIAN_WORKERS=4
+ENV GRANIAN_WORKERS=2
+ENV GRANIAN_BLOCKING_THREADS=2
+ENV GRANIAN_BACKPRESSURE=16
 # Access logging on by default (granian disables it otherwise). The format
 # mirrors uwsgi's log-x-forwarded-for: %(addr)s is the immediate peer (the
 # reverse proxy), and xff carries the real client chain from X-Forwarded-For.
