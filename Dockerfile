@@ -65,6 +65,12 @@ RUN rm -rf ./node_modules .pytest_cache .coverage \
 # may prefer 1 worker per container and scaling containers instead.
 USER www-data:www-data
 ENV GRANIAN_WORKERS=4
+# Access logging on by default (granian disables it otherwise). The format
+# mirrors uwsgi's log-x-forwarded-for: %(addr)s is the immediate peer (the
+# reverse proxy), and xff carries the real client chain from X-Forwarded-For.
+# Both are overridable/disableable at runtime via these GRANIAN_* env vars.
+ENV GRANIAN_LOG_ACCESS_ENABLED=true
+ENV GRANIAN_LOG_ACCESS_FMT="[%(time)s] %(addr)s xff=%(header{x-forwarded-for})s \"%(method)s %(path)s %(protocol)s\" %(status)d %(dt_ms).3f"
 EXPOSE 3031
 CMD ["/code/website/.venv/bin/granian", \
      "--interface", "wsgi", \
