@@ -26,8 +26,7 @@ WORKDIR /code/website
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
 # Python dependencies
-RUN pip install --upgrade pip \
-    && pip install uWSGI==2.0.23
+RUN pip install --upgrade pip
 COPY uv.lock pyproject.toml /code/website/
 RUN uv sync --frozen --group dev
 
@@ -49,8 +48,6 @@ RUN UV_NO_CACHE=1 uv run ./plugins-generate.py
 USER root
 RUN uv run pytest
 
-COPY ./docker/uwsgi.ini /etc/uwsgi/uwsgi.ini
-
 # Cleanup build dependencies
 RUN uv pip uninstall flask-testing pytest pytest-cov
 RUN rm -rf ./node_modules .pytest_cache .coverage \
@@ -58,5 +55,17 @@ RUN rm -rf ./node_modules .pytest_cache .coverage \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 3031 3032
-CMD ["uwsgi", "/etc/uwsgi/uwsgi.ini"]
+# Serve the Flask WSGI app with granian over plain HTTP.
+# uwsgi previously exposed the legacy binary protocol on 3031 and plain HTTP on
+# 3032; granian is HTTP-only and takes over the service port 3031.
+# Invoke granian directly from the venv (not via `uv run`) so no uv cache is
+# needed at runtime under the unprivileged www-data user.
+USER www-data:www-data
+EXPOSE 3031
+CMD ["/code/website/.venv/bin/granian", \
+     "--interface", "wsgi", \
+     "--factory", \
+     "--host", "0.0.0.0", \
+     "--port", "3031", \
+     "--workers", "4", \
+     "website.frontend:create_app"]
