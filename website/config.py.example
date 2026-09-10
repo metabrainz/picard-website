@@ -1,4 +1,8 @@
 #
+## Flask debug mode. OFF by default (production). Also toggleable via the
+## PICARD_WEBSITE_DEBUG env var, which takes precedence when set.
+#DEBUG = False
+#
 ## Default cache timeout - used when no specific timeout is specified
 #DEFAULT_CACHE_TIMEOUT = 5 * 60
 #

@@ -2,6 +2,11 @@
 # You need to copy config.py.example to config.py and edit the file to your own needs
 # to override these values.
 
+# Flask debug mode. OFF by default for production (no interactive debugger on
+# tracebacks, no verbose logging). Can also be toggled at runtime with the
+# PICARD_WEBSITE_DEBUG env var, which takes precedence when set.
+DEBUG = False
+
 # Default cache timeout - used when no specific timeout is specified
 DEFAULT_CACHE_TIMEOUT = 5 * 60
 
