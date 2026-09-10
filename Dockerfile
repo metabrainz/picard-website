@@ -83,7 +83,6 @@ ENV GRANIAN_BACKPRESSURE=16
 # Both are overridable/disableable at runtime via these GRANIAN_* env vars.
 ENV GRANIAN_LOG_ACCESS_ENABLED=true
 ENV GRANIAN_LOG_ACCESS_FMT="[%(time)s] %(addr)s xff=%(header{x-forwarded-for})s \"%(method)s %(path)s %(protocol)s\" %(status)d %(dt_ms).3f"
-EXPOSE 3031
 # Offload /static/* directly to granian (served from Rust, bypassing the Python
 # app) instead of Flask's static view. The mount path is relative to WORKDIR
 # (/code/website) and matches Flask's static_folder, so url_for('static', ...)
@@ -95,6 +94,15 @@ EXPOSE 3031
 # releases. granian ignores the query string when serving the file. Override
 # GRANIAN_STATIC_PATH_EXPIRES to change the lifetime.
 ENV GRANIAN_STATIC_PATH_EXPIRES=2592000
+# Prometheus metrics exporter on a separate port (granian_* runtime metrics:
+# requests/connections/static/GIL-wait). Bound to 0.0.0.0 so it is reachable
+# for scraping when the port is published; keep it internal-only at the network
+# layer (do not expose 9091 publicly). Port/address/interval are overridable via
+# the GRANIAN_METRICS_* env vars.
+ENV GRANIAN_METRICS_ENABLED=true
+ENV GRANIAN_METRICS_ADDRESS=0.0.0.0
+ENV GRANIAN_METRICS_PORT=9091
+EXPOSE 3031 9091
 CMD ["/code/website/.venv/bin/granian", \
      "--interface", "wsgi", \
      "--factory", \
