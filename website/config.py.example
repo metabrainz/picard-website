@@ -38,32 +38,20 @@
 ## v3 plugins registry request timeout
 #PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT = 5
 #
-## PICARD_VERSIONS dictionary valid keys are: 'stable', 'beta' and 'dev'.
-## The 'version' tuple comprises int_major, int_minor, int_micro, str_type and int_development as defined in PEP-440.
-## The Picard developers have standardized on using only 'dev' or 'final' as the str_type segment of the version tuple.
+## PICARD_VERSIONS: the released download versions (keys: 'stable', 'beta',
+## 'dev'). You normally do NOT set this here. The canonical, deployed values
+## live in default_config.py, and production runs without a config.py, so a
+## release is a single edit to default_config.py. Leaving this unset keeps your
+## local setup identical to production.
+##
+## Only uncomment and override below if you specifically want to preview
+## unreleased version data locally. See default_config.py for the full schema
+## (win/mac/source sizes and hashes).
 #PICARD_VERSIONS = {
-#    'stable': {
-#        'tag': '2.0.1',
-#        'version': ( 2, 0, 1, 'final', 0),
-#        'urls': {
-#            'download': 'https://picard.musicbrainz.org/',
-#            'changelog': 'https://picard.musicbrainz.org/changelog/',
-#        }
-#    },
 #    'beta': {
-#        'tag': '2.0.0.beta3',
-#        'version': ( 2, 0, 0, 'dev', 6),
-#        'urls': {
-#            'download': 'https://github.com/metabrainz/picard/releases/tag/2.0.0dev6',
-#            'changelog': 'https://github.com/metabrainz/picard/compare/2.0.0dev6...master',
-#        }
-#    },
-#    'dev': {
-#        'tag': '2.0.2.dev1',
-#        'version': ( 2, 0, 2, 'dev', 1),
-#        'urls': {
-#            'download': 'https://github.com/metabrainz/picard',
-#        }
+#        'tag': '3.0.0rcX',
+#        'version': (3, 0, 0, 'rc', 0),
+#        ...
 #    },
 #}
 #
