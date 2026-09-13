@@ -115,6 +115,7 @@ SUPPORTED_LANGUAGES = [
     'pl',
     'ru',
     'sq',
+    'sv',
     'tr',
     'uk',
     'zh_Hans',
