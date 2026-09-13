@@ -22,6 +22,13 @@ Translations: https://translations.metabrainz.org/projects/picard/website/
 
 Note: To serve plugin data locally, run `uv run python plugins-generate.py` separately (requires network access to download from [picard-plugins](https://github.com/metabrainz/picard-plugins) repository). Without it, plugin pages will return 503.
 
+### Release Verification
+
+`uv run python verify-downloads.py` - Verify the download links and MD5 hashes declared in the site config (`PICARD_VERSIONS` / `FILESERVER_URL`). It reconstructs every download URL the downloads page renders, checks each is reachable, downloads it and compares the MD5 against the configured hash, and validates the per-channel `download`/`changelog` links. Useful after editing `website/default_config.py` for a release. Exits non-zero if any check fails (CI-friendly).
+
+- `uv run python verify-downloads.py beta` - Verify a single channel (`stable`, `beta`, or `dev`).
+- `uv run python verify-downloads.py --links-only` - Only check that URLs are reachable; skip downloading and hashing.
+
 ### Translation Management
 
 `npm run extract_strings` - Extract translatable strings from Python source files to `website/frontend/messages.pot`
