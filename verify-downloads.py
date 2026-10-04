@@ -30,29 +30,25 @@ from website.frontend import create_app
 
 # Maps a "<name>_hash" config field to the download filename template and,
 # where relevant, the matching "<name>_size" field. The {tag} placeholder is
-# filled from the channel's 'tag'. The macOS arm64/x86_64 filenames differ
-# between the stable and beta channels (see downloads.html), so a channel may
-# override the template.
+# filled from the channel's 'tag'. A channel may override a template via
+# CHANNEL_FILENAME_OVERRIDES when its filenames differ (see downloads.html).
 #
 # Each entry: hash_field -> (default_filename_template, size_field)
 FILE_FIELDS = {
     'win_hash': ('picard-setup-{tag}.exe', 'win_size'),
     'win_portable_hash': ('MusicBrainz-Picard-{tag}.exe', 'win_portable_size'),
-    'mac_arm64_hash': ('MusicBrainz-Picard-{tag}-macOS-11.0-arm64.dmg', 'mac_arm64_size'),
-    'mac_x86_64_hash': ('MusicBrainz-Picard-{tag}-macOS-11.0-x86_64.dmg', 'mac_x86_64_size'),
+    'mac_arm64_hash': ('MusicBrainz-Picard-{tag}-macOS-13.0-arm64.dmg', 'mac_arm64_size'),
+    'mac_x86_64_hash': ('MusicBrainz-Picard-{tag}-macOS-13.0-x86_64.dmg', 'mac_x86_64_size'),
     'mac_hash': ('MusicBrainz-Picard-{tag}-macOS-10.14.dmg', 'mac_size'),
     'mac_10_12_hash': ('MusicBrainz-Picard-{tag}-macOS-10.12.dmg', 'mac_10_12_size'),
     'source_tar_hash': ('picard-{tag}.tar.gz', 'source_tar_size'),
     'source_zip_hash': ('picard-{tag}.zip', 'source_zip_size'),
 }
 
-# Channel-specific filename overrides. The beta channel publishes the macOS
-# builds under the macOS-13.0 naming (see downloads.html).
+# Channel-specific filename overrides. The stable and beta channels currently
+# share the macOS-13.0 naming used by the defaults above, so no overrides are
+# needed. Keep this hook for when a channel diverges again.
 CHANNEL_FILENAME_OVERRIDES = {
-    'beta': {
-        'mac_arm64_hash': 'MusicBrainz-Picard-{tag}-macOS-13.0-arm64.dmg',
-        'mac_x86_64_hash': 'MusicBrainz-Picard-{tag}-macOS-13.0-x86_64.dmg',
-    },
 }
 
 USER_AGENT = 'picard-website verify-downloads'
