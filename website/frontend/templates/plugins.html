@@ -34,7 +34,7 @@
         {% endautoescape %}
         <ul class="nav nav-tabs">
         {% for version in all_plugins.keys() %}
-          <li {% if version == '2' %} class="active" {% endif %}>
+          <li {% if version == '3' %} class="active" {% endif %}>
             <a data-toggle="tab" href="#apiv{{version}}">API v{{version}}</a>
           </li>
         {% endfor %}

@@ -48,6 +48,26 @@ PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT = 5
 # The Picard developers have standardized on using only 'dev' or 'final' as the str_type segment of the version tuple.
 PICARD_VERSIONS = {
     'stable': {
+        'tag': '3.0',
+        'version': (3, 0, 0, 'final', 0),
+        'urls': {
+            'download': 'https://picard.musicbrainz.org/',
+            'changelog': 'https://blog.metabrainz.org/2026/10/04/picard-3.0-released/',
+        },
+        'win_size': '62',
+        'win_hash': '9074ba65ab88d48d928917d394a89748',
+        'win_portable_size': '70',
+        'win_portable_hash': '6e0826b60905cadfe7cc47a870525440',
+        'mac_x86_64_size': '63',
+        'mac_x86_64_hash': '88a9690ac959e73f596d80ee18904e7a',
+        'mac_arm64_size': '58',
+        'mac_arm64_hash': '2e0f0b13585ffc22ca6bebb3bab58095',
+        'source_tar_size': '11',
+        'source_tar_hash': '82c8d8e0ae040812294d895336901a82',
+        'source_zip_size': '',
+        'source_zip_hash': '',
+    },
+    'old_stable': {
         'tag': '2.13.3',
         'version': (2, 13, 3, 'final', 0),
         'urls': {

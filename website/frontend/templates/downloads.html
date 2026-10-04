@@ -61,6 +61,28 @@
                       </a>
                     </td>
                   </tr>
+                  {% if old_stable %}
+                  <tr>
+                    <td>{{old_stable.tag}} <em>{{ _('64-bit installer') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{old_stable.win_hash}}</td>
+                    <td>{{old_stable.win_size}} MB</td>
+                    <td>
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/picard-setup-{{old_stable.tag}}.exe">
+                        <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>{{old_stable.tag}} <em>{{ _('64-bit portable') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{old_stable.win_portable_hash}}</td>
+                    <td>{{old_stable.win_portable_size}} MB</td>
+                    <td>
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{old_stable.tag}}.exe">
+                        <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                      </a>
+                    </td>
+                  </tr>
+                  {% endif %}
                   {% if show_beta %}
                   <tr>
                     <td>{{beta.tag}} <em>{{ _('pre-release, 64-bit installer') }}</em></td>
@@ -129,40 +151,30 @@
                     </td>
                   </tr>
                   {% endif %}
-                  {% if stable.mac_hash %}
+                  {% if old_stable.mac_hash %}
                   <tr>
-                    <td>{{stable.tag}} <em>{{ _('macOS 10.14+ (x86_64)') }}</em></td>
-                    <td class="hidden-xs hidden-sm">{{stable.mac_hash}}</td>
-                    <td>{{stable.mac_size}} MB</td>
+                    <td>{{old_stable.tag}} <em>{{ _('macOS 10.14+ (x86_64)') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{old_stable.mac_hash}}</td>
+                    <td>{{old_stable.mac_size}} MB</td>
                     <td>
-                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{stable.tag}}-macOS-10.14.dmg">
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{old_stable.tag}}-macOS-10.14.dmg">
                         <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
                       </a>
                     </td>
                   </tr>
                   {% endif %}
-                  {% if stable.mac_10_12_hash %}
+                  {% if old_stable.mac_10_12_hash %}
                   <tr>
-                    <td>{{stable.tag}} <em>{{ _('macOS 10.12+ (x86_64)') }}</em></td>
-                    <td class="hidden-xs hidden-sm">{{stable.mac_10_12_hash}}</td>
-                    <td>{{stable.mac_10_12_size}} MB</td>
+                    <td>{{old_stable.tag}} <em>{{ _('macOS 10.12+ (x86_64)') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{old_stable.mac_10_12_hash}}</td>
+                    <td>{{old_stable.mac_10_12_size}} MB</td>
                     <td>
-                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{stable.tag}}-macOS-10.12.dmg">
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{old_stable.tag}}-macOS-10.12.dmg">
                         <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
                       </a>
                     </td>
                   </tr>
                   {% endif %}
-                  <tr>
-                    <td>2.1.3 <em>{{ _('macOS 10.10+ (x86_64)') }}</em></td>
-                    <td class="hidden-xs hidden-sm">4d781ca512c48fe4c3c00a432e80ed96</td>
-                    <td>22 MB</td>
-                    <td>
-                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/MusicBrainz.Picard.2.1.3.dmg">
-                        <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
-                      </a>
-                    </td>
-                  </tr>
                   {% if show_beta %}
                   {% if beta.mac_arm64_hash %}
                   <tr>
@@ -356,6 +368,7 @@
                   </tr>
                 </thead>
                 <tbody>
+                  {% if stable.source_tar_hash %}
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('tar') }}</em></td>
                     <td class="hidden-xs hidden-sm">{{stable.source_tar_hash}}</td>
@@ -366,6 +379,8 @@
                       </a>
                     </td>
                   </tr>
+                  {% endif %}
+                  {% if stable.source_zip_hash %}
                   <tr>
                     <td>{{stable.tag}} <em>{{ _('zip') }}</em></td>
                     <td class="hidden-xs hidden-sm">{{stable.source_zip_hash}}</td>
@@ -376,6 +391,33 @@
                       </a>
                     </td>
                   </tr>
+                  {% endif %}
+                  {% if old_stable %}
+                  {% if old_stable.source_tar_hash %}
+                  <tr>
+                    <td>{{old_stable.tag}} <em>{{ _('tar') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{old_stable.source_tar_hash}}</td>
+                    <td>{{old_stable.source_tar_size}} MB</td>
+                    <td>
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/picard-{{old_stable.tag}}.tar.gz">
+                        <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                      </a>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% if old_stable.source_zip_hash %}
+                  <tr>
+                    <td>{{old_stable.tag}} <em>{{ _('zip') }}</em></td>
+                    <td class="hidden-xs hidden-sm">{{old_stable.source_zip_hash}}</td>
+                    <td>{{old_stable.source_zip_size}} MB</td>
+                    <td>
+                      <a class="btn btn-primary btn-sm" href="{{ config['FILESERVER_URL'] }}/picard-{{old_stable.tag}}.zip">
+                        <i class="fa fa-download"></i>&emsp;{{ _('Download') }}
+                      </a>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% endif %}
                   {% if show_beta %}
                   {% if beta.source_tar_hash %}
                   <tr>
