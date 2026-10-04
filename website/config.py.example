@@ -38,8 +38,9 @@
 ## v3 plugins registry request timeout
 #PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT = 5
 #
-## PICARD_VERSIONS: the released download versions (keys: 'stable', 'beta',
-## 'dev'). You normally do NOT set this here. The canonical, deployed values
+## PICARD_VERSIONS: the released download versions (keys: 'stable',
+## 'old_stable', 'beta', 'dev'). You normally do NOT set this here. The
+## canonical, deployed values
 ## live in default_config.py, and production runs without a config.py, so a
 ## release is a single edit to default_config.py. Leaving this unset keeps your
 ## local setup identical to production.

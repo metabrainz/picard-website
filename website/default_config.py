@@ -43,7 +43,8 @@ PLUGINS_V3_REGISTRY_CACHE_TIMEOUT = 4 * 60 * 60
 # v3 plugins registry request timeout
 PLUGINS_V3_REGISTRY_REQUEST_TIMEOUT = 5
 
-# PICARD_VERSIONS dictionary valid keys are: 'stable', 'beta' and 'dev'.
+# PICARD_VERSIONS dictionary valid keys are: 'stable', 'old_stable', 'beta'
+# and 'dev'.
 # The 'version' tuple comprises int_major, int_minor, int_micro, str_type and int_development as defined in PEP-440.
 # The Picard developers have standardized on using only 'dev' or 'final' as the str_type segment of the version tuple.
 PICARD_VERSIONS = {
