@@ -153,9 +153,9 @@
         infoText = {{_('v{version} for Linux Distributions')|expand({'version': tag})|tojson}};
 
       } else if (platform === "MacIntel" || platform === "MacPPC") {
-        downloadURL = "{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{tag}}-macOS-10.14.dmg";
+        downloadURL = "{{ config['FILESERVER_URL'] }}/MusicBrainz-Picard-{{tag}}-macOS-13.0-arm64.dmg";
         iconClass = "fa-apple";
-        infoText = {{_('v{version} for macOS 10.14+')|expand({'version': tag})|tojson}};
+        infoText = {{_('v{version} for macOS 13.0+')|expand({'version': tag})|tojson}};
       }
 
       if (downloadURL) {
