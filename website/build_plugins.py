@@ -5,16 +5,11 @@ import os
 import re
 import shutil
 from tempfile import mkdtemp
+from urllib.request import urlretrieve
 import zipfile
 
 from markdown import markdown
 
-
-# for Py2/3 compatibility
-try:
-    from urllib import urlretrieve
-except ImportError:
-    from urllib.request import urlretrieve
 
 PLUGIN_DOWNLOAD_URL = "https://github.com/metabrainz/picard-plugins/archive/%s.zip"
 
