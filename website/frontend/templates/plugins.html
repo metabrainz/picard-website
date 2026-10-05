@@ -22,6 +22,7 @@
 {% endblock -%}
 {% set active_page = "plugins" %}
 {% set page_title =  _("Available Plugins") %}
+{% set default_version =  "3" %}
 {% block content %}
     <div class="container">
       <div id="plugin-table">
@@ -34,14 +35,14 @@
         {% endautoescape %}
         <ul class="nav nav-tabs">
         {% for version in all_plugins.keys() %}
-          <li {% if version == '3' %} class="active" {% endif %}>
+          <li {% if version == default_version %} class="active" {% endif %}>
             <a data-toggle="tab" href="#apiv{{version}}">API v{{version}}</a>
           </li>
         {% endfor %}
         </ul>
         <div class="tab-content">
         {% for version, plugins in all_plugins.items() %}
-          <div class="tab-pane {{'active' if version == '2' }}" id="apiv{{version}}">
+          <div class="tab-pane {{'active' if version == default_version }}" id="apiv{{version}}">
             <br/>
             <div class="table-responsive">
               <table id="plugins-table-v{{version}}" class="table table-bordered table-hover">
