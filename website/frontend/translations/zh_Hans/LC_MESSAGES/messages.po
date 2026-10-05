@@ -466,8 +466,8 @@ msgstr "Linux 发行版 v{version}"
 
 #: website/frontend/templates/index.html:158
 #, python-brace-format
-msgid "v{version} for macOS 10.14+"
-msgstr "macOS 10.14+ v{version}"
+msgid "v{version} for macOS 13.0+"
+msgstr "macOS 13.0+ v{version}"
 
 #: website/frontend/templates/plugins.html:24
 msgid "Available Plugins"

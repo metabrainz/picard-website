@@ -485,8 +485,8 @@ msgstr "versie {version} voor Linux-distributies"
 
 #: website/frontend/templates/index.html:158
 #, python-brace-format
-msgid "v{version} for macOS 10.14+"
-msgstr "versie {version} voor macOS vanaf 10.14"
+msgid "v{version} for macOS 13.0+"
+msgstr "versie {version} voor macOS vanaf 13.0"
 
 #: website/frontend/templates/plugins.html:24
 msgid "Available Plugins"
