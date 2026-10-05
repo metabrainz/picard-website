@@ -22,8 +22,8 @@
 import argparse
 import hashlib
 import sys
-import urllib.request
 import urllib.error
+import urllib.request
 
 from website.frontend import create_app
 
