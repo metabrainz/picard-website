@@ -45,6 +45,12 @@ def cached(key, timeout_config_key=None, force_refresh_param='force_refresh'):
             data = app.cache.get(cache_key) if not force_refresh else None
             if data is None:
                 data = func(*args, **kwargs)
+                # Intentionally cache only non-None results: a None return means
+                # "data unavailable" (e.g. plugin JSON not generated yet, remote
+                # registry fetch failed), which we want to retry on the next
+                # request rather than cache. Falsy-but-not-None results (an empty
+                # dict/list) ARE cached. Callers must therefore use None as the
+                # sentinel for "unavailable", never an empty container.
                 if data is not None:
                     timeout_key = timeout_config_key or 'DEFAULT_CACHE_TIMEOUT'
                     timeout = app.config[timeout_key]
