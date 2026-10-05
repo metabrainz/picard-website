@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-23 11:44+0200\n"
-"PO-Revision-Date: 2026-08-15 12:12+0000\n"
+"PO-Revision-Date: 2026-10-05 16:42+0000\n"
 "Last-Translator: Marc Riera <marc@marcriera.cat>\n"
 "Language-Team: Catalan <https://translations.metabrainz.org/projects/picard/"
 "website/ca/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.10\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -92,7 +92,7 @@ msgstr ""
 #: website/frontend/templates/base.html:103
 #, python-brace-format
 msgid "Chat with us: {url|Matrix, IRC, Discord}"
-msgstr "Xateja amb nosaltres: {url|Matrix, IRC, Discord}"
+msgstr "Xategeu amb nosaltres: {url|Matrix, IRC, Discord}"
 
 #: website/frontend/templates/base.html:109
 msgid "Useful Links"
