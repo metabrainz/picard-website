@@ -178,7 +178,7 @@
           <div class="col-md-6 section-line">
             <p>
               {% set expand={
-                'metabrainz': '<img src="' + url_for('static', filename='img/meb-icons/metabrainz-icon-detail.svg') + '" alt="MetaBrainz" width="30" height="30"> <span> MetaBrainz Foundation </span>'
+                'metabrainz': ('<img src="' + url_for('static', filename='img/meb-icons/metabrainz-icon-detail.svg') + '" alt="MetaBrainz" width="30" height="30"> <span> MetaBrainz Foundation </span>')|safe
               }
               %}
               {{ _("Brought to you by {metabrainz}")|expand(expand)|safe }}
