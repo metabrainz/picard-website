@@ -39,8 +39,8 @@ msgstr "MusicBrainz Picard"
 msgid ""
 "Picard is a cross-platform music tagger powered by the MusicBrainz database."
 msgstr ""
-"Picardは、MusicBrainzデータベースを搭載したクロスプラットフォームの音楽"
-"タッガーです。"
+"Picardは、MusicBrainzデータベースを搭載したクロスプラットフォームの音楽タッ"
+"ガーです。"
 
 #: website/frontend/templates/base.html:42
 msgid "Toggle navigation"
@@ -374,8 +374,8 @@ msgid ""
 "Picard supports all popular music formats, including MP3, FLAC, OGG, M4A, "
 "WMA, WAV, and more."
 msgstr ""
-"Picardは、MP3、FLAC、OGG、M4A、WMA、WAVなど、すべてのポピュラーな音楽"
-"フォーマットに対応しています。"
+"Picardは、MP3、FLAC、OGG、M4A、WMA、WAVなど、すべてのポピュラーな音楽フォー"
+"マットに対応しています。"
 
 #: website/frontend/templates/index.html:49
 msgid "Comprehensive Database"
@@ -428,8 +428,8 @@ msgstr "カバーアート"
 #: website/frontend/templates/index.html:110
 msgid "Picard can find and download the correct cover art for your albums."
 msgstr ""
-"Picardは、あなたのアルバムの正しいカバーアートを見つけてダウンロードできます"
-"。"
+"Picardは、あなたのアルバムの正しいカバーアートを見つけてダウンロードできま"
+"す。"
 
 #: website/frontend/templates/index.html:119
 #, fuzzy
