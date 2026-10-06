@@ -15,11 +15,15 @@ def expand(string, args, tag='a', default_attribute='href'):
         else:
             final_text = text
 
-        if isinstance(args[var], dict):
-            d = args[var]
+        # ``var`` is one of ``args`` keys by construction of the regex below,
+        # but guard the lookup so a future change to the pattern cannot turn a
+        # missing key into an unhandled KeyError (HTTP 500) at render time.
+        value = args.get(var)
+        if isinstance(value, dict):
+            d = value
         else:
             if default_attribute:
-                d = {default_attribute: args[var]}
+                d = {default_attribute: value}
             else:
                 d = {}
         attribs = ' '.join([f"{k}=\"{encode_entities(d[k])}\"" for k in sorted(d.keys())])
