@@ -1,5 +1,7 @@
 import unittest
 
+from markupsafe import Markup
+
 from website.expand import expand
 
 
@@ -85,4 +87,50 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(
             'A <strong>Apple</strong>',
             expand('A {apple_fruit|Apple}', {'apple_fruit': 'green'}, tag="strong", default_attribute=""),
+        )
+
+    def test_expand_returns_markup(self):
+        "Result is a Markup instance so it is safe in autoescaping contexts"
+        self.assertIsInstance(expand('{url|X}', {'url': 'http://a.com'}), Markup)
+
+    def test_expand_escapes_link_text_from_args(self):
+        "HTML in a looked-up link text is escaped, not injected"
+        self.assertEqual(
+            '<a href="http://a.com">&lt;script&gt;alert(1)&lt;/script&gt;</a>',
+            expand('{url|evil}', {'url': 'http://a.com', 'evil': '<script>alert(1)</script>'}),
+        )
+
+    def test_expand_escapes_literal_link_text(self):
+        "HTML in literal link text (not an arg key) is escaped"
+        self.assertEqual(
+            '<a href="http://a.com">&lt;b&gt;hi&lt;/b&gt;</a>',
+            expand('{url|<b>hi</b>}', {'url': 'http://a.com'}),
+        )
+
+    def test_expand_escapes_simple_substitution(self):
+        "HTML in a {var} substitution value is escaped"
+        self.assertEqual(
+            'x &lt;img src=x onerror=alert(1)&gt; y',
+            expand('x {evil} y', {'evil': '<img src=x onerror=alert(1)>'}),
+        )
+
+    def test_expand_attribute_value_still_escaped(self):
+        "Attribute values remain escaped (quotes cannot break out)"
+        self.assertEqual(
+            '<a href="http://a.com?a=1&amp;b=2">X</a>',
+            expand('{url|X}', {'url': 'http://a.com?a=1&b=2'}),
+        )
+
+    def test_expand_markup_value_passes_through(self):
+        "A Markup {var} value is trusted HTML and left unescaped (opt-out)"
+        self.assertEqual(
+            'logo: <img src="x.svg">',
+            expand('logo: {logo}', {'logo': Markup('<img src="x.svg">')}),
+        )
+
+    def test_expand_markup_link_text_passes_through(self):
+        "A Markup link text is trusted and left unescaped"
+        self.assertEqual(
+            '<a href="http://a.com"><b>bold</b></a>',
+            expand('{url|label}', {'url': 'http://a.com', 'label': Markup('<b>bold</b>')}),
         )
