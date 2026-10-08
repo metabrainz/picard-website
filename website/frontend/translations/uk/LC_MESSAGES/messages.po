@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-23 11:44+0200\n"
+"POT-Creation-Date: 2026-10-08 12:25+0200\n"
 "PO-Revision-Date: 2026-04-24 08:31+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Ukrainian <https://translations.metabrainz.org/projects/"
@@ -170,32 +170,33 @@ msgid "Picard for <strong>Windows</strong>"
 msgstr "Picard для <strong>Windows</strong>"
 
 #: website/frontend/templates/downloads.html:23
-#: website/frontend/templates/downloads.html:101
-#: website/frontend/templates/downloads.html:352
+#: website/frontend/templates/downloads.html:123
+#: website/frontend/templates/downloads.html:364
 msgid "Picard Version"
 msgstr "Версія Picard"
 
 #: website/frontend/templates/downloads.html:24
-#: website/frontend/templates/downloads.html:102
-#: website/frontend/templates/downloads.html:353
+#: website/frontend/templates/downloads.html:124
+#: website/frontend/templates/downloads.html:365
 msgid "MD5 Hash"
 msgstr "MD5-хеш"
 
 #: website/frontend/templates/downloads.html:25
-#: website/frontend/templates/downloads.html:103
-#: website/frontend/templates/downloads.html:354
+#: website/frontend/templates/downloads.html:125
+#: website/frontend/templates/downloads.html:366
 msgid "Size"
 msgstr "Розмір"
 
 #: website/frontend/templates/downloads.html:26
-#: website/frontend/templates/downloads.html:104
-#: website/frontend/templates/downloads.html:232
-#: website/frontend/templates/downloads.html:312
-#: website/frontend/templates/downloads.html:355
+#: website/frontend/templates/downloads.html:126
+#: website/frontend/templates/downloads.html:244
+#: website/frontend/templates/downloads.html:324
+#: website/frontend/templates/downloads.html:367
 msgid "Link"
 msgstr "Посилання"
 
 #: website/frontend/templates/downloads.html:31
+#: website/frontend/templates/downloads.html:66
 msgid "64-bit installer"
 msgstr "64-біт інсталятор"
 
@@ -203,24 +204,28 @@ msgstr "64-біт інсталятор"
 #: website/frontend/templates/downloads.html:46
 #: website/frontend/templates/downloads.html:71
 #: website/frontend/templates/downloads.html:81
-#: website/frontend/templates/downloads.html:115
-#: website/frontend/templates/downloads.html:127
-#: website/frontend/templates/downloads.html:139
-#: website/frontend/templates/downloads.html:151
-#: website/frontend/templates/downloads.html:162
-#: website/frontend/templates/downloads.html:174
+#: website/frontend/templates/downloads.html:93
+#: website/frontend/templates/downloads.html:103
+#: website/frontend/templates/downloads.html:137
+#: website/frontend/templates/downloads.html:149
+#: website/frontend/templates/downloads.html:161
+#: website/frontend/templates/downloads.html:173
 #: website/frontend/templates/downloads.html:186
 #: website/frontend/templates/downloads.html:198
 #: website/frontend/templates/downloads.html:210
-#: website/frontend/templates/downloads.html:365
-#: website/frontend/templates/downloads.html:375
-#: website/frontend/templates/downloads.html:387
-#: website/frontend/templates/downloads.html:399
-#: website/frontend/templates/plugins.html:84
+#: website/frontend/templates/downloads.html:222
+#: website/frontend/templates/downloads.html:378
+#: website/frontend/templates/downloads.html:390
+#: website/frontend/templates/downloads.html:403
+#: website/frontend/templates/downloads.html:415
+#: website/frontend/templates/downloads.html:429
+#: website/frontend/templates/downloads.html:441
+#: website/frontend/templates/plugins.html:83
 msgid "Download"
 msgstr "Завантажити"
 
 #: website/frontend/templates/downloads.html:41
+#: website/frontend/templates/downloads.html:76
 msgid "64-bit portable"
 msgstr "64-біт портативний"
 
@@ -233,82 +238,78 @@ msgstr "Застосунок для Windows 10&thinsp;/&thinsp;11"
 msgid "Microsoft Store"
 msgstr "Microsoft Store"
 
-#: website/frontend/templates/downloads.html:66
+#: website/frontend/templates/downloads.html:88
 msgid "pre-release, 64-bit installer"
 msgstr "передвипуск, 64-біт інсталятор"
 
-#: website/frontend/templates/downloads.html:76
+#: website/frontend/templates/downloads.html:98
 msgid "pre-release, 64-bit portable"
 msgstr "передвипуск, 64-біт портативний"
 
-#: website/frontend/templates/downloads.html:94
+#: website/frontend/templates/downloads.html:116
 msgid "Picard for <strong>macOS</strong>"
 msgstr "Picard для <strong>macOS</strong>"
 
-#: website/frontend/templates/downloads.html:110
+#: website/frontend/templates/downloads.html:132
 msgid "macOS 13.0+ (arm64)"
 msgstr "macOS 13.0+ (arm64)"
 
-#: website/frontend/templates/downloads.html:122
+#: website/frontend/templates/downloads.html:144
 msgid "macOS 13.0+ (x86_64)"
 msgstr "macOS 13.0+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:134
+#: website/frontend/templates/downloads.html:156
 msgid "macOS 10.14+ (x86_64)"
 msgstr "macOS 10.14+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:146
+#: website/frontend/templates/downloads.html:168
 msgid "macOS 10.12+ (x86_64)"
 msgstr "macOS 10.12+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:157
-msgid "macOS 10.10+ (x86_64)"
-msgstr "macOS 10.10+ (x86_64)"
-
-#: website/frontend/templates/downloads.html:169
+#: website/frontend/templates/downloads.html:181
 msgid "pre-release, macOS 13.0+ (arm64)"
 msgstr "передвипуск, macOS 13.0+ (arm64)"
 
-#: website/frontend/templates/downloads.html:181
+#: website/frontend/templates/downloads.html:193
 msgid "pre-release, macOS 13.0+ (x86_64)"
 msgstr "передвипуск, macOS 13.0+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:193
+#: website/frontend/templates/downloads.html:205
 msgid "pre-release, macOS 10.14+ (x86_64)"
 msgstr "передвипуск, macOS 10.14+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:205
+#: website/frontend/templates/downloads.html:217
 msgid "pre-release, macOS 10.12+ (x86_64)"
 msgstr "передвипуск, macOS 10.12+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:224
+#: website/frontend/templates/downloads.html:236
 msgid "Picard for <strong>Linux</strong>"
 msgstr "Picard для <strong>Linux</strong>"
 
-#: website/frontend/templates/downloads.html:231
+#: website/frontend/templates/downloads.html:243
 msgid "Distribution"
 msgstr "Дистрибутив"
 
-#: website/frontend/templates/downloads.html:237
-#: website/frontend/templates/downloads.html:245
+#: website/frontend/templates/downloads.html:249
+#: website/frontend/templates/downloads.html:257
 msgid "All distributions"
 msgstr "Всі дистрибутиви"
 
-#: website/frontend/templates/downloads.html:239
-#: website/frontend/templates/downloads.html:247
+#: website/frontend/templates/downloads.html:251
+#: website/frontend/templates/downloads.html:259
 msgid "Instructions"
 msgstr "Інструкції"
 
-#: website/frontend/templates/downloads.html:271
-#: website/frontend/templates/downloads.html:284
+#: website/frontend/templates/downloads.html:283
+#: website/frontend/templates/downloads.html:296
 msgid "latest package"
 msgstr "найновіший пакет"
 
-#: website/frontend/templates/downloads.html:272
+#: website/frontend/templates/downloads.html:284
 msgid "read the FAQ"
 msgstr "читайте FAQ"
 
-#: website/frontend/templates/downloads.html:297
+#: website/frontend/templates/downloads.html:309
 msgid ""
 "In addition Picard is also available in the official repositories of most "
 "Linux distributions."
@@ -316,35 +317,37 @@ msgstr ""
 "Крім того, Picard також доступний в офіційних репозиторіях більшості "
 "дистрибутивів Linux."
 
-#: website/frontend/templates/downloads.html:304
+#: website/frontend/templates/downloads.html:316
 msgid "Picard for <strong>other operating systems</strong>"
 msgstr "Picard для <strong>інших операційних систем</strong>"
 
-#: website/frontend/templates/downloads.html:311
+#: website/frontend/templates/downloads.html:323
 msgid "Operating system"
 msgstr "Операційна система"
 
-#: website/frontend/templates/downloads.html:345
+#: website/frontend/templates/downloads.html:357
 msgid "Picard <strong>Source Code</strong>"
 msgstr "Picard <strong>Вихідний код</strong>"
 
-#: website/frontend/templates/downloads.html:360
+#: website/frontend/templates/downloads.html:373
+#: website/frontend/templates/downloads.html:398
 msgid "tar"
 msgstr "tar"
 
-#: website/frontend/templates/downloads.html:370
+#: website/frontend/templates/downloads.html:385
+#: website/frontend/templates/downloads.html:410
 msgid "zip"
 msgstr "zip"
 
-#: website/frontend/templates/downloads.html:382
+#: website/frontend/templates/downloads.html:424
 msgid "pre-release, tar"
 msgstr "передвипуск, tar"
 
-#: website/frontend/templates/downloads.html:394
+#: website/frontend/templates/downloads.html:436
 msgid "pre-release, zip"
 msgstr "передвипуск, zip"
 
-#: website/frontend/templates/downloads.html:414
+#: website/frontend/templates/downloads.html:456
 #, python-brace-format
 msgid ""
 "You can also view the latest Picard source code on {urlgithub|Github}. See "
@@ -355,7 +358,7 @@ msgstr ""
 "GitHub}. Дивіться \"{urldev|Розробка}\", якщо Ви бажаєте почати робити "
 "внесок у вихідний код Picard."
 
-#: website/frontend/templates/downloads.html:421
+#: website/frontend/templates/downloads.html:463
 #, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
@@ -492,49 +495,55 @@ msgstr "v{version} для macOS 13.0+"
 msgid "Available Plugins"
 msgstr "Доступні плагіни"
 
-#: website/frontend/templates/plugins.html:30
+#: website/frontend/templates/plugins.html:31
 msgid ""
 "This is a list of plugins that are currently available for use with Picard."
 msgstr "Це список плагінів, які зараз доступні для використання з Picard."
 
-#: website/frontend/templates/plugins.html:31
-msgid ""
-"The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
-"use API v1."
+#: website/frontend/templates/plugins.html:37
+#, python-format
+msgid "API v%(version)s (Picard %(version)s.x)"
 msgstr ""
-"Поточний випуск Picard 2.x використовує API v2. Старіші випуски Picard 1.x "
-"використовують API v1."
 
-#: website/frontend/templates/plugins.html:32
-#, python-brace-format
-msgid ""
-"The table is generated from the data of our plugin {urlrepo|repository}."
-msgstr "Таблиця створена з даних нашого {urlrepo|репозиторію} плагінів."
-
-#: website/frontend/templates/plugins.html:57
+#: website/frontend/templates/plugins.html:56
 msgid "Name"
 msgstr "Ім'я"
 
-#: website/frontend/templates/plugins.html:59
+#: website/frontend/templates/plugins.html:58
 msgid "Version"
 msgstr "Версія"
 
-#: website/frontend/templates/plugins.html:61
+#: website/frontend/templates/plugins.html:60
 msgid "Description"
 msgstr "Oпис"
 
-#: website/frontend/templates/plugins.html:62
+#: website/frontend/templates/plugins.html:61
 msgid "Author(s)"
 msgstr "Автор(и)"
 
-#: website/frontend/templates/plugins.html:63
-#: website/frontend/templates/plugins.html:79
+#: website/frontend/templates/plugins.html:62
+#: website/frontend/templates/plugins.html:78
 msgid "Repository"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:78
+#: website/frontend/templates/plugins.html:77
 msgid "Open repository in a new tab"
 msgstr ""
+
+#: website/frontend/templates/plugins.html:95
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The table is generated from the data of our plugin {urlrepo|repository}."
+msgid "This table is generated from the data of our plugin {urlrepo|registry}."
+msgstr "Таблиця створена з даних нашого {urlrepo|репозиторію} плагінів."
+
+#: website/frontend/templates/plugins.html:97
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The table is generated from the data of our plugin {urlrepo|repository}."
+msgid ""
+"This table is generated from the data of our plugin {urlrepo|repository}."
+msgstr "Таблиця створена з даних нашого {urlrepo|репозиторію} плагінів."
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
@@ -555,6 +564,24 @@ msgid ""
 msgstr ""
 "Вам не потрібно хвилюватися, хтось працює над тим, щоб виправити ситуацію, "
 "поки ви читаєте це."
+
+#: website/frontend/templates/errors/503.html:3
+msgid "503 Service Unavailable"
+msgstr ""
+
+#: website/frontend/templates/errors/503.html:6
+msgid "Service temporarily unavailable. Please try again later."
+msgstr ""
+
+#~ msgid "macOS 10.10+ (x86_64)"
+#~ msgstr "macOS 10.10+ (x86_64)"
+
+#~ msgid ""
+#~ "The current release of Picard 2.x uses API v2. The older Picard 1.x "
+#~ "releases use API v1."
+#~ msgstr ""
+#~ "Поточний випуск Picard 2.x використовує API v2. Старіші випуски Picard "
+#~ "1.x використовують API v1."
 
 #~ msgid "Build on macOS"
 #~ msgstr "Збірка на macOS"

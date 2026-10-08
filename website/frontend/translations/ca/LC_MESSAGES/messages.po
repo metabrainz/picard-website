@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-23 11:44+0200\n"
+"POT-Creation-Date: 2026-10-08 12:25+0200\n"
 "PO-Revision-Date: 2026-10-05 16:42+0000\n"
 "Last-Translator: Marc Riera <marc@marcriera.cat>\n"
 "Language-Team: Catalan <https://translations.metabrainz.org/projects/picard/"
@@ -168,32 +168,33 @@ msgid "Picard for <strong>Windows</strong>"
 msgstr "Picard per al <strong>Windows</strong>"
 
 #: website/frontend/templates/downloads.html:23
-#: website/frontend/templates/downloads.html:101
-#: website/frontend/templates/downloads.html:352
+#: website/frontend/templates/downloads.html:123
+#: website/frontend/templates/downloads.html:364
 msgid "Picard Version"
 msgstr "Versió de Picard"
 
 #: website/frontend/templates/downloads.html:24
-#: website/frontend/templates/downloads.html:102
-#: website/frontend/templates/downloads.html:353
+#: website/frontend/templates/downloads.html:124
+#: website/frontend/templates/downloads.html:365
 msgid "MD5 Hash"
 msgstr "Resum MD5"
 
 #: website/frontend/templates/downloads.html:25
-#: website/frontend/templates/downloads.html:103
-#: website/frontend/templates/downloads.html:354
+#: website/frontend/templates/downloads.html:125
+#: website/frontend/templates/downloads.html:366
 msgid "Size"
 msgstr "Mida"
 
 #: website/frontend/templates/downloads.html:26
-#: website/frontend/templates/downloads.html:104
-#: website/frontend/templates/downloads.html:232
-#: website/frontend/templates/downloads.html:312
-#: website/frontend/templates/downloads.html:355
+#: website/frontend/templates/downloads.html:126
+#: website/frontend/templates/downloads.html:244
+#: website/frontend/templates/downloads.html:324
+#: website/frontend/templates/downloads.html:367
 msgid "Link"
 msgstr "Enllaç"
 
 #: website/frontend/templates/downloads.html:31
+#: website/frontend/templates/downloads.html:66
 msgid "64-bit installer"
 msgstr "instal·lador de 64 bits"
 
@@ -201,24 +202,28 @@ msgstr "instal·lador de 64 bits"
 #: website/frontend/templates/downloads.html:46
 #: website/frontend/templates/downloads.html:71
 #: website/frontend/templates/downloads.html:81
-#: website/frontend/templates/downloads.html:115
-#: website/frontend/templates/downloads.html:127
-#: website/frontend/templates/downloads.html:139
-#: website/frontend/templates/downloads.html:151
-#: website/frontend/templates/downloads.html:162
-#: website/frontend/templates/downloads.html:174
+#: website/frontend/templates/downloads.html:93
+#: website/frontend/templates/downloads.html:103
+#: website/frontend/templates/downloads.html:137
+#: website/frontend/templates/downloads.html:149
+#: website/frontend/templates/downloads.html:161
+#: website/frontend/templates/downloads.html:173
 #: website/frontend/templates/downloads.html:186
 #: website/frontend/templates/downloads.html:198
 #: website/frontend/templates/downloads.html:210
-#: website/frontend/templates/downloads.html:365
-#: website/frontend/templates/downloads.html:375
-#: website/frontend/templates/downloads.html:387
-#: website/frontend/templates/downloads.html:399
-#: website/frontend/templates/plugins.html:84
+#: website/frontend/templates/downloads.html:222
+#: website/frontend/templates/downloads.html:378
+#: website/frontend/templates/downloads.html:390
+#: website/frontend/templates/downloads.html:403
+#: website/frontend/templates/downloads.html:415
+#: website/frontend/templates/downloads.html:429
+#: website/frontend/templates/downloads.html:441
+#: website/frontend/templates/plugins.html:83
 msgid "Download"
 msgstr "Baixa"
 
 #: website/frontend/templates/downloads.html:41
+#: website/frontend/templates/downloads.html:76
 msgid "64-bit portable"
 msgstr "versió portable de 64 bits"
 
@@ -231,82 +236,78 @@ msgstr "aplicació del Windows 10&thinsp;/&thinsp;11"
 msgid "Microsoft Store"
 msgstr "Microsoft Store"
 
-#: website/frontend/templates/downloads.html:66
+#: website/frontend/templates/downloads.html:88
 msgid "pre-release, 64-bit installer"
 msgstr "versió preliminar, instal·lador de 64 bits"
 
-#: website/frontend/templates/downloads.html:76
+#: website/frontend/templates/downloads.html:98
 msgid "pre-release, 64-bit portable"
 msgstr "versió preliminar, versió portable de 64 bits"
 
-#: website/frontend/templates/downloads.html:94
+#: website/frontend/templates/downloads.html:116
 msgid "Picard for <strong>macOS</strong>"
 msgstr "Picard per al <strong>macOS</strong>"
 
-#: website/frontend/templates/downloads.html:110
+#: website/frontend/templates/downloads.html:132
 msgid "macOS 13.0+ (arm64)"
 msgstr "macOS 13.0+ (arm64)"
 
-#: website/frontend/templates/downloads.html:122
+#: website/frontend/templates/downloads.html:144
 msgid "macOS 13.0+ (x86_64)"
 msgstr "macOS 13.0+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:134
+#: website/frontend/templates/downloads.html:156
 msgid "macOS 10.14+ (x86_64)"
 msgstr "macOS 10.14+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:146
+#: website/frontend/templates/downloads.html:168
 msgid "macOS 10.12+ (x86_64)"
 msgstr "macOS 10.12+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:157
-msgid "macOS 10.10+ (x86_64)"
-msgstr "macOS 10.10+ (x86_64)"
-
-#: website/frontend/templates/downloads.html:169
+#: website/frontend/templates/downloads.html:181
 msgid "pre-release, macOS 13.0+ (arm64)"
 msgstr "versió preliminar, macOS 13.0+ (arm64)"
 
-#: website/frontend/templates/downloads.html:181
+#: website/frontend/templates/downloads.html:193
 msgid "pre-release, macOS 13.0+ (x86_64)"
 msgstr "versió preliminar, macOS 13.0+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:193
+#: website/frontend/templates/downloads.html:205
 msgid "pre-release, macOS 10.14+ (x86_64)"
 msgstr "versió preliminar, macOS 10.14+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:205
+#: website/frontend/templates/downloads.html:217
 msgid "pre-release, macOS 10.12+ (x86_64)"
 msgstr "versió preliminar, macOS 10.12+ (x86_64)"
 
-#: website/frontend/templates/downloads.html:224
+#: website/frontend/templates/downloads.html:236
 msgid "Picard for <strong>Linux</strong>"
 msgstr "Picard per al <strong>Linux</strong>"
 
-#: website/frontend/templates/downloads.html:231
+#: website/frontend/templates/downloads.html:243
 msgid "Distribution"
 msgstr "Distribució"
 
-#: website/frontend/templates/downloads.html:237
-#: website/frontend/templates/downloads.html:245
+#: website/frontend/templates/downloads.html:249
+#: website/frontend/templates/downloads.html:257
 msgid "All distributions"
 msgstr "Totes les distribucions"
 
-#: website/frontend/templates/downloads.html:239
-#: website/frontend/templates/downloads.html:247
+#: website/frontend/templates/downloads.html:251
+#: website/frontend/templates/downloads.html:259
 msgid "Instructions"
 msgstr "Instruccions"
 
-#: website/frontend/templates/downloads.html:271
-#: website/frontend/templates/downloads.html:284
+#: website/frontend/templates/downloads.html:283
+#: website/frontend/templates/downloads.html:296
 msgid "latest package"
 msgstr "paquet més recent"
 
-#: website/frontend/templates/downloads.html:272
+#: website/frontend/templates/downloads.html:284
 msgid "read the FAQ"
 msgstr "llegeix les PMF"
 
-#: website/frontend/templates/downloads.html:297
+#: website/frontend/templates/downloads.html:309
 msgid ""
 "In addition Picard is also available in the official repositories of most "
 "Linux distributions."
@@ -314,35 +315,37 @@ msgstr ""
 "A més, Picard també està disponible als repositoris oficials de la majoria "
 "de distribucions del Linux."
 
-#: website/frontend/templates/downloads.html:304
+#: website/frontend/templates/downloads.html:316
 msgid "Picard for <strong>other operating systems</strong>"
 msgstr "Picard per a <strong>altres sistemes operatius</strong>"
 
-#: website/frontend/templates/downloads.html:311
+#: website/frontend/templates/downloads.html:323
 msgid "Operating system"
 msgstr "Sistema operatiu"
 
-#: website/frontend/templates/downloads.html:345
+#: website/frontend/templates/downloads.html:357
 msgid "Picard <strong>Source Code</strong>"
 msgstr "<strong>Codi font</strong> de Picard"
 
-#: website/frontend/templates/downloads.html:360
+#: website/frontend/templates/downloads.html:373
+#: website/frontend/templates/downloads.html:398
 msgid "tar"
 msgstr "tar"
 
-#: website/frontend/templates/downloads.html:370
+#: website/frontend/templates/downloads.html:385
+#: website/frontend/templates/downloads.html:410
 msgid "zip"
 msgstr "zip"
 
-#: website/frontend/templates/downloads.html:382
+#: website/frontend/templates/downloads.html:424
 msgid "pre-release, tar"
 msgstr "versió preliminar, tar"
 
-#: website/frontend/templates/downloads.html:394
+#: website/frontend/templates/downloads.html:436
 msgid "pre-release, zip"
 msgstr "versió preliminar, zip"
 
-#: website/frontend/templates/downloads.html:414
+#: website/frontend/templates/downloads.html:456
 #, python-brace-format
 msgid ""
 "You can also view the latest Picard source code on {urlgithub|Github}. See "
@@ -353,7 +356,7 @@ msgstr ""
 "Consulteu {urldev|Desenvolupament} per a veure com podeu començar a "
 "contribuir al codi font de Picard."
 
-#: website/frontend/templates/downloads.html:421
+#: website/frontend/templates/downloads.html:463
 #, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
@@ -491,52 +494,60 @@ msgstr "v{version} per al macOS 13.0+"
 msgid "Available Plugins"
 msgstr "Connectors disponibles"
 
-#: website/frontend/templates/plugins.html:30
+#: website/frontend/templates/plugins.html:31
 msgid ""
 "This is a list of plugins that are currently available for use with Picard."
 msgstr ""
 "Aquí teniu una llista de connectors disponibles actualment per a Picard."
 
-#: website/frontend/templates/plugins.html:31
-msgid ""
-"The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
-"use API v1."
+#: website/frontend/templates/plugins.html:37
+#, python-format
+msgid "API v%(version)s (Picard %(version)s.x)"
 msgstr ""
-"La versió actual de Picard 2.x fa servir la v2 de l'API. Les versions "
-"anteriors de Picard 1.x fan servir la v1 de l'API."
 
-#: website/frontend/templates/plugins.html:32
-#, python-brace-format
-msgid ""
-"The table is generated from the data of our plugin {urlrepo|repository}."
+#: website/frontend/templates/plugins.html:56
+msgid "Name"
+msgstr "Nom"
+
+#: website/frontend/templates/plugins.html:58
+msgid "Version"
+msgstr "Versió"
+
+#: website/frontend/templates/plugins.html:60
+msgid "Description"
+msgstr "Descripció"
+
+#: website/frontend/templates/plugins.html:61
+msgid "Author(s)"
+msgstr "Autors"
+
+#: website/frontend/templates/plugins.html:62
+#: website/frontend/templates/plugins.html:78
+msgid "Repository"
+msgstr "Repositori"
+
+#: website/frontend/templates/plugins.html:77
+msgid "Open repository in a new tab"
+msgstr "Obre el repositori en una pestanya nova"
+
+#: website/frontend/templates/plugins.html:95
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The table is generated from the data of our plugin {urlrepo|repository}."
+msgid "This table is generated from the data of our plugin {urlrepo|registry}."
 msgstr ""
 "Aquesta taula es genera a partir de les dades del nostre {urlrepo|"
 "repositori} de connectors."
 
-#: website/frontend/templates/plugins.html:57
-msgid "Name"
-msgstr "Nom"
-
-#: website/frontend/templates/plugins.html:59
-msgid "Version"
-msgstr "Versió"
-
-#: website/frontend/templates/plugins.html:61
-msgid "Description"
-msgstr "Descripció"
-
-#: website/frontend/templates/plugins.html:62
-msgid "Author(s)"
-msgstr "Autors"
-
-#: website/frontend/templates/plugins.html:63
-#: website/frontend/templates/plugins.html:79
-msgid "Repository"
-msgstr "Repositori"
-
-#: website/frontend/templates/plugins.html:78
-msgid "Open repository in a new tab"
-msgstr "Obre el repositori en una pestanya nova"
+#: website/frontend/templates/plugins.html:97
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The table is generated from the data of our plugin {urlrepo|repository}."
+msgid ""
+"This table is generated from the data of our plugin {urlrepo|repository}."
+msgstr ""
+"Aquesta taula es genera a partir de les dades del nostre {urlrepo|"
+"repositori} de connectors."
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
@@ -555,6 +566,24 @@ msgid ""
 "You don't have to worry, someone is working on fixing things as you're "
 "reading this."
 msgstr "No patiu, hi ha algú treballant per a resoldre-ho mentre llegiu això."
+
+#: website/frontend/templates/errors/503.html:3
+msgid "503 Service Unavailable"
+msgstr ""
+
+#: website/frontend/templates/errors/503.html:6
+msgid "Service temporarily unavailable. Please try again later."
+msgstr ""
+
+#~ msgid "macOS 10.10+ (x86_64)"
+#~ msgstr "macOS 10.10+ (x86_64)"
+
+#~ msgid ""
+#~ "The current release of Picard 2.x uses API v2. The older Picard 1.x "
+#~ "releases use API v1."
+#~ msgstr ""
+#~ "La versió actual de Picard 2.x fa servir la v2 de l'API. Les versions "
+#~ "anteriors de Picard 1.x fan servir la v1 de l'API."
 
 #~ msgid "Build on macOS"
 #~ msgstr "Compilació al macOS"

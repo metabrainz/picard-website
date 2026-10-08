@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-23 11:44+0200\n"
+"POT-Creation-Date: 2026-10-08 12:25+0200\n"
 "PO-Revision-Date: 2025-09-07 09:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://translations.metabrainz.org/"
@@ -163,32 +163,33 @@ msgid "Picard for <strong>Windows</strong>"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:23
-#: website/frontend/templates/downloads.html:101
-#: website/frontend/templates/downloads.html:352
+#: website/frontend/templates/downloads.html:123
+#: website/frontend/templates/downloads.html:364
 msgid "Picard Version"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:24
-#: website/frontend/templates/downloads.html:102
-#: website/frontend/templates/downloads.html:353
+#: website/frontend/templates/downloads.html:124
+#: website/frontend/templates/downloads.html:365
 msgid "MD5 Hash"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:25
-#: website/frontend/templates/downloads.html:103
-#: website/frontend/templates/downloads.html:354
+#: website/frontend/templates/downloads.html:125
+#: website/frontend/templates/downloads.html:366
 msgid "Size"
 msgstr "Størrelse"
 
 #: website/frontend/templates/downloads.html:26
-#: website/frontend/templates/downloads.html:104
-#: website/frontend/templates/downloads.html:232
-#: website/frontend/templates/downloads.html:312
-#: website/frontend/templates/downloads.html:355
+#: website/frontend/templates/downloads.html:126
+#: website/frontend/templates/downloads.html:244
+#: website/frontend/templates/downloads.html:324
+#: website/frontend/templates/downloads.html:367
 msgid "Link"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:31
+#: website/frontend/templates/downloads.html:66
 msgid "64-bit installer"
 msgstr ""
 
@@ -196,24 +197,28 @@ msgstr ""
 #: website/frontend/templates/downloads.html:46
 #: website/frontend/templates/downloads.html:71
 #: website/frontend/templates/downloads.html:81
-#: website/frontend/templates/downloads.html:115
-#: website/frontend/templates/downloads.html:127
-#: website/frontend/templates/downloads.html:139
-#: website/frontend/templates/downloads.html:151
-#: website/frontend/templates/downloads.html:162
-#: website/frontend/templates/downloads.html:174
+#: website/frontend/templates/downloads.html:93
+#: website/frontend/templates/downloads.html:103
+#: website/frontend/templates/downloads.html:137
+#: website/frontend/templates/downloads.html:149
+#: website/frontend/templates/downloads.html:161
+#: website/frontend/templates/downloads.html:173
 #: website/frontend/templates/downloads.html:186
 #: website/frontend/templates/downloads.html:198
 #: website/frontend/templates/downloads.html:210
-#: website/frontend/templates/downloads.html:365
-#: website/frontend/templates/downloads.html:375
-#: website/frontend/templates/downloads.html:387
-#: website/frontend/templates/downloads.html:399
-#: website/frontend/templates/plugins.html:84
+#: website/frontend/templates/downloads.html:222
+#: website/frontend/templates/downloads.html:378
+#: website/frontend/templates/downloads.html:390
+#: website/frontend/templates/downloads.html:403
+#: website/frontend/templates/downloads.html:415
+#: website/frontend/templates/downloads.html:429
+#: website/frontend/templates/downloads.html:441
+#: website/frontend/templates/plugins.html:83
 msgid "Download"
 msgstr ""
 
 #: website/frontend/templates/downloads.html:41
+#: website/frontend/templates/downloads.html:76
 msgid "64-bit portable"
 msgstr ""
 
@@ -226,116 +231,114 @@ msgstr ""
 msgid "Microsoft Store"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:66
+#: website/frontend/templates/downloads.html:88
 msgid "pre-release, 64-bit installer"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:76
+#: website/frontend/templates/downloads.html:98
 msgid "pre-release, 64-bit portable"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:94
+#: website/frontend/templates/downloads.html:116
 msgid "Picard for <strong>macOS</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:110
+#: website/frontend/templates/downloads.html:132
 msgid "macOS 13.0+ (arm64)"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:122
+#: website/frontend/templates/downloads.html:144
 msgid "macOS 13.0+ (x86_64)"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:134
+#: website/frontend/templates/downloads.html:156
 msgid "macOS 10.14+ (x86_64)"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:146
+#: website/frontend/templates/downloads.html:168
 msgid "macOS 10.12+ (x86_64)"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:157
-msgid "macOS 10.10+ (x86_64)"
-msgstr ""
-
-#: website/frontend/templates/downloads.html:169
+#: website/frontend/templates/downloads.html:181
 msgid "pre-release, macOS 13.0+ (arm64)"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:181
+#: website/frontend/templates/downloads.html:193
 msgid "pre-release, macOS 13.0+ (x86_64)"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:193
+#: website/frontend/templates/downloads.html:205
 msgid "pre-release, macOS 10.14+ (x86_64)"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:205
+#: website/frontend/templates/downloads.html:217
 msgid "pre-release, macOS 10.12+ (x86_64)"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:224
+#: website/frontend/templates/downloads.html:236
 msgid "Picard for <strong>Linux</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:231
+#: website/frontend/templates/downloads.html:243
 msgid "Distribution"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:237
-#: website/frontend/templates/downloads.html:245
+#: website/frontend/templates/downloads.html:249
+#: website/frontend/templates/downloads.html:257
 msgid "All distributions"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:239
-#: website/frontend/templates/downloads.html:247
+#: website/frontend/templates/downloads.html:251
+#: website/frontend/templates/downloads.html:259
 msgid "Instructions"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:271
-#: website/frontend/templates/downloads.html:284
+#: website/frontend/templates/downloads.html:283
+#: website/frontend/templates/downloads.html:296
 msgid "latest package"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:272
+#: website/frontend/templates/downloads.html:284
 msgid "read the FAQ"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:297
+#: website/frontend/templates/downloads.html:309
 msgid ""
 "In addition Picard is also available in the official repositories of most "
 "Linux distributions."
 msgstr ""
 
-#: website/frontend/templates/downloads.html:304
+#: website/frontend/templates/downloads.html:316
 msgid "Picard for <strong>other operating systems</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:311
+#: website/frontend/templates/downloads.html:323
 msgid "Operating system"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:345
+#: website/frontend/templates/downloads.html:357
 msgid "Picard <strong>Source Code</strong>"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:360
+#: website/frontend/templates/downloads.html:373
+#: website/frontend/templates/downloads.html:398
 msgid "tar"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:370
+#: website/frontend/templates/downloads.html:385
+#: website/frontend/templates/downloads.html:410
 msgid "zip"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:382
+#: website/frontend/templates/downloads.html:424
 msgid "pre-release, tar"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:394
+#: website/frontend/templates/downloads.html:436
 msgid "pre-release, zip"
 msgstr ""
 
-#: website/frontend/templates/downloads.html:414
+#: website/frontend/templates/downloads.html:456
 #, python-brace-format
 msgid ""
 "You can also view the latest Picard source code on {urlgithub|Github}. See "
@@ -343,7 +346,7 @@ msgid ""
 "code."
 msgstr ""
 
-#: website/frontend/templates/downloads.html:421
+#: website/frontend/templates/downloads.html:463
 #, python-brace-format
 msgid ""
 "This page lists the most recent downloads. If you're looking for older "
@@ -473,46 +476,50 @@ msgstr ""
 msgid "Available Plugins"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:30
+#: website/frontend/templates/plugins.html:31
 msgid ""
 "This is a list of plugins that are currently available for use with Picard."
 msgstr ""
 
-#: website/frontend/templates/plugins.html:31
-msgid ""
-"The current release of Picard 2.x uses API v2. The older Picard 1.x releases "
-"use API v1."
+#: website/frontend/templates/plugins.html:37
+#, python-format
+msgid "API v%(version)s (Picard %(version)s.x)"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:32
-#, python-brace-format
-msgid ""
-"The table is generated from the data of our plugin {urlrepo|repository}."
-msgstr ""
-
-#: website/frontend/templates/plugins.html:57
+#: website/frontend/templates/plugins.html:56
 msgid "Name"
 msgstr "Navn"
 
-#: website/frontend/templates/plugins.html:59
+#: website/frontend/templates/plugins.html:58
 msgid "Version"
 msgstr "Versjon"
 
-#: website/frontend/templates/plugins.html:61
+#: website/frontend/templates/plugins.html:60
 msgid "Description"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:62
+#: website/frontend/templates/plugins.html:61
 msgid "Author(s)"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:63
-#: website/frontend/templates/plugins.html:79
+#: website/frontend/templates/plugins.html:62
+#: website/frontend/templates/plugins.html:78
 msgid "Repository"
 msgstr ""
 
-#: website/frontend/templates/plugins.html:78
+#: website/frontend/templates/plugins.html:77
 msgid "Open repository in a new tab"
+msgstr ""
+
+#: website/frontend/templates/plugins.html:95
+#, python-brace-format
+msgid "This table is generated from the data of our plugin {urlrepo|registry}."
+msgstr ""
+
+#: website/frontend/templates/plugins.html:97
+#, python-brace-format
+msgid ""
+"This table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
 
 #: website/frontend/templates/docs/development.html:3
@@ -531,4 +538,12 @@ msgstr ""
 msgid ""
 "You don't have to worry, someone is working on fixing things as you're "
 "reading this."
+msgstr ""
+
+#: website/frontend/templates/errors/503.html:3
+msgid "503 Service Unavailable"
+msgstr ""
+
+#: website/frontend/templates/errors/503.html:6
+msgid "Service temporarily unavailable. Please try again later."
 msgstr ""
