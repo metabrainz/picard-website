@@ -29,6 +29,14 @@ def create_app(config_overrides=None):
     app.config.from_pyfile(os.path.join(website_folder, 'default_config.py'))
     app.config.from_pyfile(os.path.join(website_folder, 'config.py'), silent=True)
 
+    # Allow overriding the plugins build dir from the environment. Handy for
+    # local development (plugins-generate.py and the server share this value)
+    # without editing config.py. Applied before config_overrides so that
+    # explicit overrides (e.g. in tests) still take precedence.
+    env_plugins_dir = os.environ.get('PICARD_WEBSITE_PLUGINS_BUILD_DIR')
+    if env_plugins_dir:
+        app.config['PLUGINS_BUILD_DIR'] = env_plugins_dir
+
     # Apply config overrides (for testing)
     if config_overrides:
         app.config.update(config_overrides)
