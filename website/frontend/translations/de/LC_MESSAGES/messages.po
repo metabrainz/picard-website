@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: MusicBrainz Picard Website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-10-08 12:25+0200\n"
-"PO-Revision-Date: 2026-04-24 08:31+0000\n"
+"PO-Revision-Date: 2026-10-08 13:21+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://translations.metabrainz.org/projects/picard/"
 "website/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.10\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -500,7 +500,7 @@ msgstr "Dies ist eine Liste an Plugins, die derzeit für Picard verfügbar sind.
 #: website/frontend/templates/plugins.html:37
 #, python-format
 msgid "API v%(version)s (Picard %(version)s.x)"
-msgstr ""
+msgstr "API v%(version)s (Picard %(version)s.x)"
 
 #: website/frontend/templates/plugins.html:56
 msgid "Name"
@@ -528,22 +528,18 @@ msgid "Open repository in a new tab"
 msgstr "Repository in neuem Reiter öffnen"
 
 #: website/frontend/templates/plugins.html:95
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The table is generated from the data of our plugin {urlrepo|repository}."
+#, python-brace-format
 msgid "This table is generated from the data of our plugin {urlrepo|registry}."
 msgstr ""
-"Die Tabelle wird aus den Daten unseres {urlrepo|Plugin-Repositoriums} "
+"Diese Tabelle wird aus den Daten unseres {urlrepo|Plugin-Registrierung} "
 "generiert."
 
 #: website/frontend/templates/plugins.html:97
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The table is generated from the data of our plugin {urlrepo|repository}."
+#, python-brace-format
 msgid ""
 "This table is generated from the data of our plugin {urlrepo|repository}."
 msgstr ""
-"Die Tabelle wird aus den Daten unseres {urlrepo|Plugin-Repositoriums} "
+"Diese Tabelle wird aus den Daten unseres {urlrepo|Plugin-Repositoriums} "
 "generiert."
 
 #: website/frontend/templates/docs/development.html:3
@@ -568,11 +564,11 @@ msgstr ""
 
 #: website/frontend/templates/errors/503.html:3
 msgid "503 Service Unavailable"
-msgstr ""
+msgstr "503 Dienst nicht verfügbar"
 
 #: website/frontend/templates/errors/503.html:6
 msgid "Service temporarily unavailable. Please try again later."
-msgstr ""
+msgstr "Dienst zeitweilig nicht verfügbar. Bitte später erneut versuchen."
 
 #~ msgid "macOS 10.10+ (x86_64)"
 #~ msgstr "macOS 10.10+ (x86_64)"
