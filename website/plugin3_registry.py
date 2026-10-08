@@ -96,12 +96,16 @@ def load_plugin_list(app, force_refresh=False) -> OrderedDict:
         if not id or not name:
             continue
 
-        # Convert to expected format for frontend
+        # Convert to expected format for frontend. The i18n dicts are kept
+        # locale-neutral here (this result is cached and shared across all
+        # users); the active locale is resolved at render time in the view.
         plugins[id] = {
             'name': name,
             'description': plugin.get('description', ''),
             'author': ', '.join(plugin.get('authors', [])),
             'version': '',
             'git_url': plugin.get('git_url', ''),
+            'name_i18n': plugin.get('name_i18n', {}),
+            'description_i18n': plugin.get('description_i18n', {}),
         }
     return plugins
