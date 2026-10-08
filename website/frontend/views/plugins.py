@@ -6,6 +6,7 @@ from flask import (
     current_app,
     render_template,
 )
+from flask_babel import get_locale
 
 from website.plugin3_registry import load_plugin_list
 from website.plugin_utils import plugins_json_file
@@ -48,5 +49,38 @@ def _load_v1_v2_plugins(build_version):
     return ordered_plugins
 
 
+def _localized(i18n, default, lang):
+    """Pick the translation for lang (falling back to the base language code,
+    then to the provided English default). An empty translation is treated as
+    missing so it falls back to the default rather than rendering blank."""
+    if not i18n or not lang:
+        return default
+    if i18n.get(lang):
+        return i18n[lang]
+    # Fall back from a territory variant (e.g. 'de_AT') to the language ('de').
+    base = lang.replace('-', '_').split('_')[0]
+    if i18n.get(base):
+        return i18n[base]
+    return default
+
+
 def _load_v3_plugins() -> OrderedDict:
-    return load_plugin_list(current_app)
+    """Load v3 plugins, resolving localized name/description for the active
+    UI locale. The cached registry data is locale-neutral; translations are
+    applied here per request."""
+    plugins = load_plugin_list(current_app)
+    if not plugins:
+        return plugins
+
+    locale = get_locale()
+    lang = str(locale) if locale else None
+
+    localized = OrderedDict()
+    for id, plugin in plugins.items():
+        entry = dict(plugin)
+        entry['name'] = _localized(plugin.get('name_i18n'), plugin.get('name', ''), lang)
+        entry['description'] = _localized(
+            plugin.get('description_i18n'), plugin.get('description', ''), lang
+        )
+        localized[id] = entry
+    return localized
