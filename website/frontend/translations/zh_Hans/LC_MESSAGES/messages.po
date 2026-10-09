@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-10-08 12:25+0200\n"
-"PO-Revision-Date: 2026-10-07 09:13+0000\n"
+"PO-Revision-Date: 2026-10-09 14:13+0000\n"
 "Last-Translator: scientists360 "
 "<scientists360@users.noreply.translations.metabrainz.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.10\n"
+"X-Generator: Weblate 2026.10.1\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: website/frontend/templates/base.html:7
@@ -486,7 +486,7 @@ msgstr "此处列出了目前可与 Picard 配合使用的插件。"
 #: website/frontend/templates/plugins.html:37
 #, python-format
 msgid "API v%(version)s (Picard %(version)s.x)"
-msgstr ""
+msgstr "API v%(version)s (Picard %(version)s.x)"
 
 #: website/frontend/templates/plugins.html:56
 msgid "Name"
@@ -514,19 +514,15 @@ msgid "Open repository in a new tab"
 msgstr "在新标签页打开仓库"
 
 #: website/frontend/templates/plugins.html:95
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The table is generated from the data of our plugin {urlrepo|repository}."
+#, python-brace-format
 msgid "This table is generated from the data of our plugin {urlrepo|registry}."
-msgstr "该表格使用插件{urlrepo|仓库}的数据生成。"
+msgstr "该表格根据我们插件 {urlrepo|registry} 的数据生成。"
 
 #: website/frontend/templates/plugins.html:97
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The table is generated from the data of our plugin {urlrepo|repository}."
+#, python-brace-format
 msgid ""
 "This table is generated from the data of our plugin {urlrepo|repository}."
-msgstr "该表格使用插件{urlrepo|仓库}的数据生成。"
+msgstr "该表格根据我们插件 {urlrepo|repository} 的数据生成。"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
@@ -548,11 +544,11 @@ msgstr "不必担心，在你阅读这段文字的时候，已经有人在努力
 
 #: website/frontend/templates/errors/503.html:3
 msgid "503 Service Unavailable"
-msgstr ""
+msgstr "503 服务不可用"
 
 #: website/frontend/templates/errors/503.html:6
 msgid "Service temporarily unavailable. Please try again later."
-msgstr ""
+msgstr "服务暂时不可用。请稍后重试。"
 
 #~ msgid "macOS 10.10+ (x86_64)"
 #~ msgstr "macOS 10.10+ (x86_64)"
