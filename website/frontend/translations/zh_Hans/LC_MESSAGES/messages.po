@@ -10,9 +10,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-10-08 12:25+0200\n"
-"PO-Revision-Date: 2026-10-09 14:13+0000\n"
-"Last-Translator: scientists360 "
-"<scientists360@users.noreply.translations.metabrainz.org>\n"
+"PO-Revision-Date: 2026-10-13 09:13+0000\n"
+"Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
 "translations.metabrainz.org/projects/picard/website/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -516,13 +515,13 @@ msgstr "在新标签页打开仓库"
 #: website/frontend/templates/plugins.html:95
 #, python-brace-format
 msgid "This table is generated from the data of our plugin {urlrepo|registry}."
-msgstr "该表格根据我们插件 {urlrepo|registry} 的数据生成。"
+msgstr "该表格根据我们插件{urlrepo|注册表}的数据生成。"
 
 #: website/frontend/templates/plugins.html:97
 #, python-brace-format
 msgid ""
 "This table is generated from the data of our plugin {urlrepo|repository}."
-msgstr "该表格根据我们插件 {urlrepo|repository} 的数据生成。"
+msgstr "该表格根据我们插件{urlrepo|仓库}的数据生成。"
 
 #: website/frontend/templates/docs/development.html:3
 msgid "Developing"
