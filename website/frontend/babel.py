@@ -61,7 +61,7 @@ def init_app(app):
     @app.context_processor
     def inject_language_var():
         return {
-            'active_language': get_locale(),
+            'active_language': get_locale() or 'en',
         }
 
     babel.init_app(app, locale_selector=get_locale)
