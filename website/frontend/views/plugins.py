@@ -53,6 +53,9 @@ def _localized(i18n, default, lang):
     """Pick the translation for lang (falling back to the base language code,
     then to the provided English default). An empty translation is treated as
     missing so it falls back to the default rather than rendering blank."""
+    # Picard and plugins must use zh_CN / zh_TW and do not support locales
+    # with script name.
+    lang = {"zh_Hans": "zh_CN", "zh_Hant": "zh_TW"}.get(lang, lang)
     if not i18n or not lang:
         return default
     if i18n.get(lang):
