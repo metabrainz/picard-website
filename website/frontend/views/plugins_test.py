@@ -29,6 +29,15 @@ class LocalizedHelperTest(FrontendTestCase):
     def test_none_lang_returns_default(self):
         self.assertEqual(_localized({'de': 'Hallo'}, 'Hello', None), 'Hello')
 
+    def test_chinese_simplified(self):
+        self.assertEqual(_localized({'zh_Hans': '你好'}, 'Hello', 'zh_Hans'), '你好')
+
+    def test_chinese_simplified_returns_fallback(self):
+        self.assertEqual(_localized({'zh_CN': '你好'}, 'Hello', 'zh_Hans'), '你好')
+
+    def test_chinese_simplified_returns_base(self):
+        self.assertEqual(_localized({'zh': '你好'}, 'Hello', 'zh_Hans'), '你好')
+
 
 class LoadV3PluginsLocalizationTest(FrontendTestCase):
     """Tests that _load_v3_plugins resolves localized name/description"""
