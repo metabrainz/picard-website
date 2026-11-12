@@ -14,18 +14,17 @@
 # Exit status is non-zero if any check fails, so this is CI-friendly.
 #
 # Usage:
-#   uv run python verify-downloads.py                # verify all channels
-#   uv run python verify-downloads.py beta           # only the 'beta' channel
-#   uv run python verify-downloads.py --links-only   # skip hash downloads
-#   uv run python verify-downloads.py --channel beta --channel stable
+#   uv run python -m tools.verify_downloads                # verify all channels
+#   uv run python -m tools.verify_downloads beta           # only the 'beta' channel
+#   uv run python -m tools.verify_downloads --links-only   # skip hash downloads
+#   uv run python -m tools.verify_downloads --channel beta --channel stable
 
 import argparse
 import hashlib
+from pathlib import Path
 import sys
 import urllib.error
 import urllib.request
-
-from website.frontend import create_app
 
 
 # Maps a "<name>_hash" config field to the download filename template and,
@@ -197,6 +196,10 @@ def main():
         help="Only check that URLs are reachable; skip downloading and hashing.",
     )
     args = parser.parse_args()
+
+    # Allow running the file directly (./tools/<name>.py) as well as with -m.
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    from website.frontend import create_app
 
     config = create_app().config
     versions = config['PICARD_VERSIONS']

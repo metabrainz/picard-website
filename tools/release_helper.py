@@ -14,18 +14,18 @@
 # mirrored to the fileserver. If you need to run it before mirroring, use
 # --download to fetch the GitHub assets and compute the MD5 locally.
 #
-# FILESERVER_URL is read from the site config (like verify-downloads.py); use
+# FILESERVER_URL is read from the site config (like tools/verify_downloads.py); use
 # --fileserver-url to override without a config.
 #
 # Usage:
-#   uv run python release-helper.py 3.0.1
-#   uv run python release-helper.py 3.0.0rc4 --channel beta
-#   uv run python release-helper.py 3.0.1 --repo metabrainz/picard
-#   uv run python release-helper.py 3.0.1 --links-only   # sizes only, no hashes
-#   uv run python release-helper.py 3.0.1 --download     # hash GitHub binaries
+#   uv run python -m tools.release_helper 3.0.1
+#   uv run python -m tools.release_helper 3.0.0rc4 --channel beta
+#   uv run python -m tools.release_helper 3.0.1 --repo metabrainz/picard
+#   uv run python -m tools.release_helper 3.0.1 --links-only   # sizes only, no hashes
+#   uv run python -m tools.release_helper 3.0.1 --download     # hash GitHub binaries
 #                                                          # (pre-mirror)
-#   uv run python release-helper.py 3.0.5 --write        # update default_config.py
-#   uv run python release-helper.py 3.0.5 --write --changelog-url \
+#   uv run python -m tools.release_helper 3.0.5 --write        # update default_config.py
+#   uv run python -m tools.release_helper 3.0.5 --write --changelog-url \
 #       https://blog.metabrainz.org/2026/11/12/picard-3-0-5-released/
 
 import argparse
@@ -64,9 +64,8 @@ FIELD_TO_ASSET = {
 # Legacy macOS fields: omitted from the block when the release has no such asset.
 OPTIONAL_FIELDS = {'mac_size', 'mac_hash', 'mac_10_12_size', 'mac_10_12_hash'}
 
-DEFAULT_CONFIG_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), 'website', 'default_config.py'
-)
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_CONFIG_PATH = os.path.join(REPO_ROOT, 'website', 'default_config.py')
 DEFAULT_DOWNLOAD_URL = 'https://picard.musicbrainz.org/'
 USER_AGENT = 'picard-website release-helper'
 CHUNK = 1 << 16
@@ -147,7 +146,7 @@ def format_size_mib(byte_size):
 
     Sizes are whole MiB (e.g. '62', '11'). The field is advisory and
     display-only, so a +/-1 MiB difference from a value someone typed by hand
-    is harmless (verify-downloads.py allows 1 MiB slack).
+    is harmless (tools/verify_downloads.py allows 1 MiB slack).
     """
     return str(round(byte_size / (1024 * 1024)))
 
@@ -167,7 +166,7 @@ def resolve_fileserver_url(explicit):
     except ImportError as e:
         raise SystemExit(
             "Could not import Flask to read FILESERVER_URL. Run via "
-            "'uv run python release-helper.py ...' or pass --fileserver-url."
+            "'uv run python -m tools.release_helper ...' or pass --fileserver-url."
         ) from e
 
     website_folder = os.path.dirname(DEFAULT_CONFIG_PATH)
