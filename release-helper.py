@@ -24,10 +24,17 @@
 #   uv run python release-helper.py 3.0.1 --links-only   # sizes only, no hashes
 #   uv run python release-helper.py 3.0.1 --download     # hash GitHub binaries
 #                                                          # (pre-mirror)
+#   uv run python release-helper.py 3.0.5 --write        # update default_config.py
+#   uv run python release-helper.py 3.0.5 --write --changelog-url \
+#       https://blog.metabrainz.org/2026/11/12/picard-3-0-5-released/
 
 import argparse
+import datetime
+import difflib
 import hashlib
 import json
+import os
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -64,6 +71,9 @@ FIELD_ORDER = [
     'source_tar_size', 'source_tar_hash',
     'source_zip_size', 'source_zip_hash',
 ]
+
+# Legacy fields omitted from the block when the release has no such asset.
+OPTIONAL_PREFIXES = ('mac_size', 'mac_hash', 'mac_10_12_')
 
 USER_AGENT = 'picard-website release-helper'
 CHUNK = 1 << 16
@@ -180,6 +190,101 @@ def resolve_fileserver_url(explicit):
         ) from e
 
 
+DEFAULT_CONFIG_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), 'website', 'default_config.py'
+)
+
+_PRE_TYPES = {'a': 'alpha', 'alpha': 'alpha', 'b': 'beta', 'beta': 'beta', 'rc': 'rc'}
+
+
+def parse_version_tuple(tag):
+    """Convert a tag like '3.0.5', '3.0.0rc4' or '2.9.0a1' to the PEP-440 style
+    tuple used in default_config.py: (major, minor, micro, type, dev).
+
+    Final releases use ('final', 0). Returns None if the tag cannot be parsed.
+    """
+    m = re.fullmatch(r'(\d+)\.(\d+)\.(\d+)(?:(a|alpha|b|beta|rc)(\d+))?', tag)
+    if not m:
+        return None
+    major, minor, micro, pre, num = m.groups()
+    if pre:
+        return (int(major), int(minor), int(micro), _PRE_TYPES[pre], int(num))
+    return (int(major), int(minor), int(micro), 'final', 0)
+
+
+def predict_blog_url(version, tag, date):
+    """Predict the MetaBrainz blog post URL for a release.
+
+    Known patterns (slugs use dashes instead of dots; pre-releases drop
+    trailing zero components, so 3.0.0 becomes "3"):
+      final: .../2026/11/01/picard-3-0-4-released/
+      rc:    .../2026/09/22/picard-3-release-candidate-4/
+      beta:  .../2026/07/16/picard-3-beta-7-released/
+    The post is normally published the same day as the release.
+    Returns None for release types with no known pattern (e.g. alpha).
+    """
+    major, minor, micro, kind, num = version
+    base = f"https://blog.metabrainz.org/{date:%Y/%m/%d}/"
+    if kind == 'final':
+        return f"{base}picard-{tag.replace('.', '-')}-released/"
+    parts = [major, minor, micro]
+    while len(parts) > 1 and parts[-1] == 0:
+        parts.pop()
+    ver = '-'.join(map(str, parts))
+    if kind == 'rc':
+        return f"{base}picard-{ver}-release-candidate-{num}/"
+    if kind == 'beta':
+        return f"{base}picard-{ver}-beta-{num}-released/"
+    return None
+
+
+def build_block(channel, tag, version, download_url, changelog_url, results):
+    """Return the channel block as a list of lines (4-space indented, as in
+    default_config.py)."""
+    lines = [
+        f"    '{channel}': {{",
+        f"        'tag': '{tag}',",
+        f"        'version': {version!r},",
+        "        'urls': {",
+        f"            'download': '{download_url}',",
+        f"            'changelog': '{changelog_url}',",
+        "        },",
+    ]
+    for field in FIELD_ORDER:
+        value = results.get(field, '')
+        # Legacy macOS builds don't exist for recent releases; don't emit empties.
+        if field.startswith(OPTIONAL_PREFIXES) and not value:
+            continue
+        lines.append(f"        '{field}': '{value}',")
+    lines.append("    },")
+    return lines
+
+
+def replace_channel_block(text, channel, block_lines):
+    """Return config text with the PICARD_VERSIONS channel block replaced.
+
+    Raises SystemExit if the channel block cannot be found exactly once.
+    """
+    pattern = re.compile(
+        rf"^    '{re.escape(channel)}': \{{\n.*?^    \}},\n", re.MULTILINE | re.DOTALL
+    )
+    matches = pattern.findall(text)
+    if len(matches) != 1:
+        raise SystemExit(
+            f"Expected exactly one '{channel}' block in PICARD_VERSIONS, found {len(matches)}."
+        )
+    return pattern.sub(lambda _m: "\n".join(block_lines) + "\n", text, count=1)
+
+
+def existing_download_url(text, channel):
+    """Return the current 'download' URL of a channel, or None."""
+    m = re.search(
+        rf"^    '{re.escape(channel)}': \{{\n.*?'download': '([^']*)'",
+        text, re.MULTILINE | re.DOTALL,
+    )
+    return m.group(1) if m else None
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Produce a PICARD_VERSIONS channel block from a GitHub release.",
@@ -205,6 +310,31 @@ def main():
         '--download', action='store_true',
         help="Compute MD5 by downloading the GitHub binaries instead of reading "
              "the fileserver .md5 sidecars. Use before the release is mirrored.",
+    )
+    parser.add_argument(
+        '--write', action='store_true',
+        help="Update the channel block in website/default_config.py in place "
+             "(a diff is printed). Without it, the block is only printed.",
+    )
+    parser.add_argument(
+        '--config-path', default=DEFAULT_CONFIG_PATH,
+        help="Config file to edit with --write (default: website/default_config.py).",
+    )
+    parser.add_argument(
+        '--changelog-url', default=None,
+        help="Changelog URL for the block. Default: the predicted blog post URL "
+             "(see --release-date), else "
+             "https://picard.musicbrainz.org/changelog/#release-<tag>.",
+    )
+    parser.add_argument(
+        '--release-date', default=None, type=datetime.date.fromisoformat,
+        metavar='YYYY-MM-DD',
+        help="Date used in the predicted blog URL (default: today).",
+    )
+    parser.add_argument(
+        '--download-url', default=None,
+        help="Download URL for the block (default: keep the channel's current "
+             "value when using --write, else https://picard.musicbrainz.org/).",
     )
     args = parser.parse_args()
 
@@ -270,20 +400,53 @@ def main():
         results[hash_field] = md5_hex
         print(f"  md5    {asset_name}: {md5_hex} ({results[size_field]} MiB)", file=sys.stderr)
 
-    # Changelog URL hint (review before use; beta uses a different pattern).
-    changelog_url = f"https://picard.musicbrainz.org/changelog/#release-{tag}"
+    version = parse_version_tuple(tag)
+    if version is None:
+        raise SystemExit(f"Cannot derive a version tuple from tag {tag!r}.")
 
-    print(f"\n    '{args.channel}': {{")
-    print(f"        'tag': '{tag}',")
-    print(f"        'version': (...),  # TODO: set PEP-440 tuple for {tag}")
-    print("        'urls': {")
-    print("            'download': 'https://picard.musicbrainz.org/',")
-    print(f"            'changelog': '{changelog_url}',  # TODO: confirm")
-    print("        },")
-    for field in FIELD_ORDER:
-        value = results.get(field, '')
-        print(f"        '{field}': '{value}',")
-    print("    },")
+    changelog_url = args.changelog_url
+    if not changelog_url:
+        date = args.release_date or datetime.date.today()
+        changelog_url = predict_blog_url(version, tag, date)
+        if changelog_url:
+            print(f"# note: changelog URL is predicted ({changelog_url}); verify it "
+                  "once the blog post is published, or pass --changelog-url / "
+                  "--release-date.", file=sys.stderr)
+        else:
+            changelog_url = f"https://picard.musicbrainz.org/changelog/#release-{tag}"
+
+    config_text = None
+    if args.write:
+        with open(args.config_path, encoding='utf-8') as f:
+            config_text = f.read()
+    download_url = (
+        args.download_url
+        or (config_text and existing_download_url(config_text, args.channel))
+        or 'https://picard.musicbrainz.org/'
+    )
+
+    block = build_block(args.channel, tag, version, download_url, changelog_url, results)
+
+    if args.write:
+        new_text = replace_channel_block(config_text, args.channel, block)
+        diff = difflib.unified_diff(
+            config_text.splitlines(), new_text.splitlines(),
+            'a/' + os.path.basename(args.config_path),
+            'b/' + os.path.basename(args.config_path), lineterm='',
+        )
+        print("\n".join(diff))
+        if new_text == config_text:
+            print(f"\n{args.config_path}: no changes.", file=sys.stderr)
+        else:
+            with open(args.config_path, 'w', encoding='utf-8') as f:
+                f.write(new_text)
+            print(f"\nUpdated '{args.channel}' in {args.config_path}", file=sys.stderr)
+        blank = [f for f in FIELD_ORDER if f.endswith('_hash') and not results.get(f)]
+        if blank and not args.links_only:
+            print(f"# warning: blank hashes written for: {', '.join(blank)}", file=sys.stderr)
+    else:
+        print()
+        print("\n".join(block))
 
     if missing:
         print(f"\n# note: no asset for these templates (left blank): {', '.join(missing)}",
