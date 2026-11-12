@@ -48,35 +48,39 @@ import urllib.request
 # "<name>.md5"). The one asset whose name is non-obvious is the Windows portable
 # build, published as "MusicBrainz-Picard-{tag}.exe".
 #
+# Entries are in the order they appear in default_config.py.
 # Each entry: hash_field -> (size_field, asset_filename_template)
 FIELD_TO_ASSET = {
     'win_hash': ('win_size', 'picard-setup-{tag}.exe'),
     'win_portable_hash': ('win_portable_size', 'MusicBrainz-Picard-{tag}.exe'),
-    'mac_arm64_hash': ('mac_arm64_size', 'MusicBrainz-Picard-{tag}-macOS-13.0-arm64.dmg'),
     'mac_x86_64_hash': ('mac_x86_64_size', 'MusicBrainz-Picard-{tag}-macOS-13.0-x86_64.dmg'),
+    'mac_arm64_hash': ('mac_arm64_size', 'MusicBrainz-Picard-{tag}-macOS-13.0-arm64.dmg'),
     'mac_hash': ('mac_size', 'MusicBrainz-Picard-{tag}-macOS-10.14.dmg'),
     'mac_10_12_hash': ('mac_10_12_size', 'MusicBrainz-Picard-{tag}-macOS-10.12.dmg'),
     'source_tar_hash': ('source_tar_size', 'picard-{tag}.tar.gz'),
     'source_zip_hash': ('source_zip_size', 'picard-{tag}.zip'),
 }
 
-# Order in which fields are emitted in the printed block (matches default_config.py).
-FIELD_ORDER = [
-    'win_size', 'win_hash',
-    'win_portable_size', 'win_portable_hash',
-    'mac_x86_64_size', 'mac_x86_64_hash',
-    'mac_arm64_size', 'mac_arm64_hash',
-    'mac_size', 'mac_hash',
-    'mac_10_12_size', 'mac_10_12_hash',
-    'source_tar_size', 'source_tar_hash',
-    'source_zip_size', 'source_zip_hash',
-]
+# Legacy macOS fields: omitted from the block when the release has no such asset.
+OPTIONAL_FIELDS = {'mac_size', 'mac_hash', 'mac_10_12_size', 'mac_10_12_hash'}
 
-# Legacy fields omitted from the block when the release has no such asset.
-OPTIONAL_PREFIXES = ('mac_size', 'mac_hash', 'mac_10_12_')
-
+DEFAULT_CONFIG_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), 'website', 'default_config.py'
+)
+DEFAULT_DOWNLOAD_URL = 'https://picard.musicbrainz.org/'
 USER_AGENT = 'picard-website release-helper'
 CHUNK = 1 << 16
+PRE_RELEASE_TYPES = {'a': 'alpha', 'alpha': 'alpha', 'b': 'beta', 'beta': 'beta', 'rc': 'rc'}
+
+
+def urlopen(url, timeout=30, headers=None):
+    """Open url with our User-Agent. Errors propagate to the caller."""
+    req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT, **(headers or {})})
+    return urllib.request.urlopen(req, timeout=timeout)
+
+
+def reason(e):
+    return getattr(e, 'reason', e)
 
 
 def fetch_release(repo, tag):
@@ -84,27 +88,20 @@ def fetch_release(repo, tag):
 
     Tries the tag as given and with the 'release-' prefix the repo uses.
     """
-    candidates = [tag]
-    if not tag.startswith('release-'):
-        candidates.append(f'release-{tag}')
+    candidates = [tag] if tag.startswith('release-') else [tag, f'release-{tag}']
 
     last_error = None
     for candidate in candidates:
         url = f"https://api.github.com/repos/{repo}/releases/tags/{candidate}"
-        req = urllib.request.Request(
-            url,
-            headers={'User-Agent': USER_AGENT, 'Accept': 'application/vnd.github+json'},
-        )
         try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
+            with urlopen(url, headers={'Accept': 'application/vnd.github+json'}) as resp:
                 return json.load(resp)
         except urllib.error.HTTPError as e:
             last_error = f"HTTP {e.code} for {url}"
-            if e.code == 404:
-                continue
-            raise SystemExit(f"GitHub API error: {last_error}") from e
+            if e.code != 404:
+                raise SystemExit(f"GitHub API error: {last_error}") from e
         except (urllib.error.URLError, TimeoutError) as e:
-            raise SystemExit(f"Could not reach GitHub API: {getattr(e, 'reason', e)}") from e
+            raise SystemExit(f"Could not reach GitHub API: {reason(e)}") from e
 
     raise SystemExit(f"Release not found. Tried: {', '.join(candidates)} ({last_error})")
 
@@ -116,46 +113,43 @@ def fetch_md5_sidecar(fileserver_url, filename):
     Returns None if the sidecar is missing (e.g. not mirrored yet).
     """
     url = f"{fileserver_url.rstrip('/')}/{filename}.md5"
-    req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        with urlopen(url) as resp:
             text = resp.read().decode('utf-8', 'replace').strip()
     except urllib.error.HTTPError as e:
         if e.code == 404:
             return None
         raise SystemExit(f"Failed to fetch {url}: HTTP {e.code}") from e
     except (urllib.error.URLError, TimeoutError) as e:
-        raise SystemExit(f"Failed to fetch {url}: {getattr(e, 'reason', e)}") from e
+        raise SystemExit(f"Failed to fetch {url}: {reason(e)}") from e
 
     # First whitespace-separated token is the digest.
     token = text.split()[0] if text else ''
-    if len(token) != 32 or not all(c in '0123456789abcdefABCDEF' for c in token):
+    if not re.fullmatch(r'[0-9a-fA-F]{32}', token):
         raise SystemExit(f"Unexpected .md5 content at {url}: {text!r}")
     return token.lower()
 
 
 def download_md5(url):
     """Download url fully and return its hex MD5 (fallback path)."""
-    req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
     md5 = hashlib.md5()
-    with urllib.request.urlopen(req, timeout=300) as resp:
-        while True:
-            chunk = resp.read(CHUNK)
-            if not chunk:
-                break
-            md5.update(chunk)
+    try:
+        with urlopen(url, timeout=300) as resp:
+            while chunk := resp.read(CHUNK):
+                md5.update(chunk)
+    except (urllib.error.URLError, TimeoutError) as e:
+        raise SystemExit(f"Failed to download {url}: {reason(e)}") from e
     return md5.hexdigest()
 
 
 def format_size_mib(byte_size):
     """Return the rounded-MiB string used in default_config.py.
 
-    Sizes are whole MiB (e.g. '62', '11'), matching ls/du-style rounding. The
-    field is advisory and display-only, so a +/-1 MiB difference from a value
-    someone typed by hand is harmless (verify-downloads.py allows 1 MiB slack).
+    Sizes are whole MiB (e.g. '62', '11'). The field is advisory and
+    display-only, so a +/-1 MiB difference from a value someone typed by hand
+    is harmless (verify-downloads.py allows 1 MiB slack).
     """
-    mib = byte_size / (1024 * 1024)
-    return str(int(round(mib)))
+    return str(round(byte_size / (1024 * 1024)))
 
 
 def resolve_fileserver_url(explicit):
@@ -169,8 +163,6 @@ def resolve_fileserver_url(explicit):
     if explicit:
         return explicit
     try:
-        import os
-
         from flask import Flask
     except ImportError as e:
         raise SystemExit(
@@ -178,41 +170,31 @@ def resolve_fileserver_url(explicit):
             "'uv run python release-helper.py ...' or pass --fileserver-url."
         ) from e
 
-    website_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'website')
+    website_folder = os.path.dirname(DEFAULT_CONFIG_PATH)
     cfg = Flask(__name__).config
-    cfg.from_pyfile(os.path.join(website_folder, 'default_config.py'))
+    cfg.from_pyfile(DEFAULT_CONFIG_PATH)
     cfg.from_pyfile(os.path.join(website_folder, 'config.py'), silent=True)
     try:
         return cfg['FILESERVER_URL']
     except KeyError as e:
-        raise SystemExit(
-            "FILESERVER_URL not found in config; pass --fileserver-url."
-        ) from e
-
-
-DEFAULT_CONFIG_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), 'website', 'default_config.py'
-)
-
-_PRE_TYPES = {'a': 'alpha', 'alpha': 'alpha', 'b': 'beta', 'beta': 'beta', 'rc': 'rc'}
+        raise SystemExit("FILESERVER_URL not found in config; pass --fileserver-url.") from e
 
 
 def parse_version_tuple(tag):
     """Convert a tag like '3.0.5', '3.0.0rc4' or '2.9.0a1' to the PEP-440 style
     tuple used in default_config.py: (major, minor, micro, type, dev).
 
-    Final releases use ('final', 0). Returns None if the tag cannot be parsed.
+    Final releases use ('final', 0). Raises SystemExit if the tag is unparsable.
     """
     m = re.fullmatch(r'(\d+)\.(\d+)\.(\d+)(?:(a|alpha|b|beta|rc)(\d+))?', tag)
     if not m:
-        return None
+        raise SystemExit(f"Cannot derive a version tuple from tag {tag!r}.")
     major, minor, micro, pre, num = m.groups()
-    if pre:
-        return (int(major), int(minor), int(micro), _PRE_TYPES[pre], int(num))
-    return (int(major), int(minor), int(micro), 'final', 0)
+    kind, dev = (PRE_RELEASE_TYPES[pre], int(num)) if pre else ('final', 0)
+    return (int(major), int(minor), int(micro), kind, dev)
 
 
-def predict_blog_url(version, tag, date):
+def predict_blog_url(version, date):
     """Predict the MetaBrainz blog post URL for a release.
 
     Known patterns (slugs use dashes instead of dots; pre-releases drop
@@ -223,19 +205,19 @@ def predict_blog_url(version, tag, date):
     The post is normally published the same day as the release.
     Returns None for release types with no known pattern (e.g. alpha).
     """
-    major, minor, micro, kind, num = version
-    base = f"https://blog.metabrainz.org/{date:%Y/%m/%d}/"
-    if kind == 'final':
-        return f"{base}picard-{tag.replace('.', '-')}-released/"
-    parts = [major, minor, micro]
-    while len(parts) > 1 and parts[-1] == 0:
-        parts.pop()
+    *parts, kind, num = version
+    if kind != 'final':
+        while len(parts) > 1 and parts[-1] == 0:
+            parts.pop()
     ver = '-'.join(map(str, parts))
-    if kind == 'rc':
-        return f"{base}picard-{ver}-release-candidate-{num}/"
-    if kind == 'beta':
-        return f"{base}picard-{ver}-beta-{num}-released/"
-    return None
+    slug = {
+        'final': f"{ver}-released",
+        'rc': f"{ver}-release-candidate-{num}",
+        'beta': f"{ver}-beta-{num}-released",
+    }.get(kind)
+    if slug is None:
+        return None
+    return f"https://blog.metabrainz.org/{date:%Y/%m/%d}/picard-{slug}/"
 
 
 def build_block(channel, tag, version, download_url, changelog_url, results):
@@ -250,14 +232,20 @@ def build_block(channel, tag, version, download_url, changelog_url, results):
         f"            'changelog': '{changelog_url}',",
         "        },",
     ]
-    for field in FIELD_ORDER:
-        value = results.get(field, '')
-        # Legacy macOS builds don't exist for recent releases; don't emit empties.
-        if field.startswith(OPTIONAL_PREFIXES) and not value:
-            continue
-        lines.append(f"        '{field}': '{value}',")
+    for hash_field, (size_field, _template) in FIELD_TO_ASSET.items():
+        for field in (size_field, hash_field):
+            value = results.get(field, '')
+            if value or field not in OPTIONAL_FIELDS:
+                lines.append(f"        '{field}': '{value}',")
     lines.append("    },")
     return lines
+
+
+def channel_block_pattern(channel):
+    """Regex matching a whole top-level channel block of PICARD_VERSIONS."""
+    return re.compile(
+        rf"^    '{re.escape(channel)}': \{{\n.*?^    \}},\n", re.MULTILINE | re.DOTALL
+    )
 
 
 def replace_channel_block(text, channel, block_lines):
@@ -265,27 +253,84 @@ def replace_channel_block(text, channel, block_lines):
 
     Raises SystemExit if the channel block cannot be found exactly once.
     """
-    pattern = re.compile(
-        rf"^    '{re.escape(channel)}': \{{\n.*?^    \}},\n", re.MULTILINE | re.DOTALL
-    )
-    matches = pattern.findall(text)
-    if len(matches) != 1:
+    pattern = channel_block_pattern(channel)
+    count = len(pattern.findall(text))
+    if count != 1:
         raise SystemExit(
-            f"Expected exactly one '{channel}' block in PICARD_VERSIONS, found {len(matches)}."
+            f"Expected exactly one '{channel}' block in PICARD_VERSIONS, found {count}."
         )
     return pattern.sub(lambda _m: "\n".join(block_lines) + "\n", text, count=1)
 
 
 def existing_download_url(text, channel):
     """Return the current 'download' URL of a channel, or None."""
-    m = re.search(
-        rf"^    '{re.escape(channel)}': \{{\n.*?'download': '([^']*)'",
-        text, re.MULTILINE | re.DOTALL,
-    )
-    return m.group(1) if m else None
+    m = channel_block_pattern(channel).search(text)
+    url = m and re.search(r"'download': '([^']*)'", m.group(0))
+    return url.group(1) if url else None
 
 
-def main():
+def collect_results(args, tag, assets_by_name, fileserver_url):
+    """Return ({field: value}, [missing asset names]) for all known assets."""
+    results = {}
+    missing = []
+    for hash_field, (size_field, template) in FIELD_TO_ASSET.items():
+        asset_name = template.format(tag=tag)
+        asset = assets_by_name.get(asset_name)
+        results[hash_field] = results[size_field] = ''
+        if asset is None:
+            # Not every build type exists for every release; leave blank.
+            missing.append(asset_name)
+            continue
+
+        # Size always comes from the GitHub API (no download needed).
+        results[size_field] = size = format_size_mib(asset.get('size', 0))
+
+        if args.links_only:
+            print(f"  size   {asset_name}: {size} MiB (hash skipped)", file=sys.stderr)
+            continue
+
+        if args.download:
+            print(f"  hashing {asset_name} (downloading) ...", file=sys.stderr)
+            md5_hex = download_md5(asset['browser_download_url'])
+        else:
+            md5_hex = fetch_md5_sidecar(fileserver_url, asset_name)
+            if md5_hex is None:
+                print(f"  MISS   {asset_name}.md5 not on fileserver "
+                      f"(mirror the release first, or use --download)", file=sys.stderr)
+                continue
+
+        results[hash_field] = md5_hex
+        print(f"  md5    {asset_name}: {md5_hex} ({size} MiB)", file=sys.stderr)
+    return results, missing
+
+
+def choose_changelog_url(args, tag, version):
+    if args.changelog_url:
+        return args.changelog_url
+    url = predict_blog_url(version, args.release_date or datetime.date.today())
+    if url is None:
+        return f"https://picard.musicbrainz.org/changelog/#release-{tag}"
+    print(f"# note: changelog URL is predicted ({url}); verify it once the blog "
+          "post is published, or pass --changelog-url / --release-date.", file=sys.stderr)
+    return url
+
+
+def write_config(path, channel, config_text, block):
+    """Replace the channel block in the config file and print a diff."""
+    new_text = replace_channel_block(config_text, channel, block)
+    name = os.path.basename(path)
+    print("\n".join(difflib.unified_diff(
+        config_text.splitlines(), new_text.splitlines(), f'a/{name}', f'b/{name}', lineterm='',
+    )))
+    if new_text == config_text:
+        print(f"\n{path}: no changes.", file=sys.stderr)
+        return
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(new_text)
+    print(f"\nUpdated '{channel}' in {path}", file=sys.stderr)
+
+
+def parse_args():
     parser = argparse.ArgumentParser(
         description="Produce a PICARD_VERSIONS channel block from a GitHub release.",
     )
@@ -334,14 +379,19 @@ def main():
     parser.add_argument(
         '--download-url', default=None,
         help="Download URL for the block (default: keep the channel's current "
-             "value when using --write, else https://picard.musicbrainz.org/).",
+             f"value when using --write, else {DEFAULT_DOWNLOAD_URL}).",
     )
     args = parser.parse_args()
-
     if args.links_only and args.download:
         parser.error("--links-only and --download are mutually exclusive")
+    return args
 
-    tag = args.tag[len('release-'):] if args.tag.startswith('release-') else args.tag
+
+def main():
+    args = parse_args()
+
+    tag = args.tag.removeprefix('release-')
+    version = parse_version_tuple(tag)
     release = fetch_release(args.repo, args.tag)
 
     assets_by_name = {a['name']: a for a in release.get('assets', [])}
@@ -358,62 +408,8 @@ def main():
     print(f"# tag_name: {release.get('tag_name')}")
     print(f"# assets found: {', '.join(sorted(assets_by_name))}\n")
 
-    results = {}  # field -> value string
-    missing = []
-    for hash_field, (size_field, template) in FIELD_TO_ASSET.items():
-        asset_name = template.format(tag=tag)
-        asset = assets_by_name.get(asset_name)
-        if asset is None:
-            # Not every build type exists for every release; leave blank.
-            results[hash_field] = ''
-            results[size_field] = ''
-            missing.append(asset_name)
-            continue
-
-        # Size always comes from the GitHub API (no download needed).
-        results[size_field] = format_size_mib(asset.get('size', 0))
-
-        if args.links_only:
-            results[hash_field] = ''
-            print(f"  size   {asset_name}: {results[size_field]} MiB (hash skipped)",
-                  file=sys.stderr)
-            continue
-
-        if args.download:
-            print(f"  hashing {asset_name} (downloading) ...", file=sys.stderr)
-            try:
-                md5_hex = download_md5(asset['browser_download_url'])
-            except (urllib.error.URLError, TimeoutError) as e:
-                raise SystemExit(
-                    f"Failed to download {asset['browser_download_url']}: "
-                    f"{getattr(e, 'reason', e)}"
-                ) from e
-        else:
-            md5_hex = fetch_md5_sidecar(fileserver_url, asset_name)
-            if md5_hex is None:
-                results[hash_field] = ''
-                print(f"  MISS   {asset_name}.md5 not on fileserver "
-                      f"(mirror the release first, or use --download)",
-                      file=sys.stderr)
-                continue
-
-        results[hash_field] = md5_hex
-        print(f"  md5    {asset_name}: {md5_hex} ({results[size_field]} MiB)", file=sys.stderr)
-
-    version = parse_version_tuple(tag)
-    if version is None:
-        raise SystemExit(f"Cannot derive a version tuple from tag {tag!r}.")
-
-    changelog_url = args.changelog_url
-    if not changelog_url:
-        date = args.release_date or datetime.date.today()
-        changelog_url = predict_blog_url(version, tag, date)
-        if changelog_url:
-            print(f"# note: changelog URL is predicted ({changelog_url}); verify it "
-                  "once the blog post is published, or pass --changelog-url / "
-                  "--release-date.", file=sys.stderr)
-        else:
-            changelog_url = f"https://picard.musicbrainz.org/changelog/#release-{tag}"
+    results, missing = collect_results(args, tag, assets_by_name, fileserver_url)
+    changelog_url = choose_changelog_url(args, tag, version)
 
     config_text = None
     if args.write:
@@ -421,29 +417,18 @@ def main():
             config_text = f.read()
     download_url = (
         args.download_url
-        or (config_text and existing_download_url(config_text, args.channel))
-        or 'https://picard.musicbrainz.org/'
+        or (existing_download_url(config_text, args.channel) if config_text else None)
+        or DEFAULT_DOWNLOAD_URL
     )
 
     block = build_block(args.channel, tag, version, download_url, changelog_url, results)
 
     if args.write:
-        new_text = replace_channel_block(config_text, args.channel, block)
-        diff = difflib.unified_diff(
-            config_text.splitlines(), new_text.splitlines(),
-            'a/' + os.path.basename(args.config_path),
-            'b/' + os.path.basename(args.config_path), lineterm='',
-        )
-        print("\n".join(diff))
-        if new_text == config_text:
-            print(f"\n{args.config_path}: no changes.", file=sys.stderr)
-        else:
-            with open(args.config_path, 'w', encoding='utf-8') as f:
-                f.write(new_text)
-            print(f"\nUpdated '{args.channel}' in {args.config_path}", file=sys.stderr)
-        blank = [f for f in FIELD_ORDER if f.endswith('_hash') and not results.get(f)]
-        if blank and not args.links_only:
-            print(f"# warning: blank hashes written for: {', '.join(blank)}", file=sys.stderr)
+        write_config(args.config_path, args.channel, config_text, block)
+        # Warn only for assets that exist but got no hash (legacy/absent ones are expected).
+        unhashed = [h for h, (s, _t) in FIELD_TO_ASSET.items() if results[s] and not results[h]]
+        if unhashed and not args.links_only:
+            print(f"# warning: blank hashes written for: {', '.join(unhashed)}", file=sys.stderr)
     else:
         print()
         print("\n".join(block))
