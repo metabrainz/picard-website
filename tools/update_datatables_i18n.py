@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 
 # Update localization files for DataTables.
+#
+# Usage:
+#   uv run python -m tools.update_datatables_i18n
 
 import locale
 from pathlib import Path
@@ -8,15 +11,13 @@ import sys
 import urllib.error
 import urllib.request
 
-from website.frontend import create_app
-
 
 USER_AGENT = 'picard-website update-datatables-i18n'
 DATATABLES_VERSION = "3.1.4"
 LANG_MAPPING = {
     'zh_Hans': 'zh',
 }
-DATATABLES_LOCALE_FOLDER = Path(__file__).parent / "website" / "frontend" / "static" / "js"
+DATATABLES_LOCALE_FOLDER = Path(__file__).resolve().parent.parent / "website" / "frontend" / "static" / "js"
 
 
 def iter_locales(lang):
@@ -54,6 +55,10 @@ def download_language_file(lang):
 
 
 def main():
+    # Allow running the file directly (./tools/<name>.py) as well as with -m.
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    from website.frontend import create_app
+
     config = create_app().config
     versions = config['SUPPORTED_LANGUAGES']
     for lang in versions:

@@ -59,7 +59,7 @@ dev = [
 ]
 
 [tool.ruff]
-src = ["website"]
+src = ["website", "tools"]
 exclude = [
     ".git",
     ".pytest_cache",
